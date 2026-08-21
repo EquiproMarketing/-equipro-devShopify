@@ -19,13 +19,14 @@
     <!-- Shopify Core Header Content -->
     {{ content_for_header }}
 
-    <!-- Google Fonts: Poppins -->
+   <!-- Google Fonts: Poppins -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
-    <!-- Base Theme Styles -->
-    {{ 'base.css' | asset_url | stylesheet_tag }}
+    <!-- Base Theme Styles (v1.0.1 force cache refresh) -->
+    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
+    {{ 'critical.css' | asset_url | stylesheet_tag }}
   </head>
 
   <body class="template-{{ template.name }}">

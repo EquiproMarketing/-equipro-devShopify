@@ -1,5 +1,17 @@
 /** Critical CSS for the theme. This file is included on every page. */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
+:root {
+  --font-family-base: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --font-family-heading: 'Poppins', -apple-system, BlinkMacSystemFont, sans-serif !important;
+  --color-primary: #e50914 !important;
+  --color-primary-hover: #b80710 !important;
+  --radius-button: 9999px !important;
+}
+
+body, button, input, select, textarea {
+  font-family: var(--font-family-base);
+}
 /* Reset styles inspired by https://www.joshwcomeau.com/css/custom-css-reset/ */
 * {
   box-sizing: border-box;
