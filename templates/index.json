@@ -1,16 +1,21 @@
 {
   "sections": {
-    "test_banner": {
-      "type": "test-banner",
-      "settings": {}
-    },
     "hero_banner": {
       "type": "hero-banner",
+      "settings": {}
+    },
+    "best_sellers": {
+      "type": "featured-collection",
+      "settings": {}
+    },
+    "shop_by_category": {
+      "type": "shop-by-category",
       "settings": {}
     }
   },
   "order": [
-    "test_banner",
-    "hero_banner"
+    "hero_banner",
+    "best_sellers",
+    "shop_by_category"
   ]
 }

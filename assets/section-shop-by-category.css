@@ -1,0 +1,79 @@
+.shop-category-wrapper {
+    padding-bottom: 5rem;
+  }
+  
+  .shop-category__title {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #a22938;
+    letter-spacing: 0.05em;
+    margin-bottom: 2rem;
+    text-transform: uppercase;
+  }
+  
+  .shop-category__grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.25rem;
+  }
+  
+  .category-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.25rem 1.5rem;
+    border-radius: 20px;
+    min-height: 90px;
+    text-decoration: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+  }
+  
+  .category-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(0,0,0,0.08);
+  }
+  
+  /* Red Solid Card */
+  .category-card--red {
+    background-color: #b8293d;
+    color: #ffffff;
+  }
+  
+  .category-card--red .category-card__line {
+    background-color: #ffffff;
+  }
+  
+  /* Red Outline Card */
+  .category-card--outline {
+    background-color: #ffffff;
+    border: 2px solid #b8293d;
+    color: #b8293d;
+  }
+  
+  .category-card--outline .category-card__line {
+    background-color: #b8293d;
+  }
+  
+  .category-card__content {
+    display: flex;
+    align-items: center;
+    gap: 0.85rem;
+  }
+  
+  .category-card__line {
+    width: 2px;
+    height: 28px;
+    display: block;
+  }
+  
+  .category-card__name {
+    font-size: 1.05rem;
+    font-weight: 600;
+    line-height: 1.2;
+  }
+  
+  .category-card__image {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+  }

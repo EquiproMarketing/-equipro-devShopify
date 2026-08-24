@@ -1,0 +1,87 @@
+{{ 'section-featured-collection.css' | asset_url | stylesheet_tag }}
+
+<div class="featured-collection-wrapper page-width">
+  <div class="featured-collection__header">
+    <h2 class="featured-collection__title">{{ section.settings.title }}</h2>
+    <div class="featured-collection__controls">
+      <button class="slider-btn slider-btn--prev" aria-label="Previous">
+        <svg width="10" height="14" viewBox="0 0 8 12" fill="none"><path d="M7 1L2 6L7 11" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+      <button class="slider-btn slider-btn--next" aria-label="Next">
+        <svg width="10" height="14" viewBox="0 0 8 12" fill="none"><path d="M1 1L6 6L1 11" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+      </button>
+    </div>
+  </div>
+
+  <div class="featured-collection__grid">
+    {% assign collection = collections[section.settings.collection] %}
+    {% if collection != blank and collection.products.size > 0 %}
+      {% for product in collection.products limit: section.settings.products_to_show %}
+        <div class="product-card">
+          <a href="{{ product.url }}" class="product-card__image-wrapper">
+            {% if product.featured_media != blank %}
+              <img src="{{ product.featured_media | image_url: width: 600 }}" alt="{{ product.title }}" class="product-card__image product-card__image--primary" loading="lazy">
+              {% if product.images[1] != blank %}
+                <img src="{{ product.images[1] | image_url: width: 600 }}" alt="{{ product.title }}" class="product-card__image product-card__image--secondary" loading="lazy">
+              {% endif %}
+            {% else %}
+              <div class="product-card__placeholder"></div>
+            {% endif %}
+          </a>
+
+          <div class="product-card__info">
+            <span class="product-card__sku">{{ product.variants.first.sku | default: '31300' }}</span>
+            <h3 class="product-card__title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
+          </div>
+        </div>
+      {% endfor %}
+    {% else %}
+      {% for i in (1..5) %}
+        <div class="product-card">
+          <div class="product-card__image-wrapper">
+            <div class="product-card__placeholder"></div>
+          </div>
+          <div class="product-card__info">
+            <span class="product-card__sku">31300</span>
+            <h3 class="product-card__title">Stool with Backrest</h3>
+          </div>
+        </div>
+      {% endfor %}
+    {% endif %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Featured Collection",
+  "tag": "section",
+  "class": "section-featured-collection",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "OUR BEST SELLERS"
+    },
+    {
+      "type": "collection",
+      "id": "collection",
+      "label": "Collection"
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 4,
+      "max": 12,
+      "step": 1,
+      "default": 5,
+      "label": "Products to show"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Collection"
+    }
+  ]
+}
+{% endschema %}
