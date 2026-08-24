@@ -6,34 +6,40 @@
   <div class="swiper category-swiper">
     <div class="swiper-wrapper">
       {% for block in section.blocks %}
-        <div class="swiper-slide" {{ block.shopify_attributes }}>
-          <a href="{{ block.settings.link }}" class="category-card category-card--{{ block.settings.style }}">
-            <div class="category-card__content">
-              <span class="category-card__line"></span>
-              <span class="category-card__name">{{ block.settings.title }}</span>
+        {% assign modulo = forloop.index0 | modulo: 2 %}
+        {% if modulo == 0 %}
+          <div class="swiper-slide">
+            <div class="category-card-pair">
+        {% endif %}
+
+              <a href="{{ block.settings.link }}" class="category-card category-card--{{ block.settings.style }}" {{ block.shopify_attributes }}>
+                <div class="category-card__content">
+                  <span class="category-card__line"></span>
+                  <span class="category-card__name">{{ block.settings.title }}</span>
+                </div>
+                {% if block.settings.image != blank %}
+                  <img src="{{ block.settings.image | image_url: width: 200 }}" alt="{{ block.settings.title }}" class="category-card__image" loading="lazy">
+                {% else %}
+                  <div class="category-card__image-placeholder"></div>
+                {% endif %}
+              </a>
+
+        {% if modulo == 1 or forloop.last %}
             </div>
-            {% if block.settings.image != blank %}
-              <img src="{{ block.settings.image | image_url: width: 200 }}" alt="{{ block.settings.title }}" class="category-card__image" loading="lazy">
-            {% else %}
-              <div class="category-card__image-placeholder"></div>
-            {% endif %}
-          </a>
-        </div>
+          </div>
+        {% endif %}
       {% endfor %}
     </div>
+    <div class="swiper-pagination category-swiper-pagination"></div>
   </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.category-swiper', {
-      slidesPerView: 1,
-      slidesPerGroup: 1,
-      grid: {
-        rows: 2,
-        fill: 'row'
-      },
-      spaceBetween: 12,
+      slidesPerView: 1.15,
+      spaceBetween: 14,
+      grabCursor: true,
       pagination: {
         el: '.category-swiper-pagination',
         clickable: true,
@@ -41,7 +47,6 @@
       breakpoints: {
         768: {
           slidesPerView: 4,
-          grid: { rows: 1 },
           spaceBetween: 20
         }
       }

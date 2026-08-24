@@ -12,9 +12,16 @@
   text-transform: uppercase;
 }
 
-/* Transición continua estilo Marquee */
+/* Transición fluida con Swiper */
 .category-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
+}
+
+.category-card-pair {
+  display: flex;
+  flex-direction: column;
+  gap: 16px; /* Separación vertical entre botones en móvil */
+  width: 100%;
 }
 
 /* Tarjeta por defecto: Fondo Rojo */
@@ -75,4 +82,29 @@
 
 .category-card:hover .category-card__line {
   background-color: #b8293d;
+}
+
+/* Estilos de Paginación (Puntos Swiper Rojos y Bajar Posición) */
+.category-swiper {
+  padding-bottom: 3.5rem !important; /* Espacio extra abajo para empujar los puntos */
+  position: relative;
+}
+
+.category-swiper-pagination {
+  bottom: 0.5rem !important;
+}
+
+.category-swiper-pagination .swiper-pagination-bullet {
+  background: #d1d1d1;
+  opacity: 0.6;
+  width: 9px;
+  height: 9px;
+  margin: 0 5px !important;
+  transition: all 0.25s ease;
+}
+
+.category-swiper-pagination .swiper-pagination-bullet-active {
+  background: #a22938 !important; /* Color Rojo de Marca */
+  opacity: 1;
+  transform: scale(1.2);
 }
