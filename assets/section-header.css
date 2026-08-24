@@ -7,7 +7,6 @@
   z-index: 100;
 }
 
-/* Base Layout (Desktop) */
 .site-header__container {
   width: 100%;
   max-width: 100%;
@@ -17,7 +16,7 @@
   align-items: center;
 }
 
-/* 1. Left: Navigation Menu */
+/* Nav Desktop */
 .site-header__nav {
   display: flex;
   align-items: center;
@@ -41,12 +40,8 @@
   display: inline-flex;
   align-items: center;
   gap: 0.35rem;
-  padding-bottom: 3px;
+  padding: 0.5rem 0;
   transition: opacity 0.2s ease;
-}
-
-.site-header__link:hover {
-  opacity: 0.8;
 }
 
 .site-header__link--active {
@@ -54,87 +49,7 @@
   font-weight: 500;
 }
 
-.icon-chevron {
-  width: 10px !important;
-  height: 6px !important;
-  display: inline-block;
-  vertical-align: middle;
-}
-
-/* 2. Center: Logo */
-.site-header__logo {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-}
-
-.site-header__logo-img {
-  max-height: 48px;
-  width: auto;
-  object-fit: contain;
-}
-
-.site-header__logo-text {
-  font-size: 1.9rem;
-  font-weight: 700;
-  color: #a22938;
-  letter-spacing: 0.04em;
-  font-style: italic;
-  white-space: nowrap;
-}
-
-.site-header__logo-text span {
-  color: #2b2b2b;
-}
-
-/* 3. Right: Actions & Socials */
-.site-header__actions {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 1.5rem;
-}
-
-.site-header__socials {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-}
-
-.site-header__socials a {
-  color: #a22938;
-  display: flex;
-  align-items: center;
-}
-
-.site-header__cart {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  color: #a22938;
-  font-size: 0.95rem;
-  font-weight: 500;
-}
-
-.button-quote {
-  background-color: #8c8c8c;
-  color: #ffffff !important;
-  font-size: 0.875rem;
-  font-weight: 400;
-  padding: 0.65rem 1.4rem;
-  border-radius: 12px;
-  text-decoration: none;
-  white-space: nowrap;
-  transition: background-color 0.2s ease;
-}
-
-.button-quote:hover {
-  background-color: #737373;
-}
-
-
-/* Submenú Desplegable (Dropdown) */
+/* Submenu Hover Desktop */
 .site-header__item-has-dropdown {
   position: relative;
 }
@@ -144,7 +59,7 @@
   top: 100%;
   left: 0;
   background-color: #ffffff;
-  min-width: 200px;
+  min-width: 210px;
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
   border-radius: 12px;
   padding: 0.75rem 0;
@@ -176,66 +91,186 @@
   color: #a22938;
 }
 
-/* Ocultar botón de menú hamburguesa en Desktop */
-.site-header__hamburger {
+/* Logo */
+.site-header__logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.site-header__logo-text {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #a22938;
+  letter-spacing: 0.04em;
+  font-style: italic;
+}
+
+.site-header__logo-text span { color: #2b2b2b; }
+
+/* Actions */
+.site-header__actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1.5rem;
+}
+
+.site-header__socials {
+  display: flex;
+  gap: 1rem;
+}
+
+.site-header__socials a { color: #a22938; }
+
+.site-header__cart {
+  display: flex;
+  align-items: center;
+  gap: 0.4rem;
+  color: #a22938;
+  font-size: 0.95rem;
+}
+
+.button-quote {
+  background-color: #8c8c8c;
+  color: #ffffff !important;
+  font-size: 0.875rem;
+  padding: 0.65rem 1.4rem;
+  border-radius: 12px;
+  text-decoration: none;
+}
+
+.site-header__hamburger { display: none; }
+
+/* Mobile Overlay & Drawer */
+.mobile-drawer-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.5);
+  z-index: 998;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.mobile-drawer-overlay.is-open {
+  opacity: 1;
+  visibility: visible;
+}
+
+.mobile-drawer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 280px;
+  height: 100%;
+  background-color: #ffffff;
+  z-index: 999;
+  transform: translateX(-100%);
+  transition: transform 0.3s ease;
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.mobile-drawer.is-open {
+  transform: translateX(0);
+}
+
+.mobile-drawer__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+}
+
+.mobile-drawer__title { font-weight: 700; color: #a22938; }
+
+.mobile-drawer__close {
+  background: none;
+  border: none;
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.mobile-drawer__menu { list-style: none; padding: 0; margin: 0; }
+.mobile-drawer__link {
+  display: block;
+  padding: 0.75rem 0;
+  color: #333;
+  text-decoration: none;
+  font-size: 1rem;
+  font-weight: 500;
+}
+
+.mobile-drawer__sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobile-drawer__toggle-sub {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  color: #a22938;
+  cursor: pointer;
+}
+
+.mobile-drawer__submenu {
+  list-style: none;
+  padding-left: 1rem;
   display: none;
 }
 
+.mobile-drawer__submenu.is-open {
+  display: block;
+}
 
+.mobile-drawer__submenu a {
+  display: block;
+  padding: 0.4rem 0;
+  font-size: 0.9rem;
+  color: #666;
+  text-decoration: none;
+}
 
+.mobile-drawer__footer { margin-top: auto; padding-top: 1.5rem; }
 
 /* ==========================================================================
-   MOBILE RESPONSIVE STYLES (< 990px)
+   MOBILE RESPONSIVE (< 989px)
    ========================================================================== */
-   @media screen and (max-width: 989px) {
-    .site-header__container {
-      display: flex !important;
-      justify-content: space-between !important;
-      align-items: center !important;
-      padding: 0.75rem 1.25rem !important;
-    }
-  
-    /* 1. Izquierda: Menú Hamburguesa */
-    .site-header__nav {
-      order: 1;
-    }
-  
-    /* 2. Centro: Logo */
-    .site-header__logo {
-      order: 2;
-      margin: 0 auto;
-    }
-  
-    /* 3. Derecha: Carrito */
-    .site-header__actions {
-      order: 3;
-      gap: 0 !important;
-    }
-  
-    /* Ocultar elementos secundarios en la barra móvil */
-    .site-header__menu,
-    .site-header__socials,
-    .button-quote {
-      display: none !important;
-    }
-  
-    /* Estilo del botón hamburguesa */
-    .site-header__hamburger {
-      display: flex !important;
-      flex-direction: column;
-      justify-content: center;
-      gap: 5px;
-      background: none;
-      border: none;
-      cursor: pointer;
-      padding: 4px;
-    }
-  
-    .site-header__hamburger span {
-      width: 22px;
-      height: 2px;
-      background-color: #a22938;
-      display: block;
-      border-radius: 2px;
-    }
+@media screen and (max-width: 989px) {
+  .site-header__container {
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    padding: 0.75rem 1.25rem !important;
   }
+
+  .site-header__menu,
+  .site-header__socials,
+  .button-quote {
+    display: none !important;
+  }
+
+  .site-header__hamburger {
+    display: flex !important;
+    flex-direction: column;
+    gap: 4px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 4px;
+  }
+
+  .site-header__hamburger span {
+    width: 22px;
+    height: 2px;
+    background-color: #a22938;
+    border-radius: 2px;
+  }
+}

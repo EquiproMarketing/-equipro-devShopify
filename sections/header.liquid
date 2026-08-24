@@ -3,13 +3,16 @@
 <header class="site-header">
   <div class="page-width site-header__container">
     
-    <!-- 1. Left Column: Navigation (Desktop) / Hamburger (Mobile) -->
+    <!-- 1. Left: Hamburger (Mobile) / Desktop Nav -->
     <nav class="site-header__nav">
-      <button class="site-header__hamburger" aria-label="Toggle Menu">
+      <!-- Hamburger Icon (Mobile Only) -->
+      <button class="site-header__hamburger" id="HeaderHamburger" aria-label="Toggle Menu">
+        <span></span>
         <span></span>
         <span></span>
       </button>
 
+      <!-- Desktop Menu -->
       <ul class="site-header__menu">
         <li><a href="/" class="site-header__link site-header__link--active">Home</a></li>
         <li class="site-header__item-has-dropdown">
@@ -19,9 +22,8 @@
               <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </a>
-          <!-- Dropdown Menu -->
           <ul class="site-header__dropdown">
-            <li><a href="/collections/all">All Products</a></li>
+            <li><a href="/collections">All Products</a></li>
             <li><a href="/collections/trolleys">Trolleys</a></li>
             <li><a href="/collections/treatment-tables">Treatment Tables</a></li>
             <li><a href="/collections/stools">Stools</a></li>
@@ -36,7 +38,7 @@
       </ul>
     </nav>
 
-    <!-- 2. Center Column: Logo -->
+    <!-- 2. Center: Logo -->
     <div class="site-header__logo">
       <a href="/">
         {% if section.settings.logo != blank %}
@@ -47,35 +49,91 @@
       </a>
     </div>
 
-    <!-- 3. Right Column: Actions & Socials (Desktop) / Cart Only (Mobile) -->
+    <!-- 3. Right: Actions (Socials + Quote on Desktop / Cart on Right in Mobile) -->
     <div class="site-header__actions">
-      <!-- Social Icons -->
       <div class="site-header__socials">
-        <a href="#" aria-label="Instagram">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
-        </a>
-        <a href="#" aria-label="Facebook">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
-        </a>
-        <a href="#" aria-label="Pinterest">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.9 6.42 9.34-.09-.78-.17-1.98.04-2.83.19-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.26-.87 3.51-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.31-1.97 3.31-4.82 0-2.52-1.81-4.28-4.4-4.28-2.99 0-4.75 2.24-4.75 4.56 0 .9.35 1.87.79 2.4.09.11.1.2.07.31-.08.31-.25 1.03-.28 1.17-.04.18-.16.22-.36.13-1.34-.62-2.18-2.57-2.18-4.14 0-3.37 2.45-6.47 7.07-6.47 3.71 0 6.6 2.65 6.6 6.19 0 3.69-2.33 6.66-5.56 6.66-1.09 0-2.11-.56-2.46-1.23l-.67 2.55c-.24.93-.9 2.09-1.34 2.8 1.06.33 2.19.5 3.36.5 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg>
-        </a>
+        <a href="#" aria-label="Instagram"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg></a>
+        <a href="#" aria-label="Facebook"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+        <a href="#" aria-label="Pinterest"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12c0 4.25 2.67 7.9 6.42 9.34-.09-.78-.17-1.98.04-2.83.19-.77 1.22-5.17 1.22-5.17s-.31-.63-.31-1.56c0-1.46.85-2.55 1.9-2.55.9 0 1.33.67 1.33 1.48 0 .9-.57 2.26-.87 3.51-.25 1.05.53 1.91 1.56 1.91 1.87 0 3.31-1.97 3.31-4.82 0-2.52-1.81-4.28-4.4-4.28-2.99 0-4.75 2.24-4.75 4.56 0 .9.35 1.87.79 2.4.09.11.1.2.07.31-.08.31-.25 1.03-.28 1.17-.04.18-.16.22-.36.13-1.34-.62-2.18-2.57-2.18-4.14 0-3.37 2.45-6.47 7.07-6.47 3.71 0 6.6 2.65 6.6 6.19 0 3.69-2.33 6.66-5.56 6.66-1.09 0-2.11-.56-2.46-1.23l-.67 2.55c-.24.93-.9 2.09-1.34 2.8 1.06.33 2.19.5 3.36.5 5.52 0 10-4.48 10-10S17.52 2 12 2z"/></svg></a>
       </div>
 
-      <!-- Cart Link -->
       <a href="/cart" class="site-header__cart">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span class="site-header__cart-count">{{ cart.item_count | default: 0 }}</span>
       </a>
 
-      <!-- Get a Quote Button -->
-      <a href="/pages/quote" class="button-quote">
-        Get a Quote
-      </a>
+      <a href="/pages/quote" class="button-quote">Get a Quote</a>
     </div>
 
   </div>
 </header>
+
+<!-- Mobile Drawer Navigation -->
+<div class="mobile-drawer-overlay" id="MobileDrawerOverlay"></div>
+<aside class="mobile-drawer" id="MobileDrawer">
+  <div class="mobile-drawer__header">
+    <span class="mobile-drawer__title">MENU</span>
+    <button class="mobile-drawer__close" id="MobileDrawerClose" aria-label="Close Menu">&times;</button>
+  </div>
+  <ul class="mobile-drawer__menu">
+    <li><a href="/" class="mobile-drawer__link">Home</a></li>
+    <li class="mobile-drawer__has-sub">
+      <div class="mobile-drawer__sub-header">
+        <a href="/collections" class="mobile-drawer__link">Shop</a>
+        <button class="mobile-drawer__toggle-sub" id="MobileSubToggle">+</button>
+      </div>
+      <ul class="mobile-drawer__submenu" id="MobileSubMenu">
+        <li><a href="/collections">All Products</a></li>
+        <li><a href="/collections/trolleys">Trolleys</a></li>
+        <li><a href="/collections/treatment-tables">Treatment Tables</a></li>
+        <li><a href="/collections/stools">Stools</a></li>
+        <li><a href="/collections/steamers">Steamers</a></li>
+        <li><a href="/collections/mag-lamps">Mag-lamps</a></li>
+        <li><a href="/collections/skincare-equipment">Skincare Equipment</a></li>
+        <li><a href="/collections/wellness-therapy">Wellness Therapy</a></li>
+      </ul>
+    </li>
+    <li><a href="/pages/about" class="mobile-drawer__link">About</a></li>
+    <li><a href="/pages/contact" class="mobile-drawer__link">Contact</a></li>
+  </ul>
+  <div class="mobile-drawer__footer">
+    <a href="/pages/quote" class="button-quote" style="display: block; text-align: center;">Get a Quote</a>
+  </div>
+</aside>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('HeaderHamburger');
+    const drawerCloseBtn = document.getElementById('MobileDrawerClose');
+    const drawer = document.getElementById('MobileDrawer');
+    const overlay = document.getElementById('MobileDrawerOverlay');
+    const subToggleBtn = document.getElementById('MobileSubToggle');
+    const subMenu = document.getElementById('MobileSubMenu');
+
+    function openDrawer() {
+      drawer.classList.add('is-open');
+      overlay.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
+
+    function closeDrawer() {
+      drawer.classList.remove('is-open');
+      overlay.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+
+    if (subToggleBtn && subMenu) {
+      subToggleBtn.addEventListener('click', function() {
+        subMenu.classList.toggle('is-open');
+        subToggleBtn.textContent = subMenu.classList.contains('is-open') ? '−' : '+';
+      });
+    }
+  });
+</script>
 
 {% schema %}
 {
