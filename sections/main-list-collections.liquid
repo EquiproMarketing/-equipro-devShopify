@@ -1,0 +1,84 @@
+{{ 'section-main-list-collections.css' | asset_url | stylesheet_tag }}
+
+<div class="collections-page-wrapper page-width">
+  <!-- Back Button -->
+  <div class="collections-page__back">
+    <a href="javascript:history.back()" class="back-link">
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+        <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+  </div>
+
+  <!-- Page Title -->
+  <h1 class="collections-page__title">{{ section.settings.title }}</h1>
+
+  <!-- Categories Grid -->
+  <div class="collections-grid">
+    {% for block in section.blocks %}
+      <a href="{{ block.settings.collection.url | default: '#' }}" class="collection-tile" {{ block.shopify_attributes }}>
+        <div class="collection-tile__bg">
+          {% if block.settings.image != blank %}
+            {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'collection-tile__img' }}
+          {% elsif block.settings.collection.featured_image != blank %}
+            {{ block.settings.collection.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'collection-tile__img' }}
+          {% else %}
+            <div class="collection-tile__placeholder"></div>
+          {% endif %}
+          <div class="collection-tile__overlay"></div>
+        </div>
+        
+        <div class="collection-tile__content">
+          <span class="collection-tile__name">
+            {{ block.settings.title | default: block.settings.collection.title }}
+          </span>
+        </div>
+      </a>
+    {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Collections Grid",
+  "tag": "section",
+  "class": "section-main-list-collections",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_item",
+      "name": "Category Tile",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Title Override"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Tile Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collections Grid"
+    }
+  ]
+}
+{% endschema %}

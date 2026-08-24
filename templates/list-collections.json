@@ -7,14 +7,62 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
-    "main": {
-      "type": "collections",
-      "settings": {}
+    "main_grid": {
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Products"
+      },
+      "blocks": {
+        "cat_1": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Skincare Équipments"
+          }
+        },
+        "cat_2": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Treatment Tables"
+          }
+        },
+        "cat_3": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Stools"
+          }
+        },
+        "cat_4": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Trolleys"
+          }
+        },
+        "cat_5": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Mag-lamps"
+          }
+        },
+        "cat_6": {
+          "type": "collection_item",
+          "settings": {
+            "title": "Wellness therapy"
+          }
+        }
+      },
+      "block_order": [
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4",
+        "cat_5",
+        "cat_6"
+      ]
     }
   },
   "order": [
-    "main"
+    "main_grid"
   ]
 }
