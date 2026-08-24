@@ -2,25 +2,36 @@
     width: 100%;
     background-color: #a22938;
     color: #ffffff;
-    padding-top: 4rem;
-    padding-bottom: 4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 3.5rem;
+    box-sizing: border-box;
   }
   
+  /* Forzar margen de seguridad en todo el contenedor del footer */
   .site-footer__container {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding-left: 2rem !important;
+    padding-right: 2rem !important;
+    margin: 0 auto !important;
+    box-sizing: border-box !important;
     display: flex;
     flex-direction: column;
-    gap: 3rem;
+    gap: 2.5rem;
   }
   
+  /* Fila superior: Oficinas y Productos */
   .site-footer__top-row {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 2rem;
+    gap: 1.5rem;
     text-align: left;
+    width: 100%;
+    box-sizing: border-box;
   }
   
   .site-footer__title {
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1.25rem;
@@ -38,10 +49,11 @@
   }
   
   .site-footer__col p {
-    font-size: 0.875rem;
-    line-height: 1.5;
+    font-size: 0.825rem;
+    line-height: 1.45;
     color: rgba(255, 255, 255, 0.9);
     margin: 0;
+    word-break: break-word;
   }
   
   .site-footer__links {
@@ -56,7 +68,7 @@
   
   .site-footer__links a {
     color: #ffffff;
-    font-size: 0.9rem;
+    font-size: 0.875rem;
     text-decoration: underline;
     text-underline-offset: 3px;
   }
@@ -156,11 +168,14 @@
     cursor: pointer;
   }
   
+  /* Adaptación para Escritorio */
   @media screen and (min-width: 990px) {
     .site-footer__container {
-      display: grid;
+      display: grid !important;
       grid-template-columns: 2.2fr 1.8fr 1.5fr;
       align-items: start;
+      padding-left: 4rem !important;
+      padding-right: 4rem !important;
     }
   
     .site-footer__input-wrapper {
