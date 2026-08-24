@@ -54,3 +54,29 @@
     height: 100%;
     background: linear-gradient(135deg, #e8e8e8 0%, #f7f7f7 100%);
   }
+
+  @media screen and (max-width: 767px) {
+    .image-with-text__grid {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.5rem !important;
+    }
+  
+    .image-with-text__title {
+      order: 1;
+      font-size: 1.6rem !important;
+      margin-bottom: 0.5rem !important;
+    }
+  
+    .image-with-text__media {
+      order: 2;
+      width: 100% !important;
+      aspect-ratio: 4 / 3 !important;
+      border-radius: 20px !important;
+    }
+  
+    .image-with-text__text {
+      order: 3;
+      font-size: 0.92rem !important;
+    }
+  }

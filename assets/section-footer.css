@@ -180,3 +180,53 @@
   .social-circle:hover {
     transform: translateY(-2px);
   }
+
+  @media screen and (max-width: 767px) {
+    .site-footer__container {
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      text-align: center !important;
+      gap: 2rem !important;
+    }
+  
+    /* 1. Oficinas y Productos en 2 columnas */
+    .site-footer__top-mobile {
+      display: grid !important;
+      grid-template-columns: 1fr 1fr !important;
+      text-align: left !important;
+      width: 100% !important;
+      gap: 1rem !important;
+    }
+  
+    /* 2. Logo Blanco Centrado */
+    .site-footer__col--right {
+      align-items: center !important;
+      text-align: center !important;
+      width: 100% !important;
+    }
+  
+    /* 3. Redes Sociales */
+    .site-footer__socials {
+      justify-content: center !important;
+      margin: 1.25rem 0 !important;
+    }
+  
+    /* 4. Newsletter al final */
+    .site-footer__col--center {
+      order: 10;
+      width: 100% !important;
+      margin-top: 1rem;
+    }
+  
+    .site-footer__input-wrapper {
+      flex-direction: column !important;
+      gap: 1rem !important;
+      width: 100% !important;
+    }
+  
+    .site-footer__submit-btn {
+      width: 100% !important;
+      text-align: center !important;
+    }
+  }

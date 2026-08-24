@@ -27,19 +27,23 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.category-swiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-      loop: true,
-      grabCursor: true,
-      speed: 3500,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
+      slidesPerView: 1,
+      slidesPerGroup: 1,
+      grid: {
+        rows: 2,
+        fill: 'row'
+      },
+      spaceBetween: 12,
+      pagination: {
+        el: '.category-swiper-pagination',
+        clickable: true,
       },
       breakpoints: {
-        640: { slidesPerView: 2.2, spaceBetween: 16 },
-        990: { slidesPerView: 4, spaceBetween: 20 }
+        768: {
+          slidesPerView: 4,
+          grid: { rows: 1 },
+          spaceBetween: 20
+        }
       }
     });
   });

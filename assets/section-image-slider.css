@@ -63,3 +63,10 @@
   
   .image-slider__nav--prev { left: 2.5rem; }
   .image-slider__nav--next { right: 2.5rem; }
+
+  @media screen and (max-width: 767px) {
+    .image-slider {
+      min-height: 38vh !important;
+      max-height: 280px !important;
+    }
+  }
