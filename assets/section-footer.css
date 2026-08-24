@@ -1,18 +1,24 @@
-.site-footer {
+/* ============================================================
+   EQUIPRO SITE FOOTER
+   ============================================================ */
+
+   .site-footer {
     width: 100%;
     background-color: #a22938;
     color: #ffffff;
     padding-top: 3.5rem;
     padding-bottom: 3.5rem;
     box-sizing: border-box;
+    clear: both;
+    font-family: system-ui, -apple-system, sans-serif;
   }
   
-  /* Forzar margen de seguridad en todo el contenedor del footer */
+  /* --- CONTENEDOR BASE (Móvil) --- */
   .site-footer__container {
     width: 100% !important;
-    max-width: 100% !important;
-    padding-left: 2rem !important;
-    padding-right: 2rem !important;
+    max-width: 1400px !important;
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
     margin: 0 auto !important;
     box-sizing: border-box !important;
     display: flex;
@@ -20,21 +26,18 @@
     gap: 2.5rem;
   }
   
-  /* Fila superior: Oficinas y Productos */
+  /* Desactivar div wrapper si existe para no romper Flexbox / Grid */
   .site-footer__top-row {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 1.5rem;
-    text-align: left;
-    width: 100%;
-    box-sizing: border-box;
+    display: contents;
   }
   
+  /* --- ESTILOS DE TEXTO Y TITULOS --- */
   .site-footer__title {
     font-size: 1.1rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 1.25rem;
+    text-transform: capitalize;
   }
   
   .site-footer__address-block {
@@ -46,6 +49,7 @@
     font-size: 0.85rem;
     font-weight: 700;
     margin-bottom: 0.25rem;
+    letter-spacing: 0.5px;
   }
   
   .site-footer__col p {
@@ -56,6 +60,7 @@
     word-break: break-word;
   }
   
+  /* --- LISTA DE PRODUCTOS --- */
   .site-footer__links {
     list-style: none;
     padding: 0;
@@ -71,8 +76,15 @@
     font-size: 0.875rem;
     text-decoration: underline;
     text-underline-offset: 3px;
+    transition: opacity 0.2s ease;
   }
   
+  .site-footer__links a:hover {
+    opacity: 0.8;
+  }
+  
+  /* --- BLOQUE MARCA, SOCIALES Y CONTACTO --- */
+  .site-footer__col--center,
   .site-footer__col--right {
     display: flex;
     flex-direction: column;
@@ -85,6 +97,7 @@
     font-weight: 700;
     color: #ffffff;
     font-style: italic;
+    letter-spacing: 1px;
   }
   
   .site-footer__logo-text span {
@@ -105,6 +118,12 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .social-circle:hover {
+    transform: translateY(-3px);
+    background-color: #f0f0f0;
   }
   
   .site-footer__contact-info {
@@ -124,12 +143,16 @@
     text-underline-offset: 4px;
   }
   
-  .site-footer__col--center {
+  /* --- BLOQUE NEWSLETTER --- */
+  .site-footer__col--newsletter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
   }
   
   .site-footer__newsletter-title {
-    font-size: 2.5rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #ffffff;
     margin-bottom: 0.2rem;
@@ -141,11 +164,16 @@
     margin-bottom: 1.5rem;
   }
   
+  .site-footer__newsletter-form {
+    width: 100%;
+  }
+  
   .site-footer__input-wrapper {
     display: flex;
     flex-direction: column;
     gap: 1rem;
-    max-width: 400px;
+    width: 100%;
+    max-width: 380px;
     margin: 0 auto;
   }
   
@@ -156,6 +184,8 @@
     border-radius: 4px;
     font-size: 0.9rem;
     color: #333333;
+    box-sizing: border-box;
+    outline: none;
   }
   
   .site-footer__submit-btn {
@@ -166,19 +196,95 @@
     font-weight: 700;
     letter-spacing: 0.05em;
     cursor: pointer;
+    transition: opacity 0.2s ease;
   }
   
-  /* Adaptación para Escritorio */
-  @media screen and (min-width: 990px) {
+  .site-footer__submit-btn:hover {
+    opacity: 0.8;
+  }
+  
+  
+  /* ============================================================
+     RESPONSIVE: TABLETS (768px a 989px)
+     ============================================================ */
+  @media screen and (min-width: 768px) and (max-width: 989px) {
     .site-footer__container {
       display: grid !important;
-      grid-template-columns: 2.2fr 1.8fr 1.5fr;
-      align-items: start;
-      padding-left: 4rem !important;
-      padding-right: 4rem !important;
+      grid-template-columns: 1fr 1fr !important;
+      gap: 3rem 2rem;
+    }
+  
+    .site-footer__col--newsletter {
+      order: 3;
+      align-items: flex-start;
+      text-align: left;
+    }
+  
+    .site-footer__col--center {
+      order: 4;
     }
   
     .site-footer__input-wrapper {
+      margin: 0;
       flex-direction: row;
+      align-items: center;
+    }
+  }
+  
+  
+  /* ============================================================
+     RESPONSIVE: ESCRITORIO (990px o superior)
+     ORDEN: 1. Offices | 2. Products | 3. Newsletter | 4. Logo/Redes
+     ============================================================ */
+  @media screen and (min-width: 990px) {
+    .site-footer {
+      padding-top: 4.5rem;
+      padding-bottom: 4.5rem;
+    }
+  
+    .site-footer__container {
+      display: grid !important;
+      /* 4 Columnas: Offices (1.1fr) | Products (1fr) | Newsletter (1.5fr) | Logo (1.2fr) */
+      grid-template-columns: 1.1fr 1fr 1.5fr 1.2fr !important;
+      align-items: start;
+      padding-left: 3rem !important;
+      padding-right: 3rem !important;
+      gap: 2.5rem;
+    }
+  
+    /* Orden visual explícito */
+    .site-footer__col:nth-child(1) { order: 1; text-align: left; }
+    .site-footer__col:nth-child(2) { order: 2; text-align: left; }
+    .site-footer__col--newsletter { order: 3; text-align: left; align-items: flex-start; }
+    .site-footer__col--center    { order: 4; text-align: center; }
+  
+    /* Formulario Newsletter horizontal en escritorio */
+    .site-footer__input-wrapper {
+      flex-direction: row;
+      align-items: center;
+      margin: 0;
+      max-width: 100%;
+    }
+  
+    .site-footer__input {
+      flex: 1;
+    }
+  
+    .site-footer__submit-btn {
+      padding-left: 0.5rem;
+      white-space: nowrap;
+    }
+
+        /* Estilos para los enlaces de mapas en las direcciones */
+    .site-footer__map-link {
+      color: rgba(255, 255, 255, 0.9) !important;
+      text-decoration: none !important;
+      transition: opacity 0.2s ease, text-decoration 0.2s ease;
+    }
+
+    .site-footer__map-link:hover {
+      opacity: 1;
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
     }
   }

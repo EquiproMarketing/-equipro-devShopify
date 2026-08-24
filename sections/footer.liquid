@@ -3,37 +3,60 @@
 <footer class="site-footer">
   <div class="page-width site-footer__container">
     
-    <!-- Top Grid (Our offices & Our products) -->
-    <div class="site-footer__top-row">
-      <!-- Columna 1: Our Offices -->
-      <div class="site-footer__col">
-        <h3 class="site-footer__title">Our offices</h3>
-        <div class="site-footer__address-block">
-          <strong class="site-footer__subtitle">CANADA</strong>
-          <p>11970 Albert Hudon<br>H1G 3K3,<br>Montréal, QC</p>
-        </div>
-        <div class="site-footer__address-block">
-          <strong class="site-footer__subtitle">USA DIVISION</strong>
-          <p>2425 Main street<br>P.O.Box 154<br>ISLE LA MOTTE, VT 05463</p>
-        </div>
+    <!-- Columna 1: Our Offices -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__title">Our offices</h3>
+      
+      <!-- Canadá -->
+      <div class="site-footer__address-block">
+        <strong class="site-footer__subtitle">CANADA</strong>
+        <p>
+          <a href="https://maps.google.com/?q=11970+Albert+Hudon,+Montréal,+QC+H1G+3K3" target="_blank" rel="noopener noreferrer" class="site-footer__map-link">
+            11970 Albert Hudon<br>H1G 3K3,<br>Montréal, QC
+          </a>
+        </p>
       </div>
 
-      <!-- Columna 2: Our Products -->
-      <div class="site-footer__col">
-        <h3 class="site-footer__title">Our products</h3>
-        <ul class="site-footer__links">
-          <li><a href="/collections/skincare-equipment">Skincare Equipment</a></li>
-          <li><a href="/collections/treatment-tables">Treatment tables</a></li>
-          <li><a href="/collections/stools">Stools</a></li>
-          <li><a href="/collections/trolleys">Trolleys</a></li>
-          <li><a href="/collections/mag-lamps">Mag-lamps</a></li>
-          <li><a href="/collections/wellness-therapy">Wellness therapy</a></li>
-        </ul>
+      <!-- USA Division -->
+      <div class="site-footer__address-block">
+        <strong class="site-footer__subtitle">USA DIVISION</strong>
+        <p>
+          <a href="https://maps.google.com/?q=2425+Main+street,+ISLE+LA+MOTTE,+VT+05463" target="_blank" rel="noopener noreferrer" class="site-footer__map-link">
+            2425 Main street<br>P.O.Box 154<br>ISLE LA MOTTE, VT 05463
+          </a>
+        </p>
       </div>
     </div>
 
-    <!-- Center Brand & Contact -->
-    <div class="site-footer__col site-footer__col--right">
+    <!-- Columna 2: Our Products -->
+    <div class="site-footer__col">
+      <h3 class="site-footer__title">Our products</h3>
+      <ul class="site-footer__links">
+        <li><a href="/collections/skincare-equipment">Skincare Equipment</a></li>
+        <li><a href="/collections/treatment-tables">Treatment tables</a></li>
+        <li><a href="/collections/stools">Stools</a></li>
+        <li><a href="/collections/trolleys">Trolleys</a></li>
+        <li><a href="/collections/mag-lamps">Mag-lamps</a></li>
+        <li><a href="/collections/wellness-therapy">Wellness therapy</a></li>
+      </ul>
+    </div>
+
+    <!-- Columna 3: Newsletter (En el centro) -->
+    <div class="site-footer__col site-footer__col--newsletter">
+      <h2 class="site-footer__newsletter-title">Newsletter</h2>
+      <p class="site-footer__newsletter-sub">Subscribe to the newsletter</p>
+      
+      {% form 'customer', class: 'site-footer__newsletter-form' %}
+        <input type="hidden" name="contact[tags]" value="newsletter">
+        <div class="site-footer__input-wrapper">
+          <input type="email" name="contact[email]" class="site-footer__input" placeholder="Email Address" required>
+          <button type="submit" class="site-footer__submit-btn">SIGNUP</button>
+        </div>
+      {% endform %}
+    </div>
+
+    <!-- Columna 4: Brand Logo, Socials & Emergency Contact -->
+    <div class="site-footer__col site-footer__col--center">
       <div class="site-footer__logo">
         {% if section.settings.logo != blank %}
           {{ section.settings.logo | image_url: width: 300 | image_tag: alt: shop.name }}
@@ -62,20 +85,6 @@
       <div class="site-footer__emergency">
         <a href="tel:+18773242226">Emergency : 24 hours</a>
       </div>
-    </div>
-
-    <!-- Newsletter Bottom -->
-    <div class="site-footer__col site-footer__col--center">
-      <h2 class="site-footer__newsletter-title">Newsletter</h2>
-      <p class="site-footer__newsletter-sub">Subscribe to the newsletter</p>
-      
-      {% form 'customer', class: 'site-footer__newsletter-form' %}
-        <input type="hidden" name="contact[tags]" value="newsletter">
-        <div class="site-footer__input-wrapper">
-          <input type="email" name="contact[email]" class="site-footer__input" placeholder="Email Address" required>
-          <button type="submit" class="site-footer__submit-btn">SIGNUP</button>
-        </div>
-      {% endform %}
     </div>
 
   </div>
