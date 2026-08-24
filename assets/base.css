@@ -73,6 +73,20 @@
     background-color: var(--color-background);
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+  }
+  
+  /* Contenedor principal de Liquid sin márgenes fantasma */
+  main,
+  #MainContent,
+  .shopify-section {
+    width: 100% !important;
+    max-width: 100% !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    display: block !important;
   }
   
   img,
@@ -162,7 +176,7 @@
     font-family: var(--font-family-base);
     font-size: var(--font-size-base);
     font-weight: var(--font-weight-medium);
-    border-radius: var(--radius-button); /* Applies the pill shape */
+    border-radius: var(--radius-button);
     border: 2px solid transparent;
     cursor: pointer;
     transition: all var(--transition-fast);
