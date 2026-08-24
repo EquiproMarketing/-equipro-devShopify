@@ -1,77 +1,78 @@
 .shop-category-wrapper {
-    padding-bottom: 5rem;
-  }
-  
-  .shop-category__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #a22938;
-    letter-spacing: 0.05em;
-    margin-bottom: 2rem;
-    text-transform: uppercase;
-  }
-  
-  .shop-category__grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.25rem;
-  }
-  
-  /* Tarjeta por defecto: Fondo Rojo */
-  .category-card {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1.25rem 1.5rem;
-    border-radius: 20px;
-    min-height: 90px;
-    text-decoration: none;
-    background-color: #b8293d;
-    border: 2px solid #b8293d;
-    color: #ffffff;
-    transition: all 0.25s ease;
-  }
-  
-  .category-card__content {
-    display: flex;
-    align-items: center;
-    gap: 0.85rem;
-  }
-  
-  .category-card__line {
-    width: 2px;
-    height: 28px;
-    display: block;
-    background-color: #ffffff;
-    transition: background-color 0.25s ease;
-  }
-  
-  .category-card__name {
-    font-size: 1.05rem;
-    font-weight: 600;
-    line-height: 1.2;
-  }
-  
-  .category-card__image {
-    max-height: 60px;
-    width: auto;
-    object-fit: contain;
-  }
-  
-  .category-card__image-placeholder {
-    width: 50px;
-    height: 50px;
-  }
-  
-  /* Estado Hover: Fondo Blanco con Borde y Línea Roja */
-  .category-card:hover {
-    background-color: #ffffff;
-    border-color: #b8293d;
-    color: #b8293d;
-    transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(184, 41, 61, 0.15);
-  }
-  
-  .category-card:hover .category-card__line {
-    background-color: #b8293d;
-  }
+  padding-bottom: 5rem;
+  overflow: hidden;
+}
+
+.shop-category__title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a22938;
+  letter-spacing: 0.05em;
+  margin-bottom: 2rem;
+  text-transform: uppercase;
+}
+
+/* Transición continua estilo Marquee */
+.category-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+/* Tarjeta por defecto: Fondo Rojo */
+.category-card {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.25rem 1.5rem;
+  border-radius: 20px;
+  min-height: 90px;
+  text-decoration: none;
+  background-color: #b8293d;
+  border: 2px solid #b8293d;
+  color: #ffffff;
+  transition: all 0.25s ease;
+  width: 100%;
+}
+
+.category-card__content {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+}
+
+.category-card__line {
+  width: 2px;
+  height: 28px;
+  display: block;
+  background-color: #ffffff;
+  transition: background-color 0.25s ease;
+}
+
+.category-card__name {
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.category-card__image {
+  max-height: 60px;
+  width: auto;
+  object-fit: contain;
+}
+
+.category-card__image-placeholder {
+  width: 50px;
+  height: 50px;
+}
+
+/* Estado Hover: Fondo Blanco con Borde y Línea Roja */
+.category-card:hover {
+  background-color: #ffffff;
+  border-color: #b8293d;
+  color: #b8293d;
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(184, 41, 61, 0.15);
+}
+
+.category-card:hover .category-card__line {
+  background-color: #b8293d;
+}
