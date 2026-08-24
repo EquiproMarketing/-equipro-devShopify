@@ -3,8 +3,13 @@
 <header class="site-header">
   <div class="page-width site-header__container">
     
-    <!-- 1. Navigation Menu (Left) -->
+    <!-- 1. Left Column: Navigation (Desktop) / Hamburger (Mobile) -->
     <nav class="site-header__nav">
+      <button class="site-header__hamburger" aria-label="Toggle Menu">
+        <span></span>
+        <span></span>
+      </button>
+
       <ul class="site-header__menu">
         <li><a href="/" class="site-header__link site-header__link--active">Home</a></li>
         <li class="site-header__item-has-dropdown">
@@ -20,7 +25,7 @@
       </ul>
     </nav>
 
-    <!-- 2. Logo (Center) -->
+    <!-- 2. Center Column: Logo -->
     <div class="site-header__logo">
       <a href="/">
         {% if section.settings.logo != blank %}
@@ -31,7 +36,7 @@
       </a>
     </div>
 
-    <!-- 3. Actions & Socials (Right) -->
+    <!-- 3. Right Column: Actions & Socials (Desktop) / Cart Only (Mobile) -->
     <div class="site-header__actions">
       <!-- Social Icons -->
       <div class="site-header__socials">
