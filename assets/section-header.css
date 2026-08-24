@@ -133,10 +133,56 @@
   background-color: #737373;
 }
 
+
+/* Submenú Desplegable (Dropdown) */
+.site-header__item-has-dropdown {
+  position: relative;
+}
+
+.site-header__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background-color: #ffffff;
+  min-width: 200px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  padding: 0.75rem 0;
+  list-style: none;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(10px);
+  transition: all 0.25s ease;
+  z-index: 101;
+}
+
+.site-header__item-has-dropdown:hover .site-header__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.site-header__dropdown li a {
+  display: block;
+  padding: 0.5rem 1.25rem;
+  font-size: 0.875rem;
+  color: #333333;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.site-header__dropdown li a:hover {
+  background-color: #f9f9f9;
+  color: #a22938;
+}
+
 /* Ocultar botón de menú hamburguesa en Desktop */
 .site-header__hamburger {
   display: none;
 }
+
+
+
 
 /* ==========================================================================
    MOBILE RESPONSIVE STYLES (< 990px)

@@ -1,0 +1,38 @@
+{
+    "sections": {
+      "subcategories": {
+        "type": "subcategories-grid",
+        "settings": {
+          "title": "Treatment Tables"
+        },
+        "blocks": {
+          "sub_1": {
+            "type": "subcategory",
+            "settings": {
+              "title": "Electric"
+            }
+          },
+          "sub_2": {
+            "type": "subcategory",
+            "settings": {
+              "title": "Hydraulic / Mechanical"
+            }
+          },
+          "sub_3": {
+            "type": "subcategory",
+            "settings": {
+              "title": "Portable"
+            }
+          }
+        },
+        "block_order": [
+          "sub_1",
+          "sub_2",
+          "sub_3"
+        ]
+      }
+    },
+    "order": [
+      "subcategories"
+    ]
+  }

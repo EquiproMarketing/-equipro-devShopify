@@ -1,0 +1,84 @@
+{{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="subcategories-wrapper page-width">
+  <!-- Back Button -->
+  <div class="subcategories__back">
+    <a href="javascript:history.back()" class="back-link">
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+        <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      Back
+    </a>
+  </div>
+
+  <div class="subcategories__container">
+    <!-- Title Left / Header -->
+    <div class="subcategories__header">
+      <h1 class="subcategories__title">{{ section.settings.title | default: collection.title | default: "Treatment Tables" }}</h1>
+    </div>
+
+    <!-- Modular Grid Right (3 Columns Rounded) -->
+    <div class="subcategories__grid">
+      {% for block in section.blocks %}
+        <a href="{{ block.settings.link | default: '#' }}" class="subcategory-tile" {{ block.shopify_attributes }}>
+          <div class="subcategory-tile__bg">
+            {% if block.settings.image != blank %}
+              <img src="{{ block.settings.image | image_url: width: 600 }}" alt="{{ block.settings.title }}" class="subcategory-tile__img" loading="lazy">
+            {% else %}
+              <div class="subcategory-tile__placeholder"></div>
+            {% endif %}
+            <div class="subcategory-tile__overlay"></div>
+          </div>
+          <div class="subcategory-tile__content">
+            <span class="subcategory-tile__name">{{ block.settings.title }}</span>
+          </div>
+        </a>
+      {% endfor %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Subcategories Grid",
+  "tag": "section",
+  "class": "section-subcategories-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Category Title",
+      "default": "Treatment Tables"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory",
+      "name": "Subcategory Tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Subcategory Name",
+          "default": "Electric"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Subcategory Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Subcategory Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subcategories Grid"
+    }
+  ]
+}
+{% endschema %}

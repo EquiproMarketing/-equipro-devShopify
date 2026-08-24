@@ -36,12 +36,15 @@
 
   <body>
     <!-- Header Navbar -->
-    {% sections 'header-group' %}
+
 
     <!-- Main Content Container -->
-    <main id="MainContent" role="main" tabindex="-1">
-      {{ content_for_layout }}
-    </main>
+    {% sections 'header-group' %}
+    {% section 'category-subnav' %}
+
+      <main id="MainContent" class="content-for-layout focus-none" role="main" tabindex="-1">
+        {{ content_for_layout }}
+      </main>
 
     <!-- Footer -->
     {% sections 'footer-group' %}
