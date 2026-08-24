@@ -34,9 +34,9 @@
     {% sections 'header-group' %}
 
     <!-- Main Content Area -->
-    <main id="MainContent" role="main">
-      {{ content_for_layout }}
-    </main>
+  <main id="MainContent" role="main" style="width: 100%; overflow-x: hidden; margin: 0; padding: 0;">
+    {{ content_for_layout }}
+  </main>
 
     <!-- Footer Section Group -->
     {% sections 'footer-group' %}
