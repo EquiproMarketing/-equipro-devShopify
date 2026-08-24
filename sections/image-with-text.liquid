@@ -1,0 +1,54 @@
+{{ 'section-image-with-text.css' | asset_url | stylesheet_tag }}
+
+<div class="image-with-text-wrapper page-width">
+  <div class="image-with-text__grid">
+    <div class="image-with-text__content">
+      {% if section.settings.title != blank %}
+        <h2 class="image-with-text__title">{{ section.settings.title }}</h2>
+      {% endif %}
+      {% if section.settings.text != blank %}
+        <div class="image-with-text__text">{{ section.settings.text }}</div>
+      {% endif %}
+    </div>
+
+    <div class="image-with-text__media">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 1000 | image_tag: class: 'image-with-text__image', loading: 'lazy' }}
+      {% else %}
+        <div class="image-with-text__placeholder"></div>
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Image with Text",
+  "tag": "section",
+  "class": "section-image-with-text",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "EquiPro Quality: Crafted for Professionals, Built to Last"
+    },
+    {
+      "type": "richtext",
+      "id": "text",
+      "label": "Text Content",
+      "default": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Image with Text"
+    }
+  ]
+}
+{% endschema %}

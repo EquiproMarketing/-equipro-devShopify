@@ -1,0 +1,54 @@
+{{ 'section-image-slider.css' | asset_url | stylesheet_tag }}
+
+<div class="image-slider-wrapper">
+  <div class="image-slider">
+    {% for block in section.blocks %}
+      <div class="image-slider__slide {% if forloop.first %}image-slider__slide--active{% endif %}" {{ block.shopify_attributes }}>
+        {% if block.settings.image != blank %}
+          {{ block.settings.image | image_url: width: 2000 | image_tag: class: 'image-slider__image', loading: 'lazy' }}
+        {% else %}
+          <div class="image-slider__placeholder"></div>
+        {% endif %}
+      </div>
+    {% endfor %}
+
+    <!-- Controls -->
+    <button class="image-slider__nav image-slider__nav--prev" aria-label="Previous">
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="none"><path d="M10 2L2 10L10 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+    <button class="image-slider__nav image-slider__nav--next" aria-label="Next">
+      <svg width="12" height="20" viewBox="0 0 12 20" fill="none"><path d="M2 2L10 10L2 18" stroke="white" stroke-width="2" stroke-linecap="round"/></svg>
+    </button>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Full Width Image Slider",
+  "tag": "section",
+  "class": "section-image-slider",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "slide",
+      "name": "Slide Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Slide Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Full Width Image Slider",
+      "blocks": [
+        { "type": "slide" },
+        { "type": "slide" }
+      ]
+    }
+  ]
+}
+{% endschema %}

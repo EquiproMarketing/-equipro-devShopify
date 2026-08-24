@@ -10,12 +10,100 @@
     },
     "shop_by_category": {
       "type": "shop-by-category",
-      "settings": {}
+      "settings": {
+        "title": "SHOP BY CATEGORY"
+      },
+      "blocks": {
+        "cat_1": {
+          "type": "category",
+          "settings": {
+            "title": "Treatment Tables",
+            "style": "red"
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "title": "Multi-function columns",
+            "style": "outline"
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "title": "Wax-heaters",
+            "style": "red"
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "title": "Stools",
+            "style": "red"
+          }
+        },
+        "cat_5": {
+          "type": "category",
+          "settings": {
+            "title": "Steamers",
+            "style": "red"
+          }
+        },
+        "cat_6": {
+          "type": "category",
+          "settings": {
+            "title": "Mag-lamps",
+            "style": "red"
+          }
+        },
+        "cat_7": {
+          "type": "category",
+          "settings": {
+            "title": "Towel warmers",
+            "style": "red"
+          }
+        },
+        "cat_8": {
+          "type": "category",
+          "settings": {
+            "title": "Trolleys",
+            "style": "red"
+          }
+        }
+      },
+      "block_order": [
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4",
+        "cat_5",
+        "cat_6",
+        "cat_7",
+        "cat_8"
+      ]
+    }
+  },
+{
+  "sections": {
+    "hero_banner": { "type": "hero-banner", "settings": {} },
+    "best_sellers": { "type": "featured-collection", "settings": {} },
+    "shop_by_category": { "type": "shop-by-category", "settings": {} },
+    "image_with_text": { "type": "image-with-text", "settings": {} },
+    "image_slider": {
+      "type": "image-slider",
+      "blocks": {
+        "s_1": { "type": "slide" },
+        "s_2": { "type": "slide" }
+      },
+      "block_order": ["s_1", "s_2"]
     }
   },
   "order": [
     "hero_banner",
     "best_sellers",
-    "shop_by_category"
+    "shop_by_category",
+    "image_with_text",
+    "image_slider"
   ]
+}
 }
