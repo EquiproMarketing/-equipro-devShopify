@@ -1,0 +1,145 @@
+<!-- STEP 1: SELECT PRODUCTS MODAL -->
+<div class="compare-modal-overlay" id="CompareModalStep1">
+  <div class="compare-modal">
+    <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
+    <h2 class="compare-modal__title">Select Products to Compare</h2>
+    <p class="compare-modal__sub">Choose up to 7 models to start the comparison:</p>
+
+    <div class="compare-select-list">
+      <label class="compare-select-item is-selected">
+        <input type="checkbox" checked disabled>
+        <span>Round air-lift stool with backrest (31200)</span>
+        <span class="this-model-tag">This Model</span>
+      </label>
+
+      <label class="compare-select-item">
+        <input type="checkbox">
+        <span>Round air-lift stool without backrest (31100)</span>
+      </label>
+
+      <label class="compare-select-item">
+        <input type="checkbox">
+        <span>Ergonomic stool with backrest (31300)</span>
+      </label>
+
+      <label class="compare-select-item">
+        <input type="checkbox">
+        <span>Ergonomic stool with adjustable backrest (31301)</span>
+      </label>
+    </div>
+
+    <button class="compare-modal__submit-btn" onclick="goToStep2()">View Comparison</button>
+  </div>
+</div>
+
+<!-- STEP 2: PRODUCT COMPARISON TABLE MODAL -->
+<div class="compare-modal-overlay" id="CompareModalStep2">
+  <div class="compare-modal compare-modal--wide">
+    <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
+    <h2 class="compare-modal__title">Product Comparison</h2>
+    <p class="compare-modal__sub">Swipe horizontally to compare alternative models against this one.</p>
+
+    <div class="compare-table-scroll">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th class="sticky-col">Key Features</th>
+            <th class="this-model-col">
+              <span class="this-model-badge">This Model</span>
+              <div class="compare-product-img"></div>
+              <strong>Round air-lift stool with backrest (31200)</strong>
+              <div class="compare-product-price">$355.00</div>
+              <a href="#" class="compare-product-btn">View Product</a>
+            </th>
+            <th>
+              <div class="compare-product-img"></div>
+              <strong>Ergonomic stool with backrest (31300)</strong>
+              <div class="compare-product-price">$385.00</div>
+              <a href="#" class="compare-product-btn">View Product</a>
+            </th>
+            <th>
+              <div class="compare-product-img"></div>
+              <strong>Ergonomic stool with adjustable backrest (31301)</strong>
+              <div class="compare-product-price">$425.00</div>
+              <a href="#" class="compare-product-btn">View Product</a>
+            </th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td class="sticky-col">Type</td><td>Air-lift / Pneumatic</td><td>Air-lift / Pneumatic</td><td>Air-lift / Pneumatic</td></tr>
+          <tr><td class="sticky-col">Height Adjustment</td><td>20.5" to 27.5"</td><td>20.5" to 27.5"</td><td>20.5" to 27.5"</td></tr>
+          <tr><td class="sticky-col">Width Options</td><td>15" (Standard round)</td><td>Ergonomic contoured seat</td><td>Ergonomic contoured seat</td></tr>
+          <tr><td class="sticky-col">Weight</td><td>25 lbs</td><td>25 lbs</td><td>25 lbs</td></tr>
+          <tr><td class="sticky-col">Warranty</td><td>2 years</td><td>2 years</td><td>2 years</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    <div class="compare-modal__footer">
+      <button class="compare-btn-sec" onclick="goToStep1()">Go Back</button>
+      <button class="compare-btn-sec" onclick="closeCompareModal()">Close</button>
+    </div>
+  </div>
+</div>
+
+<style>
+.compare-modal-overlay {
+  position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000;
+  display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease;
+}
+.compare-modal-overlay.is-open { opacity: 1; visibility: visible; }
+.compare-modal {
+  background: #fff; border-radius: 24px; padding: 2.5rem; width: 90%; max-width: 550px; position: relative; max-height: 90vh; overflow-y: auto;
+}
+.compare-modal--wide { max-width: 1050px; }
+.compare-modal__close { position: absolute; top: 1.5rem; right: 1.5rem; background: #eee; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
+.compare-modal__title { font-size: 2rem; font-weight: 700; color: #a22938; margin-bottom: 0.5rem; }
+.compare-modal__sub { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
+.compare-select-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+.compare-select-item { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border-radius: 12px; border: 1px solid #eee; cursor: pointer; font-size: 0.9rem; }
+.compare-select-item.is-selected { border-color: #a22938; background: #fdf5f6; }
+.this-model-tag { margin-left: auto; background: #a22938; color: #fff; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 600; }
+.compare-modal__submit-btn { width: 100%; background: #ccc; color: #fff; padding: 1rem; border-radius: 25px; border: none; font-weight: 700; cursor: pointer; }
+.compare-select-item.is-selected ~ .compare-modal__submit-btn, .compare-modal__submit-btn:hover { background: #a22938; }
+
+/* TABLE COMPARISON */
+.compare-table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
+.compare-table { width: 100%; border-collapse: collapse; min-width: 650px; }
+.compare-table th, .compare-table td { padding: 1rem; border: 1px solid #eee; text-align: center; font-size: 0.85rem; }
+.this-model-col { border: 2px solid #a22938 !important; background: #fdf5f6; }
+.this-model-badge { background: #a22938; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 10px; }
+.compare-product-img { width: 60px; height: 60px; background: #eee; border-radius: 8px; margin: 0.5rem auto; }
+.compare-product-price { font-weight: 700; color: #a22938; margin: 0.3rem 0; }
+.compare-product-btn { display: block; background: #a22938; color: #fff; padding: 0.4rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; }
+.compare-modal__footer { display: flex; justify-content: center; gap: 1rem; }
+.compare-btn-sec { padding: 0.75rem 2rem; border-radius: 20px; border: 1px solid #ccc; background: #fff; cursor: pointer; font-weight: 600; }
+</style>
+
+<script>
+  document.getElementById('OpenCompareModal').addEventListener('click', function() {
+    document.getElementById('CompareModalStep1').classList.add('is-open');
+  });
+
+  function closeCompareModal() {
+    document.getElementById('CompareModalStep1').classList.remove('is-open');
+    document.getElementById('CompareModalStep2').classList.remove('is-open');
+  }
+
+  function goToStep2() {
+    document.getElementById('CompareModalStep1').classList.remove('is-open');
+    document.getElementById('CompareModalStep2').classList.add('is-open');
+  }
+
+  function goToStep1() {
+    document.getElementById('CompareModalStep2').classList.remove('is-open');
+    document.getElementById('CompareModalStep1').classList.add('is-open');
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Product Compare Modal",
+  "settings": [],
+  "presets": [{ "name": "Product Compare Modal" }]
+}
+{% endschema %}
