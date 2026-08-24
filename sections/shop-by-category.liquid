@@ -5,13 +5,15 @@
 
   <div class="shop-category__grid">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.link }}" class="category-card category-card--{{ block.settings.style }}">
+      <a href="{{ block.settings.link }}" class="category-card category-card--{{ block.settings.style }}" {{ block.shopify_attributes }}>
         <div class="category-card__content">
           <span class="category-card__line"></span>
           <span class="category-card__name">{{ block.settings.title }}</span>
         </div>
         {% if block.settings.image != blank %}
           <img src="{{ block.settings.image | image_url: width: 200 }}" alt="{{ block.settings.title }}" class="category-card__image" loading="lazy">
+        {% else %}
+          <div class="category-card__image-placeholder"></div>
         {% endif %}
       </a>
     {% endfor %}
@@ -34,7 +36,7 @@
   "blocks": [
     {
       "type": "category",
-      "name": "Category",
+      "name": "Category Card",
       "settings": [
         {
           "type": "text",
@@ -67,7 +69,17 @@
   ],
   "presets": [
     {
-      "name": "Shop by Category"
+      "name": "Shop by Category",
+      "blocks": [
+        { "type": "category", "settings": { "title": "Treatment Tables", "style": "red" } },
+        { "type": "category", "settings": { "title": "Multi-function columns", "style": "outline" } },
+        { "type": "category", "settings": { "title": "Wax-heaters", "style": "red" } },
+        { "type": "category", "settings": { "title": "Stools", "style": "red" } },
+        { "type": "category", "settings": { "title": "Steamers", "style": "red" } },
+        { "type": "category", "settings": { "title": "Mag-lamps", "style": "red" } },
+        { "type": "category", "settings": { "title": "Towel warmers", "style": "red" } },
+        { "type": "category", "settings": { "title": "Trolleys", "style": "red" } }
+      ]
     }
   ]
 }
