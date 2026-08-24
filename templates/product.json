@@ -11,14 +11,14 @@
   "sections": {
     "main": { "type": "main-product" },
     "banner_features": { "type": "product-key-features-banner" },
-    "how_to_use": { "type": "product-how-to" },
+    "how_to": { "type": "product-how-to" },
     "faq": { "type": "category-faq" },
     "compare_modal": { "type": "product-compare-modal" }
   },
   "order": [
     "main",
     "banner_features",
-    "how_to_use",
+    "how_to",
     "faq",
     "compare_modal"
   ]
