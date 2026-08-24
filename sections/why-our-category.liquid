@@ -1,0 +1,63 @@
+<div class="why-category">
+  <div class="why-category__container page-width">
+    <!-- Left Image -->
+    <div class="why-category__media why-category__media--left">
+      <div class="why-category__img-placeholder"></div>
+    </div>
+
+    <!-- Center Content -->
+    <div class="why-category__content">
+      <h2 class="why-category__title">Why Our Trolleys</h2>
+      
+      <div class="why-category__item">
+        <strong>Integrated Power Bar</strong>
+        <p>Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords.</p>
+      </div>
+
+      <div class="why-category__item">
+        <strong>Mag-Lamp Holder Insert</strong>
+        <p>Pre-engineered mounting holes designed to securely hold Equipro magnifying lamps without requiring bulky, separate clamp brackets.</p>
+      </div>
+
+      <div class="why-category__item">
+        <strong>Ultra-Quiet Caster Wheels</strong>
+        <p>Polyurethane, hair-resistant rolling casters that glide silently across spa floors and lock firmly into place when stability is needed.</p>
+      </div>
+
+      <div class="why-category__item">
+        <strong>Chemical-Resistant Surfaces</strong>
+        <p>Finished with high-durability baked enamel or tempered glass trays designed to resist stains, hot wax spills, and clinical disinfectants.</p>
+      </div>
+    </div>
+
+    <!-- Right Image -->
+    <div class="why-category__media why-category__media--right">
+      <div class="why-category__img-placeholder"></div>
+    </div>
+  </div>
+</div>
+
+<style>
+.why-category { background-color: #a22938; color: #ffffff; padding: 4rem 0; margin: 3rem 0; }
+.why-category__container { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 2.5rem; align-items: center; }
+.why-category__media { width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden; }
+.why-category__img-placeholder { width: 100%; height: 100%; background-color: rgba(255,255,255,0.2); }
+.why-category__title { font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; }
+.why-category__item { margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1rem; }
+.why-category__item strong { display: block; font-size: 1rem; margin-bottom: 0.25rem; }
+.why-category__item p { font-size: 0.85rem; line-height: 1.4; opacity: 0.9; margin: 0; }
+
+/* En móvil las imágenes laterales desaparecen y solo queda el texto */
+@media (max-width: 989px) {
+  .why-category__container { grid-template-columns: 1fr !important; }
+  .why-category__media { display: none !important; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Why Our Category",
+  "settings": [],
+  "presets": [{ "name": "Why Our Category" }]
+}
+{% endschema %}

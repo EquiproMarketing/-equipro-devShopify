@@ -1,0 +1,76 @@
+<div class="customer-reviews page-width">
+  <h2 class="customer-reviews__title">What our customers say</h2>
+
+  <div class="customer-reviews__card">
+    <div class="customer-reviews__header">
+      <div class="customer-reviews__rating-box">
+        <strong>Overall Rating</strong>
+        <div class="customer-reviews__stars">4.8 ★★★★★ <span>(27)</span></div>
+      </div>
+      <a href="#" class="customer-reviews__write-btn">Write a Review</a>
+    </div>
+
+    <div class="customer-reviews__grid">
+      <div class="review-tile">
+        <div class="review-tile__author">
+          <div class="review-tile__avatar">CR</div>
+          <div>
+            <strong>Cindy Rowe</strong>
+            <span class="review-tile__date">2 months ago</span>
+          </div>
+        </div>
+        <div class="review-tile__stars">★★★★★</div>
+        <p class="review-tile__text">EQUIPRO excellent company quality products. Laurent Fantin has excellent customer service skills...</p>
+      </div>
+
+      <div class="review-tile">
+        <div class="review-tile__author">
+          <div class="review-tile__avatar">RN</div>
+          <div>
+            <strong>Rachel Nicolas</strong>
+            <span class="review-tile__date">1 year ago</span>
+          </div>
+        </div>
+        <div class="review-tile__stars">★★★★★</div>
+        <p class="review-tile__text">Une expérience merveilleuse avec un service d'exception. M.Fantin vous avez laissé votre marque et...</p>
+      </div>
+
+      <div class="review-tile">
+        <div class="review-tile__author">
+          <div class="review-tile__avatar">IR</div>
+          <div>
+            <strong>Isabelle Rouleau</strong>
+            <span class="review-tile__date">1 year ago</span>
+          </div>
+        </div>
+        <div class="review-tile__stars">★★★★★</div>
+        <p class="review-tile__text">Excellent service Produits de très grandes qualités Très satisfied Je vous les recommande sans...</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+.customer-reviews { margin: 4rem auto; text-align: center; }
+.customer-reviews__title { font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; }
+.customer-reviews__card { background: #f9f9f9; border-radius: 20px; padding: 2rem; }
+.customer-reviews__header { display: flex; justify-content: space-between; align-items: center; margin-bottom: 2rem; text-align: left; }
+.customer-reviews__stars { color: #f5a623; font-weight: 700; font-size: 1.1rem; }
+.customer-reviews__stars span { color: #888; font-weight: 400; font-size: 0.9rem; }
+.customer-reviews__write-btn { background: #0066ff; color: #fff; padding: 0.6rem 1.25rem; border-radius: 20px; text-decoration: none; font-weight: 600; font-size: 0.85rem; }
+.customer-reviews__grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1rem; text-align: left; }
+.review-tile { background: #fff; padding: 1.25rem; border-radius: 12px; border: 1px solid #eee; }
+.review-tile__author { display: flex; gap: 0.75rem; align-items: center; margin-bottom: 0.75rem; }
+.review-tile__avatar { width: 36px; height: 36px; border-radius: 50%; background: #333; color: #fff; display: flex; align-items: center; justify-content: center; font-size: 0.8rem; font-weight: 700; }
+.review-tile__date { display: block; font-size: 0.75rem; color: #888; }
+.review-tile__text { font-size: 0.85rem; color: #444; line-height: 1.4; margin-top: 0.5rem; }
+@media (max-width: 767px) { .customer-reviews__grid { grid-template-columns: 1fr; } }
+</style>
+
+{% schema %}
+{
+  "name": "Customer Reviews",
+  "settings": [],
+  "presets": [{ "name": "Customer Reviews" }]
+}
+{% endschema %}

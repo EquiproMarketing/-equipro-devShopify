@@ -7,14 +7,25 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
-    "main": {
-      "type": "collection",
-      "settings": {}
-    }
+    "subnav": { "type": "category-subnav" },
+    "banner": { "type": "collection-banner" },
+    "product_grid": { "type": "main-collection-product-grid" },
+    "positive_impact": { "type": "positive-impact" },
+    "why_category": { "type": "why-our-category" },
+    "video": { "type": "category-video" },
+    "faq": { "type": "category-faq" },
+    "reviews": { "type": "customer-reviews" }
   },
   "order": [
-    "main"
+    "subnav",
+    "banner",
+    "product_grid",
+    "positive_impact",
+    "why_category",
+    "video",
+    "faq",
+    "reviews"
   ]
 }

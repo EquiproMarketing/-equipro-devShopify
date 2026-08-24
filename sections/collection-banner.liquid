@@ -1,0 +1,75 @@
+<div class="collection-banner page-width">
+  <div class="collection-banner__inner">
+    {% if collection.image != blank %}
+      <img src="{{ collection.image | image_url: width: 1600 }}" alt="{{ collection.title }}" class="collection-banner__bg">
+    {% else %}
+      <div class="collection-banner__placeholder"></div>
+    {% endif %}
+    <div class="collection-banner__overlay"></div>
+    <div class="collection-banner__content">
+      <h1 class="collection-banner__title">{{ collection.title | default: "Trolleys" }}</h1>
+      <p class="collection-banner__desc">
+        {{ collection.description | default: "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics." }}
+      </p>
+    </div>
+  </div>
+</div>
+
+<style>
+.collection-banner { margin-top: 1rem; margin-bottom: 2rem; }
+.collection-banner__inner {
+  position: relative;
+  width: 100%;
+  min-height: 240px;
+  border-radius: 20px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+}
+.collection-banner__bg {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.collection-banner__placeholder {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, #2c2c2c 0%, #1a1a1a 100%);
+}
+.collection-banner__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(90deg, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.2) 70%);
+}
+.collection-banner__content {
+  position: relative;
+  z-index: 2;
+  padding: 2.5rem 3rem;
+  max-width: 550px;
+  color: #ffffff;
+}
+.collection-banner__title {
+  font-size: 2.4rem;
+  font-weight: 700;
+  margin-bottom: 0.75rem;
+}
+.collection-banner__desc {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: rgba(255,255,255,0.9);
+}
+@media (max-width: 767px) {
+  .collection-banner__content { padding: 1.5rem; }
+  .collection-banner__title { font-size: 1.8rem; }
+}
+</style>
+
+{% schema %}
+{
+  "name": "Collection Banner",
+  "settings": [],
+  "presets": [{ "name": "Collection Banner" }]
+}
+{% endschema %}

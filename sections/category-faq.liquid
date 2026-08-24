@@ -1,0 +1,57 @@
+<div class="category-faq page-width">
+  <div class="category-faq__grid">
+    <div class="category-faq__header">
+      <h2 class="category-faq__title">Your Questions, Answered</h2>
+    </div>
+
+    <div class="category-faq__list">
+      <details class="category-faq__item" open>
+        <summary class="category-faq__question">
+          <span>Do your trolleys feature built-in holders for magnifying lamps?</span>
+          <span class="category-faq__toggle">−</span>
+        </summary>
+        <div class="category-faq__answer">
+          Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.
+        </div>
+      </details>
+
+      <details class="category-faq__item">
+        <summary class="category-faq__question">
+          <span>Are the drawers lockable for securing products and supplies?</span>
+          <span class="category-faq__toggle">+</span>
+        </summary>
+        <div class="category-faq__answer">
+          Selected models feature fully lockable drawers with custom keys for secure overnight storage.
+        </div>
+      </details>
+
+      <details class="category-faq__item">
+        <summary class="category-faq__question">
+          <span>How much weight can each shelf or tier support?</span>
+          <span class="category-faq__toggle">+</span>
+        </summary>
+        <div class="category-faq__answer">
+          Each heavy-duty shelf is rated to hold up to 45 lbs (20 kg) without sagging or compromise.
+        </div>
+      </details>
+    </div>
+  </div>
+</div>
+
+<style>
+.category-faq { margin: 4rem auto; }
+.category-faq__grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
+.category-faq__title { font-size: 2rem; font-weight: 700; color: #a22938; }
+.category-faq__item { border-bottom: 1px solid #1a1a1a; padding: 1.25rem 0; cursor: pointer; }
+.category-faq__question { font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; list-style: none; }
+.category-faq__answer { font-size: 0.9rem; color: #555; margin-top: 0.85rem; line-height: 1.5; }
+@media (max-width: 767px) { .category-faq__grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+</style>
+
+{% schema %}
+{
+  "name": "Category FAQ",
+  "settings": [],
+  "presets": [{ "name": "Category FAQ" }]
+}
+{% endschema %}

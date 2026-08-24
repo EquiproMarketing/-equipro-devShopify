@@ -1,0 +1,47 @@
+<div class="category-subnav-wrapper">
+  <div class="page-width">
+    <nav class="category-subnav">
+      <a href="/collections/all" class="category-subnav__link">All Products</a>
+      <a href="/collections/steamers" class="category-subnav__link">Steamers</a>
+      <a href="/collections/facial-units" class="category-subnav__link">Facial Units</a>
+      <a href="/collections/wax-heaters" class="category-subnav__link">Wax-Heaters</a>
+      <a href="/collections/skin-analyzers" class="category-subnav__link">Skin Analyzers</a>
+      <a href="/collections/towel-warmers" class="category-subnav__link">Towel Warmers</a>
+      <a href="/collections/treatment-tables" class="category-subnav__link">Treatment Tables</a>
+      <a href="/collections/stools" class="category-subnav__link">Stools</a>
+      <a href="/collections/mag-lamps" class="category-subnav__link">Mag-lamps</a>
+    </nav>
+  </div>
+</div>
+
+<style>
+.category-subnav-wrapper {
+  background-color: #ffffff;
+  border-bottom: 1px solid #f0f0f0;
+  padding: 0.85rem 0;
+}
+.category-subnav {
+  display: flex;
+  align-items: center;
+  gap: 1.8rem;
+  overflow-x: auto;
+  white-space: nowrap;
+  scrollbar-width: none;
+}
+.category-subnav::-webkit-scrollbar { display: none; }
+.category-subnav__link {
+  font-size: 0.88rem;
+  color: #777777;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+.category-subnav__link:hover { color: #a22938; }
+</style>
+
+{% schema %}
+{
+  "name": "Category Subnav",
+  "settings": [],
+  "presets": [{ "name": "Category Subnav" }]
+}
+{% endschema %}
