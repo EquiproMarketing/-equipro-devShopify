@@ -1,47 +1,44 @@
 <!doctype html>
-<html lang="{{ request.locale.iso_code }}">
+<html class="no-js" lang="{{ request.locale.iso_code }}">
   <head>
     <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta name="theme-color" content="">
+    <link rel="canonical" href="{{ canonical_url }}">
+
     <title>
       {{ page_title }}
-      {% if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif %}
-      {% if current_page != 1 %} &ndash; Page {{ current_page }}{% endif %}
-      {% unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless %}
+      {%- if current_tags %} &ndash; tagged "{{ current_tags | join: ', ' }}"{% endif -%}
+      {%- if current_page != 1 %} &ndash; Page {{ current_page }}{% endif -%}
+      {%- unless page_title contains shop.name %} &ndash; {{ shop.name }}{% endunless -%}
     </title>
 
     {% if page_description %}
       <meta name="description" content="{{ page_description | escape }}">
     {% endif %}
 
-    <link rel="canonical" href="{{ canonical_url }}">
+    <!-- Google Fonts: Poppins -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
 
-    <!-- Shopify Core Header Content -->
+    <!-- Global Base Styles -->
+    {{ 'base.css' | asset_url | stylesheet_tag }}
+
     {{ content_for_header }}
-
-<!-- Google Fonts: Poppins -->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,700&display=swap" rel="stylesheet">
-
-    <!-- Base Theme Styles (v1.0.1 force cache refresh) -->
-    {{ 'base.css' | asset_url | stylesheet_tag: preload: true }}
-    {{ 'critical.css' | asset_url | stylesheet_tag }}
   </head>
 
-  <body class="template-{{ template.name }}">
-    <!-- Header Section Group -->
+  <body>
+    <!-- Header Navbar -->
     {% sections 'header-group' %}
 
-    <!-- Main Content Area -->
-  <main id="MainContent" role="main" style="width: 100%; overflow-x: hidden; margin: 0; padding: 0;">
-    {{ content_for_layout }}
-  </main>
+    <!-- Main Content Container -->
+    <main id="MainContent" role="main" tabindex="-1">
+      {{ content_for_layout }}
+    </main>
 
-    <!-- Footer Section Group -->
+    <!-- Footer -->
     {% sections 'footer-group' %}
-
-    <!-- Global Scripts -->
-    {{ 'global.js' | asset_url | script_tag }}
   </body>
 </html>

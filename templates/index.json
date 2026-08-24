@@ -81,21 +81,25 @@
         "cat_7",
         "cat_8"
       ]
-    }
-  },
-{
-  "sections": {
-    "hero_banner": { "type": "hero-banner", "settings": {} },
-    "best_sellers": { "type": "featured-collection", "settings": {} },
-    "shop_by_category": { "type": "shop-by-category", "settings": {} },
-    "image_with_text": { "type": "image-with-text", "settings": {} },
+    },
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {}
+    },
     "image_slider": {
       "type": "image-slider",
       "blocks": {
-        "s_1": { "type": "slide" },
-        "s_2": { "type": "slide" }
+        "s_1": {
+          "type": "slide"
+        },
+        "s_2": {
+          "type": "slide"
+        }
       },
-      "block_order": ["s_1", "s_2"]
+      "block_order": [
+        "s_1",
+        "s_2"
+      ]
     }
   },
   "order": [
@@ -105,5 +109,4 @@
     "image_with_text",
     "image_slider"
   ]
-}
 }
