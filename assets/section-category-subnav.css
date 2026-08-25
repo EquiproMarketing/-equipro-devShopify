@@ -1,0 +1,38 @@
+/* assets/section-category-subnav.css */
+.category-subnav {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 10px 0;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .category-subnav__list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 24px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  
+  .category-subnav__list::-webkit-scrollbar {
+    display: none;
+  }
+  
+  .category-subnav__link {
+    color: #495057;
+    text-decoration: none;
+    font-size: 0.875rem;
+    font-weight: 500;
+    transition: color 0.2s ease;
+    padding: 4px 8px;
+  }
+  
+  .category-subnav__link:hover,
+  .category-subnav__link.is-active {
+    color: #ab273b; /* Equipro Red */
+  }
