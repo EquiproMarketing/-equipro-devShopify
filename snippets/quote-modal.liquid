@@ -1,77 +1,79 @@
 {% comment %}
   Snippet: snippets/quote-modal.liquid
-  Modal dinámico de cotización B2B para Equipro Beauty
+  Dynamic B2B Quote Request Modal for Equipro Beauty
 {% endcomment %}
 
-<div id="QuoteModal" class="quote-modal" aria-hidden="true" role="dialog">
+{{ 'quote-modal.css' | asset_url | stylesheet_tag }}
+
+<div id="QuoteModal" class="quote-modal" aria-hidden="true" role="dialog" aria-labelledby="QuoteModalTitle">
   <div class="quote-modal__overlay" data-close-quote-modal></div>
   <div class="quote-modal__content">
-    <button type="button" class="quote-modal__close" data-close-quote-modal aria-label="Cerrar modal">&times;</button>
+    <button type="button" class="quote-modal__close" data-close-quote-modal aria-label="Close modal">&times;</button>
     
     <div class="quote-modal__header">
-      <h3 class="quote-modal__title">Solicitar Cotización B2B</h3>
-      <p class="quote-modal__subtitle">Completa tus datos y nos pondremos en contacto contigo a la brevedad.</p>
+      <h3 id="QuoteModalTitle" class="quote-modal__title">Request a B2B Quote</h3>
+      <p class="quote-modal__subtitle">Please fill out the form below and our sales team will contact you shortly.</p>
     </div>
 
     {% form 'contact', id: 'QuoteForm', class: 'quote-modal__form' %}
       {% if form.posted_successfully? %}
         <div class="quote-modal__success">
-          ¡Gracias por tu solicitud! Un asesor comercial te contactará pronto.
+          Thank you for your request! A representative will reach out to you soon.
         </div>
       {% endif %}
 
       {% if form.errors %}
         <div class="quote-modal__error">
-          Por favor revisa los campos e intenta nuevamente.
+          Please check the highlighted fields and try submitting again.
         </div>
       {% endif %}
 
-      <!-- Campos ocultos cargados dinámicamente con JS -->
-      <input type="hidden" id="QuoteProductTitle" name="contact[Producto_Solicitado]" value="{{ product.title }}">
-      <input type="hidden" id="QuoteProductVariant" name="contact[Variante]" value="{{ product.selected_or_first_available_variant.title }}">
+      <!-- Hidden inputs populated dynamically via JS -->
+      <input type="hidden" id="QuoteProductTitle" name="contact[Requested_Product]" value="{{ product.title }}">
+      <input type="hidden" id="QuoteProductVariant" name="contact[Variant]" value="{{ product.selected_or_first_available_variant.title }}">
       <input type="hidden" id="QuoteProductSKU" name="contact[SKU]" value="{{ product.selected_or_first_available_variant.sku }}">
 
-      <!-- Contexto del producto visible para el usuario -->
+      <!-- Visible product context -->
       <div class="quote-modal__product-preview">
-        <span class="quote-modal__product-label">Producto:</span>
-        <strong id="QuoteProductDisplay">{{ product.title }}</strong>
+        <span class="quote-modal__product-label">Product:</span>
+        <strong id="QuoteProductDisplay">{{ product.title | default: "General Equipment Inquiry" }}</strong>
       </div>
 
       <div class="quote-modal__grid">
         <div class="quote-modal__field">
-          <label for="QuoteName">Nombre completo *</label>
-          <input type="text" id="QuoteName" name="contact[Name]" required placeholder="Ej. Dra. María García">
+          <label for="QuoteName">Full Name *</label>
+          <input type="text" id="QuoteName" name="contact[Name]" required placeholder="e.g. Dr. Jane Doe">
         </div>
 
         <div class="quote-modal__field">
-          <label for="QuoteCompany">Nombre de la Empresa / Spa *</label>
-          <input type="text" id="QuoteCompany" name="contact[Company]" required placeholder="Ej. MedSpa Montreal">
+          <label for="QuoteCompany">Company / Business Name *</label>
+          <input type="text" id="QuoteCompany" name="contact[Company]" required placeholder="e.g. Montreal MedSpa Inc.">
         </div>
       </div>
 
       <div class="quote-modal__grid">
         <div class="quote-modal__field">
-          <label for="QuoteEmail">Correo Electrónico *</label>
-          <input type="email" id="QuoteEmail" name="contact[email]" required placeholder="correo@ejemplo.com">
+          <label for="QuoteEmail">Email Address *</label>
+          <input type="email" id="QuoteEmail" name="contact[email]" required placeholder="contact@business.com">
         </div>
 
         <div class="quote-modal__field">
-          <label for="QuotePhone">Teléfono *</label>
+          <label for="QuotePhone">Phone Number *</label>
           <input type="tel" id="QuotePhone" name="contact[Phone]" required placeholder="+1 (514) 000-0000">
         </div>
       </div>
 
       <div class="quote-modal__field">
-        <label for="QuoteQuantity">Cantidad estimada de unidades</label>
-        <input type="number" id="QuoteQuantity" name="contact[Cantidad]" min="1" value="1">
+        <label for="QuoteQuantity">Estimated Units Needed</label>
+        <input type="number" id="QuoteQuantity" name="contact[Quantity]" min="1" value="1">
       </div>
 
       <div class="quote-modal__field">
-        <label for="QuoteMessage">Mensaje o requerimientos especiales</label>
-        <textarea id="QuoteMessage" name="contact[body]" rows="3" placeholder="Especificaciones de voltaje, acabados o preguntas adicionales..."></textarea>
+        <label for="QuoteMessage">Project Details / Special Requirements</label>
+        <textarea id="QuoteMessage" name="contact[body]" rows="3" placeholder="Specify voltage, custom upholstery colors, or shipping requirements..."></textarea>
       </div>
 
-      <button type="submit" class="button button--primary quote-modal__submit">Enviar Solicitud</button>
+      <button type="submit" class="quote-modal__submit button button--primary">Submit Request</button>
     {% endform %}
   </div>
 </div>
