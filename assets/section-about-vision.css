@@ -1,35 +1,38 @@
 /* assets/section-about-vision.css */
 .about-vision-block {
     padding-top: 60px;
-    padding-bottom: 60px;
+    padding-bottom: 80px;
     position: relative;
     z-index: 1;
   }
   
   .about-vision-block__container {
     display: flex;
-    align-items: center;
+    align-items: flex-start; /* Alinea los elementos arriba para controlar los desfases */
     position: relative;
-    gap: 40px;
+    gap: 32px;
     width: 100%;
   }
   
+  /* 1. Imagen más grande */
   .about-vision-block__left {
-    flex: 0 0 58%;
+    flex: 0 0 64%;
     position: relative;
   }
   
+  /* 3. Bloque de texto desplazado hacia abajo */
   .about-vision-block__right {
-    flex: 0 0 38%;
-    padding-top: 70px; /* Desplaza el párrafo debajo de la altura de la tarjeta roja */
+    flex: 0 0 32%;
+    padding-top: 140px; /* Bajas el texto para que no sea tapado por la tarjeta roja */
   }
   
   /* Imagen base */
   .about-vision-block__image-wrapper {
     width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
     overflow: hidden;
     background-color: #f4f4f4;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   }
   
   .about-vision-block__img {
@@ -41,7 +44,7 @@
   
   .about-vision-block__placeholder {
     width: 100%;
-    height: 420px;
+    height: 480px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -49,22 +52,22 @@
     color: #777777;
   }
   
-  /* Tarjeta Roja Overlay que sobrepasa el borde derecho de la foto */
+  /* 2. Tarjeta Roja subida */
   .about-vision-block__badge {
     position: absolute;
-    top: 25%;
-    right: -50px; /* Empuja el recuadro rojo hacia afuera */
-    width: 70%;
+    top: 10%; /* Subimos el bloque rojo */
+    right: -55px; /* Sobresale limpiamente a la derecha */
+    width: 65%;
     background-color: #ab273b;
     padding: 32px 36px;
     border-radius: 4px;
     z-index: 10;
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
   }
   
   .about-vision-block__badge-title {
     color: #ffffff !important;
-    font-size: 1.55rem;
+    font-size: 1.6rem;
     font-weight: 700;
     line-height: 1.35;
     margin: 0;
@@ -97,7 +100,7 @@
     color: #ffffff;
   }
   
-  /* Adapta a pantallas móviles */
+  /* Adaptación para dispositivos móviles */
   @media (max-width: 890px) {
     .about-vision-block__container {
       flex-direction: column;
@@ -119,6 +122,6 @@
     }
   
     .about-vision-block__right {
-      padding-top: 0;
+      padding-top: 20px;
     }
   }
