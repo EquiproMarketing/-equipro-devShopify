@@ -8,18 +8,23 @@
   <div class="about-how__grid">
     {%- for block in section.blocks -%}
       <div class="about-how__card" {{ block.shopify_attributes }}>
+        <!-- 1. TITULO DEL BLOQUE -->
         {%- if block.settings.step_title != blank -%}
-          <span class="about-how__step-title">{{ block.settings.step_title }}</span>
+          <h3 class="about-how__step-title">{{ block.settings.step_title }}</h3>
         {%- endif -%}
 
+        <!-- 2. IMAGEN DEL BLOQUE -->
         <div class="about-how__image-wrapper">
           {%- if block.settings.step_image != blank -%}
-            {{ block.settings.step_image | image_url: width: 800 | image_tag: class: 'about-how__img', alt: block.settings.step_title }}
+            {{ block.settings.step_image | image_url: width: 800 | image_tag: class: 'about-how__img', alt: block.settings.step_title, loading: 'lazy' }}
           {%- else -%}
-            <div class="about-how__placeholder-img"></div>
+            <div class="about-how__placeholder-img">
+              <span>Select image in customizer</span>
+            </div>
           {%- endif -%}
         </div>
 
+        <!-- 3. TEXTO / DESCRIPCION DEL BLOQUE -->
         {%- if block.settings.step_description != blank -%}
           <p class="about-how__description">{{ block.settings.step_description }}</p>
         {%- endif -%}
@@ -43,24 +48,24 @@
     {
       "type": "step",
       "name": "Step Card",
-      "limit": 3,
+      "limit": 6,
       "settings": [
         {
           "type": "text",
           "id": "step_title",
-          "label": "Step Title",
-          "default": "Step 1: Clinical Audit"
+          "label": "Block Title",
+          "default": "Step Title"
         },
         {
           "type": "image_picker",
           "id": "step_image",
-          "label": "Step Image"
+          "label": "Block Image"
         },
         {
           "type": "textarea",
           "id": "step_description",
-          "label": "Description",
-          "default": "We analyze your space and business goals to recommend the exact suite that maximizes your ROI."
+          "label": "Block Text",
+          "default": "Enter description text here for this step."
         }
       ]
     }

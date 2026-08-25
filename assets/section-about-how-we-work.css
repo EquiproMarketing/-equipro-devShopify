@@ -15,16 +15,15 @@
   }
   
   .about-how__grid {
-    display: table;
-    width: 100%;
-    table-layout: fixed;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 32px;
+    justify-content: center;
   }
   
   .about-how__card {
-    display: table-cell;
-    width: 33.333%;
-    vertical-align: top;
-    padding: 0 16px;
+    flex: 1 1 300px;
+    max-width: 380px;
     text-align: left;
   }
   
@@ -32,20 +31,19 @@
     font-size: 1.15rem;
     font-weight: 700;
     color: #ab273b;
-    margin-bottom: 20px;
-    display: block;
-    min-height: 2.5em; /* Mantiene la alineación horizontal si los títulos tienen 1 o 2 líneas */
+    margin: 0 0 16px 0;
+    line-height: 1.3;
   }
   
-  /* Contenedor de Imagen con esquinas asimétricas estilo cápsula/squircle */
+  /* Contenedor de Imagen con bordes redondeados estilo cápsula */
   .about-how__image-wrapper {
     width: 100%;
-    aspect-ratio: 4 / 5;
-    border-radius: 40px 40px 40px 40px;
+    height: 380px;
+    border-radius: 36px;
     overflow: hidden;
     background-color: #f5f5f7;
-    margin-bottom: 24px;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.04);
+    margin-bottom: 20px;
+    box-shadow: 0 4px 18px rgba(0,0,0,0.04);
   }
   
   .about-how__img {
@@ -58,7 +56,12 @@
   .about-how__placeholder-img {
     width: 100%;
     height: 100%;
-    background-color: #eee;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #f0f0f2;
+    color: #888888;
+    font-size: 0.85rem;
   }
   
   .about-how__description {
@@ -68,22 +71,14 @@
     margin: 0;
   }
   
-  /* Responsivo para tablets y teléfonos */
-  @media (max-width: 890px) {
-    .about-how__grid,
+  @media (max-width: 768px) {
     .about-how__card {
-      display: block;
-      width: 100%;
-      padding: 0;
-      margin-bottom: 40px;
+      flex: 1 1 100%;
+      max-width: 100%;
     }
   
-    .about-how__step-title {
-      min-height: auto;
-    }
-  
-    .about-how__title {
-      font-size: 1.75rem;
-      margin-bottom: 30px;
+    .about-how__image-wrapper {
+      height: 300px;
+      border-radius: 24px;
     }
   }
