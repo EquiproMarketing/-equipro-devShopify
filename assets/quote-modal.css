@@ -1,0 +1,151 @@
+/* assets/quote-modal.css */
+.quote-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 9999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+  }
+  
+  .quote-modal.is-open {
+    opacity: 1;
+    visibility: visible;
+  }
+  
+  .quote-modal__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(4px);
+  }
+  
+  .quote-modal__content {
+    position: relative;
+    background: #ffffff;
+    width: 90%;
+    max-width: 580px;
+    max-height: 90vh;
+    overflow-y: auto;
+    border-radius: 16px;
+    padding: 32px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    z-index: 10;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .quote-modal__close {
+    position: absolute;
+    top: 16px;
+    right: 20px;
+    background: none;
+    border: none;
+    font-size: 28px;
+    cursor: pointer;
+    color: #333;
+  }
+  
+  .quote-modal__title {
+    color: #ab273b; /* Rojo Equipro */
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin: 0 0 8px 0;
+  }
+  
+  .quote-modal__subtitle {
+    font-size: 0.9rem;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  
+  .quote-modal__product-preview {
+    background: #f9f9f9;
+    padding: 12px 16px;
+    border-radius: 8px;
+    border-left: 4px solid #ab273b;
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+  }
+  
+  .quote-modal__grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+  }
+  
+  @media (max-width: 600px) {
+    .quote-modal__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .quote-modal__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .quote-modal__field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333;
+  }
+  
+  .quote-modal__field input,
+  .quote-modal__field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+    transition: border-color 0.2s;
+  }
+  
+  .quote-modal__field input:focus,
+  .quote-modal__field textarea:focus {
+    outline: none;
+    border-color: #ab273b;
+  }
+  
+  .quote-modal__submit {
+    width: 100%;
+    background-color: #ab273b;
+    color: #fff;
+    border: none;
+    padding: 14px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .quote-modal__submit:hover {
+    background-color: #891e2e;
+  }
+  
+  .quote-modal__success {
+    background: #e8f5e9;
+    color: #2e7d32;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }
+  
+  .quote-modal__error {
+    background: #ffebee;
+    color: #c62828;
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 16px;
+  }

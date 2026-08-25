@@ -3,7 +3,7 @@
 
 <div class="product-page page-width">
   
-  <!-- BOTÓN VOLVER -->
+  <!-- BACK BUTTON  -->
   <div class="product-page__back">
     <a href="javascript:history.back()" class="back-link">
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
@@ -36,6 +36,24 @@
         Compare with other models
       </button>
     </div>
+
+    <!-- Cargar Assets -->
+    {{ 'quote-modal.css' | asset_url | stylesheet_tag }}
+    <script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
+
+    <!-- Botón de Disparo -->
+    <button 
+    type="button" 
+    class="button button--secondary button--full-width" 
+    data-open-quote-modal
+    data-product-title="{{ product.title | escape }}"
+    style="margin-top: 10px; border-color: #ab273b; color: #ab273b;"
+    >
+    Get a Quote / Solicitar Cotización
+    </button>
+
+    <!-- Render del Snippet -->
+    {% render 'quote-modal' %}
 
     <!-- Columna Derecha: Galería de Imágenes -->
     <div class="product-gallery-col">
