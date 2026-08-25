@@ -1,11 +1,11 @@
 {
+  "name": "about",
   "sections": {
     "main": {
       "type": "main-about",
       "settings": {
         "title": "About Equipro Beauty",
-        "subtitle": "Leading manufacturer of high-end aesthetic, spa, and medical-spa equipment in North America.",
-        "show_values": true
+        "subtitle": "Leading manufacturer of high-end aesthetic, spa, and medical-spa equipment in North America."
       }
     }
   },
