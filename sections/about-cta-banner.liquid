@@ -1,69 +1,49 @@
-{{ 'section-about-vision.css' | asset_url | stylesheet_tag }}
+{{ 'section-about-cta-banner.css' | asset_url | stylesheet_tag }}
 
-<section class="about-vision page-width">
-  <div class="about-vision__container">
-    <!-- Columna Izquierda: Imagen principal + Card flotante rojo -->
-    <div class="about-vision__left">
-      <div class="about-vision__image-wrapper">
-        {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1200 | image_tag: class: 'about-vision__img', alt: section.settings.badge_title }}
-        {%- else -%}
-          <div class="about-placeholder-img"></div>
-        {%- endif -%}
-      </div>
-      <!-- Tarjeta Roja Overlap -->
-      {%- if section.settings.badge_title != blank -%}
-        <div class="about-vision__badge">
-          <h2 class="about-vision__badge-title">{{ section.settings.badge_title }}</h2>
-        </div>
-      {%- endif -%}
-    </div>
+<section class="about-cta-banner">
+  <div class="about-cta-banner__bg">
+    {%- if section.settings.bg_image != blank -%}
+      {{ section.settings.bg_image | image_url: width: 2000 | image_tag: class: 'about-cta-banner__img', alt: section.settings.title, loading: 'lazy' }}
+    {%- else -%}
+      <div class="about-cta-banner__placeholder"></div>
+    {%- endif -%}
+  </div>
 
-    <!-- Columna Derecha: Parrafo + Boton -->
-    <div class="about-vision__right">
-      {%- if section.settings.description != blank -%}
-        <div class="about-vision__description">
-          <p>{{ section.settings.description }}</p>
-        </div>
-      {%- endif -%}
+  <div class="about-cta-banner__overlay"></div>
 
-      {%- if section.settings.btn_label != blank -%}
-        <div class="about-vision__cta">
-          <a href="{{ section.settings.btn_link }}" class="btn-equipro-solid">
-            {{ section.settings.btn_label }}
-          </a>
-        </div>
-      {%- endif -%}
-    </div>
+  <div class="about-cta-banner__content">
+    {%- if section.settings.title != blank -%}
+      <h2 class="about-cta-banner__title">{{ section.settings.title }}</h2>
+    {%- endif -%}
+
+    {%- if section.settings.btn_label != blank -%}
+      <a href="{{ section.settings.btn_link }}" class="btn-equipro-cta">
+        {{ section.settings.btn_label }}
+      </a>
+    {%- endif -%}
   </div>
 </section>
 
 {% schema %}
 {
-  "name": "About - Vision",
+  "name": "About - CTA Banner",
   "settings": [
     {
       "type": "image_picker",
-      "id": "image",
-      "label": "Main Image"
+      "id": "bg_image",
+      "label": "Background Image"
     },
     {
-      "type": "textarea",
-      "id": "badge_title",
-      "label": "Red Card Heading",
-      "default": "Your Vision, Powered by North American Engineering."
-    },
-    {
-      "type": "textarea",
-      "id": "description",
-      "label": "Description Text",
-      "default": "Stop settling for equipment that stalls your growth. We provide esthetic solutions designed for 20 years of performance and the expert guidance to help your clinic thrive."
+      "type": "text",
+      "id": "title",
+      "label": "Title",
+      "default": "Big Ideas, Real Impact."
     },
     {
       "type": "text",
       "id": "btn_label",
       "label": "Button Label",
-      "default": "SCHEDULE YOUR 1-ON-1 CONSULTATION"
+      "default": "SEE ALL PRODUCTS"
     },
     {
       "type": "url",
@@ -73,7 +53,7 @@
   ],
   "presets": [
     {
-      "name": "About - Vision"
+      "name": "About - CTA Banner"
     }
   ]
 }

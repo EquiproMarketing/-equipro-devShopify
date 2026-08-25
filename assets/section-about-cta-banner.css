@@ -1,0 +1,101 @@
+/* assets/section-about-cta-banner.css */
+.about-cta-banner {
+    position: relative;
+    width: 100%;
+    min-height: 520px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    margin-top: 40px;
+    margin-bottom: 40px;
+  }
+  
+  .about-cta-banner__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .about-cta-banner__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    display: block;
+  }
+  
+  .about-cta-banner__placeholder {
+    width: 100%;
+    height: 100%;
+    background-color: #222222;
+  }
+  
+  /* Capa oscura sutil para contraste del texto */
+  .about-cta-banner__overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.18);
+    z-index: 2;
+  }
+  
+  .about-cta-banner__content {
+    position: relative;
+    z-index: 3;
+    text-align: center;
+    max-width: 800px;
+    padding: 0 20px;
+  }
+  
+  .about-cta-banner__title {
+    color: #ffffff;
+    font-size: 2.75rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin-bottom: 28px;
+    text-shadow: 0 4px 16px rgba(0, 0, 0, 0.35);
+    letter-spacing: -0.5px;
+  }
+  
+  .btn-equipro-cta {
+    display: inline-block;
+    background-color: #ab273b;
+    color: #ffffff;
+    padding: 16px 36px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.2s ease, transform 0.2s ease;
+  }
+  
+  .btn-equipro-cta:hover {
+    background-color: #8c1e2f;
+    color: #ffffff;
+    transform: translateY(-2px);
+  }
+  
+  @media (max-width: 768px) {
+    .about-cta-banner {
+      min-height: 380px;
+    }
+  
+    .about-cta-banner__title {
+      font-size: 1.85rem;
+      margin-bottom: 20px;
+    }
+  
+    .btn-equipro-cta {
+      padding: 14px 28px;
+      font-size: 0.8rem;
+    }
+  }
