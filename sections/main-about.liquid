@@ -1,0 +1,173 @@
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
+
+<div class="about-page">
+  
+  <!-- 1. VIDEO CORPORATIVO -->
+  <section class="about-hero-video">
+    <div class="about-hero-video__wrapper">
+      {% if section.settings.video_url != blank %}
+        <video autoplay loop muted playsinline class="about-hero-video__element">
+          <source src="{{ section.settings.video_url }}" type="video/mp4">
+        </video>
+      {% else %}
+        <div class="about-hero-video__placeholder">
+          <h2 class="about-hero-video__title">Making you our top priority for more than 3 generations!</h2>
+        </div>
+      {% endif %}
+      <div class="about-hero-video__overlay">
+        <h2 class="about-hero-video__title">Making you our top priority for more than 3 generations!</h2>
+      </div>
+    </div>
+    <div class="about-hero-video__curve"></div>
+  </section>
+
+  <!-- 2. YOUR VISION (Con animación al scroll) -->
+  <section class="about-vision page-width">
+    <div class="about-vision__grid">
+      <div class="about-vision__image-wrapper">
+        {% if section.settings.vision_image != blank %}
+          {{ section.settings.vision_image | image_url: width: 1000 | image_tag: class: 'about-vision__img', alt: 'Equipro Vision' }}
+        {% else %}
+          <div class="about-placeholder-img"></div>
+        {% endif %}
+        <div class="about-vision__badge">
+          <h2>Your Vision, Powered by North American Engineering.</h2>
+        </div>
+      </div>
+      <div class="about-vision__content">
+        <p>Stop settling for equipment that stalls your growth. We provide esthetic solutions designed for 20 years of performance and the expert guidance to help your clinic thrive.</p>
+        <a href="/pages/contact" class="btn-equipro">SCHEDULE YOUR 1-ON-1 CONSULTATION</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. HOW WE WORK (3 bloques estáticos) -->
+  <section class="about-how page-width">
+    <h2 class="about-section-title">How We Work</h2>
+    <div class="about-how__grid">
+      
+      <div class="about-how__card">
+        <span class="about-how__step">Step 1: Clinical Audit</span>
+        <div class="about-how__img-container">
+          {% if section.settings.how_img_1 != blank %}
+            {{ section.settings.how_img_1 | image_url: width: 500 | image_tag: alt: 'Clinical Audit' }}
+          {% endif %}
+        </div>
+        <p>We analyze your space and business goals to recommend the exact suite that maximizes your ROI.</p>
+      </div>
+
+      <div class="about-how__card">
+        <span class="about-how__step">Step 2: Reliability by Design</span>
+        <div class="about-how__img-container">
+          {% if section.settings.how_img_2 != blank %}
+            {{ section.settings.how_img_2 | image_url: width: 500 | image_tag: alt: 'Reliability by Design' }}
+          {% endif %}
+        </div>
+        <p>Every piece is CSA & UL approved with a 15-20 year life expectancy. We don't just sell tools; we sell longevity.</p>
+      </div>
+
+      <div class="about-how__card">
+        <span class="about-how__step">Step 3: Continuous Partnership</span>
+        <div class="about-how__img-container">
+          {% if section.settings.how_img_3 != blank %}
+            {{ section.settings.how_img_3 | image_url: width: 500 | image_tag: alt: 'Continuous Partnership' }}
+          {% endif %}
+        </div>
+        <p>Our 2 year warranty includes a courtesy equipment float we lend you a machine so your operations never stop during repairs.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 4. BANNER CTA PRODUCTOS -->
+  <section class="about-cta-banner">
+    <div class="about-cta-banner__bg">
+      {% if section.settings.cta_bg != blank %}
+        {{ section.settings.cta_bg | image_url: width: 1600 | image_tag: alt: 'Equipro Products' }}
+      {% endif %}
+    </div>
+    <div class="about-cta-banner__content">
+      <h2>Big Ideas, Real Impact.</h2>
+      <a href="/collections/all" class="btn-equipro">SEE ALL PRODUCTS</a>
+    </div>
+  </section>
+
+  <!-- 5. HISTORIA FAMILIAR Y LOS 4 PILARES -->
+  <section class="about-legacy page-width">
+    <div class="about-legacy__header">
+      <span class="about-legacy__subtitle">Making you our top priority for more than 3 generations!</span>
+      <p class="about-legacy__intro">Our family has been supporting beauty and wellbeing professionals for more than fifty years.<br>As a high-end beauty and spa equipment manufacturer, we have always understood that our products are your work tools. That is why excellence is our commitment so you can provide clients the very best care day after day.</p>
+    </div>
+
+    <div class="about-pillars__grid">
+      
+      <!-- Pilar 1 -->
+      <div class="about-pillar-card">
+        <div class="about-pillar-icon">★</div>
+        <h3>Quality Equipment</h3>
+        <p>Quality, innovation, design & technology are the results of a dynamic production team working hand in hand with the research and development department in order to design top quality aesthetic appliances and equipment.</p>
+      </div>
+
+      <!-- Pilar 2 -->
+      <div class="about-pillar-card highlight">
+        <div class="about-pillar-icon">🏅</div>
+        <h3>Superior Service</h3>
+        <p>With 30 years of experience in esthetics, Equipro Esthetic Equipment's main concern is customer service: with a network of North American distributors, Equipro is able to offer a courteous & reliable after-sales service.</p>
+      </div>
+
+      <!-- Pilar 3 -->
+      <div class="about-pillar-card">
+        <div class="about-pillar-icon">✓</div>
+        <h3>Qualified Distributors</h3>
+        <p>Our North American network of qualified distributors also provides technical training, maintenance and after-sales service for the equipment.</p>
+      </div>
+
+      <!-- Pilar 4 -->
+      <div class="about-pillar-card highlight">
+        <div class="about-pillar-icon">💬</div>
+        <h3>Reputation</h3>
+        <p>Our reputation speaks about our products and services. Don't hesitate to visit our Instagram to see from yourself how satisfy our customers are!</p>
+      </div>
+
+    </div>
+  </section>
+
+</div>
+
+{% schema %}
+{
+  "name": "About Us Main",
+  "settings": [
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Direct MP4 Video URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "vision_image",
+      "label": "Vision Section Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "how_img_1",
+      "label": "How We Work Step 1 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "how_img_2",
+      "label": "How We Work Step 2 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "how_img_3",
+      "label": "How We Work Step 3 Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "cta_bg",
+      "label": "CTA Products Banner Background"
+    }
+  ]
+}
+{% endschema %}
