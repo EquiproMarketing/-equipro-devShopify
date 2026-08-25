@@ -1,0 +1,75 @@
+{{ 'section-shipping.css' | asset_url | stylesheet_tag }}
+
+<div class="shipping-page page-width">
+  <h1 class="shipping-page__title">{{ section.settings.title }}</h1>
+
+  {% if section.settings.banner_image != blank %}
+    <div class="shipping-page__banner">
+      {{ section.settings.banner_image | image_url: width: 1600 | image_tag: 
+        class: 'shipping-banner__img', 
+        alt: section.settings.title,
+        loading: 'eager' 
+      }}
+    </div>
+  {% endif %}
+
+  <div class="shipping-page__intro rte">
+    <p>At Equipro Beauty, we strive to deliver your order as quickly and efficiently as possible. Most orders are processed within <strong>2–4 business days</strong> and shipped from Canada or our US division.</p>
+    <p>Customers in Quebec can generally expect delivery within <strong>1–3 business days after shipment</strong>, while deliveries to other Canadian provinces typically arrive within <strong>3–7 business days</strong>. A tracking number will be provided once your order is on its way, allowing you to monitor its journey in real time.</p>
+    <p class="shipping-disclaimer">Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>
+  </div>
+
+  <!-- SIMULADORES DE TIEMPO DE TRÁNSITO -->
+  <div class="shipping-simulators">
+    
+    <!-- Simulador Canadá (Montreal) -->
+    <div class="shipping-card">
+      <h3>Estimate Transit Time</h3>
+      <p class="shipping-card__sub">Enter your destination postal code (e.g., H1G) or Canadian province abbreviation to see estimated delivery time from our Montreal facility.</p>
+      
+      <div class="shipping-form">
+        <input type="text" id="ca-postal-code" placeholder="Postal Code (e.g., H1G) or Province" maxlength="7">
+        <button type="button" class="hero-btn" onclick="calculateCATransit()">CALCULATE</button>
+      </div>
+      
+      <div id="ca-result" class="shipping-result"></div>
+      <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
+    </div>
+
+    <!-- Simulador EE.UU. (Isle La Motte, VT) -->
+    <div class="shipping-card">
+      <h3>Estimate Transit Time</h3>
+      <p class="shipping-card__sub">Enter your US state abbreviation (e.g., NY, FL, CA) to see estimated delivery time from our Isle La Motte, VT facility.</p>
+      
+      <div class="shipping-form">
+        <input type="text" id="us-state-code" placeholder="2-LETTER STATE CODE" maxlength="2">
+        <button type="button" class="hero-btn" onclick="calculateUSTransit()">CALCULATE</button>
+      </div>
+      
+      <div id="us-result" class="shipping-result"></div>
+      <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
+    </div>
+
+  </div>
+</div>
+
+<script src="{{ 'shipping-calculator.js' | asset_url }}" defer></script>
+
+{% schema %}
+{
+  "name": "Shipping Policy & Calc",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Page Title",
+      "default": "Shipping & Delivery Policy"
+    },
+    {
+      "type": "image_picker",
+      "id": "banner_image",
+      "label": "Header Banner Image"
+    }
+  ]
+}
+{% endschema %}

@@ -1,0 +1,168 @@
+/* ============================================================
+   EQUIPRO BEAUTY - GLOBAL STYLES & UI KIT
+   ============================================================ */
+
+/* Font Family Global */
+body, input, textarea, button, select {
+    font-family: 'Poppins', system-ui, -apple-system, sans-serif;
+  }
+  
+  /* ------------------------------------------------------------
+     1. BOTONES GLOBALES
+     ------------------------------------------------------------ */
+  .btn-equipro,
+  .see-product-btn,
+  .hero-btn {
+    display: inline-block;
+    background: #ab273b;
+    color: #ffffff !important;
+    padding: 14px 32px;
+    font-size: 15px;
+    font-weight: 600;
+    text-decoration: none !important;
+    border-radius: 50px;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    box-shadow: 0 4px 12px rgba(171, 39, 59, 0.2);
+  }
+  
+  .btn-equipro:hover,
+  .see-product-btn:hover,
+  .hero-btn:hover {
+    background: #8f2233;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(171, 39, 59, 0.35);
+  }
+  
+  /* ------------------------------------------------------------
+     2. SUBNAV HORIZONTAL DE CATEGORÍAS (ESTILO AESOP)
+     ------------------------------------------------------------ */
+  .horizontal-category-menu {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 32px;
+    padding: 18px 1.5rem;
+    background: #ffffff;
+    border-bottom: 1px solid #eeeeee;
+    width: 100%;
+    justify-content: center;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .horizontal-category-menu::-webkit-scrollbar {
+    display: none; /* Chrome/Safari */
+  }
+  
+  .horizontal-category-menu a {
+    color: #ab273b;
+    text-decoration: none;
+    font-size: 15.2px;
+    font-weight: 500;
+    white-space: nowrap;
+    transition: all 0.3s ease;
+    padding: 6px 0;
+    position: relative;
+  }
+  
+  .horizontal-category-menu a:hover::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: #ab273b;
+    bottom: 0;
+    left: 0;
+  }
+  
+  /* ------------------------------------------------------------
+     3. TARJETAS DE PRODUCTO (GRID / CATALOGO)
+     ------------------------------------------------------------ */
+  .mega-card {
+    background: #ffffff;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.35s ease;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    text-decoration: none;
+    color: inherit;
+    max-width: 320px;
+    margin: 0 auto;
+  }
+  
+  .mega-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+  }
+  
+  /* Intercambio de imágenes en Hover (Front / Angle) */
+  .card-image {
+    padding: 20px;
+    background: #f9f9f9;
+    text-align: center;
+    min-height: 240px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .card-image img {
+    width: 100%;
+    max-height: 240px;
+    object-fit: contain;
+    transition: opacity 0.45s ease, transform 0.45s ease;
+    position: absolute;
+  }
+  
+  .image-front {
+    opacity: 1;
+    z-index: 1;
+  }
+  
+  .image-hover {
+    opacity: 0;
+    z-index: 2;
+  }
+  
+  .mega-card:hover .image-front {
+    opacity: 0;
+  }
+  
+  .mega-card:hover .image-hover {
+    opacity: 1;
+    transform: scale(1.04);
+  }
+  
+  .card-content {
+    padding: 18px 20px 20px;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .product-name {
+    font-size: 16.5px;
+    font-weight: 700;
+    color: #ab273b;
+    line-height: 1.25;
+    margin: 0 0 8px 0;
+  }
+  
+  .product-category {
+    color: #64748b;
+    font-size: 13.5px;
+    margin-bottom: 12px;
+  }
+  
+  .price {
+    font-size: 17.5px;
+    font-weight: 700;
+    color: #1f1f1f;
+    margin-bottom: 16px;
+  }
