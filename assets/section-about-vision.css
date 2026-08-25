@@ -8,41 +8,42 @@
   
   .about-vision-block__container {
     display: flex;
-    align-items: flex-start;
+    align-items: stretch;
     position: relative;
     gap: 30px;
     width: 100%;
   }
   
-  /* Columna Izquierda (Imagen + Badge) */
+  /* 1. Imagen dominante (72% del ancho) */
   .about-vision-block__left {
-    flex: 0 0 58%;
+    flex: 0 0 72%;
     position: relative;
   }
   
-  /* Columna Derecha: Se le da un espacio superior equivalente a la altura del badge */
+  /* 2. Columna de texto estrecha y alineada verticalmente al fondo */
   .about-vision-block__right {
-    flex: 0 0 38%;
-    padding-top: 180px; /* Desplaza todo el bloque derecho debajo del cuadro rojo */
+    flex: 0 0 25%;
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
+    padding-bottom: 20px;
   }
   
-  /* Imagen base */
+  /* Imagen base amplia */
   .about-vision-block__image-wrapper {
     width: 100%;
-    border-radius: 6px;
+    min-height: 480px;
+    border-radius: 4px;
     overflow: hidden;
     background-color: #f4f4f4;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.05);
   }
   
   .about-vision-block__img {
     width: 100%;
-    height: auto;
-    display: block;
+    height: 100%;
+    min-height: 480px;
     object-fit: cover;
+    display: block;
   }
   
   .about-vision-block__placeholder {
@@ -55,50 +56,52 @@
     color: #777777;
   }
   
-  /* Tarjeta Roja: Posición superior fija y ancho controlado */
+  /* 3. Tarjeta Roja (posicionada como en la maqueta original) */
   .about-vision-block__badge {
     position: absolute;
-    top: 40px; /* Posición alta fija para no pisar el contenido inferior */
-    right: -30px; /* Desfase controlado sobre el borde derecho */
+    top: 18%;
+    right: -130px; /* Se desplaza hacia la derecha entrando al canal vacío */
     width: 60%;
+    max-width: 480px;
     background-color: #ab273b;
-    padding: 28px 32px;
+    padding: 36px 40px;
     border-radius: 4px;
     z-index: 10;
-    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
   }
   
   .about-vision-block__badge-title {
     color: #ffffff !important;
-    font-size: 1.45rem;
+    font-size: 1.6rem;
     font-weight: 700;
-    line-height: 1.35;
+    line-height: 1.3;
     margin: 0;
   }
   
-  /* Párrafo y Botón */
-  .about-vision-block__description p {
-    font-size: 0.95rem;
-    line-height: 1.65;
-    color: #4a4a4a;
-    margin-bottom: 24px;
+  /* Texto y Botón alineados al fondo derecho */
+  .about-vision-block__description {
+    margin-top: auto;
   }
   
-  .about-vision-block__cta {
-    margin-top: 8px;
+  .about-vision-block__description p {
+    font-size: 0.88rem;
+    line-height: 1.6;
+    color: #4a4a4a;
+    margin-bottom: 24px;
   }
   
   .btn-vision-solid {
     display: inline-block;
     background-color: #ab273b;
     color: #ffffff;
-    padding: 16px 28px;
-    border-radius: 6px;
-    font-size: 0.85rem;
+    padding: 14px 24px;
+    border-radius: 8px;
+    font-size: 0.8rem;
     font-weight: 700;
     letter-spacing: 0.5px;
     text-decoration: none;
     text-transform: uppercase;
+    text-align: center;
     transition: background-color 0.2s ease, transform 0.2s ease;
   }
   
@@ -107,8 +110,8 @@
     color: #ffffff;
   }
   
-  /* Adaptación para dispositivos móviles */
-  @media (max-width: 890px) {
+  /* Responsivo para móviles */
+  @media (max-width: 990px) {
     .about-vision-block__container {
       flex-direction: column;
       gap: 20px;
@@ -120,15 +123,22 @@
       width: 100%;
     }
   
+    .about-vision-block__image-wrapper,
+    .about-vision-block__img,
+    .about-vision-block__placeholder {
+      min-height: 320px;
+    }
+  
     .about-vision-block__badge {
       position: relative;
       top: 0;
       right: 0;
       width: 100%;
+      max-width: 100%;
       margin-top: -30px;
     }
   
     .about-vision-block__right {
-      padding-top: 20px;
+      padding-bottom: 0;
     }
   }
