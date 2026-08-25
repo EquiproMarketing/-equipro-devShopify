@@ -2,16 +2,29 @@
 
 <section class="about-hero-video">
   <div class="about-hero-video__wrapper">
-    {% if section.settings.video_url != blank %}
+    {%- if section.settings.video != blank -%}
+      {{ section.settings.video | video_tag: autoplay: true, loop: true, muted: true, playsinline: true, class: 'about-hero-video__element' }}
+    {%- elsif section.settings.video_url_mp4 != blank -%}
       <video autoplay loop muted playsinline class="about-hero-video__element">
-        <source src="{{ section.settings.video_url }}" type="video/mp4">
+        <source src="{{ section.settings.video_url_mp4 }}" type="video/mp4">
       </video>
-    {% endif %}
+    {%- elsif section.settings.fallback_image != blank -%}
+      {{ section.settings.fallback_image | image_url: width: 2000 | image_tag: class: 'about-hero-video__element about-hero-video__img', alt: section.settings.title }}
+    {%- endif -%}
+
     <div class="about-hero-video__overlay">
-      <h2 class="about-hero-video__title">{{ section.settings.title }}</h2>
+      {%- if section.settings.title != blank -%}
+        <h1 class="about-hero-video__title">{{ section.settings.title }}</h1>
+      {%- endif -%}
     </div>
   </div>
-  <div class="about-hero-video__curve"></div>
+
+  <!-- Máscara / Corte Curvo Inferior Blanco -->
+  <div class="about-hero-video__curve-svg">
+    <svg viewBox="0 0 1440 120" fill="none" xmlns="http://www.w3.org/2000/svg" preserveAspectRatio="none">
+      <path d="M0,0 C480,100 960,100 1440,0 L1440,120 L0,120 Z" fill="#ffffff"></path>
+    </svg>
+  </div>
 </section>
 
 {% schema %}
@@ -21,13 +34,23 @@
     {
       "type": "text",
       "id": "title",
-      "label": "Heading",
+      "label": "Heading Title",
       "default": "Making you our top priority for more than 3 generations!"
     },
     {
+      "type": "video",
+      "id": "video",
+      "label": "Shopify Hosted Video (Files)"
+    },
+    {
       "type": "url",
-      "id": "video_url",
-      "label": "Direct MP4 URL (CDN)"
+      "id": "video_url_mp4",
+      "label": "External MP4 Direct URL"
+    },
+    {
+      "type": "image_picker",
+      "id": "fallback_image",
+      "label": "Fallback Poster Image"
     }
   ],
   "presets": [
