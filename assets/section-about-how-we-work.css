@@ -38,18 +38,20 @@
   /* Contenedor de Imagen con bordes redondeados estilo cápsula */
   .about-how__image-wrapper {
     width: 100%;
-    height: 380px;
+    aspect-ratio: 4 / 5; /* Forzar proporción exacta 4:5 (Ancho : Alto) */
+    height: auto; /* Permite que la altura se calcule automáticamente en base al aspecto */
     border-radius: 36px;
     overflow: hidden;
     background-color: #f5f5f7;
     margin-bottom: 20px;
-    box-shadow: 0 4px 18px rgba(0,0,0,0.04);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.05);
   }
   
   .about-how__img {
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Asegura encuadre perfecto sin deformar la imagen */
+    object-position: center;
     display: block;
   }
   
@@ -64,11 +66,10 @@
     font-size: 0.85rem;
   }
   
-  .about-how__description {
-    font-size: 0.92rem;
-    line-height: 1.6;
-    color: #4a4a4a;
-    margin: 0;
+  @media (max-width: 768px) {
+    .about-how__image-wrapper {
+      border-radius: 24px;
+    }
   }
   
   @media (max-width: 768px) {
