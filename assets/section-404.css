@@ -1,0 +1,93 @@
+/* ==========================================================================
+   Equipro Beauty - 404 Page Styles
+   ========================================================================== */
+
+   .page-404 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 60vh;
+    padding: 60px 20px;
+    text-align: center;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .page-404__content {
+    max-width: 560px;
+    margin: 0 auto;
+  }
+  
+  .page-404__code {
+    display: block;
+    font-size: 5.5rem;
+    font-weight: 800;
+    color: #ab273b; /* Equipro Red */
+    line-height: 1;
+    margin-bottom: 12px;
+  }
+  
+  .page-404__title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: #222222;
+    margin: 0 0 12px 0;
+  }
+  
+  .page-404__subtext {
+    font-size: 1rem;
+    color: #666666;
+    margin-bottom: 32px;
+    line-height: 1.5;
+  }
+  
+  .page-404__actions {
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  @media (max-width: 480px) {
+    .page-404__actions {
+      flex-direction: column;
+      width: 100%;
+    }
+  
+    .page-404__btn,
+    .page-404__btn-quote {
+      width: 100%;
+    }
+  }
+  
+  .page-404__btn {
+    background-color: #ab273b;
+    color: #ffffff;
+    padding: 12px 28px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+    transition: background-color 0.2s ease;
+    display: inline-block;
+  }
+  
+  .page-404__btn:hover {
+    background-color: #891e2e;
+  }
+  
+  .page-404__btn-quote {
+    background-color: transparent;
+    color: #ab273b;
+    border: 2px solid #ab273b;
+    padding: 10px 26px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .page-404__btn-quote:hover {
+    background-color: #ab273b;
+    color: #ffffff;
+  }

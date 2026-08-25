@@ -1,0 +1,56 @@
+{{ 'section-404.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width page-404">
+  <div class="page-404__content">
+    <span class="page-404__code">404</span>
+    <h1 class="page-404__title">
+      {{ section.settings.title | default: "Page Not Found" }}
+    </h1>
+    <p class="page-404__subtext">
+      {{ section.settings.subtext | default: "The page you are looking for does not exist or has been moved." }}
+    </p>
+
+    <div class="page-404__actions">
+      <a href="{{ section.settings.button_link | default: '/' }}" class="button button--primary page-404__btn">
+        {{ section.settings.button_text | default: "Back to Home" }}
+      </a>
+      <button type="button" class="button button--secondary page-404__btn-quote" data-open-quote-modal>
+        Get a Quote
+      </button>
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "404 Page Content",
+  "tag": "section",
+  "class": "section-404",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Page Not Found"
+    },
+    {
+      "type": "textarea",
+      "id": "subtext",
+      "label": "Subtext Message",
+      "default": "The page you are looking for does not exist or has been moved."
+    },
+    {
+      "type": "text",
+      "id": "button_text",
+      "label": "Button Label",
+      "default": "Back to Home"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Button Link",
+      "default": "/"
+    }
+  ]
+}
+{% endschema %}
