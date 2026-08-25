@@ -1,0 +1,126 @@
+/* assets/section-about-pillars.css */
+.about-pillars {
+    padding-top: 80px;
+    padding-bottom: 120px;
+    background-color: #ffffff;
+  }
+  
+  .about-pillars__header {
+    text-align: center;
+    max-width: 820px;
+    margin: 0 auto 70px;
+    padding: 0 20px;
+  }
+  
+  .about-pillars__subtitle {
+    font-size: 0.95rem;
+    font-weight: 700;
+    color: #111111;
+    margin-bottom: 24px;
+  }
+  
+  .about-pillars__intro {
+    font-size: 0.88rem;
+    line-height: 1.7;
+    color: #4a4a4a;
+    margin: 0;
+    white-space: pre-line;
+  }
+  
+  /* Layout 4 Columnas */
+  .about-pillars__grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+  
+  .about-pillars__col {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  
+  /* Circulo superior para ícono */
+  .about-pillars__icon-badge {
+    width: 64px;
+    height: 64px;
+    border-radius: 50%;
+    background-color: #ab273b;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+    box-shadow: 0 8px 20px rgba(171, 39, 59, 0.18);
+    position: relative;
+    z-index: 2;
+  }
+  
+  .about-pillars__icon-img {
+    width: 28px;
+    height: 28px;
+    object-fit: contain;
+  }
+  
+  .about-pillars__icon-fallback {
+    color: #ffffff;
+    font-size: 1.4rem;
+  }
+  
+  /* Tarjeta limpia (Sin Highlight) */
+  .about-pillars__card {
+    width: 100%;
+    padding: 20px 10px;
+    transition: all 0.3s ease;
+  }
+  
+  .about-pillars__card-title {
+    font-size: 1rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    color: #111111;
+  }
+  
+  .about-pillars__card-text {
+    font-size: 0.85rem;
+    line-height: 1.65;
+    color: #555555;
+    margin: 0;
+  }
+  
+  /* Tarjeta Highlight Roja (Estilo bloques 2 y 4 de la imagen) */
+  .about-pillars__col--highlight .about-pillars__card {
+    background-color: #ab273b;
+    padding: 40px 24px 60px;
+    border-radius: 2px;
+    min-height: 380px; /* Extiende el bloque rojo verticalmente como en tu captura */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  }
+  
+  .about-pillars__col--highlight .about-pillars__card-title {
+    color: #ffffff;
+  }
+  
+  .about-pillars__col--highlight .about-pillars__card-text {
+    color: #f2f2f2;
+  }
+  
+  /* Adapta a pantallas móviles y tablets */
+  @media (max-width: 900px) {
+    .about-pillars__grid {
+      flex-wrap: wrap;
+    }
+    
+    .about-pillars__col {
+      flex: 0 0 47%;
+      margin-bottom: 40px;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .about-pillars__col {
+      flex: 0 0 100%;
+    }
+  }
