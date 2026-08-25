@@ -1,0 +1,74 @@
+/* assets/shipping-calculator.css */
+.shipping-calculator {
+    background: #ffffff;
+    padding: 32px;
+    border-radius: 16px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+    margin-top: 32px;
+    font-family: 'Poppins', sans-serif;
+  }
+  
+  .shipping-calculator h3 {
+    color: #ab273b;
+    font-size: 1.4rem;
+    margin-bottom: 20px;
+  }
+  
+  .shipping-calculator__form {
+    display: grid;
+    grid-template-columns: 1fr 1fr auto;
+    gap: 16px;
+    align-items: end;
+  }
+  
+  @media (max-width: 768px) {
+    .shipping-calculator__form {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .shipping-calculator__field label {
+    display: block;
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+    color: #333333;
+  }
+  
+  .shipping-calculator__field select,
+  .shipping-calculator__field input {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #dddddd;
+    border-radius: 8px;
+    font-family: inherit;
+    font-size: 0.9rem;
+  }
+  
+  .shipping-calculator__result {
+    margin-top: 24px;
+    padding: 20px;
+    background: #f9f9f9;
+    border-radius: 12px;
+    border-left: 4px solid #ab273b;
+  }
+  
+  .shipping-calculator__card h4 {
+    margin: 0 0 10px 0;
+    font-size: 1.1rem;
+    color: #333333;
+  }
+  
+  .shipping-calculator__total {
+    margin-top: 16px;
+    padding-top: 12px;
+    border-top: 1px solid #eeeeee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .shipping-calculator__total strong {
+    color: #ab273b;
+    font-size: 1.1rem;
+  }

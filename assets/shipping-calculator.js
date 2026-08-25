@@ -1,18 +1,12 @@
-/**
- * Equipro Beauty - Dynamic Shipping & Transit Time Calculator
- * Origins: Montreal, QC (Canada) & Isle La Motte, VT (United States)
- */
-
+// assets/shipping-calculator.js
 document.addEventListener('DOMContentLoaded', () => {
     const shippingForm = document.getElementById('EquiproShippingForm');
     if (!shippingForm) return;
   
     const countrySelect = document.getElementById('ShippingCountry');
     const regionSelect = document.getElementById('ShippingRegion');
-    const postalInput = document.getElementById('ShippingPostalCode');
     const resultContainer = document.getElementById('ShippingResult');
   
-    // Tabla de tiempos de tránsito (días hábiles en carretera)
     const transitTimes = {
       CA: {
         origin: 'Montreal, QC',
@@ -28,9 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
           SK: { min: 3, max: 6 },
           AB: { min: 4, max: 6 },
           BC: { min: 5, max: 7 },
-          YT: { min: 7, max: 10 },
-          NT: { min: 7, max: 10 },
-          NU: { min: 8, max: 12 }
+          DEFAULT: { min: 3, max: 6 }
         }
       },
       US: {
@@ -54,13 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     };
   
-    // Escuchar cambio de país para alternar origen y regiones
-    countrySelect?.addEventListener('change', (e) => {
-      const country = e.target.value;
-      updateRegionOptions(country);
-    });
-  
-    // Calcular tiempo de entrega al enviar el formulario
     shippingForm.addEventListener('submit', (e) => {
       e.preventDefault();
       
@@ -70,42 +55,25 @@ document.addEventListener('DOMContentLoaded', () => {
       if (!country || !region) return;
   
       const config = transitTimes[country];
-      const transit = config.zones[region] || config.zones['DEFAULT'] || { min: 3, max: 6 };
+      const transit = config.zones[region] || config.zones['DEFAULT'];
   
-      // Total = Procesamiento + Tránsito
       const totalMin = config.processingDays.min + transit.min;
       const totalMax = config.processingDays.max + transit.max;
   
-      renderResult({
-        origin: config.origin,
-        processingMin: config.processingDays.min,
-        processingMax: config.processingDays.max,
-        transitMin: transit.min,
-        transitMax: transit.max,
-        totalMin,
-        totalMax
-      });
-    });
-  
-    function renderResult(data) {
       resultContainer.innerHTML = `
         <div class="shipping-calculator__card">
-          <h4>Estimación de Entrega</h4>
-          <p><strong>Origen de Despacho:</strong> ${data.origin}</p>
+          <h4>Delivery Estimate</h4>
+          <p><strong>Fulfillment Origin:</strong> ${config.origin}</p>
           <ul>
-            <li><strong>Procesamiento de fábrica:</strong> ${data.processingMin} - ${data.processingMax} días hábiles</li>
-            <li><strong>Tránsito terrestre:</strong> ${data.transitMin} - ${data.transitMax} días hábiles</li>
+            <li><strong>Factory Handling & Processing:</strong> ${config.processingDays.min} - ${config.processingDays.max} business days</li>
+            <li><strong>Ground Freight Transit:</strong> ${transit.min} - ${transit.max} business days</li>
           </ul>
           <div class="shipping-calculator__total">
-            <span>Tiempo Total Estimado:</span>
-            <strong>${data.totalMin} a ${data.totalMax} días hábiles</strong>
+            <span>Total Estimated Time:</span>
+            <strong>${totalMin} to ${totalMax} business days</strong>
           </div>
         </div>
       `;
       resultContainer.style.display = 'block';
-    }
-  
-    function updateRegionOptions(country) {
-      // Lógica para alternar las provincias de CA o estados de US dinámicamente
-    }
+    });
   });
