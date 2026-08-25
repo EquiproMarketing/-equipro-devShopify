@@ -1,11 +1,71 @@
 {
-    "name": "About Us",
     "sections": {
-      "main": {
-        "type": "main-about"
+      "about_hero": {
+        "type": "main-about-hero",
+        "settings": {
+          "title": "Crafting Excellence in Esthetic Equipment",
+          "subtitle": "Canadian craftsmanship meeting North American professional standards.",
+          "video_url": "https://www.youtube.com/watch?v=xxxxxx"
+        }
+      },
+      "about_vision": {
+        "type": "main-about-vision",
+        "settings": {
+          "heading": "Your Vision, Built to Last",
+          "text": "We engineer high-performance esthetic furniture and equipment designed for daily continuous operations."
+        }
+      },
+      "about_how_we_work": {
+        "type": "main-about-how-we-work",
+        "blocks": {
+          "step_1": {
+            "type": "step",
+            "settings": {
+              "title": "1. Design & Engineering",
+              "description": "In-house design team based in Montreal creating ergonomic solutions."
+            }
+          },
+          "step_2": {
+            "type": "step",
+            "settings": {
+              "title": "2. Customization",
+              "description": "Tailored upholstery, colors, and functional specs for your spa."
+            }
+          },
+          "step_3": {
+            "type": "step",
+            "settings": {
+              "title": "3. Delivery & Support",
+              "description": "Fast cross-border transit and direct technical backup."
+            }
+          }
+        },
+        "block_order": ["step_1", "step_2", "step_3"]
+      },
+      "about_cta": {
+        "type": "main-about-cta",
+        "settings": {
+          "title": "Ready to upgrade your treatment rooms?",
+          "button_label": "Explore Catalog",
+          "button_link": "/collections"
+        }
+      },
+      "about_pillars": {
+        "type": "main-about-pillars",
+        "settings": {
+          "title": "Family Heritage & Core Pillars",
+          "p1_title": "Quality First",
+          "p2_title": "Local Service",
+          "p3_title": "Authorized Distributors",
+          "p4_title": "Industry Reputation"
+        }
       }
     },
     "order": [
-      "main"
+      "about_hero",
+      "about_vision",
+      "about_how_we_work",
+      "about_cta",
+      "about_pillars"
     ]
   }

@@ -1,11 +1,31 @@
 {
-    "name": "Shipping Policy",
     "sections": {
-      "main": {
-        "type": "shipping-policy"
+      "shipping_banner": {
+        "type": "shipping-hero",
+        "settings": {
+          "title": "Shipping & Delivery Policy",
+          "subtitle": "Cross-border logistics served directly from Montreal, QC and Isle La Motte, VT."
+        }
+      },
+      "shipping_policy": {
+        "type": "shipping-policy",
+        "settings": {
+          "processing_time": "Standard order processing takes between 2 to 4 business days prior to dispatch.",
+          "canada_origin": "Montreal, Quebec (Distribution Centre)",
+          "usa_origin": "Isle La Motte, Vermont (US Operations Hub)"
+        }
+      },
+      "shipping_calculator": {
+        "type": "shipping-calculator-section",
+        "settings": {
+          "heading": "Estimate Transit Time",
+          "description": "Select your country and region to calculate estimated transit times including factory preparation."
+        }
       }
     },
     "order": [
-      "main"
+      "shipping_banner",
+      "shipping_policy",
+      "shipping_calculator"
     ]
   }
