@@ -1,19 +1,11 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
+  "name": "About Us",
   "sections": {
     "hero_video": {
       "type": "about-hero-video",
       "settings": {
         "title": "Making you our top priority for more than 3 generations!",
-        "video_url_mp4": "https://youtu.be/V-vIzdnlSG0"
+        "video_url_mp4": ""
       }
     },
     "vision": {
@@ -66,12 +58,20 @@
         "btn_label": "SEE ALL PRODUCTS",
         "btn_link": "shopify://collections/all"
       }
+    },
+    "pillars": {
+      "type": "about-pillars",
+      "settings": {
+        "subtitle": "Making you our top priority for more than 3 generations!",
+        "intro": "Our family has been supporting beauty and wellbeing professionals for more than fifty years. As a high-end beauty and spa equipment manufacturer, we have always understood that our products are your work tools. That is why excellence is our commitment so you can provide clients the very best care day after day."
+      }
     }
   },
   "order": [
     "hero_video",
     "vision",
     "how_we_work",
-    "cta_banner"
+    "cta_banner",
+    "pillars"
   ]
 }
