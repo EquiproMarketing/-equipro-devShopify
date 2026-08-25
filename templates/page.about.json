@@ -7,7 +7,7 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
     "hero_video": {
       "type": "about-hero-video",
@@ -16,13 +16,16 @@
       }
     },
     "vision": {
-      "type": "about-vision"
+      "type": "about-vision",
+      "settings": {}
     },
     "how_we_work": {
-      "type": "about-how-we-work"
+      "type": "about-how-we-work",
+      "settings": {}
     },
     "cta_banner": {
-      "type": "about-cta-banner"
+      "type": "about-cta-banner",
+      "settings": {}
     }
   },
   "order": [
