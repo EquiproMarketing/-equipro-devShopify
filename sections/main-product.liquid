@@ -1,9 +1,10 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {{ 'product-technical-table.css' | asset_url | stylesheet_tag }}
+{{ 'quote-modal.css' | asset_url | stylesheet_tag }}
 
 <div class="product-page page-width">
   
-  <!-- BACK BUTTON  -->
+  <!-- BACK BUTTON -->
   <div class="product-page__back">
     <a href="javascript:history.back()" class="back-link">
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
@@ -13,21 +14,22 @@
 
   <!-- FILA 1: INFORMACIÓN DE TEXTO E IMÁGENES -->
   <div class="product-main-grid">
+    
     <!-- Columna Izquierda: Títulos y Textos -->
     <div class="product-info-col">
-      <h1 class="product-info__title">{{ product.title | default: "Ultra-Comfort Professional Treatment Chair" }}</h1>
+      <h1 class="product-info__title">{{ product.title | default: "Professional Single Wax Heater" }}</h1>
       
       <div class="product-info__intro-highlight">
-        <p>Precision-engineered for advanced clinical workflows, the Ultra-Comfort treatment chair bridges the gap between ergonomic practitioner support and exceptional client relaxation, backed by decades of North American manufacturing expertise.</p>
+        <p>Precision-engineered for professional depilatory workflows, the Equipro Single Wax Heater delivers fast, uniform heat distribution in a durable compact metal housing designed for heavy daily salon use.</p>
       </div>
 
       <div class="product-info__description">
-        <p>Ultra-Comfort is purpose-built for licensed skincare specialists, including Estheticians, Clinical Spa Therapists, and Cosmetic Injectors. Its 15-degree tilt mechanism targets lower-back tension and postural strain during extended treatment sessions...</p>
+        <p>Purpose-built for estheticians and hair-removal specialists, this unit features a 3.625-inch reservoir compatible with standard Canadian and European wax formats. The dial-operated manual thermostat guarantees accurate temperature control across all warm or hot wax formulas...</p>
       </div>
 
-      <h2 class="product-info__subtitle">Engineering for Precision and Longevity</h2>
+      <h2 class="product-info__subtitle">Engineering for Safety and Professional Efficiency</h2>
       <div class="product-info__description">
-        <p>Long-term durability is central to the Equipro approach. To preserve the mechanical integrity and surface quality of Ultra-Comfort, routine cleaning with non-abrasive disinfectants is recommended...</p>
+        <p>Equipped with an integrated overheat protection thermostat and CSA/UL approved electrical components, Equipro wax warmers preserve product consistency while ensuring maximum safety for the esthetic station.</p>
       </div>
 
       <!-- BOTÓN COMPARAR PRODUCTOS (ABRE POPUP) -->
@@ -37,30 +39,12 @@
       </button>
     </div>
 
-    <!-- Cargar Assets -->
-    {{ 'quote-modal.css' | asset_url | stylesheet_tag }}
-    <script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
-
-    <!-- Botón de Disparo -->
-    <button 
-    type="button" 
-    class="button button--secondary button--full-width" 
-    data-open-quote-modal
-    data-product-title="{{ product.title | escape }}"
-    style="margin-top: 10px; border-color: #ab273b; color: #ab273b;"
-    >
-    Get a Quote / Solicitar Cotización
-    </button>
-
-    <!-- Render del Snippet -->
-    {% render 'quote-modal' %}
-
-    <!-- Columna Derecha: Galería de Imágenes -->
+    <!-- Columna Derecha: Galería de Imágenes + Botón Get a Quote Integrado -->
     <div class="product-gallery-col">
       <div class="product-gallery">
         <div class="product-gallery__main">
           {% if product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title }}">
+            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
           {% else %}
             <div class="product-gallery__placeholder"></div>
           {% endif %}
@@ -76,31 +60,38 @@
             <div class="thumb-placeholder"></div>
           {% endfor %}
         </div>
+
+        <!-- Botón de Cotización ubicado dentro del bloque de imágenes -->
+        <div class="product-gallery__quote-cta" style="margin-top: 16px;">
+          <button 
+            type="button" 
+            class="button button--secondary button--full-width" 
+            data-open-quote-modal
+            data-product-title="{{ product.title | escape }}"
+            style="border-color: #ab273b; color: #ab273b; width: 100%; font-weight: 700;"
+          >
+            Get a Quote / Solicitar Cotización
+          </button>
+        </div>
       </div>
     </div>
   </div>
 
+  <!-- Render del Snippet de Cotización -->
+  {% render 'quote-modal' %}
+
   <!-- FILA 2: COMPRA + TABLA DE ESPECIFICACIONES -->
-  <div class="product-secondary-grid">
+  <div class="product-secondary-grid" style="margin-top: 40px;">
+    
     <!-- Columna Izquierda: Precio, Variantes, Carrito y Dropdowns -->
     <div class="product-purchase-col">
-      <div class="product-price">From {{ product.price | default: 435000 | money }}</div>
+      <div class="product-price">From {{ product.price | default: 18500 | money }}</div>
 
       {% form 'product', product %}
         <div class="product-option">
           <label>Couleur:</label>
           <select name="options[Couleur]" class="product-select">
-            <option>Select Couleur</option>
             <option>White</option>
-            <option>Black</option>
-          </select>
-        </div>
-
-        <div class="product-option">
-          <label>Taille:</label>
-          <select name="options[Taille]" class="product-select">
-            <option>Select Taille</option>
-            <option>Standard</option>
           </select>
         </div>
 
@@ -114,27 +105,27 @@
         </div>
       {% endform %}
 
-      <!-- ACORDEÓN / DROPDOWN PROFESIONALES -->
+      <!-- ACORDEÓN PROFESIONAL -->
       <div class="product-accordions">
         <h3 class="product-acc-title">Key Features for the Professional Station</h3>
         
         <details class="product-acc-item">
-          <summary>Clinical Aesthetics & Specialized Facials: <span>+</span></summary>
-          <p>Optimized positioning for facial protocols, microneedling, and LED light therapies.</p>
+          <summary>Precise Temperature Regulation: <span>+</span></summary>
+          <p>Manual thermostat dial maintains exact target viscosity without scorching delicate depilatory wax formulas.</p>
         </details>
         
         <details class="product-acc-item">
-          <summary>Advanced Clinical Spa Treatments: <span>+</span></summary>
-          <p>Full electric elevation ensures comfortable posture during body wraps and deep tissue sessions.</p>
+          <summary>Universal Reservoir Fit: <span>+</span></summary>
+          <p>3.625" opening fits standard Canadian and European wax cans, plus the optional 42100 aluminum insert.</p>
         </details>
         
         <details class="product-acc-item">
-          <summary>Hair Removal & Full-Body Services: <span>+</span></summary>
-          <p>Seamless vinyl surface enables rapid sterilization between wax and laser applications.</p>
+          <summary>Commercial Sanitation: <span>+</span></summary>
+          <p>Scratch-resistant enamel surface enables quick wiping with hospital-grade disinfectant between clients.</p>
         </details>
       </div>
 
-      <!-- SECCIÓN SHIPPING & CALCULADORA -->
+      <!-- SECCIÓN SHIPPING -->
       <div class="product-shipping-block">
         <h4 class="product-shipping__title">Shipping</h4>
         <p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>
@@ -145,7 +136,7 @@
       </div>
     </div>
 
-    <!-- Columna Derecha: Tabla de Especificaciones Inyectada -->
+    <!-- Columna Derecha: Tabla de Especificaciones Reales (SKU 41100) -->
     <div class="product-specs-col">
       <div class="tech-table-wrapper">
         <table class="tech-table">
@@ -157,14 +148,20 @@
           </thead>
           <tbody>
             <tr><td>Manufacturer</td><td>Equipro Beauty</td></tr>
-            <tr><td>Model SKU</td><td>20501</td></tr>
-            <tr><td>Primary Materials</td><td>Ultra-resistant vinyl upholstery, reinforced steel frame, premium electric actuators</td></tr>
-            <tr><td>Dimensions (L x W x H)</td><td>72" L x 26" W x 20.5" / 36.5" H</td></tr>
-            <tr><td>Weight</td><td>320 lb (145 kg)</td></tr>
-            <tr><td>Adjustability</td><td>Full electric adjustment via pedal with proximity sensor: height, backrest, legrest, and tilt</td></tr>
-            <tr><td>Height Range</td><td>20.5" to 36.5" (52 cm to 93 cm), lowers to 19" for accessibility</td></tr>
-            <tr><td>Warranty</td><td>2 years</td></tr>
-            <tr><td>Country of Origin</td><td>Canada</td></tr>
+            <tr><td>Model SKU</td><td>41100</td></tr>
+            <tr><td>Primary Materials</td><td>Heavy-duty metal housing with scratch-resistant white enamel coating</td></tr>
+            <tr><td>Product Type</td><td>Professional Single Wax Heater</td></tr>
+            <tr><td>Wax Compatibility</td><td>Designed for warm or hot depilatory wax</td></tr>
+            <tr><td>Reservoir Diameter</td><td>3.625 in (Formats Canadien et Européen)</td></tr>
+            <tr><td>Control Type</td><td>Precise dial-operated manual thermostat</td></tr>
+            <tr><td>Heating Element</td><td>High-performance rapid heating technology</td></tr>
+            <tr><td>Dimensions (L x W x H)</td><td>8.25 in x 7.00 in x 5.00 in</td></tr>
+            <tr><td>Weight</td><td>7.0 lb / 3.2 kg</td></tr>
+            <tr><td>Safety Features</td><td>On/Off indicator power switch and overheat protection thermostat</td></tr>
+            <tr><td>Compatible Accessories</td><td>42100 Standard Aluminum Container (400 g / 14 oz capacity)</td></tr>
+            <tr><td>Certifications</td><td>CSA & UL Approved components</td></tr>
+            <tr><td>Warranty</td><td>2 Years Warranty</td></tr>
+            <tr><td>Country of Origin</td><td>Made in Canada</td></tr>
           </tbody>
         </table>
       </div>
@@ -172,11 +169,14 @@
   </div>
 </div>
 
+<script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
 <script>
   function changeMainImg(src) {
     document.getElementById('MainProductImg').src = src;
     document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
-    event.target.classList.add('is-active');
+    if (event && event.target) {
+      event.target.classList.add('is-active');
+    }
   }
 
   function adjustQty(val) {
