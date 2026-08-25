@@ -1,69 +1,251 @@
 /* assets/section-about.css */
-.page-about {
-  padding: 40px 20px 80px;
+.about-page {
   font-family: 'Poppins', sans-serif;
   color: #333333;
 }
 
-.page-about__header {
+/* 1. HERO VIDEO */
+.about-hero-video {
+  position: relative;
+  background-color: #111111;
+  color: #ffffff;
+  overflow: hidden;
+  margin-bottom: 60px;
+}
+
+.about-hero-video__wrapper {
+  position: relative;
+  min-height: 380px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   text-align: center;
-  max-width: 720px;
-  margin: 0 auto 48px;
 }
 
-.page-about__title {
-  font-size: 2.5rem;
+.about-hero-video__element {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.4;
+}
+
+.about-hero-video__placeholder,
+.about-hero-video__overlay {
+  position: relative;
+  z-index: 2;
+  padding: 60px 20px;
+}
+
+.about-hero-video__title {
+  font-size: 2.25rem;
   font-weight: 700;
-  color: #ab273b; /* Equipro Red */
-  margin-bottom: 12px;
+  color: #ffffff;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.3;
 }
 
-.page-about__subtitle {
-  font-size: 1.1rem;
-  color: #666666;
-  line-height: 1.6;
+/* 2. VISION SECTION */
+.about-vision {
+  margin-bottom: 80px;
 }
 
-.page-about__grid {
+.about-vision__grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 32px;
-  margin-bottom: 48px;
+  grid-template-columns: 1fr 1fr;
+  gap: 48px;
+  align-items: center;
 }
 
 @media (max-width: 768px) {
-  .page-about__grid {
+  .about-vision__grid {
     grid-template-columns: 1fr;
   }
 }
 
-.page-about__card {
+.about-vision__image-wrapper {
+  position: relative;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 12px 32px rgba(0,0,0,0.08);
+}
+
+.about-vision__badge {
+  background: #ab273b;
+  color: #ffffff;
+  padding: 24px;
+}
+
+.about-vision__badge h2 {
+  color: #ffffff;
+  font-size: 1.35rem;
+  margin: 0;
+  line-height: 1.4;
+}
+
+.about-vision__content p {
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555555;
+  margin-bottom: 24px;
+}
+
+.btn-equipro {
+  display: inline-block;
+  background-color: #ab273b;
+  color: #ffffff;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-weight: 600;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.btn-equipro:hover {
+  background-color: #8c1e2f;
+  transform: translateY(-2px);
+}
+
+/* 3. HOW WE WORK */
+.about-how {
+  margin-bottom: 80px;
+}
+
+.about-section-title {
+  text-align: center;
+  font-size: 2rem;
+  font-weight: 700;
+  color: #ab273b;
+  margin-bottom: 40px;
+}
+
+.about-how__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .about-how__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-how__card {
   background: #f8f9fa;
+  border: 1px solid #e9ecef;
   border-radius: 12px;
   padding: 32px 24px;
-  border: 1px solid #e9ecef;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  text-align: center;
 }
 
-.page-about__card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
-}
-
-.page-about__icon {
+.about-how__step {
+  display: inline-block;
+  font-weight: 700;
+  color: #ab273b;
+  font-size: 1.1rem;
   margin-bottom: 16px;
 }
 
-.page-about__card h3 {
-  font-size: 1.2rem;
-  font-weight: 600;
-  color: #222222;
-  margin-bottom: 8px;
+.about-how__card p {
+  font-size: 0.95rem;
+  color: #666666;
+  line-height: 1.6;
 }
 
-.page-about__card p {
-  font-size: 0.9rem;
+/* 4. CTA BANNER */
+.about-cta-banner {
+  background: linear-gradient(135deg, #ab273b 0%, #701422 100%);
+  color: #ffffff;
+  text-align: center;
+  padding: 60px 20px;
+  margin-bottom: 80px;
+}
+
+.about-cta-banner h2 {
+  color: #ffffff;
+  font-size: 2.25rem;
+  margin-bottom: 24px;
+}
+
+.about-cta-banner .btn-equipro {
+  background-color: #ffffff;
+  color: #ab273b;
+}
+
+.about-cta-banner .btn-equipro:hover {
+  background-color: #f8f9fa;
+  color: #8c1e2f;
+}
+
+/* 5. LEGACY & PILLARS */
+.about-legacy {
+  margin-bottom: 80px;
+}
+
+.about-legacy__header {
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto 48px;
+}
+
+.about-legacy__subtitle {
+  display: block;
+  color: #ab273b;
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin-bottom: 12px;
+}
+
+.about-legacy__intro {
+  font-size: 1rem;
+  line-height: 1.7;
+  color: #555555;
+}
+
+.about-pillars__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 768px) {
+  .about-pillars__grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.about-pillar-card {
+  background: #ffffff;
+  border: 1px solid #e9ecef;
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.04);
+}
+
+.about-pillar-card.highlight {
+  background: #fff8f9;
+  border-color: #f5c2c7;
+}
+
+.about-pillar-icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.about-pillar-card h3 {
+  color: #ab273b;
+  font-size: 1.25rem;
+  margin-bottom: 12px;
+}
+
+.about-pillar-card p {
   color: #666666;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.6;
+  font-size: 0.95rem;
 }
