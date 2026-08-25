@@ -31,22 +31,22 @@
         "step_7MwKeh": {
           "type": "step",
           "settings": {
-            "step_title": "Step Title",
-            "step_description": "Enter description text here for this step."
+            "step_title": "Step 1: Clinical Audit",
+            "step_description": "We analyze your space and business goals to recommend the exact suite that maximizes your ROI."
           }
         },
         "step_UUJGRG": {
           "type": "step",
           "settings": {
-            "step_title": "Step Title",
-            "step_description": "Enter description text here for this step."
+            "step_title": "Step 2: Reliability by Design",
+            "step_description": "Every piece is CSA & UL approved with a 15-20 year life expectancy. We don't just sell tools; we sell longevity."
           }
         },
         "step_hXhcY4": {
           "type": "step",
           "settings": {
-            "step_title": "Step Title",
-            "step_description": "Enter description text here for this step."
+            "step_title": "Step 3: Continuous Partnership",
+            "step_description": "Our 2 year warranty includes a courtesy equipment float we lend you a machine so your operations never stop during repairs."
           }
         }
       },
