@@ -1,0 +1,63 @@
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
+
+<section class="about-vision page-width">
+  <div class="about-vision__grid">
+    <div class="about-vision__image-wrapper">
+      {% if section.settings.image != blank %}
+        {{ section.settings.image | image_url: width: 1000 | image_tag: class: 'about-vision__img', alt: 'Equipro Vision' }}
+      {% else %}
+        <div class="about-placeholder-img"></div>
+      {% endif %}
+      <div class="about-vision__badge">
+        <h2>{{ section.settings.badge_title }}</h2>
+      </div>
+    </div>
+    <div class="about-vision__content">
+      <p>{{ section.settings.description }}</p>
+      {% if section.settings.btn_label != blank %}
+        <a href="{{ section.settings.btn_link }}" class="btn-equipro">{{ section.settings.btn_label }}</a>
+      {% endif %}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About - Vision",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Vision Section Image"
+    },
+    {
+      "type": "text",
+      "id": "badge_title",
+      "label": "Red Badge Heading",
+      "default": "Your Vision, Powered by North American Engineering."
+    },
+    {
+      "type": "textarea",
+      "id": "description",
+      "label": "Description",
+      "default": "Stop settling for equipment that stalls your growth. We provide esthetic solutions designed for 20 years of performance and the expert guidance to help your clinic thrive."
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "SCHEDULE YOUR 1-ON-1 CONSULTATION"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - Vision"
+    }
+  ]
+}
+{% endschema %}

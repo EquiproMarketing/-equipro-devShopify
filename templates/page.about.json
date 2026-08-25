@@ -7,17 +7,28 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
-{
+ {
   "sections": {
-    "main": {
-      "type": "main-about",
+    "hero_video": {
+      "type": "about-hero-video",
       "settings": {
-        "title": "About Equipro Beauty",
-        "subtitle": "Leading manufacturer of high-end aesthetic, spa, and medical-spa equipment in North America."
+        "title": "Making you our top priority for more than 3 generations!"
       }
+    },
+    "vision": {
+      "type": "about-vision"
+    },
+    "how_we_work": {
+      "type": "about-how-we-work"
+    },
+    "cta_banner": {
+      "type": "about-cta-banner"
     }
   },
   "order": [
-    "main"
+    "hero_video",
+    "vision",
+    "how_we_work",
+    "cta_banner"
   ]
 }
