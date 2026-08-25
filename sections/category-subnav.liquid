@@ -1,38 +1,39 @@
 {{ 'section-category-subnav.css' | asset_url | stylesheet_tag }}
 
-{% assign subnav_menu = section.settings.category_menu %}
+{% comment %}
+  UX Rule: Muestra la subnavegación en la Home, Colecciones y Fichas de Producto.
+{% endcomment %}
+{% if template contains 'index' or template contains 'collection' or template contains 'product' %}
+  {% assign subnav_menu = section.settings.category_menu %}
 
-{% if subnav_menu != blank and subnav_menu.links.size > 0 %}
-  <nav class="category-subnav">
-    <div class="page-width">
-      <ul class="category-subnav__list">
-        {% for link in subnav_menu.links %}
-          <li>
-            <a href="{{ link.url }}" class="category-subnav__link {% if link.active %}is-active{% endif %}">
-              {{ link.title }}
-            </a>
-          </li>
-        {% endfor %}
-      </ul>
-    </div>
-  </nav>
+  {% if subnav_menu != blank and subnav_menu.links.size > 0 %}
+    <nav class="category-subnav" aria-label="Subcategorías de Producto">
+      <div class="page-width">
+        <ul class="category-subnav__list">
+          {% for link in subnav_menu.links %}
+            {% assign is_active = false %}
+            
+            {% comment %}
+              Verifica si la colección actual o el producto pertenece a esta subcategoría
+            {% endcomment %}
+            {% if link.active or collection.url == link.url %}
+              {% assign is_active = true %}
+            {% elsif template contains 'product' and product.collections contains link.object %}
+              {% assign is_active = true %}
+            {% endif %}
+
+            <li>
+              <a 
+                href="{{ link.url }}" 
+                class="category-subnav__link {% if is_active %}is-active{% endif %}"
+                {% if is_active %}aria-current="page"{% endif %}
+              >
+                {{ link.title }}
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+      </div>
+    </nav>
+  {% endif %}
 {% endif %}
-
-{% schema %}
-{
-  "name": "Category Subnav",
-  "settings": [
-    {
-      "type": "link_list",
-      "id": "category_menu",
-      "label": "Category Menu Source",
-      "info": "Select the menu containing your product categories (e.g. Trolleys, Steamers)."
-    }
-  ],
-  "presets": [
-    {
-      "name": "Category Subnav"
-    }
-  ]
-}
-{% endschema %}
