@@ -8,22 +8,25 @@
   
   .about-vision-block__container {
     display: flex;
-    align-items: flex-start; /* Alinea los elementos arriba para controlar los desfases */
+    align-items: stretch; /* Extiende ambas columnas para igualar la altura */
     position: relative;
-    gap: 32px;
+    gap: 40px;
     width: 100%;
   }
   
-  /* 1. Imagen más grande */
+  /* Columna Izquierda (Imagen + Badge) */
   .about-vision-block__left {
-    flex: 0 0 64%;
+    flex: 0 0 62%;
     position: relative;
   }
   
-  /* 3. Bloque de texto desplazado hacia abajo */
+  /* Columna Derecha (Flex vertical alineado al fondo) */
   .about-vision-block__right {
-    flex: 0 0 32%;
-    padding-top: 140px; /* Bajas el texto para que no sea tapado por la tarjeta roja */
+    flex: 0 0 34%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end; /* Empuja el contenido y el botón hacia abajo */
+    padding-bottom: 10px;
   }
   
   /* Imagen base */
@@ -52,12 +55,12 @@
     color: #777777;
   }
   
-  /* 2. Tarjeta Roja subida */
+  /* Tarjeta Roja Elevada */
   .about-vision-block__badge {
     position: absolute;
-    top: 10%; /* Subimos el bloque rojo */
-    right: -55px; /* Sobresale limpiamente a la derecha */
-    width: 65%;
+    top: 8%; /* Subimos más el bloque rojo */
+    right: -55px; /* Sobresale a la derecha */
+    width: 68%;
     background-color: #ab273b;
     padding: 32px 36px;
     border-radius: 4px;
@@ -67,25 +70,33 @@
   
   .about-vision-block__badge-title {
     color: #ffffff !important;
-    font-size: 1.6rem;
+    font-size: 1.55rem;
     font-weight: 700;
     line-height: 1.35;
     margin: 0;
   }
   
-  /* Párrafo y Botón */
+  /* Texto y Botón alineados al fondo */
+  .about-vision-block__description {
+    margin-top: auto; /* Empuja la descripción hacia abajo */
+  }
+  
   .about-vision-block__description p {
     font-size: 0.95rem;
     line-height: 1.65;
     color: #4a4a4a;
-    margin-bottom: 28px;
+    margin-bottom: 24px;
+  }
+  
+  .about-vision-block__cta {
+    margin-top: 10px;
   }
   
   .btn-vision-solid {
     display: inline-block;
     background-color: #ab273b;
     color: #ffffff;
-    padding: 14px 28px;
+    padding: 16px 28px;
     border-radius: 6px;
     font-size: 0.85rem;
     font-weight: 700;
@@ -123,5 +134,6 @@
   
     .about-vision-block__right {
       padding-top: 20px;
+      justify-content: flex-start;
     }
   }
