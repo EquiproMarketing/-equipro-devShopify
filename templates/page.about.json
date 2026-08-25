@@ -27,6 +27,34 @@
     },
     "how_we_work": {
       "type": "about-how-we-work",
+      "blocks": {
+        "step_7MwKeh": {
+          "type": "step",
+          "settings": {
+            "step_title": "Step Title",
+            "step_description": "Enter description text here for this step."
+          }
+        },
+        "step_UUJGRG": {
+          "type": "step",
+          "settings": {
+            "step_title": "Step Title",
+            "step_description": "Enter description text here for this step."
+          }
+        },
+        "step_hXhcY4": {
+          "type": "step",
+          "settings": {
+            "step_title": "Step Title",
+            "step_description": "Enter description text here for this step."
+          }
+        }
+      },
+      "block_order": [
+        "step_7MwKeh",
+        "step_UUJGRG",
+        "step_hXhcY4"
+      ],
       "settings": {
         "title": "How We Work"
       }
