@@ -1,297 +1,69 @@
-.about-page {
-    overflow-x: hidden;
-    color: #333333;
-  }
-  
-  /* 1. Hero Video */
-  .about-hero-video {
-    position: relative;
-    width: 100%;
-    height: 65vh;
-    min-height: 450px;
-    background: #000;
-  }
-  
-  .about-hero-video__wrapper {
-    width: 100%;
-    height: 100%;
-    position: relative;
-  }
-  
-  .about-hero-video__element {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .about-hero-video__overlay {
-    position: absolute;
-    inset: 0;
-    background: rgba(0, 0, 0, 0.35);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 2rem;
-  }
-  
-  .about-hero-video__title {
-    color: #ffffff;
-    font-size: 2.2rem;
-    font-weight: 700;
-    text-align: center;
-    max-width: 900px;
-  }
-  
-  .about-hero-video__curve {
-    position: absolute;
-    bottom: -1px;
-    left: 0;
-    width: 100%;
-    height: 40px;
-    background: #ffffff;
-    border-radius: 50% 50% 0 0 / 100% 100% 0 0;
-  }
-  
-  /* 2. Vision Section */
-  .about-vision {
-    padding: 5rem 1.5rem;
-  }
-  
-  .about-vision__grid {
-    display: grid;
+/* assets/section-about.css */
+.page-about {
+  padding: 40px 20px 80px;
+  font-family: 'Poppins', sans-serif;
+  color: #333333;
+}
+
+.page-about__header {
+  text-align: center;
+  max-width: 720px;
+  margin: 0 auto 48px;
+}
+
+.page-about__title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #ab273b; /* Equipro Red */
+  margin-bottom: 12px;
+}
+
+.page-about__subtitle {
+  font-size: 1.1rem;
+  color: #666666;
+  line-height: 1.6;
+}
+
+.page-about__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+@media (max-width: 768px) {
+  .page-about__grid {
     grid-template-columns: 1fr;
-    gap: 3rem;
-    align-items: center;
   }
-  
-  @media screen and (min-width: 990px) {
-    .about-vision__grid {
-      grid-template-columns: 1.2fr 0.8fr;
-    }
-  }
-  
-  .about-vision__image-wrapper {
-    position: relative;
-  }
-  
-  .about-vision__img {
-    width: 100%;
-    border-radius: 12px;
-    object-fit: cover;
-  }
-  
-  .about-vision__badge {
-    background: #ab273b;
-    color: #ffffff;
-    padding: 2rem;
-    border-radius: 8px;
-    margin-top: -30px;
-    position: relative;
-    z-index: 2;
-  }
-  
-  @media screen and (min-width: 990px) {
-    .about-vision__badge {
-      position: absolute;
-      right: -40px;
-      top: 30%;
-      margin-top: 0;
-      max-width: 360px;
-    }
-  }
-  
-  .about-vision__badge h2 {
-    color: #ffffff;
-    font-size: 1.5rem;
-    margin: 0;
-    line-height: 1.3;
-  }
-  
-  .about-vision__content {
-    padding-top: 2rem;
-  }
-  
-  .about-vision__content p {
-    font-size: 1.05rem;
-    line-height: 1.6;
-    color: #555555;
-    margin-bottom: 2rem;
-  }
-  
-  /* 3. How We Work */
-  .about-how {
-    padding: 4rem 1.5rem;
-    text-align: center;
-  }
-  
-  .about-section-title {
-    font-size: 2.2rem;
-    color: #ab273b;
-    font-weight: 700;
-    margin-bottom: 3rem;
-  }
-  
-  .about-how__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2.5rem;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .about-how__grid {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  
-  .about-how__step {
-    display: block;
-    font-weight: 700;
-    color: #ab273b;
-    margin-bottom: 1rem;
-    font-size: 1.1rem;
-  }
-  
-  .about-how__img-container {
-    width: 100%;
-    height: 280px;
-    border-radius: 24px;
-    overflow: hidden;
-    margin-bottom: 1.25rem;
-    background: #f5f5f5;
-  }
-  
-  .about-how__img-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .about-how__card p {
-    font-size: 0.9rem;
-    color: #666;
-    line-height: 1.5;
-  }
-  
-  /* 4. Banner CTA */
-  .about-cta-banner {
-    position: relative;
-    height: 400px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    overflow: hidden;
-    margin: 4rem 0;
-  }
-  
-  .about-cta-banner__bg {
-    position: absolute;
-    inset: 0;
-  }
-  
-  .about-cta-banner__bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-  }
-  
-  .about-cta-banner__content {
-    position: relative;
-    z-index: 2;
-    text-align: center;
-    color: #ffffff;
-  }
-  
-  .about-cta-banner__content h2 {
-    font-size: 2.8rem;
-    font-weight: 700;
-    color: #ffffff;
-    margin-bottom: 1.5rem;
-    text-shadow: 0 2px 10px rgba(0,0,0,0.4);
-  }
-  
-  /* 5. Legacy & 4 Pillars */
-  .about-legacy {
-    padding: 4rem 1.5rem 6rem;
-    text-align: center;
-  }
-  
-  .about-legacy__subtitle {
-    font-size: 0.9rem;
-    font-weight: 700;
-    color: #1f1f1f;
-    text-transform: uppercase;
-    letter-spacing: 1px;
-  }
-  
-  .about-legacy__intro {
-    max-width: 850px;
-    margin: 1.5rem auto 4rem;
-    font-size: 0.95rem;
-    line-height: 1.6;
-    color: #555555;
-  }
-  
-  .about-pillars__grid {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 2rem;
-    align-items: stretch;
-  }
-  
-  @media screen and (min-width: 768px) {
-    .about-pillars__grid {
-      grid-template-columns: repeat(4, 1fr);
-    }
-  }
-  
-  .about-pillar-card {
-    padding: 2rem 1.5rem;
-    border-radius: 8px;
-    background: #ffffff;
-    border: 1px solid #eeeeee;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .about-pillar-card.highlight {
-    background: #ab273b;
-    color: #ffffff;
-    border-color: #ab273b;
-  }
-  
-  .about-pillar-card.highlight h3,
-  .about-pillar-card.highlight p {
-    color: #ffffff;
-  }
-  
-  .about-pillar-icon {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    background: rgba(171, 39, 59, 0.1);
-    color: #ab273b;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 0 auto 1.25rem;
-    font-size: 1.25rem;
-  }
-  
-  .about-pillar-card.highlight .about-pillar-icon {
-    background: #ffffff;
-    color: #ab273b;
-  }
-  
-  .about-pillar-card h3 {
-    font-size: 1.1rem;
-    font-weight: 700;
-    margin-bottom: 1rem;
-  }
-  
-  .about-pillar-card p {
-    font-size: 0.85rem;
-    line-height: 1.5;
-    color: #666666;
-    margin: 0;
-  }
+}
+
+.page-about__card {
+  background: #f8f9fa;
+  border-radius: 12px;
+  padding: 32px 24px;
+  border: 1px solid #e9ecef;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.page-about__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.06);
+}
+
+.page-about__icon {
+  margin-bottom: 16px;
+}
+
+.page-about__card h3 {
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #222222;
+  margin-bottom: 8px;
+}
+
+.page-about__card p {
+  font-size: 0.9rem;
+  color: #666666;
+  line-height: 1.5;
+  margin: 0;
+}

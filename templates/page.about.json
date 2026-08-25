@@ -1,14 +1,15 @@
 {
-    "sections": {
-      "main_about": {
-        "type": "main-about",
-        "settings": {
-          "title": "About Equipro Beauty",
-          "subtitle": "Canadian craftsmanship meeting North American professional standards."
-        }
+  "sections": {
+    "main": {
+      "type": "main-about",
+      "settings": {
+        "title": "About Equipro Beauty",
+        "subtitle": "Leading manufacturer of high-end aesthetic, spa, and medical-spa equipment in North America.",
+        "show_values": true
       }
-    },
-    "order": [
-      "main_about"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
