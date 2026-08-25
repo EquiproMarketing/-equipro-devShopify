@@ -1,35 +1,37 @@
-{{ 'section-about.css' | asset_url | stylesheet_tag }}
+{{ 'section-about-vision.css' | asset_url | stylesheet_tag }}
 
-<section class="about-vision page-width">
-  <div class="about-vision__container">
-    <!-- Columna Izquierda: Imagen principal + Card flotante rojo -->
-    <div class="about-vision__left">
-      <div class="about-vision__image-wrapper">
+<section class="about-vision-block page-width">
+  <div class="about-vision-block__container">
+    <!-- Columna Izquierda: Imagen + Card flotante rojo sobrepuesto -->
+    <div class="about-vision-block__left">
+      <div class="about-vision-block__image-wrapper">
         {%- if section.settings.image != blank -%}
-          {{ section.settings.image | image_url: width: 1200 | image_tag: class: 'about-vision__img', alt: section.settings.badge_title }}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: class: 'about-vision-block__img', alt: section.settings.badge_title, loading: 'lazy' }}
         {%- else -%}
-          <div class="about-placeholder-img"></div>
+          <div class="about-vision-block__placeholder">
+            <span>Select image in customizer</span>
+          </div>
         {%- endif -%}
       </div>
-      <!-- Tarjeta Roja Overlap -->
+      
       {%- if section.settings.badge_title != blank -%}
-        <div class="about-vision__badge">
-          <h2 class="about-vision__badge-title">{{ section.settings.badge_title }}</h2>
+        <div class="about-vision-block__badge">
+          <h2 class="about-vision-block__badge-title">{{ section.settings.badge_title }}</h2>
         </div>
       {%- endif -%}
     </div>
 
-    <!-- Columna Derecha: Parrafo + Boton -->
-    <div class="about-vision__right">
+    <!-- Columna Derecha: Texto explicativo + Botón -->
+    <div class="about-vision-block__right">
       {%- if section.settings.description != blank -%}
-        <div class="about-vision__description">
+        <div class="about-vision-block__description">
           <p>{{ section.settings.description }}</p>
         </div>
       {%- endif -%}
 
       {%- if section.settings.btn_label != blank -%}
-        <div class="about-vision__cta">
-          <a href="{{ section.settings.btn_link }}" class="btn-equipro-solid">
+        <div class="about-vision-block__cta">
+          <a href="{{ section.settings.btn_link }}" class="btn-vision-solid">
             {{ section.settings.btn_label }}
           </a>
         </div>
