@@ -1,0 +1,59 @@
+<section class="about-how page-width">
+  <h2 class="about-section-title">{{ section.settings.title }}</h2>
+  <div class="about-how__grid">
+    {% for block in section.blocks %}
+      <div class="about-how__card" {{ block.shopify_attributes }}>
+        <span class="about-how__step">{{ block.settings.step_title }}</span>
+        <div class="about-how__img-container">
+          {% if block.settings.step_image != blank %}
+            {{ block.settings.step_image | image_url: width: 600 | image_tag: alt: block.settings.step_title }}
+          {% endif %}
+        </div>
+        <p>{{ block.settings.step_description }}</p>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About - How We Work",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "How We Work"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "step",
+      "name": "Step Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "step_title",
+          "label": "Step Title",
+          "default": "Step 1: Clinical Audit"
+        },
+        {
+          "type": "image_picker",
+          "id": "step_image",
+          "label": "Step Image"
+        },
+        {
+          "type": "textarea",
+          "id": "step_description",
+          "label": "Description"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - How We Work"
+    }
+  ]
+}
+{% endschema %}

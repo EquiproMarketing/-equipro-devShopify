@@ -1,0 +1,47 @@
+<section class="about-cta-banner">
+  <div class="about-cta-banner__bg">
+    {% if section.settings.bg_image != blank %}
+      {{ section.settings.bg_image | image_url: width: 1600 | image_tag: alt: 'Equipro Banner' }}
+    {% endif %}
+  </div>
+  <div class="about-cta-banner__content">
+    <h2>{{ section.settings.title }}</h2>
+    <a href="{{ section.settings.btn_link }}" class="btn-equipro">{{ section.settings.btn_label }}</a>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "About - CTA Banner",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "bg_image",
+      "label": "Background Image"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Big Ideas, Real Impact."
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "SEE ALL PRODUCTS"
+    },
+    {
+      "type": "url",
+      "id": "btn_link",
+      "label": "Button Link",
+      "default": "/collections/all"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - CTA Banner"
+    }
+  ]
+}
+{% endschema %}

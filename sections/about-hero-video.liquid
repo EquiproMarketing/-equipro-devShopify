@@ -1,0 +1,39 @@
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
+
+<section class="about-hero-video">
+  <div class="about-hero-video__wrapper">
+    {% if section.settings.video_url != blank %}
+      <video autoplay loop muted playsinline class="about-hero-video__element">
+        <source src="{{ section.settings.video_url }}" type="video/mp4">
+      </video>
+    {% endif %}
+    <div class="about-hero-video__overlay">
+      <h2 class="about-hero-video__title">{{ section.settings.title }}</h2>
+    </div>
+  </div>
+  <div class="about-hero-video__curve"></div>
+</section>
+
+{% schema %}
+{
+  "name": "About - Hero Video",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Making you our top priority for more than 3 generations!"
+    },
+    {
+      "type": "url",
+      "id": "video_url",
+      "label": "Direct MP4 URL (CDN)"
+    }
+  ],
+  "presets": [
+    {
+      "name": "About - Hero Video"
+    }
+  ]
+}
+{% endschema %}
