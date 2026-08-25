@@ -9,7 +9,6 @@
   </div>
 
   <div class="page-contact__grid">
-    <!-- Direct Contact Info -->
     <div class="page-contact__info">
       <div class="page-contact__info-card">
         <h3>Canada Headquarters</h3>
@@ -22,51 +21,30 @@
         <h3>USA Division</h3>
         <p>2425 Main Street, P.O.Box 154<br>ISLE LA MOTTE, VT 05463</p>
       </div>
-
-      <div class="page-contact__b2b-banner">
-        <h4>Need an immediate B2B equipment quote?</h4>
-        <button type="button" class="button button--primary" data-open-quote-modal>
-          Request Quote Now
-        </button>
-      </div>
     </div>
 
-    <!-- Contact Form -->
     <div class="page-contact__form-wrapper">
       {% form 'contact', id: 'ContactForm', class: 'page-contact__form' %}
         {% if form.posted_successfully? %}
-          <div class="page-contact__success">
-            Thank you for reaching out! A representative will respond shortly.
-          </div>
-        {% endif %}
-
-        {% if form.errors %}
-          <div class="page-contact__error">
-            Please check the fields and try submitting again.
-          </div>
+          <div class="page-contact__success">Thank you! Your message has been sent.</div>
         {% endif %}
 
         <div class="page-contact__field">
-          <label for="ContactFormName">Full Name *</label>
-          <input type="text" id="ContactFormName" name="contact[Name]" required placeholder="Jane Doe">
+          <label for="ContactFormName">Name *</label>
+          <input type="text" id="ContactFormName" name="contact[Name]" required>
         </div>
 
         <div class="page-contact__field">
-          <label for="ContactFormEmail">Email Address *</label>
-          <input type="email" id="ContactFormEmail" name="contact[email]" required placeholder="jane@spa.com">
-        </div>
-
-        <div class="page-contact__field">
-          <label for="ContactFormPhone">Phone Number</label>
-          <input type="tel" id="ContactFormPhone" name="contact[Phone]" placeholder="+1 (514) 000-0000">
+          <label for="ContactFormEmail">Email *</label>
+          <input type="email" id="ContactFormEmail" name="contact[email]" required>
         </div>
 
         <div class="page-contact__field">
           <label for="ContactFormMessage">Message *</label>
-          <textarea id="ContactFormMessage" name="contact[body]" rows="5" required placeholder="How can we help your business?"></textarea>
+          <textarea id="ContactFormMessage" name="contact[body]" rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="button button--primary page-contact__submit">Send Message</button>
+        <button type="submit" class="button button--primary">Send Message</button>
       {% endform %}
     </div>
   </div>
@@ -74,9 +52,8 @@
 
 {% schema %}
 {
-  "name": "Contact Page",
+  "name": "Contact Main",
   "tag": "section",
-  "class": "section-contact",
   "settings": [
     {
       "type": "text",
@@ -88,7 +65,7 @@
       "type": "textarea",
       "id": "subtitle",
       "label": "Subheading",
-      "default": "Get in touch with our team for equipment inquiries, sales support, or technical assistance."
+      "default": "Get in touch with our team."
     }
   ]
 }
