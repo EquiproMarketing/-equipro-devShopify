@@ -1,0 +1,35 @@
+<!-- snippets/about-content.liquid -->
+{{ 'section-about.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width page-about">
+  <div class="page-about__header">
+    <h1 class="page-about__title">{{ page.title }}</h1>
+    <p class="page-about__subtitle">Leading manufacturer of high-end aesthetic, spa, and medical-spa equipment in North America.</p>
+  </div>
+
+  <div class="page-about__grid">
+    <div class="page-about__card">
+      <div class="page-about__icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ab273b" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+      </div>
+      <h3>Canadian Craftsmanship</h3>
+      <p>Designed and manufactured with high-grade engineering standards in Quebec, Canada, ensuring long-lasting durability for beauty professionals.</p>
+    </div>
+
+    <div class="page-about__card">
+      <div class="page-about__icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ab273b" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+      </div>
+      <h3>2-Year Comprehensive Warranty</h3>
+      <p>We stand behind the quality of our equipment with direct manufacturer warranty support, quick parts replacement, and technical assistance.</p>
+    </div>
+
+    <div class="page-about__card">
+      <div class="page-about__icon">
+        <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#ab273b" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg>
+      </div>
+      <h3>Ergonomic & Modular Design</h3>
+      <p>Tailored for estheticians and spa operators, focusing on posture support, electric height adjustments, and sleek clinical aesthetics.</p>
+    </div>
+  </div>
+</div>

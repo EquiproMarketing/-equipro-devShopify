@@ -1,5 +1,5 @@
 {% if request.path contains '/pages/about' %}
-  {% section 'main-about' %}
+  {% render 'about-content' %}
 {% else %}
   <div class="page-width page-width--narrow page-gutter">
     <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
