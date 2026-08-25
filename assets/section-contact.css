@@ -1,0 +1,102 @@
+/* assets/section-contact.css */
+.page-contact {
+    padding: 40px 20px 80px;
+    font-family: 'Poppins', sans-serif;
+    color: #333333;
+  }
+  
+  .page-contact__header {
+    text-align: center;
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+  
+  .page-contact__title {
+    font-size: 2.25rem;
+    font-weight: 700;
+    color: #ab273b;
+    margin-bottom: 8px;
+  }
+  
+  .page-contact__subtitle {
+    color: #666666;
+    font-size: 1rem;
+  }
+  
+  .page-contact__grid {
+    display: grid;
+    grid-template-columns: 1fr 1.2fr;
+    gap: 48px;
+  }
+  
+  @media (max-width: 768px) {
+    .page-contact__grid {
+      grid-template-columns: 1fr;
+    }
+  }
+  
+  .page-contact__info-card {
+    background: #f8f9fa;
+    border-radius: 12px;
+    padding: 24px;
+    margin-bottom: 20px;
+    border: 1px solid #e9ecef;
+  }
+  
+  .page-contact__info-card h3 {
+    color: #ab273b;
+    font-size: 1.1rem;
+    margin-bottom: 8px;
+  }
+  
+  .page-contact__b2b-banner {
+    background: #fff0f2;
+    border: 1px solid #f5c2c7;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .page-contact__b2b-banner h4 {
+    margin: 0 0 12px 0;
+    color: #ab273b;
+  }
+  
+  .page-contact__field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 16px;
+  }
+  
+  .page-contact__field label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+  
+  .page-contact__field input,
+  .page-contact__field textarea {
+    width: 100%;
+    padding: 10px 14px;
+    border: 1px solid #cccccc;
+    border-radius: 8px;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
+  }
+  
+  .page-contact__field input:focus,
+  .page-contact__field textarea:focus {
+    outline: none;
+    border-color: #ab273b;
+  }
+  
+  .page-contact__submit {
+    width: 100%;
+    background-color: #ab273b;
+    color: #ffffff;
+    border: none;
+    padding: 12px;
+    border-radius: 8px;
+    font-weight: 600;
+    cursor: pointer;
+  }

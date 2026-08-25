@@ -1,0 +1,14 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-contact",
+        "settings": {
+          "title": "Contact Us",
+          "subtitle": "Get in touch with our team for equipment inquiries, sales support, or technical assistance."
+        }
+      }
+    },
+    "order": [
+      "main"
+    ]
+  }

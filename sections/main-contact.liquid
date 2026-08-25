@@ -1,0 +1,95 @@
+{{ 'section-contact.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width page-contact">
+  <div class="page-contact__header">
+    <h1 class="page-contact__title">{{ section.settings.title | default: page.title }}</h1>
+    {% if section.settings.subtitle != blank %}
+      <p class="page-contact__subtitle">{{ section.settings.subtitle }}</p>
+    {% endif %}
+  </div>
+
+  <div class="page-contact__grid">
+    <!-- Direct Contact Info -->
+    <div class="page-contact__info">
+      <div class="page-contact__info-card">
+        <h3>Canada Headquarters</h3>
+        <p>11970 Albert Hudon<br>H1G 3K3, Montréal, QC</p>
+        <p><strong>Toll-free:</strong> +1 (877) 324-2226</p>
+        <p><strong>Email:</strong> info@equipro-bty.com</p>
+      </div>
+
+      <div class="page-contact__info-card">
+        <h3>USA Division</h3>
+        <p>2425 Main Street, P.O.Box 154<br>ISLE LA MOTTE, VT 05463</p>
+      </div>
+
+      <div class="page-contact__b2b-banner">
+        <h4>Need an immediate B2B equipment quote?</h4>
+        <button type="button" class="button button--primary" data-open-quote-modal>
+          Request Quote Now
+        </button>
+      </div>
+    </div>
+
+    <!-- Contact Form -->
+    <div class="page-contact__form-wrapper">
+      {% form 'contact', id: 'ContactForm', class: 'page-contact__form' %}
+        {% if form.posted_successfully? %}
+          <div class="page-contact__success">
+            Thank you for reaching out! A representative will respond shortly.
+          </div>
+        {% endif %}
+
+        {% if form.errors %}
+          <div class="page-contact__error">
+            Please check the fields and try submitting again.
+          </div>
+        {% endif %}
+
+        <div class="page-contact__field">
+          <label for="ContactFormName">Full Name *</label>
+          <input type="text" id="ContactFormName" name="contact[Name]" required placeholder="Jane Doe">
+        </div>
+
+        <div class="page-contact__field">
+          <label for="ContactFormEmail">Email Address *</label>
+          <input type="email" id="ContactFormEmail" name="contact[email]" required placeholder="jane@spa.com">
+        </div>
+
+        <div class="page-contact__field">
+          <label for="ContactFormPhone">Phone Number</label>
+          <input type="tel" id="ContactFormPhone" name="contact[Phone]" placeholder="+1 (514) 000-0000">
+        </div>
+
+        <div class="page-contact__field">
+          <label for="ContactFormMessage">Message *</label>
+          <textarea id="ContactFormMessage" name="contact[body]" rows="5" required placeholder="How can we help your business?"></textarea>
+        </div>
+
+        <button type="submit" class="button button--primary page-contact__submit">Send Message</button>
+      {% endform %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Contact Page",
+  "tag": "section",
+  "class": "section-contact",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Contact Us"
+    },
+    {
+      "type": "textarea",
+      "id": "subtitle",
+      "label": "Subheading",
+      "default": "Get in touch with our team for equipment inquiries, sales support, or technical assistance."
+    }
+  ]
+}
+{% endschema %}
