@@ -1,22 +1,39 @@
 {{ 'section-about.css' | asset_url | stylesheet_tag }}
 
 <section class="about-vision page-width">
-  <div class="about-vision__grid">
-    <div class="about-vision__image-wrapper">
-      {% if section.settings.image != blank %}
-        {{ section.settings.image | image_url: width: 1000 | image_tag: class: 'about-vision__img', alt: 'Equipro Vision' }}
-      {% else %}
-        <div class="about-placeholder-img"></div>
-      {% endif %}
-      <div class="about-vision__badge">
-        <h2>{{ section.settings.badge_title }}</h2>
+  <div class="about-vision__container">
+    <!-- Columna Izquierda: Imagen principal + Card flotante rojo -->
+    <div class="about-vision__left">
+      <div class="about-vision__image-wrapper">
+        {%- if section.settings.image != blank -%}
+          {{ section.settings.image | image_url: width: 1200 | image_tag: class: 'about-vision__img', alt: section.settings.badge_title }}
+        {%- else -%}
+          <div class="about-placeholder-img"></div>
+        {%- endif -%}
       </div>
+      <!-- Tarjeta Roja Overlap -->
+      {%- if section.settings.badge_title != blank -%}
+        <div class="about-vision__badge">
+          <h2 class="about-vision__badge-title">{{ section.settings.badge_title }}</h2>
+        </div>
+      {%- endif -%}
     </div>
-    <div class="about-vision__content">
-      <p>{{ section.settings.description }}</p>
-      {% if section.settings.btn_label != blank %}
-        <a href="{{ section.settings.btn_link }}" class="btn-equipro">{{ section.settings.btn_label }}</a>
-      {% endif %}
+
+    <!-- Columna Derecha: Parrafo + Boton -->
+    <div class="about-vision__right">
+      {%- if section.settings.description != blank -%}
+        <div class="about-vision__description">
+          <p>{{ section.settings.description }}</p>
+        </div>
+      {%- endif -%}
+
+      {%- if section.settings.btn_label != blank -%}
+        <div class="about-vision__cta">
+          <a href="{{ section.settings.btn_link }}" class="btn-equipro-solid">
+            {{ section.settings.btn_label }}
+          </a>
+        </div>
+      {%- endif -%}
     </div>
   </div>
 </section>
@@ -28,18 +45,18 @@
     {
       "type": "image_picker",
       "id": "image",
-      "label": "Vision Section Image"
+      "label": "Main Image"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "badge_title",
-      "label": "Red Badge Heading",
+      "label": "Red Card Heading",
       "default": "Your Vision, Powered by North American Engineering."
     },
     {
       "type": "textarea",
       "id": "description",
-      "label": "Description",
+      "label": "Description Text",
       "default": "Stop settling for equipment that stalls your growth. We provide esthetic solutions designed for 20 years of performance and the expert guidance to help your clinic thrive."
     },
     {
