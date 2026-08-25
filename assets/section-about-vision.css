@@ -8,25 +8,25 @@
   
   .about-vision-block__container {
     display: flex;
-    align-items: stretch; /* Extiende ambas columnas para igualar la altura */
+    align-items: flex-start;
     position: relative;
-    gap: 40px;
+    gap: 30px;
     width: 100%;
   }
   
   /* Columna Izquierda (Imagen + Badge) */
   .about-vision-block__left {
-    flex: 0 0 62%;
+    flex: 0 0 58%;
     position: relative;
   }
   
-  /* Columna Derecha (Flex vertical alineado al fondo) */
+  /* Columna Derecha: Se le da un espacio superior equivalente a la altura del badge */
   .about-vision-block__right {
-    flex: 0 0 34%;
+    flex: 0 0 38%;
+    padding-top: 180px; /* Desplaza todo el bloque derecho debajo del cuadro rojo */
     display: flex;
     flex-direction: column;
-    justify-content: flex-end; /* Empuja el contenido y el botón hacia abajo */
-    padding-bottom: 10px;
+    justify-content: flex-end;
   }
   
   /* Imagen base */
@@ -55,14 +55,14 @@
     color: #777777;
   }
   
-  /* Tarjeta Roja Elevada */
+  /* Tarjeta Roja: Posición superior fija y ancho controlado */
   .about-vision-block__badge {
     position: absolute;
-    top: 8%; /* Subimos más el bloque rojo */
-    right: -55px; /* Sobresale a la derecha */
-    width: 68%;
+    top: 40px; /* Posición alta fija para no pisar el contenido inferior */
+    right: -30px; /* Desfase controlado sobre el borde derecho */
+    width: 60%;
     background-color: #ab273b;
-    padding: 32px 36px;
+    padding: 28px 32px;
     border-radius: 4px;
     z-index: 10;
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
@@ -70,17 +70,13 @@
   
   .about-vision-block__badge-title {
     color: #ffffff !important;
-    font-size: 1.55rem;
+    font-size: 1.45rem;
     font-weight: 700;
     line-height: 1.35;
     margin: 0;
   }
   
-  /* Texto y Botón alineados al fondo */
-  .about-vision-block__description {
-    margin-top: auto; /* Empuja la descripción hacia abajo */
-  }
-  
+  /* Párrafo y Botón */
   .about-vision-block__description p {
     font-size: 0.95rem;
     line-height: 1.65;
@@ -89,7 +85,7 @@
   }
   
   .about-vision-block__cta {
-    margin-top: 10px;
+    margin-top: 8px;
   }
   
   .btn-vision-solid {
@@ -134,6 +130,5 @@
   
     .about-vision-block__right {
       padding-top: 20px;
-      justify-content: flex-start;
     }
   }
