@@ -12,20 +12,32 @@
     "hero_video": {
       "type": "about-hero-video",
       "settings": {
-        "title": "Making you our top priority for more than 3 generations!"
+        "title": "Making you our top priority for more than 3 generations!",
+        "video_url_mp4": "https://youtu.be/V-vIzdnlSG0"
       }
     },
     "vision": {
       "type": "about-vision",
-      "settings": {}
+      "settings": {
+        "badge_title": "Your Vision, Powered by North American Engineering.",
+        "description": "Stop settling for equipment that stalls your growth. We provide esthetic solutions designed for 20 years of performance and the expert guidance to help your clinic thrive.",
+        "btn_label": "SCHEDULE YOUR 1-ON-1 CONSULTATION",
+        "btn_link": ""
+      }
     },
     "how_we_work": {
       "type": "about-how-we-work",
-      "settings": {}
+      "settings": {
+        "title": "How We Work"
+      }
     },
     "cta_banner": {
       "type": "about-cta-banner",
-      "settings": {}
+      "settings": {
+        "title": "Big Ideas, Real Impact.",
+        "btn_label": "SEE ALL PRODUCTS",
+        "btn_link": "shopify://collections/all"
+      }
     }
   },
   "order": [
