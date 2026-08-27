@@ -20,6 +20,81 @@
         "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
       }
     },
+    "shop_by_cat_v2_DhXM94": {
+      "type": "shop-by-cat-v2",
+      "blocks": {
+        "category_item_ACVzqh": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_L88cDG": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_FNyhJK": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_Nk8MQP": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_j9NUhU": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_wHPEpL": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_qhy7DG": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_YnrNqi": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_item_ACVzqh",
+        "category_item_L88cDG",
+        "category_item_FNyhJK",
+        "category_item_Nk8MQP",
+        "category_item_j9NUhU",
+        "category_item_wHPEpL",
+        "category_item_qhy7DG",
+        "category_item_YnrNqi"
+      ],
+      "name": "Shop By Cat V2",
+      "settings": {
+        "title": "Shop by Category"
+      }
+    },
     "best_sellers": {
       "type": "featured-collection",
       "settings": {
@@ -111,86 +186,67 @@
         "title": "SHOP BY CATEGORY"
       }
     },
-    "shop_by_cat_v2_DhXM94": {
-      "type": "shop-by-cat-v2",
-      "blocks": {
-        "category_item_ACVzqh": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_L88cDG": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_FNyhJK": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_Nk8MQP": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_j9NUhU": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_wHPEpL": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_qhy7DG": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        },
-        "category_item_YnrNqi": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "category_item_ACVzqh",
-        "category_item_L88cDG",
-        "category_item_FNyhJK",
-        "category_item_Nk8MQP",
-        "category_item_j9NUhU",
-        "category_item_wHPEpL",
-        "category_item_qhy7DG",
-        "category_item_YnrNqi"
-      ],
-      "name": "Shop By Cat V2",
-      "settings": {
-        "title": "Shop by Category"
-      }
-    },
     "image_with_text": {
       "type": "image-with-text",
       "settings": {
         "title": "EquiPro Quality: Crafted for Professionals, Built to Last",
         "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>"
+      }
+    },
+    "custom_product_treatment_pKdyQh": {
+      "type": "custom-product-treatment",
+      "blocks": {
+        "product_card_qK9PRD": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_gnxPtD": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_tnxJAd": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_qK9PRD",
+        "product_card_gnxPtD",
+        "product_card_tnxJAd"
+      ],
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "Beds & Stools"
       }
     },
     "image_slider": {
@@ -218,6 +274,7 @@
     "best_sellers",
     "shop_by_category",
     "image_with_text",
+    "custom_product_treatment_pKdyQh",
     "image_slider"
   ]
 }
