@@ -1,23 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_banner": {
       "type": "hero-banner",
-      "settings": {}
+      "settings": {
+        "subheading": "DIVINE EI-504",
+        "heading": "Multi-Treatment Electric Table",
+        "text": "Quiet, versatile, and built to last. Elevate your clients' comfort while protecting your posture during long treatment days.",
+        "button_label": "Shop the Divine EI-504",
+        "button_link": "",
+        "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
+      }
     },
     "best_sellers": {
       "type": "featured-collection",
-      "settings": {}
+      "settings": {
+        "title": "OUR BEST SELLERS",
+        "collection": "",
+        "products_to_show": 8
+      }
     },
     "shop_by_category": {
       "type": "shop-by-category",
-      "settings": {
-        "title": "SHOP BY CATEGORY"
-      },
       "blocks": {
         "cat_1": {
           "type": "category",
           "settings": {
             "title": "Treatment Tables",
+            "link": "",
             "style": "red"
           }
         },
@@ -25,6 +43,7 @@
           "type": "category",
           "settings": {
             "title": "Multi-function columns",
+            "link": "",
             "style": "outline"
           }
         },
@@ -32,6 +51,7 @@
           "type": "category",
           "settings": {
             "title": "Wax-heaters",
+            "link": "",
             "style": "red"
           }
         },
@@ -39,6 +59,7 @@
           "type": "category",
           "settings": {
             "title": "Stools",
+            "link": "",
             "style": "red"
           }
         },
@@ -46,6 +67,7 @@
           "type": "category",
           "settings": {
             "title": "Steamers",
+            "link": "",
             "style": "red"
           }
         },
@@ -53,6 +75,7 @@
           "type": "category",
           "settings": {
             "title": "Mag-lamps",
+            "link": "",
             "style": "red"
           }
         },
@@ -60,6 +83,7 @@
           "type": "category",
           "settings": {
             "title": "Towel warmers",
+            "link": "",
             "style": "red"
           }
         },
@@ -67,6 +91,7 @@
           "type": "category",
           "settings": {
             "title": "Trolleys",
+            "link": "",
             "style": "red"
           }
         }
@@ -80,30 +105,116 @@
         "cat_6",
         "cat_7",
         "cat_8"
-      ]
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY CATEGORY"
+      }
+    },
+    "shop_by_cat_v2_DhXM94": {
+      "type": "shop-by-cat-v2",
+      "blocks": {
+        "category_item_ACVzqh": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_L88cDG": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_FNyhJK": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_Nk8MQP": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_j9NUhU": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_wHPEpL": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_qhy7DG": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        },
+        "category_item_YnrNqi": {
+          "type": "category_item",
+          "settings": {
+            "title": "Category",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "category_item_ACVzqh",
+        "category_item_L88cDG",
+        "category_item_FNyhJK",
+        "category_item_Nk8MQP",
+        "category_item_j9NUhU",
+        "category_item_wHPEpL",
+        "category_item_qhy7DG",
+        "category_item_YnrNqi"
+      ],
+      "name": "Shop By Cat V2",
+      "settings": {
+        "title": "Shop by Category"
+      }
     },
     "image_with_text": {
       "type": "image-with-text",
-      "settings": {}
+      "settings": {
+        "title": "EquiPro Quality: Crafted for Professionals, Built to Last",
+        "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>"
+      }
     },
     "image_slider": {
       "type": "image-slider",
       "blocks": {
         "s_1": {
-          "type": "slide"
+          "type": "slide",
+          "settings": {}
         },
         "s_2": {
-          "type": "slide"
+          "type": "slide",
+          "settings": {}
         }
       },
       "block_order": [
         "s_1",
         "s_2"
-      ]
+      ],
+      "settings": {}
     }
   },
   "order": [
     "hero_banner",
+    "shop_by_cat_v2_DhXM94",
     "best_sellers",
     "shop_by_category",
     "image_with_text",
