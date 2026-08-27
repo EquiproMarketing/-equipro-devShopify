@@ -2,81 +2,287 @@
 
 <div class="configurator-container page-width">
   
-  <!-- COLUMNA IZQUIERDA: PASOS DE CONFIGURACIÓN -->
-  <div class="configurator-steps-col">
-    
-    <div class="configurator-header">
-      <span class="configurator-step-badge">Paso 1 de 3</span>
-      <h1 class="configurator-title">{{ product.title }}</h1>
-      <p class="configurator-subtitle">Personaliza las especificaciones de tu equipo profesional.</p>
-    </div>
+  <!-- LEFT COLUMN: STICKY GALLERY & PREVIEW -->
+  <div class="configurator-gallery-col">
+    <div class="configurator-gallery-sticky">
+      
+      <!-- Top Subtitle Highlight -->
+      {% if section.settings.highlight_text != blank %}
+        <div class="configurator-gallery__highlight">
+          <p>{{ section.settings.highlight_text }}</p>
+        </div>
+      {% endif %}
 
-    <!-- PASO 1: SELECCIÓN DE TAMAÑO / MODELO BASE -->
-    <div class="configurator-step-block">
-      <h3 class="step-title">1. Selecciona el tamaño o formato</h3>
-      <div class="options-grid">
-        {% for variant in product.variants %}
-          <label class="option-card {% if forloop.first %}is-selected{% endif %}">
-            <input type="radio" name="base_variant" value="{{ variant.id }}" {% if forloop.first %}checked{% endif %}>
-            <div class="option-card__content">
-              <span class="option-card__title">{{ variant.title }}</span>
-              <span class="option-card__price">{{ variant.price | money }}</span>
-            </div>
-          </label>
-        {% endfor %}
+      <!-- Main Product Preview Image -->
+      <div class="configurator-gallery__main">
+        {% if product.featured_image != blank %}
+          <img id="ConfiguratorMainImg" src="{{ product.featured_image | image_url: width: 1000 }}" alt="{{ product.title | escape }}">
+        {% else %}
+          <div class="configurator-gallery__placeholder"></div>
+        {% endif %}
       </div>
-    </div>
 
-    <!-- PASO 2: SELECCIÓN DE COLOR DE TAPICERÍA -->
-    <div class="configurator-step-block">
-      <h3 class="step-title">2. Elige el color de tapicería (Ultra-leatherette)</h3>
-      <div class="swatches-grid">
-        <button type="button" class="swatch-btn is-active" style="background-color: #ffffff; border: 1px solid #ccc;" title="White"></button>
-        <button type="button" class="swatch-btn" style="background-color: #111111;" title="Black"></button>
-        <button type="button" class="swatch-btn" style="background-color: #1c355e;" title="Navy Blue"></button>
-        <button type="button" class="swatch-btn" style="background-color: #cbb89d;" title="Camel / Beige"></button>
-      </div>
-    </div>
+      <!-- Thumbnail Carousel Dots -->
+      {% if product.images.size > 1 %}
+        <div class="configurator-gallery__nav">
+          <button type="button" class="gallery-nav-btn prev-btn" onclick="scrollThumbs(-1)">&#8249;</button>
+          <div class="gallery-dots-wrapper" id="GalleryDotsWrapper">
+            {% for image in product.images %}
+              <span class="gallery-dot {% if forloop.first %}is-active{% endif %}" onclick="changeConfiguratorImage('{{ image | image_url: width: 1000 }}', this)"></span>
+            {% endfor %}
+          </div>
+          <button type="button" class="gallery-nav-btn next-btn" onclick="scrollThumbs(1)">&#8250;</button>
+        </div>
+      {% endif %}
 
-    <!-- PASO 3: ESPECIFICACIONES TÉCNICAS (ACORDEÓN) -->
-    <div class="configurator-step-block">
-      <h3 class="step-title">3. Lo que incluye tu equipo</h3>
-      <ul class="specs-summary-list">
-        <li>✓ Estructura de acero ultra-resistente con recubrimiento de esmalte blanco.</li>
-        <li>✓ Control de elevación mediante pedal neumático/eléctrico.</li>
-        <li>✓ Garantía oficial de 2 años y certificación de seguridad.</li>
-      </ul>
     </div>
-
   </div>
 
-  <!-- COLUMNA DERECHA: VISUALIZADOR FIXO / STICKY -->
-  <div class="configurator-preview-col">
-    <div class="sticky-preview-wrapper">
-      {% if product.featured_image %}
-        <img id="ConfiguratorPreviewImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
-      {% endif %}
+  <!-- RIGHT COLUMN: STEP-BY-STEP CONFIGURATION BLOCKS -->
+  <div class="configurator-options-col">
+    
+    <!-- Header Block -->
+    <div class="configurator-header">
+      <span class="configurator-tag">{{ section.settings.badge_tag | default: "New Arrival" }}</span>
+      <h1 class="configurator-title">{{ product.title }}</h1>
       
-      <div class="preview-price-box">
-        <span class="price-label">Precio de la configuración:</span>
-        <span class="price-value" id="ConfiguratorPrice">{{ product.price | money }}</span>
+      <div class="configurator-price-row">
+        <span class="configurator-price" id="ConfiguratorDisplayPrice">{{ product.price | money }}</span>
+        {% if section.settings.finance_text != blank %}
+          <span class="configurator-finance-text">{{ section.settings.finance_text }}</span>
+        {% endif %}
+      </div>
+    </div>
+
+    {% form 'product', product, id: 'ConfiguratorForm' %}
+      <input type="hidden" name="id" id="SelectedVariantId" value="{{ product.selected_or_first_available_variant.id }}">
+
+      <!-- DYNAMIC SECTIONS / BLOCKS FROM CUSTOMIZER -->
+      {% for block in section.blocks %}
+        {% case block.type %}
+          
+          {% when 'option_group' %}
+            <div class="configurator-step-block" {{ block.shopify_attributes }}>
+              <h2 class="step-group-title">{{ block.settings.group_title }}</h2>
+              {% if block.settings.group_subtitle != blank %}
+                <p class="step-group-subtitle">{{ block.settings.group_subtitle }}</p>
+              {% endif %}
+
+              <div class="option-cards-stack">
+                <!-- Option Card 1 -->
+                {% if block.settings.opt1_title != blank %}
+                  <label class="option-selection-card is-selected" onclick="selectOptionCard(this, '{{ block.settings.opt1_price }}', '{{ block.settings.opt1_image | image_url: width: 1000 }}')">
+                    <input type="radio" name="block_opt_{{ block.id }}" checked>
+                    <div class="option-card__details">
+                      <strong class="option-card__name">{{ block.settings.opt1_title }}</strong>
+                      <p class="option-card__desc">{{ block.settings.opt1_desc }}</p>
+                    </div>
+                    <div class="option-card__price-tag">
+                      <span>{{ block.settings.opt1_price_label | default: "Included" }}</span>
+                    </div>
+                  </label>
+                {% endif %}
+
+                <!-- Option Card 2 -->
+                {% if block.settings.opt2_title != blank %}
+                  <label class="option-selection-card" onclick="selectOptionCard(this, '{{ block.settings.opt2_price }}', '{{ block.settings.opt2_image | image_url: width: 1000 }}')">
+                    <input type="radio" name="block_opt_{{ block.id }}">
+                    <div class="option-card__details">
+                      <strong class="option-card__name">{{ block.settings.opt2_title }}</strong>
+                      <p class="option-card__desc">{{ block.settings.opt2_desc }}</p>
+                    </div>
+                    <div class="option-card__price-tag">
+                      <span>{{ block.settings.opt2_price_label }}</span>
+                    </div>
+                  </label>
+                {% endif %}
+              </div>
+            </div>
+
+          {% when 'color_swatches' %}
+            <div class="configurator-step-block" {{ block.shopify_attributes }}>
+              <h2 class="step-group-title">{{ block.settings.swatch_title | default: "Select Upholstery Finish" }}</h2>
+              <div class="swatches-row">
+                <button type="button" class="swatch-circle is-active" style="background-color: #ffffff; border: 1px solid #ccc;" title="White" onclick="selectSwatch(this)"></button>
+                <button type="button" class="swatch-circle" style="background-color: #111111;" title="Black" onclick="selectSwatch(this)"></button>
+                <button type="button" class="swatch-circle" style="background-color: #1b365d;" title="Navy" onclick="selectSwatch(this)"></button>
+                <button type="button" class="swatch-circle" style="background-color: #d1c2a5;" title="Camel" onclick="selectSwatch(this)"></button>
+              </div>
+            </div>
+
+        {% endcase %}
+      {% endfor %}
+
+      <!-- ADD TO CART / ORDER BUTTON -->
+      <div class="configurator-submit-wrapper">
+        <button type="submit" class="configurator-add-to-cart-btn">
+          {{ section.settings.add_to_cart_label | default: "ADD TO CART" }}
+        </button>
       </div>
 
-      <button type="button" class="button button--full-width configurator-add-btn">
-        AÑADIR CONFIGURACIÓN AL CARRITO
-      </button>
-    </div>
+    {% endform %}
+
   </div>
 
 </div>
 
+<script>
+  function changeConfiguratorImage(src, element) {
+    document.getElementById('ConfiguratorMainImg').src = src;
+    document.querySelectorAll('.gallery-dot').forEach(dot => dot.classList.remove('is-active'));
+    if (element) element.classList.add('is-active');
+  }
+
+  function selectOptionCard(card, priceLabel, imageUrl) {
+    const parent = card.closest('.option-cards-stack');
+    parent.querySelectorAll('.option-selection-card').forEach(el => el.classList.remove('is-selected'));
+    card.classList.add('is-selected');
+
+    if (imageUrl && imageUrl !== '') {
+      document.getElementById('ConfiguratorMainImg').src = imageUrl;
+    }
+  }
+
+  function selectSwatch(btn) {
+    const parent = btn.closest('.swatches-row');
+    parent.querySelectorAll('.swatch-circle').forEach(el => el.classList.remove('is-active'));
+    btn.classList.add('is-active');
+  }
+</script>
+
 {% schema %}
 {
-  "name": "Product Configurator",
-  "settings": [],
+  "name": "Product Custom Configurator",
+  "tag": "section",
+  "class": "section-configurator",
+  "settings": [
+    {
+      "type": "text",
+      "id": "badge_tag",
+      "label": "Badge Tag",
+      "default": "New Arrival"
+    },
+    {
+      "type": "text",
+      "id": "finance_text",
+      "label": "Financing Text",
+      "default": "or $120/mo with lease financing"
+    },
+    {
+      "type": "textarea",
+      "id": "highlight_text",
+      "label": "Top Highlight Note",
+      "default": "Ultra-quiet actuators and high-density foam engineered specifically for intensive clinical spa treatments."
+    },
+    {
+      "type": "text",
+      "id": "add_to_cart_label",
+      "label": "Add to Cart Button Text",
+      "default": "ADD TO CART"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "option_group",
+      "name": "Configurable Option Step",
+      "settings": [
+        {
+          "type": "text",
+          "id": "group_title",
+          "label": "Step Title",
+          "default": "Select Motor & Control Mechanism"
+        },
+        {
+          "type": "text",
+          "id": "group_subtitle",
+          "label": "Step Subtitle",
+          "default": "Choose the movement option that best fits your clinic workflow."
+        },
+        {
+          "type": "header",
+          "content": "Option Card 1"
+        },
+        {
+          "type": "text",
+          "id": "opt1_title",
+          "label": "Option 1 Title",
+          "default": "Standard Dual Actuator"
+        },
+        {
+          "type": "textarea",
+          "id": "opt1_desc",
+          "label": "Option 1 Description",
+          "default": "Smooth height and backrest adjustment via integrated foot switch."
+        },
+        {
+          "type": "text",
+          "id": "opt1_price_label",
+          "label": "Option 1 Price Label",
+          "default": "Included"
+        },
+        {
+          "type": "image_picker",
+          "id": "opt1_image",
+          "label": "Option 1 Image Preview"
+        },
+        {
+          "type": "header",
+          "content": "Option Card 2"
+        },
+        {
+          "type": "text",
+          "id": "opt2_title",
+          "label": "Option 2 Title",
+          "default": "Quad-Motor Advanced System"
+        },
+        {
+          "type": "textarea",
+          "id": "opt2_desc",
+          "label": "Option 2 Description",
+          "default": "Full motorized control over height, backrest, leg rest, and tilt (Trendelenburg)."
+        },
+        {
+          "type": "text",
+          "id": "opt2_price_label",
+          "label": "Option 2 Price Label",
+          "default": "+$450.00"
+        },
+        {
+          "type": "image_picker",
+          "id": "opt2_image",
+          "label": "Option 2 Image Preview"
+        }
+      ]
+    },
+    {
+      "type": "color_swatches",
+      "name": "Upholstery Swatches",
+      "settings": [
+        {
+          "type": "text",
+          "id": "swatch_title",
+          "label": "Section Title",
+          "default": "Select Upholstery Finish"
+        }
+      ]
+    }
+  ],
   "presets": [
     {
-      "name": "Product Configurator"
+      "name": "Product Custom Configurator",
+      "blocks": [
+        {
+          "type": "option_group",
+          "settings": {
+            "group_title": "Motor Configuration",
+            "opt1_title": "2 Motors (Height & Backrest)",
+            "opt2_title": "4 Motors (Height, Backrest, Legrest & Tilt)"
+          }
+        },
+        {
+          "type": "color_swatches"
+        }
+      ]
     }
   ]
 }
