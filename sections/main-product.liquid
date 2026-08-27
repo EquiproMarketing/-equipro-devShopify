@@ -4,166 +4,134 @@
 
 <div class="product-page page-width">
   
-  <!-- BACK BUTTON -->
-  <div class="product-page__back">
-    <a href="javascript:history.back()" class="back-link">
-      <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
-      {{ section.settings.back_text | default: "Back" }}
-    </a>
-  </div>
-
-  <!-- ROW 1: TEXT CONTENT & GALLERY -->
   <div class="product-main-grid">
     
-    <!-- Left Column: Titles & Native Shopify Description -->
+    <!-- LEFT COLUMN: EDITABLE TEXT CONTENT & PURCHASE BLOCK -->
     <div class="product-info-col">
-      <h1 class="product-info__title">{{ product.title }}</h1>
       
-      {%- if product.metafields.custom.intro_highlight != blank -%}
-        <div class="product-info__intro-highlight">
-          <p>{{ product.metafields.custom.intro_highlight }}</p>
-        </div>
-      {%- endif -%}
-
-      <!-- Main product description loaded directly from Shopify Admin -->
-      <div class="product-info__description">
-        {{ product.description }}
+      <!-- 1. Back Button -->
+      <div class="product-page__back">
+        <a href="javascript:history.back()" class="back-link">
+          <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
+          {{ section.settings.back_text | default: "Back" }}
+        </a>
       </div>
 
-      <!-- Compare Models Trigger Button (Customizer Configurable) -->
-      {%- if section.settings.show_compare_btn -%}
-        <button class="product-compare-trigger-btn" id="OpenCompareModal">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-          {{ section.settings.compare_btn_label | default: "Compare with other models" }}
-        </button>
-      {%- endif -%}
+      <!-- 2. Main Title -->
+      <h1 class="product-info__title">{{ product.title | default: "Round Air-lift Stool" }}</h1>
+      
+      <!-- 3. Highlighted Intro Block (Left Red Border) -->
+      <div class="product-info__intro-highlight">
+        <p>{{ product.metafields.custom.intro_highlight | default: "Engineered to optimize practitioner comfort during long sessions, the Equipro 31100 features a specialized contoured cushion designed to promote healthy blood circulation in the thighs while maintaining an ideal working posture." }}</p>
+      </div>
+
+      <!-- 4. Paragraph 1 -->
+      <div class="product-info__description">
+        {% if product.description != blank %}
+          {{ product.description }}
+        {% else %}
+          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists. Its ergonomic pneumatic lift targets postural tension during intensive sessions, enabling sharper focus on technique and consistent results. Whether you are performing facials, micropigmentation, or lash extensions, this seating equipment adjusts to your optimal position with a smooth air-lift mechanism and 360-degree swivel control.</p>
+        {% endif %}
+      </div>
+
+      <!-- 5. Bold Subtitle -->
+      <h2 class="product-info__subtitle">{{ section.settings.subtitle | default: "Precision Engineering for Lasting Stability" }}</h2>
+
+      <!-- 6. Paragraph 2 -->
+      <div class="product-info__description">
+        <p>{{ section.settings.secondary_text | default: "Stain resistance is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The ultra-resistant leatherette ensures an as-new condition across a 15-20 year timeframe. Consistent care results in extended durability and optimal hygiene." }}</p>
+      </div>
+
+      <!-- 7. Purchase Block (Price, Options & Add to Cart) -->
+      <div class="product-purchase-block" style="margin-top: 30px;">
+        <div class="product-price" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; color: #111;">
+          {{ product.price | default: 23500 | money }}
+        </div>
+
+        {% form 'product', product %}
+          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+
+          {% unless product.has_only_default_variant %}
+            {% for option in product.options_with_values %}
+              <div class="product-option" style="margin-bottom: 15px;">
+                <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 4px;">{{ option.name }}:</label>
+                <select name="options[{{ option.name | escape }}]" class="product-select" style="width: 100%; max-width: 380px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                  <option value="">Select {{ option.name }}</option>
+                  {% for value in option.values %}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endfor %}
+          {% else %}
+            <div class="product-option" style="margin-bottom: 15px;">
+              <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 4px;">Couleur:</label>
+              <select class="product-select" style="width: 100%; max-width: 380px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
+                <option>Select Couleur</option>
+                <option>White</option>
+                <option>Black</option>
+              </select>
+            </div>
+          {% endunless %}
+
+          <div class="product-buy-row" style="display: flex; gap: 12px; align-items: center; max-width: 380px;">
+            <div class="product-quantity" style="display: flex; border: 1px solid #ccc; border-radius: 4px;">
+              <button type="button" onclick="adjustQty(-1)" style="padding: 8px 12px; background: none; border: none; cursor: pointer;">−</button>
+              <input type="number" id="QuantityInput" name="quantity" value="1" min="1" style="width: 40px; text-align: center; border: none;">
+              <button type="button" onclick="adjustQty(1)" style="padding: 8px 12px; background: none; border: none; cursor: pointer;">+</button>
+            </div>
+
+            <button type="submit" class="product-add-cart-btn" style="flex: 1; background-color: #ab273b; color: #fff; padding: 12px 20px; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;" {% unless product.available %}disabled{% endunless %}>
+              {% if product.available %}ADD TO CART{% else %}OUT OF STOCK{% endif %}
+            </button>
+          </div>
+        {% endform %}
+      </div>
+
     </div>
 
-    <!-- Right Column: Dynamic Gallery & Integrated Quote Request Button -->
+    <!-- RIGHT COLUMN: PRODUCT IMAGES & COMPARE POPUP BUTTON -->
     <div class="product-gallery-col">
+      
+      <!-- Product Swatches & Image Gallery -->
       <div class="product-gallery">
         <div class="product-gallery__main">
           {% if product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
+            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}" style="width: 100%; height: auto; display: block;">
           {% else %}
-            <div class="product-gallery__placeholder"></div>
+            <div class="product-gallery__placeholder" style="width: 100%; height: 450px; background: #f4f4f4; border-radius: 4px;"></div>
           {% endif %}
         </div>
         
-        <!-- Dynamic Thumbnail Gallery -->
         {% if product.images.size > 1 %}
-          <div class="product-gallery__thumbs">
+          <div class="product-gallery__thumbs" style="display: flex; gap: 10px; margin-top: 15px;">
             {% for image in product.images %}
-              <img src="{{ image | image_url: width: 150 }}" class="thumb-img {% if forloop.first %}is-active{% endif %}" onclick="changeMainImg(this.src)">
+              <img src="{{ image | image_url: width: 150 }}" class="thumb-img {% if forloop.first %}is-active{% endif %}" onclick="changeMainImg(this.src)" style="width: 70px; height: 70px; object-fit: cover; cursor: pointer; border-radius: 4px;">
             {% endfor %}
           </div>
         {% endif %}
+      </div>
 
-        <!-- Integrated Quote Request CTA Button -->
-        <div class="product-gallery__quote-cta" style="margin-top: 16px;">
-          <button 
-            type="button" 
-            class="button button--secondary button--full-width" 
-            data-open-quote-modal
-            data-product-title="{{ product.title | escape }}"
-            style="border-color: #ab273b; color: #ab273b; width: 100%; font-weight: 700;"
-          >
-            {{ section.settings.quote_btn_label | default: "Get a Quote / Solicitar Cotización" }}
+      <!-- Compare Models Trigger Button -->
+      {% if section.settings.show_compare_btn %}
+        <div class="product-compare-wrapper" style="margin-top: 24px; text-align: center;">
+          <button class="product-compare-trigger-btn" id="OpenCompareModal" style="display: inline-flex; align-items: center; gap: 8px; background: none; border: 1px solid #111; color: #111; padding: 10px 20px; border-radius: 4px; font-weight: 600; cursor: pointer;">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            {{ section.settings.compare_btn_label | default: "Compare with other models" }}
           </button>
         </div>
-      </div>
+      {% endif %}
+
     </div>
+
   </div>
 
-  <!-- Dynamic Quote Modal Snippet -->
-  {% render 'quote-modal' %}
-
-  <!-- ROW 2: PURCHASE FORM, ACCORDIONS & CUSTOM HTML SPECS TABLE -->
-  <div class="product-secondary-grid" style="margin-top: 40px;">
-    
-    <!-- Left Column: Price, Options, Quantity & Cart Form -->
-    <div class="product-purchase-col">
-      <div class="product-price">{{ product.price | money }}</div>
-
-      {% form 'product', product %}
-        <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
-        {% unless product.has_only_default_variant %}
-          {% for option in product.options_with_values %}
-            <div class="product-option">
-              <label>{{ option.name }}:</label>
-              <select name="options[{{ option.name | escape }}]" class="product-select">
-                {% for value in option.values %}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
-                  </option>
-                {% endfor %}
-              </select>
-            </div>
-          {% endfor %}
-        {% endunless %}
-
-        <div class="product-buy-row">
-          <div class="product-quantity">
-            <button type="button" onclick="adjustQty(-1)">−</button>
-            <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
-            <button type="button" onclick="adjustQty(1)">+</button>
-          </div>
-          <button type="submit" class="product-add-cart-btn" {% unless product.available %}disabled{% endunless %}>
-            {% if product.available %}ADD TO CART{% else %}OUT OF STOCK{% endif %}
-          </button>
-        </div>
-      {% endform %}
-
-      <!-- Accordion Blocks (Customizer Editable) -->
-      <div class="product-accordions">
-        <h3 class="product-acc-title">{{ section.settings.acc_heading | default: "Key Features for the Professional Station" }}</h3>
-        
-        {% for block in section.blocks %}
-          {% if block.type == 'accordion' %}
-            <details class="product-acc-item" {{ block.shopify_attributes }}>
-              <summary>{{ block.settings.title }} <span>+</span></summary>
-              <p>{{ block.settings.content }}</p>
-            </details>
-          {% endif %}
-        {% endfor %}
-      </div>
-
-      <!-- Shipping Information & Calculator Block -->
-      <div class="product-shipping-block">
-        <h4 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping" }}</h4>
-        <p>{{ section.settings.shipping_text | default: "Standard delivery typically takes 5–7 business days." }}</p>
-        
-        <button class="product-shipping-calc-btn" onclick="alert('Enter your postal code at checkout to calculate exact delivery dates.')">
-          {{ section.settings.shipping_btn_label | default: "Calculate estimated delivery date" }}
-        </button>
-      </div>
-    </div>
-
-    <!-- Right Column: Custom Raw HTML Technical Specifications Block / Metafield Container -->
-    <div class="product-specs-col">
-      {%- for block in section.blocks -%}
-        {%- case block.type -%}
-          {%- when 'custom_html' -%}
-            <div class="product-specs-custom-html" {{ block.shopify_attributes }}>
-              {{ block.settings.html_code }}
-            </div>
-        {%- endcase -%}
-      {%- else -%}
-        <!-- Fallback: Renders product custom metafield table if present, otherwise displays default container -->
-        {%- if product.metafields.custom.technical_table != blank -%}
-          <div class="equipro-specs-container">
-            {{ product.metafields.custom.technical_table }}
-          </div>
-        {%- else -%}
-          <div class="equipro-specs-container">
-            <!-- Inject your <div class="equipro-specs-container"><table class="equipro-table">...</table></div> here -->
-          </div>
-        {%- endif -%}
-      {%- endfor -%}
-    </div>
-  </div>
 </div>
+
+<!-- Modal Snippet Rendering -->
+{% render 'quote-modal' %}
 
 <script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
 <script>
@@ -186,13 +154,25 @@
 
 {% schema %}
 {
-  "name": "Main Product Dynamic",
+  "name": "Main Product Layout",
   "settings": [
     {
       "type": "text",
       "id": "back_text",
       "label": "Back Link Text",
       "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Secondary Section Title",
+      "default": "Precision Engineering for Lasting Stability"
+    },
+    {
+      "type": "textarea",
+      "id": "secondary_text",
+      "label": "Secondary Paragraph Text",
+      "default": "Stain resistance is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The ultra-resistant leatherette ensures an as-new condition across a 15-20 year timeframe. Consistent care results in extended durability and optimal hygiene."
     },
     {
       "type": "checkbox",
@@ -205,85 +185,11 @@
       "id": "compare_btn_label",
       "label": "Compare Button Text",
       "default": "Compare with other models"
-    },
-    {
-      "type": "text",
-      "id": "quote_btn_label",
-      "label": "Quote Button Text",
-      "default": "Get a Quote / Solicitar Cotización"
-    },
-    {
-      "type": "text",
-      "id": "acc_heading",
-      "label": "Accordion Section Title",
-      "default": "Key Features for the Professional Station"
-    },
-    {
-      "type": "text",
-      "id": "shipping_title",
-      "label": "Shipping Title",
-      "default": "Shipping"
-    },
-    {
-      "type": "textarea",
-      "id": "shipping_text",
-      "label": "Shipping Text",
-      "default": "Standard delivery typically takes 5–7 business days, while expedited shipping takes 2–3 business days."
-    },
-    {
-      "type": "text",
-      "id": "shipping_btn_label",
-      "label": "Shipping Calculator Button Text",
-      "default": "Calculate estimated delivery date"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "accordion",
-      "name": "Accordion Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Accordion Title",
-          "default": "Feature Title"
-        },
-        {
-          "type": "textarea",
-          "id": "content",
-          "label": "Accordion Content",
-          "default": "Description of the feature for this product."
-        }
-      ]
-    },
-    {
-      "type": "custom_html",
-      "name": "Raw HTML Table Block",
-      "settings": [
-        {
-          "type": "html",
-          "id": "html_code",
-          "label": "HTML Code",
-          "default": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr></tbody></table></div>"
-        }
-      ]
     }
   ],
   "presets": [
     {
-      "name": "Main Product Dynamic",
-      "blocks": [
-        {
-          "type": "accordion",
-          "settings": {
-            "title": "Precise Temperature Regulation",
-            "content": "Manual thermostat dial maintains exact target viscosity."
-          }
-        },
-        {
-          "type": "custom_html"
-        }
-      ]
+      "name": "Main Product Layout"
     }
   ]
 }
