@@ -9,42 +9,12 @@
  */
 {
   "sections": {
-    "main_product_a6Dgwn": {
-      "type": "main-product",
-      "name": "Main Product Layout",
-      "settings": {
-        "back_text": "Back",
-        "subtitle": "Precision Engineering for Lasting Stability",
-        "secondary_text": "Stain resistance is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The ultra-resistant leatherette ensures an as-new condition across a 15-20 year timeframe. Consistent care results in extended durability and optimal hygiene.",
-        "show_compare_btn": true,
-        "compare_btn_label": "Compare with other models"
-      }
-    },
     "main": {
       "type": "page",
-      "settings": {}
-    },
-    "product_key_features_banner_hAqkCD": {
-      "type": "product-key-features-banner",
-      "name": "Product Features Banner",
-      "settings": {}
-    },
-    "product_how_to_dm6xUQ": {
-      "type": "product-how-to",
-      "name": "How to Use & Care",
-      "settings": {}
-    },
-    "category_faq_apmdFM": {
-      "type": "category-faq",
-      "name": "Category FAQ",
       "settings": {}
     }
   },
   "order": [
-    "main_product_a6Dgwn",
-    "main",
-    "product_key_features_banner_hAqkCD",
-    "product_how_to_dm6xUQ",
-    "category_faq_apmdFM"
+    "main"
   ]
 }
