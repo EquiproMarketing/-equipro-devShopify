@@ -373,6 +373,121 @@
         "title": "Beds & Stools"
       }
     },
+    "custom_subcategory_slider_YFNFXr": {
+      "type": "custom-subcategory-slider",
+      "blocks": {
+        "subcategory_card_76RyFT": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_RFztfx": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_3PcLMF": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_kNMd6p": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_ykJEhh": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_Xnfck8": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_MWxmgz": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_Eh8Frm": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_card_76RyFT",
+        "subcategory_card_RFztfx",
+        "subcategory_card_3PcLMF",
+        "subcategory_card_kNMd6p",
+        "subcategory_card_ykJEhh",
+        "subcategory_card_Xnfck8",
+        "subcategory_card_MWxmgz",
+        "subcategory_card_Eh8Frm"
+      ],
+      "name": "Subcategory Slider",
+      "settings": {
+        "title": "Explore Subcategories"
+      }
+    },
     "image_slider": {
       "type": "image-slider",
       "blocks": {
@@ -399,6 +514,7 @@
     "shop_by_category",
     "image_with_text",
     "custom_product_treatment_pKdyQh",
+    "custom_subcategory_slider_YFNFXr",
     "image_slider"
   ]
 }
