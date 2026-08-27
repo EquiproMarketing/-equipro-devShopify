@@ -17,7 +17,7 @@
         {% endfor %}
       {% endif %}
 
-      {%- comment -%} CUSTOM MANUAL CARDS (APPLE STYLE) {%- endcomment -%}
+      {%- comment -%} CUSTOM MANUAL CARDS (APPLE STYLE WITH HOVER IMAGE) {%- endcomment -%}
       {% for block in section.blocks %}
         {% if block.type == 'custom_card' %}
           <div class="swiper-slide" {{ block.shopify_attributes }}>
@@ -31,8 +31,18 @@
                       loading="lazy"
                       width="200"
                       height="250"
-                      class="apple-card__image"
+                      class="apple-card__image apple-card__image--primary"
                     >
+                    {% if block.settings.hover_image != blank %}
+                      <img
+                        src="{{ block.settings.hover_image | image_url: width: 400 }}"
+                        alt="{{ block.settings.title | escape }}"
+                        loading="lazy"
+                        width="200"
+                        height="250"
+                        class="apple-card__image apple-card__image--secondary"
+                      >
+                    {% endif %}
                   {% else %}
                     <div class="product-card__placeholder"></div>
                   {% endif %}
@@ -74,8 +84,15 @@
     new Swiper('.best-sellers-swiper', {
       slidesPerView: 'auto',
       spaceBetween: 20,
+      loop: true,
       freeMode: true,
       grabCursor: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
       breakpoints: {
         750: { spaceBetween: 24 }
       }
@@ -118,7 +135,12 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Product Image"
+          "label": "Primary Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover Image (Optional)"
         },
         {
           "type": "color",

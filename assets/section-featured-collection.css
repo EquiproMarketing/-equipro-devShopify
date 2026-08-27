@@ -19,9 +19,14 @@
   text-transform: uppercase;
 }
 
+/* CONTINUOUS LINEAR SWIPER TRANSITION */
+.best-sellers-swiper .swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
 /* SWIPER SLIDE COMPACT CONTROL */
 .best-sellers-swiper .swiper-slide {
-  width: 230px !important; /* Fixed width per card to avoid giant expanding cards */
+  width: 220px !important;
   flex-shrink: 0;
 }
 
@@ -58,7 +63,7 @@
   height: 100%;
 }
 
-/* 4:5 ASPECT RATIO CONTAINER */
+/* 4:5 ASPECT RATIO CONTAINER & HOVER IMAGE LOGIC */
 .apple-card__image-wrapper {
   position: relative;
   width: 100%;
@@ -75,10 +80,22 @@
   max-width: 100%;
   max-height: 100%;
   object-fit: contain;
-  transition: transform 0.3s ease;
+  transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
-.apple-card:hover .apple-card__image {
+.apple-card__image--secondary {
+  position: absolute;
+  inset: 0;
+  margin: auto;
+  opacity: 0;
+}
+
+.apple-card:hover .apple-card__image--primary {
+  opacity: 0;
+}
+
+.apple-card:hover .apple-card__image--secondary {
+  opacity: 1;
   transform: scale(1.04);
 }
 
