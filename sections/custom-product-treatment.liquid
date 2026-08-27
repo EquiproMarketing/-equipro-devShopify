@@ -10,18 +10,18 @@
       {%- for block in section.blocks -%}
         <div class="custom-treatment-card" {{ block.shopify_attributes }}>
           
-          {%- comment -%} IMAGE CONTAINER WITH DYNAMIC BACKGROUND {%- endcomment -%}
+          {%- comment -%} CONTENEDOR DE IMAGEN REDONDEADO ESTILO APPLE {%- endcomment -%}
           <div 
             class="custom-treatment-card__image-container"
-            style="background-color: {{ block.settings.card_bg_color | default: '#f4f4f6' }};"
+            style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
           >
             {%- if block.settings.product_image != blank -%}
               <img
-                src="{{ block.settings.product_image | image_url: width: 600 }}"
+                src="{{ block.settings.product_image | image_url: width: 500 }}"
                 alt="{{ block.settings.title | escape }}"
                 loading="lazy"
-                width="300"
-                height="300"
+                width="240"
+                height="240"
                 class="custom-treatment-card__image"
               >
             {%- else -%}
@@ -29,7 +29,7 @@
             {%- endif -%}
           </div>
 
-          {%- comment -%} COLOR SWATCHES ROW {%- endcomment -%}
+          {%- comment -%} MUESTRAS DE COLOR (SWATCHES) {%- endcomment -%}
           <div class="custom-treatment-card__swatches">
             {%- assign colors = block.settings.available_colors | split: ',' -%}
             {%- for color_code in colors -%}
@@ -44,7 +44,7 @@
             {%- endfor -%}
           </div>
 
-          {%- comment -%} CARD DETAILS {%- endcomment -%}
+          {%- comment -%} DETALLES Y TEXTOS {%- endcomment -%}
           <div class="custom-treatment-card__content">
             <h3 class="custom-treatment-card__title">{{ block.settings.title }}</h3>
             
@@ -56,19 +56,15 @@
               <p class="custom-treatment-card__price">{{ block.settings.price }}</p>
             {%- endif -%}
 
-            {%- comment -%} ACTION BUTTONS {%- endcomment -%}
+            {%- comment -%} BOTONES DE ACCIÓN ROJOS (ESTILO APPLE) {%- endcomment -%}
             <div class="custom-treatment-card__actions">
-              {%- if block.settings.btn_primary_url != blank -%}
-                <a href="{{ block.settings.btn_primary_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                  {{ block.settings.btn_primary_text | default: 'See Product' }}
-                </a>
-              {%- endif -%}
+              <a href="{{ block.settings.btn_primary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--primary">
+                {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
+              </a>
 
-              {%- if block.settings.btn_secondary_url != blank -%}
-                <a href="{{ block.settings.btn_secondary_url }}" class="custom-treatment-btn custom-treatment-btn--link">
-                  {{ block.settings.btn_secondary_text | default: 'Buy >' }}
-                </a>
-              {%- endif -%}
+              <a href="{{ block.settings.btn_secondary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--link">
+                {{ block.settings.btn_secondary_text | default: 'Acheter >' }}
+              </a>
             </div>
           </div>
 
@@ -88,7 +84,7 @@
       "type": "text",
       "id": "title",
       "label": "Section Title",
-      "default": "Treatment Beds & Stools"
+      "default": "Beds & Stools"
     }
   ],
   "blocks": [
@@ -105,7 +101,7 @@
           "type": "color",
           "id": "card_bg_color",
           "label": "Card Background Color",
-          "default": "#f4f4f6"
+          "default": "#f5f5f7"
         },
         {
           "type": "text",
@@ -116,31 +112,30 @@
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle / Category",
-          "default": "Electric Treatment Bed"
+          "label": "Subtitle / Description",
+          "default": "Parfaite alliée de votre pratique."
         },
         {
           "type": "text",
           "id": "price",
           "label": "Price Text",
-          "default": "From CA$ 1,299"
+          "default": "À partir de 1 299 $"
         },
         {
           "type": "textarea",
           "id": "available_colors",
           "label": "Color Swatches (HEX list separated by comma)",
-          "info": "Example: #ffffff, #1a1a1a, #555555, #c2b280, #1b263b",
-          "default": "#ffffff, #1a1a1a, #6e6e6e"
+          "default": "#ffffff, #111111, #808080"
         },
         {
           "type": "header",
-          "content": "Primary Button"
+          "content": "Primary Button (Red Pill)"
         },
         {
           "type": "text",
           "id": "btn_primary_text",
           "label": "Button Text",
-          "default": "See Product"
+          "default": "En savoir plus"
         },
         {
           "type": "url",
@@ -149,13 +144,13 @@
         },
         {
           "type": "header",
-          "content": "Secondary Link (Optional)"
+          "content": "Secondary Link (Red Text)"
         },
         {
           "type": "text",
           "id": "btn_secondary_text",
           "label": "Link Text",
-          "default": "Buy >"
+          "default": "Acheter >"
         },
         {
           "type": "url",

@@ -1,4 +1,4 @@
-/* CUSTOM PRODUCT TREATMENT - APPLE COMPACT CARDS */
+/* CUSTOM PRODUCT TREATMENT - APPLE COMPACT CARDS (EQUIPRO RED) */
 
 .custom-treatment-section {
     padding: 50px 0;
@@ -28,7 +28,7 @@
     align-items: center;
     text-align: center;
     width: 100%;
-    max-width: 280px; /* Controla el ancho de las tarjetas para evitar que se expandan demasiado */
+    max-width: 280px;
   }
   
   /* IMAGE CONTAINER */
@@ -111,39 +111,42 @@
     max-width: 220px;
   }
   
-  /* BUTTONS */
+  /* BUTTONS ESTILO APPLE EN ROJO EQUIPRO (#ab273b) */
   .custom-treatment-card__actions {
     display: flex;
     align-items: center;
     justify-content: center;
-    gap: 12px;
+    gap: 14px;
+    margin-top: 4px;
   }
   
   .custom-treatment-btn--primary {
-    background-color: #0071e3;
+    background-color: #ab273b;
     color: #ffffff;
-    padding: 6px 14px;
+    padding: 8px 18px;
     border-radius: 980px;
-    font-size: 0.78rem;
-    font-weight: 400;
+    font-size: 0.82rem;
+    font-weight: 500;
     text-decoration: none;
-    transition: background-color 0.2s ease;
+    transition: background-color 0.2s ease, transform 0.2s ease;
     white-space: nowrap;
   }
   
   .custom-treatment-btn--primary:hover {
-    background-color: #0077ed;
+    background-color: #8c1e2e;
   }
   
   .custom-treatment-btn--link {
-    color: #0066cc;
-    font-size: 0.78rem;
-    font-weight: 400;
+    color: #ab273b;
+    font-size: 0.82rem;
+    font-weight: 500;
     text-decoration: none;
     white-space: nowrap;
+    transition: color 0.2s ease;
   }
   
   .custom-treatment-btn--link:hover {
+    color: #8c1e2e;
     text-decoration: underline;
   }
   
