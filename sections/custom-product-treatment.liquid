@@ -1,0 +1,179 @@
+{{ 'custom-product-treatment.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-treatment-section" id="treatment-section-{{ section.id }}">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="custom-treatment-section__title">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+
+    <div class="custom-treatment-grid">
+      {%- for block in section.blocks -%}
+        <div class="custom-treatment-card" {{ block.shopify_attributes }}>
+          
+          {%- comment -%} IMAGE CONTAINER WITH DYNAMIC BACKGROUND {%- endcomment -%}
+          <div 
+            class="custom-treatment-card__image-container"
+            style="background-color: {{ block.settings.card_bg_color | default: '#f4f4f6' }};"
+          >
+            {%- if block.settings.product_image != blank -%}
+              <img
+                src="{{ block.settings.product_image | image_url: width: 600 }}"
+                alt="{{ block.settings.title | escape }}"
+                loading="lazy"
+                width="300"
+                height="300"
+                class="custom-treatment-card__image"
+              >
+            {%- else -%}
+              {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
+            {%- endif -%}
+          </div>
+
+          {%- comment -%} COLOR SWATCHES ROW {%- endcomment -%}
+          <div class="custom-treatment-card__swatches">
+            {%- assign colors = block.settings.available_colors | split: ',' -%}
+            {%- for color_code in colors -%}
+              {%- assign clean_color = color_code | strip -%}
+              {%- if clean_color != blank -%}
+                <span 
+                  class="custom-treatment-card__swatch-dot" 
+                  style="background-color: {{ clean_color }};"
+                  title="{{ clean_color }}"
+                ></span>
+              {%- endif -%}
+            {%- endfor -%}
+          </div>
+
+          {%- comment -%} CARD DETAILS {%- endcomment -%}
+          <div class="custom-treatment-card__content">
+            <h3 class="custom-treatment-card__title">{{ block.settings.title }}</h3>
+            
+            {%- if block.settings.subtitle != blank -%}
+              <p class="custom-treatment-card__subtitle">{{ block.settings.subtitle }}</p>
+            {%- endif -%}
+
+            {%- if block.settings.price != blank -%}
+              <p class="custom-treatment-card__price">{{ block.settings.price }}</p>
+            {%- endif -%}
+
+            {%- comment -%} ACTION BUTTONS {%- endcomment -%}
+            <div class="custom-treatment-card__actions">
+              {%- if block.settings.btn_primary_url != blank -%}
+                <a href="{{ block.settings.btn_primary_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
+                  {{ block.settings.btn_primary_text | default: 'See Product' }}
+                </a>
+              {%- endif -%}
+
+              {%- if block.settings.btn_secondary_url != blank -%}
+                <a href="{{ block.settings.btn_secondary_url }}" class="custom-treatment-btn custom-treatment-btn--link">
+                  {{ block.settings.btn_secondary_text | default: 'Buy >' }}
+                </a>
+              {%- endif -%}
+            </div>
+          </div>
+
+        </div>
+      {%- endfor -%}
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Custom Product Treatment",
+  "tag": "section",
+  "class": "section-custom-product-treatment",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Treatment Beds & Stools"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "product_card",
+      "name": "Product Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "product_image",
+          "label": "Product Image"
+        },
+        {
+          "type": "color",
+          "id": "card_bg_color",
+          "label": "Card Background Color",
+          "default": "#f4f4f6"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Product Name",
+          "default": "Ultra-comfort"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle / Category",
+          "default": "Electric Treatment Bed"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price Text",
+          "default": "From CA$ 1,299"
+        },
+        {
+          "type": "textarea",
+          "id": "available_colors",
+          "label": "Color Swatches (HEX list separated by comma)",
+          "info": "Example: #ffffff, #1a1a1a, #555555, #c2b280, #1b263b",
+          "default": "#ffffff, #1a1a1a, #6e6e6e"
+        },
+        {
+          "type": "header",
+          "content": "Primary Button"
+        },
+        {
+          "type": "text",
+          "id": "btn_primary_text",
+          "label": "Button Text",
+          "default": "See Product"
+        },
+        {
+          "type": "url",
+          "id": "btn_primary_url",
+          "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Secondary Link (Optional)"
+        },
+        {
+          "type": "text",
+          "id": "btn_secondary_text",
+          "label": "Link Text",
+          "default": "Buy >"
+        },
+        {
+          "type": "url",
+          "id": "btn_secondary_url",
+          "label": "Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Custom Product Treatment",
+      "blocks": [
+        { "type": "product_card" },
+        { "type": "product_card" },
+        { "type": "product_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
