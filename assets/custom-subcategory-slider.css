@@ -22,11 +22,13 @@
   .custom-subcat-swiper .swiper-slide {
     width: 260px !important;
     flex-shrink: 0;
+    margin-right: 32px !important; /* Force explicit gap between cards */
   }
   
   @media (min-width: 750px) {
     .custom-subcat-swiper .swiper-slide {
-      width: 290px !important;
+      width: 280px !important;
+      margin-right: 40px !important; /* Force explicit gap on larger screens */
     }
   }
   
@@ -125,18 +127,18 @@
     margin-bottom: 4px;
   }
   
+  /* BLACK TITLE (STAYS BLACK ON HOVER) */
   .custom-subcat-card__title {
     font-size: 1.3rem;
     font-weight: 700;
-    color: #1d1d1f;
+    color: #111111 !important;
     margin: 0 0 6px 0;
     line-height: 1.25;
     letter-spacing: -0.01em;
-    transition: color 0.2s ease;
   }
   
   .custom-subcat-card:hover .custom-subcat-card__title {
-    color: #ab273b;
+    color: #111111 !important;
   }
   
   .custom-subcat-card__subtitle {
@@ -149,6 +151,6 @@
   .custom-subcat-card__price {
     font-size: 0.88rem;
     font-weight: 600;
-    color: #1d1d1f;
+    color: #111111;
     margin: 0;
   }
