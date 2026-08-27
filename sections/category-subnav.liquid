@@ -8,7 +8,7 @@
       <ul class="category-subnav__list">
         {%- for link in subnav_menu.links -%}
           {%- assign is_active = false -%}
-          
+
           {%- if link.active or collection.url == link.url -%}
             {%- assign is_active = true -%}
           {%- elsif template contains 'product' and product.collections contains link.object -%}
@@ -18,7 +18,7 @@
           <li>
             <a 
               href="{{ link.url }}" 
-              class="category-subnav__link {% if is_active %}is-active{% endif %}"
+              class="category-subnav__link{% if is_active %} is-active{% endif %}"
               {% if is_active %}aria-current="page"{% endif %}
             >
               {{ link.title }}
