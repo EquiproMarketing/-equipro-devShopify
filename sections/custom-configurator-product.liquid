@@ -1,0 +1,83 @@
+{{ 'custom-configurator.css' | asset_url | stylesheet_tag }}
+
+<div class="configurator-container page-width">
+  
+  <!-- COLUMNA IZQUIERDA: PASOS DE CONFIGURACIÓN -->
+  <div class="configurator-steps-col">
+    
+    <div class="configurator-header">
+      <span class="configurator-step-badge">Paso 1 de 3</span>
+      <h1 class="configurator-title">{{ product.title }}</h1>
+      <p class="configurator-subtitle">Personaliza las especificaciones de tu equipo profesional.</p>
+    </div>
+
+    <!-- PASO 1: SELECCIÓN DE TAMAÑO / MODELO BASE -->
+    <div class="configurator-step-block">
+      <h3 class="step-title">1. Selecciona el tamaño o formato</h3>
+      <div class="options-grid">
+        {% for variant in product.variants %}
+          <label class="option-card {% if forloop.first %}is-selected{% endif %}">
+            <input type="radio" name="base_variant" value="{{ variant.id }}" {% if forloop.first %}checked{% endif %}>
+            <div class="option-card__content">
+              <span class="option-card__title">{{ variant.title }}</span>
+              <span class="option-card__price">{{ variant.price | money }}</span>
+            </div>
+          </label>
+        {% endfor %}
+      </div>
+    </div>
+
+    <!-- PASO 2: SELECCIÓN DE COLOR DE TAPICERÍA -->
+    <div class="configurator-step-block">
+      <h3 class="step-title">2. Elige el color de tapicería (Ultra-leatherette)</h3>
+      <div class="swatches-grid">
+        <button type="button" class="swatch-btn is-active" style="background-color: #ffffff; border: 1px solid #ccc;" title="White"></button>
+        <button type="button" class="swatch-btn" style="background-color: #111111;" title="Black"></button>
+        <button type="button" class="swatch-btn" style="background-color: #1c355e;" title="Navy Blue"></button>
+        <button type="button" class="swatch-btn" style="background-color: #cbb89d;" title="Camel / Beige"></button>
+      </div>
+    </div>
+
+    <!-- PASO 3: ESPECIFICACIONES TÉCNICAS (ACORDEÓN) -->
+    <div class="configurator-step-block">
+      <h3 class="step-title">3. Lo que incluye tu equipo</h3>
+      <ul class="specs-summary-list">
+        <li>✓ Estructura de acero ultra-resistente con recubrimiento de esmalte blanco.</li>
+        <li>✓ Control de elevación mediante pedal neumático/eléctrico.</li>
+        <li>✓ Garantía oficial de 2 años y certificación de seguridad.</li>
+      </ul>
+    </div>
+
+  </div>
+
+  <!-- COLUMNA DERECHA: VISUALIZADOR FIXO / STICKY -->
+  <div class="configurator-preview-col">
+    <div class="sticky-preview-wrapper">
+      {% if product.featured_image %}
+        <img id="ConfiguratorPreviewImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
+      {% endif %}
+      
+      <div class="preview-price-box">
+        <span class="price-label">Precio de la configuración:</span>
+        <span class="price-value" id="ConfiguratorPrice">{{ product.price | money }}</span>
+      </div>
+
+      <button type="button" class="button button--full-width configurator-add-btn">
+        AÑADIR CONFIGURACIÓN AL CARRITO
+      </button>
+    </div>
+  </div>
+
+</div>
+
+{% schema %}
+{
+  "name": "Product Configurator",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Product Configurator"
+    }
+  ]
+}
+{% endschema %}

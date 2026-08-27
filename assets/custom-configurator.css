@@ -1,0 +1,98 @@
+.configurator-container {
+    display: grid;
+    grid-template-columns: 1fr 450px;
+    gap: 60px;
+    padding-top: 40px;
+    padding-bottom: 80px;
+  }
+  
+  .configurator-steps-col {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+  }
+  
+  .option-card {
+    display: block;
+    border: 2px solid #e5e5e5;
+    border-radius: 8px;
+    padding: 16px 20px;
+    margin-bottom: 12px;
+    cursor: pointer;
+    transition: border-color 0.2s ease, background-color 0.2s ease;
+  }
+  
+  .option-card:hover,
+  .option-card.is-selected {
+    border-color: #ab273b;
+    background-color: #fff9f9;
+  }
+  
+  .option-card input[type="radio"] {
+    display: none;
+  }
+  
+  .option-card__content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: 600;
+  }
+  
+  .swatches-grid {
+    display: flex;
+    gap: 12px;
+  }
+  
+  .swatch-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    border: 2px solid transparent;
+    cursor: pointer;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  
+  .swatch-btn:hover,
+  .swatch-btn.is-active {
+    transform: scale(1.1);
+    border-color: #ab273b;
+  }
+  
+  /* Columna de Vista Previa Fija */
+  .configurator-preview-col {
+    position: relative;
+  }
+  
+  .sticky-preview-wrapper {
+    position: sticky;
+    top: 100px;
+    background: #ffffff;
+    border: 1px solid #e5e5e5;
+    border-radius: 12px;
+    padding: 24px;
+    text-align: center;
+  }
+  
+  .sticky-preview-wrapper img {
+    width: 100%;
+    height: auto;
+    margin-bottom: 20px;
+  }
+  
+  .configurator-add-btn {
+    background-color: #ab273b;
+    color: #ffffff;
+    border: none;
+    padding: 16px;
+    font-weight: 700;
+    border-radius: 6px;
+    width: 100%;
+    cursor: pointer;
+  }
+  
+  @media (max-width: 989px) {
+    .configurator-container {
+      grid-template-columns: 1fr;
+    }
+  }
