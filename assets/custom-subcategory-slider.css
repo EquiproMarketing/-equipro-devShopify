@@ -1,7 +1,7 @@
 /* CUSTOM SUBCATEGORY SLIDER - INFINITE MARQUEE STYLE */
 
 .custom-subcat-section {
-    padding: 50px 0;
+    padding: 60px 0;
     background-color: #ffffff;
   }
   
@@ -9,7 +9,7 @@
     font-size: 2.2rem;
     font-weight: 700;
     color: #ab273b;
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     text-align: left;
     letter-spacing: -0.015em;
   }
@@ -20,13 +20,13 @@
   }
   
   .custom-subcat-swiper .swiper-slide {
-    width: 250px !important;
+    width: 260px !important;
     flex-shrink: 0;
   }
   
   @media (min-width: 750px) {
     .custom-subcat-swiper .swiper-slide {
-      width: 280px !important;
+      width: 290px !important;
     }
   }
   
@@ -51,7 +51,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 24px;
     overflow: hidden;
     transition: transform 0.3s ease;
   }
@@ -95,8 +95,8 @@
     align-items: center;
     justify-content: flex-start;
     gap: 6px;
-    margin-top: 14px;
-    margin-bottom: 10px;
+    margin-top: 16px;
+    margin-bottom: 12px;
     min-height: 10px;
   }
   
@@ -126,7 +126,7 @@
   }
   
   .custom-subcat-card__title {
-    font-size: 1.3rem; /* Larger title as requested */
+    font-size: 1.3rem;
     font-weight: 700;
     color: #1d1d1f;
     margin: 0 0 6px 0;
