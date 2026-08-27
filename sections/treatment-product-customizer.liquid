@@ -152,27 +152,27 @@
 
 {% schema %}
 {
-  "name": "Product Custom Configurator",
+  "name": "Treatment Product Custom",
   "tag": "section",
-  "class": "section-configurator",
+  "class": "section-treatment-customizer",
   "settings": [
     {
       "type": "text",
       "id": "badge_tag",
       "label": "Badge Tag",
-      "default": "New Arrival"
+      "default": "Professional Grade"
     },
     {
       "type": "text",
       "id": "finance_text",
       "label": "Financing Text",
-      "default": "or $120/mo with lease financing"
+      "default": "or lease financing available"
     },
     {
       "type": "textarea",
       "id": "highlight_text",
       "label": "Top Highlight Note",
-      "default": "Ultra-quiet actuators and high-density foam engineered specifically for intensive clinical spa treatments."
+      "default": "Engineered specifically for intensive clinical spa treatments."
     },
     {
       "type": "text",
@@ -239,7 +239,7 @@
           "type": "textarea",
           "id": "opt2_desc",
           "label": "Option 2 Description",
-          "default": "Full motorized control over height, backrest, leg rest, and tilt (Trendelenburg)."
+          "default": "Full motorized control over height, backrest, leg rest, and tilt."
         },
         {
           "type": "text",
@@ -269,15 +269,10 @@
   ],
   "presets": [
     {
-      "name": "Product Custom Configurator",
+      "name": "Treatment Product Custom",
       "blocks": [
         {
-          "type": "option_group",
-          "settings": {
-            "group_title": "Motor Configuration",
-            "opt1_title": "2 Motors (Height & Backrest)",
-            "opt2_title": "4 Motors (Height, Backrest, Legrest & Tilt)"
-          }
+          "type": "option_group"
         },
         {
           "type": "color_swatches"

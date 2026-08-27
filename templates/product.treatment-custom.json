@@ -1,0 +1,11 @@
+{
+  "sections": {
+    "main": {
+      "type": "treatment-product-customizer",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main"
+  ]
+}
