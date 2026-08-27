@@ -13,80 +13,112 @@
 .featured-collection__title {
   font-size: 1.5rem;
   font-weight: 700;
-  color: #a22938;
+  color: #ab273b;
   letter-spacing: 0.05em;
   margin: 0;
   text-transform: uppercase;
 }
 
-/* Transición fluida estilo Marquee con Swiper */
+/* MARQUEE CONTINUOUS SWIPER TRANSITION */
 .best-sellers-swiper .swiper-wrapper {
   transition-timing-function: linear !important;
 }
 
-.product-card {
+/* APPLE ACCESSORY CARD UI */
+.apple-card {
   width: 100%;
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  height: 100%;
   display: flex;
   flex-direction: column;
 }
 
-.product-card__image-wrapper {
+.apple-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+}
+
+.apple-card__link {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+/* 4:5 ASPECT RATIO CONTAINER */
+.apple-card__image-wrapper {
   position: relative;
   width: 100%;
-  aspect-ratio: 1 / 1;
-  border-radius: 20px;
+  aspect-ratio: 4 / 5;
+  border-radius: 12px;
   overflow: hidden;
-  background-color: #f5f5f5;
-  display: block;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px;
 }
 
-.product-card__image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+.apple-card__image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
 }
 
-.product-card__image--secondary {
-  position: absolute;
-  inset: 0;
-  opacity: 0;
-}
-
-.product-card__image-wrapper:hover .product-card__image--primary {
-  opacity: 0;
-}
-
-.product-card__image-wrapper:hover .product-card__image--secondary {
-  opacity: 1;
+.apple-card:hover .apple-card__image {
   transform: scale(1.04);
 }
 
-.product-card__placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #e8e8e8 0%, #f7f7f7 100%);
+/* COLOR SWATCHES */
+.apple-card__swatches {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 5px;
+  margin-top: 14px;
+  margin-bottom: 12px;
+  min-height: 10px;
 }
 
-.product-card__info {
-  margin-top: 0.85rem;
+.apple-card__swatch-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.15);
+  display: inline-block;
 }
 
-.product-card__sku {
-  display: block;
-  font-size: 0.75rem;
-  font-weight: 700;
-  color: #888888;
-  margin-bottom: 0.25rem;
+/* CARD CONTENT & TYPOGRAPHY */
+.apple-card__info {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 
-.product-card__title {
-  font-size: 1.05rem;
-  font-weight: 700;
-  line-height: 1.2;
-  margin: 0;
+.apple-card__tag {
+  font-size: 0.72rem;
+  font-weight: 500;
+  color: #b84a00; /* Apple orange/brown tag color */
+  margin-bottom: 4px;
 }
 
-.product-card__title a {
-  color: #1a1a1a;
+.apple-card__title {
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: #1d1d1f;
+  line-height: 1.3;
+  margin: 0 0 16px 0;
+}
+
+.apple-card__price {
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d1d1f;
+  margin-top: auto;
+  margin-bottom: 0;
 }

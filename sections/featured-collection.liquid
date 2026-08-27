@@ -7,6 +7,7 @@
 
   <div class="swiper best-sellers-swiper">
     <div class="swiper-wrapper">
+      {%- comment -%} DYNAMIC PRODUCTS FROM COLLECTION {%- endcomment -%}
       {% assign collection = collections[section.settings.collection] %}
       {% if collection != blank and collection.products.size > 0 %}
         {% for product in collection.products limit: section.settings.products_to_show %}
@@ -14,21 +15,56 @@
             {% render 'product-card-item', product: product %}
           </div>
         {% endfor %}
-      {% else %}
-        {% for i in (1..8) %}
-          <div class="swiper-slide">
-            <div class="product-card">
-              <div class="product-card__image-wrapper">
-                <div class="product-card__placeholder"></div>
-              </div>
-              <div class="product-card__info">
-                <span class="product-card__sku">31300</span>
-                <h3 class="product-card__title">Stool with Backrest</h3>
-              </div>
+      {% endif %}
+
+      {%- comment -%} CUSTOM MANUAL CARDS (APPLE STYLE) {%- endcomment -%}
+      {% for block in section.blocks %}
+        {% if block.type == 'custom_card' %}
+          <div class="swiper-slide" {{ block.shopify_attributes }}>
+            <div class="apple-card">
+              <a href="{{ block.settings.link | default: '#' }}" class="apple-card__link">
+                <div class="apple-card__image-wrapper" style="background-color: {{ block.settings.card_bg | default: '#ffffff' }};">
+                  {% if block.settings.image != blank %}
+                    <img
+                      src="{{ block.settings.image | image_url: width: 500 }}"
+                      alt="{{ block.settings.title | escape }}"
+                      loading="lazy"
+                      width="240"
+                      height="300"
+                      class="apple-card__image"
+                    >
+                  {% else %}
+                    <div class="product-card__placeholder"></div>
+                  {% endif %}
+                </div>
+
+                {%- comment -%} COLOR SWATCHES {%- endcomment -%}
+                <div class="apple-card__swatches">
+                  {% assign colors = block.settings.swatches | split: ',' %}
+                  {% for color in colors %}
+                    {% assign clean_color = color | strip %}
+                    {% if clean_color != blank %}
+                      <span class="apple-card__swatch-dot" style="background-color: {{ clean_color }};"></span>
+                    {% endif %}
+                  {% endfor %}
+                </div>
+
+                <div class="apple-card__info">
+                  {% if block.settings.tag != blank %}
+                    <span class="apple-card__tag">{{ block.settings.tag }}</span>
+                  {% endif %}
+                  
+                  <h3 class="apple-card__title">{{ block.settings.title }}</h3>
+                  
+                  {% if block.settings.price != blank %}
+                    <p class="apple-card__price">{{ block.settings.price }}</p>
+                  {% endif %}
+                </div>
+              </a>
             </div>
           </div>
-        {% endfor %}
-      {% endif %}
+        {% endif %}
+      {% endfor %}
     </div>
   </div>
 </div>
@@ -36,19 +72,19 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.best-sellers-swiper', {
-      slidesPerView: 1.5,
-      spaceBetween: 20,
+      slidesPerView: 1.2,
+      spaceBetween: 16,
       loop: true,
-      grabCursor: true, // Cambia el cursor a mano para indicar que se puede arrastrar
-      speed: 4000, // Velocidad del desplazamiento continuo
+      grabCursor: true,
+      speed: 4000,
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
         pauseOnMouseEnter: true,
       },
       breakpoints: {
-        640: { slidesPerView: 2.5, spaceBetween: 20 },
-        990: { slidesPerView: 4.5, spaceBetween: 24 }
+        640: { slidesPerView: 2.2, spaceBetween: 20 },
+        990: { slidesPerView: 4, spaceBetween: 24 }
       }
     });
   });
@@ -79,6 +115,54 @@
       "step": 1,
       "default": 8,
       "label": "Products to show"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "custom_card",
+      "name": "Custom Apple Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product Image"
+        },
+        {
+          "type": "color",
+          "id": "card_bg",
+          "label": "Image Background Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Tag (e.g. Nouveau)",
+          "default": "Nouveau"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Title",
+          "default": "Stool with Backrest"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Price",
+          "default": "69,00 $"
+        },
+        {
+          "type": "textarea",
+          "id": "swatches",
+          "label": "Color Swatches (HEX list separated by comma)",
+          "default": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Card Link"
+        }
+      ]
     }
   ],
   "presets": [
