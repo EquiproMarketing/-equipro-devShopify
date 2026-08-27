@@ -1,0 +1,191 @@
+{{ 'custom-subcategory-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-subcat-section" id="subcat-section-{{ section.id }}">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="custom-subcat-section__title">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+
+    <div class="swiper custom-subcat-swiper">
+      <div class="swiper-wrapper">
+        {%- for block in section.blocks -%}
+          <div class="swiper-slide" {{ block.shopify_attributes }}>
+            
+            {%- comment -%} FULL CARD CLICKABLE LINK {%- endcomment -%}
+            <a href="{{ block.settings.link | default: '#' }}" class="custom-subcat-card">
+              
+              {%- comment -%} 4:5 ROUNDED IMAGE CONTAINER {%- endcomment -%}
+              <div 
+                class="custom-subcat-card__image-container"
+                style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
+              >
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 500 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                    width="240"
+                    height="300"
+                    class="custom-subcat-card__image custom-subcat-card__image--primary"
+                  >
+                  {%- if block.settings.hover_image != blank -%}
+                    <img
+                      src="{{ block.settings.hover_image | image_url: width: 500 }}"
+                      alt="{{ block.settings.title | escape }}"
+                      loading="lazy"
+                      width="240"
+                      height="300"
+                      class="custom-subcat-card__image custom-subcat-card__image--secondary"
+                    >
+                  {%- endif -%}
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
+                {%- endif -%}
+              </div>
+
+              {%- comment -%} COLOR SWATCHES {%- endcomment -%}
+              <div class="custom-subcat-card__swatches">
+                {%- assign colors = block.settings.available_colors | split: ',' -%}
+                {%- for color_code in colors -%}
+                  {%- assign clean_color = color_code | strip -%}
+                  {%- if clean_color != blank -%}
+                    <span 
+                      class="custom-subcat-card__swatch-dot" 
+                      style="background-color: {{ clean_color }};"
+                    ></span>
+                  {%- endif -%}
+                {%- endfor -%}
+              </div>
+
+              {%- comment -%} LEFT-ALIGNED CONTENT DETAILS {%- endcomment -%}
+              <div class="custom-subcat-card__content">
+                {%- if block.settings.tag != blank -%}
+                  <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
+                {%- endif -%}
+
+                <h3 class="custom-subcat-card__title">{{ block.settings.title }}</h3>
+                
+                {%- if block.settings.subtitle != blank -%}
+                  <p class="custom-subcat-card__subtitle">{{ block.settings.subtitle }}</p>
+                {%- endif -%}
+
+                {%- if block.settings.price != blank -%}
+                  <p class="custom-subcat-card__price">{{ block.settings.price }}</p>
+                {%- endif -%}
+              </div>
+
+            </a>
+
+          </div>
+        {%- endfor -%}
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#subcat-section-{{ section.id }} .custom-subcat-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      loop: true,
+      freeMode: true,
+      grabCursor: true,
+      speed: 6000,
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      },
+      breakpoints: {
+        750: { spaceBetween: 24 }
+      }
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Subcategory Slider",
+  "tag": "section",
+  "class": "section-custom-subcategory-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Explore Subcategories"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory_card",
+      "name": "Subcategory Card",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Primary Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Hover Image (Optional)"
+        },
+        {
+          "type": "color",
+          "id": "card_bg_color",
+          "label": "Card Background Color",
+          "default": "#f5f5f7"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Subcategory Link (Whole Card)"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Badge / Tag (Optional)",
+          "default": "Hydraulic"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Subcategory Title",
+          "default": "Hydraulic Treatment Chairs"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle / Description",
+          "default": "Smooth manual elevation for versatile clinic setups."
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Starting Price (Optional)",
+          "default": "From CA$ 1,499"
+        },
+        {
+          "type": "textarea",
+          "id": "available_colors",
+          "label": "Color Swatches (HEX list separated by comma)",
+          "default": "#ffffff, #111111, #808080"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subcategory Slider",
+      "blocks": [
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" }
+      ]
+    }
+  ]
+}
+{% endschema %}
