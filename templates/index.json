@@ -97,6 +97,130 @@
     },
     "best_sellers": {
       "type": "featured-collection",
+      "blocks": {
+        "custom_card_rFaJei": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_AWHND6": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_k38Qj8": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_re7QVY": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_WpAkFt": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_BgbKdG": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_AjpNta": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_Kq4ak6": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_9bzVAr": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
+        "custom_card_GUW9Bg": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "custom_card_rFaJei",
+        "custom_card_AWHND6",
+        "custom_card_k38Qj8",
+        "custom_card_re7QVY",
+        "custom_card_WpAkFt",
+        "custom_card_BgbKdG",
+        "custom_card_AjpNta",
+        "custom_card_Kq4ak6",
+        "custom_card_9bzVAr",
+        "custom_card_GUW9Bg"
+      ],
       "settings": {
         "title": "OUR BEST SELLERS",
         "collection": "",
