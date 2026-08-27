@@ -10,7 +10,7 @@
       {%- for block in section.blocks -%}
         <div class="custom-treatment-card" {{ block.shopify_attributes }}>
           
-          {%- comment -%} CONTENEDOR DE IMAGEN REDONDEADO ESTILO APPLE {%- endcomment -%}
+          {%- comment -%} APPLE-STYLE ROUNDED IMAGE CONTAINER (4:5 ASPECT RATIO) {%- endcomment -%}
           <div 
             class="custom-treatment-card__image-container"
             style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
@@ -21,7 +21,7 @@
                 alt="{{ block.settings.title | escape }}"
                 loading="lazy"
                 width="240"
-                height="240"
+                height="300"
                 class="custom-treatment-card__image"
               >
             {%- else -%}
@@ -29,7 +29,7 @@
             {%- endif -%}
           </div>
 
-          {%- comment -%} MUESTRAS DE COLOR (SWATCHES) {%- endcomment -%}
+          {%- comment -%} COLOR SWATCHES {%- endcomment -%}
           <div class="custom-treatment-card__swatches">
             {%- assign colors = block.settings.available_colors | split: ',' -%}
             {%- for color_code in colors -%}
@@ -44,7 +44,7 @@
             {%- endfor -%}
           </div>
 
-          {%- comment -%} DETALLES Y TEXTOS {%- endcomment -%}
+          {%- comment -%} CARD DETAILS AND TEXTS {%- endcomment -%}
           <div class="custom-treatment-card__content">
             <h3 class="custom-treatment-card__title">{{ block.settings.title }}</h3>
             
@@ -56,7 +56,7 @@
               <p class="custom-treatment-card__price">{{ block.settings.price }}</p>
             {%- endif -%}
 
-            {%- comment -%} BOTONES DE ACCIÓN ROJOS (ESTILO APPLE) {%- endcomment -%}
+            {%- comment -%} ACTION BUTTONS {%- endcomment -%}
             <div class="custom-treatment-card__actions">
               <a href="{{ block.settings.btn_primary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--primary">
                 {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
@@ -129,7 +129,7 @@
         },
         {
           "type": "header",
-          "content": "Primary Button (Red Pill)"
+          "content": "Primary Button"
         },
         {
           "type": "text",
@@ -144,7 +144,7 @@
         },
         {
           "type": "header",
-          "content": "Secondary Link (Red Text)"
+          "content": "Secondary Link"
         },
         {
           "type": "text",
