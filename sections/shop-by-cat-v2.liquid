@@ -1,0 +1,86 @@
+{{ 'shop-by-cat-v2.css' | asset_url | stylesheet_tag }}
+
+<section class="shop-by-cat-v2" aria-label="Shop by Category">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="shop-by-cat-v2__heading">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+
+    <div class="shop-by-cat-v2__slider">
+      <ul class="shop-by-cat-v2__list" role="list">
+        {%- for block in section.blocks -%}
+          <li class="shop-by-cat-v2__item" {{ block.shopify_attributes }}>
+            <a href="{{ block.settings.link | default: '#' }}" class="shop-by-cat-v2__link">
+              <div class="shop-by-cat-v2__image-wrapper">
+                {%- if block.settings.image != blank -%}
+                  <img
+                    src="{{ block.settings.image | image_url: width: 200 }}"
+                    alt="{{ block.settings.title | escape }}"
+                    loading="lazy"
+                    width="100"
+                    height="100"
+                    class="shop-by-cat-v2__image"
+                  >
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'shop-by-cat-v2__placeholder' }}
+                {%- endif -%}
+              </div>
+              <span class="shop-by-cat-v2__title">{{ block.settings.title }}</span>
+            </a>
+          </li>
+        {%- endfor -%}
+      </ul>
+    </div>
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Shop By Cat V2",
+  "tag": "section",
+  "class": "section-shop-by-cat-v2",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading Title",
+      "default": "Shop by Category"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_item",
+      "name": "Category Item",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Category Image / Icon"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Category Title",
+          "default": "Category"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Category Link"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shop By Cat V2",
+      "blocks": [
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" },
+        { "type": "category_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}
