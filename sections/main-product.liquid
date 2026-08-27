@@ -4,7 +4,7 @@
 
 <div class="product-page page-width">
   
-  <!-- BOTÓN VOLVER ATRÁS -->
+  <!-- BACK BUTTON -->
   <div class="product-page__back">
     <a href="javascript:history.back()" class="back-link">
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
@@ -12,10 +12,10 @@
     </a>
   </div>
 
-  <!-- FILA 1: INFORMACIÓN DE TEXTO E IMÁGENES -->
+  <!-- ROW 1: TEXT CONTENT & GALLERY -->
   <div class="product-main-grid">
     
-    <!-- Columna Izquierda: Títulos y Descripción Nativa de Shopify -->
+    <!-- Left Column: Titles & Native Shopify Description -->
     <div class="product-info-col">
       <h1 class="product-info__title">{{ product.title }}</h1>
       
@@ -25,12 +25,12 @@
         </div>
       {%- endif -%}
 
-      <!-- Descripción principal cargada directamente desde Shopify Admin -->
+      <!-- Main product description loaded directly from Shopify Admin -->
       <div class="product-info__description">
         {{ product.description }}
       </div>
 
-      <!-- Botón Comparar Modelos (Editable/Configurable) -->
+      <!-- Compare Models Trigger Button (Customizer Configurable) -->
       {%- if section.settings.show_compare_btn -%}
         <button class="product-compare-trigger-btn" id="OpenCompareModal">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
@@ -39,7 +39,7 @@
       {%- endif -%}
     </div>
 
-    <!-- Columna Derecha: Galería Dinámica de Imágenes de Shopify + Botón Cotizar -->
+    <!-- Right Column: Dynamic Gallery & Integrated Quote Request Button -->
     <div class="product-gallery-col">
       <div class="product-gallery">
         <div class="product-gallery__main">
@@ -50,7 +50,7 @@
           {% endif %}
         </div>
         
-        <!-- Galería de Miniaturas Dinámica -->
+        <!-- Dynamic Thumbnail Gallery -->
         {% if product.images.size > 1 %}
           <div class="product-gallery__thumbs">
             {% for image in product.images %}
@@ -59,7 +59,7 @@
           </div>
         {% endif %}
 
-        <!-- Botón de Cotizar Integrado en la Galería -->
+        <!-- Integrated Quote Request CTA Button -->
         <div class="product-gallery__quote-cta" style="margin-top: 16px;">
           <button 
             type="button" 
@@ -75,13 +75,13 @@
     </div>
   </div>
 
-  <!-- Modal de Cotización Dinámico -->
+  <!-- Dynamic Quote Modal Snippet -->
   {% render 'quote-modal' %}
 
-  <!-- FILA 2: COMPRA + TABLA TÉCNICA Y ACORDEONES DINÁMICOS -->
+  <!-- ROW 2: PURCHASE FORM, ACCORDIONS & CUSTOM HTML SPECS TABLE -->
   <div class="product-secondary-grid" style="margin-top: 40px;">
     
-    <!-- Columna Izquierda: Precio, Variantes, Formulario de Carrito -->
+    <!-- Left Column: Price, Options, Quantity & Cart Form -->
     <div class="product-purchase-col">
       <div class="product-price">{{ product.price | money }}</div>
 
@@ -115,7 +115,7 @@
         </div>
       {% endform %}
 
-      <!-- ACORDEONES (Bloques Editables en Customizer) -->
+      <!-- Accordion Blocks (Customizer Editable) -->
       <div class="product-accordions">
         <h3 class="product-acc-title">{{ section.settings.acc_heading | default: "Key Features for the Professional Station" }}</h3>
         
@@ -129,7 +129,7 @@
         {% endfor %}
       </div>
 
-      <!-- SECCIÓN ENVÍO Y CALCULADORA -->
+      <!-- Shipping Information & Calculator Block -->
       <div class="product-shipping-block">
         <h4 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping" }}</h4>
         <p>{{ section.settings.shipping_text | default: "Standard delivery typically takes 5–7 business days." }}</p>
@@ -140,33 +140,27 @@
       </div>
     </div>
 
-    <!-- Columna Derecha: Tabla de Especificaciones Dinámica (Metafields o Bloques) -->
+    <!-- Right Column: Custom Raw HTML Technical Specifications Block / Metafield Container -->
     <div class="product-specs-col">
-      <div class="tech-table-wrapper">
-        <table class="tech-table">
-          <thead>
-            <tr>
-              <th>TECHNICAL ASPECT</th>
-              <th>SPECIFICATION DETAILS</th>
-            </tr>
-          </thead>
-          <tbody>
-            <!-- Si el producto tiene Metafields de especificaciones técnicos -->
-            <tr><td>Manufacturer</td><td>{{ product.metafields.custom.manufacturer | default: "Equipro Beauty" }}</td></tr>
-            <tr><td>Model SKU</td><td>{{ product.selected_or_first_available_variant.sku | default: product.id }}</td></tr>
-            
-            <!-- Filas Dinámicas agregadas mediante Bloques del Customizer -->
-            {% for block in section.blocks %}
-              {% if block.type == 'spec_row' %}
-                <tr {{ block.shopify_attributes }}>
-                  <td>{{ block.settings.label }}</td>
-                  <td>{{ block.settings.value }}</td>
-                </tr>
-              {% endif %}
-            {% endfor %}
-          </tbody>
-        </table>
-      </div>
+      {%- for block in section.blocks -%}
+        {%- case block.type -%}
+          {%- when 'custom_html' -%}
+            <div class="product-specs-custom-html" {{ block.shopify_attributes }}>
+              {{ block.settings.html_code }}
+            </div>
+        {%- endcase -%}
+      {%- else -%}
+        <!-- Fallback: Renders product custom metafield table if present, otherwise displays default container -->
+        {%- if product.metafields.custom.technical_table != blank -%}
+          <div class="equipro-specs-container">
+            {{ product.metafields.custom.technical_table }}
+          </div>
+        {%- else -%}
+          <div class="equipro-specs-container">
+            <!-- Inject your <div class="equipro-specs-container"><table class="equipro-table">...</table></div> here -->
+          </div>
+        {%- endif -%}
+      {%- endfor -%}
     </div>
   </div>
 </div>
@@ -263,20 +257,14 @@
       ]
     },
     {
-      "type": "spec_row",
-      "name": "Technical Spec Row",
+      "type": "custom_html",
+      "name": "Raw HTML Table Block",
       "settings": [
         {
-          "type": "text",
-          "id": "label",
-          "label": "Aspect / Property Name",
-          "default": "Dimensions"
-        },
-        {
-          "type": "text",
-          "id": "value",
-          "label": "Specification Value",
-          "default": "10 x 10 x 10 in"
+          "type": "html",
+          "id": "html_code",
+          "label": "HTML Code",
+          "default": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr></tbody></table></div>"
         }
       ]
     }
@@ -293,11 +281,7 @@
           }
         },
         {
-          "type": "spec_row",
-          "settings": {
-            "label": "Warranty",
-            "value": "2 Years Warranty"
-          }
+          "type": "custom_html"
         }
       ]
     }
