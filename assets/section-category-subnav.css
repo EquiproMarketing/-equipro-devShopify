@@ -1,45 +1,204 @@
-/* assets/section-category-subnav.css */
-.category-subnav {
-  width: 100%;
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e9ecef;
-  padding: 12px 0;
-  display: block !important;
+.configurator-container {
+  display: grid;
+  grid-template-columns: 1fr 480px;
+  gap: 50px;
+  padding-top: 40px;
+  padding-bottom: 80px;
 }
 
-.category-subnav__list {
-  display: flex !important;
-  flex-direction: row !important;
+/* GALLERY STICKY */
+.configurator-gallery-sticky {
+  position: sticky;
+  top: 100px;
+}
+
+.configurator-gallery__highlight {
+  background-color: #f8f9fa;
+  border-left: 3px solid #ab273b;
+  padding: 14px 18px;
+  border-radius: 0 6px 6px 0;
+  font-size: 0.9rem;
+  color: #333333;
+  margin-bottom: 24px;
+}
+
+.configurator-gallery__main img {
+  width: 100%;
+  height: auto;
+  border-radius: 8px;
+  display: block;
+}
+
+.configurator-gallery__nav {
+  display: flex;
   align-items: center;
   justify-content: center;
-  gap: 28px;
-  list-style: none !important;
-  margin: 0 !important;
-  padding: 0 20px !important;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  gap: 12px;
+  margin-top: 20px;
 }
 
-.category-subnav__list::-webkit-scrollbar {
+.gallery-dots-wrapper {
+  display: flex;
+  gap: 8px;
+}
+
+.gallery-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: #d1d1d1;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.gallery-dot.is-active,
+.gallery-dot:hover {
+  background-color: #ab273b;
+  transform: scale(1.2);
+}
+
+/* RIGHT OPTIONS COLUMN */
+.configurator-tag {
+  color: #ab273b;
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.configurator-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111111;
+  margin: 6px 0 12px 0;
+}
+
+.configurator-price-row {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 30px;
+}
+
+.configurator-price {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #111111;
+}
+
+.configurator-finance-text {
+  font-size: 0.85rem;
+  color: #666666;
+}
+
+/* STEP CARDS */
+.configurator-step-block {
+  margin-bottom: 36px;
+}
+
+.step-group-title {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.step-group-subtitle {
+  font-size: 0.88rem;
+  color: #666666;
+  margin-bottom: 16px;
+}
+
+.option-cards-stack {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.option-selection-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: 2px solid #e0e0e0;
+  border-radius: 8px;
+  padding: 18px 20px;
+  cursor: pointer;
+  transition: border-color 0.2s ease, background-color 0.2s ease;
+}
+
+.option-selection-card input[type="radio"] {
   display: none;
 }
 
-.category-subnav__link {
-  color: #495057;
-  text-decoration: none;
-  font-size: 0.88rem;
-  font-weight: 600;
-  letter-spacing: 0.3px;
-  text-transform: uppercase;
-  transition: color 0.2s ease;
-  padding: 6px 12px;
-  border-radius: 4px;
-  display: inline-block;
+.option-selection-card:hover,
+.option-selection-card.is-selected {
+  border-color: #ab273b;
+  background-color: #faf0f1;
 }
 
-.category-subnav__link:hover,
-.category-subnav__link.is-active {
-  color: #ab273b !important; /* Equipro Red */
-  background-color: #f1f3f5;
+.option-card__name {
+  display: block;
+  font-size: 0.95rem;
+  color: #111111;
+  margin-bottom: 4px;
+}
+
+.option-card__desc {
+  font-size: 0.82rem;
+  color: #555555;
+  margin: 0;
+  line-height: 1.35;
+}
+
+.option-card__price-tag span {
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #111111;
+  white-space: nowrap;
+}
+
+/* SWATCHES */
+.swatches-row {
+  display: flex;
+  gap: 12px;
+}
+
+.swatch-circle {
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  cursor: pointer;
+  border: 2px solid transparent;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.swatch-circle:hover,
+.swatch-circle.is-active {
+  transform: scale(1.15);
+  border-color: #ab273b !important;
+}
+
+/* ADD TO CART */
+.configurator-add-to-cart-btn {
+  width: 100%;
+  background-color: #ab273b;
+  color: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.configurator-add-to-cart-btn:hover {
+  background-color: #8c1e2e;
+}
+
+@media (max-width: 989px) {
+  .configurator-container {
+    grid-template-columns: 1fr;
+  }
 }
