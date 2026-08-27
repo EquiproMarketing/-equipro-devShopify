@@ -17,16 +17,16 @@
         "menu": "main-menu"
       }
     },
-    "category_subnav_gDdxi4": {
+    "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "name": "Category Subnav Bar",
       "settings": {
-        "category_menu": "sub_nav_menu"
+        "category_menu": "category-subnav-bar"
       }
     }
   },
   "order": [
     "header",
-    "category_subnav_gDdxi4"
+    "category_subnav_CdbCNN"
   ]
 }

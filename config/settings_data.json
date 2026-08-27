@@ -8,5 +8,15 @@
  * ------------------------------------------------------------
  */
 {
-  "current": {}
+  "current": {
+    "sections": {
+      "category-subnav": {
+        "type": "category-subnav",
+        "settings": {
+          "category_menu": ""
+        }
+      }
+    },
+    "content_for_index": []
+  }
 }
