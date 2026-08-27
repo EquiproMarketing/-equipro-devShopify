@@ -26,11 +26,11 @@
                 <div class="apple-card__image-wrapper" style="background-color: {{ block.settings.card_bg | default: '#ffffff' }};">
                   {% if block.settings.image != blank %}
                     <img
-                      src="{{ block.settings.image | image_url: width: 500 }}"
+                      src="{{ block.settings.image | image_url: width: 400 }}"
                       alt="{{ block.settings.title | escape }}"
                       loading="lazy"
-                      width="240"
-                      height="300"
+                      width="200"
+                      height="250"
                       class="apple-card__image"
                     >
                   {% else %}
@@ -72,19 +72,12 @@
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     new Swiper('.best-sellers-swiper', {
-      slidesPerView: 1.2,
-      spaceBetween: 16,
-      loop: true,
+      slidesPerView: 'auto',
+      spaceBetween: 20,
+      freeMode: true,
       grabCursor: true,
-      speed: 4000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true,
-      },
       breakpoints: {
-        640: { slidesPerView: 2.2, spaceBetween: 20 },
-        990: { slidesPerView: 4, spaceBetween: 24 }
+        750: { spaceBetween: 24 }
       }
     });
   });
