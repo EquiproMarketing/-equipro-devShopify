@@ -1,18 +1,6 @@
-{% if request.path contains '/pages/about' %}
-  {% render 'about-content' %}
-{% else %}
-  <div class="page-width page-width--narrow page-gutter">
-    <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
-    <div class="rte">
-      {{ page.content }}
-    </div>
+<div class="page-width page-width--narrow page-gutter">
+  <h1 class="main-page-title page-title h0">{{ page.title | escape }}</h1>
+  <div class="rte">
+    {{ page.content }}
   </div>
-{% endif %}
-
-{% schema %}
-{
-  "name": "Page Content",
-  "tag": "section",
-  "class": "section"
-}
-{% endschema %}
+</div>
