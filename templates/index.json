@@ -505,6 +505,125 @@
         "s_2"
       ],
       "settings": {}
+    },
+    "custom_spa_pack_builder_BDtr9H": {
+      "type": "custom-spa-pack-builder",
+      "blocks": {
+        "category_tab_yqM7nx": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "",
+            "product_2": "",
+            "badge_2": "",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_ekMRbh": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "",
+            "product_2": "",
+            "badge_2": "",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_zkDPYJ": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "",
+            "product_2": "",
+            "badge_2": "",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_gN7BQB": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spa & Esthetics Setup",
+            "product_1": "",
+            "badge_1": "Treatment Bed",
+            "product_2": "",
+            "badge_2": "Ergonomic Stool",
+            "product_3": "",
+            "badge_3": "Utility Trolley",
+            "product_4": "",
+            "badge_4": "Facial Steamer",
+            "product_5": "",
+            "badge_5": "Magnifying Lamp",
+            "product_6": "",
+            "badge_6": "Towel Warmer"
+          }
+        },
+        "category_tab_AC4NNC": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Orthopedic & Podiatry",
+            "product_1": "",
+            "badge_1": "Treatment Bed",
+            "product_2": "",
+            "badge_2": "Ergonomic Stool",
+            "product_3": "",
+            "badge_3": "Utility Trolley",
+            "product_4": "",
+            "badge_4": "Facial Steamer",
+            "product_5": "",
+            "badge_5": "Magnifying Lamp",
+            "product_6": "",
+            "badge_6": "Towel Warmer"
+          }
+        }
+      },
+      "block_order": [
+        "category_tab_yqM7nx",
+        "category_tab_ekMRbh",
+        "category_tab_zkDPYJ",
+        "category_tab_gN7BQB",
+        "category_tab_AC4NNC"
+      ],
+      "name": "Spa Equipment Pack",
+      "settings": {}
     }
   },
   "order": [
@@ -515,6 +634,7 @@
     "image_with_text",
     "custom_product_treatment_pKdyQh",
     "custom_subcategory_slider_YFNFXr",
-    "image_slider"
+    "image_slider",
+    "custom_spa_pack_builder_BDtr9H"
   ]
 }
