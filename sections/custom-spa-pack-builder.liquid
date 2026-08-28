@@ -39,7 +39,7 @@
                 <div class="swiper-slide swiper-slide--hero">
                   <div 
                     class="spa-pack-hero-card" 
-                    style="background-color: {{ block.settings.hero_bg | default: '#000000' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
+                    style="background-color: {{ block.settings.hero_bg | default: '#1d1d1f' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
                   >
                     <div class="spa-pack-hero-card__content">
                       {%- if block.settings.hero_title != blank -%}
@@ -197,7 +197,7 @@
           "type": "text",
           "id": "tab_title",
           "label": "Tab Name",
-          "default": "Vie étudiante"
+          "default": "Spas & Wellness Centers"
         },
         {
           "type": "header",
@@ -213,7 +213,7 @@
           "type": "color",
           "id": "hero_bg",
           "label": "Hero Card Background",
-          "default": "#000000"
+          "default": "#1d1d1f"
         },
         {
           "type": "color",
@@ -225,13 +225,13 @@
           "type": "text",
           "id": "hero_title",
           "label": "Hero Title",
-          "default": "Equip Your Treatment Room."
+          "default": "Tout pour équiper votre espace."
         },
         {
           "type": "textarea",
           "id": "hero_subtitle",
           "label": "Hero Subtitle",
-          "default": "Complete spa setups designed for ultimate ergonomic comfort and clinic efficiency."
+          "default": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être."
         },
         {
           "type": "image_picker",
@@ -250,8 +250,7 @@
         {
           "type": "text",
           "id": "badge_1",
-          "label": "Custom Badge 1",
-          "default": "Essential"
+          "label": "Custom Badge 1"
         },
         {
           "type": "product",
@@ -261,8 +260,7 @@
         {
           "type": "text",
           "id": "badge_2",
-          "label": "Custom Badge 2",
-          "default": "Top Choice"
+          "label": "Custom Badge 2"
         },
         {
           "type": "product",
@@ -314,19 +312,41 @@
         {
           "type": "category_tab",
           "settings": {
-            "tab_title": "Vie étudiante"
+            "tab_title": "Spas & Bien-être",
+            "hero_title": "Spas & Wellness",
+            "hero_subtitle": "Tables de massage, lits de traitement électriques et hydrauliques, douches Vichy et thérapie thermique."
           }
         },
         {
           "type": "category_tab",
           "settings": {
-            "tab_title": "Choix branchés"
+            "tab_title": "Esthétique & Salons",
+            "hero_title": "Esthétique & Soins",
+            "hero_subtitle": "Vaporisateurs, unités faciales multifonctions, chauffe-cire, chauffe-serviettes et analyseurs de peau."
           }
         },
         {
           "type": "category_tab",
           "settings": {
-            "tab_title": "En couleur"
+            "tab_title": "Épilation & Pédicure",
+            "hero_title": "Soins Spécialisés",
+            "hero_subtitle": "Chaises et lits polyvalents pour soins faciaux, massages, épilation, pédicure et soins corporels."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Écoles & Instituts",
+            "hero_title": "Formation Pro",
+            "hero_subtitle": "Équipements certifiés choisis par les plus grands instituts comme Aesthetic Science Institute et Continental Schools."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Professionnels Indépendants",
+            "hero_title": "Espaces Indépendants",
+            "hero_subtitle": "Solutions compactes et haut de gamme adaptées aux besoins des praticiens indépendants."
           }
         }
       ]

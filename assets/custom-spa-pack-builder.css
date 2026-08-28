@@ -1,13 +1,13 @@
-/* CUSTOM SPA PACK BUILDER - APPLE PILL TABS STYLE */
+/* CUSTOM SPA PACK BUILDER - EQUIPRO RED & LIGHT GREY BACKGROUND */
 
 .spa-pack-section {
-    padding: 50px 0;
-    background-color: #f5f5f7; /* Apple smooth light grey background */
+    padding: 60px 0;
+    background-color: #f5f5f7; /* Light grey background */
   }
   
   /* APPLE PILL CAPSULE BAR CONTAINER */
   .spa-pack-pill-wrapper {
-    margin-bottom: 32px;
+    margin-bottom: 36px;
     display: flex;
     justify-content: flex-start;
     overflow-x: auto;
@@ -21,8 +21,8 @@
   .spa-pack-pill-bar {
     display: inline-flex;
     align-items: center;
-    background-color: #e8e8ed; /* Segmented control capsule container */
-    padding: 4px;
+    background-color: #e8e8ed; /* Segmented capsule background */
+    padding: 5px;
     border-radius: 980px;
     gap: 4px;
   }
@@ -32,23 +32,23 @@
     border: none;
     font-size: 0.88rem;
     font-weight: 500;
-    color: #1d1d1f;
-    padding: 8px 18px;
+    color: #515154;
+    padding: 9px 20px;
     border-radius: 980px;
     cursor: pointer;
-    transition: all 0.2s cubic-bezier(0.25, 0.1, 0.25, 1);
+    transition: all 0.25s cubic-bezier(0.25, 0.1, 0.25, 1);
     white-space: nowrap;
   }
   
   .spa-pack-pill-item:hover {
-    color: #000000;
+    color: #1d1d1f;
   }
   
   .spa-pack-pill-item.is-active {
-    background-color: #1d1d1f; /* Active dark pill button */
+    background-color: #ab273b; /* Equipro Red for active tab */
     color: #ffffff;
     font-weight: 600;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12);
+    box-shadow: 0 2px 10px rgba(171, 39, 59, 0.25);
   }
   
   /* TAB PANELS CONTROL */
@@ -68,7 +68,7 @@
   }
   
   .spa-pack-panel .swiper-slide--hero {
-    width: 480px !important; /* Wide Hero Card */
+    width: 440px !important; /* Hero Promo Card Width */
   }
   
   @media (max-width: 749px) {
@@ -77,12 +77,12 @@
     }
   }
   
-  /* HERO PROMO CARD (BLACK CARD) */
+  /* HERO PROMO CARD */
   .spa-pack-hero-card {
     width: 100%;
     height: 100%;
-    min-height: 400px;
-    border-radius: 24px;
+    min-height: 380px;
+    border-radius: 20px;
     padding: 32px;
     display: flex;
     flex-direction: column;
@@ -92,7 +92,7 @@
   }
   
   .spa-pack-hero-card__title {
-    font-size: 2.2rem;
+    font-size: 2rem;
     font-weight: 700;
     line-height: 1.15;
     margin: 0 0 12px 0;
@@ -100,11 +100,11 @@
   }
   
   .spa-pack-hero-card__subtitle {
-    font-size: 0.95rem;
+    font-size: 0.92rem;
     opacity: 0.85;
     line-height: 1.4;
     margin: 0;
-    max-width: 340px;
+    max-width: 320px;
   }
   
   .spa-pack-hero-card__image-wrapper {
@@ -117,7 +117,7 @@
   
   .spa-pack-hero-card__image {
     max-width: 100%;
-    max-height: 220px;
+    max-height: 200px;
     object-fit: contain;
   }
   
@@ -153,6 +153,7 @@
     justify-content: center;
     padding: 12px;
     overflow: hidden;
+    background-color: #ffffff;
   }
   
   .spa-pack-card__image {
@@ -197,7 +198,9 @@
   .spa-pack-card__tag {
     font-size: 0.72rem;
     font-weight: 600;
-    color: #b84a00;
+    color: #ab273b; /* Equipro Red Tag */
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
     margin-bottom: 4px;
   }
   
@@ -212,7 +215,7 @@
   
   .spa-pack-card__price {
     font-size: 0.9rem;
-    font-weight: 500;
+    font-weight: 600;
     color: #1d1d1f;
     margin-top: auto;
     margin-bottom: 0;
