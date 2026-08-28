@@ -6,7 +6,7 @@
     <h1 class="collections-page__title">{{ section.settings.title | escape }}</h1>
   {%- endif -%}
 
-  <!-- Bento Red Categories Grid -->
+  <!-- Bento Categories Grid -->
   <div class="collections-bento-grid">
     {% for block in section.blocks %}
       {% assign custom_url = block.settings.custom_link %}
@@ -22,8 +22,10 @@
             <div class="collection-bento-tile__placeholder"></div>
           {% endif %}
           
-          {%- comment -%} OVERLAY ROJO MONOCROMÁTICO (EQUIPRO RED) {%- endcomment -%}
-          <div class="collection-bento-tile__overlay"></div>
+          {%- comment -%} OVERLAY OPCIONAL PARA MEJORAR LEGIBILIDAD (SI HACE FALTA) {%- endcomment -%}
+          {%- if section.settings.enable_overlay -%}
+            <div class="collection-bento-tile__overlay" style="opacity: {{ section.settings.overlay_opacity | divided_by: 100.0 }};"></div>
+          {%- endif -%}
         </div>
         
         <div class="collection-bento-tile__content">
@@ -47,6 +49,22 @@
       "id": "title",
       "label": "Heading",
       "default": "Products"
+    },
+    {
+      "type": "checkbox",
+      "id": "enable_overlay",
+      "label": "Enable Soft Dark Overlay (for Text Readability)",
+      "default": false
+    },
+    {
+      "type": "range",
+      "id": "overlay_opacity",
+      "min": 0,
+      "max": 80,
+      "step": 5,
+      "unit": "%",
+      "label": "Overlay Opacity",
+      "default": 20
     }
   ],
   "blocks": [
@@ -72,7 +90,7 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Custom Tile Image"
+          "label": "Custom Tile Image (With Color Included)"
         }
       ]
     }
