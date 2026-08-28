@@ -5,19 +5,25 @@
   <div class="collections-page__back">
     <a href="javascript:history.back()" class="back-link">
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-        <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <path d="M7 1L1 6L7 11" stroke="#ab273b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       Back
     </a>
   </div>
 
   <!-- Page Title -->
-  <h1 class="collections-page__title">{{ section.settings.title }}</h1>
+  {%- if section.settings.title != blank -%}
+    <h1 class="collections-page__title">{{ section.settings.title | escape }}</h1>
+  {%- endif -%}
 
   <!-- Categories Grid -->
   <div class="collections-grid">
     {% for block in section.blocks %}
-      <a href="{{ block.settings.collection.url | default: '#' }}" class="collection-tile" {{ block.shopify_attributes }}>
+      {%- comment -%} LINK PRIORITY: CUSTOM LINK OVERRIDE > COLLECTION URL > DEFAULT '#' {%- endcomment -%}
+      {% assign custom_url = block.settings.custom_link %}
+      {% assign target_url = custom_url | default: block.settings.collection.url | default: '#' %}
+
+      <a href="{{ target_url }}" class="collection-tile" {{ block.shopify_attributes }}>
         <div class="collection-tile__bg">
           {% if block.settings.image != blank %}
             {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'collection-tile__img' }}
@@ -31,7 +37,7 @@
         
         <div class="collection-tile__content">
           <span class="collection-tile__name">
-            {{ block.settings.title | default: block.settings.collection.title }}
+            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
           </span>
         </div>
       </a>
@@ -61,6 +67,11 @@
           "type": "collection",
           "id": "collection",
           "label": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link Override (e.g. Subcategory or Custom Page)"
         },
         {
           "type": "text",
