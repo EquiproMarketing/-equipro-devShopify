@@ -509,23 +509,47 @@
     "custom_spa_pack_builder_BDtr9H": {
       "type": "custom-spa-pack-builder",
       "blocks": {
+        "category_tab_Y7wYyJ": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#9E9E9E",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "hero_image": "{{ block.settings.product_1.featured_image }}",
+            "product_1": "ei-502-infinity",
+            "badge_1": "{{ block.settings.product_1.title }}",
+            "product_2": "{{ block.settings.product_1 }}",
+            "badge_2": "{{ block.settings.product_1.vendor }}",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "ergonomic-stool-with-backrest",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
         "category_tab_yqM7nx": {
           "type": "category_tab",
           "settings": {
             "tab_title": "Spas & Wellness Centers",
             "show_hero_card": true,
-            "hero_bg": "#1d1d1f",
+            "hero_bg": "#1D1F1E",
             "hero_text_color": "#ffffff",
             "hero_title": "Tout pour équiper votre espace.",
             "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
             "product_1": "",
-            "badge_1": "",
+            "badge_1": "dssd",
             "product_2": "",
-            "badge_2": "",
+            "badge_2": "asdfsdff",
             "product_3": "",
-            "badge_3": "",
+            "badge_3": "sdfsdfsdf",
             "product_4": "",
-            "badge_4": "",
+            "badge_4": "sfsd",
             "product_5": "",
             "badge_5": "",
             "product_6": "",
@@ -616,6 +640,7 @@
         }
       },
       "block_order": [
+        "category_tab_Y7wYyJ",
         "category_tab_yqM7nx",
         "category_tab_ekMRbh",
         "category_tab_zkDPYJ",
