@@ -23,7 +23,7 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} TAB CONTENT PANELS {%- endcomment -%}
+    {%- comment -%} TAB CONTENT PANELS (STATIC CSS GRID) {%- endcomment -%}
     <div class="spa-pack-content">
       {%- for block in category_blocks -%}
         <div 
@@ -31,102 +31,96 @@
           id="tab-{{ section.id }}-{{ block.id }}"
           role="tabpanel"
         >
-          <div class="swiper spa-pack-swiper-{{ block.id }}">
-            <div class="swiper-wrapper">
-              
-              {%- comment -%} FEATURED PROMO HERO CARD (OPTIONAL FIRST SLIDE) {%- endcomment -%}
-              {%- if block.settings.show_hero_card -%}
-                <div class="swiper-slide swiper-slide--hero">
-                  <div 
-                    class="spa-pack-hero-card" 
-                    style="background-color: {{ block.settings.hero_bg | default: '#1d1d1f' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
-                  >
-                    <div class="spa-pack-hero-card__content">
-                      {%- if block.settings.hero_title != blank -%}
-                        <h3 class="spa-pack-hero-card__title">{{ block.settings.hero_title }}</h3>
-                      {%- endif -%}
-                      
-                      {%- if block.settings.hero_subtitle != blank -%}
-                        <p class="spa-pack-hero-card__subtitle">{{ block.settings.hero_subtitle }}</p>
-                      {%- endif -%}
-                    </div>
-
-                    {%- if block.settings.hero_image != blank -%}
-                      <div class="spa-pack-hero-card__image-wrapper">
-                        <img 
-                          src="{{ block.settings.hero_image | image_url: width: 800 }}" 
-                          alt="{{ block.settings.hero_title | escape }}"
-                          loading="lazy"
-                          class="spa-pack-hero-card__image"
-                        >
-                      </div>
-                    {%- endif -%}
-                  </div>
+          <div class="spa-pack-grid">
+            
+            {%- comment -%} FEATURED PROMO HERO CARD (SPANS 2 COLUMNS) {%- endcomment -%}
+            {%- if block.settings.show_hero_card -%}
+              <div 
+                class="spa-pack-hero-card" 
+                style="background-color: {{ block.settings.hero_bg | default: '#1d1d1f' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
+              >
+                <div class="spa-pack-hero-card__content">
+                  {%- if block.settings.hero_title != blank -%}
+                    <h3 class="spa-pack-hero-card__title">{{ block.settings.hero_title }}</h3>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.hero_subtitle != blank -%}
+                    <p class="spa-pack-hero-card__subtitle">{{ block.settings.hero_subtitle }}</p>
+                  {%- endif -%}
                 </div>
-              {%- endif -%}
 
-              {%- comment -%} PRODUCT CARDS {%- endcomment -%}
-              {%- for i in (1..6) -%}
-                {%- assign prod_setting_id = 'product_' | append: i -%}
-                {%- assign badge_setting_id = 'badge_' | append: i -%}
-                {%- assign selected_product = block.settings[prod_setting_id] -%}
-                {%- assign custom_badge = block.settings[badge_setting_id] -%}
-
-                {%- if selected_product != blank -%}
-                  <div class="swiper-slide">
-                    <a href="{{ selected_product.url }}" class="spa-pack-card">
-                      
-                      {%- comment -%} 4:5 IMAGE CONTAINER {%- endcomment -%}
-                      <div class="spa-pack-card__image-container">
-                        {%- if selected_product.featured_image != blank -%}
-                          <img
-                            src="{{ selected_product.featured_image | image_url: width: 500 }}"
-                            alt="{{ selected_product.title | escape }}"
-                            loading="lazy"
-                            width="240"
-                            height="300"
-                            class="spa-pack-card__image spa-pack-card__image--primary"
-                          >
-                          {%- if selected_product.images.size > 1 -%}
-                            <img
-                              src="{{ selected_product.images[1] | image_url: width: 500 }}"
-                              alt="{{ selected_product.title | escape }}"
-                              loading="lazy"
-                              width="240"
-                              height="300"
-                              class="spa-pack-card__image spa-pack-card__image--secondary"
-                            >
-                          {%- endif -%}
-                        {%- else -%}
-                          {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
-                        {%- endif -%}
-                      </div>
-
-                      {%- comment -%} CONTENT DETAILS {%- endcomment -%}
-                      <div class="spa-pack-card__content">
-                        {%- if custom_badge != blank -%}
-                          <span class="spa-pack-card__tag">{{ custom_badge }}</span>
-                        {%- elsif selected_product.type != blank -%}
-                          <span class="spa-pack-card__tag">{{ selected_product.type }}</span>
-                        {%- endif -%}
-
-                        <h3 class="spa-pack-card__title">{{ selected_product.title }}</h3>
-                        
-                        <p class="spa-pack-card__price">
-                          {%- if selected_product.price_varies -%}
-                            From {{ selected_product.price_min | money }}
-                          {%- else -%}
-                            {{ selected_product.price | money }}
-                          {%- endif -%}
-                        </p>
-                      </div>
-
-                    </a>
+                {%- if block.settings.hero_image != blank -%}
+                  <div class="spa-pack-hero-card__image-wrapper">
+                    <img 
+                      src="{{ block.settings.hero_image | image_url: width: 800 }}" 
+                      alt="{{ block.settings.hero_title | escape }}"
+                      loading="lazy"
+                      class="spa-pack-hero-card__image"
+                    >
                   </div>
                 {%- endif -%}
-              {%- endfor -%}
+              </div>
+            {%- endif -%}
 
-            </div>
+            {%- comment -%} PRODUCT CARDS {%- endcomment -%}
+            {%- for i in (1..6) -%}
+              {%- assign prod_setting_id = 'product_' | append: i -%}
+              {%- assign badge_setting_id = 'badge_' | append: i -%}
+              {%- assign selected_product = block.settings[prod_setting_id] -%}
+              {%- assign custom_badge = block.settings[badge_setting_id] -%}
+
+              {%- if selected_product != blank -%}
+                <a href="{{ selected_product.url }}" class="spa-pack-card">
+                  
+                  {%- comment -%} 4:5 IMAGE CONTAINER {%- endcomment -%}
+                  <div class="spa-pack-card__image-container">
+                    {%- if selected_product.featured_image != blank -%}
+                      <img
+                        src="{{ selected_product.featured_image | image_url: width: 500 }}"
+                        alt="{{ selected_product.title | escape }}"
+                        loading="lazy"
+                        width="240"
+                        height="300"
+                        class="spa-pack-card__image spa-pack-card__image--primary"
+                      >
+                      {%- if selected_product.images.size > 1 -%}
+                        <img
+                          src="{{ selected_product.images[1] | image_url: width: 500 }}"
+                          alt="{{ selected_product.title | escape }}"
+                          loading="lazy"
+                          width="240"
+                          height="300"
+                          class="spa-pack-card__image spa-pack-card__image--secondary"
+                        >
+                      {%- endif -%}
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- comment -%} CONTENT DETAILS {%- endcomment -%}
+                  <div class="spa-pack-card__content">
+                    {%- if custom_badge != blank -%}
+                      <span class="spa-pack-card__tag">{{ custom_badge }}</span>
+                    {%- elsif selected_product.type != blank -%}
+                      <span class="spa-pack-card__tag">{{ selected_product.type }}</span>
+                    {%- endif -%}
+
+                    <h3 class="spa-pack-card__title">{{ selected_product.title }}</h3>
+                    
+                    <p class="spa-pack-card__price">
+                      {%- if selected_product.price_varies -%}
+                        From {{ selected_product.price_min | money }}
+                      {%- else -%}
+                        {{ selected_product.price | money }}
+                      {%- endif -%}
+                    </p>
+                  </div>
+
+                </a>
+              {%- endif -%}
+            {%- endfor -%}
+
           </div>
         </div>
       {%- endfor -%}
@@ -140,25 +134,9 @@
     const sectionContainer = document.getElementById('spa-pack-{{ section.id }}');
     if (!sectionContainer) return;
 
-    // Initialize Swiper for each panel
-    const panels = sectionContainer.querySelectorAll('.spa-pack-panel');
-    panels.forEach(panel => {
-      const swiperEl = panel.querySelector('.swiper');
-      if (swiperEl) {
-        new Swiper(swiperEl, {
-          slidesPerView: 'auto',
-          spaceBetween: 24,
-          grabCursor: true,
-          freeMode: true,
-          breakpoints: {
-            750: { spaceBetween: 32 }
-          }
-        });
-      }
-    });
-
-    // Apple Pill Tab Switcher Logic
     const pillItems = sectionContainer.querySelectorAll('.spa-pack-pill-item');
+    const panels = sectionContainer.querySelectorAll('.spa-pack-panel');
+
     pillItems.forEach(pill => {
       pill.addEventListener('click', function() {
         const targetId = this.getAttribute('data-tab');
@@ -197,7 +175,7 @@
           "type": "text",
           "id": "tab_title",
           "label": "Tab Name",
-          "default": "Spas & Wellness Centers"
+          "default": "Spas & Bien-être"
         },
         {
           "type": "header",
@@ -225,13 +203,13 @@
           "type": "text",
           "id": "hero_title",
           "label": "Hero Title",
-          "default": "Tout pour équiper votre espace."
+          "default": "La rentrée, simplifiée."
         },
         {
           "type": "textarea",
           "id": "hero_subtitle",
           "label": "Hero Subtitle",
-          "default": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être."
+          "default": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau."
         },
         {
           "type": "image_picker",
