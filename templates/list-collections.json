@@ -16,6 +16,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "skincare-equipment",
+            "custom_link": "",
             "title": "Skincare Équipments",
             "image": "shopify://shop_images/Logo_Google_Size-01.png"
           }
@@ -24,6 +25,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
+            "custom_link": "",
             "title": "Treatment Tables"
           }
         },
@@ -31,6 +33,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
+            "custom_link": "",
             "title": "Stools"
           }
         },
@@ -38,6 +41,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
+            "custom_link": "",
             "title": "Trolleys"
           }
         },
@@ -45,6 +49,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
+            "custom_link": "",
             "title": "Mag-lamps"
           }
         },
@@ -52,6 +57,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
+            "custom_link": "",
             "title": "Wellness therapy"
           }
         }
@@ -64,12 +70,81 @@
         "cat_5",
         "cat_6"
       ],
+      "disabled": true,
+      "settings": {
+        "title": "Products",
+        "enable_overlay": false,
+        "overlay_opacity": 20
+      }
+    },
+    "section_bento_grid_v2_yrCrHN": {
+      "type": "section-bento-grid-v2",
+      "blocks": {
+        "collection_item_FqTBUf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Skincare Equipments"
+          }
+        },
+        "collection_item_9cLwjq": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Treatment Tables"
+          }
+        },
+        "collection_item_KY6i7D": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Stools"
+          }
+        },
+        "collection_item_PdKBfn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Trolleys"
+          }
+        },
+        "collection_item_ED3Qgk": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Mag-lamps"
+          }
+        },
+        "collection_item_nhq9hn": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Wellness therapy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_FqTBUf",
+        "collection_item_9cLwjq",
+        "collection_item_KY6i7D",
+        "collection_item_PdKBfn",
+        "collection_item_ED3Qgk",
+        "collection_item_nhq9hn"
+      ],
+      "name": "Bento Grid V2",
       "settings": {
         "title": "Products"
       }
     }
   },
   "order": [
-    "main_grid"
+    "main_grid",
+    "section_bento_grid_v2_yrCrHN"
   ]
 }

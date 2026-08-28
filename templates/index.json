@@ -514,7 +514,7 @@
           "settings": {
             "tab_title": "Spas & Wellness Centers",
             "show_hero_card": true,
-            "hero_bg": "#9E9E9E",
+            "hero_bg": "#9e9e9e",
             "hero_text_color": "#ffffff",
             "hero_title": "Tout pour équiper votre espace.",
             "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
@@ -537,7 +537,7 @@
           "settings": {
             "tab_title": "Spas & Wellness Centers",
             "show_hero_card": true,
-            "hero_bg": "#1D1F1E",
+            "hero_bg": "#1d1f1e",
             "hero_text_color": "#ffffff",
             "hero_title": "Tout pour équiper votre espace.",
             "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
@@ -605,6 +605,11 @@
           "type": "category_tab",
           "settings": {
             "tab_title": "Spa & Esthetics Setup",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "La rentrée, simplifiée.",
+            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
             "product_1": "",
             "badge_1": "Treatment Bed",
             "product_2": "",
@@ -623,6 +628,11 @@
           "type": "category_tab",
           "settings": {
             "tab_title": "Orthopedic & Podiatry",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "La rentrée, simplifiée.",
+            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
             "product_1": "",
             "badge_1": "Treatment Bed",
             "product_2": "",
@@ -648,6 +658,71 @@
       ],
       "name": "Spa Equipment Pack",
       "settings": {}
+    },
+    "section_bento_grid_v2_frY9DL": {
+      "type": "section-bento-grid-v2",
+      "blocks": {
+        "collection_item_KTeAfN": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Skincare Equipments"
+          }
+        },
+        "collection_item_7mqhq9": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Treatment Tables"
+          }
+        },
+        "collection_item_QmDKYy": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Stools"
+          }
+        },
+        "collection_item_xXnGQf": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Trolleys"
+          }
+        },
+        "collection_item_zt3qg4": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Mag-lamps"
+          }
+        },
+        "collection_item_HpJ3jE": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Wellness therapy"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_KTeAfN",
+        "collection_item_7mqhq9",
+        "collection_item_QmDKYy",
+        "collection_item_xXnGQf",
+        "collection_item_zt3qg4",
+        "collection_item_HpJ3jE"
+      ],
+      "name": "Bento Grid V2",
+      "settings": {
+        "title": "Products"
+      }
     }
   },
   "order": [
@@ -659,6 +734,7 @@
     "custom_product_treatment_pKdyQh",
     "custom_subcategory_slider_YFNFXr",
     "image_slider",
-    "custom_spa_pack_builder_BDtr9H"
+    "custom_spa_pack_builder_BDtr9H",
+    "section_bento_grid_v2_frY9DL"
   ]
 }
