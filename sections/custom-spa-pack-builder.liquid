@@ -1,0 +1,307 @@
+{{ 'custom-spa-pack-builder.css' | asset_url | stylesheet_tag }}
+
+<section class="spa-pack-section" id="spa-pack-{{ section.id }}">
+  <div class="page-width">
+    
+    {%- comment -%} SECTION HEADER {%- endcomment -%}
+    <div class="spa-pack-header">
+      {%- if section.settings.title != blank -%}
+        <h2 class="spa-pack-header__title">{{ section.settings.title | escape }}</h2>
+      {%- endif -%}
+      {%- if section.settings.subtitle != blank -%}
+        <p class="spa-pack-header__subtitle">{{ section.settings.subtitle | escape }}</p>
+      {%- endif -%}
+    </div>
+
+    {%- comment -%} CATEGORY / TAB SELECTORS {%- endcomment -%}
+    {%- assign category_blocks = section.blocks | where: 'type', 'category_tab' -%}
+    {%- if category_blocks.size > 0 -%}
+      <div class="spa-pack-tabs">
+        <div class="spa-pack-tabs__nav" role="tablist">
+          {%- for block in category_blocks -%}
+            <button 
+              class="spa-pack-tabs__btn{% if forloop.first %} is-active{% endif %}"
+              data-tab="tab-{{ section.id }}-{{ block.id }}"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.tab_title | default: 'Category' }}
+            </button>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} TAB CONTENT PANELS WITH SWIPER {%- endcomment -%}
+    <div class="spa-pack-content">
+      {%- for block in category_blocks -%}
+        <div 
+          class="spa-pack-panel{% if forloop.first %} is-active{% endif %}"
+          id="tab-{{ section.id }}-{{ block.id }}"
+          role="tabpanel"
+        >
+          <div class="swiper spa-pack-swiper-{{ block.id }}">
+            <div class="swiper-wrapper">
+              
+              {%- comment -%} LOOP THROUGH SELECTED PRODUCTS (UP TO 6 PER TAB) {%- endcomment -%}
+              {%- for i in (1..6) -%}
+                {%- assign prod_setting_id = 'product_' | append: i -%}
+                {%- assign badge_setting_id = 'badge_' | append: i -%}
+                {%- assign selected_product = block.settings[prod_setting_id] -%}
+                {%- assign custom_badge = block.settings[badge_setting_id] -%}
+
+                {%- if selected_product != blank -%}
+                  <div class="swiper-slide">
+                    <a href="{{ selected_product.url }}" class="spa-pack-card">
+                      
+                      {%- comment -%} 4:5 IMAGE CONTAINER WITH AUTOMATIC HOVER IMAGE {%- endcomment -%}
+                      <div class="spa-pack-card__image-container">
+                        {%- if selected_product.featured_image != blank -%}
+                          <img
+                            src="{{ selected_product.featured_image | image_url: width: 500 }}"
+                            alt="{{ selected_product.title | escape }}"
+                            loading="lazy"
+                            width="240"
+                            height="300"
+                            class="spa-pack-card__image spa-pack-card__image--primary"
+                          >
+                          {%- if selected_product.images.size > 1 -%}
+                            <img
+                              src="{{ selected_product.images[1] | image_url: width: 500 }}"
+                              alt="{{ selected_product.title | escape }}"
+                              loading="lazy"
+                              width="240"
+                              height="300"
+                              class="spa-pack-card__image spa-pack-card__image--secondary"
+                            >
+                          {%- endif -%}
+                        {%- else -%}
+                          {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
+                        {%- endif -%}
+                      </div>
+
+                      {%- comment -%} CONTENT DETAILS {%- endcomment -%}
+                      <div class="spa-pack-card__content">
+                        {%- if custom_badge != blank -%}
+                          <span class="spa-pack-card__tag">{{ custom_badge }}</span>
+                        {%- elsif selected_product.type != blank -%}
+                          <span class="spa-pack-card__tag">{{ selected_product.type }}</span>
+                        {%- endif -%}
+
+                        <h3 class="spa-pack-card__title">{{ selected_product.title }}</h3>
+                        
+                        <p class="spa-pack-card__price">
+                          {%- if selected_product.price_varies -%}
+                            From {{ selected_product.price_min | money }}
+                          {%- else -%}
+                            {{ selected_product.price | money }}
+                          {%- endif -%}
+                        </p>
+                      </div>
+
+                    </a>
+                  </div>
+                {%- endif -%}
+              {%- endfor -%}
+
+            </div>
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionContainer = document.getElementById('spa-pack-{{ section.id }}');
+    if (!sectionContainer) return;
+
+    // Initialize Swipers for all panels
+    const panels = sectionContainer.querySelectorAll('.spa-pack-panel');
+    panels.forEach(panel => {
+      const swiperEl = panel.querySelector('.swiper');
+      if (swiperEl) {
+        new Swiper(swiperEl, {
+          slidesPerView: 'auto',
+          spaceBetween: 32,
+          grabCursor: true,
+          freeMode: true,
+          breakpoints: {
+            750: { spaceBetween: 40 }
+          }
+        });
+      }
+    });
+
+    // Tab Navigation Switcher Logic
+    const tabButtons = sectionContainer.querySelectorAll('.spa-pack-tabs__btn');
+    tabButtons.forEach(btn => {
+      btn.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-tab');
+
+        tabButtons.forEach(b => {
+          b.classList.remove('is-active');
+          b.setAttribute('aria-selected', 'false');
+        });
+
+        panels.forEach(p => p.classList.remove('is-active'));
+
+        this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+
+        const activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add('is-active');
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Spa Equipment Pack",
+  "tag": "section",
+  "class": "section-spa-pack-builder",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Everything You Need for Your Treatment Room"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Section Subtitle",
+      "default": "Curated equipment packages designed for medical spas, clinics, and wellness centers."
+    }
+  ],
+  "blocks": [
+    {
+      "type": "category_tab",
+      "name": "Equipment Category / Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Name",
+          "default": "Spa & Massage Setup"
+        },
+        {
+          "type": "header",
+          "content": "Product 1"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Select Treatment Bed / Chair"
+        },
+        {
+          "type": "text",
+          "id": "badge_1",
+          "label": "Custom Badge 1",
+          "default": "Treatment Bed"
+        },
+        {
+          "type": "header",
+          "content": "Product 2"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Select Stool"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "label": "Custom Badge 2",
+          "default": "Ergonomic Stool"
+        },
+        {
+          "type": "header",
+          "content": "Product 3"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Select Trolley / Cart"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "label": "Custom Badge 3",
+          "default": "Utility Trolley"
+        },
+        {
+          "type": "header",
+          "content": "Product 4"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Select Vaporizer / Steamer"
+        },
+        {
+          "type": "text",
+          "id": "badge_4",
+          "label": "Custom Badge 4",
+          "default": "Facial Steamer"
+        },
+        {
+          "type": "header",
+          "content": "Product 5"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Select Lamp / Magnifier"
+        },
+        {
+          "type": "text",
+          "id": "badge_5",
+          "label": "Custom Badge 5",
+          "default": "Magnifying Lamp"
+        },
+        {
+          "type": "header",
+          "content": "Product 6"
+        },
+        {
+          "type": "product",
+          "id": "product_6",
+          "label": "Select Accessory / Warmer"
+        },
+        {
+          "type": "text",
+          "id": "badge_6",
+          "label": "Custom Badge 6",
+          "default": "Towel Warmer"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spa Equipment Pack",
+      "blocks": [
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spa & Esthetics Setup"
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Orthopedic & Podiatry"
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
