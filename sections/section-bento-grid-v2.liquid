@@ -1,0 +1,92 @@
+{{ 'section-bento-grid-v2.css' | asset_url | stylesheet_tag }}
+
+<div class="collections-bento-v2-wrapper page-width">
+  {%- if section.settings.title != blank -%}
+    <h2 class="collections-bento-v2__heading">{{ section.settings.title | escape }}</h2>
+  {%- endif -%}
+
+  <div class="collections-bento-v2__grid">
+    {%- for block in section.blocks -%}
+      {%- assign custom_url = block.settings.custom_link -%}
+      {%- assign target_url = custom_url | default: block.settings.collection.url | default: '#' -%}
+
+      <a href="{{ target_url }}" class="bento-v2-card" {{ block.shopify_attributes }}>
+        <div class="bento-v2-card__header">
+          <h3 class="bento-v2-card__title">
+            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
+          </h3>
+        </div>
+
+        <div class="bento-v2-card__media">
+          {%- if block.settings.image != blank -%}
+            {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'bento-v2-card__img', alt: block.settings.title }}
+          {%- elsif block.settings.collection.featured_image != blank -%}
+            {{ block.settings.collection.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'bento-v2-card__img', alt: block.settings.collection.title }}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'bento-v2-card__placeholder' }}
+          {%- endif -%}
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Bento Grid V2",
+  "tag": "section",
+  "class": "section-bento-grid-v2",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Products"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "collection_item",
+      "name": "Category Card",
+      "settings": [
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
+        },
+        {
+          "type": "url",
+          "id": "custom_link",
+          "label": "Custom Link Override"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Category Title"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Card Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bento Grid V2",
+      "blocks": [
+        { "type": "collection_item", "settings": { "title": "Skincare Equipments" } },
+        { "type": "collection_item", "settings": { "title": "Treatment Tables" } },
+        { "type": "collection_item", "settings": { "title": "Stools" } },
+        { "type": "collection_item", "settings": { "title": "Trolleys" } },
+        { "type": "collection_item", "settings": { "title": "Mag-lamps" } },
+        { "type": "collection_item", "settings": { "title": "Wellness therapy" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
