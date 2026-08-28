@@ -3,24 +3,14 @@
 <section class="spa-pack-section" id="spa-pack-{{ section.id }}">
   <div class="page-width">
     
-    {%- comment -%} SECTION HEADER {%- endcomment -%}
-    <div class="spa-pack-header">
-      {%- if section.settings.title != blank -%}
-        <h2 class="spa-pack-header__title">{{ section.settings.title | escape }}</h2>
-      {%- endif -%}
-      {%- if section.settings.subtitle != blank -%}
-        <p class="spa-pack-header__subtitle">{{ section.settings.subtitle | escape }}</p>
-      {%- endif -%}
-    </div>
-
-    {%- comment -%} CATEGORY / TAB SELECTORS {%- endcomment -%}
+    {%- comment -%} APPLE PILL NAVIGATION BAR {%- endcomment -%}
     {%- assign category_blocks = section.blocks | where: 'type', 'category_tab' -%}
     {%- if category_blocks.size > 0 -%}
-      <div class="spa-pack-tabs">
-        <div class="spa-pack-tabs__nav" role="tablist">
+      <div class="spa-pack-pill-wrapper">
+        <div class="spa-pack-pill-bar" role="tablist">
           {%- for block in category_blocks -%}
             <button 
-              class="spa-pack-tabs__btn{% if forloop.first %} is-active{% endif %}"
+              class="spa-pack-pill-item{% if forloop.first %} is-active{% endif %}"
               data-tab="tab-{{ section.id }}-{{ block.id }}"
               role="tab"
               aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
@@ -33,7 +23,7 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} TAB CONTENT PANELS WITH SWIPER {%- endcomment -%}
+    {%- comment -%} TAB CONTENT PANELS {%- endcomment -%}
     <div class="spa-pack-content">
       {%- for block in category_blocks -%}
         <div 
@@ -44,7 +34,38 @@
           <div class="swiper spa-pack-swiper-{{ block.id }}">
             <div class="swiper-wrapper">
               
-              {%- comment -%} LOOP THROUGH SELECTED PRODUCTS (UP TO 6 PER TAB) {%- endcomment -%}
+              {%- comment -%} FEATURED PROMO HERO CARD (OPTIONAL FIRST SLIDE) {%- endcomment -%}
+              {%- if block.settings.show_hero_card -%}
+                <div class="swiper-slide swiper-slide--hero">
+                  <div 
+                    class="spa-pack-hero-card" 
+                    style="background-color: {{ block.settings.hero_bg | default: '#000000' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
+                  >
+                    <div class="spa-pack-hero-card__content">
+                      {%- if block.settings.hero_title != blank -%}
+                        <h3 class="spa-pack-hero-card__title">{{ block.settings.hero_title }}</h3>
+                      {%- endif -%}
+                      
+                      {%- if block.settings.hero_subtitle != blank -%}
+                        <p class="spa-pack-hero-card__subtitle">{{ block.settings.hero_subtitle }}</p>
+                      {%- endif -%}
+                    </div>
+
+                    {%- if block.settings.hero_image != blank -%}
+                      <div class="spa-pack-hero-card__image-wrapper">
+                        <img 
+                          src="{{ block.settings.hero_image | image_url: width: 800 }}" 
+                          alt="{{ block.settings.hero_title | escape }}"
+                          loading="lazy"
+                          class="spa-pack-hero-card__image"
+                        >
+                      </div>
+                    {%- endif -%}
+                  </div>
+                </div>
+              {%- endif -%}
+
+              {%- comment -%} PRODUCT CARDS {%- endcomment -%}
               {%- for i in (1..6) -%}
                 {%- assign prod_setting_id = 'product_' | append: i -%}
                 {%- assign badge_setting_id = 'badge_' | append: i -%}
@@ -55,7 +76,7 @@
                   <div class="swiper-slide">
                     <a href="{{ selected_product.url }}" class="spa-pack-card">
                       
-                      {%- comment -%} 4:5 IMAGE CONTAINER WITH AUTOMATIC HOVER IMAGE {%- endcomment -%}
+                      {%- comment -%} 4:5 IMAGE CONTAINER {%- endcomment -%}
                       <div class="spa-pack-card__image-container">
                         {%- if selected_product.featured_image != blank -%}
                           <img
@@ -119,32 +140,32 @@
     const sectionContainer = document.getElementById('spa-pack-{{ section.id }}');
     if (!sectionContainer) return;
 
-    // Initialize Swipers for all panels
+    // Initialize Swiper for each panel
     const panels = sectionContainer.querySelectorAll('.spa-pack-panel');
     panels.forEach(panel => {
       const swiperEl = panel.querySelector('.swiper');
       if (swiperEl) {
         new Swiper(swiperEl, {
           slidesPerView: 'auto',
-          spaceBetween: 32,
+          spaceBetween: 24,
           grabCursor: true,
           freeMode: true,
           breakpoints: {
-            750: { spaceBetween: 40 }
+            750: { spaceBetween: 32 }
           }
         });
       }
     });
 
-    // Tab Navigation Switcher Logic
-    const tabButtons = sectionContainer.querySelectorAll('.spa-pack-tabs__btn');
-    tabButtons.forEach(btn => {
-      btn.addEventListener('click', function() {
+    // Apple Pill Tab Switcher Logic
+    const pillItems = sectionContainer.querySelectorAll('.spa-pack-pill-item');
+    pillItems.forEach(pill => {
+      pill.addEventListener('click', function() {
         const targetId = this.getAttribute('data-tab');
 
-        tabButtons.forEach(b => {
-          b.classList.remove('is-active');
-          b.setAttribute('aria-selected', 'false');
+        pillItems.forEach(item => {
+          item.classList.remove('is-active');
+          item.setAttribute('aria-selected', 'false');
         });
 
         panels.forEach(p => p.classList.remove('is-active'));
@@ -166,120 +187,122 @@
   "name": "Spa Equipment Pack",
   "tag": "section",
   "class": "section-spa-pack-builder",
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Section Title",
-      "default": "Everything You Need for Your Treatment Room"
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Section Subtitle",
-      "default": "Curated equipment packages designed for medical spas, clinics, and wellness centers."
-    }
-  ],
+  "settings": [],
   "blocks": [
     {
       "type": "category_tab",
-      "name": "Equipment Category / Tab",
+      "name": "Category Tab",
       "settings": [
         {
           "type": "text",
           "id": "tab_title",
           "label": "Tab Name",
-          "default": "Spa & Massage Setup"
+          "default": "Vie étudiante"
         },
         {
           "type": "header",
-          "content": "Product 1"
+          "content": "Hero Card Settings (Optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hero_card",
+          "label": "Show Featured Hero Card",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "hero_bg",
+          "label": "Hero Card Background",
+          "default": "#000000"
+        },
+        {
+          "type": "color",
+          "id": "hero_text_color",
+          "label": "Hero Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "hero_title",
+          "label": "Hero Title",
+          "default": "Equip Your Treatment Room."
+        },
+        {
+          "type": "textarea",
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "default": "Complete spa setups designed for ultimate ergonomic comfort and clinic efficiency."
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Hero Image / Graphic"
+        },
+        {
+          "type": "header",
+          "content": "Products in Tab"
         },
         {
           "type": "product",
           "id": "product_1",
-          "label": "Select Treatment Bed / Chair"
+          "label": "Product 1"
         },
         {
           "type": "text",
           "id": "badge_1",
           "label": "Custom Badge 1",
-          "default": "Treatment Bed"
-        },
-        {
-          "type": "header",
-          "content": "Product 2"
+          "default": "Essential"
         },
         {
           "type": "product",
           "id": "product_2",
-          "label": "Select Stool"
+          "label": "Product 2"
         },
         {
           "type": "text",
           "id": "badge_2",
           "label": "Custom Badge 2",
-          "default": "Ergonomic Stool"
-        },
-        {
-          "type": "header",
-          "content": "Product 3"
+          "default": "Top Choice"
         },
         {
           "type": "product",
           "id": "product_3",
-          "label": "Select Trolley / Cart"
+          "label": "Product 3"
         },
         {
           "type": "text",
           "id": "badge_3",
-          "label": "Custom Badge 3",
-          "default": "Utility Trolley"
-        },
-        {
-          "type": "header",
-          "content": "Product 4"
+          "label": "Custom Badge 3"
         },
         {
           "type": "product",
           "id": "product_4",
-          "label": "Select Vaporizer / Steamer"
+          "label": "Product 4"
         },
         {
           "type": "text",
           "id": "badge_4",
-          "label": "Custom Badge 4",
-          "default": "Facial Steamer"
-        },
-        {
-          "type": "header",
-          "content": "Product 5"
+          "label": "Custom Badge 4"
         },
         {
           "type": "product",
           "id": "product_5",
-          "label": "Select Lamp / Magnifier"
+          "label": "Product 5"
         },
         {
           "type": "text",
           "id": "badge_5",
-          "label": "Custom Badge 5",
-          "default": "Magnifying Lamp"
-        },
-        {
-          "type": "header",
-          "content": "Product 6"
+          "label": "Custom Badge 5"
         },
         {
           "type": "product",
           "id": "product_6",
-          "label": "Select Accessory / Warmer"
+          "label": "Product 6"
         },
         {
           "type": "text",
           "id": "badge_6",
-          "label": "Custom Badge 6",
-          "default": "Towel Warmer"
+          "label": "Custom Badge 6"
         }
       ]
     }
@@ -291,13 +314,19 @@
         {
           "type": "category_tab",
           "settings": {
-            "tab_title": "Spa & Esthetics Setup"
+            "tab_title": "Vie étudiante"
           }
         },
         {
           "type": "category_tab",
           "settings": {
-            "tab_title": "Orthopedic & Podiatry"
+            "tab_title": "Choix branchés"
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "En couleur"
           }
         }
       ]
