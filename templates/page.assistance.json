@@ -1,0 +1,79 @@
+{
+    "name": "Assistance & Support Hub",
+    "wrapper": "main",
+    "sections": {
+      "assistance_hub_main": {
+        "type": "custom-assistance-hub",
+        "blocks": {
+          "icon_beds": {
+            "type": "category_icon",
+            "settings": {
+              "label": "Treatment Beds"
+            }
+          },
+          "icon_steamers": {
+            "type": "category_icon",
+            "settings": {
+              "label": "Facial Steamers"
+            }
+          },
+          "icon_lamps": {
+            "type": "category_icon",
+            "settings": {
+              "label": "Mag Lamps"
+            }
+          },
+          "icon_trolleys": {
+            "type": "category_icon",
+            "settings": {
+              "label": "Trolleys"
+            }
+          },
+          "help_shipping": {
+            "type": "quick_help_card",
+            "settings": {
+              "title": "Shipping & Delivery",
+              "description": "Track orders, shipping timelines, and freight delivery procedures."
+            }
+          },
+          "help_manuals": {
+            "type": "quick_help_card",
+            "settings": {
+              "title": "Assembly & Setup Manuals",
+              "description": "Download setup guides and wiring diagrams for your equipment."
+            }
+          },
+          "help_warranty": {
+            "type": "quick_help_card",
+            "settings": {
+              "title": "Warranty & Technical Support",
+              "description": "Submit a technical support request or register product warranties."
+            }
+          }
+        },
+        "block_order": [
+          "icon_beds",
+          "icon_steamers",
+          "icon_lamps",
+          "icon_trolleys",
+          "help_shipping",
+          "help_manuals",
+          "help_warranty"
+        ],
+        "settings": {
+          "title": "Equipro Support",
+          "subtitle": "Need help? Start here to find guides, manuals, and troubleshooting.",
+          "search_placeholder": "Search support, manuals, or replacement parts...",
+          "show_notice": true,
+          "notice_title": "Genuine Parts & Maintenance Security",
+          "notice_text": "Always insist on genuine Equipro replacement bulbs, motors, and accessories. Using non-certified components can invalidate your warranty and compromise safety standards.",
+          "notice_link_text": "Download PDF Certificate",
+          "blog_title": "Trending Guides & Tips",
+          "articles_to_show": 4
+        }
+      }
+    },
+    "order": [
+      "assistance_hub_main"
+    ]
+  }
