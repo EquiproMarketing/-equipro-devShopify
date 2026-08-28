@@ -12,7 +12,6 @@
         <p class="assistance-hub__subtitle">{{ section.settings.subtitle | escape }}</p>
       {%- endif -%}
 
-      {%- comment -%} SEARCH BAR {%- endcomment -%}
       <div class="assistance-hub__search-wrapper">
         <form action="{{ routes.search_url }}" method="get" role="search" class="assistance-hub__search-form">
           <input type="hidden" name="type" value="article,page">
@@ -56,12 +55,17 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} 3. QUICK HELP CARDS (WHITE ROUNDED CONTAINERS) {%- endcomment -%}
+    {%- comment -%} 3. QUICK HELP CARDS {%- endcomment -%}
     {%- assign quick_help_blocks = section.blocks | where: 'type', 'quick_help_card' -%}
     {%- if quick_help_blocks.size > 0 -%}
       <div class="assistance-hub__quick-cards">
         {%- for block in quick_help_blocks -%}
-          <a href="{{ block.settings.link | default: '#' }}" class="assistance-quick-card" {{ block.shopify_attributes }}>
+          <a 
+            href="{{ block.settings.link | default: '#' }}" 
+            class="assistance-quick-card{% if block.settings.enable_modal %} js-open-assistance-modal{% endif %}" 
+            {% if block.settings.enable_modal %}data-modal-target="support-modal"{% endif %}
+            {{ block.shopify_attributes }}
+          >
             <div class="assistance-quick-card__icon-badge">
               {%- if block.settings.icon_svg != blank -%}
                 {{ block.settings.icon_svg }}
@@ -81,7 +85,7 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} 4. SAFETY & GENUINE PARTS NOTICE {%- endcomment -%}
+    {%- comment -%} 4. SAFETY & NOTICE CARD {%- endcomment -%}
     {%- if section.settings.show_notice -%}
       <div class="assistance-hub__notice-card">
         <div class="assistance-hub__notice-content">
@@ -96,7 +100,7 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} 5. TRENDING GUIDES & MAINTENANCE BLOGS {%- endcomment -%}
+    {%- comment -%} 5. TRENDING GUIDES & BLOG GRID {%- endcomment -%}
     {%- if section.settings.blog != blank and section.settings.blog.articles.size > 0 -%}
       <div class="assistance-hub__blog-section">
         <h2 class="assistance-hub__section-title">{{ section.settings.blog_title | escape }}</h2>
@@ -129,6 +133,71 @@
 
   </div>
 </section>
+
+{%- comment -%} WARRANTY & TECH SUPPORT MODAL POPUP {%- endcomment -%}
+<div class="assistance-modal" id="support-modal" aria-hidden="true">
+  <div class="assistance-modal__overlay" data-close-modal></div>
+  <div class="assistance-modal__container" role="dialog" aria-modal="true">
+    <button class="assistance-modal__close" data-close-modal aria-label="Close modal">&times;</button>
+    <div class="assistance-modal__header">
+      <h3 class="assistance-modal__title">Warranty & Technical Support</h3>
+      <p class="assistance-modal__subtitle">Submit your equipment details below and our technical service team will contact you within 24 hours.</p>
+    </div>
+
+    {% form 'contact', class: 'assistance-modal__form' %}
+      {% if form.posted_successfully? %}
+        <p class="assistance-modal__success">Thank you for reaching out! Your support request has been submitted successfully.</p>
+      {% endif %}
+
+      <div class="assistance-modal__field-group">
+        <label for="SupportFormName" class="assistance-modal__label">Full Name</label>
+        <input type="text" id="SupportFormName" name="contact[Name]" class="assistance-modal__input" required>
+      </div>
+
+      <div class="assistance-modal__field-group">
+        <label for="SupportFormEmail" class="assistance-modal__label">Email Address</label>
+        <input type="email" id="SupportFormEmail" name="contact[email]" class="assistance-modal__input" required>
+      </div>
+
+      <div class="assistance-modal__field-group">
+        <label for="SupportFormSerial" class="assistance-modal__label">Equipment Model & Serial Number</label>
+        <input type="text" id="SupportFormSerial" name="contact[Equipment Model/Serial]" class="assistance-modal__input" placeholder="e.g. EI-504 #12984">
+      </div>
+
+      <div class="assistance-modal__field-group">
+        <label for="SupportFormMessage" class="assistance-modal__label">Describe your issue or inquiry</label>
+        <textarea id="SupportFormMessage" name="contact[body]" rows="4" class="assistance-modal__textarea" required></textarea>
+      </div>
+
+      <button type="submit" class="assistance-modal__submit-btn">Submit Technical Request</button>
+    {% endform %}
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const modal = document.getElementById('support-modal');
+    const openBtns = document.querySelectorAll('.js-open-assistance-modal');
+    const closeBtns = document.querySelectorAll('[data-close-modal]');
+
+    if (!modal) return;
+
+    openBtns.forEach(btn => {
+      btn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.classList.add('is-active');
+        modal.setAttribute('aria-hidden', 'false');
+      });
+    });
+
+    closeBtns.forEach(btn => {
+      btn.addEventListener('click', function() {
+        modal.classList.remove('is-active');
+        modal.setAttribute('aria-hidden', 'true');
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
@@ -262,7 +331,13 @@
         {
           "type": "url",
           "id": "link",
-          "label": "Card Link"
+          "label": "Card Link (e.g. /pages/shipping)"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_modal",
+          "label": "Open Tech Support Pop-up Modal instead of Link",
+          "default": false
         }
       ]
     }
@@ -279,21 +354,26 @@
           "type": "quick_help_card",
           "settings": {
             "title": "Shipping & Delivery",
-            "description": "Track orders, shipping timelines, and freight delivery procedures."
+            "description": "Track orders, shipping timelines, and freight delivery procedures.",
+            "link": "/pages/shipping",
+            "enable_modal": false
           }
         },
         {
           "type": "quick_help_card",
           "settings": {
             "title": "Assembly & Setup Manuals",
-            "description": "Download setup guides and wiring diagrams for your equipment."
+            "description": "Download setup guides and wiring diagrams for your equipment.",
+            "link": "/pages/manuals",
+            "enable_modal": false
           }
         },
         {
           "type": "quick_help_card",
           "settings": {
-            "title": "Warranty & Repairs",
-            "description": "Submit a technical support request or register product warranties."
+            "title": "Warranty & Technical Support",
+            "description": "Submit a technical support request or register product warranties.",
+            "enable_modal": true
           }
         }
       ]
