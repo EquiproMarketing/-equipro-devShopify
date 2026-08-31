@@ -84,7 +84,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "shopify://collections/treatment-tables",
+            "custom_link": "shopify://collections/skincare-equipment",
             "title": "Skincare Equipments"
           }
         },
@@ -92,7 +92,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "",
+            "custom_link": "shopify://collections/treatment-tables",
             "title": "Treatment Tables"
           }
         },
@@ -100,7 +100,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "",
+            "custom_link": "shopify://collections/stools",
             "title": "Stools"
           }
         },
@@ -108,7 +108,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "",
+            "custom_link": "shopify://collections/trolleys",
             "title": "Trolleys"
           }
         },
@@ -116,7 +116,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "",
+            "custom_link": "shopify://collections/mag-lamps",
             "title": "Mag-lamps"
           }
         },
@@ -124,7 +124,7 @@
           "type": "collection_item",
           "settings": {
             "collection": "",
-            "custom_link": "",
+            "custom_link": "shopify://collections/wellness-therapy",
             "title": "Wellness therapy"
           }
         }
