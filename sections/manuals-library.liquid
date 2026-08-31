@@ -49,7 +49,7 @@
   <div class="manuals-content-wrapper">
     {%- assign blocks = section.blocks -%}
     {%- if blocks.size > 0 -%}
-      {%- comment -%} Obtener grupos/categorías únicas {%- endcomment -%}
+      {%- comment -%} Get Unique Categories {%- endcomment -%}
       {%- assign group_names = "" -%}
       {%- for block in blocks -%}
         {%- assign g_name = block.settings.group_title | strip -%}
@@ -62,7 +62,6 @@
       <div class="manuals-columns-grid" id="ManualsGrid">
         {%- for group in groups_array -%}
           {%- if group != blank -%}
-            {%- comment -%} Filtrar bloques pertenecientes a este grupo {%- endcomment -%}
             {%- assign first_block = nil -%}
             {%- for block in blocks -%}
               {%- if block.settings.group_title == group -%}
@@ -87,9 +86,12 @@
                       {%- assign lang_class = "lang-fr" -%}
                     {%- endif -%}
 
+                    {%- comment -%} Fallback to URL input if generic_file object is empty {%- endcomment -%}
+                    {%- assign file_target = block.settings.pdf_file | default: block.settings.pdf_url -%}
+
                     <li class="{{ lang_class }}" {{ block.shopify_attributes }}>
-                      {%- if block.settings.pdf_url != blank -%}
-                        <a href="{{ block.settings.pdf_url }}" target="_blank" rel="noopener" class="manual-link">
+                      {%- if file_target != blank -%}
+                        <a href="{{ file_target }}" target="_blank" rel="noopener" class="manual-link">
                           {{ block.settings.document_title }} <span class="pdf-tag">(PDF)</span>
                         </a>
                       {%- else -%}
@@ -100,6 +102,7 @@
                 {%- endfor -%}
               </ul>
             </div>
+          {%- if group == blank -%}{%- endif -%}
           {%- endif -%}
         {%- endfor -%}
       </div>
@@ -230,9 +233,16 @@
           "default": "I-Lift Electric Bed 10800 Manual"
         },
         {
+          "type": "generic_file",
+          "id": "pdf_file",
+          "label": "Select PDF File (Shopify Media Picker)",
+          "info": "Allows direct file selection/upload from Shopify Content > Files."
+        },
+        {
           "type": "url",
           "id": "pdf_url",
-          "label": "PDF File URL or Picker"
+          "label": "External PDF URL (Optional Override)",
+          "info": "Use only if linking to an external hosted PDF."
         },
         {
           "type": "select",
@@ -259,15 +269,6 @@
             "tab_category": "assembly",
             "document_title": "I-Lift Electric Bed 10800 Manual (EN)",
             "language": "en"
-          }
-        },
-        {
-          "type": "pdf_document",
-          "settings": {
-            "group_title": "Treatment Beds",
-            "tab_category": "assembly",
-            "document_title": "Manuel Fauteuil I-Lift 10800 (FR)",
-            "language": "fr"
           }
         }
       ]
