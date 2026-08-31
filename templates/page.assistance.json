@@ -59,7 +59,7 @@
             "title": "Assembly & Setup Manuals",
             "description": "Download setup guides and wiring diagrams for your equipment.",
             "link": "",
-            "enable_modal": false
+            "enable_modal": true
           }
         },
         "help_warranty": {

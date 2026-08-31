@@ -1,51 +1,59 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "Assembly & Setup Manuals",
-    "wrapper": "main",
-    "sections": {
-      "manuals_hub": {
-        "type": "custom-assistance-hub",
-        "blocks": {
-          "bed_manuals": {
-            "type": "quick_help_card",
-            "settings": {
-              "title": "Treatment Beds Setup Manuals (PDF)",
-              "description": "Download wiring diagrams, assembly steps, and remote control programming guides.",
-              "link": "/collections/treatment-beds",
-              "enable_modal": false
-            }
-          },
-          "steamer_manuals": {
-            "type": "quick_help_card",
-            "settings": {
-              "title": "Facial Steamers Operating Manuals (PDF)",
-              "description": "Download user guides, de-calcifying schedules, and safety instructions.",
-              "link": "/collections/facial-steamers",
-              "enable_modal": false
-            }
-          },
-          "tech_support": {
-            "type": "quick_help_card",
-            "settings": {
-              "title": "Request Replacement Parts or Technical Help",
-              "description": "Can't find your model? Open a ticket directly with our technical support team.",
-              "enable_modal": true
-            }
+  "wrapper": "main",
+  "sections": {
+    "manuals_hub": {
+      "type": "custom-assistance-hub",
+      "blocks": {
+        "bed_manuals": {
+          "type": "quick_help_card",
+          "settings": {
+            "title": "Treatment Beds Setup Manuals (PDF)",
+            "description": "Download wiring diagrams, assembly steps, and remote control programming guides.",
+            "link": "/collections/treatment-beds",
+            "enable_modal": false
           }
         },
-        "block_order": [
-          "bed_manuals",
-          "steamer_manuals",
-          "tech_support"
-        ],
-        "settings": {
-          "title": "Assembly & Operating Manuals",
-          "subtitle": "Select a category to view or download official technical documentation.",
-          "search_placeholder": "Search manuals by product model or keyword...",
-          "show_notice": false
+        "steamer_manuals": {
+          "type": "quick_help_card",
+          "settings": {
+            "title": "Facial Steamers Operating Manuals (PDF)",
+            "description": "Download user guides, de-calcifying schedules, and safety instructions.",
+            "link": "/collections/facial-steamers",
+            "enable_modal": false
+          }
+        },
+        "tech_support": {
+          "type": "quick_help_card",
+          "settings": {
+            "title": "Request Replacement Parts or Technical Help",
+            "description": "Can't find your model? Open a ticket directly with our technical support team.",
+            "enable_modal": true
+          }
         }
+      },
+      "block_order": [
+        "bed_manuals",
+        "steamer_manuals",
+        "tech_support"
+      ],
+      "settings": {
+        "title": "Assembly & Operating Manuals",
+        "subtitle": "Select a category to view or download official technical documentation.",
+        "search_placeholder": "Search manuals by product model or keyword...",
+        "show_notice": false
       }
-    },
-    "order": [
-      "manuals_hub"
-    ]
-  }
+    }
+  },
+  "order": [
+    "manuals_hub"
+  ]
+}
