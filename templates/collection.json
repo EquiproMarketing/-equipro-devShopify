@@ -7,16 +7,47 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
-    "subnav": { "type": "category-subnav" },
-    "banner": { "type": "collection-banner" },
-    "product_grid": { "type": "main-collection-product-grid" },
-    "positive_impact": { "type": "positive-impact" },
-    "why_category": { "type": "why-our-category" },
-    "video": { "type": "category-video" },
-    "faq": { "type": "category-faq" },
-    "reviews": { "type": "customer-reviews" }
+    "subnav": {
+      "type": "category-subnav",
+      "settings": {
+        "category_menu": ""
+      }
+    },
+    "banner": {
+      "type": "collection-banner",
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
+        "overlay_opacity": 40
+      }
+    },
+    "product_grid": {
+      "type": "main-collection-product-grid",
+      "settings": {}
+    },
+    "positive_impact": {
+      "type": "positive-impact",
+      "settings": {}
+    },
+    "why_category": {
+      "type": "why-our-category",
+      "settings": {}
+    },
+    "video": {
+      "type": "category-video",
+      "settings": {}
+    },
+    "faq": {
+      "type": "category-faq",
+      "settings": {}
+    },
+    "reviews": {
+      "type": "customer-reviews",
+      "settings": {}
+    }
   },
   "order": [
     "subnav",

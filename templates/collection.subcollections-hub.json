@@ -1,54 +1,64 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "Subcollections Hub",
-    "wrapper": "div",
-    "sections": {
-      "banner": {
-        "type": "collection-banner",
-        "settings": {}
-      },
-      "subcollections_grid": {
-        "type": "section-bento-grid-v2",
-        "blocks": {
-          "sub_1": {
-            "type": "collection_item",
-            "settings": {}
-          },
-          "sub_2": {
-            "type": "collection_item",
-            "settings": {}
-          },
-          "sub_3": {
-            "type": "collection_item",
-            "settings": {}
-          },
-          "sub_4": {
-            "type": "collection_item",
-            "settings": {}
-          },
-          "sub_5": {
-            "type": "collection_item",
-            "settings": {}
-          },
-          "sub_6": {
-            "type": "collection_item",
-            "settings": {}
-          }
-        },
-        "block_order": [
-          "sub_1",
-          "sub_2",
-          "sub_3",
-          "sub_4",
-          "sub_5",
-          "sub_6"
-        ],
-        "settings": {
-          "title": ""
-        }
+  "wrapper": "div",
+  "sections": {
+    "banner": {
+      "type": "collection-banner",
+      "settings": {
+        "custom_title": "Treatment Tables",
+        "custom_description": "<p>Ergonomically designed, high-performance treatment tables engineered for maximum client comfort, silent height transitions, and uncompromised clinical durability.</p>",
+        "fallback_description": "Ergonomically designed, high-performance treatment tables engineered for maximum client comfort, silent height transitions, and uncompromised clinical durability.",
+        "overlay_opacity": 40
       }
     },
-    "order": [
-      "banner",
-      "subcollections_grid"
-    ]
-  }
+    "subcollections_grid": {
+      "type": "section-bento-grid-v2",
+      "blocks": {
+        "sub_4": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/electric",
+            "title": "Electric"
+          }
+        },
+        "sub_5": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/hydraulic-mechanical",
+            "title": "Hydraulic / Mechanical"
+          }
+        },
+        "sub_6": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/portable",
+            "title": "Portable"
+          }
+        }
+      },
+      "block_order": [
+        "sub_4",
+        "sub_5",
+        "sub_6"
+      ],
+      "settings": {
+        "title": ""
+      }
+    }
+  },
+  "order": [
+    "banner",
+    "subcollections_grid"
+  ]
+}
