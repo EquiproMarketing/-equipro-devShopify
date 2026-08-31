@@ -21,7 +21,7 @@
       </div>
     {%- endif -%}
 
-    {%- comment -%} SEARCH BAR {%- endcomment -%}
+    {%- comment -%} SEARCH BAR WITH AUTOCOMPLETE DROPDOWN {%- endcomment -%}
     <div class="manuals-search-wrapper">
       <svg class="manuals-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="2">
         <circle cx="11" cy="11" r="8"></circle>
@@ -34,6 +34,8 @@
         placeholder="{{ section.settings.search_placeholder | escape }}"
         autocomplete="off"
       >
+      {%- comment -%} DESPLEGABLE DE AUTOCOMPLETADO {%- endcomment -%}
+      <div id="ManualsAutocompleteDropdown" class="manuals-autocomplete-dropdown" style="display: none;"></div>
     </div>
   </div>
 
@@ -80,6 +82,8 @@
                       class="manual-item {{ lang_class }}" 
                       data-category="{{ block.settings.tab_category }}" 
                       data-title="{{ block.settings.document_title | downcase }}"
+                      data-url="{{ block.settings.pdf_url }}"
+                      data-group-name="{{ group }}"
                       {{ block.shopify_attributes }}
                     >
                       {%- if block.settings.pdf_url != blank -%}
@@ -110,21 +114,79 @@
     const tabBtns = document.querySelectorAll('.manuals-tab-btn');
     const columns = document.querySelectorAll('.manual-group-column');
     const searchInput = document.getElementById('ManualsSearchInput');
+    const dropdown = document.getElementById('ManualsAutocompleteDropdown');
     const noResults = document.getElementById('ManualsNoResults');
+    const allItems = document.querySelectorAll('.manual-item');
 
     let currentTab = 'all';
 
+    // 1. Manejo de Pestañas
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         tabBtns.forEach(b => b.classList.remove('active'));
         btn.classList.add('active');
         currentTab = btn.getAttribute('data-tab');
         filterGrid();
+        if (dropdown) dropdown.style.display = 'none';
       });
     });
 
+    // 2. Búsqueda y Autocompletado
     if (searchInput) {
-      searchInput.addEventListener('input', filterGrid);
+      searchInput.addEventListener('input', (e) => {
+        const query = e.target.value.toLowerCase().trim();
+        filterGrid();
+        renderAutocomplete(query);
+      });
+
+      // Ocultar dropdown al hacer clic fuera
+      document.addEventListener('click', (e) => {
+        if (!searchInput.contains(e.target) && !dropdown.contains(e.target)) {
+          dropdown.style.display = 'none';
+        }
+      });
+    }
+
+    function renderAutocomplete(query) {
+      if (!dropdown) return;
+
+      if (query.length < 2) {
+        dropdown.style.display = 'none';
+        dropdown.innerHTML = '';
+        return;
+      }
+
+      const matches = [];
+
+      allItems.forEach(item => {
+        const title = item.getAttribute('data-title');
+        const url = item.getAttribute('data-url');
+        const cat = item.getAttribute('data-category');
+        const group = item.getAttribute('data-group-name');
+
+        const matchesTab = (currentTab === 'all' || cat === currentTab);
+
+        if (matchesTab && title.includes(query) && url && url !== '#') {
+          matches.push({ title: item.querySelector('.manual-link').innerText, url, group });
+        }
+      });
+
+      if (matches.length > 0) {
+        dropdown.innerHTML = matches.slice(0, 6).map(m => `
+          <a href="${m.url}" target="_blank" rel="noopener" class="autocomplete-suggestion">
+            <span class="suggestion-title">${highlightQuery(m.title, query)}</span>
+            <span class="suggestion-group">${m.group}</span>
+          </a>
+        `).join('');
+        dropdown.style.display = 'block';
+      } else {
+        dropdown.style.display = 'none';
+      }
+    }
+
+    function highlightQuery(text, query) {
+      const reg = new RegExp(`(${query})`, 'gi');
+      return text.replace(reg, '<strong>$1</strong>');
     }
 
     function filterGrid() {
@@ -217,8 +279,7 @@
           "type": "text",
           "id": "group_title",
           "label": "Category / Subcategory Name",
-          "default": "Facial Steamers",
-          "info": "Documents with the exact same group name will stack under one column."
+          "default": "Facial Steamers"
         },
         {
           "type": "select",
