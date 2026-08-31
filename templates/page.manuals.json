@@ -13,6 +13,166 @@
     "main_manuals": {
       "type": "manuals-library",
       "blocks": {
+        "pdf_document_PxMjBR": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Trollys",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_4JbPPj": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_kfY3jG": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_Ypjxfb": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_WrhKbR": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_FFnBja": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_pndErH": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_XbanWH": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_wYrTYN": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_TexpYj": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_rqfbk4": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_M64t9k": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_3kXNpa": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_jqLB6L": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_hDqVXR": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
+        "pdf_document_HhVEmz": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications",
+            "pdf_url": "",
+            "language": "all"
+          }
+        },
         "pdf_document_Ettqi7": {
           "type": "pdf_document",
           "settings": {
@@ -25,6 +185,22 @@
         }
       },
       "block_order": [
+        "pdf_document_PxMjBR",
+        "pdf_document_4JbPPj",
+        "pdf_document_kfY3jG",
+        "pdf_document_Ypjxfb",
+        "pdf_document_WrhKbR",
+        "pdf_document_FFnBja",
+        "pdf_document_pndErH",
+        "pdf_document_XbanWH",
+        "pdf_document_wYrTYN",
+        "pdf_document_TexpYj",
+        "pdf_document_rqfbk4",
+        "pdf_document_M64t9k",
+        "pdf_document_3kXNpa",
+        "pdf_document_jqLB6L",
+        "pdf_document_hDqVXR",
+        "pdf_document_HhVEmz",
         "pdf_document_Ettqi7"
       ],
       "settings": {
