@@ -59,7 +59,7 @@
             "title": "Assembly & Setup Manuals",
             "description": "Download setup guides and wiring diagrams for your equipment.",
             "link": "",
-            "enable_modal": true
+            "enable_modal": false
           }
         },
         "help_warranty": {
@@ -69,7 +69,7 @@
             "title": "Warranty & Technical Support",
             "description": "Submit a technical support request or register product warranties.",
             "link": "",
-            "enable_modal": false
+            "enable_modal": true
           }
         }
       },
