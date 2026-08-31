@@ -49,7 +49,6 @@
   <div class="manuals-content-wrapper">
     {%- assign blocks = section.blocks -%}
     {%- if blocks.size > 0 -%}
-      {%- comment -%} Get Unique Categories {%- endcomment -%}
       {%- assign group_names = "" -%}
       {%- for block in blocks -%}
         {%- assign g_name = block.settings.group_title | strip -%}
@@ -86,7 +85,6 @@
                       {%- assign lang_class = "lang-fr" -%}
                     {%- endif -%}
 
-                    {%- comment -%} Fallback to URL input if generic_file object is empty {%- endcomment -%}
                     {%- assign file_target = block.settings.pdf_file | default: block.settings.pdf_url -%}
 
                     <li class="{{ lang_class }}" {{ block.shopify_attributes }}>
@@ -102,7 +100,6 @@
                 {%- endfor -%}
               </ul>
             </div>
-          {%- if group == blank -%}{%- endif -%}
           {%- endif -%}
         {%- endfor -%}
       </div>
@@ -235,8 +232,7 @@
         {
           "type": "generic_file",
           "id": "pdf_file",
-          "label": "Select PDF File (Shopify Media Picker)",
-          "info": "Allows direct file selection/upload from Shopify Content > Files."
+          "label": "Select PDF File (Shopify Media Picker)"
         },
         {
           "type": "url",
