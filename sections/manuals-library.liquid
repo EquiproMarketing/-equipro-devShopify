@@ -49,44 +49,58 @@
   <div class="manuals-content-wrapper">
     {%- assign blocks = section.blocks -%}
     {%- if blocks.size > 0 -%}
-      <div class="manuals-columns-grid" id="ManualsGrid">
-        {%- for block in blocks -%}
-          <div 
-            class="manual-group-column" 
-            data-category="{{ block.settings.tab_category }}" 
-            data-search-term="{{ block.settings.group_title | downcase }} {{ block.settings.links_text | downcase }}"
-            {{ block.shopify_attributes }}
-          >
-            <h3 class="manual-group__title">{{ block.settings.group_title }}</h3>
-            <ul class="manual-group__list">
-              {%- assign lines = block.settings.links_text | newline_to_br | split: '<br />' -%}
-              {%- for line in lines -%}
-                {%- assign parts = line | split: '|' -%}
-                {%- assign label = parts[0] | strip -%}
-                {%- assign url = parts[1] | strip -%}
-                {%- assign lang_code = parts[2] | strip | downcase -%}
-                
-                {%- assign lang_class = "" -%}
-                {%- if lang_code == "en" -%}
-                  {%- assign lang_class = "lang-en" -%}
-                {%- elsif lang_code == "fr" -%}
-                  {%- assign lang_class = "lang-fr" -%}
-                {%- endif -%}
+      {%- comment -%} Obtener grupos/categorías únicas {%- endcomment -%}
+      {%- assign group_names = "" -%}
+      {%- for block in blocks -%}
+        {%- assign g_name = block.settings.group_title | strip -%}
+        {%- unless group_names contains g_name -%}
+          {%- assign group_names = group_names | append: g_name | append: "|||" -%}
+        {%- endunless -%}
+      {%- endfor -%}
+      {%- assign groups_array = group_names | split: "|||" -%}
 
-                {%- if label != blank -%}
-                  <li class="{{ lang_class }}">
-                    {%- if url != blank and url != '#' -%}
-                      <a href="{{ url }}" target="_blank" rel="noopener" class="manual-link">
-                        {{ label }} <span class="pdf-tag">(PDF)</span>
-                      </a>
-                    {%- else -%}
-                      <span class="manual-link disabled">{{ label }} <span class="pdf-tag">(PDF)</span></span>
+      <div class="manuals-columns-grid" id="ManualsGrid">
+        {%- for group in groups_array -%}
+          {%- if group != blank -%}
+            {%- comment -%} Filtrar bloques pertenecientes a este grupo {%- endcomment -%}
+            {%- assign first_block = nil -%}
+            {%- for block in blocks -%}
+              {%- if block.settings.group_title == group -%}
+                {%- assign first_block = block -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+
+            <div 
+              class="manual-group-column" 
+              data-category="{{ first_block.settings.tab_category }}" 
+              data-search-term="{{ group | downcase }}"
+            >
+              <h3 class="manual-group__title">{{ group }}</h3>
+              <ul class="manual-group__list">
+                {%- for block in blocks -%}
+                  {%- if block.settings.group_title == group -%}
+                    {%- assign lang_class = "" -%}
+                    {%- if block.settings.language == "en" -%}
+                      {%- assign lang_class = "lang-en" -%}
+                    {%- elsif block.settings.language == "fr" -%}
+                      {%- assign lang_class = "lang-fr" -%}
                     {%- endif -%}
-                  </li>
-                {%- endif -%}
-              {%- endfor -%}
-            </ul>
-          </div>
+
+                    <li class="{{ lang_class }}" {{ block.shopify_attributes }}>
+                      {%- if block.settings.pdf_url != blank -%}
+                        <a href="{{ block.settings.pdf_url }}" target="_blank" rel="noopener" class="manual-link">
+                          {{ block.settings.document_title }} <span class="pdf-tag">(PDF)</span>
+                        </a>
+                      {%- else -%}
+                        <span class="manual-link disabled">{{ block.settings.document_title }} <span class="pdf-tag">(PDF)</span></span>
+                      {%- endif -%}
+                    </li>
+                  {%- endif -%}
+                {%- endfor -%}
+              </ul>
+            </div>
+          {%- endif -%}
         {%- endfor -%}
       </div>
     {%- endif -%}
@@ -188,14 +202,15 @@
   ],
   "blocks": [
     {
-      "type": "manual_group",
-      "name": "Document Group",
+      "type": "pdf_document",
+      "name": "PDF Document",
       "settings": [
         {
           "type": "text",
           "id": "group_title",
-          "label": "Group Title (e.g. Treatment Beds)",
-          "default": "Treatment Beds"
+          "label": "Category / Group Name",
+          "default": "Treatment Beds",
+          "info": "Documents with the exact same category name will group together into one column."
         },
         {
           "type": "select",
@@ -209,11 +224,26 @@
           "default": "assembly"
         },
         {
-          "type": "textarea",
-          "id": "links_text",
-          "label": "PDF Links List (Format: Name | URL | Language)",
-          "default": "I-Lift Bed Manual (EN) | https://cdn.shopify.com/s/files/...pdf | en\nManuel I-Lift (FR) | https://cdn.shopify.com/s/files/...pdf | fr",
-          "info": "Format per line: Document Title | CDN Link URL | optional language (en or fr)"
+          "type": "text",
+          "id": "document_title",
+          "label": "Document Name",
+          "default": "I-Lift Electric Bed 10800 Manual"
+        },
+        {
+          "type": "url",
+          "id": "pdf_url",
+          "label": "PDF File URL or Picker"
+        },
+        {
+          "type": "select",
+          "id": "language",
+          "label": "Document Language Filter",
+          "options": [
+            { "value": "all", "label": "Show Always (Bilingual / Both)" },
+            { "value": "en", "label": "English Only" },
+            { "value": "fr", "label": "French Only" }
+          ],
+          "default": "all"
         }
       ]
     }
@@ -223,27 +253,21 @@
       "name": "Manuals & Legal Hub",
       "blocks": [
         {
-          "type": "manual_group",
+          "type": "pdf_document",
           "settings": {
             "group_title": "Treatment Beds",
             "tab_category": "assembly",
-            "links_text": "I-Lift Electric Bed 10800 (EN) | # | en\nFauteuil I-Lift 10800 (FR) | # | fr"
+            "document_title": "I-Lift Electric Bed 10800 Manual (EN)",
+            "language": "en"
           }
         },
         {
-          "type": "manual_group",
+          "type": "pdf_document",
           "settings": {
-            "group_title": "Facial Steamers",
+            "group_title": "Treatment Beds",
             "tab_category": "assembly",
-            "links_text": "Vapozon Steamer 14000 (EN) | # | en\nVapozon Vaporisateur 14000 (FR) | # | fr"
-          }
-        },
-        {
-          "type": "manual_group",
-          "settings": {
-            "group_title": "Equipro Warranty Policies",
-            "tab_category": "warranties",
-            "links_text": "2-Year Limited Warranty | # | en\nGarantie Limitée de 2 Ans | # | fr"
+            "document_title": "Manuel Fauteuil I-Lift 10800 (FR)",
+            "language": "fr"
           }
         }
       ]
