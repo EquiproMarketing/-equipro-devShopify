@@ -19,40 +19,34 @@
     <p class="shipping-disclaimer">Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>
   </div>
 
-  {%- comment -%} UNIFIED SHIPPING CALCULATOR FORM {%- endcomment -%}
+  {%- comment -%} SHIPPING CALCULATOR CARD {%- endcomment -%}
   <div class="shipping-simulators">
     <div class="shipping-card">
       <h3>Estimate Transit Time</h3>
-      <p class="shipping-card__sub">Select your destination country and province/state to estimate factory processing and transit times.</p>
+      <p class="shipping-card__sub">Select your destination country and province or state to calculate estimated processing and ground transit times.</p>
       
-      <form id="EquiproShippingForm" class="shipping-form-unified">
-        <div class="shipping-field-group">
-          <label for="ShippingCountry">Country</label>
-          <select id="ShippingCountry" class="shipping-select" required>
-            <option value="" disabled selected>Select Country</option>
-            <option value="CA">Canada</option>
-            <option value="US">United States</option>
-          </select>
-        </div>
+      <form id="EquiproShippingForm" class="shipping-form">
+        <select id="ShippingCountry" class="shipping-select" required>
+          <option value="" disabled selected>Select Country</option>
+          <option value="CA">Canada (Montreal Hub)</option>
+          <option value="US">United States (Isle La Motte Hub)</option>
+        </select>
 
-        <div class="shipping-field-group">
-          <label for="ShippingRegion">Province / State</label>
-          <select id="ShippingRegion" class="shipping-select" required disabled>
-            <option value="" disabled selected>Select Region</option>
-          </select>
-        </div>
+        <select id="ShippingRegion" class="shipping-select" required disabled>
+          <option value="" disabled selected>Select Province / State</option>
+        </select>
 
-        <button type="submit" class="hero-btn">CALCULATE TRANSIT</button>
+        <button type="submit" class="hero-btn">CALCULATE</button>
       </form>
 
-      <div id="ShippingResult" class="shipping-result" style="display: none;"></div>
+      <div id="ShippingResult" class="shipping-result"></div>
       
       <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
     </div>
   </div>
 </div>
 
-{%- comment -%} DYNAMIC REGION POPULATOR SCRIPT {%- endcomment -%}
+{%- comment -%} DYNAMIC REGIONS POPULATOR {%- endcomment -%}
 <script>
   document.addEventListener('DOMContentLoaded', () => {
     const countrySelect = document.getElementById('ShippingCountry');
@@ -90,7 +84,7 @@
 
     countrySelect.addEventListener('change', (e) => {
       const selectedCountry = e.target.value;
-      regionSelect.innerHTML = '<option value="" disabled selected>Select Region</option>';
+      regionSelect.innerHTML = '<option value="" disabled selected>Select Province / State</option>';
 
       if (regions[selectedCountry]) {
         regions[selectedCountry].forEach((reg) => {
