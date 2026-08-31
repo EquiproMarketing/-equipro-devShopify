@@ -1,19 +1,42 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "name": "Assembly & Setup Manuals",
-    "wrapper": "main",
-    "sections": {
-      "main_manuals": {
-        "type": "manuals-library",
-        "settings": {
-          "title": "Documentation & Licensing",
-          "show_legal_box": true,
-          "legal_box_title": "Proprietary Rights & Technical Documentation Notice",
-          "legal_box_text": "<p>All technical manuals, schematics, and operating guides provided herein are the exclusive intellectual property of Equipro Beauty. Unauthorized copying, reproduction, distribution, or reverse engineering of equipment components based on these documents is strictly prohibited under federal trademark and copyright laws.</p>",
-          "search_placeholder": "Search documentation by model or series..."
+  "wrapper": "main",
+  "sections": {
+    "main_manuals": {
+      "type": "manuals-library",
+      "blocks": {
+        "pdf_document_Ettqi7": {
+          "type": "pdf_document",
+          "settings": {
+            "group_title": "Treatment Beds",
+            "tab_category": "assembly",
+            "document_title": "Specifications_EI-501-Royal_EN_2023",
+            "pdf_url": "{{ page.url }}",
+            "language": "en"
+          }
         }
+      },
+      "block_order": [
+        "pdf_document_Ettqi7"
+      ],
+      "settings": {
+        "title": "Documentation & Licensing",
+        "show_legal_box": true,
+        "legal_box_title": "Proprietary Rights & Technical Documentation Notice",
+        "legal_box_text": "<p>All technical manuals, schematics, and operating guides provided herein are the exclusive intellectual property of Equipro Beauty. Unauthorized copying, reproduction, distribution, or reverse engineering of equipment components based on these documents is strictly prohibited under federal trademark and copyright laws.</p>",
+        "search_placeholder": "Search documentation by model or series..."
       }
-    },
-    "order": [
-      "main_manuals"
-    ]
-  }
+    }
+  },
+  "order": [
+    "main_manuals"
+  ]
+}
