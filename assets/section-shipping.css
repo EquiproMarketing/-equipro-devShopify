@@ -1,145 +1,58 @@
-.shipping-page {
-    padding-top: 3rem;
-    padding-bottom: 5rem;
-    max-width: 1100px;
-    margin: 0 auto;
-  }
-  
-  .shipping-page__title {
-    text-align: center;
-    font-size: 2.4rem;
-    font-weight: 700;
-    color: #ab273b;
-    margin-bottom: 2.5rem;
-  }
-  
-  .shipping-page__banner {
-    width: 100%;
-    margin-bottom: 2.5rem;
-    border-radius: 8px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
-  }
-  
-  .shipping-banner__img {
-    width: 100%;
-    height: auto;
-    display: block;
-    object-fit: cover;
-  }
-  
-  .shipping-page__intro {
-    text-align: center;
-    max-width: 850px;
-    margin: 0 auto 3.5rem auto;
-    color: #4a4a4a;
-    font-size: 1rem;
-    line-height: 1.6;
-  }
-  
-  .shipping-disclaimer {
-    font-size: 0.875rem;
-    color: #717171;
-    margin-top: 1rem;
-  }
-  
-  /* Grilla de Simuladores */
-  .shipping-simulators {
-    display: grid;
+.shipping-form-unified {
+  display: grid;
+  grid-template-columns: 1fr 1fr auto;
+  gap: 16px;
+  align-items: end;
+  margin-top: 20px;
+}
+
+.shipping-field-group {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.shipping-field-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #1d1d1f;
+}
+
+.shipping-select {
+  width: 100%;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #d2d2d7;
+  font-size: 0.95rem;
+  background-color: #ffffff;
+  outline: none;
+}
+
+.shipping-calculator__card {
+  background-color: #f5f5f7;
+  border-radius: 14px;
+  padding: 20px;
+  margin-top: 20px;
+  border-left: 4px solid #ab273b;
+}
+
+.shipping-calculator__card h4 {
+  margin: 0 0 10px 0;
+  font-size: 1.1rem;
+}
+
+.shipping-calculator__total {
+  margin-top: 15px;
+  padding-top: 10px;
+  border-top: 1px solid #e5e5ea;
+  display: flex;
+  justify-content: space-between;
+  font-size: 1.05rem;
+  color: #ab273b;
+}
+
+@media (max-width: 767px) {
+  .shipping-form-unified {
     grid-template-columns: 1fr;
-    gap: 2rem;
   }
-  
-  @media screen and (min-width: 768px) {
-    .shipping-simulators {
-      grid-template-columns: 1fr 1fr;
-    }
-  }
-  
-  .shipping-card {
-    background: #fafafa;
-    border: 1px solid #eeeeee;
-    border-radius: 8px;
-    padding: 2rem;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .shipping-card h3 {
-    font-size: 1.35rem;
-    font-weight: 700;
-    color: #1f1f1f;
-    margin-top: 0;
-    margin-bottom: 0.5rem;
-  }
-  
-  .shipping-card__sub {
-    font-size: 0.875rem;
-    color: #666666;
-    line-height: 1.45;
-    margin-bottom: 1.5rem;
-    min-height: 2.8em;
-  }
-  
-  .shipping-form {
-    display: flex;
-    flex-direction: column;
-    gap: 0.75rem;
-    margin-bottom: 1rem;
-  }
-  
-  .shipping-form input {
-    width: 100%;
-    padding: 0.85rem 1rem;
-    border: 1px solid #cccccc;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    text-transform: uppercase;
-    box-sizing: border-box;
-  }
-  
-  .shipping-form .hero-btn {
-    background: #ab273b;
-    color: #ffffff;
-    border: none;
-    padding: 0.85rem;
-    border-radius: 4px;
-    font-weight: 700;
-    cursor: pointer;
-    transition: background 0.2s ease;
-  }
-  
-  .shipping-form .hero-btn:hover {
-    background: #8f2233;
-  }
-  
-  .shipping-result {
-    margin-top: 0.5rem;
-    padding: 0.75rem 1rem;
-    border-radius: 4px;
-    font-size: 0.9rem;
-    font-weight: 600;
-    display: none;
-  }
-  
-  .shipping-result.active {
-    display: block;
-    background: #e6f4ea;
-    color: #137333;
-    border: 1px solid #ceead6;
-  }
-  
-  .shipping-result.error {
-    display: block;
-    background: #fce8e6;
-    color: #c5221f;
-    border: 1px solid #fad2cf;
-  }
-  
-  .shipping-card__footer-note {
-    font-size: 0.725rem;
-    color: #888888;
-    line-height: 1.35;
-    margin-top: auto;
-    padding-top: 1.5rem;
-  }
+}

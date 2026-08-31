@@ -19,39 +19,93 @@
     <p class="shipping-disclaimer">Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>
   </div>
 
-  {%- comment -%} TRANSIT TIME SIMULATORS FOR CA AND US {%- endcomment -%}
+  {%- comment -%} UNIFIED SHIPPING CALCULATOR FORM {%- endcomment -%}
   <div class="shipping-simulators">
-    
-    {%- comment -%} Canadian Transit Simulator (Montreal Hub) {%- endcomment -%}
     <div class="shipping-card">
-      <h3>Estimate Transit Time (Canada)</h3>
-      <p class="shipping-card__sub">Enter your destination postal code (e.g., H1G) or Canadian province abbreviation to see estimated delivery time from our Montreal facility.</p>
+      <h3>Estimate Transit Time</h3>
+      <p class="shipping-card__sub">Select your destination country and province/state to estimate factory processing and transit times.</p>
       
-      <div class="shipping-form">
-        <input type="text" id="ca-postal-code" placeholder="Postal Code (e.g., H1G) or Province" maxlength="7">
-        <button type="button" class="hero-btn" onclick="calculateCATransit()">CALCULATE</button>
-      </div>
+      <form id="EquiproShippingForm" class="shipping-form-unified">
+        <div class="shipping-field-group">
+          <label for="ShippingCountry">Country</label>
+          <select id="ShippingCountry" class="shipping-select" required>
+            <option value="" disabled selected>Select Country</option>
+            <option value="CA">Canada</option>
+            <option value="US">United States</option>
+          </select>
+        </div>
+
+        <div class="shipping-field-group">
+          <label for="ShippingRegion">Province / State</label>
+          <select id="ShippingRegion" class="shipping-select" required disabled>
+            <option value="" disabled selected>Select Region</option>
+          </select>
+        </div>
+
+        <button type="submit" class="hero-btn">CALCULATE TRANSIT</button>
+      </form>
+
+      <div id="ShippingResult" class="shipping-result" style="display: none;"></div>
       
-      <div id="ca-result" class="shipping-result"></div>
       <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
     </div>
-
-    {%- comment -%} United States Transit Simulator (Isle La Motte, VT Hub) {%- endcomment -%}
-    <div class="shipping-card">
-      <h3>Estimate Transit Time (United States)</h3>
-      <p class="shipping-card__sub">Enter your US state abbreviation (e.g., NY, FL, CA) to see estimated delivery time from our Isle La Motte, VT facility.</p>
-      
-      <div class="shipping-form">
-        <input type="text" id="us-state-code" placeholder="2-LETTER STATE CODE" maxlength="2">
-        <button type="button" class="hero-btn" onclick="calculateUSTransit()">CALCULATE</button>
-      </div>
-      
-      <div id="us-result" class="shipping-result"></div>
-      <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
-    </div>
-
   </div>
 </div>
+
+{%- comment -%} DYNAMIC REGION POPULATOR SCRIPT {%- endcomment -%}
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const countrySelect = document.getElementById('ShippingCountry');
+    const regionSelect = document.getElementById('ShippingRegion');
+
+    const regions = {
+      CA: [
+        { code: 'QC', name: 'Quebec' },
+        { code: 'ON', name: 'Ontario' },
+        { code: 'NB', name: 'New Brunswick' },
+        { code: 'NS', name: 'Nova Scotia' },
+        { code: 'PE', name: 'Prince Edward Island' },
+        { code: 'NL', name: 'Newfoundland and Labrador' },
+        { code: 'MB', name: 'Manitoba' },
+        { code: 'SK', name: 'Saskatchewan' },
+        { code: 'AB', name: 'Alberta' },
+        { code: 'BC', name: 'British Columbia' }
+      ],
+      US: [
+        { code: 'VT', name: 'Vermont' },
+        { code: 'NY', name: 'New York' },
+        { code: 'MA', name: 'Massachusetts' },
+        { code: 'ME', name: 'Maine' },
+        { code: 'NH', name: 'New Hampshire' },
+        { code: 'CT', name: 'Connecticut' },
+        { code: 'RI', name: 'Rhode Island' },
+        { code: 'NJ', name: 'New Jersey' },
+        { code: 'PA', name: 'Pennsylvania' },
+        { code: 'FL', name: 'Florida' },
+        { code: 'TX', name: 'Texas' },
+        { code: 'CA', name: 'California' },
+        { code: 'DEFAULT', name: 'Other US State' }
+      ]
+    };
+
+    countrySelect.addEventListener('change', (e) => {
+      const selectedCountry = e.target.value;
+      regionSelect.innerHTML = '<option value="" disabled selected>Select Region</option>';
+
+      if (regions[selectedCountry]) {
+        regions[selectedCountry].forEach((reg) => {
+          const opt = document.createElement('option');
+          opt.value = reg.code;
+          opt.textContent = reg.name;
+          regionSelect.appendChild(opt);
+        });
+        regionSelect.disabled = false;
+      } else {
+        regionSelect.disabled = true;
+      }
+    });
+  });
+</script>
 
 <script src="{{ 'shipping-calculator.js' | asset_url }}" defer></script>
 
