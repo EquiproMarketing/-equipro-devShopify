@@ -1,0 +1,54 @@
+{
+    "name": "Subcollections Hub",
+    "wrapper": "div",
+    "sections": {
+      "banner": {
+        "type": "collection-banner",
+        "settings": {}
+      },
+      "subcollections_grid": {
+        "type": "section-bento-grid-v2",
+        "blocks": {
+          "sub_1": {
+            "type": "collection_item",
+            "settings": {}
+          },
+          "sub_2": {
+            "type": "collection_item",
+            "settings": {}
+          },
+          "sub_3": {
+            "type": "collection_item",
+            "settings": {}
+          },
+          "sub_4": {
+            "type": "collection_item",
+            "settings": {}
+          },
+          "sub_5": {
+            "type": "collection_item",
+            "settings": {}
+          },
+          "sub_6": {
+            "type": "collection_item",
+            "settings": {}
+          }
+        },
+        "block_order": [
+          "sub_1",
+          "sub_2",
+          "sub_3",
+          "sub_4",
+          "sub_5",
+          "sub_6"
+        ],
+        "settings": {
+          "title": ""
+        }
+      }
+    },
+    "order": [
+      "banner",
+      "subcollections_grid"
+    ]
+  }
