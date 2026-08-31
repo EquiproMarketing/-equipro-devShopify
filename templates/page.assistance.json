@@ -58,7 +58,7 @@
             "icon_svg": "",
             "title": "Assembly & Setup Manuals",
             "description": "Download setup guides and wiring diagrams for your equipment.",
-            "link": "",
+            "link": "shopify://pages/manuals",
             "enable_modal": false
           }
         },
