@@ -56,18 +56,9 @@
       <div class="manuals-columns-grid" id="ManualsGrid">
         {%- for group in groups_array -%}
           {%- if group != blank -%}
-            {%- assign first_block = nil -%}
-            {%- for block in blocks -%}
-              {%- if block.settings.group_title == group -%}
-                {%- assign first_block = block -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
-
             <div 
               class="manual-group-column" 
-              data-category="{{ first_block.settings.tab_category }}" 
-              data-search-term="{{ group | downcase }}"
+              data-group="{{ group | downcase }}"
             >
               <h3 class="manual-group__title">{{ group }}</h3>
               <ul class="manual-group__list">
@@ -80,7 +71,12 @@
                       {%- assign lang_class = "lang-fr" -%}
                     {%- endif -%}
 
-                    <li class="{{ lang_class }}" {{ block.shopify_attributes }}>
+                    <li 
+                      class="manual-item {{ lang_class }}" 
+                      data-category="{{ block.settings.tab_category }}" 
+                      data-title="{{ block.settings.document_title | downcase }}"
+                      {{ block.shopify_attributes }}
+                    >
                       {%- if block.settings.pdf_url != blank -%}
                         <a href="{{ block.settings.pdf_url }}" target="_blank" rel="noopener" class="manual-link">
                           {{ block.settings.document_title }} <span class="pdf-tag">(PDF)</span>
@@ -108,6 +104,7 @@
   document.addEventListener('DOMContentLoaded', () => {
     const tabBtns = document.querySelectorAll('.manuals-tab-btn');
     const columns = document.querySelectorAll('.manual-group-column');
+    const items = document.querySelectorAll('.manual-item');
     const searchInput = document.getElementById('ManualsSearchInput');
     const noResults = document.getElementById('ManualsNoResults');
 
@@ -128,27 +125,41 @@
 
     function filterGrid() {
       const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
-      let hasVisible = false;
+      let hasGlobalVisible = false;
 
       columns.forEach(col => {
-        const category = col.getAttribute('data-category');
-        const searchTerm = col.getAttribute('data-search-term');
+        let colHasVisibleItems = false;
+        const colItems = col.querySelectorAll('.manual-item');
 
-        const matchesTab = (currentTab === 'all' || category === currentTab);
-        const matchesSearch = query === '' || searchTerm.includes(query);
+        colItems.forEach(item => {
+          const itemCat = item.getAttribute('data-category');
+          const itemTitle = item.getAttribute('data-title');
 
-        if (matchesTab && matchesSearch) {
+          const matchesTab = (currentTab === 'all' || itemCat === currentTab);
+          const matchesSearch = query === '' || itemTitle.includes(query);
+
+          if (matchesTab && matchesSearch) {
+            item.style.display = 'list-item';
+            colHasVisibleItems = true;
+          } else {
+            item.style.display = 'none';
+          }
+        });
+
+        if (colHasVisibleItems) {
           col.style.display = 'block';
-          hasVisible = true;
+          hasGlobalVisible = true;
         } else {
           col.style.display = 'none';
         }
       });
 
       if (noResults) {
-        noResults.style.display = hasVisible ? 'none' : 'block';
+        noResults.style.display = hasGlobalVisible ? 'none' : 'block';
       }
     }
+
+    filterGrid();
   });
 </script>
 
@@ -213,13 +224,13 @@
             { "value": "specifications", "label": "Technical Specs" },
             { "value": "assembly", "label": "Assembly & Operation" }
           ],
-          "default": "assembly"
+          "default": "specifications"
         },
         {
           "type": "text",
           "id": "document_title",
           "label": "Document Name",
-          "default": "I-Lift Electric Bed 10800 Manual"
+          "default": "EI-501 Royal Specifications"
         },
         {
           "type": "url",
@@ -247,10 +258,11 @@
         {
           "type": "pdf_document",
           "settings": {
-            "group_title": "Treatment Beds",
-            "tab_category": "assembly",
-            "document_title": "I-Lift Electric Bed 10800 Manual (EN)",
-            "language": "en"
+            "group_title": "Facial Steamers",
+            "tab_category": "specifications",
+            "document_title": "EI-501 Royal Specifications (EN)",
+            "pdf_url": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/Specifications_EI-501-Royal_EN_2023.pdf?v=1788196302",
+            "language": "all"
           }
         }
       ]
