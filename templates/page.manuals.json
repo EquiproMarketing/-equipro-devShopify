@@ -1,59 +1,19 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
-  "wrapper": "main",
-  "sections": {
-    "manuals_hub": {
-      "type": "custom-assistance-hub",
-      "blocks": {
-        "bed_manuals": {
-          "type": "quick_help_card",
-          "settings": {
-            "title": "Treatment Beds Setup Manuals (PDF)",
-            "description": "Download wiring diagrams, assembly steps, and remote control programming guides.",
-            "link": "/collections/treatment-beds",
-            "enable_modal": false
-          }
-        },
-        "steamer_manuals": {
-          "type": "quick_help_card",
-          "settings": {
-            "title": "Facial Steamers Operating Manuals (PDF)",
-            "description": "Download user guides, de-calcifying schedules, and safety instructions.",
-            "link": "/collections/facial-steamers",
-            "enable_modal": false
-          }
-        },
-        "tech_support": {
-          "type": "quick_help_card",
-          "settings": {
-            "title": "Request Replacement Parts or Technical Help",
-            "description": "Can't find your model? Open a ticket directly with our technical support team.",
-            "enable_modal": true
-          }
+    "name": "Assembly & Setup Manuals",
+    "wrapper": "main",
+    "sections": {
+      "main_manuals": {
+        "type": "manuals-library",
+        "settings": {
+          "title": "Documentation & Licensing",
+          "show_legal_box": true,
+          "legal_box_title": "Proprietary Rights & Technical Documentation Notice",
+          "legal_box_text": "<p>All technical manuals, schematics, and operating guides provided herein are the exclusive intellectual property of Equipro Beauty. Unauthorized copying, reproduction, distribution, or reverse engineering of equipment components based on these documents is strictly prohibited under federal trademark and copyright laws.</p>",
+          "search_placeholder": "Search documentation by model or series..."
         }
-      },
-      "block_order": [
-        "bed_manuals",
-        "steamer_manuals",
-        "tech_support"
-      ],
-      "settings": {
-        "title": "Assembly & Operating Manuals",
-        "subtitle": "Select a category to view or download official technical documentation.",
-        "search_placeholder": "Search manuals by product model or keyword...",
-        "show_notice": false
       }
-    }
-  },
-  "order": [
-    "manuals_hub"
-  ]
-}
+    },
+    "order": [
+      "main_manuals"
+    ]
+  }

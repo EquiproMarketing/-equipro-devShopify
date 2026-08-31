@@ -1,6 +1,7 @@
-{{ 'section-manuals.css' | asset_url | stylesheet_tag }}
+<link rel="stylesheet" href="{{ 'section-manuals.css' | asset_url }}">
 
 <div class="manuals-page page-width">
+  {%- comment -%} BOTÓN DE RETORNO AL SUPPORT HUB {%- endcomment -%}
   <div class="manuals-page__nav-back">
     <a href="/pages/assistance" class="manuals-back-link">&larr; Back to Support Hub</a>
   </div>
@@ -44,7 +45,7 @@
     <button class="manuals-tab-btn" data-tab="assembly">Assembly & Operation</button>
   </div>
 
-  {%- comment -%} GRILLA DE DOCUMENTOS POR GRUPOS {%- endcomment -%}
+  {%- comment -%} GRILLA DE DOCUMENTOS POR COLUMNAS {%- endcomment -%}
   <div class="manuals-content-wrapper">
     {%- assign blocks = section.blocks -%}
     {%- if blocks.size > 0 -%}
@@ -65,12 +66,12 @@
                 {%- assign url = parts[1] | strip -%}
                 {%- if label != blank -%}
                   <li>
-                    {%- if url != blank -%}
+                    {%- if url != blank and url != '#' -%}
                       <a href="{{ url }}" target="_blank" rel="noopener" class="manual-link">
                         {{ label }} <span class="pdf-tag">(PDF)</span>
                       </a>
                     {%- else -%}
-                      <span class="manual-link disabled">{{ label }}</span>
+                      <span class="manual-link disabled">{{ label }} <span class="pdf-tag">(PDF)</span></span>
                     {%- endif -%}
                   </li>
                 {%- endif -%}
@@ -96,7 +97,6 @@
 
     let currentTab = 'all';
 
-    // 1. Filtrado por Pestaña
     tabBtns.forEach(btn => {
       btn.addEventListener('click', () => {
         tabBtns.forEach(b => b.classList.remove('active'));
@@ -106,7 +106,6 @@
       });
     });
 
-    // 2. Búsqueda en tiempo real
     if (searchInput) {
       searchInput.addEventListener('input', filterGrid);
     }
@@ -204,7 +203,7 @@
           "type": "textarea",
           "id": "links_text",
           "label": "PDF Links List (Format: Name | URL)",
-          "default": "I-Lift Electric Bed 10800 | https://cdn.shopify.com/s/files/...pdf\nVapozon Steamer 14000 | https://cdn.shopify.com/s/files/...pdf",
+          "default": "I-Lift Electric Bed 10800 | #\nMulti-Function Chair 12000 | #",
           "info": "Write one link per line using format: Document Title | CDN Link URL"
         }
       ]
