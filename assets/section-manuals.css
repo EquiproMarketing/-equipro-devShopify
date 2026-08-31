@@ -10,10 +10,18 @@
   }
   
   .manuals-back-link {
+    display: inline-flex;
+    align-items: center;
     font-size: 0.9rem;
     font-weight: 600;
     color: #ab273b;
     text-decoration: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  .manuals-back-link:hover {
+    opacity: 0.8;
+    text-decoration: underline;
   }
   
   .manuals-page__title {
@@ -24,7 +32,7 @@
     margin-bottom: 2rem;
   }
   
-  /* CUADRO LEGAL APPLE-STYLE */
+  /* APPLE-STYLE LEGAL NOTICE BOX */
   .manuals-legal-box {
     background-color: #f5f5f7;
     border-radius: 18px;
@@ -60,6 +68,7 @@
     left: 16px;
     top: 50%;
     transform: translateY(-50%);
+    pointer-events: none;
   }
   
   .manuals-search-input {
@@ -73,7 +82,7 @@
     box-sizing: border-box;
   }
   
-  /* TABS ESTILO APPLE */
+  /* TABS */
   .manuals-tabs {
     display: flex;
     justify-content: center;
@@ -108,7 +117,7 @@
     background-color: #1d1d1f;
   }
   
-  /* COLUMNAS DE DOCUMENTOS */
+  /* DOCUMENTATION COLUMNS GRID */
   .manuals-columns-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
@@ -144,6 +153,11 @@
     text-decoration: underline;
   }
   
+  .manual-link.disabled {
+    color: #86868b;
+    cursor: not-allowed;
+  }
+  
   .pdf-tag {
     font-size: 0.78rem;
     color: #86868b;
@@ -154,6 +168,15 @@
     text-align: center;
     padding: 2rem;
     color: #86868b;
+  }
+  
+  /* WEGLOT / LANGUAGE FILTERING SYSTEM */
+  html[lang="en"] .lang-fr {
+    display: none !important;
+  }
+  
+  html[lang="fr"] .lang-en {
+    display: none !important;
   }
   
   @media (max-width: 767px) {
