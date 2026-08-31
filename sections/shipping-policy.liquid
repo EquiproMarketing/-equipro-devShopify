@@ -1,6 +1,10 @@
 {{ 'section-shipping.css' | asset_url | stylesheet_tag }}
 
 <div class="shipping-page page-width">
+<div class="shipping-page__nav-back">
+    <a href="/pages/assistance" class="shipping-back-link">&larr; Back to Support Hub</a>
+  </div>
+  
   <h1 class="shipping-page__title">{{ section.settings.title }}</h1>
 
   {% if section.settings.banner_image != blank %}

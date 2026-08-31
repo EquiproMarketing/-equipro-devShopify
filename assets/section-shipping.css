@@ -139,3 +139,22 @@
   margin-top: auto;
   padding-top: 1.5rem;
 }
+
+.shipping-page__nav-back {
+  margin-bottom: 1.5rem;
+}
+
+.shipping-back-link {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: #ab273b;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.shipping-back-link:hover {
+  opacity: 0.8;
+  text-decoration: underline;
+}
