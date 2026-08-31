@@ -11,15 +11,69 @@
   "sections": {
     "subnav": {
       "type": "category-subnav",
-      "settings": {}
+      "settings": {
+        "category_menu": ""
+      }
     },
     "banner": {
       "type": "collection-banner",
       "settings": {}
     },
-    "product_grid": {
-      "type": "main-collection-product-grid",
-      "settings": {}
+    "custom_product_treatment_jbEQMa": {
+      "type": "custom-product-treatment",
+      "blocks": {
+        "product_card_LtMFfC": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_p337mA": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_yH6FJt": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_LtMFfC",
+        "product_card_p337mA",
+        "product_card_yH6FJt"
+      ],
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": ""
+      }
     },
     "positive_impact": {
       "type": "positive-impact",
@@ -45,7 +99,7 @@
   "order": [
     "subnav",
     "banner",
-    "product_grid",
+    "custom_product_treatment_jbEQMa",
     "positive_impact",
     "why_category",
     "video",
