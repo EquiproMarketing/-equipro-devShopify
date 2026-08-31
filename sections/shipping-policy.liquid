@@ -19,12 +19,12 @@
     <p class="shipping-disclaimer">Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>
   </div>
 
-  <!-- SIMULADORES DE TIEMPO DE TRÁNSITO -->
+  {%- comment -%} TRANSIT TIME SIMULATORS FOR CA AND US {%- endcomment -%}
   <div class="shipping-simulators">
     
-    <!-- Simulador Canadá (Montreal) -->
+    {%- comment -%} Canadian Transit Simulator (Montreal Hub) {%- endcomment -%}
     <div class="shipping-card">
-      <h3>Estimate Transit Time</h3>
+      <h3>Estimate Transit Time (Canada)</h3>
       <p class="shipping-card__sub">Enter your destination postal code (e.g., H1G) or Canadian province abbreviation to see estimated delivery time from our Montreal facility.</p>
       
       <div class="shipping-form">
@@ -36,9 +36,9 @@
       <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
     </div>
 
-    <!-- Simulador EE.UU. (Isle La Motte, VT) -->
+    {%- comment -%} United States Transit Simulator (Isle La Motte, VT Hub) {%- endcomment -%}
     <div class="shipping-card">
-      <h3>Estimate Transit Time</h3>
+      <h3>Estimate Transit Time (United States)</h3>
       <p class="shipping-card__sub">Enter your US state abbreviation (e.g., NY, FL, CA) to see estimated delivery time from our Isle La Motte, VT facility.</p>
       
       <div class="shipping-form">
@@ -58,6 +58,8 @@
 {% schema %}
 {
   "name": "Shipping Policy & Calc",
+  "tag": "section",
+  "class": "section-shipping-policy",
   "settings": [
     {
       "type": "text",
@@ -69,6 +71,11 @@
       "type": "image_picker",
       "id": "banner_image",
       "label": "Header Banner Image"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Shipping Policy & Calc"
     }
   ]
 }

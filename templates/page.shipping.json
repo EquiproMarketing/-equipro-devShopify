@@ -5,8 +5,7 @@
     "main_shipping": {
       "type": "shipping-policy",
       "settings": {
-        "heading": "Shipping & Delivery Policy",
-        "processing_time": "Standard order processing takes between 2 to 4 business days prior to dispatch."
+        "title": "Shipping & Delivery Policy"
       }
     }
   },
