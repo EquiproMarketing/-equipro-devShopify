@@ -7,10 +7,20 @@
 
   <div class="manuals-page__header">
     <h1 class="manuals-page__title">{{ section.settings.title | escape }}</h1>
-    {%- if section.settings.subtitle != blank -%}
-      <p class="manuals-page__subtitle">{{ section.settings.subtitle | escape }}</p>
+    
+    {%- comment -%} CUADRO LEGAL ESTILO APPLE {%- endcomment -%}
+    {%- if section.settings.show_legal_box -%}
+      <div class="manuals-legal-box">
+        {%- if section.settings.legal_box_title != blank -%}
+          <h2 class="manuals-legal-box__title">{{ section.settings.legal_box_title | escape }}</h2>
+        {%- endif -%}
+        <div class="manuals-legal-box__content rte">
+          {{ section.settings.legal_box_text }}
+        </div>
+      </div>
     {%- endif -%}
 
+    {%- comment -%} BARRA DE BÚSQUEDA {%- endcomment -%}
     <div class="manuals-search-wrapper">
       <svg class="manuals-search-icon" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#86868b" stroke-width="2">
         <circle cx="11" cy="11" r="8"></circle>
@@ -26,84 +36,110 @@
     </div>
   </div>
 
-  {%- assign manual_blocks = section.blocks | where: 'type', 'manual_item' -%}
-  {%- if manual_blocks.size > 0 -%}
-    <div class="manuals-grid" id="ManualsGrid">
-      {%- for block in manual_blocks -%}
-        <div class="manual-card" data-manual-title="{{ block.settings.title | downcase }}" data-manual-category="{{ block.settings.category | downcase }}" {{ block.shopify_attributes }}>
-          <div class="manual-card__icon">
-            <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#ab273b" stroke-width="1.8">
-              <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"></path>
-              <polyline points="14 2 14 8 20 8"></polyline>
-              <line x1="16" y1="13" x2="8" y2="13"></line>
-              <line x1="16" y1="17" x2="8" y2="17"></line>
-              <polyline points="10 9 9 9 8 9"></polyline>
-            </svg>
+  {%- comment -%} PESTAÑAS (TABS DE CATEGORÍA) {%- endcomment -%}
+  <div class="manuals-tabs">
+    <button class="manuals-tab-btn active" data-tab="all">All Documentation</button>
+    <button class="manuals-tab-btn" data-tab="warranties">Warranties & Certificates</button>
+    <button class="manuals-tab-btn" data-tab="specifications">Technical Specs</button>
+    <button class="manuals-tab-btn" data-tab="assembly">Assembly & Operation</button>
+  </div>
+
+  {%- comment -%} GRILLA DE DOCUMENTOS POR GRUPOS {%- endcomment -%}
+  <div class="manuals-content-wrapper">
+    {%- assign blocks = section.blocks -%}
+    {%- if blocks.size > 0 -%}
+      <div class="manuals-columns-grid" id="ManualsGrid">
+        {%- for block in blocks -%}
+          <div 
+            class="manual-group-column" 
+            data-category="{{ block.settings.tab_category }}" 
+            data-search-term="{{ block.settings.group_title | downcase }} {{ block.settings.links_text | downcase }}"
+            {{ block.shopify_attributes }}
+          >
+            <h3 class="manual-group__title">{{ block.settings.group_title }}</h3>
+            <ul class="manual-group__list">
+              {%- assign lines = block.settings.links_text | newline_to_br | split: '<br />' -%}
+              {%- for line in lines -%}
+                {%- assign parts = line | split: '|' -%}
+                {%- assign label = parts[0] | strip -%}
+                {%- assign url = parts[1] | strip -%}
+                {%- if label != blank -%}
+                  <li>
+                    {%- if url != blank -%}
+                      <a href="{{ url }}" target="_blank" rel="noopener" class="manual-link">
+                        {{ label }} <span class="pdf-tag">(PDF)</span>
+                      </a>
+                    {%- else -%}
+                      <span class="manual-link disabled">{{ label }}</span>
+                    {%- endif -%}
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+            </ul>
           </div>
-          <div class="manual-card__details">
-            <span class="manual-card__badge">{{ block.settings.category | default: "General" }}</span>
-            <h3 class="manual-card__title">{{ block.settings.title }}</h3>
-            {%- if block.settings.description != blank -%}
-              <p class="manual-card__desc">{{ block.settings.description }}</p>
-            {%- endif -%}
-          </div>
-          <div class="manual-card__action">
-            {%- if block.settings.pdf_url != blank -%}
-              <a href="{{ block.settings.pdf_url }}" target="_blank" rel="noopener" class="manual-download-btn">
-                <span>DOWNLOAD PDF</span>
-                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                  <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
-                  <polyline points="15 3 21 3 21 9"></polyline>
-                  <line x1="10" y1="14" x2="21" y2="3"></line>
-                </svg>
-              </a>
-            {%- else -%}
-              <span class="manual-unavailable">Coming Soon</span>
-            {%- endif -%}
-          </div>
-        </div>
-      {%- endfor -%}
-    </div>
+        {%- endfor -%}
+      </div>
+    {%- endif -%}
+
     <div id="ManualsNoResults" class="manuals-no-results" style="display: none;">
-      <p>No documentation found matching your search term.</p>
+      <p>No documentation found matching your query.</p>
     </div>
-  {%- endif -%}
+  </div>
 </div>
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    const tabBtns = document.querySelectorAll('.manuals-tab-btn');
+    const columns = document.querySelectorAll('.manual-group-column');
     const searchInput = document.getElementById('ManualsSearchInput');
-    const cards = document.querySelectorAll('.manual-card');
     const noResults = document.getElementById('ManualsNoResults');
 
-    if (!searchInput) return;
+    let currentTab = 'all';
 
-    searchInput.addEventListener('input', (e) => {
-      const query = e.target.value.toLowerCase().trim();
+    // 1. Filtrado por Pestaña
+    tabBtns.forEach(btn => {
+      btn.addEventListener('click', () => {
+        tabBtns.forEach(b => b.classList.remove('active'));
+        btn.classList.add('active');
+        currentTab = btn.getAttribute('data-tab');
+        filterGrid();
+      });
+    });
+
+    // 2. Búsqueda en tiempo real
+    if (searchInput) {
+      searchInput.addEventListener('input', filterGrid);
+    }
+
+    function filterGrid() {
+      const query = searchInput ? searchInput.value.toLowerCase().trim() : '';
       let hasVisible = false;
 
-      cards.forEach(card => {
-        const title = card.getAttribute('data-manual-title') || '';
-        const category = card.getAttribute('data-manual-category') || '';
+      columns.forEach(col => {
+        const category = col.getAttribute('data-category');
+        const searchTerm = col.getAttribute('data-search-term');
 
-        if (title.includes(query) || category.includes(query)) {
-          card.style.display = 'flex';
+        const matchesTab = (currentTab === 'all' || category === currentTab);
+        const matchesSearch = query === '' || searchTerm.includes(query);
+
+        if (matchesTab && matchesSearch) {
+          col.style.display = 'block';
           hasVisible = true;
         } else {
-          card.style.display = 'none';
+          col.style.display = 'none';
         }
       });
 
       if (noResults) {
         noResults.style.display = hasVisible ? 'none' : 'block';
       }
-    });
+    }
   });
 </script>
 
 {% schema %}
 {
-  "name": "Manuals Library",
+  "name": "Manuals & Legal Hub",
   "tag": "section",
   "class": "section-manuals-library",
   "settings": [
@@ -111,78 +147,95 @@
       "type": "text",
       "id": "title",
       "label": "Page Title",
-      "default": "Assembly & Setup Manuals"
+      "default": "Documentation & Licensing"
+    },
+    {
+      "type": "header",
+      "content": "Legal Notice Box Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_legal_box",
+      "label": "Show Legal Notice Box",
+      "default": true
     },
     {
       "type": "text",
-      "id": "subtitle",
-      "label": "Subtitle",
-      "default": "Download technical specifications, wiring diagrams, and user manuals for Equipro equipment."
+      "id": "legal_box_title",
+      "label": "Legal Box Title",
+      "default": "Proprietary Rights & Documentation Notice"
+    },
+    {
+      "type": "richtext",
+      "id": "legal_box_text",
+      "label": "Legal Box Content",
+      "default": "<p>All technical manuals, schematics, and operating guides provided herein are the exclusive intellectual property of Equipro Beauty. Unauthorized copying, reproduction, distribution, or reverse engineering of equipment components based on these documents is strictly prohibited under federal trademark and copyright laws.</p>"
     },
     {
       "type": "text",
       "id": "search_placeholder",
       "label": "Search Placeholder",
-      "default": "Search by model number or equipment name (e.g., EI-504, Vapozon)..."
+      "default": "Search documentation by model or series..."
     }
   ],
   "blocks": [
     {
-      "type": "manual_item",
-      "name": "PDF Manual",
+      "type": "manual_group",
+      "name": "Document Group",
       "settings": [
         {
           "type": "text",
-          "id": "title",
-          "label": "Document / Model Title",
-          "default": "Vapoderm Facial Steamer Model EI-500"
+          "id": "group_title",
+          "label": "Group Title (e.g. Treatment Beds)",
+          "default": "Treatment Beds"
         },
         {
-          "type": "text",
-          "id": "category",
-          "label": "Equipment Category",
-          "default": "Facial Steamers"
+          "type": "select",
+          "id": "tab_category",
+          "label": "Assign to Tab",
+          "options": [
+            { "value": "warranties", "label": "Warranties & Certificates" },
+            { "value": "specifications", "label": "Technical Specs" },
+            { "value": "assembly", "label": "Assembly & Operation" }
+          ],
+          "default": "assembly"
         },
         {
           "type": "textarea",
-          "id": "description",
-          "label": "Description / SKU Details",
-          "default": "Includes assembly instructions, electrical diagram, and de-calcifying maintenance guide."
-        },
-        {
-          "type": "url",
-          "id": "pdf_url",
-          "label": "PDF File URL (CDN Link)"
+          "id": "links_text",
+          "label": "PDF Links List (Format: Name | URL)",
+          "default": "I-Lift Electric Bed 10800 | https://cdn.shopify.com/s/files/...pdf\nVapozon Steamer 14000 | https://cdn.shopify.com/s/files/...pdf",
+          "info": "Write one link per line using format: Document Title | CDN Link URL"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Manuals Library",
+      "name": "Manuals & Legal Hub",
       "blocks": [
         {
-          "type": "manual_item",
+          "type": "manual_group",
           "settings": {
-            "title": "I-Lift Electric Treatment Bed #10800",
-            "category": "Treatment Beds",
-            "description": "Full assembly manual, hand remote control pairing guide, and load specifications."
+            "group_title": "Treatment Beds",
+            "tab_category": "assembly",
+            "links_text": "I-Lift Electric Bed 10800 | #\nMulti-Function Chair 12000 | #"
           }
         },
         {
-          "type": "manual_item",
+          "type": "manual_group",
           "settings": {
-            "title": "Vapozon Facial Steamer #14000",
-            "category": "Facial Steamers",
-            "description": "Operating instructions, essential oil basket guide, and cleaning procedures."
+            "group_title": "Facial Steamers",
+            "tab_category": "assembly",
+            "links_text": "Vapozon Steamer 14000 | #\nMini Steamer 14050 | #"
           }
         },
         {
-          "type": "manual_item",
+          "type": "manual_group",
           "settings": {
-            "title": "Mag-Lamp LED Magnifying Light #11200",
-            "category": "Magnifying Lamps",
-            "description": "Clamp mounting instructions, lens care, and power supply specs."
+            "group_title": "Equipro Warranty Policies",
+            "tab_category": "warranties",
+            "links_text": "2-Year Manufacturer Limited Warranty | #\nCSA & UL Compliance Certificate | #"
           }
         }
       ]
