@@ -48,7 +48,7 @@
             "icon_svg": "",
             "title": "Shipping & Delivery",
             "description": "Track orders, shipping timelines, and freight delivery procedures.",
-            "link": "",
+            "link": "shopify://pages/shipping",
             "enable_modal": false
           }
         },
