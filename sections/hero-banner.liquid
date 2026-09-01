@@ -1,7 +1,5 @@
 {{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
 
-{%- assign banner_height = section.settings.custom_height -%}
-
 <div class="hero-banner-wrapper" id="HeroBanner-{{ section.id }}">
   <div class="hero-banner">
     
@@ -90,73 +88,70 @@
 </div>
 
 <style>
-/* CUSTOM PIXEL HEIGHT CONTROL */
+/* FORZAR REGLAS DE SOBRESCRITURA TOTAL SOBRE CSS EXTERNO */
+#HeroBanner-{{ section.id }} .hero-banner,
+#HeroBanner-{{ section.id }} .hero-banner__slides,
+#HeroBanner-{{ section.id }} .hero-banner__slide,
+#HeroBanner-{{ section.id }} .hero-banner__image {
+  height: {{ section.settings.custom_height }}px !important;
+  min-height: {{ section.settings.custom_height }}px !important;
+  max-height: {{ section.settings.custom_height }}px !important;
+}
+
 #HeroBanner-{{ section.id }} .hero-banner {
-  height: {{ section.settings.custom_height }}px;
+  position: relative !important;
+  width: 100% !important;
+  overflow: hidden !important;
 }
 
-.hero-banner {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
+#HeroBanner-{{ section.id }} .hero-banner__slides {
+  position: relative !important;
+  width: 100% !important;
 }
 
-.hero-banner__slides {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.hero-banner__slide {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
+#HeroBanner-{{ section.id }} .hero-banner__slide {
+  position: absolute !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.6s ease, visibility 0.6s ease;
   z-index: 1;
 }
 
-.hero-banner__slide.is-active {
-  opacity: 1;
-  visibility: visible;
+#HeroBanner-{{ section.id }} .hero-banner__slide.is-active {
+  opacity: 1 !important;
+  visibility: visible !important;
   z-index: 2;
 }
 
-.hero-banner__image {
+#HeroBanner-{{ section.id }} .hero-banner__image {
   width: 100% !important;
-  height: 100% !important;
   object-fit: cover !important;
-  display: block;
+  display: block !important;
 }
 
-.hero-banner__image.position-center { object-position: center; }
-.hero-banner__image.position-top { object-position: top; }
-.hero-banner__image.position-bottom { object-position: bottom; }
+#HeroBanner-{{ section.id }} .hero-banner__image.position-center { object-position: center !important; }
+#HeroBanner-{{ section.id }} .hero-banner__image.position-top { object-position: top !important; }
+#HeroBanner-{{ section.id }} .hero-banner__image.position-bottom { object-position: bottom !important; }
 
-.hero-banner__overlay {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  align-items: center;
+#HeroBanner-{{ section.id }} .hero-banner__overlay {
+  position: absolute !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
   z-index: 3;
 }
 
-.hero-banner__dot {
-  cursor: pointer;
-  border: none;
-  background: rgba(255, 255, 255, 0.4);
-}
-.hero-banner__dot--active {
-  background: #ffffff;
-}
-
 @media (max-width: 767px) {
-  #HeroBanner-{{ section.id }} .hero-banner {
-    height: {{ section.settings.custom_height_mobile }}px;
+  #HeroBanner-{{ section.id }} .hero-banner,
+  #HeroBanner-{{ section.id }} .hero-banner__slides,
+  #HeroBanner-{{ section.id }} .hero-banner__slide,
+  #HeroBanner-{{ section.id }} .hero-banner__image {
+    height: {{ section.settings.custom_height_mobile }}px !important;
+    min-height: {{ section.settings.custom_height_mobile }}px !important;
+    max-height: {{ section.settings.custom_height_mobile }}px !important;
   }
 }
 </style>
@@ -250,12 +245,12 @@
     {
       "type": "range",
       "id": "custom_height_mobile",
-      "min": 200,
+      "min": 180,
       "max": 600,
       "step": 10,
       "unit": "px",
       "label": "Mobile Height",
-      "default": 350
+      "default": 320
     },
     {
       "type": "header",
