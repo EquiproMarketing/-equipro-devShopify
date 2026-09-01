@@ -131,13 +131,14 @@
   display: grid; 
   grid-template-columns: 1fr 1.2fr; 
   gap: 3.5rem; 
-  align-items: stretch; /* Se estiran para que tengan exactamente la misma altura */
+  align-items: stretch !important; /* Estira ambas columnas a la misma altura total */
 }
 
+/* COLUMNA IZQUIERDA FLEXBOX */
 .product-buy-col {
-  display: flex;
-  flex-direction: column;
-  height: 100%;
+  display: flex !important;
+  flex-direction: column !important;
+  height: 100% !important;
 }
 
 .product-price { 
@@ -238,15 +239,10 @@
   margin-top: 0.5rem; 
 }
 
-/* BLOQUE DE SHIPPING PINCHADO AL BOTTOM */
+/* BLOQUE DE SHIPPING: EMPUJADO AL BOTTOM ABSOLUTO CON MARGIN-TOP AUTO */
 .product-shipping-block { 
-<<<<<<< HEAD
-  margin-top: auto; /* Fuerza el anclaje al fondo absoluto */
+  margin-top: auto !important; 
   padding-top: 1.5rem; 
-=======
-  margin-top: 2rem; 
-  padding-top: 5 rem; 
->>>>>>> 57510c96626e55c2253af38413faf40fa18a0076
   border-top: 1px solid #eee; 
 }
 
@@ -330,5 +326,8 @@
   .product-gallery__thumbs { 
     flex-direction: row; 
     width: 100%; 
+  }
+  .product-shipping-block {
+    margin-top: 2rem !important;
   }
 }
