@@ -21,29 +21,34 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
-        "promo_card_CMUaEw": {
-          "type": "promo_card",
+        "card_item_3fBpy4": {
+          "type": "card_item",
           "settings": {
-            "target_category": "",
-            "title": "Discover Royal Series",
-            "image": "shopify://shop_images/equipro-infinity-ei-502-four-motor-electric-treatment-table-ergonomic-professional-spa-bed.webp",
-            "badge_text": "New",
-            "button_link": ""
+            "parent_category": "Treatment Tables",
+            "sub_category": "Electric",
+            "collection": "electric",
+            "product": "ei-502-infinity",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
           }
         },
-        "promo_card_6Kn48Q": {
-          "type": "promo_card",
+        "card_item_mjLKfD": {
+          "type": "card_item",
           "settings": {
-            "target_category": "",
-            "title": "Discover Royal Series",
-            "badge_text": "New",
-            "button_link": ""
+            "parent_category": "",
+            "sub_category": "",
+            "collection": "",
+            "product": "",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
           }
         }
       },
       "block_order": [
-        "promo_card_CMUaEw",
-        "promo_card_6Kn48Q"
+        "card_item_3fBpy4",
+        "card_item_mjLKfD"
       ],
       "name": "Category Subnav Bar",
       "settings": {
