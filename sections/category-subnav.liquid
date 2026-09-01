@@ -3,67 +3,71 @@
 {%- assign subnav_menu = section.settings.category_menu -%}
 
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
-  <nav class="category-subnav" aria-label="Quick Access Subnavigation">
+  <nav class="category-subnav" aria-label="Category Navigation">
     <div class="page-width">
-      <ul class="category-subnav__list">
-        {%- for link in subnav_menu.links -%}
-          {%- assign has_dropdown = false -%}
-          {%- if link.links.size > 0 -%}
-            {%- assign has_dropdown = true -%}
-          {%- endif -%}
-
-          {%- assign is_active = false -%}
-          {%- if link.active or collection.url == link.url -%}
-            {%- assign is_active = true -%}
-          {%- elsif template contains 'product' and product.collections contains link.object -%}
-            {%- assign is_active = true -%}
-          {%- endif -%}
-
-          {%- assign child_active = false -%}
-          {%- if has_dropdown -%}
-            {%- for childlink in link.links -%}
-              {%- if childlink.active or collection.url == childlink.url -%}
-                {%- assign child_active = true -%}
-              {%- endif -%}
-            {%- endfor -%}
-          {%- endif -%}
-
-          <li class="category-subnav__item{% if has_dropdown %} has-dropdown{% endif %}">
-            <a 
-              href="{{ link.url }}" 
-              class="category-subnav__link{% if is_active or child_active %} is-active{% endif %}"
-              {% if is_active %}aria-current="page"{% endif %}
-            >
-              <span class="category-subnav__text">{{ link.title }}</span>
-              {%- if has_dropdown -%}
-                <svg class="category-subnav__arrow" width="8" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
-                </svg>
-              {%- endif -%}
-            </a>
-
-            {%- if has_dropdown -%}
-              <ul class="category-subnav__dropdown-side">
-                {%- for childlink in link.links -%}
-                  {%- assign is_child_active = false -%}
-                  {%- if childlink.active or collection.url == childlink.url -%}
-                    {%- assign is_child_active = true -%}
-                  {%- endif -%}
-
-                  <li>
-                    <a 
-                      href="{{ childlink.url }}" 
-                      class="category-subnav__dropdown-link{% if is_child_active %} is-active{% endif %}"
-                    >
-                      {{ childlink.title }}
-                    </a>
-                  </li>
-                {%- endfor -%}
-              </ul>
+      <div class="category-subnav__wrapper">
+        <ul class="category-subnav__menu">
+          {%- for link in subnav_menu.links -%}
+            {%- assign has_dropdown = false -%}
+            {%- if link.links.size > 0 -%}
+              {%- assign has_dropdown = true -%}
             {%- endif -%}
-          </li>
-        {%- endfor -%}
-      </ul>
+
+            {%- assign is_active = false -%}
+            {%- if link.active or collection.url == link.url -%}
+              {%- assign is_active = true -%}
+            {%- elsif template contains 'product' and product.collections contains link.object -%}
+              {%- assign is_active = true -%}
+            {%- endif -%}
+
+            {%- assign child_active = false -%}
+            {%- if has_dropdown -%}
+              {%- for childlink in link.links -%}
+                {%- if childlink.active or collection.url == childlink.url -%}
+                  {%- assign child_active = true -%}
+                {%- endif -%}
+              {%- endfor -%}
+            {%- endif -%}
+
+            <li class="category-subnav__item{% if has_dropdown %} has-flyout{% endif %}">
+              <a 
+                href="{{ link.url }}" 
+                class="category-subnav__link{% if is_active or child_active %} is-active{% endif %}"
+                {% if is_active %}aria-current="page"{% endif %}
+              >
+                <span class="category-subnav__label">{{ link.title }}</span>
+                {%- if has_dropdown -%}
+                  <svg class="category-subnav__icon" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                    <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {%- endif -%}
+              </a>
+
+              {%- if has_dropdown -%}
+                <div class="category-subnav__flyout">
+                  <ul class="category-subnav__child-list">
+                    {%- for childlink in link.links -%}
+                      {%- assign is_child_active = false -%}
+                      {%- if childlink.active or collection.url == childlink.url -%}
+                        {%- assign is_child_active = true -%}
+                      {%- endif -%}
+
+                      <li>
+                        <a 
+                          href="{{ childlink.url }}" 
+                          class="category-subnav__child-link{% if is_child_active %} is-active{% endif %}"
+                        >
+                          {{ childlink.title }}
+                        </a>
+                      </li>
+                    {%- endfor -%}
+                  </ul>
+                </div>
+              {%- endif -%}
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
     </div>
   </nav>
 {%- endif -%}
