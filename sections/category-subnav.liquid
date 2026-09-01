@@ -3,6 +3,17 @@
 {%- assign subnav_menu = section.settings.category_menu -%}
 
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
+
+
+<style>
+  /* Oculta la barra de navegación de categorías en dispositivos móviles y tablets */
+  @media screen and (max-width: 989px) {
+    .section-category-subnav,
+    .category-subnav {
+      display: none !important;
+    }
+  }
+</style>
   <nav class="category-subnav" aria-label="Category Navigation">
     <div class="page-width">
       <ul class="category-subnav__bar">
