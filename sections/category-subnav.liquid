@@ -4,23 +4,24 @@
 
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
 
+  {%- if section.settings.hide_on_mobile -%}
+    <style>
+      @media screen and (max-width: 989px) {
+        #shopify-section-{{ section.id }},
+        .category-subnav {
+          display: none !important;
+        }
+      }
+    </style>
+  {%- endif -%}
 
-<style>
-  /* Oculta la barra de navegación de categorías en dispositivos móviles y tablets */
-  @media screen and (max-width: 989px) {
-    .section-category-subnav,
-    .category-subnav {
-      display: none !important;
-    }
-  }
-</style>
   <nav class="category-subnav" aria-label="Category Navigation">
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
           {%- assign nav_parent = link.title | downcase | strip -%}
 
-          {%- comment -%} Comprobar si hay elementos de submenú o bloques vinculados {%- endcomment -%}
+          {%- comment -%} Check for sub-navigation items or linked blocks {%- endcomment -%}
           {%- assign has_dropdown = false -%}
           {%- if link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
@@ -56,7 +57,7 @@
               <div class="category-megamenu">
                 <div class="category-megamenu__container page-width">
                   
-                  {%- comment -%} Determinar si existe Sidebar (subcategorías reales) {%- endcomment -%}
+                  {%- comment -%} Check for sidebar presence {%- endcomment -%}
                   {%- assign show_sidebar = false -%}
                   {%- if link.links.size > 0 -%}
                     {%- assign show_sidebar = true -%}
@@ -72,7 +73,7 @@
                   {%- endif -%}
 
                   {%- if show_sidebar -%}
-                    {%- comment -%} 2do NIVEL: Sidebar Izquierdo con Subcategorías {%- endcomment -%}
+                    {%- comment -%} LEVEL 2: Left Sidebar {%- endcomment -%}
                     <div class="category-megamenu__sidebar">
                       <ul class="category-megamenu__sidebar-list">
                         {%- for childlink in link.links -%}
@@ -92,10 +93,9 @@
                     </div>
                   {%- endif -%}
 
-                  {%- comment -%} 3er NIVEL: Panel Derecho de Tarjetas Visuales {%- endcomment -%}
+                  {%- comment -%} LEVEL 3: Right Panel Cards {%- endcomment -%}
                   <div class="category-megamenu__content{% unless show_sidebar %} full-width-content{% endunless %}">
                     
-                    {%- comment -%} A) Si hay subcategorías en el menú de Shopify {%- endcomment -%}
                     {%- if link.links.size > 0 -%}
                       {%- for childlink in link.links -%}
                         {%- assign nav_sub = childlink.title | downcase | strip -%}
@@ -126,7 +126,6 @@
                               {%- endfor -%}
                             {%- endif -%}
 
-                            {%- comment -%} Tarjetas vinculadas a esta subcategoría {%- endcomment -%}
                             {%- for block in section.blocks -%}
                               {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
                               {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
@@ -171,7 +170,6 @@
                       {%- endfor -%}
 
                     {%- else -%}
-                      {%- comment -%} B) CASO N/A: Sin subcategorías, muestra las tarjetas directamente {%- endcomment -%}
                       <div class="category-megamenu__tab-panel is-active">
                         <div class="category-megamenu__grid">
                           {%- for block in section.blocks -%}
@@ -265,6 +263,13 @@
       "type": "link_list",
       "id": "category_menu",
       "label": "Select Navigation Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on Mobile & Tablet",
+      "default": true,
+      "info": "Hides this navigation bar on screen widths below 990px."
     }
   ],
   "blocks": [
