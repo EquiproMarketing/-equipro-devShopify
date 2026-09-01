@@ -7,13 +7,125 @@
  * made to this file may be overwritten.
  * ------------------------------------------------------------
  */
- {
+{
   "sections": {
-    "main": { "type": "main-product" },
-    "banner_features": { "type": "product-key-features-banner" },
-    "how_to": { "type": "product-how-to" },
-    "faq": { "type": "category-faq" },
-    "compare_modal": { "type": "product-compare-modal" }
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "",
+        "intro_highlight": "Engineered to optimize practitioner comfort during long sessions.",
+        "custom_description": "",
+        "subtitle": "Precision Engineering for Lasting Stability",
+        "secondary_text": "Stain resistance is central to the Equipro approach.",
+        "featured_product": "",
+        "btn_label": "ADD TO CART",
+        "image_aspect_ratio": "4-5",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_aspect_ratio": "4-3",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "settings": {}
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
   },
   "order": [
     "main",
