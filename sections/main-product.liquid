@@ -5,12 +5,110 @@
 
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
   
+  <!-- 1. BLOQUE SUPERIOR: NAVEGACIÓN, TÍTULO, PÁRRAFOS Y GALERÍA -->
+  <div class="product-header-gallery-grid">
+    
+    <!-- COLUMNA TEXTO E INTRODUCCIÓN -->
+    <div class="product-intro-col">
+      <!-- Back Link -->
+      <div class="product-page__back">
+        <a href="javascript:history.back()" class="back-link">
+          <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+            <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>{{ section.settings.back_text | default: "Back" }}</span>
+        </a>
+      </div>
+
+      <!-- Título Principal -->
+      <h1 class="product-info__title">
+        {{ section.settings.custom_title | default: target_product.title | default: "Round Air-lift Stool" }}
+      </h1>
+      
+      <!-- Destacado Borde Rojo -->
+      {% assign intro_text = section.settings.intro_highlight | default: target_product.metafields.custom.intro_highlight %}
+      {% if intro_text != blank %}
+        <div class="product-info__intro-highlight">
+          <p>{{ intro_text }}</p>
+        </div>
+      {% endif %}
+
+      <!-- Descripción Principal -->
+      <div class="product-info__description">
+        {% if section.settings.custom_description != blank %}
+          {{ section.settings.custom_description }}
+        {% elsif target_product.description != blank %}
+          {{ target_product.description }}
+        {% else %}
+          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists.</p>
+        {% endif %}
+      </div>
+
+      <!-- Subtítulo y Texto Secundario -->
+      {% if section.settings.subtitle != blank %}
+        <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
+      {% endif %}
+
+      {% if section.settings.secondary_text != blank %}
+        <div class="product-info__description">
+          <p>{{ section.settings.secondary_text }}</p>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- COLUMNA GALERÍA DE IMÁGENES -->
+    <div class="product-gallery-col">
+      <div class="product-gallery">
+        <!-- Imagen Principal con Aspect Ratio Ajustable -->
+        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
+          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
+          
+          {% if first_img_block.settings.image != blank %}
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+          {% elsif target_product.featured_image != blank %}
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
+          {% else %}
+            <div class="product-gallery__placeholder"></div>
+          {% endif %}
+        </div>
+        
+        <!-- Miniaturas Reordenables -->
+        <div class="product-gallery__thumbs">
+          {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
+          {% if img_blocks.size > 0 %}
+            {% for block in img_blocks %}
+              {% if block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 200 }}" 
+                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                  onclick="changeMainImg(this.src)" 
+                  {{ block.shopify_attributes }}
+                >
+              {% endif %}
+            {% endfor %}
+          {% else %}
+            {% for image in target_product.images %}
+              <img 
+                src="{{ image | image_url: width: 200 }}" 
+                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                onclick="changeMainImg(this.src)" 
+              >
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+
+  <!-- 2. BLOQUE INFERIOR: BLOQUE DE COMPRA, ACORDEÓN, SHIPPING Y TABLA TÉCNICA -->
   <div class="product-grid-layout">
     
     <!-- COLUMNA IZQUIERDA: BLOQUE COMPRA + ACORDEÓN / FAQ + SHIPPING -->
     <div class="product-left-col">
       
-      <!-- 1. BLOQUE DE COMPRA (PRECIO, DROPDOWN, CANTIDAD, BOTÓN) -->
+      <!-- Bloque de Compra -->
       <div class="product-purchase-block">
         <div class="product-price">
           {{ target_product.price | default: 320000 | money }}
@@ -66,7 +164,7 @@
         {% endform %}
       </div>
 
-      <!-- 2. SECCIÓN KEY FEATURES / ACORDEÓN POPUP -->
+      <!-- Sección Acordeón Key Features -->
       {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
       <div class="product-features-accordion">
         {% if section.settings.accordion_heading != blank %}
@@ -90,7 +188,7 @@
         {% endif %}
       </div>
 
-      <!-- 3. BLOQUE DE SHIPPING / ENVÍO -->
+      <!-- Bloque Shipping -->
       {% if section.settings.show_shipping %}
         <div class="product-shipping-block">
           <h3 class="shipping-title">{{ section.settings.shipping_title | default: "Shipping" }}</h3>
@@ -134,17 +232,113 @@
 {% render 'quote-modal' %}
 
 <style>
-/* GRID LAYOUT DE 2 COLUMNAS */
+/* 1. GRID SUPERIOR: NAVEGACIÓN, TÍTULO Y GALERÍA */
+.product-header-gallery-grid {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 3rem;
+}
+
+.product-page__back a {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  color: #a22938;
+  margin-bottom: 1rem;
+}
+
+.product-info__title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #111;
+  margin-bottom: 1.25rem;
+  line-height: 1.2;
+}
+
+.product-info__intro-highlight {
+  border-left: 3px solid #a22938;
+  padding-left: 15px;
+  margin-bottom: 1.5rem;
+}
+
+.product-info__intro-highlight p {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.product-info__subtitle {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #111;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.product-info__description p {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+/* GALERÍA DE IMÁGENES */
+.product-gallery__main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f4f4f4;
+}
+
+.product-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aspect-ratio-2-3 { aspect-ratio: 2 / 3; }
+.aspect-ratio-4-5 { aspect-ratio: 4 / 5; }
+.aspect-ratio-1-1 { aspect-ratio: 1 / 1; }
+
+.product-gallery__thumbs {
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  overflow-x: auto;
+}
+
+.thumb-img {
+  width: 70px;
+  height: 90px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 4px;
+  border: 1px solid transparent;
+}
+
+.thumb-img.is-active {
+  border-color: #a22938;
+}
+
+/* 2. GRID INFERIOR DE 2 COLUMNAS (MOCKUP REPLICADO) */
 .product-grid-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 3.5rem;
   align-items: start;
-  margin-top: 2rem;
   margin-bottom: 4rem;
 }
 
-/* COLUMNA IZQUIERDA */
+/* COMPRA */
 .product-price {
   font-size: 1.5rem;
   font-weight: 500;
@@ -283,7 +477,7 @@
   line-height: 1.5;
 }
 
-/* SECCIÓN SHIPPING */
+/* SHIPPING */
 .product-shipping-block {
   margin-top: 4rem;
   padding-top: 1.5rem;
@@ -304,7 +498,7 @@
   line-height: 1.5;
 }
 
-/* COLUMNA DERECHA: TABLA TÉCNICA */
+/* TABLA TÉCNICA */
 .tech-table-container {
   width: 100%;
   border-radius: 8px;
@@ -367,6 +561,7 @@
 }
 
 @media (max-width: 989px) {
+  .product-header-gallery-grid,
   .product-grid-layout {
     grid-template-columns: 1fr;
     gap: 2.5rem;
@@ -375,6 +570,14 @@
 </style>
 
 <script>
+  function changeMainImg(src) {
+    document.getElementById('MainProductImg').src = src;
+    document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
+    if (event && event.target) {
+      event.target.classList.add('is-active');
+    }
+  }
+
   function adjustQty(val) {
     const input = document.getElementById('QuantityInput');
     let current = parseInt(input.value) || 1;
@@ -402,6 +605,65 @@
   "tag": "section",
   "class": "section-main-product",
   "settings": [
+    {
+      "type": "header",
+      "content": "Navigation & Title Overrides"
+    },
+    {
+      "type": "text",
+      "id": "back_text",
+      "label": "Back Link Text",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Custom Title Override",
+      "info": "Leave empty to use native Product Title"
+    },
+    {
+      "type": "header",
+      "content": "Text & Descriptions"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_highlight",
+      "label": "Intro Highlight Text (Red Border)",
+      "default": "Engineered to optimize practitioner comfort during long sessions."
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Main Description Override",
+      "info": "Leave empty to use default product description."
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Secondary Section Title",
+      "default": "Precision Engineering for Lasting Stability"
+    },
+    {
+      "type": "textarea",
+      "id": "secondary_text",
+      "label": "Secondary Paragraph Text",
+      "default": "Stain resistance is central to the Equipro approach."
+    },
+    {
+      "type": "header",
+      "content": "Gallery Aspect Ratio Settings"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Main Image Aspect Ratio",
+      "options": [
+        { "value": "2-3", "label": "Tall Vertical (2:3)" },
+        { "value": "4-5", "label": "Standard Vertical (4:5)" },
+        { "value": "1-1", "label": "Square (1:1)" }
+      ],
+      "default": "4-5"
+    },
     {
       "type": "header",
       "content": "Product Target & Purchasing"
@@ -473,6 +735,17 @@
     }
   ],
   "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        }
+      ]
+    },
     {
       "type": "faq_item",
       "name": "Accordion Item",
