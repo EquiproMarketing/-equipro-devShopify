@@ -379,62 +379,6 @@
         "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>"
       }
     },
-    "custom_product_treatment_pKdyQh": {
-      "type": "custom-product-treatment",
-      "blocks": {
-        "product_card_qK9PRD": {
-          "type": "product_card",
-          "settings": {
-            "card_bg_color": "#f5f5f7",
-            "title": "Ultra-comfort",
-            "subtitle": "Parfaite alliée de votre pratique.",
-            "price": "À partir de 1 299 $",
-            "available_colors": "#ffffff, #111111, #808080",
-            "btn_primary_text": "En savoir plus",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Acheter >",
-            "btn_secondary_url": ""
-          }
-        },
-        "product_card_gnxPtD": {
-          "type": "product_card",
-          "settings": {
-            "card_bg_color": "#f5f5f7",
-            "title": "Ultra-comfort",
-            "subtitle": "Parfaite alliée de votre pratique.",
-            "price": "À partir de 1 299 $",
-            "available_colors": "#ffffff, #111111, #808080",
-            "btn_primary_text": "En savoir plus",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Acheter >",
-            "btn_secondary_url": ""
-          }
-        },
-        "product_card_tnxJAd": {
-          "type": "product_card",
-          "settings": {
-            "card_bg_color": "#f5f5f7",
-            "title": "Ultra-comfort",
-            "subtitle": "Parfaite alliée de votre pratique.",
-            "price": "À partir de 1 299 $",
-            "available_colors": "#ffffff, #111111, #808080",
-            "btn_primary_text": "En savoir plus",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Acheter >",
-            "btn_secondary_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_card_qK9PRD",
-        "product_card_gnxPtD",
-        "product_card_tnxJAd"
-      ],
-      "name": "Custom Product Treatment",
-      "settings": {
-        "title": "Beds & Stools"
-      }
-    },
     "custom_subcategory_slider_YFNFXr": {
       "type": "custom-subcategory-slider",
       "blocks": {
@@ -548,6 +492,69 @@
       "name": "Subcategory Slider",
       "settings": {
         "title": "Explore Subcategories"
+      }
+    },
+    "custom_subcategory_slider_HPxgWp": {
+      "type": "custom-subcategory-slider",
+      "blocks": {
+        "subcategory_card_MpAxqM": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_ChAiXK": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_WfgYK8": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
+        "subcategory_card_FGmzWP": {
+          "type": "subcategory_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Hydraulic",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "price": "From CA$ 1,499",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_card_MpAxqM",
+        "subcategory_card_ChAiXK",
+        "subcategory_card_WfgYK8",
+        "subcategory_card_FGmzWP"
+      ],
+      "name": "Subcategory Slider",
+      "settings": {
+        "title": "Explore Hydraulic / Mechanical"
       }
     },
     "image_slider": {
@@ -720,71 +727,6 @@
       ],
       "name": "Spa Equipment Pack",
       "settings": {}
-    },
-    "section_bento_grid_v2_frY9DL": {
-      "type": "section-bento-grid-v2",
-      "blocks": {
-        "collection_item_KTeAfN": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Skincare Equipments"
-          }
-        },
-        "collection_item_7mqhq9": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Treatment Tables"
-          }
-        },
-        "collection_item_QmDKYy": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Stools"
-          }
-        },
-        "collection_item_xXnGQf": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Trolleys"
-          }
-        },
-        "collection_item_zt3qg4": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Mag-lamps"
-          }
-        },
-        "collection_item_HpJ3jE": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "",
-            "title": "Wellness therapy"
-          }
-        }
-      },
-      "block_order": [
-        "collection_item_KTeAfN",
-        "collection_item_7mqhq9",
-        "collection_item_QmDKYy",
-        "collection_item_xXnGQf",
-        "collection_item_zt3qg4",
-        "collection_item_HpJ3jE"
-      ],
-      "name": "Bento Grid V2",
-      "settings": {
-        "title": "Products"
-      }
     }
   },
   "order": [
@@ -793,10 +735,9 @@
     "best_sellers",
     "shop_by_category",
     "image_with_text",
-    "custom_product_treatment_pKdyQh",
     "custom_subcategory_slider_YFNFXr",
+    "custom_subcategory_slider_HPxgWp",
     "image_slider",
-    "custom_spa_pack_builder_BDtr9H",
-    "section_bento_grid_v2_frY9DL"
+    "custom_spa_pack_builder_BDtr9H"
   ]
 }
