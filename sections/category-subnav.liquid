@@ -5,72 +5,135 @@
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
   <nav class="category-subnav" aria-label="Category Navigation">
     <div class="page-width">
-      <div class="category-subnav__wrapper">
-        <ul class="category-subnav__menu">
-          {%- for link in subnav_menu.links -%}
-            {%- assign has_dropdown = false -%}
-            {%- if link.links.size > 0 -%}
-              {%- assign has_dropdown = true -%}
-            {%- endif -%}
+      <ul class="category-subnav__bar">
+        {%- for link in subnav_menu.links -%}
+          {%- assign has_dropdown = false -%}
+          {%- if link.links.size > 0 -%}
+            {%- assign has_dropdown = true -%}
+          {%- endif -%}
 
-            {%- assign is_active = false -%}
-            {%- if link.active or collection.url == link.url -%}
-              {%- assign is_active = true -%}
-            {%- elsif template contains 'product' and product.collections contains link.object -%}
-              {%- assign is_active = true -%}
-            {%- endif -%}
+          {%- assign is_active = false -%}
+          {%- if link.active or collection.url == link.url -%}
+            {%- assign is_active = true -%}
+          {%- endif -%}
 
-            {%- assign child_active = false -%}
-            {%- if has_dropdown -%}
-              {%- for childlink in link.links -%}
-                {%- if childlink.active or collection.url == childlink.url -%}
-                  {%- assign child_active = true -%}
-                {%- endif -%}
-              {%- endfor -%}
-            {%- endif -%}
-
-            <li class="category-subnav__item{% if has_dropdown %} has-flyout{% endif %}">
-              <a 
-                href="{{ link.url }}" 
-                class="category-subnav__link{% if is_active or child_active %} is-active{% endif %}"
-                {% if is_active %}aria-current="page"{% endif %}
-              >
-                <span class="category-subnav__label">{{ link.title }}</span>
-                {%- if has_dropdown -%}
-                  <svg class="category-subnav__icon" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
-                    <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
-                  </svg>
-                {%- endif -%}
-              </a>
-
+          <li class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}">
+            <a 
+              href="{{ link.url }}" 
+              class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
+            >
+              <span>{{ link.title }}</span>
               {%- if has_dropdown -%}
-                <div class="category-subnav__flyout">
-                  <ul class="category-subnav__child-list">
-                    {%- for childlink in link.links -%}
-                      {%- assign is_child_active = false -%}
-                      {%- if childlink.active or collection.url == childlink.url -%}
-                        {%- assign is_child_active = true -%}
-                      {%- endif -%}
-
-                      <li>
-                        <a 
-                          href="{{ childlink.url }}" 
-                          class="category-subnav__child-link{% if is_child_active %} is-active{% endif %}"
-                        >
-                          {{ childlink.title }}
-                        </a>
-                      </li>
-                    {%- endfor -%}
-                  </ul>
-                </div>
+                <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
               {%- endif -%}
-            </li>
-          {%- endfor -%}
-        </ul>
-      </div>
+            </a>
+
+            {%- comment -%} PANORAMA MEGA MENÚ DESPLEGABLE {%- endcomment -%}
+            {%- if has_dropdown -%}
+              <div class="category-megamenu">
+                <div class="category-megamenu__container page-width">
+                  
+                  {%- comment -%} COLUMNA IZQUIERDA: LISTA DE CATEGORÍAS {%- endcomment -%}
+                  <div class="category-megamenu__sidebar">
+                    <ul class="category-megamenu__sidebar-list">
+                      {%- for childlink in link.links -%}
+                        {%- assign has_subchilds = false -%}
+                        {%- if childlink.links.size > 0 -%}
+                          {%- assign has_subchilds = true -%}
+                        {%- endif -%}
+
+                        <li class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}">
+                          <a href="{{ childlink.url }}" class="category-megamenu__sidebar-link">
+                            <span>{{ childlink.title }}</span>
+                            {%- if has_subchilds -%}
+                              <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            {%- endif -%}
+                          </a>
+                        </li>
+                      {%- endfor -%}
+                    </ul>
+                  </div>
+
+                  {%- comment -%} PANEL DERECHO: CARDS / SUBCATEGORÍAS {%- endcomment -%}
+                  <div class="category-megamenu__content">
+                    {%- for childlink in link.links -%}
+                      <div 
+                        class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
+                        id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
+                      >
+                        {%- if childlink.links.size > 0 -%}
+                          <div class="category-megamenu__grid">
+                            {%- for grandchild in childlink.links -%}
+                              {%- assign grand_image = nil -%}
+                              {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
+                                {%- assign grand_image = grandchild.object.image -%}
+                              {%- elsif grandchild.type == 'product_link' and grandchild.object.featured_image -%}
+                                {%- assign grand_image = grandchild.object.featured_image -%}
+                              {%- endif -%}
+
+                              <a href="{{ grandchild.url }}" class="category-megamenu__card">
+                                <div class="category-megamenu__card-image">
+                                  {%- if grand_image != nil -%}
+                                    <img src="{{ grand_image | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
+                                  {%- else -%}
+                                    <div class="category-megamenu__card-placeholder"></div>
+                                  {%- endif -%}
+                                </div>
+                                <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
+                              </a>
+                            {%- endfor -%}
+                          </div>
+                        {%- else -%}
+                          {%- comment -%} Si no hay nietos, muestra la colección directamente {%- endcomment -%}
+                          <div class="category-megamenu__empty-panel">
+                            <a href="{{ childlink.url }}" class="category-megamenu__direct-link">Explore all {{ childlink.title }} &rarr;</a>
+                          </div>
+                        {%- endif -%}
+                      </div>
+                    {%- endfor -%}
+                  </div>
+
+                </div>
+              </div>
+            {%- endif -%}
+
+          </li>
+        {%- endfor -%}
+      </ul>
     </div>
   </nav>
 {%- endif -%}
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const sidebarItems = document.querySelectorAll('.category-megamenu__sidebar-item');
+
+    sidebarItems.forEach(item => {
+      item.addEventListener('mouseenter', () => {
+        const parentSidebar = item.closest('.category-megamenu__sidebar');
+        const parentContent = item.closest('.category-megamenu').querySelector('.category-megamenu__content');
+        const targetId = item.getAttribute('data-target-tab');
+
+        if (!parentSidebar || !parentContent || !targetId) return;
+
+        // Limpiar seleccionados en este menú
+        parentSidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(el => el.classList.remove('is-selected'));
+        parentContent.querySelectorAll('.category-megamenu__tab-panel').forEach(el => el.classList.remove('is-active'));
+
+        // Activar elemento actual
+        item.classList.add('is-selected');
+        const targetPanel = parentContent.querySelector('#' + targetId);
+        if (targetPanel) {
+          targetPanel.classList.add('is-active');
+        }
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
