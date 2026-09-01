@@ -7,22 +7,61 @@
     <div class="page-width">
       <ul class="category-subnav__list">
         {%- for link in subnav_menu.links -%}
-          {%- assign is_active = false -%}
+          {%- assign has_dropdown = false -%}
+          {%- if link.links.size > 0 -%}
+            {%- assign has_dropdown = true -%}
+          {%- endif -%}
 
+          {%- assign is_active = false -%}
           {%- if link.active or collection.url == link.url -%}
             {%- assign is_active = true -%}
           {%- elsif template contains 'product' and product.collections contains link.object -%}
             {%- assign is_active = true -%}
           {%- endif -%}
 
-          <li>
+          {%- comment -%} Verificar si algún hijo está activo {%- endcomment -%}
+          {%- assign child_active = false -%}
+          {%- if has_dropdown -%}
+            {%- for childlink in link.links -%}
+              {%- if childlink.active or collection.url == childlink.url -%}
+                {%- assign child_active = true -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          <li class="category-subnav__item{% if has_dropdown %} has-dropdown{% endif %}">
             <a 
               href="{{ link.url }}" 
-              class="category-subnav__link{% if is_active %} is-active{% endif %}"
+              class="category-subnav__link{% if is_active or child_active %} is-active{% endif %}"
               {% if is_active %}aria-current="page"{% endif %}
             >
-              {{ link.title }}
+              <span>{{ link.title }}</span>
+              {%- if has_dropdown -%}
+                <svg class="category-subnav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+              {%- endif -%}
             </a>
+
+            {%- if has_dropdown -%}
+              <ul class="category-subnav__dropdown">
+                {%- for childlink in link.links -%}
+                  {%- assign is_child_active = false -%}
+                  {%- if childlink.active or collection.url == childlink.url -%}
+                    {%- assign is_child_active = true -%}
+                  {%- endif -%}
+
+                  <li>
+                    <a 
+                      href="{{ childlink.url }}" 
+                      class="category-subnav__dropdown-link{% if is_child_active %} is-active{% endif %}"
+                    >
+                      {{ childlink.title }}
+                    </a>
+                  </li>
+                {%- endfor -%}
+              </ul>
+            {%- endif -%}
           </li>
         {%- endfor -%}
       </ul>
@@ -33,6 +72,8 @@
 {% schema %}
 {
   "name": "Category Subnav Bar",
+  "tag": "section",
+  "class": "section-category-subnav",
   "settings": [
     {
       "type": "link_list",

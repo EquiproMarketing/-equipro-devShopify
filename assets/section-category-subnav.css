@@ -1,56 +1,87 @@
-/* CATEGORY SUBNAV BAR STYLES */
 .category-subnav {
-  background-color: #f8f9fa;
-  border-bottom: 1px solid #e0e0e0;
-  width: 100%;
-  padding: 10px 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e5ea;
+  position: relative;
+  z-index: 40;
 }
 
 .category-subnav__list {
   display: flex;
   align-items: center;
-  justify-content: flex-start;
-  gap: 24px;
+  gap: 1.5rem;
   list-style: none;
   margin: 0;
   padding: 0;
-  overflow-x: auto;
-  white-space: nowrap;
-  -webkit-overflow-scrolling: touch;
+  overflow-x: visible;
 }
 
-.category-subnav__list::-webkit-scrollbar {
-  display: none; /* Oculta scrollbar en móviles manteniendo el deslizamiento */
+.category-subnav__item {
+  position: relative;
+  padding: 1rem 0;
 }
 
 .category-subnav__link {
-  text-decoration: none;
-  color: #333333;
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
   font-size: 0.9rem;
-  font-weight: 500;
-  padding: 6px 12px;
-  border-radius: 4px;
-  transition: color 0.2s ease, background-color 0.2s ease;
+  font-weight: 600;
+  color: #48484a;
+  text-decoration: none;
+  transition: color 0.2s ease;
 }
 
-.category-subnav__link:hover {
-  color: #ab273b;
-  background-color: #faf0f1;
-}
-
+.category-subnav__link:hover,
 .category-subnav__link.is-active {
-  color: #ffffff;
-  background-color: #ab273b;
-  font-weight: 700;
+  color: #ab273b;
 }
 
-@media (max-width: 749px) {
-  .category-subnav__list {
-    gap: 12px;
-  }
-  
-  .category-subnav__link {
-    font-size: 0.85rem;
-    padding: 5px 10px;
-  }
+.category-subnav__chevron {
+  transition: transform 0.2s ease;
+}
+
+.category-subnav__item:hover .category-subnav__chevron {
+  transform: rotate(180deg);
+}
+
+/* DROPDOWN MENU */
+.category-subnav__dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  min-width: 200px;
+  background-color: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+  border: 1px solid #e5e5ea;
+  list-style: none;
+  padding: 0.5rem 0;
+  margin: 0;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(8px);
+  transition: all 0.2s ease;
+  z-index: 50;
+}
+
+.category-subnav__item:hover .category-subnav__dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.category-subnav__dropdown-link {
+  display: block;
+  padding: 8px 16px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #1d1d1f;
+  text-decoration: none;
+  transition: background 0.15s ease, color 0.15s ease;
+}
+
+.category-subnav__dropdown-link:hover,
+.category-subnav__dropdown-link.is-active {
+  background-color: #f5f5f7;
+  color: #ab273b;
 }
