@@ -1,9 +1,8 @@
 {{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
 
-{%- assign first_slide = section.blocks.first -%}
-{%- assign aspect_ratio = first_slide.settings.image.aspect_ratio | default: 2.0 -%}
+{%- assign banner_height = section.settings.custom_height -%}
 
-<div class="hero-banner-wrapper hero-banner-wrapper--{{ section.settings.banner_height }}" id="HeroBanner-{{ section.id }}">
+<div class="hero-banner-wrapper" id="HeroBanner-{{ section.id }}">
   <div class="hero-banner">
     
     <div class="hero-banner__slides">
@@ -19,7 +18,7 @@
               alt="{{ block.settings.heading | escape }}"
               loading="eager"
               width="2000"
-              height="{{ 2000 | divided_by: block.settings.image.aspect_ratio | round }}"
+              height="1000"
               class="hero-banner__image position-{{ block.settings.image_position | default: 'center' }}"
             >
           {% else %}
@@ -30,19 +29,23 @@
             <div class="hero-banner__container page-width">
               <div class="hero-banner__content">
                 {% if block.settings.subheading != blank %}
-                  <span class="hero-banner__subheading">{{ block.settings.subheading }}</span>
+                  <span class="hero-banner__subheading" style="color: {{ block.settings.subheading_color }};">{{ block.settings.subheading }}</span>
                 {% endif %}
 
                 {% if block.settings.heading != blank %}
-                  <h1 class="hero-banner__heading">{{ block.settings.heading }}</h1>
+                  <h1 class="hero-banner__heading" style="color: {{ block.settings.heading_color }};">{{ block.settings.heading }}</h1>
                 {% endif %}
 
                 {% if block.settings.text != blank %}
-                  <p class="hero-banner__text">{{ block.settings.text }}</p>
+                  <p class="hero-banner__text" style="color: {{ block.settings.text_color }};">{{ block.settings.text }}</p>
                 {% endif %}
 
                 {% if block.settings.button_label != blank %}
-                  <a href="{{ block.settings.button_link }}" class="button button--primary hero-banner__button">
+                  <a 
+                    href="{{ block.settings.button_link }}" 
+                    class="button hero-banner__button"
+                    style="background-color: {{ block.settings.btn_bg_color }}; color: {{ block.settings.btn_text_color }};"
+                  >
                     {{ block.settings.button_label }}
                   </a>
                 {% endif %}
@@ -80,23 +83,16 @@
   </div>
 
   {% if section.settings.bottom_bar_text != blank %}
-    <div class="hero-banner__bar">
-      <p class="hero-banner__bar-text">{{ section.settings.bottom_bar_text }}</p>
+    <div class="hero-banner__bar" style="background-color: {{ section.settings.bar_bg_color }};">
+      <p class="hero-banner__bar-text" style="color: {{ section.settings.bar_text_color }};">{{ section.settings.bottom_bar_text }}</p>
     </div>
   {% endif %}
 </div>
 
 <style>
-/* BANNER HEIGHT OPTIONS */
-.hero-banner-wrapper--small .hero-banner { height: 400px; }
-.hero-banner-wrapper--medium .hero-banner { height: 550px; }
-.hero-banner-wrapper--large .hero-banner { height: 700px; }
-.hero-banner-wrapper--full .hero-banner { height: 100vh; }
-
-/* ADAPT TO FIRST IMAGE ASPECT RATIO */
-.hero-banner-wrapper--adapt .hero-banner {
-  height: 0;
-  padding-bottom: {{ 100 | divided_by: aspect_ratio }}%;
+/* CUSTOM PIXEL HEIGHT CONTROL */
+#HeroBanner-{{ section.id }} .hero-banner {
+  height: {{ section.settings.custom_height }}px;
 }
 
 .hero-banner {
@@ -159,10 +155,9 @@
 }
 
 @media (max-width: 767px) {
-  .hero-banner-wrapper--small .hero-banner { height: 320px; }
-  .hero-banner-wrapper--medium .hero-banner { height: 420px; }
-  .hero-banner-wrapper--large .hero-banner { height: 520px; }
-  .hero-banner-wrapper--adapt .hero-banner { min-height: 280px; }
+  #HeroBanner-{{ section.id }} .hero-banner {
+    height: {{ section.settings.custom_height_mobile }}px;
+  }
 }
 </style>
 
@@ -239,17 +234,32 @@
   "class": "section-hero-banner",
   "settings": [
     {
-      "type": "select",
-      "id": "banner_height",
-      "label": "Banner Height",
-      "options": [
-        { "value": "adapt", "label": "Adapt to First Image" },
-        { "value": "small", "label": "Small (400px)" },
-        { "value": "medium", "label": "Medium (550px)" },
-        { "value": "large", "label": "Large (700px)" },
-        { "value": "full", "label": "Full Screen (100vh)" }
-      ],
-      "default": "adapt"
+      "type": "header",
+      "content": "Height Controls (Drag Sliders)"
+    },
+    {
+      "type": "range",
+      "id": "custom_height",
+      "min": 200,
+      "max": 1000,
+      "step": 10,
+      "unit": "px",
+      "label": "Desktop Height",
+      "default": 450
+    },
+    {
+      "type": "range",
+      "id": "custom_height_mobile",
+      "min": 200,
+      "max": 600,
+      "step": 10,
+      "unit": "px",
+      "label": "Mobile Height",
+      "default": 350
+    },
+    {
+      "type": "header",
+      "content": "Autoplay Options"
     },
     {
       "type": "checkbox",
@@ -268,10 +278,26 @@
       "default": 5
     },
     {
+      "type": "header",
+      "content": "Bottom Bar Settings"
+    },
+    {
       "type": "textarea",
       "id": "bottom_bar_text",
       "label": "Bottom Bar Text",
       "default": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
+    },
+    {
+      "type": "color",
+      "id": "bar_bg_color",
+      "label": "Bar Background Color",
+      "default": "#f5f5f7"
+    },
+    {
+      "type": "color",
+      "id": "bar_text_color",
+      "label": "Bar Text Color",
+      "default": "#1d1d1f"
     }
   ],
   "blocks": [
@@ -306,6 +332,10 @@
           "default": 30
         },
         {
+          "type": "header",
+          "content": "Slide Content"
+        },
+        {
           "type": "text",
           "id": "subheading",
           "label": "Subheading",
@@ -333,6 +363,40 @@
           "type": "url",
           "id": "button_link",
           "label": "Button Link"
+        },
+        {
+          "type": "header",
+          "content": "Color Pickers"
+        },
+        {
+          "type": "color",
+          "id": "subheading_color",
+          "label": "Subheading Color",
+          "default": "#ab273b"
+        },
+        {
+          "type": "color",
+          "id": "heading_color",
+          "label": "Heading Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Description Color",
+          "default": "#f5f5f7"
+        },
+        {
+          "type": "color",
+          "id": "btn_bg_color",
+          "label": "Button Background Color",
+          "default": "#ab273b"
+        },
+        {
+          "type": "color",
+          "id": "btn_text_color",
+          "label": "Button Text Color",
+          "default": "#ffffff"
         }
       ]
     }
