@@ -228,3 +228,12 @@
 .promo-title {
   font-weight: 500 !important;
 }
+
+.category-megamenu__content.full-width-content {
+  padding-left: 0;
+  width: 100%;
+}
+
+.category-megamenu__content.full-width-content .category-megamenu__grid {
+  grid-template-columns: repeat(5, 1fr);
+}
