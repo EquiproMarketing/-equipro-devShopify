@@ -12,16 +12,136 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "spec_row_mBEg94": {
+        "spec_row_zk4QN7": {
           "type": "spec_row",
           "settings": {
             "label": "Manufacturer",
             "value": "Equipro Beauty"
           }
+        },
+        "spec_row_z7epLe": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Model SKU",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_jqyUGD": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Primary Materials",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_tYBUwH": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Dimensions (L x W x H)",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_rdBpRD": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Weight",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_jVNwT9": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Adjustability",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_dRARqG": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Swivel System",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_pVDK8Q": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Positioning",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_e6UJTL": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Upholstery",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_KMLHzL": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Armrests",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_kFYAFt": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Number of Functions",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_r9PLMa": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Safety Features",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_mBEg94": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Certifications",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_8RXETc": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Warranty",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_i9AWkd": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Country of Origin",
+            "value": "Equipro Beauty"
+          }
+        },
+        "spec_row_xfHCtN": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Intended Use",
+            "value": "Equipro Beauty"
+          }
         }
       },
       "block_order": [
-        "spec_row_mBEg94"
+        "spec_row_zk4QN7",
+        "spec_row_z7epLe",
+        "spec_row_jqyUGD",
+        "spec_row_tYBUwH",
+        "spec_row_rdBpRD",
+        "spec_row_jVNwT9",
+        "spec_row_dRARqG",
+        "spec_row_pVDK8Q",
+        "spec_row_e6UJTL",
+        "spec_row_KMLHzL",
+        "spec_row_kFYAFt",
+        "spec_row_r9PLMa",
+        "spec_row_mBEg94",
+        "spec_row_8RXETc",
+        "spec_row_i9AWkd",
+        "spec_row_xfHCtN"
       ],
       "settings": {
         "back_text": "Back",
