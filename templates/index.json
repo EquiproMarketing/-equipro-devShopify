@@ -85,6 +85,34 @@
     "shop_by_cat_v2_DhXM94": {
       "type": "shop-by-cat-v2",
       "blocks": {
+        "category_item_rWVwFT": {
+          "type": "category_item",
+          "settings": {
+            "title": "Mechanical",
+            "link": ""
+          }
+        },
+        "category_item_ebxfGg": {
+          "type": "category_item",
+          "settings": {
+            "title": "Hydraulic",
+            "link": ""
+          }
+        },
+        "category_item_tME4fF": {
+          "type": "category_item",
+          "settings": {
+            "title": "Portable",
+            "link": ""
+          }
+        },
+        "category_item_dpjh46": {
+          "type": "category_item",
+          "settings": {
+            "title": "Electric",
+            "link": ""
+          }
+        },
         "category_item_JVrMPE": {
           "type": "category_item",
           "settings": {
@@ -157,6 +185,10 @@
         }
       },
       "block_order": [
+        "category_item_rWVwFT",
+        "category_item_ebxfGg",
+        "category_item_tME4fF",
+        "category_item_dpjh46",
         "category_item_JVrMPE",
         "category_item_B9RXVp",
         "category_item_ACVzqh",
