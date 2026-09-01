@@ -7,7 +7,7 @@
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
-          {%- comment -%} 1er NIVEL: Categoría Principal (ej. Treatment Beds) {%- endcomment -%}
+          {%- comment -%} 1er NIVEL: Categoría Principal {%- endcomment -%}
           {%- assign has_dropdown = false -%}
           {%- if link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
@@ -33,7 +33,6 @@
               class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
             >
               <span>{{ link.title }}</span>
-              {%- comment -%} Flecha solo si contiene información {%- endcomment -%}
               {%- if has_dropdown -%}
                 <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -45,7 +44,7 @@
               <div class="category-megamenu">
                 <div class="category-megamenu__container page-width">
                   
-                  {%- comment -%} 2do NIVEL: Lista Vertical Izquierda (Subcategorías) {%- endcomment -%}
+                  {%- comment -%} 2do NIVEL: Sidebar Izquierdo {%- endcomment -%}
                   <div class="category-megamenu__sidebar">
                     <ul class="category-megamenu__sidebar-list">
                       {%- for childlink in link.links -%}
@@ -62,7 +61,7 @@
                         </li>
                       {%- endfor -%}
 
-                      {%- comment -%} Subcategorías creadas desde Bloques del Customizer {%- endcomment -%}
+                      {%- comment -%} Subcategorías creadas desde Bloques {%- endcomment -%}
                       {%- for block in section.blocks -%}
                         {%- assign parent_clean = block.settings.parent_category | downcase | strip -%}
                         {%- assign link_clean = link.title | downcase | strip -%}
@@ -71,7 +70,8 @@
                           {%- assign custom_sub_handle = custom_sub | handleize -%}
                           {%- assign exists_in_links = false -%}
                           {%- for childlink in link.links -%}
-                            {%- if childlink.title | handleize == custom_sub_handle -%}
+                            {%- assign child_handle = childlink.title | handleize -%}
+                            {%- if child_handle == custom_sub_handle -%}
                               {%- assign exists_in_links = true -%}
                             {%- endif -%}
                           {%- endfor -%}
@@ -97,7 +97,6 @@
                   {%- comment -%} 3er NIVEL: Panel Derecho de Tarjetas Visuales {%- endcomment -%}
                   <div class="category-megamenu__content">
                     
-                    {%- comment -%} A) Si la estructura viene desde el menú de navegación de Shopify {%- endcomment -%}
                     {%- for childlink in link.links -%}
                       <div 
                         class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
@@ -127,7 +126,6 @@
                             {%- endfor -%}
                           {%- endif -%}
 
-                          {%- comment -%} B) Si las tarjetas vienen de Bloques configurados en el Theme Editor {%- endcomment -%}
                           {%- for block in section.blocks -%}
                             {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
                             {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
