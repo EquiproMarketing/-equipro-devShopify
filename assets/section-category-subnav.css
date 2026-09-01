@@ -205,3 +205,26 @@
     grid-template-columns: repeat(2, 1fr);
   }
 }
+
+/* ESTILOS PARA TARJETAS DISCOVER / PROMO CON IMAGEN */
+.custom-promo-card .category-megamenu__card-image {
+  position: relative;
+}
+
+.custom-promo-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  background-color: #1d1d1f;
+  color: #ffffff;
+  font-size: 0.68rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  padding: 4px 8px;
+  border-radius: 4px;
+}
+
+.promo-title {
+  font-weight: 500 !important;
+}

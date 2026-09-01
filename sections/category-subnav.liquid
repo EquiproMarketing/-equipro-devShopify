@@ -8,7 +8,7 @@
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
           {%- assign has_dropdown = false -%}
-          {%- if link.links.size > 0 -%}
+          {%- if link.links.size > 0 or section.blocks.size > 0 -%}
             {%- assign has_dropdown = true -%}
           {%- endif -%}
 
@@ -58,15 +58,16 @@
                     </ul>
                   </div>
 
-                  {%- comment -%} PANEL DERECHO: CARDS / SUBCATEGORÍAS {%- endcomment -%}
+                  {%- comment -%} PANEL DERECHO: CARDS / IMÁGENES SUBCATEGORÍAS {%- endcomment -%}
                   <div class="category-megamenu__content">
                     {%- for childlink in link.links -%}
                       <div 
                         class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
                         id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
                       >
-                        {%- if childlink.links.size > 0 -%}
-                          <div class="category-megamenu__grid">
+                        <div class="category-megamenu__grid">
+                          {%- comment -%} 1. Muestra los elementos del menú (nietos) {%- endcomment -%}
+                          {%- if childlink.links.size > 0 -%}
                             {%- for grandchild in childlink.links -%}
                               {%- assign grand_image = nil -%}
                               {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
@@ -86,13 +87,29 @@
                                 <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
                               </a>
                             {%- endfor -%}
-                          </div>
-                        {%- else -%}
-                          {%- comment -%} Si no hay nietos, muestra la colección directamente {%- endcomment -%}
-                          <div class="category-megamenu__empty-panel">
-                            <a href="{{ childlink.url }}" class="category-megamenu__direct-link">Explore all {{ childlink.title }} &rarr;</a>
-                          </div>
-                        {%- endif -%}
+                          {%- endif -%}
+
+                          {%- comment -%} 2. Muestra los bloques de imágenes manuales (Custom Discover Cards) que coincidan {%- endcomment -%}
+                          {%- for block in section.blocks -%}
+                            {%- assign target_clean = block.settings.target_category | downcase | strip -%}
+                            {%- assign child_clean = childlink.title | downcase | strip -%}
+                            {%- if target_clean == child_clean -%}
+                              <a href="{{ block.settings.button_link }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
+                                <div class="category-megamenu__card-image">
+                                  {%- if block.settings.image != blank -%}
+                                    <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="220" height="220">
+                                  {%- else -%}
+                                    <div class="category-megamenu__card-placeholder"></div>
+                                  {%- endif -%}
+                                  {%- if block.settings.badge_text != blank -%}
+                                    <span class="custom-promo-badge">{{ block.settings.badge_text }}</span>
+                                  {%- endif -%}
+                                </div>
+                                <span class="category-megamenu__card-title promo-title">{{ block.settings.title }}</span>
+                              </a>
+                            {%- endif -%}
+                          {%- endfor -%}
+                        </div>
                       </div>
                     {%- endfor -%}
                   </div>
@@ -120,11 +137,9 @@
 
         if (!parentSidebar || !parentContent || !targetId) return;
 
-        // Limpiar seleccionados en este menú
         parentSidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(el => el.classList.remove('is-selected'));
         parentContent.querySelectorAll('.category-megamenu__tab-panel').forEach(el => el.classList.remove('is-active'));
 
-        // Activar elemento actual
         item.classList.add('is-selected');
         const targetPanel = parentContent.querySelector('#' + targetId);
         if (targetPanel) {
@@ -145,6 +160,42 @@
       "type": "link_list",
       "id": "category_menu",
       "label": "Select Navigation Menu"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "promo_card",
+      "name": "Discover Image Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "target_category",
+          "label": "Parent Category Name",
+          "info": "Write the exact name of the subcategory (e.g., Facial Steamers) where this image card should appear."
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "Discover Royal Series"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Image"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge Label (Optional)",
+          "default": "New"
+        },
+        {
+          "type": "url",
+          "id": "button_link",
+          "label": "Link URL"
+        }
+      ]
     }
   ],
   "presets": [
