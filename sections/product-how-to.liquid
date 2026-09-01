@@ -1,41 +1,335 @@
-<div class="product-how-to page-width">
-  <div class="product-how-to__grid">
-    <div class="product-how-to__media">
-      <div class="product-how-to__img-placeholder"></div>
-    </div>
+{{ 'section-product-how-to.css' | asset_url | stylesheet_tag }}
 
-    <div class="product-how-to__content">
-      <h2 class="product-how-to__title">How to Use</h2>
-      <ul class="product-how-to__list">
-        <li><strong>Height Calibration:</strong> Adjust the chair elevation using the control mechanism to match your optimal working height.</li>
-        <li><strong>Backrest Positioning:</strong> Utilize the manual release handle to recline the backrest to the desired angle.</li>
-        <li><strong>Tilt Activation:</strong> Engage the 15-degree tilt system to optimize facial and neck access.</li>
-      </ul>
+<div class="product-how-to" id="HowToSection-{{ section.id }}">
+  <div class="page-width">
+    <div class="product-how-to__grid{% if section.settings.image_position == 'right' %} product-how-to__grid--reverse{% endif %}">
+      
+      <!-- MEDIA / IMAGE COLUMN -->
+      <div class="product-how-to__media aspect-ratio-{{ section.settings.image_aspect_ratio }}">
+        {% if section.settings.image != blank %}
+          <img 
+            src="{{ section.settings.image | image_url: width: 1200 }}" 
+            alt="{{ section.settings.image.alt | default: 'How to use product' | escape }}" 
+            loading="lazy"
+            width="800"
+            height="600"
+            class="product-how-to__img"
+          >
+        {% else %}
+          <div class="product-how-to__img-placeholder"></div>
+        {% endif %}
+      </div>
 
-      <h2 class="product-how-to__title" style="margin-top: 2rem;">Safety & Disclaimers</h2>
-      <ul class="product-how-to__list">
-        <li><strong>Weight Distribution:</strong> Ensure clients are seated centrally, and never exceed maximum weight capacity.</li>
-        <li><strong>Authorized Service:</strong> All maintenance and repairs must be performed by Equipro-certified technicians.</li>
-      </ul>
+      <!-- CONTENT COLUMN WITH DYNAMIC BLOCKS -->
+      <div class="product-how-to__content">
+        {% for block in section.blocks %}
+          {% case block.type %}
+            {% when 'section_header' %}
+              <h2 
+                class="product-how-to__title" 
+                style="color: {{ section.settings.title_color }}; {% if forloop.first == false %}margin-top: 2rem;{% endif %}"
+                {{ block.shopify_attributes }}
+              >
+                {{ block.settings.title }}
+              </h2>
+
+            {% when 'instruction_item' %}
+              <ul class="product-how-to__list" {{ block.shopify_attributes }}>
+                <li>
+                  {% if block.settings.bold_prefix != blank %}
+                    <strong style="color: {{ section.settings.text_color }};">{{ block.settings.bold_prefix }}:</strong>
+                  {% endif %}
+                  <span style="color: {{ section.settings.text_color }};">{{ block.settings.text }}</span>
+                </li>
+              </ul>
+          {% endcase %}
+        {% endfor %}
+      </div>
+
     </div>
   </div>
 </div>
 
 <style>
-.product-how-to { margin: 4rem auto; }
-.product-how-to__grid { display: grid; grid-template-columns: 1fr 1fr; gap: 3.5rem; align-items: center; }
-.product-how-to__media { width: 100%; aspect-ratio: 4/3; border-radius: 20px; overflow: hidden; background: #eee; }
-.product-how-to__img-placeholder { width: 100%; height: 100%; background: #ddd; }
-.product-how-to__title { font-size: 1.8rem; font-weight: 700; color: #a22938; margin-bottom: 1rem; }
-.product-how-to__list { list-style: none; padding: 0; margin: 0; }
-.product-how-to__list li { margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.5; color: #444; }
-@media (max-width: 767px) { .product-how-to__grid { grid-template-columns: 1fr; } }
+#HowToSection-{{ section.id }} {
+  background-color: {{ section.settings.bg_color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  margin-top: {{ section.settings.margin_top }}px;
+  margin-bottom: {{ section.settings.margin_bottom }}px;
+}
+
+.product-how-to__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: center;
+}
+
+.product-how-to__grid--reverse .product-how-to__media {
+  order: 2;
+}
+
+.product-how-to__grid--reverse .product-how-to__content {
+  order: 1;
+}
+
+.product-how-to__media {
+  width: 100%;
+  border-radius: 20px;
+  overflow: hidden;
+  background: #eee;
+}
+
+.product-how-to__media.aspect-ratio-4-3 { aspect-ratio: 4 / 3; }
+.product-how-to__media.aspect-ratio-16-9 { aspect-ratio: 16 / 9; }
+.product-how-to__media.aspect-ratio-1-1 { aspect-ratio: 1 / 1; }
+.product-how-to__media.aspect-ratio-adapt { aspect-ratio: auto; }
+
+.product-how-to__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-how-to__img-placeholder {
+  width: 100%;
+  height: 100%;
+  min-height: 350px;
+  background: #ddd;
+}
+
+.product-how-to__title {
+  font-size: 1.8rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  line-height: 1.25;
+}
+
+.product-how-to__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-how-to__list li {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.product-how-to__list li strong {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+@media (max-width: 767px) {
+  .product-how-to__grid,
+  .product-how-to__grid--reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .product-how-to__grid--reverse .product-how-to__media {
+    order: 1;
+  }
+
+  .product-how-to__grid--reverse .product-how-to__content {
+    order: 2;
+  }
+
+  .product-how-to__title {
+    font-size: 1.5rem;
+  }
+}
 </style>
 
 {% schema %}
 {
   "name": "How to Use & Care",
-  "settings": [],
-  "presets": [{ "name": "How to Use & Care" }]
+  "tag": "section",
+  "class": "section-product-how-to",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Media Settings"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Section Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Placement",
+      "options": [
+        { "value": "left", "label": "Left" },
+        { "value": "right", "label": "Right" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Image Aspect Ratio",
+      "options": [
+        { "value": "4-3", "label": "4:3 Standard" },
+        { "value": "16-9", "label": "16:9 Widescreen" },
+        { "value": "1-1", "label": "1:1 Square" },
+        { "value": "adapt", "label": "Adapt to Image" }
+      ],
+      "default": "4-3"
+    },
+    {
+      "type": "header",
+      "content": "Color Customization"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Heading Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#444444"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Margin",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Margin",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "section_header",
+      "name": "Group Section Header",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Subheading Title",
+          "default": "How to Use"
+        }
+      ]
+    },
+    {
+      "type": "instruction_item",
+      "name": "Instruction / Rule Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "bold_prefix",
+          "label": "Bold Prefix",
+          "default": "Height Calibration"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "How to Use & Care",
+      "blocks": [
+        {
+          "type": "section_header",
+          "settings": { "title": "How to Use" }
+        },
+        {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Backrest Positioning",
+            "text": "Utilize the manual release handle to recline the backrest to the desired angle."
+          }
+        },
+        {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Tilt Activation",
+            "text": "Engage the 15-degree tilt system to optimize facial and neck access."
+          }
+        },
+        {
+          "type": "section_header",
+          "settings": { "title": "Safety & Disclaimers" }
+        },
+        {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Distribution",
+            "text": "Ensure clients are seated centrally, and never exceed maximum weight capacity."
+          }
+        },
+        {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Authorized Service",
+            "text": "All maintenance and repairs must be performed by Equipro-certified technicians."
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
