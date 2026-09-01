@@ -240,8 +240,13 @@
 
 /* BLOQUE DE SHIPPING PINCHADO AL BOTTOM */
 .product-shipping-block { 
+<<<<<<< HEAD
   margin-top: auto; /* Fuerza el anclaje al fondo absoluto */
   padding-top: 1.5rem; 
+=======
+  margin-top: 2rem; 
+  padding-top: 5 rem; 
+>>>>>>> 57510c96626e55c2253af38413faf40fa18a0076
   border-top: 1px solid #eee; 
 }
 
