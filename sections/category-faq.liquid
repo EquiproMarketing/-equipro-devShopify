@@ -1,57 +1,348 @@
-<div class="category-faq page-width">
-  <div class="category-faq__grid">
-    <div class="category-faq__header">
-      <h2 class="category-faq__title">Your Questions, Answered</h2>
-    </div>
+{{ 'section-category-faq.css' | asset_url | stylesheet_tag }}
 
-    <div class="category-faq__list">
-      <details class="category-faq__item" open>
-        <summary class="category-faq__question">
-          <span>Do your trolleys feature built-in holders for magnifying lamps?</span>
-          <span class="category-faq__toggle">−</span>
-        </summary>
-        <div class="category-faq__answer">
-          Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.
+<div class="category-faq" id="CategoryFAQ-{{ section.id }}">
+  <div class="page-width">
+    <div class="category-faq__grid{% if section.settings.layout == 'stacked' %} category-faq__grid--stacked{% endif %}{% if section.settings.header_position == 'right' %} category-faq__grid--reverse{% endif %}">
+      
+      <!-- HEADER COLUMN -->
+      {% if section.settings.heading != blank %}
+        <div class="category-faq__header">
+          <h2 class="category-faq__title" style="color: {{ section.settings.title_color }};">
+            {{ section.settings.heading }}
+          </h2>
+          {% if section.settings.subheading != blank %}
+            <p class="category-faq__subheading" style="color: {{ section.settings.answer_color }};">
+              {{ section.settings.subheading }}
+            </p>
+          {% endif %}
         </div>
-      </details>
+      {% endif %}
 
-      <details class="category-faq__item">
-        <summary class="category-faq__question">
-          <span>Are the drawers lockable for securing products and supplies?</span>
-          <span class="category-faq__toggle">+</span>
-        </summary>
-        <div class="category-faq__answer">
-          Selected models feature fully lockable drawers with custom keys for secure overnight storage.
-        </div>
-      </details>
+      <!-- FAQ LIST COLUMN -->
+      <div class="category-faq__list">
+        {% for block in section.blocks %}
+          <details 
+            class="category-faq__item" 
+            {% if forloop.first and section.settings.open_first_item %}open{% endif %}
+            {{ block.shopify_attributes }}
+          >
+            <summary class="category-faq__question" style="color: {{ section.settings.question_color }};">
+              <span>{{ block.settings.question }}</span>
+              <span class="category-faq__toggle" style="color: {{ section.settings.toggle_color }};">
+                {% if forloop.first and section.settings.open_first_item %}−{% else %}+{% endif %}
+              </span>
+            </summary>
+            <div class="category-faq__answer" style="color: {{ section.settings.answer_color }};">
+              {{ block.settings.answer }}
+            </div>
+          </details>
+        {% endfor %}
+      </div>
 
-      <details class="category-faq__item">
-        <summary class="category-faq__question">
-          <span>How much weight can each shelf or tier support?</span>
-          <span class="category-faq__toggle">+</span>
-        </summary>
-        <div class="category-faq__answer">
-          Each heavy-duty shelf is rated to hold up to 45 lbs (20 kg) without sagging or compromise.
-        </div>
-      </details>
     </div>
   </div>
 </div>
 
 <style>
-.category-faq { margin: 4rem auto; }
-.category-faq__grid { display: grid; grid-template-columns: 1fr 1.5fr; gap: 3rem; }
-.category-faq__title { font-size: 2rem; font-weight: 700; color: #a22938; }
-.category-faq__item { border-bottom: 1px solid #1a1a1a; padding: 1.25rem 0; cursor: pointer; }
-.category-faq__question { font-size: 1rem; font-weight: 600; display: flex; justify-content: space-between; list-style: none; }
-.category-faq__answer { font-size: 0.9rem; color: #555; margin-top: 0.85rem; line-height: 1.5; }
-@media (max-width: 767px) { .category-faq__grid { grid-template-columns: 1fr; gap: 1.5rem; } }
+#CategoryFAQ-{{ section.id }} {
+  background-color: {{ section.settings.bg_color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  margin-top: {{ section.settings.margin_top }}px;
+  margin-bottom: {{ section.settings.margin_bottom }}px;
+}
+
+.category-faq__grid {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr;
+  gap: 3rem;
+}
+
+.category-faq__grid--stacked {
+  grid-template-columns: 1fr;
+  gap: 1.5rem;
+}
+
+.category-faq__grid--reverse {
+  grid-template-columns: 1.5fr 1fr;
+}
+
+.category-faq__grid--reverse .category-faq__header {
+  order: 2;
+}
+
+.category-faq__grid--reverse .category-faq__list {
+  order: 1;
+}
+
+.category-faq__title {
+  font-size: 2rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.category-faq__subheading {
+  font-size: 0.95rem;
+  margin-top: 0.75rem;
+  line-height: 1.5;
+}
+
+.category-faq__item {
+  border-bottom: 1px solid {{ section.settings.border_color }};
+  padding: 1.25rem 0;
+  cursor: pointer;
+}
+
+.category-faq__question {
+  font-size: 1rem;
+  font-weight: 600;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  list-style: none;
+  user-select: none;
+}
+
+.category-faq__question::-webkit-details-marker {
+  display: none;
+}
+
+.category-faq__toggle {
+  font-size: 1.25rem;
+  font-weight: 700;
+  line-height: 1;
+  margin-left: 1rem;
+}
+
+.category-faq__answer {
+  font-size: 0.9rem;
+  margin-top: 0.85rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 767px) {
+  .category-faq__grid,
+  .category-faq__grid--reverse {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+
+  .category-faq__grid--reverse .category-faq__header {
+    order: 1;
+  }
+
+  .category-faq__grid--reverse .category-faq__list {
+    order: 2;
+  }
+
+  .category-faq__title {
+    font-size: 1.6rem;
+  }
+}
 </style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const container = document.getElementById('CategoryFAQ-{{ section.id }}');
+    if (!container) return;
+
+    const items = container.querySelectorAll('.category-faq__item');
+
+    items.forEach(item => {
+      item.addEventListener('toggle', () => {
+        const toggleBtn = item.querySelector('.category-faq__toggle');
+        if (toggleBtn) {
+          toggleBtn.textContent = item.open ? '−' : '+';
+        }
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
   "name": "Category FAQ",
-  "settings": [],
-  "presets": [{ "name": "Category FAQ" }]
+  "tag": "section",
+  "class": "section-category-faq",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Header"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Heading",
+      "default": "Your Questions, Answered"
+    },
+    {
+      "type": "textarea",
+      "id": "subheading",
+      "label": "Subheading",
+      "default": "Find answers to frequently asked technical and equipment questions."
+    },
+    {
+      "type": "header",
+      "content": "Layout Controls"
+    },
+    {
+      "type": "select",
+      "id": "layout",
+      "label": "Layout Style",
+      "options": [
+        { "value": "grid", "label": "2 Columns (Side-by-Side)" },
+        { "value": "stacked", "label": "1 Column (Stacked)" }
+      ],
+      "default": "grid"
+    },
+    {
+      "type": "select",
+      "id": "header_position",
+      "label": "Header Placement",
+      "options": [
+        { "value": "left", "label": "Left Column" },
+        { "value": "right", "label": "Right Column" }
+      ],
+      "default": "left"
+    },
+    {
+      "type": "checkbox",
+      "id": "open_first_item",
+      "label": "Open First FAQ Item by Default",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Color Customization"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "question_color",
+      "label": "Question Text Color",
+      "default": "#111111"
+    },
+    {
+      "type": "color",
+      "id": "answer_color",
+      "label": "Answer Text Color",
+      "default": "#555555"
+    },
+    {
+      "type": "color",
+      "id": "toggle_color",
+      "label": "Plus / Minus Toggle Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "border_color",
+      "label": "Divider Line Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Margin",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Margin",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "FAQ Question",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question",
+          "default": "Do your trolleys feature built-in holders for magnifying lamps?"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer",
+          "default": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category FAQ",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the drawers lockable for securing products and supplies?",
+            "answer": "<p>Selected models feature fully lockable drawers with custom keys for secure overnight storage.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "How much weight can each shelf or tier support?",
+            "answer": "<p>Each heavy-duty shelf is rated to hold up to 45 lbs (20 kg) without sagging or compromise.</p>"
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
