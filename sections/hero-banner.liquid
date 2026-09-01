@@ -3,7 +3,7 @@
 <div class="hero-banner-wrapper" id="HeroBanner-{{ section.id }}">
   <div class="hero-banner">
     
-    <div class="hero-banner__slides">
+    <div class="hero-banner__slides" id="HeroBannerSlides-{{ section.id }}">
       {% for block in section.blocks %}
         <div 
           class="hero-banner__slide{% if forloop.first %} is-active{% endif %}" 
@@ -54,16 +54,17 @@
       {% endfor %}
     </div>
 
+    {%- comment -%} ALWAYS VISIBLE ARROWS IF > 1 SLIDE {%- endcomment -%}
     {% if section.blocks.size > 1 %}
       <button class="hero-banner__nav hero-banner__nav--prev" aria-label="Previous slide">
-        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M10 2L2 10L10 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="14" height="24" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M10 2L2 10L10 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
       
       <button class="hero-banner__nav hero-banner__nav--next" aria-label="Next slide">
-        <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M2 2L10 10L2 18" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        <svg width="14" height="24" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M2 2L10 10L2 18" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
       </button>
 
@@ -88,7 +89,7 @@
 </div>
 
 <style>
-/* FORZAR REGLAS DE SOBRESCRITURA TOTAL SOBRE CSS EXTERNO */
+/* FORCED CONTAINER & SLIDE HEIGHTS */
 #HeroBanner-{{ section.id }} .hero-banner,
 #HeroBanner-{{ section.id }} .hero-banner__slides,
 #HeroBanner-{{ section.id }} .hero-banner__slide,
@@ -102,11 +103,18 @@
   position: relative !important;
   width: 100% !important;
   overflow: hidden !important;
+  user-select: none;
+  touch-action: pan-y;
 }
 
 #HeroBanner-{{ section.id }} .hero-banner__slides {
   position: relative !important;
   width: 100% !important;
+  cursor: grab;
+}
+
+#HeroBanner-{{ section.id }} .hero-banner__slides:active {
+  cursor: grabbing;
 }
 
 #HeroBanner-{{ section.id }} .hero-banner__slide {
@@ -116,7 +124,7 @@
   width: 100% !important;
   opacity: 0;
   visibility: hidden;
-  transition: opacity 0.6s ease, visibility 0.6s ease;
+  transition: opacity 0.5s ease, visibility 0.5s ease;
   z-index: 1;
 }
 
@@ -144,6 +152,32 @@
   z-index: 3;
 }
 
+/* NAVIGATION ARROWS STYLING */
+#HeroBanner-{{ section.id }} .hero-banner__nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.45);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  z-index: 10;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+#HeroBanner-{{ section.id }} .hero-banner__nav:hover {
+  background: rgba(0, 0, 0, 0.8);
+  transform: translateY(-50%) scale(1.08);
+}
+
+#HeroBanner-{{ section.id }} .hero-banner__nav--prev { left: 20px; }
+#HeroBanner-{{ section.id }} .hero-banner__nav--next { right: 20px; }
+
 @media (max-width: 767px) {
   #HeroBanner-{{ section.id }} .hero-banner,
   #HeroBanner-{{ section.id }} .hero-banner__slides,
@@ -153,6 +187,13 @@
     min-height: {{ section.settings.custom_height_mobile }}px !important;
     max-height: {{ section.settings.custom_height_mobile }}px !important;
   }
+
+  #HeroBanner-{{ section.id }} .hero-banner__nav {
+    width: 38px;
+    height: 38px;
+  }
+  #HeroBanner-{{ section.id }} .hero-banner__nav--prev { left: 10px; }
+  #HeroBanner-{{ section.id }} .hero-banner__nav--next { right: 10px; }
 }
 </style>
 
@@ -161,6 +202,7 @@
     const wrapper = document.getElementById('HeroBanner-{{ section.id }}');
     if (!wrapper) return;
 
+    const slidesContainer = wrapper.querySelector('.hero-banner__slides');
     const slides = wrapper.querySelectorAll('.hero-banner__slide');
     const dots = wrapper.querySelectorAll('.hero-banner__dot');
     const prevBtn = wrapper.querySelector('.hero-banner__nav--prev');
@@ -172,6 +214,9 @@
 
     let currentIndex = 0;
     let timer = null;
+    let startX = 0;
+    let currentX = 0;
+    let isDragging = false;
 
     function goToSlide(index) {
       slides[currentIndex].classList.remove('is-active');
@@ -194,15 +239,18 @@
       if (timer) clearInterval(timer);
     }
 
+    // ARROW CLICK LISTENERS
     if (nextBtn) {
-      nextBtn.addEventListener('click', () => {
+      nextBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         goToSlide(currentIndex + 1);
         startTimer();
       });
     }
 
     if (prevBtn) {
-      prevBtn.addEventListener('click', () => {
+      prevBtn.addEventListener('click', (e) => {
+        e.stopPropagation();
         goToSlide(currentIndex - 1);
         startTimer();
       });
@@ -214,6 +262,43 @@
         startTimer();
       });
     });
+
+    // MOUSE & TOUCH DRAG SWIPE LOGIC
+    const handleDragStart = (e) => {
+      isDragging = true;
+      startX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+      stopTimer();
+    };
+
+    const handleDragMove = (e) => {
+      if (!isDragging) return;
+      currentX = e.type.includes('touch') ? e.touches[0].clientX : e.clientX;
+    };
+
+    const handleDragEnd = () => {
+      if (!isDragging) return;
+      isDragging = false;
+      const diffX = startX - currentX;
+
+      // Threshold of 50px swipe
+      if (Math.abs(diffX) > 50) {
+        if (diffX > 0) {
+          goToSlide(currentIndex + 1); // Swipe left -> Next
+        } else {
+          goToSlide(currentIndex - 1); // Swipe right -> Prev
+        }
+      }
+      startTimer();
+    };
+
+    slidesContainer.addEventListener('mousedown', handleDragStart);
+    slidesContainer.addEventListener('mousemove', handleDragMove);
+    slidesContainer.addEventListener('mouseup', handleDragEnd);
+    slidesContainer.addEventListener('mouseleave', handleDragEnd);
+
+    slidesContainer.addEventListener('touchstart', handleDragStart, { passive: true });
+    slidesContainer.addEventListener('touchmove', handleDragMove, { passive: true });
+    slidesContainer.addEventListener('touchend', handleDragEnd);
 
     wrapper.addEventListener('mouseenter', stopTimer);
     wrapper.addEventListener('mouseleave', startTimer);
