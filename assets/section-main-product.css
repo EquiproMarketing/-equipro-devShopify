@@ -131,7 +131,13 @@
   display: grid; 
   grid-template-columns: 1fr 1.2fr; 
   gap: 3.5rem; 
-  align-items: start; 
+  align-items: stretch; /* Se estiran para que tengan exactamente la misma altura */
+}
+
+.product-buy-col {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .product-price { 
@@ -232,8 +238,9 @@
   margin-top: 0.5rem; 
 }
 
+/* BLOQUE DE SHIPPING PINCHADO AL BOTTOM */
 .product-shipping-block { 
-  margin-top: 2rem; 
+  margin-top: auto; /* Fuerza el anclaje al fondo absoluto */
   padding-top: 1.5rem; 
   border-top: 1px solid #eee; 
 }
