@@ -7,9 +7,19 @@
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
+          {%- comment -%} 1er NIVEL: Categoría Principal (ej. Treatment Beds) {%- endcomment -%}
           {%- assign has_dropdown = false -%}
-          {%- if link.links.size > 0 or section.blocks.size > 0 -%}
+          {%- if link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
+          {%- else -%}
+            {%- for block in section.blocks -%}
+              {%- assign target_clean = block.settings.parent_category | downcase | strip -%}
+              {%- assign link_clean = link.title | downcase | strip -%}
+              {%- if target_clean == link_clean -%}
+                {%- assign has_dropdown = true -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
           {%- endif -%}
 
           {%- assign is_active = false -%}
@@ -23,6 +33,7 @@
               class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
             >
               <span>{{ link.title }}</span>
+              {%- comment -%} Flecha solo si contiene información {%- endcomment -%}
               {%- if has_dropdown -%}
                 <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -30,56 +41,83 @@
               {%- endif -%}
             </a>
 
-            {%- comment -%} PANORAMA MEGA MENÚ DESPLEGABLE {%- endcomment -%}
             {%- if has_dropdown -%}
               <div class="category-megamenu">
                 <div class="category-megamenu__container page-width">
                   
-                  {%- comment -%} COLUMNA IZQUIERDA: LISTA DE CATEGORÍAS {%- endcomment -%}
+                  {%- comment -%} 2do NIVEL: Lista Vertical Izquierda (Subcategorías) {%- endcomment -%}
                   <div class="category-megamenu__sidebar">
                     <ul class="category-megamenu__sidebar-list">
                       {%- for childlink in link.links -%}
-                        {%- assign has_subchilds = false -%}
-                        {%- if childlink.links.size > 0 -%}
-                          {%- assign has_subchilds = true -%}
-                        {%- endif -%}
-
-                        <li class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}">
+                        <li 
+                          class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" 
+                          data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}"
+                        >
                           <a href="{{ childlink.url }}" class="category-megamenu__sidebar-link">
                             <span>{{ childlink.title }}</span>
-                            {%- if has_subchilds -%}
-                              <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
-                                <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg>
-                            {%- endif -%}
+                            <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                              <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+                            </svg>
                           </a>
                         </li>
+                      {%- endfor -%}
+
+                      {%- comment -%} Subcategorías creadas desde Bloques del Customizer {%- endcomment -%}
+                      {%- for block in section.blocks -%}
+                        {%- assign parent_clean = block.settings.parent_category | downcase | strip -%}
+                        {%- assign link_clean = link.title | downcase | strip -%}
+                        {%- if parent_clean == link_clean and block.settings.sub_category != blank -%}
+                          {%- assign custom_sub = block.settings.sub_category -%}
+                          {%- assign custom_sub_handle = custom_sub | handleize -%}
+                          {%- assign exists_in_links = false -%}
+                          {%- for childlink in link.links -%}
+                            {%- if childlink.title | handleize == custom_sub_handle -%}
+                              {%- assign exists_in_links = true -%}
+                            {%- endif -%}
+                          {%- endfor -%}
+
+                          {%- unless exists_in_links -%}
+                            <li 
+                              class="category-megamenu__sidebar-item{% if link.links.size == 0 and forloop.first %} is-selected{% endif %}" 
+                              data-target-tab="tab-custom-{{ forloop.index }}-{{ link.title | handleize }}"
+                            >
+                              <a href="{{ block.settings.collection.url | default: '#' }}" class="category-megamenu__sidebar-link">
+                                <span>{{ custom_sub }}</span>
+                                <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                                  <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                              </a>
+                            </li>
+                          {%- endunless -%}
+                        {%- endif -%}
                       {%- endfor -%}
                     </ul>
                   </div>
 
-                  {%- comment -%} PANEL DERECHO: CARDS / IMÁGENES SUBCATEGORÍAS {%- endcomment -%}
+                  {%- comment -%} 3er NIVEL: Panel Derecho de Tarjetas Visuales {%- endcomment -%}
                   <div class="category-megamenu__content">
+                    
+                    {%- comment -%} A) Si la estructura viene desde el menú de navegación de Shopify {%- endcomment -%}
                     {%- for childlink in link.links -%}
                       <div 
                         class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
                         id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
                       >
                         <div class="category-megamenu__grid">
-                          {%- comment -%} 1. Muestra los elementos del menú (nietos) {%- endcomment -%}
+                          
                           {%- if childlink.links.size > 0 -%}
                             {%- for grandchild in childlink.links -%}
-                              {%- assign grand_image = nil -%}
+                              {%- assign card_img = nil -%}
                               {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
-                                {%- assign grand_image = grandchild.object.image -%}
+                                {%- assign card_img = grandchild.object.image -%}
                               {%- elsif grandchild.type == 'product_link' and grandchild.object.featured_image -%}
-                                {%- assign grand_image = grandchild.object.featured_image -%}
+                                {%- assign card_img = grandchild.object.featured_image -%}
                               {%- endif -%}
 
                               <a href="{{ grandchild.url }}" class="category-megamenu__card">
                                 <div class="category-megamenu__card-image">
-                                  {%- if grand_image != nil -%}
-                                    <img src="{{ grand_image | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
+                                  {%- if card_img != blank -%}
+                                    <img src="{{ card_img | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
                                   {%- else -%}
                                     <div class="category-megamenu__card-placeholder"></div>
                                   {%- endif -%}
@@ -89,29 +127,53 @@
                             {%- endfor -%}
                           {%- endif -%}
 
-                          {%- comment -%} 2. Muestra los bloques de imágenes manuales (Custom Discover Cards) que coincidan {%- endcomment -%}
+                          {%- comment -%} B) Si las tarjetas vienen de Bloques configurados en el Theme Editor {%- endcomment -%}
                           {%- for block in section.blocks -%}
-                            {%- assign target_clean = block.settings.target_category | downcase | strip -%}
-                            {%- assign child_clean = childlink.title | downcase | strip -%}
-                            {%- if target_clean == child_clean -%}
-                              <a href="{{ block.settings.button_link }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
-                                <div class="category-megamenu__card-image">
-                                  {%- if block.settings.image != blank -%}
-                                    <img src="{{ block.settings.image | image_url: width: 500 }}" alt="{{ block.settings.title | escape }}" loading="lazy" width="220" height="220">
-                                  {%- else -%}
-                                    <div class="category-megamenu__card-placeholder"></div>
-                                  {%- endif -%}
-                                  {%- if block.settings.badge_text != blank -%}
-                                    <span class="custom-promo-badge">{{ block.settings.badge_text }}</span>
-                                  {%- endif -%}
-                                </div>
-                                <span class="category-megamenu__card-title promo-title">{{ block.settings.title }}</span>
-                              </a>
+                            {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
+                            {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
+                            {%- assign nav_parent = link.title | downcase | strip -%}
+                            {%- assign nav_sub = childlink.title | downcase | strip -%}
+
+                            {%- if block_parent == nav_parent and block_sub == nav_sub -%}
+                              {%- assign selected_collection = block.settings.collection -%}
+                              {%- assign selected_product = block.settings.product -%}
+
+                              {%- if selected_product != blank -%}
+                                {%- assign final_url = selected_product.url -%}
+                                {%- assign final_title = block.settings.custom_title | default: selected_product.title -%}
+                                {%- assign final_image = block.settings.custom_image | default: selected_product.featured_image -%}
+                              {%- elsif selected_collection != blank -%}
+                                {%- assign final_url = selected_collection.url -%}
+                                {%- assign final_title = block.settings.custom_title | default: selected_collection.title -%}
+                                {%- assign final_image = block.settings.custom_image | default: selected_collection.featured_image -%}
+                              {%- else -%}
+                                {%- assign final_url = block.settings.custom_url -%}
+                                {%- assign final_title = block.settings.custom_title -%}
+                                {%- assign final_image = block.settings.custom_image -%}
+                              {%- endif -%}
+
+                              {%- if final_title != blank -%}
+                                <a href="{{ final_url | default: '#' }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
+                                  <div class="category-megamenu__card-image">
+                                    {%- if final_image != blank -%}
+                                      <img src="{{ final_image | image_url: width: 500 }}" alt="{{ final_title | escape }}" loading="lazy" width="220" height="220">
+                                    {%- else -%}
+                                      <div class="category-megamenu__card-placeholder"></div>
+                                    {%- endif -%}
+                                    {%- if block.settings.badge_text != blank -%}
+                                      <span class="custom-promo-badge">{{ block.settings.badge_text }}</span>
+                                    {%- endif -%}
+                                  </div>
+                                  <span class="category-megamenu__card-title">{{ final_title }}</span>
+                                </a>
+                              {%- endif -%}
                             {%- endif -%}
                           {%- endfor -%}
+
                         </div>
                       </div>
                     {%- endfor -%}
+
                   </div>
 
                 </div>
@@ -164,36 +226,64 @@
   ],
   "blocks": [
     {
-      "type": "promo_card",
-      "name": "Discover Image Card",
+      "type": "card_item",
+      "name": "Visual Product / Collection",
       "settings": [
         {
-          "type": "text",
-          "id": "target_category",
-          "label": "Parent Category Name",
-          "info": "Write the exact name of the subcategory (e.g., Facial Steamers) where this image card should appear."
+          "type": "header",
+          "content": "Hierarchy Assignment"
         },
         {
           "type": "text",
-          "id": "title",
-          "label": "Card Title",
-          "default": "Discover Royal Series"
+          "id": "parent_category",
+          "label": "1. Main Category Name",
+          "info": "Exact name of top bar item (e.g., Treatment Beds)"
+        },
+        {
+          "type": "text",
+          "id": "sub_category",
+          "label": "2. Subcategory Name",
+          "info": "Exact name of sidebar subcategory (e.g., Electric Beds)"
+        },
+        {
+          "type": "header",
+          "content": "Link Target (Pick Collection OR Product)"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Link to Collection",
+          "info": "Automatically extracts collection image, title, and URL."
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Link to Product",
+          "info": "Automatically extracts product featured image, title, and URL."
+        },
+        {
+          "type": "header",
+          "content": "Custom Overrides (Optional)"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom Title Override"
         },
         {
           "type": "image_picker",
-          "id": "image",
-          "label": "Card Image"
+          "id": "custom_image",
+          "label": "Custom Image Override"
         },
         {
           "type": "text",
           "id": "badge_text",
-          "label": "Badge Label (Optional)",
-          "default": "New"
+          "label": "Badge Tag (e.g. New, Top Seller)"
         },
         {
           "type": "url",
-          "id": "button_link",
-          "label": "Link URL"
+          "id": "custom_url",
+          "label": "Custom Link URL Override"
         }
       ]
     }
