@@ -85,6 +85,20 @@
     "shop_by_cat_v2_DhXM94": {
       "type": "shop-by-cat-v2",
       "blocks": {
+        "category_item_JVrMPE": {
+          "type": "category_item",
+          "settings": {
+            "title": "Facial Units",
+            "link": ""
+          }
+        },
+        "category_item_B9RXVp": {
+          "type": "category_item",
+          "settings": {
+            "title": "Columns",
+            "link": ""
+          }
+        },
         "category_item_ACVzqh": {
           "type": "category_item",
           "settings": {
@@ -123,14 +137,14 @@
         "category_item_wHPEpL": {
           "type": "category_item",
           "settings": {
-            "title": "Category",
+            "title": "Towel Warmers",
             "link": ""
           }
         },
         "category_item_qhy7DG": {
           "type": "category_item",
           "settings": {
-            "title": "Category",
+            "title": "Skin Analyzers",
             "link": ""
           }
         },
@@ -143,6 +157,8 @@
         }
       },
       "block_order": [
+        "category_item_JVrMPE",
+        "category_item_B9RXVp",
         "category_item_ACVzqh",
         "category_item_L88cDG",
         "category_item_FNyhJK",
