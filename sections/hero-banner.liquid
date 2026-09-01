@@ -1,6 +1,6 @@
 {{ 'section-hero-banner.css' | asset_url | stylesheet_tag }}
 
-<div class="hero-banner-wrapper" id="HeroBanner-{{ section.id }}">
+<div class="hero-banner-wrapper hero-banner-wrapper--{{ section.settings.banner_height }}" id="HeroBanner-{{ section.id }}">
   <div class="hero-banner">
     
     {%- comment -%} CONTENEDOR DE SLIDES {%- endcomment -%}
@@ -44,7 +44,7 @@
       {% endfor %}
     </div>
 
-    {%- comment -%} FLECHAS Y DOTS SOLO SI HAY MÁS DE 1 SLIDE {%- endcomment -%}
+    {%- comment -%} FLECHAS Y DOTS {%- endcomment -%}
     {% if section.blocks.size > 1 %}
       <button class="hero-banner__nav hero-banner__nav--prev" aria-label="Previous slide">
         <svg width="12" height="20" viewBox="0 0 12 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -79,6 +79,13 @@
 </div>
 
 <style>
+/* REGLAS DE ALTURA CUSTOMIZABLES */
+.hero-banner-wrapper--small .hero-banner { height: 400px; }
+.hero-banner-wrapper--medium .hero-banner { height: 550px; }
+.hero-banner-wrapper--large .hero-banner { height: 700px; }
+.hero-banner-wrapper--full .hero-banner { height: 100vh; }
+.hero-banner-wrapper--adapt .hero-banner { height: auto; min-height: 450px; }
+
 .hero-banner__slides {
   position: relative;
   width: 100%;
@@ -98,6 +105,11 @@
   visibility: visible;
   z-index: 2;
 }
+.hero-banner__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
 .hero-banner__dot {
   cursor: pointer;
   border: none;
@@ -105,6 +117,11 @@
 }
 .hero-banner__dot--active {
   background: #ffffff;
+}
+@media (max-width: 767px) {
+  .hero-banner-wrapper--small .hero-banner { height: 320px; }
+  .hero-banner-wrapper--medium .hero-banner { height: 420px; }
+  .hero-banner-wrapper--large .hero-banner { height: 520px; }
 }
 </style>
 
@@ -181,6 +198,18 @@
   "class": "section-hero-banner",
   "settings": [
     {
+      "type": "select",
+      "id": "banner_height",
+      "label": "Banner Height",
+      "options": [
+        { "value": "small", "label": "Small (400px)" },
+        { "value": "medium", "label": "Medium (550px)" },
+        { "value": "large", "label": "Large (700px)" },
+        { "value": "full", "label": "Full Screen (100vh)" }
+      ],
+      "default": "medium"
+    },
+    {
       "type": "checkbox",
       "id": "auto_rotate",
       "label": "Auto-rotate slides",
@@ -249,12 +278,8 @@
     {
       "name": "Hero Banner Slider",
       "blocks": [
-        {
-          "type": "slide"
-        },
-        {
-          "type": "slide"
-        }
+        { "type": "slide" },
+        { "type": "slide" }
       ]
     }
   ]
