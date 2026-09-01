@@ -19,7 +19,6 @@
             {%- assign is_active = true -%}
           {%- endif -%}
 
-          {%- comment -%} Verificar si algún hijo está activo {%- endcomment -%}
           {%- assign child_active = false -%}
           {%- if has_dropdown -%}
             {%- for childlink in link.links -%}
@@ -35,16 +34,16 @@
               class="category-subnav__link{% if is_active or child_active %} is-active{% endif %}"
               {% if is_active %}aria-current="page"{% endif %}
             >
-              <span>{{ link.title }}</span>
+              <span class="category-subnav__text">{{ link.title }}</span>
               {%- if has_dropdown -%}
-                <svg class="category-subnav__chevron" width="10" height="6" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
-                  <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
+                <svg class="category-subnav__arrow" width="8" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                  <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
                 </svg>
               {%- endif -%}
             </a>
 
             {%- if has_dropdown -%}
-              <ul class="category-subnav__dropdown">
+              <ul class="category-subnav__dropdown-side">
                 {%- for childlink in link.links -%}
                   {%- assign is_child_active = false -%}
                   {%- if childlink.active or collection.url == childlink.url -%}
