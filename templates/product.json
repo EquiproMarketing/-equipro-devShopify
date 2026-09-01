@@ -11,6 +11,18 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "spec_row_mBEg94": {
+          "type": "spec_row",
+          "settings": {
+            "label": "Manufacturer",
+            "value": "Equipro Beauty"
+          }
+        }
+      },
+      "block_order": [
+        "spec_row_mBEg94"
+      ],
       "settings": {
         "back_text": "Back",
         "custom_title": "",
@@ -18,11 +30,18 @@
         "custom_description": "",
         "subtitle": "Precision Engineering for Lasting Stability",
         "secondary_text": "Stain resistance is central to the Equipro approach.",
-        "featured_product": "",
-        "btn_label": "ADD TO CART",
         "image_aspect_ratio": "4-5",
         "show_compare_btn": true,
-        "compare_btn_label": "Compare with other models"
+        "compare_btn_label": "Compare with other models",
+        "featured_product": "",
+        "btn_label": "ADD TO CART",
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>",
+        "show_tech_table": true,
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
       }
     },
     "banner_features": {
