@@ -67,7 +67,7 @@
       "name": "Category Subnav Bar",
       "settings": {
         "category_menu": "category-subnav-bar",
-        "hide_on_mobile": false
+        "hide_on_mobile": true
       }
     }
   },
