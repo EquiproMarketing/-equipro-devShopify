@@ -1,34 +1,277 @@
-<div class="product-features-banner">
-  <div class="page-width product-features-banner__inner">
+{{ 'section-product-features-banner.css' | asset_url | stylesheet_tag }}
+
+<div class="product-features-banner" id="FeaturesBanner-{{ section.id }}">
+  <div class="page-width product-features-banner__inner{% if section.settings.image_position == 'left' %} product-features-banner__inner--reverse{% endif %}">
+    
+    <!-- TEXT CONTENT & BULLET BLOCKS -->
     <div class="product-features-banner__content">
-      <h2>Key Features for the Professional Station</h2>
-      <ul>
-        <li><strong>Unrivaled Durability:</strong> Heavy-duty frame construction: Fabricated with robust structural components to withstand high-volume usage.</li>
-        <li><strong>Articulated Positioning:</strong> Manual adjustment architecture: Precision-balanced backrest and leg rest assemblies.</li>
-        <li><strong>Seamless Integration:</strong> Sleek aesthetic profile: Clean lines and versatile color options that complement clinic environments.</li>
-      </ul>
+      {% if section.settings.heading != blank %}
+        <h2 style="color: {{ section.settings.text_color }};">{{ section.settings.heading }}</h2>
+      {% endif %}
+
+      {% if section.blocks.size > 0 %}
+        <ul class="product-features-banner__list">
+          {% for block in section.blocks %}
+            <li class="product-features-banner__item" {{ block.shopify_attributes }}>
+              {% if block.settings.title != blank %}
+                <strong style="color: {{ section.settings.text_color }};">{{ block.settings.title }}:</strong>
+              {% endif %}
+              <span style="color: {{ section.settings.text_color }};">{{ block.settings.text }}</span>
+            </li>
+          {% endfor %}
+        </ul>
+      {% endif %}
     </div>
+
+    <!-- MEDIA / IMAGE COLUMN -->
     <div class="product-features-banner__media">
-      <div class="product-features-banner__img-placeholder"></div>
+      {% if section.settings.image != blank %}
+        <img 
+          src="{{ section.settings.image | image_url: width: 1200 }}" 
+          alt="{{ section.settings.heading | escape }}" 
+          loading="lazy"
+          width="800"
+          height="600"
+          class="product-features-banner__img"
+        >
+      {% else %}
+        <div class="product-features-banner__img-placeholder"></div>
+      {% endif %}
     </div>
+
   </div>
 </div>
 
 <style>
-.product-features-banner { background-color: #a22938; color: #fff; padding: 4rem 0; margin: 4rem 0; }
-.product-features-banner__inner { display: grid; grid-template-columns: 1.5fr 1fr; gap: 3rem; align-items: center; }
-.product-features-banner__content h2 { font-size: 2rem; font-weight: 700; margin-bottom: 1.5rem; }
-.product-features-banner__content ul { list-style: none; padding: 0; margin: 0; }
-.product-features-banner__content li { margin-bottom: 1.25rem; font-size: 0.95rem; line-height: 1.5; }
-.product-features-banner__media { width: 100%; aspect-ratio: 4/3; border-radius: 16px; overflow: hidden; }
-.product-features-banner__img-placeholder { width: 100%; height: 100%; background: rgba(255,255,255,0.2); }
-@media (max-width: 767px) { .product-features-banner__inner { grid-template-columns: 1fr; } }
+#FeaturesBanner-{{ section.id }} {
+  background-color: {{ section.settings.bg_color }};
+  color: {{ section.settings.text_color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  margin-top: {{ section.settings.margin_top }}px;
+  margin-bottom: {{ section.settings.margin_bottom }}px;
+}
+
+.product-features-banner__inner {
+  display: grid;
+  grid-template-columns: 1.5fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+
+.product-features-banner__inner--reverse {
+  grid-template-columns: 1fr 1.5fr;
+}
+
+.product-features-banner__inner--reverse .product-features-banner__content {
+  order: 2;
+}
+
+.product-features-banner__inner--reverse .product-features-banner__media {
+  order: 1;
+}
+
+.product-features-banner__content h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+.product-features-banner__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.product-features-banner__item {
+  margin-bottom: 1.25rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.product-features-banner__item strong {
+  font-weight: 700;
+  margin-right: 4px;
+}
+
+.product-features-banner__media {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.product-features-banner__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.product-features-banner__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 767px) {
+  .product-features-banner__inner,
+  .product-features-banner__inner--reverse {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+  
+  .product-features-banner__inner--reverse .product-features-banner__content {
+    order: 1;
+  }
+  
+  .product-features-banner__inner--reverse .product-features-banner__media {
+    order: 2;
+  }
+
+  .product-features-banner__content h2 {
+    font-size: 1.6rem;
+  }
+}
 </style>
 
 {% schema %}
 {
   "name": "Product Features Banner",
-  "settings": [],
-  "presets": [{ "name": "Product Features Banner" }]
+  "tag": "section",
+  "class": "section-product-features-banner",
+  "settings": [
+    {
+      "type": "text",
+      "id": "heading",
+      "label": "Section Heading",
+      "default": "Key Features for the Professional Station"
+    },
+    {
+      "type": "image_picker",
+      "id": "image",
+      "label": "Banner Image"
+    },
+    {
+      "type": "select",
+      "id": "image_position",
+      "label": "Image Placement",
+      "options": [
+        { "value": "right", "label": "Right" },
+        { "value": "left", "label": "Left" }
+      ],
+      "default": "right"
+    },
+    {
+      "type": "header",
+      "content": "Color Customization"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 60
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Margin",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Margin",
+      "default": 40
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature_item",
+      "name": "Feature Point",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Bold Highlight Title",
+          "default": "Unrivaled Durability"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Heavy-duty frame construction fabricated with robust structural components to withstand high-volume usage."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Features Banner",
+      "blocks": [
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Heavy-duty frame construction: Fabricated with robust structural components to withstand high-volume usage."
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "Articulated Positioning",
+            "text": "Manual adjustment architecture: Precision-balanced backrest and leg rest assemblies."
+          }
+        },
+        {
+          "type": "feature_item",
+          "settings": {
+            "title": "Seamless Integration",
+            "text": "Sleek aesthetic profile: Clean lines and versatile color options that complement clinic environments."
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
