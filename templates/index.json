@@ -11,12 +11,26 @@
   "sections": {
     "hero_banner": {
       "type": "hero-banner",
+      "blocks": {
+        "slide_3xQX7g": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/equipro-divine-electric-multi-section-treatment-bed-professional-spa-aesthetic-clinic-ei-504.webp",
+            "subheading": "DIVINE EI-504",
+            "heading": "Multi-Treatment Electric Table",
+            "text": "Quiet, versatile, and built to last.",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "slide_3xQX7g"
+      ],
       "settings": {
-        "subheading": "DIVINE EI-504",
-        "heading": "Multi-Treatment Electric Table",
-        "text": "Quiet, versatile, and built to last. Elevate your clients' comfort while protecting your posture during long treatment days.",
-        "button_label": "Shop the Divine EI-504",
-        "button_link": "",
+        "banner_height": "small",
+        "auto_rotate": true,
+        "change_speed": 5,
         "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
       }
     },
