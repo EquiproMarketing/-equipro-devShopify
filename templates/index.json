@@ -12,10 +12,38 @@
     "hero_banner": {
       "type": "hero-banner",
       "blocks": {
+        "slide_MnxhKP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/epure-ergonomic-air-lift-stool-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
+            "image_position": "center",
+            "overlay_opacity": 30,
+            "subheading": "DIVINE EI-504",
+            "heading": "Multi-Treatment Electric Table",
+            "text": "Quiet, versatile, and built to last.",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
+        "slide_eBgbdd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/equipro-multiderm-5-in-1-facial-aesthetic-system-professional-skincare-workstation-sku-11800.webp",
+            "image_position": "center",
+            "overlay_opacity": 30,
+            "subheading": "DIVINE EI-504",
+            "heading": "Multi-Treatment Electric Table",
+            "text": "Quiet, versatile, and built to last.",
+            "button_label": "Shop Now",
+            "button_link": ""
+          }
+        },
         "slide_3xQX7g": {
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/equipro-divine-electric-multi-section-treatment-bed-professional-spa-aesthetic-clinic-ei-504.webp",
+            "image_position": "center",
+            "overlay_opacity": 10,
             "subheading": "DIVINE EI-504",
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
@@ -25,12 +53,14 @@
         }
       },
       "block_order": [
+        "slide_MnxhKP",
+        "slide_eBgbdd",
         "slide_3xQX7g"
       ],
       "settings": {
-        "banner_height": "small",
+        "banner_height": "adapt",
         "auto_rotate": true,
-        "change_speed": 5,
+        "change_speed": 4,
         "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
       }
     },
