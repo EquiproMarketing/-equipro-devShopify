@@ -51,9 +51,22 @@
       {% endif %}
     </div>
 
-    <!-- Columna Derecha: Galería de Imágenes -->
+    <!-- Columna Derecha: Galería (Imagen grande a la izquierda, miniaturas a la derecha) -->
     <div class="product-gallery-col">
       <div class="product-gallery">
+        <!-- Imagen Principal Grande -->
+        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
+          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
+          {% if first_img_block.settings.image != blank %}
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+          {% elsif target_product.featured_image != blank %}
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
+          {% else %}
+            <div class="product-gallery__placeholder"></div>
+          {% endif %}
+        </div>
+
+        <!-- Miniaturas Verticales a la Derecha -->
         <div class="product-gallery__thumbs">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
           {% if img_blocks.size > 0 %}
@@ -81,17 +94,6 @@
             {% for i in (1..4) %}
               <div class="thumb-img-placeholder {% if forloop.first %}is-active{% endif %}"></div>
             {% endfor %}
-          {% endif %}
-        </div>
-
-        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
-          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
-          {% if first_img_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
-          {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
-          {% else %}
-            <div class="product-gallery__placeholder"></div>
           {% endif %}
         </div>
       </div>
@@ -215,7 +217,7 @@
       {% endif %}
     </div>
 
-    <!-- Columna Derecha: Tabla de Especificaciones -->
+    <!-- Columna Derecha: Tabla de Especificaciones Editables -->
     <div class="product-table-col">
       {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
       {% if section.settings.show_tech_table %}
@@ -228,55 +230,12 @@
               </tr>
             </thead>
             <tbody>
-              {% if spec_blocks.size > 0 %}
-                {% for block in spec_blocks %}
-                  <tr {{ block.shopify_attributes }}>
-                    <td class="tech-table__label">{{ block.settings.label }}</td>
-                    <td class="tech-table__value">{{ block.settings.value }}</td>
-                  </tr>
-                {% endfor %}
-              {% else %}
-                <tr>
-                  <td class="tech-table__label">Manufacturer</td>
-                  <td class="tech-table__value">Equipro Beauty</td>
+              {% for block in spec_blocks %}
+                <tr {{ block.shopify_attributes }}>
+                  <td class="tech-table__label">{{ block.settings.label }}</td>
+                  <td class="tech-table__value">{{ block.settings.value }}</td>
                 </tr>
-                <tr>
-                  <td class="tech-table__label">Model SKU</td>
-                  <td class="tech-table__value">EI-502</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Primary Materials</td>
-                  <td class="tech-table__value">High-quality vinyl upholstery, reinforced steel frame, electric actuators</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Dimensions (L x W x H)</td>
-                  <td class="tech-table__value">69" L x 28" W x 21" / 39" H</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Weight</td>
-                  <td class="tech-table__value">209 lb (95 kg)</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Adjustability</td>
-                  <td class="tech-table__value">Fully electric adjustments: height from 21" to 39", backrest, legrest, and tilt</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Height Range</td>
-                  <td class="tech-table__value">21" to 39" (53 cm to 99 cm)</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Seating Width</td>
-                  <td class="tech-table__value">28 inches (71 cm)</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Certifications</td>
-                  <td class="tech-table__value">CSA & UL approved electrical components</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">Warranty</td>
-                  <td class="tech-table__value">1 year</td>
-                </tr>
-              {% endif %}
+              {% endfor %}
             </tbody>
           </table>
         </div>
