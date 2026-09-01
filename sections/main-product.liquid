@@ -5,10 +5,10 @@
 
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
   
-  <!-- 1. BLOQUE SUPERIOR: NAVEGACIÓN, TÍTULO, PÁRRAFOS Y GALERÍA -->
+  <!-- 1. TOP HEADER & GALLERY SECTION -->
   <div class="product-header-gallery-grid">
     
-    <!-- COLUMNA TEXTO E INTRODUCCIÓN -->
+    <!-- LEFT COLUMN: TITLE & INTRO TEXT -->
     <div class="product-intro-col">
       <!-- Back Link -->
       <div class="product-page__back">
@@ -20,12 +20,12 @@
         </a>
       </div>
 
-      <!-- Título Principal -->
+      <!-- Main Red Title -->
       <h1 class="product-info__title">
         {{ section.settings.custom_title | default: target_product.title | default: "Round Air-lift Stool" }}
       </h1>
       
-      <!-- Destacado Borde Rojo -->
+      <!-- Highlighted Intro Container -->
       {% assign intro_text = section.settings.intro_highlight | default: target_product.metafields.custom.intro_highlight %}
       {% if intro_text != blank %}
         <div class="product-info__intro-highlight">
@@ -33,7 +33,7 @@
         </div>
       {% endif %}
 
-      <!-- Descripción Principal -->
+      <!-- Description Block -->
       <div class="product-info__description">
         {% if section.settings.custom_description != blank %}
           {{ section.settings.custom_description }}
@@ -44,7 +44,7 @@
         {% endif %}
       </div>
 
-      <!-- Subtítulo y Texto Secundario -->
+      <!-- Secondary Subtitle & Text -->
       {% if section.settings.subtitle != blank %}
         <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
       {% endif %}
@@ -56,10 +56,10 @@
       {% endif %}
     </div>
 
-    <!-- COLUMNA GALERÍA DE IMÁGENES -->
+    <!-- RIGHT COLUMN: PRODUCT GALLERY (MAX 4 IMAGES) -->
     <div class="product-gallery-col">
       <div class="product-gallery">
-        <!-- Imagen Principal con Aspect Ratio Ajustable -->
+        <!-- Main Display Image -->
         <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           
@@ -72,11 +72,11 @@
           {% endif %}
         </div>
         
-        <!-- Miniaturas Reordenables -->
+        <!-- Reorderable Thumbnails -->
         <div class="product-gallery__thumbs">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
           {% if img_blocks.size > 0 %}
-            {% for block in img_blocks %}
+            {% for block in img_blocks limit: 4 %}
               {% if block.settings.image != blank %}
                 <img 
                   src="{{ block.settings.image | image_url: width: 200 }}" 
@@ -84,10 +84,12 @@
                   onclick="changeMainImg(this.src)" 
                   {{ block.shopify_attributes }}
                 >
+              {% else %}
+                <div class="thumb-img-placeholder {% if forloop.first %}is-active{% endif %}" onclick="changeMainImg('{{ target_product.featured_image | image_url: width: 900 }}')"></div>
               {% endif %}
             {% endfor %}
           {% else %}
-            {% for image in target_product.images %}
+            {% for image in target_product.images limit: 4 %}
               <img 
                 src="{{ image | image_url: width: 200 }}" 
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
@@ -102,13 +104,13 @@
   </div>
 
 
-  <!-- 2. BLOQUE INFERIOR: BLOQUE DE COMPRA, ACORDEÓN, SHIPPING Y TABLA TÉCNICA -->
+  <!-- 2. BOTTOM 2-COLUMN GRID SECTION -->
   <div class="product-grid-layout">
     
-    <!-- COLUMNA IZQUIERDA: BLOQUE COMPRA + ACORDEÓN / FAQ + SHIPPING -->
+    <!-- LEFT COLUMN: PURCHASE FORM, ACCORDION & SHIPPING -->
     <div class="product-left-col">
       
-      <!-- Bloque de Compra -->
+      <!-- Customizable Purchase Block -->
       <div class="product-purchase-block">
         <div class="product-price">
           {{ target_product.price | default: 320000 | money }}
@@ -135,10 +137,10 @@
             {% endfor %}
           {% else %}
             <div class="product-option-group">
-              <label class="product-option-label">Couleur:</label>
+              <label class="product-option-label">Color:</label>
               <div class="select-wrapper">
                 <select class="product-select">
-                  <option>Select Couleur</option>
+                  <option>Select Color</option>
                   <option>White</option>
                   <option>Black</option>
                 </select>
@@ -164,7 +166,7 @@
         {% endform %}
       </div>
 
-      <!-- Sección Acordeón Key Features -->
+      <!-- Key Features Accordion -->
       {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
       <div class="product-features-accordion">
         {% if section.settings.accordion_heading != blank %}
@@ -188,7 +190,7 @@
         {% endif %}
       </div>
 
-      <!-- Bloque Shipping -->
+      <!-- Shipping Information -->
       {% if section.settings.show_shipping %}
         <div class="product-shipping-block">
           <h3 class="shipping-title">{{ section.settings.shipping_title | default: "Shipping" }}</h3>
@@ -200,7 +202,7 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA: TABLA TÉCNICA -->
+    <!-- RIGHT COLUMN: TECHNICAL SPECIFICATIONS TABLE -->
     <div class="product-right-col">
       {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
       {% if section.settings.show_tech_table and spec_blocks.size > 0 %}
@@ -232,7 +234,7 @@
 {% render 'quote-modal' %}
 
 <style>
-/* 1. GRID SUPERIOR: NAVEGACIÓN, TÍTULO Y GALERÍA */
+/* 1. TOP HEADER & GALLERY GRID */
 .product-header-gallery-grid {
   display: grid;
   grid-template-columns: 1.2fr 1fr;
@@ -255,7 +257,7 @@
 .product-info__title {
   font-size: 2.2rem;
   font-weight: 700;
-  color: #111;
+  color: #a22938 !important;
   margin-bottom: 1.25rem;
   line-height: 1.2;
 }
@@ -289,7 +291,7 @@
   margin-bottom: 1rem;
 }
 
-/* GALERÍA DE IMÁGENES */
+/* GALLERY CONTAINERS */
 .product-gallery__main {
   width: 100%;
   position: relative;
@@ -316,20 +318,21 @@
   overflow-x: auto;
 }
 
-.thumb-img {
+.thumb-img, .thumb-img-placeholder {
   width: 70px;
   height: 90px;
   object-fit: cover;
   cursor: pointer;
   border-radius: 4px;
   border: 1px solid transparent;
+  background: #eaeaea;
 }
 
-.thumb-img.is-active {
+.thumb-img.is-active, .thumb-img-placeholder.is-active {
   border-color: #a22938;
 }
 
-/* 2. GRID INFERIOR DE 2 COLUMNAS (MOCKUP REPLICADO) */
+/* 2. BOTTOM 2-COLUMN GRID */
 .product-grid-layout {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -338,7 +341,7 @@
   margin-bottom: 4rem;
 }
 
-/* COMPRA */
+/* PURCHASE FORM */
 .product-price {
   font-size: 1.5rem;
   font-weight: 500;
@@ -430,7 +433,7 @@
   background-color: #8b222e;
 }
 
-/* ACORDEÓN KEY FEATURES */
+/* ACCORDION */
 .product-features-accordion {
   margin-top: 3.5rem;
 }
@@ -477,7 +480,7 @@
   line-height: 1.5;
 }
 
-/* SHIPPING */
+/* SHIPPING BLOCK */
 .product-shipping-block {
   margin-top: 4rem;
   padding-top: 1.5rem;
@@ -498,7 +501,7 @@
   line-height: 1.5;
 }
 
-/* TABLA TÉCNICA */
+/* TECHNICAL TABLE */
 .tech-table-container {
   width: 100%;
   border-radius: 8px;
@@ -572,7 +575,7 @@
 <script>
   function changeMainImg(src) {
     document.getElementById('MainProductImg').src = src;
-    document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
+    document.querySelectorAll('.thumb-img, .thumb-img-placeholder').forEach(el => el.classList.remove('is-active'));
     if (event && event.target) {
       event.target.classList.add('is-active');
     }
@@ -671,7 +674,8 @@
     {
       "type": "product",
       "id": "featured_product",
-      "label": "Link Specific Product"
+      "label": "Link Specific Product",
+      "info": "Bind purchase form to a specific product"
     },
     {
       "type": "text",
@@ -737,7 +741,8 @@
   "blocks": [
     {
       "type": "gallery_image",
-      "name": "Gallery Image",
+      "name": "Gallery Image (Max 4)",
+      "limit": 4,
       "settings": [
         {
           "type": "image_picker",
@@ -787,6 +792,10 @@
     {
       "name": "Main Product Layout",
       "blocks": [
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
+        { "type": "gallery_image" },
         {
           "type": "faq_item",
           "settings": {
@@ -847,34 +856,6 @@
         {
           "type": "spec_row",
           "settings": { "label": "Armrests", "value": "Included adjustable armrests" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Cushions", "value": "Four premium cushions for superior comfort" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Control Type", "value": "Electric remote control with silent operation" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Safety Features", "value": "Stable base, emergency stop, overload protection" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Upholstery", "value": "Durable vinyl available in white, black, or navy (Color Chart B)" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Certifications", "value": "CSA & UL approved electrical components" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Warranty", "value": "1 year" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Country of Origin", "value": "Canada" }
         }
       ]
     }
