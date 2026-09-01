@@ -16,7 +16,7 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/epure-ergonomic-air-lift-stool-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
-            "image_position": "center",
+            "image_position": "bottom",
             "overlay_opacity": 15,
             "subheading": "DIVINE EI-504",
             "heading": "Multi-Treatment Electric Table",
@@ -35,7 +35,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-multiderm-5-in-1-facial-aesthetic-system-professional-skincare-workstation-sku-11800.webp",
             "image_position": "center",
-            "overlay_opacity": 30,
+            "overlay_opacity": 10,
             "subheading": "DIVINE EI-504",
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
@@ -52,8 +52,8 @@
           "type": "slide",
           "settings": {
             "image": "shopify://shop_images/equipro-divine-electric-multi-section-treatment-bed-professional-spa-aesthetic-clinic-ei-504.webp",
-            "image_position": "center",
-            "overlay_opacity": 10,
+            "image_position": "bottom",
+            "overlay_opacity": 5,
             "subheading": "DIVINE EI-504",
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
