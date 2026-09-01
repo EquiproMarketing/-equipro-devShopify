@@ -1,65 +1,19 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
-{{ 'product-technical-table.css' | asset_url | stylesheet_tag }}
 {{ 'quote-modal.css' | asset_url | stylesheet_tag }}
 
-<div class="product-page page-width">
-  <div class="product-main-grid">
+{% assign target_product = section.settings.featured_product | default: product %}
+
+<div class="product-page page-width" id="ProductMain-{{ section.id }}">
+  
+  <div class="product-grid-layout">
     
-    <!-- LEFT COLUMN: EDITABLE TEXT CONTENT & PURCHASE BLOCK -->
-    <div class="product-info-col">
+    <!-- COLUMNA IZQUIERDA: BLOQUE COMPRA + ACORDEÓN / FAQ + SHIPPING -->
+    <div class="product-left-col">
       
-      <!-- 1. Back Button (Aligned with SVG Chevron) -->
-      <div class="product-page__back">
-        <a href="javascript:history.back()" class="back-link" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500;">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" style="display: block;">
-            <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span>{{ section.settings.back_text | default: "Back" }}</span>
-        </a>
-      </div>
-
-      <!-- 2. Main Title -->
-      <h1 class="product-info__title">
-        {{ section.settings.custom_title | default: product.title | default: "Round Air-lift Stool" }}
-      </h1>
-      
-      <!-- 3. Highlighted Intro Block -->
-      {% assign intro_text = section.settings.intro_highlight | default: product.metafields.custom.intro_highlight %}
-      {% if intro_text != blank %}
-        <div class="product-info__intro-highlight">
-          <p>{{ intro_text }}</p>
-        </div>
-      {% endif %}
-
-      <!-- 4. Paragraph 1 (Description) -->
-      <div class="product-info__description">
-        {% if section.settings.custom_description != blank %}
-          {{ section.settings.custom_description }}
-        {% elsif product.description != blank %}
-          {{ product.description }}
-        {% else %}
-          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists.</p>
-        {% endif %}
-      </div>
-
-      <!-- 5. Bold Subtitle -->
-      {% if section.settings.subtitle != blank %}
-        <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
-      {% endif %}
-
-      <!-- 6. Paragraph 2 -->
-      {% if section.settings.secondary_text != blank %}
-        <div class="product-info__description">
-          <p>{{ section.settings.secondary_text }}</p>
-        </div>
-      {% endif %}
-
-      <!-- 7. Customizable Purchase / Product Block -->
-      {% assign target_product = section.settings.featured_product | default: product %}
-      
-      <div class="product-purchase-block" style="margin-top: 30px;">
-        <div class="product-price" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; color: #111;">
-          {{ target_product.price | default: 23500 | money }}
+      <!-- 1. BLOQUE DE COMPRA (PRECIO, DROPDOWN, CANTIDAD, BOTÓN) -->
+      <div class="product-purchase-block">
+        <div class="product-price">
+          {{ target_product.price | default: 320000 | money }}
         </div>
 
         {% form 'product', target_product %}
@@ -67,27 +21,41 @@
 
           {% unless target_product.has_only_default_variant %}
             {% for option in target_product.options_with_values %}
-              <div class="product-option" style="margin-bottom: 15px;">
-                <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 4px;">{{ option.name }}:</label>
-                <select name="options[{{ option.name | escape }}]" class="product-select" style="width: 100%; max-width: 380px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                  {% for value in option.values %}
-                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                      {{ value }}
-                    </option>
-                  {% endfor %}
-                </select>
+              <div class="product-option-group">
+                <label class="product-option-label">{{ option.name }}:</label>
+                <div class="select-wrapper">
+                  <select name="options[{{ option.name | escape }}]" class="product-select">
+                    <option value="">Select {{ option.name }}</option>
+                    {% for value in option.values %}
+                      <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                        {{ value }}
+                      </option>
+                    {% endfor %}
+                  </select>
+                </div>
               </div>
             {% endfor %}
+          {% else %}
+            <div class="product-option-group">
+              <label class="product-option-label">Couleur:</label>
+              <div class="select-wrapper">
+                <select class="product-select">
+                  <option>Select Couleur</option>
+                  <option>White</option>
+                  <option>Black</option>
+                </select>
+              </div>
+            </div>
           {% endunless %}
 
-          <div class="product-buy-row" style="display: flex; gap: 12px; align-items: center; max-width: 380px;">
-            <div class="product-quantity" style="display: flex; border: 1px solid #ccc; border-radius: 4px;">
-              <button type="button" onclick="adjustQty(-1)" style="padding: 8px 12px; background: none; border: none; cursor: pointer;">−</button>
-              <input type="number" id="QuantityInput" name="quantity" value="1" min="1" style="width: 40px; text-align: center; border: none;">
-              <button type="button" onclick="adjustQty(1)" style="padding: 8px 12px; background: none; border: none; cursor: pointer;">+</button>
+          <div class="product-buy-row">
+            <div class="product-quantity-selector">
+              <button type="button" onclick="adjustQty(-1)">−</button>
+              <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
+              <button type="button" onclick="adjustQty(1)">+</button>
             </div>
 
-            <button type="submit" class="product-add-cart-btn" style="flex: 1; background-color: #ab273b; color: #fff; padding: 12px 20px; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;" {% unless target_product.available %}disabled{% endunless %}>
+            <button type="submit" class="product-add-cart-btn" {% unless target_product.available %}disabled{% endunless %}>
               {% if target_product.available %}
                 {{ section.settings.btn_label | default: "ADD TO CART" }}
               {% else %}
@@ -98,101 +66,315 @@
         {% endform %}
       </div>
 
-    </div>
+      <!-- 2. SECCIÓN KEY FEATURES / ACORDEÓN POPUP -->
+      {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
+      <div class="product-features-accordion">
+        {% if section.settings.accordion_heading != blank %}
+          <h2 class="accordion-main-title">{{ section.settings.accordion_heading }}</h2>
+        {% endif %}
 
-    <!-- RIGHT COLUMN: VERTICAL ASPECT RATIO GALLERY & REORDERABLE BLOCKS -->
-    <div class="product-gallery-col">
-      
-      <div class="product-gallery">
-        <!-- Main Image with Selected Aspect Ratio (2:3, 4:5, 1:1) -->
-        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
-          {% assign first_block = section.blocks | where: "type", "gallery_image" | first %}
-          
-          {% if first_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_block.settings.image | image_url: width: 900 }}" alt="{{ first_block.settings.image.alt | escape }}">
-          {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
-          {% else %}
-            <div class="product-gallery__placeholder"></div>
-          {% endif %}
-        </div>
-        
-        <!-- Reorderable Thumbnails from Blocks OR Product Images -->
-        <div class="product-gallery__thumbs" style="display: flex; gap: 10px; margin-top: 15px; overflow-x: auto;">
-          {% if section.blocks.size > 0 %}
-            {% for block in section.blocks %}
-              {% if block.type == 'gallery_image' and block.settings.image != blank %}
-                <img 
-                  src="{{ block.settings.image | image_url: width: 200 }}" 
-                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.src)" 
-                  style="width: 70px; height: 90px; object-fit: cover; cursor: pointer; border-radius: 4px;"
-                  {{ block.shopify_attributes }}
-                >
-              {% endif %}
+        {% if faq_blocks.size > 0 %}
+          <div class="accordion-list">
+            {% for block in faq_blocks %}
+              <details class="accordion-item" {{ block.shopify_attributes }}>
+                <summary class="accordion-header">
+                  <span>{{ block.settings.question }}</span>
+                  <span class="accordion-icon">+</span>
+                </summary>
+                <div class="accordion-content">
+                  {{ block.settings.answer }}
+                </div>
+              </details>
             {% endfor %}
-          {% else %}
-            {% for image in target_product.images %}
-              <img 
-                src="{{ image | image_url: width: 200 }}" 
-                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.src)" 
-                style="width: 70px; height: 90px; object-fit: cover; cursor: pointer; border-radius: 4px;"
-              >
-            {% endfor %}
-          {% endif %}
-        </div>
+          </div>
+        {% endif %}
       </div>
 
-      <!-- Compare Models Trigger Button -->
-      {% if section.settings.show_compare_btn %}
-        <div class="product-compare-wrapper" style="margin-top: 24px; text-align: center;">
-          <button class="product-compare-trigger-btn" id="OpenCompareModal" style="display: inline-flex; align-items: center; gap: 8px; background: none; border: 1px solid #111; color: #111; padding: 10px 20px; border-radius: 4px; font-weight: 600; cursor: pointer;">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-            {{ section.settings.compare_btn_label | default: "Compare with other models" }}
-          </button>
+      <!-- 3. BLOQUE DE SHIPPING / ENVÍO -->
+      {% if section.settings.show_shipping %}
+        <div class="product-shipping-block">
+          <h3 class="shipping-title">{{ section.settings.shipping_title | default: "Shipping" }}</h3>
+          <div class="shipping-description">
+            {{ section.settings.shipping_text | default: "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>" }}
+          </div>
         </div>
       {% endif %}
 
     </div>
 
+    <!-- COLUMNA DERECHA: TABLA TÉCNICA -->
+    <div class="product-right-col">
+      {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
+      {% if section.settings.show_tech_table and spec_blocks.size > 0 %}
+        <div class="tech-table-container">
+          <table class="tech-table">
+            <thead>
+              <tr>
+                <th>{{ section.settings.table_col1_header | default: "TECHNICAL ASPECT" }}</th>
+                <th>{{ section.settings.table_col2_header | default: "SPECIFICATION DETAILS" }}</th>
+              </tr>
+            </thead>
+            <tbody>
+              {% for block in spec_blocks %}
+                <tr {{ block.shopify_attributes }}>
+                  <td class="tech-table__label">{{ block.settings.label }}</td>
+                  <td class="tech-table__value">{{ block.settings.value }}</td>
+                </tr>
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      {% endif %}
+    </div>
+
   </div>
+
 </div>
 
 {% render 'quote-modal' %}
 
 <style>
-/* ASPECT RATIO CLASSES FOR TALL IMAGES (2:3 and 4:5) */
-.product-gallery__main {
-  width: 100%;
-  position: relative;
-  overflow: hidden;
-  border-radius: 4px;
-  background: #f4f4f4;
+/* GRID LAYOUT DE 2 COLUMNAS */
+.product-grid-layout {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+  margin-top: 2rem;
+  margin-bottom: 4rem;
 }
 
-.product-gallery__main img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
+/* COLUMNA IZQUIERDA */
+.product-price {
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: #111;
+  margin-bottom: 1.25rem;
+}
+
+.product-option-group {
+  margin-bottom: 1.25rem;
+}
+
+.product-option-label {
   display: block;
+  font-size: 0.85rem;
+  color: #555;
+  margin-bottom: 6px;
 }
 
-.aspect-ratio-2-3 { aspect-ratio: 2 / 3; }
-.aspect-ratio-4-5 { aspect-ratio: 4 / 5; }
-.aspect-ratio-1-1 { aspect-ratio: 1 / 1; }
+.select-wrapper {
+  position: relative;
+  max-width: 420px;
+}
+
+.product-select {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  background-color: #fff;
+  font-size: 0.95rem;
+  color: #333;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=US-ASCII,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%22292.4%22%20height%3D%22292.4%22%3E%3Cpath%20fill%3D%22%23333333%22%20d%3D%22M287%2069.4a17.6%2017.6%200%200%200-13-5.4H18.4c-5%200-9.3%201.8-12.9%205.4A17.6%2017.6%200%200%200%200%2082.2c0%205%201.8%209.3%205.4%2012.9l128%20127.9c3.6%203.6%207.8%205.4%2012.8%205.4s9.2-1.8%2012.8-5.4L287%2095c3.5-3.5%205.4-7.8%205.4-12.8%200-5-1.9-9.2-5.5-12.8z%22%2F%3E%3C%2Fsvg%3E");
+  background-repeat: no-repeat;
+  background-position: right 14px top 50%;
+  background-size: 10px auto;
+  cursor: pointer;
+}
+
+.product-buy-row {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  max-width: 420px;
+  margin-top: 1rem;
+}
+
+.product-quantity-selector {
+  display: flex;
+  border: 1px solid #ccc;
+  border-radius: 2px;
+  height: 48px;
+}
+
+.product-quantity-selector button {
+  width: 40px;
+  height: 100%;
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: #333;
+}
+
+.product-quantity-selector input {
+  width: 45px;
+  text-align: center;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  appearance: textfield;
+}
+
+.product-add-cart-btn {
+  flex: 1;
+  height: 48px;
+  background-color: #a22938;
+  color: #ffffff;
+  border: none;
+  border-radius: 2px;
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.product-add-cart-btn:hover {
+  background-color: #8b222e;
+}
+
+/* ACORDEÓN KEY FEATURES */
+.product-features-accordion {
+  margin-top: 3.5rem;
+}
+
+.accordion-main-title {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #a22938;
+  line-height: 1.15;
+  margin-bottom: 1.5rem;
+  max-width: 380px;
+}
+
+.accordion-item {
+  border-bottom: 1px solid #333;
+}
+
+.accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.1rem 0;
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #111;
+  cursor: pointer;
+  list-style: none;
+}
+
+.accordion-header::-webkit-details-marker {
+  display: none;
+}
+
+.accordion-icon {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #a22938;
+}
+
+.accordion-content {
+  padding-bottom: 1.25rem;
+  font-size: 0.95rem;
+  color: #555;
+  line-height: 1.5;
+}
+
+/* SECCIÓN SHIPPING */
+.product-shipping-block {
+  margin-top: 4rem;
+  padding-top: 1.5rem;
+  border-top: 2px solid #e0a3ab;
+}
+
+.shipping-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #a22938;
+  margin-bottom: 1rem;
+}
+
+.shipping-description p {
+  font-size: 0.95rem;
+  color: #333;
+  margin: 0;
+  line-height: 1.5;
+}
+
+/* COLUMNA DERECHA: TABLA TÉCNICA */
+.tech-table-container {
+  width: 100%;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.03);
+  background: #ffffff;
+  border: 1px solid #f0f0f0;
+}
+
+.tech-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.tech-table thead tr {
+  background-color: #8b222e;
+}
+
+.tech-table th {
+  padding: 16px 20px;
+  color: #ffffff;
+  font-size: 0.85rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  border: none;
+}
+
+.tech-table th:first-child {
+  width: 32%;
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-table tbody tr {
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.tech-table tbody tr:nth-child(even) {
+  background-color: #fcfcfc;
+}
+
+.tech-table td {
+  padding: 13px 20px;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  vertical-align: middle;
+}
+
+.tech-table__label {
+  color: #a22938;
+  font-weight: 700;
+  width: 32%;
+  border-right: 1px solid #f0f0f0;
+}
+
+.tech-table__value {
+  color: #444444;
+  font-weight: 400;
+}
+
+@media (max-width: 989px) {
+  .product-grid-layout {
+    grid-template-columns: 1fr;
+    gap: 2.5rem;
+  }
+}
 </style>
 
-<script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
 <script>
-  function changeMainImg(src) {
-    document.getElementById('MainProductImg').src = src;
-    document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
-    if (event && event.target) {
-      event.target.classList.add('is-active');
-    }
-  }
-
   function adjustQty(val) {
     const input = document.getElementById('QuantityInput');
     let current = parseInt(input.value) || 1;
@@ -200,6 +382,18 @@
     if (current < 1) current = 1;
     input.value = current;
   }
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.accordion-item');
+    accordions.forEach(acc => {
+      acc.addEventListener('toggle', () => {
+        const icon = acc.querySelector('.accordion-icon');
+        if (icon) {
+          icon.textContent = acc.open ? '−' : '+';
+        }
+      });
+    });
+  });
 </script>
 
 {% schema %}
@@ -210,57 +404,12 @@
   "settings": [
     {
       "type": "header",
-      "content": "Navigation & Headers"
-    },
-    {
-      "type": "text",
-      "id": "back_text",
-      "label": "Back Link Text",
-      "default": "Back"
-    },
-    {
-      "type": "text",
-      "id": "custom_title",
-      "label": "Custom Title Override",
-      "info": "Leave empty to use the native Product Title"
-    },
-    {
-      "type": "header",
-      "content": "Text & Descriptions"
-    },
-    {
-      "type": "textarea",
-      "id": "intro_highlight",
-      "label": "Intro Highlight Text (Red Border)",
-      "default": "Engineered to optimize practitioner comfort during long sessions."
-    },
-    {
-      "type": "richtext",
-      "id": "custom_description",
-      "label": "Main Description Override",
-      "info": "Leave empty to use default product description."
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Secondary Section Title",
-      "default": "Precision Engineering for Lasting Stability"
-    },
-    {
-      "type": "textarea",
-      "id": "secondary_text",
-      "label": "Secondary Paragraph Text",
-      "default": "Stain resistance is central to the Equipro approach."
-    },
-    {
-      "type": "header",
       "content": "Product Target & Purchasing"
     },
     {
       "type": "product",
       "id": "featured_product",
-      "label": "Link Specific Product",
-      "info": "Allows binding this layout to another product if needed."
+      "label": "Link Specific Product"
     },
     {
       "type": "text",
@@ -270,48 +419,191 @@
     },
     {
       "type": "header",
-      "content": "Gallery Aspect Ratio & Options"
+      "content": "Accordion Section Settings"
     },
     {
-      "type": "select",
-      "id": "image_aspect_ratio",
-      "label": "Main Image Aspect Ratio (Height)",
-      "options": [
-        { "value": "2-3", "label": "Tall Vertical (2:3)" },
-        { "value": "4-5", "label": "Standard Vertical (4:5)" },
-        { "value": "1-1", "label": "Square (1:1)" }
-      ],
-      "default": "4-5"
+      "type": "text",
+      "id": "accordion_heading",
+      "label": "Accordion Main Title",
+      "default": "Key Features for the Professional Station"
+    },
+    {
+      "type": "header",
+      "content": "Shipping Block Settings"
     },
     {
       "type": "checkbox",
-      "id": "show_compare_btn",
-      "label": "Show Compare Button",
+      "id": "show_shipping",
+      "label": "Show Shipping Block",
       "default": true
     },
     {
       "type": "text",
-      "id": "compare_btn_label",
-      "label": "Compare Button Text",
-      "default": "Compare with other models"
+      "id": "shipping_title",
+      "label": "Shipping Title",
+      "default": "Shipping"
+    },
+    {
+      "type": "richtext",
+      "id": "shipping_text",
+      "label": "Shipping Description Text",
+      "default": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>"
+    },
+    {
+      "type": "header",
+      "content": "Technical Specifications Table"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tech_table",
+      "label": "Show Technical Table",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "table_col1_header",
+      "label": "Left Column Header",
+      "default": "TECHNICAL ASPECT"
+    },
+    {
+      "type": "text",
+      "id": "table_col2_header",
+      "label": "Right Column Header",
+      "default": "SPECIFICATION DETAILS"
     }
   ],
   "blocks": [
     {
-      "type": "gallery_image",
-      "name": "Gallery Image",
+      "type": "faq_item",
+      "name": "Accordion Item",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Select Image"
+          "type": "text",
+          "id": "question",
+          "label": "Title",
+          "default": "Clinical esthetician:"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Description / Content",
+          "default": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+        }
+      ]
+    },
+    {
+      "type": "spec_row",
+      "name": "Table Spec Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Technical Aspect (Red)",
+          "default": "Manufacturer"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Specification Detail",
+          "default": "Equipro Beauty"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Main Product Layout"
+      "name": "Main Product Layout",
+      "blocks": [
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical esthetician:",
+            "answer": "<p>Engineered for high precision facial treatments and long sessions.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Body treatment specialists and massage therapists:",
+            "answer": "<p>Superior weight distribution and silent electric lift control.</p>"
+          }
+        },
+        {
+          "type": "faq_item",
+          "settings": {
+            "question": "Hair removal and multi-service aesthetic clinics:",
+            "answer": "<p>Ultra-resistant leatherette designed for seamless sanitation.</p>"
+          }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Manufacturer", "value": "Equipro Beauty" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Model SKU", "value": "EI-502" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Primary Materials", "value": "High-quality vinyl upholstery, reinforced steel frame, electric actuators" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Dimensions (L x W x H)", "value": "69\" L x 28\" W x 21\" / 39\" H" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Weight", "value": "209 lb (95 kg)" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Adjustability", "value": "Fully electric adjustments: height from 21\" to 39\", backrest, legrest, and tilt" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Height Range", "value": "21\" to 39\" (53 cm to 99 cm)" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Seating Width", "value": "28 inches (71 cm)" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Headrest", "value": "Adjustable crescent-shaped headrest included" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Armrests", "value": "Included adjustable armrests" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Cushions", "value": "Four premium cushions for superior comfort" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Control Type", "value": "Electric remote control with silent operation" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Safety Features", "value": "Stable base, emergency stop, overload protection" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Upholstery", "value": "Durable vinyl available in white, black, or navy (Color Chart B)" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Certifications", "value": "CSA & UL approved electrical components" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Warranty", "value": "1 year" }
+        },
+        {
+          "type": "spec_row",
+          "settings": { "label": "Country of Origin", "value": "Canada" }
+        }
+      ]
     }
   ]
 }
