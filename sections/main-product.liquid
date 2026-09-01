@@ -3,60 +3,73 @@
 {{ 'quote-modal.css' | asset_url | stylesheet_tag }}
 
 <div class="product-page page-width">
-  
   <div class="product-main-grid">
     
     <!-- LEFT COLUMN: EDITABLE TEXT CONTENT & PURCHASE BLOCK -->
     <div class="product-info-col">
       
-      <!-- 1. Back Button -->
+      <!-- 1. Back Button (Aligned with SVG Chevron) -->
       <div class="product-page__back">
-        <a href="javascript:history.back()" class="back-link">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
-          {{ section.settings.back_text | default: "Back" }}
+        <a href="javascript:history.back()" class="back-link" style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; font-weight: 500;">
+          <svg width="8" height="12" viewBox="0 0 8 12" fill="none" style="display: block;">
+            <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          <span>{{ section.settings.back_text | default: "Back" }}</span>
         </a>
       </div>
 
       <!-- 2. Main Title -->
-      <h1 class="product-info__title">{{ product.title | default: "Round Air-lift Stool" }}</h1>
+      <h1 class="product-info__title">
+        {{ section.settings.custom_title | default: product.title | default: "Round Air-lift Stool" }}
+      </h1>
       
-      <!-- 3. Highlighted Intro Block (Left Red Border) -->
-      <div class="product-info__intro-highlight">
-        <p>{{ product.metafields.custom.intro_highlight | default: "Engineered to optimize practitioner comfort during long sessions, the Equipro 31100 features a specialized contoured cushion designed to promote healthy blood circulation in the thighs while maintaining an ideal working posture." }}</p>
-      </div>
+      <!-- 3. Highlighted Intro Block -->
+      {% assign intro_text = section.settings.intro_highlight | default: product.metafields.custom.intro_highlight %}
+      {% if intro_text != blank %}
+        <div class="product-info__intro-highlight">
+          <p>{{ intro_text }}</p>
+        </div>
+      {% endif %}
 
-      <!-- 4. Paragraph 1 -->
+      <!-- 4. Paragraph 1 (Description) -->
       <div class="product-info__description">
-        {% if product.description != blank %}
+        {% if section.settings.custom_description != blank %}
+          {{ section.settings.custom_description }}
+        {% elsif product.description != blank %}
           {{ product.description }}
         {% else %}
-          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists. Its ergonomic pneumatic lift targets postural tension during intensive sessions, enabling sharper focus on technique and consistent results. Whether you are performing facials, micropigmentation, or lash extensions, this seating equipment adjusts to your optimal position with a smooth air-lift mechanism and 360-degree swivel control.</p>
+          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists.</p>
         {% endif %}
       </div>
 
       <!-- 5. Bold Subtitle -->
-      <h2 class="product-info__subtitle">{{ section.settings.subtitle | default: "Precision Engineering for Lasting Stability" }}</h2>
+      {% if section.settings.subtitle != blank %}
+        <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
+      {% endif %}
 
       <!-- 6. Paragraph 2 -->
-      <div class="product-info__description">
-        <p>{{ section.settings.secondary_text | default: "Stain resistance is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The ultra-resistant leatherette ensures an as-new condition across a 15-20 year timeframe. Consistent care results in extended durability and optimal hygiene." }}</p>
-      </div>
+      {% if section.settings.secondary_text != blank %}
+        <div class="product-info__description">
+          <p>{{ section.settings.secondary_text }}</p>
+        </div>
+      {% endif %}
 
-      <!-- 7. Purchase Block (Price, Options & Add to Cart) -->
+      <!-- 7. Customizable Purchase / Product Block -->
+      {% assign target_product = section.settings.featured_product | default: product %}
+      
       <div class="product-purchase-block" style="margin-top: 30px;">
         <div class="product-price" style="font-size: 1.3rem; font-weight: 600; margin-bottom: 12px; color: #111;">
-          {{ product.price | default: 23500 | money }}
+          {{ target_product.price | default: 23500 | money }}
         </div>
 
-        {% form 'product', product %}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
+        {% form 'product', target_product %}
+          <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
 
-          {% unless product.has_only_default_variant %}
-            {% for option in product.options_with_values %}
+          {% unless target_product.has_only_default_variant %}
+            {% for option in target_product.options_with_values %}
               <div class="product-option" style="margin-bottom: 15px;">
                 <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 4px;">{{ option.name }}:</label>
                 <select name="options[{{ option.name | escape }}]" class="product-select" style="width: 100%; max-width: 380px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                  <option value="">Select {{ option.name }}</option>
                   {% for value in option.values %}
                     <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
                       {{ value }}
@@ -65,15 +78,6 @@
                 </select>
               </div>
             {% endfor %}
-          {% else %}
-            <div class="product-option" style="margin-bottom: 15px;">
-              <label style="display: block; font-size: 0.85rem; color: #555; margin-bottom: 4px;">Couleur:</label>
-              <select class="product-select" style="width: 100%; max-width: 380px; padding: 10px; border: 1px solid #ccc; border-radius: 4px;">
-                <option>Select Couleur</option>
-                <option>White</option>
-                <option>Black</option>
-              </select>
-            </div>
           {% endunless %}
 
           <div class="product-buy-row" style="display: flex; gap: 12px; align-items: center; max-width: 380px;">
@@ -83,8 +87,12 @@
               <button type="button" onclick="adjustQty(1)" style="padding: 8px 12px; background: none; border: none; cursor: pointer;">+</button>
             </div>
 
-            <button type="submit" class="product-add-cart-btn" style="flex: 1; background-color: #ab273b; color: #fff; padding: 12px 20px; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;" {% unless product.available %}disabled{% endunless %}>
-              {% if product.available %}ADD TO CART{% else %}OUT OF STOCK{% endif %}
+            <button type="submit" class="product-add-cart-btn" style="flex: 1; background-color: #ab273b; color: #fff; padding: 12px 20px; border: none; border-radius: 4px; font-weight: 700; cursor: pointer;" {% unless target_product.available %}disabled{% endunless %}>
+              {% if target_product.available %}
+                {{ section.settings.btn_label | default: "ADD TO CART" }}
+              {% else %}
+                OUT OF STOCK
+              {% endif %}
             </button>
           </div>
         {% endform %}
@@ -92,26 +100,48 @@
 
     </div>
 
-    <!-- RIGHT COLUMN: PRODUCT IMAGES & COMPARE POPUP BUTTON -->
+    <!-- RIGHT COLUMN: VERTICAL ASPECT RATIO GALLERY & REORDERABLE BLOCKS -->
     <div class="product-gallery-col">
       
-      <!-- Product Swatches & Image Gallery -->
       <div class="product-gallery">
-        <div class="product-gallery__main">
-          {% if product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}" style="width: 100%; height: auto; display: block;">
+        <!-- Main Image with Selected Aspect Ratio (2:3, 4:5, 1:1) -->
+        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
+          {% assign first_block = section.blocks | where: "type", "gallery_image" | first %}
+          
+          {% if first_block.settings.image != blank %}
+            <img id="MainProductImg" src="{{ first_block.settings.image | image_url: width: 900 }}" alt="{{ first_block.settings.image.alt | escape }}">
+          {% elsif target_product.featured_image != blank %}
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
           {% else %}
-            <div class="product-gallery__placeholder" style="width: 100%; height: 450px; background: #f4f4f4; border-radius: 4px;"></div>
+            <div class="product-gallery__placeholder"></div>
           {% endif %}
         </div>
         
-        {% if product.images.size > 1 %}
-          <div class="product-gallery__thumbs" style="display: flex; gap: 10px; margin-top: 15px;">
-            {% for image in product.images %}
-              <img src="{{ image | image_url: width: 150 }}" class="thumb-img {% if forloop.first %}is-active{% endif %}" onclick="changeMainImg(this.src)" style="width: 70px; height: 70px; object-fit: cover; cursor: pointer; border-radius: 4px;">
+        <!-- Reorderable Thumbnails from Blocks OR Product Images -->
+        <div class="product-gallery__thumbs" style="display: flex; gap: 10px; margin-top: 15px; overflow-x: auto;">
+          {% if section.blocks.size > 0 %}
+            {% for block in section.blocks %}
+              {% if block.type == 'gallery_image' and block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 200 }}" 
+                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                  onclick="changeMainImg(this.src)" 
+                  style="width: 70px; height: 90px; object-fit: cover; cursor: pointer; border-radius: 4px;"
+                  {{ block.shopify_attributes }}
+                >
+              {% endif %}
             {% endfor %}
-          </div>
-        {% endif %}
+          {% else %}
+            {% for image in target_product.images %}
+              <img 
+                src="{{ image | image_url: width: 200 }}" 
+                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                onclick="changeMainImg(this.src)" 
+                style="width: 70px; height: 90px; object-fit: cover; cursor: pointer; border-radius: 4px;"
+              >
+            {% endfor %}
+          {% endif %}
+        </div>
       </div>
 
       <!-- Compare Models Trigger Button -->
@@ -127,11 +157,31 @@
     </div>
 
   </div>
-
 </div>
 
-<!-- Modal Snippet Rendering -->
 {% render 'quote-modal' %}
+
+<style>
+/* ASPECT RATIO CLASSES FOR TALL IMAGES (2:3 and 4:5) */
+.product-gallery__main {
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  border-radius: 4px;
+  background: #f4f4f4;
+}
+
+.product-gallery__main img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.aspect-ratio-2-3 { aspect-ratio: 2 / 3; }
+.aspect-ratio-4-5 { aspect-ratio: 4 / 5; }
+.aspect-ratio-1-1 { aspect-ratio: 1 / 1; }
+</style>
 
 <script src="{{ 'quote-modal.js' | asset_url }}" defer="defer"></script>
 <script>
@@ -155,12 +205,40 @@
 {% schema %}
 {
   "name": "Main Product Layout",
+  "tag": "section",
+  "class": "section-main-product",
   "settings": [
+    {
+      "type": "header",
+      "content": "Navigation & Headers"
+    },
     {
       "type": "text",
       "id": "back_text",
       "label": "Back Link Text",
       "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Custom Title Override",
+      "info": "Leave empty to use the native Product Title"
+    },
+    {
+      "type": "header",
+      "content": "Text & Descriptions"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_highlight",
+      "label": "Intro Highlight Text (Red Border)",
+      "default": "Engineered to optimize practitioner comfort during long sessions."
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Main Description Override",
+      "info": "Leave empty to use default product description."
     },
     {
       "type": "text",
@@ -172,7 +250,38 @@
       "type": "textarea",
       "id": "secondary_text",
       "label": "Secondary Paragraph Text",
-      "default": "Stain resistance is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The ultra-resistant leatherette ensures an as-new condition across a 15-20 year timeframe. Consistent care results in extended durability and optimal hygiene."
+      "default": "Stain resistance is central to the Equipro approach."
+    },
+    {
+      "type": "header",
+      "content": "Product Target & Purchasing"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Link Specific Product",
+      "info": "Allows binding this layout to another product if needed."
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Text",
+      "default": "ADD TO CART"
+    },
+    {
+      "type": "header",
+      "content": "Gallery Aspect Ratio & Options"
+    },
+    {
+      "type": "select",
+      "id": "image_aspect_ratio",
+      "label": "Main Image Aspect Ratio (Height)",
+      "options": [
+        { "value": "2-3", "label": "Tall Vertical (2:3)" },
+        { "value": "4-5", "label": "Standard Vertical (4:5)" },
+        { "value": "1-1", "label": "Square (1:1)" }
+      ],
+      "default": "4-5"
     },
     {
       "type": "checkbox",
@@ -185,6 +294,19 @@
       "id": "compare_btn_label",
       "label": "Compare Button Text",
       "default": "Compare with other models"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery Image",
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        }
+      ]
     }
   ],
   "presets": [
