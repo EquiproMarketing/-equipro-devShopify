@@ -17,12 +17,17 @@
           "settings": {
             "image": "shopify://shop_images/epure-ergonomic-air-lift-stool-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
             "image_position": "center",
-            "overlay_opacity": 30,
+            "overlay_opacity": 15,
             "subheading": "DIVINE EI-504",
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "",
+            "subheading_color": "#ab273b",
+            "heading_color": "#ffffff",
+            "text_color": "#f5f5f7",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
           }
         },
         "slide_eBgbdd": {
@@ -35,7 +40,12 @@
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "",
+            "subheading_color": "#ab273b",
+            "heading_color": "#ffffff",
+            "text_color": "#f5f5f7",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
           }
         },
         "slide_3xQX7g": {
@@ -48,7 +58,12 @@
             "heading": "Multi-Treatment Electric Table",
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
-            "button_link": ""
+            "button_link": "",
+            "subheading_color": "#ab273b",
+            "heading_color": "#ffffff",
+            "text_color": "#f5f5f7",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
           }
         }
       },
@@ -58,9 +73,13 @@
         "slide_3xQX7g"
       ],
       "settings": {
+        "custom_height": 200,
+        "custom_height_mobile": 350,
         "auto_rotate": true,
         "change_speed": 4,
-        "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute."
+        "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute.",
+        "bar_bg_color": "#f5f5f7",
+        "bar_text_color": "#1d1d1f"
       }
     },
     "shop_by_cat_v2_DhXM94": {
