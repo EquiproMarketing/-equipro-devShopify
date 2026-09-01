@@ -7,15 +7,16 @@
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
-          {%- comment -%} 1er NIVEL: Categoría Principal {%- endcomment -%}
+          {%- assign nav_parent = link.title | downcase | strip -%}
+
+          {%- comment -%} Comprobar si hay elementos de submenú o bloques vinculados {%- endcomment -%}
           {%- assign has_dropdown = false -%}
           {%- if link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
           {%- else -%}
             {%- for block in section.blocks -%}
-              {%- assign target_clean = block.settings.parent_category | downcase | strip -%}
-              {%- assign link_clean = link.title | downcase | strip -%}
-              {%- if target_clean == link_clean -%}
+              {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
+              {%- if block_parent == nav_parent -%}
                 {%- assign has_dropdown = true -%}
                 {%- break -%}
               {%- endif -%}
@@ -44,95 +45,129 @@
               <div class="category-megamenu">
                 <div class="category-megamenu__container page-width">
                   
-                  {%- comment -%} 2do NIVEL: Sidebar Izquierdo {%- endcomment -%}
-                  <div class="category-megamenu__sidebar">
-                    <ul class="category-megamenu__sidebar-list">
-                      {%- for childlink in link.links -%}
-                        <li 
-                          class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" 
-                          data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}"
-                        >
-                          <a href="{{ childlink.url }}" class="category-megamenu__sidebar-link">
-                            <span>{{ childlink.title }}</span>
-                            <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
-                              <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                          </a>
-                        </li>
-                      {%- endfor -%}
+                  {%- comment -%} Determinar si existe Sidebar (subcategorías reales) {%- endcomment -%}
+                  {%- assign show_sidebar = false -%}
+                  {%- if link.links.size > 0 -%}
+                    {%- assign show_sidebar = true -%}
+                  {%- else -%}
+                    {%- for block in section.blocks -%}
+                      {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
+                      {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
+                      {%- if block_parent == nav_parent and block_sub != 'n/a' and block_sub != '' -%}
+                        {%- assign show_sidebar = true -%}
+                        {%- break -%}
+                      {%- endif -%}
+                    {%- endfor -%}
+                  {%- endif -%}
 
-                      {%- comment -%} Subcategorías creadas desde Bloques {%- endcomment -%}
-                      {%- for block in section.blocks -%}
-                        {%- assign parent_clean = block.settings.parent_category | downcase | strip -%}
-                        {%- assign link_clean = link.title | downcase | strip -%}
-                        {%- if parent_clean == link_clean and block.settings.sub_category != blank -%}
-                          {%- assign custom_sub = block.settings.sub_category -%}
-                          {%- assign custom_sub_handle = custom_sub | handleize -%}
-                          {%- assign exists_in_links = false -%}
-                          {%- for childlink in link.links -%}
-                            {%- assign child_handle = childlink.title | handleize -%}
-                            {%- if child_handle == custom_sub_handle -%}
-                              {%- assign exists_in_links = true -%}
-                            {%- endif -%}
-                          {%- endfor -%}
-
-                          {%- unless exists_in_links -%}
-                            <li 
-                              class="category-megamenu__sidebar-item{% if link.links.size == 0 and forloop.first %} is-selected{% endif %}" 
-                              data-target-tab="tab-custom-{{ forloop.index }}-{{ link.title | handleize }}"
-                            >
-                              <a href="{{ block.settings.collection.url | default: '#' }}" class="category-megamenu__sidebar-link">
-                                <span>{{ custom_sub }}</span>
-                                <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
-                                  <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
-                              </a>
-                            </li>
-                          {%- endunless -%}
-                        {%- endif -%}
-                      {%- endfor -%}
-                    </ul>
-                  </div>
+                  {%- if show_sidebar -%}
+                    {%- comment -%} 2do NIVEL: Sidebar Izquierdo con Subcategorías {%- endcomment -%}
+                    <div class="category-megamenu__sidebar">
+                      <ul class="category-megamenu__sidebar-list">
+                        {%- for childlink in link.links -%}
+                          <li 
+                            class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" 
+                            data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}"
+                          >
+                            <a href="{{ childlink.url }}" class="category-megamenu__sidebar-link">
+                              <span>{{ childlink.title }}</span>
+                              <svg class="category-megamenu__sidebar-arrow" width="6" height="10" viewBox="0 0 6 10" fill="none" stroke="currentColor" stroke-width="1.5">
+                                <path d="M1 1L5 5L1 9" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg>
+                            </a>
+                          </li>
+                        {%- endfor -%}
+                      </ul>
+                    </div>
+                  {%- endif -%}
 
                   {%- comment -%} 3er NIVEL: Panel Derecho de Tarjetas Visuales {%- endcomment -%}
-                  <div class="category-megamenu__content">
+                  <div class="category-megamenu__content{% unless show_sidebar %} full-width-content{% endunless %}">
                     
-                    {%- for childlink in link.links -%}
-                      <div 
-                        class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
-                        id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
-                      >
-                        <div class="category-megamenu__grid">
-                          
-                          {%- if childlink.links.size > 0 -%}
-                            {%- for grandchild in childlink.links -%}
-                              {%- assign card_img = nil -%}
-                              {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
-                                {%- assign card_img = grandchild.object.image -%}
-                              {%- elsif grandchild.type == 'product_link' and grandchild.object.featured_image -%}
-                                {%- assign card_img = grandchild.object.featured_image -%}
+                    {%- comment -%} A) Si hay subcategorías en el menú de Shopify {%- endcomment -%}
+                    {%- if link.links.size > 0 -%}
+                      {%- for childlink in link.links -%}
+                        {%- assign nav_sub = childlink.title | downcase | strip -%}
+                        <div 
+                          class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
+                          id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
+                        >
+                          <div class="category-megamenu__grid">
+                            {%- if childlink.links.size > 0 -%}
+                              {%- for grandchild in childlink.links -%}
+                                {%- assign card_img = nil -%}
+                                {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
+                                  {%- assign card_img = grandchild.object.image -%}
+                                {%- elsif grandchild.type == 'product_link' and grandchild.object.featured_image -%}
+                                  {%- assign card_img = grandchild.object.featured_image -%}
+                                {%- endif -%}
+
+                                <a href="{{ grandchild.url }}" class="category-megamenu__card">
+                                  <div class="category-megamenu__card-image">
+                                    {%- if card_img != blank -%}
+                                      <img src="{{ card_img | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
+                                    {%- else -%}
+                                      <div class="category-megamenu__card-placeholder"></div>
+                                    {%- endif -%}
+                                  </div>
+                                  <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
+                                </a>
+                              {%- endfor -%}
+                            {%- endif -%}
+
+                            {%- comment -%} Tarjetas vinculadas a esta subcategoría {%- endcomment -%}
+                            {%- for block in section.blocks -%}
+                              {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
+                              {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
+
+                              {%- if block_parent == nav_parent and block_sub == nav_sub -%}
+                                {%- assign selected_collection = block.settings.collection -%}
+                                {%- assign selected_product = block.settings.product -%}
+
+                                {%- if selected_product != blank -%}
+                                  {%- assign final_url = selected_product.url -%}
+                                  {%- assign final_title = block.settings.custom_title | default: selected_product.title -%}
+                                  {%- assign final_image = block.settings.custom_image | default: selected_product.featured_image -%}
+                                {%- elsif selected_collection != blank -%}
+                                  {%- assign final_url = selected_collection.url -%}
+                                  {%- assign final_title = block.settings.custom_title | default: selected_collection.title -%}
+                                  {%- assign final_image = block.settings.custom_image | default: selected_collection.featured_image -%}
+                                {%- else -%}
+                                  {%- assign final_url = block.settings.custom_url -%}
+                                  {%- assign final_title = block.settings.custom_title -%}
+                                  {%- assign final_image = block.settings.custom_image -%}
+                                {%- endif -%}
+
+                                {%- if final_title != blank -%}
+                                  <a href="{{ final_url | default: '#' }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
+                                    <div class="category-megamenu__card-image">
+                                      {%- if final_image != blank -%}
+                                        <img src="{{ final_image | image_url: width: 500 }}" alt="{{ final_title | escape }}" loading="lazy" width="220" height="220">
+                                      {%- else -%}
+                                        <div class="category-megamenu__card-placeholder"></div>
+                                      {%- endif -%}
+                                      {%- if block.settings.badge_text != blank -%}
+                                        <span class="custom-promo-badge">{{ block.settings.badge_text }}</span>
+                                      {%- endif -%}
+                                    </div>
+                                    <span class="category-megamenu__card-title">{{ final_title }}</span>
+                                  </a>
+                                {%- endif -%}
                               {%- endif -%}
-
-                              <a href="{{ grandchild.url }}" class="category-megamenu__card">
-                                <div class="category-megamenu__card-image">
-                                  {%- if card_img != blank -%}
-                                    <img src="{{ card_img | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
-                                  {%- else -%}
-                                    <div class="category-megamenu__card-placeholder"></div>
-                                  {%- endif -%}
-                                </div>
-                                <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
-                              </a>
                             {%- endfor -%}
-                          {%- endif -%}
+                          </div>
+                        </div>
+                      {%- endfor -%}
 
+                    {%- else -%}
+                      {%- comment -%} B) CASO N/A: Sin subcategorías, muestra las tarjetas directamente {%- endcomment -%}
+                      <div class="category-megamenu__tab-panel is-active">
+                        <div class="category-megamenu__grid">
                           {%- for block in section.blocks -%}
                             {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
                             {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
-                            {%- assign nav_parent = link.title | downcase | strip -%}
-                            {%- assign nav_sub = childlink.title | downcase | strip -%}
 
-                            {%- if block_parent == nav_parent and block_sub == nav_sub -%}
+                            {%- if block_parent == nav_parent and block_sub == 'n/a' or block_sub == '' -%}
                               {%- assign selected_collection = block.settings.collection -%}
                               {%- assign selected_product = block.settings.product -%}
 
@@ -167,10 +202,9 @@
                               {%- endif -%}
                             {%- endif -%}
                           {%- endfor -%}
-
                         </div>
                       </div>
-                    {%- endfor -%}
+                    {%- endif -%}
 
                   </div>
 
@@ -241,7 +275,8 @@
           "type": "text",
           "id": "sub_category",
           "label": "2. Subcategory Name",
-          "info": "Exact name of sidebar subcategory (e.g., Electric Beds)"
+          "default": "N/A",
+          "info": "Set as N/A or leave empty if this category has no subcategories and cards should show directly."
         },
         {
           "type": "header",
