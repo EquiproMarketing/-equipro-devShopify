@@ -21,6 +21,19 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "card_item_FcndwN": {
+          "type": "card_item",
+          "settings": {
+            "parent_category": "Stools",
+            "sub_category": "",
+            "collection": "",
+            "product": "",
+            "custom_title": "",
+            "custom_image": "shopify://shop_images/31300copie2.png",
+            "badge_text": "",
+            "custom_url": ""
+          }
+        },
         "card_item_3fBpy4": {
           "type": "card_item",
           "settings": {
@@ -47,6 +60,7 @@
         }
       },
       "block_order": [
+        "card_item_FcndwN",
         "card_item_3fBpy4",
         "card_item_mjLKfD"
       ],
