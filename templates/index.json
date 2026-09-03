@@ -281,11 +281,13 @@
         "custom_card_BgbKdG": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizer-cabinet-professional-salon-hygiene-equipment-sku-61102.webp",
+            "hover_image": "shopify://shop_images/equipro-spa-cabi-61102-towel-warmer-uv-sanitizer-cabinet-professional-wellness-clinic-sku-61102.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "BEST SELLER",
+            "title": "Spa Cabi",
+            "price": "830,00 $",
+            "swatches": "",
             "link": ""
           }
         },
