@@ -41,14 +41,14 @@
   width: 100%;
   background: #ffffff;
   border-radius: 16px;
-  padding: 0; /* Padding moved to image wrapper and info area */
+  padding: 0;
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
   border: 1px solid #f0f0f0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Clips image corners gracefully to the card border */
+  overflow: hidden;
 }
 
 .apple-card:hover {
@@ -70,7 +70,9 @@
   width: 100%;
   aspect-ratio: 4 / 5;
   overflow: hidden;
-  padding: 0; /* Zero padding to span edge to edge */
+  border-radius: 15px 15px 0 0; /* Direct border-radius match for top corners */
+  isolation: isolate; /* Prevents WebKit clipping bug during hover transforms */
+  padding: 0;
   margin: 0;
   background-color: #f8f8f8;
 }
@@ -81,9 +83,11 @@
   left: 0;
   width: 100% !important;
   height: 100% !important;
-  object-fit: cover !important; /* Spans full frame filling edges */
+  object-fit: cover !important;
   object-position: center;
-  transition: opacity 0.35s ease, transform 0.35s ease;
+  transition: opacity 0.35s ease;
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
 }
 
 .apple-card__image--primary {
@@ -102,7 +106,6 @@
 
 .apple-card:hover .apple-card__image--secondary {
   opacity: 1;
-  transform: scale(1.04);
 }
 
 /* COLOR SWATCHES */
