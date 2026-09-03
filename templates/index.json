@@ -221,7 +221,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Ergonomic Stool with Backrest",
-            "price": "from CA385,00 $",
+            "price": "from CA$385,00",
             "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "link": "shopify://products/ergonomic-stool-with-backrest"
           }
@@ -234,7 +234,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Multiderm (5 in 1)",
-            "price": "from CA$2,800.00",
+            "price": "CA$2,800.00",
             "swatches": "",
             "link": "shopify://products/multiderm-5-en-1"
           }
@@ -333,11 +333,13 @@
         "custom_card_GUW9Bg": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
+            "hover_image": "shopify://shop_images/equipro-11600-aeroderm-vac-spray-professional-esthetician-skincare-system.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "BEST SELLER",
+            "title": "Aeroderm",
+            "price": "CA$750,00 $",
+            "swatches": "",
             "link": ""
           }
         }
