@@ -1,6 +1,7 @@
 .featured-collection-wrapper {
   padding-top: 3rem;
   padding-bottom: 3rem;
+  overflow: hidden; /* Prevents page layout horizontal scrollbar */
 }
 
 .featured-collection__header {
@@ -17,6 +18,14 @@
   letter-spacing: 0.05em;
   margin: 0;
   text-transform: uppercase;
+}
+
+/* ALLOW SWIPER CARDS TO BREATHE AND ELEVATE ON HOVER WITHOUT CLIPPING */
+.best-sellers-swiper {
+  overflow: visible !important; /* Critical: allows hover elevation past swiper bounds */
+  padding-top: 12px !important; /* Buffer zone for translateY hover */
+  padding-bottom: 12px !important;
+  margin-top: -12px !important;
 }
 
 /* CONTINUOUS LINEAR SWIPER TRANSITION */
@@ -48,14 +57,12 @@
   height: 100%;
   display: flex;
   flex-direction: column;
-  overflow: hidden; /* Master clip for all children including top corners */
-  transform: translateZ(0); /* Forces GPU layer to prevent webkit corner clipping glitch */
-  will-change: transform;
+  overflow: hidden; /* Master clip for image corners inside card */
 }
 
 .apple-card:hover {
-  transform: translateY(-3px) translateZ(0);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.07);
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.09);
 }
 
 .apple-card__link {
