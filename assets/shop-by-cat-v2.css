@@ -93,24 +93,25 @@
     color: #06c; /* Azul enlace estilo Apple */
   }
 
-  /* Drag Container Wrapper */
+ /* Container Wrapper */
 .shop-by-cat-v2__slider-wrapper {
   position: relative;
 }
 
-/* Red fade mask on the right edge to hint more content */
+/* Edge Fade Mask */
 .shop-by-cat-v2__slider-wrapper::after {
   content: "";
   position: absolute;
   top: 0;
   right: 0;
-  width: 50px;
+  width: 40px;
   height: 100%;
-  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.95));
   pointer-events: none;
+  z-index: 1;
 }
 
-/* Scrollable Container */
+/* Scrollable Track */
 .shop-by-cat-v2__slider {
   display: flex;
   overflow-x: auto;
@@ -126,7 +127,6 @@
   scroll-behavior: auto;
 }
 
-/* List Layout */
 .shop-by-cat-v2__list {
   display: flex;
   gap: 20px;
@@ -135,12 +135,11 @@
   list-style: none;
 }
 
-/* Item Sizing: Shows partially clipped item at the end */
 .shop-by-cat-v2__item {
-  flex: 0 0 140px; /* Fixed width per category card */
+  flex: 0 0 140px;
 }
 
-/* Custom Scrollbar */
+/* Scrollbar Styling */
 .shop-by-cat-v2__slider::-webkit-scrollbar {
   height: 4px;
 }
@@ -153,4 +152,57 @@
 .shop-by-cat-v2__slider::-webkit-scrollbar-thumb {
   background: #a22938;
   border-radius: 4px;
+}
+
+/* Navigation Arrows - Hidden by Default (Mobile/Touch) */
+.shop-by-cat-v2__nav-btn {
+  display: none;
+}
+
+/* Desktop Only: Arrows on Hover */
+@media (min-width: 992px) {
+  .shop-by-cat-v2__nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    background: #ffffff;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+    cursor: pointer;
+    z-index: 3;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.25s ease, visibility 0.25s ease, transform 0.2s ease, background-color 0.2s ease;
+  }
+
+  .shop-by-cat-v2__nav-btn--prev {
+    left: -18px;
+  }
+
+  .shop-by-cat-v2__nav-btn--next {
+    right: -18px;
+  }
+
+  /* Show arrows when hovering over the wrapper */
+  .shop-by-cat-v2__slider-wrapper:hover .shop-by-cat-v2__nav-btn {
+    opacity: 1;
+    visibility: visible;
+  }
+
+  /* Hover state on the arrow buttons */
+  .shop-by-cat-v2__nav-btn:hover {
+    background-color: #a22938;
+    border-color: #a22938;
+    transform: translateY(-50%) scale(1.08);
+  }
+
+  .shop-by-cat-v2__nav-btn:hover svg path {
+    stroke: #ffffff;
+  }
 }

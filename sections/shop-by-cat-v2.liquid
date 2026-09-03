@@ -7,6 +7,19 @@
     {%- endif -%}
 
     <div class="shop-by-cat-v2__slider-wrapper">
+      <!-- Arrow Left (Desktop Hover Only) -->
+      <button 
+        type="button" 
+        class="shop-by-cat-v2__nav-btn shop-by-cat-v2__nav-btn--prev" 
+        aria-label="Previous categories"
+        onclick="scrollCatSlider('{{ section.id }}', -1)"
+      >
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M8.5 15L1.5 8L8.5 1" stroke="#a22938" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
+
+      <!-- Scrollable Slider -->
       <div class="shop-by-cat-v2__slider" id="CategorySlider-{{ section.id }}">
         <ul class="shop-by-cat-v2__list" role="list">
           {%- for block in section.blocks -%}
@@ -32,11 +45,33 @@
           {%- endfor -%}
         </ul>
       </div>
+
+      <!-- Arrow Right (Desktop Hover Only) -->
+      <button 
+        type="button" 
+        class="shop-by-cat-v2__nav-btn shop-by-cat-v2__nav-btn--next" 
+        aria-label="Next categories"
+        onclick="scrollCatSlider('{{ section.id }}', 1)"
+      >
+        <svg width="10" height="16" viewBox="0 0 10 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1.5 1L8.5 8L1.5 15" stroke="#a22938" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </button>
     </div>
   </div>
 </section>
 
 <script>
+  function scrollCatSlider(sectionId, direction) {
+    const slider = document.getElementById(`CategorySlider-${sectionId}`);
+    if (!slider) return;
+    const scrollAmount = slider.clientWidth * 0.75;
+    slider.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
+
   document.addEventListener('DOMContentLoaded', () => {
     const slider = document.getElementById('CategorySlider-{{ section.id }}');
     if (!slider) return;
@@ -68,16 +103,13 @@
       if (!isDown) return;
       e.preventDefault();
       const x = e.pageX - slider.offsetLeft;
-      const walk = (x - startX) * 1.5; // Drag speed multiplier
-      
+      const walk = (x - startX) * 1.5;
       if (Math.abs(walk) > 5) {
         isDragging = true;
       }
-      
       slider.scrollLeft = scrollLeft - walk;
     });
 
-    // Prevent link trigger when user drags
     slider.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', (e) => {
         if (isDragging) {
