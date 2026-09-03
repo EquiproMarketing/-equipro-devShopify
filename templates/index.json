@@ -240,10 +240,12 @@
         "custom_card_k38Qj8": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/pro-esthetic-hydraulic-facial-depilation-chair-adjustable-ergonomic-salon-equipment-sku-pe-8800.webp",
+            "hover_image": "shopify://shop_images/maxi-comfort-360-hydraulic-facial-depilation-treatment-bed-aesthetic-salon-20100.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
+            "tag": "New colors",
+            "title": "Maxi-Comfort 360º",
+            "price": "2200",
             "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
             "link": ""
           }
