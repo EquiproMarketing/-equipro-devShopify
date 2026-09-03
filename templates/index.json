@@ -227,13 +227,13 @@
         "custom_card_AWHND6": {
           "type": "custom_card",
           "settings": {
-            "image": "shopify://shop_images/equipro-poly-comfort-hydraulic-air-lift-spa-facial-massage-22100.webp",
-            "hover_image": "shopify://shop_images/equipro-poly-comfort-hydraulic-treatment-bed-air-lift-spa-furniture-facial-massage-22100.webp",
+            "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
+            "hover_image": "shopify://shop_images/equipro-multiderm-5-in-1-ultra-modern-aesthetic-equipment-11800.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "BEST SELLER",
+            "title": "Multiderm (5 in 1)",
+            "price": "2,800.00",
+            "swatches": "",
             "link": ""
           }
         },
