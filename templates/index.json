@@ -221,7 +221,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Ergonomic Stool with Backrest",
-            "price": "385,00 $",
+            "price": "from CA385,00 $",
             "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "link": "shopify://products/ergonomic-stool-with-backrest"
           }
@@ -234,7 +234,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Multiderm (5 in 1)",
-            "price": "$2,800.00",
+            "price": "from CA$2,800.00",
             "swatches": "",
             "link": "shopify://products/multiderm-5-en-1"
           }
@@ -247,7 +247,7 @@
             "card_bg": "#ffffff",
             "tag": "NEW COLORS",
             "title": "Maxi-Comfort 360º",
-            "price": "$2,200.00",
+            "price": "from CA$2,200.00",
             "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "link": "shopify://products/maxi-comfort-360"
           }
@@ -260,7 +260,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "TM-3 Professional",
-            "price": "$375.00",
+            "price": "from CA$375.00",
             "swatches": "",
             "link": "shopify://products/home-skincare-equipment-accessories-tm-3-professional-service-table"
           }
@@ -273,7 +273,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infraderm",
-            "price": "590,00 $",
+            "price": "from CA590,00 $",
             "swatches": "",
             "link": "shopify://products/infraderm"
           }
@@ -286,7 +286,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Spa Cabi",
-            "price": "830,00 $",
+            "price": "from CA830,00 $",
             "swatches": "",
             "link": ""
           }
@@ -299,7 +299,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infinity",
-            "price": "3200,00 $",
+            "price": "from CA3,200.00 $",
             "swatches": "#ffffff, #191919, #1b1e2e",
             "link": ""
           }
@@ -307,11 +307,13 @@
         "custom_card_Kq4ak6": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/equipro-lfm-led-magnifier-lamp-l24297-precision-aesthetic-lighting.webp",
+            "hover_image": "shopify://shop_images/equipro-63203-lfm-led-magnifier-professional-skincare-lamp.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "BEST SELLER",
+            "title": "LED LFM Magnifier (3D/5D)",
+            "price": "from CA$345.00",
+            "swatches": "",
             "link": ""
           }
         },
