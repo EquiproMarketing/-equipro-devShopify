@@ -216,11 +216,13 @@
         "custom_card_rFaJei": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/31300-ergonomic-air-lift-practitioner-stool-white-leatherette.webp",
+            "hover_image": "shopify://shop_images/31300-ergonomic-air-lift-practitioner-stool-midnight-blue.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "BEST SELLER",
+            "title": "Ergonomic Stool with Backrest",
+            "price": "385,00 $",
+            "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "link": ""
           }
         },
