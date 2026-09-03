@@ -41,13 +41,14 @@
   width: 100%;
   background: #ffffff;
   border-radius: 16px;
-  padding: 14px;
+  padding: 0; /* Padding moved to image wrapper and info area */
   box-shadow: 0 2px 14px rgba(0, 0, 0, 0.04);
   border: 1px solid #f0f0f0;
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   height: 100%;
   display: flex;
   flex-direction: column;
+  overflow: hidden; /* Clips image corners gracefully to the card border */
 }
 
 .apple-card:hover {
@@ -63,30 +64,35 @@
   height: 100%;
 }
 
-/* 4:5 ASPECT RATIO CONTAINER & HOVER IMAGE LOGIC */
+/* 4:5 FULL COVER ASPECT RATIO CONTAINER */
 .apple-card__image-wrapper {
   position: relative;
   width: 100%;
   aspect-ratio: 4 / 5;
-  border-radius: 10px;
   overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  padding: 12px;
+  padding: 0; /* Zero padding to span edge to edge */
+  margin: 0;
+  background-color: #f8f8f8;
 }
 
 .apple-card__image {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important; /* Spans full frame filling edges */
+  object-position: center;
   transition: opacity 0.35s ease, transform 0.35s ease;
 }
 
+.apple-card__image--primary {
+  z-index: 1;
+  opacity: 1;
+}
+
 .apple-card__image--secondary {
-  position: absolute;
-  inset: 0;
-  margin: auto;
+  z-index: 2;
   opacity: 0;
 }
 
@@ -105,8 +111,9 @@
   align-items: center;
   justify-content: flex-start;
   gap: 5px;
+  padding: 0 14px;
   margin-top: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 6px;
   min-height: 8px;
 }
 
@@ -123,6 +130,7 @@
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  padding: 0 14px 14px 14px; /* Internal spacing for text elements */
 }
 
 .apple-card__tag {
