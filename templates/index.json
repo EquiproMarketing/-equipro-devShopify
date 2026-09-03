@@ -260,7 +260,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "TM-3 Professional",
-            "price": "from CA$375.00",
+            "price": "CA$375.00",
             "swatches": "",
             "link": "shopify://products/home-skincare-equipment-accessories-tm-3-professional-service-table"
           }
@@ -273,7 +273,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infraderm",
-            "price": "from CA590,00 $",
+            "price": "CA$590,00",
             "swatches": "",
             "link": "shopify://products/infraderm"
           }
@@ -286,7 +286,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Spa Cabi",
-            "price": "from CA830,00 $",
+            "price": "from CA$830,00",
             "swatches": "",
             "link": ""
           }
@@ -299,7 +299,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infinity",
-            "price": "from CA3,200.00 $",
+            "price": "from CA$3,200.00",
             "swatches": "#ffffff, #191919, #1b1e2e",
             "link": ""
           }
@@ -325,7 +325,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Vapoderm Digipro",
-            "price": "CA$850,00 $",
+            "price": "CA$850,00",
             "swatches": "",
             "link": "shopify://products/digipro-steamer"
           }
@@ -338,7 +338,7 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Aeroderm",
-            "price": "CA$750,00 $",
+            "price": "CA$750,00",
             "swatches": "",
             "link": ""
           }
@@ -449,7 +449,8 @@
       "type": "image-with-text",
       "settings": {
         "title": "EquiPro Quality: Crafted for Professionals, Built to Last",
-        "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>"
+        "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>",
+        "image": "shopify://shop_images/equipro-tm3-trolley-maxi-comfort-20100-chair.webp"
       }
     },
     "custom_subcategory_slider_YFNFXr": {
@@ -507,12 +508,12 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "link": "shopify://collections/facial-units",
+            "tag": "FACIAL UNITS",
+            "title": "EXPLORE OURS FACIAL UNITS",
+            "subtitle": "High-performance aesthetic modules designed to deliver precise advanced treatments including high frequency, galvanic, rotary brush, and vacuum protocols.",
             "price": "From CA$ 1,499",
-            "available_colors": "#ffffff, #111111, #808080"
+            "available_colors": ""
           }
         },
         "subcategory_card_Xnfck8": {
