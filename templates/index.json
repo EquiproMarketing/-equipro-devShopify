@@ -462,8 +462,8 @@
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Streamers",
-            "title": "Streamers",
-            "subtitle": "Professional facial steamers with precise steam control and integrated ozone technology for deep cleansing and advanced skincare treatments.",
+            "title": "Professional Facial Machines & Steamers",
+            "subtitle": "Advanced facial steamers, microdermabrasion units, and high-frequency machines designed for medical spas.",
             "price": "From CA$ 565.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
@@ -473,10 +473,10 @@
           "settings": {
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "tag": "MAG-LAMPS",
+            "title": "Precision Magnifying Lamps",
+            "subtitle": "Distortion-free magnification optics paired with flicker-free illumination for detailed skin diagnostics.",
+            "price": "From CA$ 260.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -485,10 +485,10 @@
           "settings": {
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "tag": "TROLLEYS",
+            "title": "Mobile Clinic-Spa Workstations",
+            "subtitle": "Durable, silent-rolling storage units with integrated power outlets to keep treatment essentials organized.",
+            "price": "From CA$ 265.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -497,9 +497,9 @@
           "settings": {
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
+            "tag": "Stools",
+            "title": "Ergonomic Technician Stools",
+            "subtitle": "High-density posture-support seating with smooth pneumatic lift for long clinical procedures.",
             "price": "From CA$ 1,499",
             "available_colors": "#ffffff, #111111, #808080"
           }
@@ -521,10 +521,10 @@
           "settings": {
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Hydraulic",
+            "tag": "Towel Cabinets",
             "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "subtitle": "Commercial-grade warming cabinets and precision temp wax heaters for seamless hygiene and prep.",
+            "price": "From CA$ 297.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
