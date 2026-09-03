@@ -320,12 +320,14 @@
         "custom_card_9bzVAr": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/equipro-11100-digipro-professional-facial-steamer.webp",
+            "hover_image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
-            "link": ""
+            "tag": "BEST SELLER",
+            "title": "Vapoderm Digipro",
+            "price": "CA$850,00 $",
+            "swatches": "",
+            "link": "shopify://products/digipro-steamer"
           }
         },
         "custom_card_GUW9Bg": {
