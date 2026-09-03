@@ -460,11 +460,11 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "Streamers",
-            "title": "Professional Facial Machines & Steamers",
-            "subtitle": "Advanced facial steamers, microdermabrasion units, and high-frequency machines designed for medical spas.",
-            "price": "From CA$ 565.00",
+            "link": "shopify://collections/electric",
+            "tag": "Treatment Chairs",
+            "title": "Electric Treatment Chairs",
+            "subtitle": "Multi-motor elevation and tilt controls for effortless client positioning during long clinical procedures.",
+            "price": "From CA$ 2,399.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -472,11 +472,11 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "MAG-LAMPS",
-            "title": "Precision Magnifying Lamps",
-            "subtitle": "Distortion-free magnification optics paired with flicker-free illumination for detailed skin diagnostics.",
-            "price": "From CA$ 260.00",
+            "link": "shopify://collections/hydraulic-mechanical",
+            "tag": "Treatment Chairs",
+            "title": "Hydraulic Treatment Chairs",
+            "subtitle": "Smooth manual elevation and sturdy rotation mechanisms for versatile, power-free clinic setups.",
+            "price": "From CA$ 1,499.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -484,11 +484,11 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "TROLLEYS",
-            "title": "Mobile Clinic-Spa Workstations",
-            "subtitle": "Durable, silent-rolling storage units with integrated power outlets to keep treatment essentials organized.",
-            "price": "From CA$ 265.00",
+            "link": "shopify://collections/trolleys",
+            "tag": "Treatment Chairs",
+            "title": "Portable Massage Tables",
+            "subtitle": "Lightweight, high-strength aluminum and wooden folding frames designed for mobile professionals and compact spaces.",
+            "price": "From CA$ 499.00",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -496,7 +496,7 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
+            "link": "shopify://collections/stools",
             "tag": "Stools",
             "title": "Ergonomic Technician Stools",
             "subtitle": "High-density posture-support seating with smooth pneumatic lift for long clinical procedures.",
@@ -520,7 +520,7 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
+            "link": "shopify://collections/towel-warmers",
             "tag": "Towel Cabinets",
             "title": "Towel Cabinets",
             "subtitle": "Commercial-grade warming cabinets and precision temp wax heaters for seamless hygiene and prep.",
@@ -532,7 +532,7 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
+            "link": "shopify://collections/wellness-therapy",
             "tag": "Wellness Therapy",
             "title": "Thermal Spa Equipment",
             "subtitle": "Specialized Vichy showers and body thermal systems designed for full-body wellness treatments.",
@@ -545,7 +545,7 @@
           "settings": {
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Hydraulic",
+            "tag": "WAX HEATERS",
             "title": "Hydraulic Treatment Chairs",
             "subtitle": "Smooth manual elevation for versatile clinic setups.",
             "price": "From CA$ 1,499",
