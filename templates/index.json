@@ -41,9 +41,9 @@
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
             "button_link": "",
-            "subheading_color": "#ab273b",
+            "subheading_color": "#FFFFFF",
             "heading_color": "#ffffff",
-            "text_color": "#f5f5f7",
+            "text_color": "#FFFFFF",
             "btn_bg_color": "#ab273b",
             "btn_text_color": "#ffffff"
           }
@@ -651,7 +651,9 @@
         "slide_fLCpXz",
         "s_1"
       ],
-      "settings": {}
+      "settings": {
+        "autoplay_speed": 5000
+      }
     },
     "custom_spa_pack_builder_BDtr9H": {
       "type": "custom-spa-pack-builder",
