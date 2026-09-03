@@ -1,124 +1,157 @@
-<div class="collection-products page-width">
+{{ 'collection-products.css' | asset_url | stylesheet_tag }}
+
+<section class="collection-products page-width" id="CollectionProducts-{{ section.id }}">
   <div class="collection-products__back">
     <a href="javascript:history.back()" class="back-link">
-      <svg width="8" height="12" viewBox="0 0 8 12" fill="none"><path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/></svg>
-      Back
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
+      </svg>
+      <span>{{ section.settings.back_text | default: "Back" }}</span>
     </a>
   </div>
 
   <div class="collection-products__grid">
     {% for product in collection.products %}
-      <div class="product-card-item">
-        <a href="{{ product.url }}" class="product-card-item__media">
+      <div class="custom-treatment-card">
+        
+        {% comment %} APPLE-STYLE ROUNDED IMAGE CONTAINER (4:5 ASPECT RATIO) {% endcomment %}
+        <a href="{{ product.url }}" class="custom-treatment-card__image-container">
           {% if product.featured_image != blank %}
-            <img src="{{ product.featured_image | image_url: width: 600 }}" class="product-card-item__img product-card-item__img--primary" loading="lazy">
+            <img 
+              src="{{ product.featured_image | image_url: width: 600 }}" 
+              alt="{{ product.featured_image.alt | escape }}" 
+              class="custom-treatment-card__image custom-treatment-card__image--primary" 
+              loading="lazy"
+              width="240"
+              height="300"
+            >
             {% if product.images[1] != blank %}
-              <img src="{{ product.images[1] | image_url: width: 600 }}" class="product-card-item__img product-card-item__img--secondary" loading="lazy">
+              <img 
+                src="{{ product.images[1] | image_url: width: 600 }}" 
+                alt="{{ product.images[1].alt | escape }}" 
+                class="custom-treatment-card__image custom-treatment-card__image--secondary" 
+                loading="lazy"
+                width="240"
+                height="300"
+              >
             {% endif %}
           {% else %}
-            <div class="product-card-item__placeholder"></div>
+            <div class="custom-treatment-card__placeholder"></div>
           {% endif %}
         </a>
 
-        <div class="product-card-item__info">
-          <div class="product-card-item__header">
-            <h3 class="product-card-item__title"><a href="{{ product.url }}">{{ product.title }}</a></h3>
-            <div class="product-card-item__rating">★ 4.8 (15)</div>
-          </div>
-          <p class="product-card-item__vendor">{{ product.vendor | default: collection.title }}</p>
-          <p class="product-card-item__price">From {{ product.price | money }}</p>
-          
-          <a href="{{ product.url }}" class="product-card-item__btn">See Product</a>
+        {% comment %} DYNAMIC COLOR SWATCHES FROM PRODUCT VARIANTS {% endcomment %}
+        <div class="custom-treatment-card__swatches">
+          {% assign color_option = product.options_with_values | where: "name", "Color" | first %}
+          {% if color_option == blank %}
+            {% assign color_option = product.options_with_values | where: "name", "Couleur" | first %}
+          {% endif %}
+
+          {% if color_option != blank %}
+            {% for value in color_option.values limit: 5 %}
+              {% assign color_downcase = value | downcase %}
+              <span 
+                class="custom-treatment-card__swatch-dot" 
+                style="background-color: {{ color_downcase }};"
+                title="{{ value | escape }}"
+              ></span>
+            {% endfor %}
+          {% else %}
+            <span class="custom-treatment-card__swatch-dot" style="background-color: #ffffff;"></span>
+            <span class="custom-treatment-card__swatch-dot" style="background-color: #111111;"></span>
+          {% endif %}
         </div>
+
+        {% comment %} CARD DETAILS AND TEXTS {% endcomment %}
+        <div class="custom-treatment-card__content">
+          <h3 class="custom-treatment-card__title">
+            <a href="{{ product.url }}">{{ product.title }}</a>
+          </h3>
+          
+          <p class="custom-treatment-card__subtitle">
+            {{ product.vendor | default: collection.title }}
+          </p>
+
+          <p class="custom-treatment-card__price">
+            {% if product.price_varies %}
+              From {{ product.price_min | money }}
+            {% else %}
+              {{ product.price | money }}
+            {% endif %}
+          </p>
+
+          {% comment %} ACTION BUTTONS {% endcomment %}
+          <div class="custom-treatment-card__actions">
+            <a href="{{ product.url }}" class="custom-treatment-btn custom-treatment-btn--primary">
+              {{ section.settings.btn_primary_text | default: "En savoir plus" }}
+            </a>
+
+            <a href="{{ product.url }}" class="custom-treatment-btn custom-treatment-btn--link">
+              {{ section.settings.btn_secondary_text | default: "Acheter >" }}
+            </a>
+          </div>
+        </div>
+
       </div>
     {% else %}
+      {% comment %} FALLBACK DUMMY CARDS FOR THEME EDITOR PREVIEW {% endcomment %}
       {% for i in (1..4) %}
-        <div class="product-card-item">
-          <div class="product-card-item__media">
-            <div class="product-card-item__placeholder"></div>
+        <div class="custom-treatment-card">
+          <div class="custom-treatment-card__image-container">
+            <div class="custom-treatment-card__placeholder"></div>
           </div>
-          <div class="product-card-item__info">
-            <div class="product-card-item__header">
-              <h3 class="product-card-item__title">TM-3 Standard</h3>
-              <div class="product-card-item__rating">★ 4.8 (15)</div>
+
+          <div class="custom-treatment-card__swatches">
+            <span class="custom-treatment-card__swatch-dot" style="background-color: #ffffff;"></span>
+            <span class="custom-treatment-card__swatch-dot" style="background-color: #111111;"></span>
+            <span class="custom-treatment-card__swatch-dot" style="background-color: #808080;"></span>
+          </div>
+
+          <div class="custom-treatment-card__content">
+            <h3 class="custom-treatment-card__title">TM-3 Standard</h3>
+            <p class="custom-treatment-card__subtitle">Trolleys & Carts</p>
+            <p class="custom-treatment-card__price">From CA$375.00</p>
+
+            <div class="custom-treatment-card__actions">
+              <a href="#" class="custom-treatment-btn custom-treatment-btn--primary">En savoir plus</a>
+              <a href="#" class="custom-treatment-btn custom-treatment-btn--link">Acheter &gt;</a>
             </div>
-            <p class="product-card-item__vendor">Trolleys</p>
-            <p class="product-card-item__price">From CA$375.00</p>
-            <a href="#" class="product-card-item__btn">See Product</a>
           </div>
         </div>
       {% endfor %}
     {% endfor %}
   </div>
-</div>
-
-<style>
-.collection-products { margin-bottom: 4rem; }
-.collection-products__back { margin-bottom: 1.5rem; }
-.collection-products__grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 1.5rem;
-}
-.product-card-item {
-  background: #ffffff;
-  border-radius: 20px;
-  padding: 1rem;
-  border: 1px solid #f0f0f0;
-  display: flex;
-  flex-direction: column;
-}
-.product-card-item__media {
-  position: relative;
-  aspect-ratio: 1 / 1;
-  border-radius: 16px;
-  overflow: hidden;
-  background-color: #f7f7f7;
-}
-.product-card-item__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  transition: opacity 0.3s ease;
-}
-.product-card-item__img--secondary { position: absolute; inset: 0; opacity: 0; }
-.product-card-item__media:hover .product-card-item__img--primary { opacity: 0; }
-.product-card-item__media:hover .product-card-item__img--secondary { opacity: 1; }
-.product-card-item__placeholder { width: 100%; height: 100%; background: #e8e8e8; }
-.product-card-item__info { margin-top: 1rem; display: flex; flex-direction: column; flex-grow: 1; }
-.product-card-item__header { display: flex; justify-content: space-between; align-items: center; }
-.product-card-item__title { font-size: 1rem; font-weight: 700; color: #a22938; margin: 0; }
-.product-card-item__title a { color: #a22938; text-decoration: none; }
-.product-card-item__rating { font-size: 0.75rem; color: #a22938; font-weight: 600; }
-.product-card-item__vendor { font-size: 0.8rem; color: #888888; margin: 0.2rem 0; }
-.product-card-item__price { font-size: 0.95rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1rem; }
-.product-card-item__btn {
-  margin-top: auto;
-  background-color: #a22938;
-  color: #ffffff;
-  text-align: center;
-  padding: 0.65rem;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: 600;
-  font-size: 0.85rem;
-}
-
-/* Reglas Móvil: 2 Tarjetas por fila y ocultar botón "See Product" */
-@media (max-width: 767px) {
-  .collection-products__grid {
-    grid-template-columns: repeat(2, 1fr) !important;
-    gap: 0.85rem !important;
-  }
-  .product-card-item { padding: 0.65rem !important; }
-  .product-card-item__btn { display: none !important; }
-}
-</style>
+</section>
 
 {% schema %}
 {
   "name": "Collection Product Grid",
-  "settings": [],
-  "presets": [{ "name": "Collection Product Grid" }]
+  "tag": "section",
+  "class": "section-collection-products",
+  "settings": [
+    {
+      "type": "text",
+      "id": "back_text",
+      "label": "Back Button Text",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "btn_primary_text",
+      "label": "Primary Button Label",
+      "default": "En savoir plus"
+    },
+    {
+      "type": "text",
+      "id": "btn_secondary_text",
+      "label": "Secondary Link Label",
+      "default": "Acheter >"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Collection Product Grid"
+    }
+  ]
 }
 {% endschema %}
