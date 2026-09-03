@@ -634,18 +634,22 @@
     "image_slider": {
       "type": "image-slider",
       "blocks": {
+        "slide_fLCpXz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1773420833750.webp"
+          }
+        },
         "s_1": {
           "type": "slide",
-          "settings": {}
-        },
-        "s_2": {
-          "type": "slide",
-          "settings": {}
+          "settings": {
+            "image": "shopify://shop_images/Natura_Spa-luxury-spa-interior-ergonomic-treatment-beds-wellness-design.webp"
+          }
         }
       },
       "block_order": [
-        "s_1",
-        "s_2"
+        "slide_fLCpXz",
+        "s_1"
       ],
       "settings": {}
     },
