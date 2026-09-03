@@ -60,7 +60,7 @@
             "button_label": "Shop Now",
             "button_link": "",
             "subheading_color": "#ab273b",
-            "heading_color": "#5B5959",
+            "heading_color": "#5b5959",
             "text_color": "#f5f5f7",
             "btn_bg_color": "#ab273b",
             "btn_text_color": "#ffffff"
@@ -88,6 +88,7 @@
         "category_item_rWVwFT": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-hydro-comfort-hydraulic-air-lift-facial-massage-depilation-table-sku-21100.webp",
             "title": "Mechanical",
             "link": ""
           }
@@ -95,6 +96,7 @@
         "category_item_ebxfGg": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
             "title": "Hydraulic",
             "link": ""
           }
@@ -102,6 +104,7 @@
         "category_item_tME4fF": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-beauty-bohemia-ei-23403-white-professional_1080x1080_c09f39e6-55da-4f2c-93b0-e2dd347d7de7.webp",
             "title": "Portable",
             "link": ""
           }
@@ -109,6 +112,7 @@
         "category_item_dpjh46": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/electric-clinical-treatment-chair-professional-spa-massage-table-white-Ei-502.webp",
             "title": "Electric",
             "link": ""
           }
@@ -116,6 +120,7 @@
         "category_item_JVrMPE": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
             "title": "Facial Units",
             "link": ""
           }
@@ -123,6 +128,7 @@
         "category_item_B9RXVp": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-deluxe-column-11906-professional-facial-workstation-8-in-1.webp",
             "title": "Columns",
             "link": ""
           }
@@ -130,6 +136,7 @@
         "category_item_ACVzqh": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-31300_ergonomic-air-lift-stool-white.webp",
             "title": "Stools",
             "link": ""
           }
@@ -137,6 +144,7 @@
         "category_item_L88cDG": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-63603-circus-magnifier-led-articulated-lamp.webp",
             "title": "Mag-Lamps",
             "link": ""
           }
@@ -144,6 +152,7 @@
         "category_item_FNyhJK": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-tm3-professional-service-table.webp",
             "title": "Trolleys",
             "link": ""
           }
@@ -151,6 +160,7 @@
         "category_item_Nk8MQP": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/ei-111-equipro-classic-facial-steamer-professional-spa-equipment.webp",
             "title": "Streamers",
             "link": ""
           }
@@ -158,6 +168,7 @@
         "category_item_j9NUhU": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipros-duo-pil-precision-digital-wax-warmer_41202.webp",
             "title": "Wax-Heaters",
             "link": ""
           }
@@ -165,6 +176,7 @@
         "category_item_wHPEpL": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizing-cabinet-professional-salon-hygiene-equipment-white-finish-61102.webp",
             "title": "Towel Warmers",
             "link": ""
           }
@@ -172,14 +184,8 @@
         "category_item_qhy7DG": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/equipro-61402-visiderm-professional-skin-care-device.webp",
             "title": "Skin Analyzers",
-            "link": ""
-          }
-        },
-        "category_item_YnrNqi": {
-          "type": "category_item",
-          "settings": {
-            "title": "Category",
             "link": ""
           }
         }
@@ -197,8 +203,7 @@
         "category_item_Nk8MQP",
         "category_item_j9NUhU",
         "category_item_wHPEpL",
-        "category_item_qhy7DG",
-        "category_item_YnrNqi"
+        "category_item_qhy7DG"
       ],
       "name": "Shop By Cat V2",
       "settings": {
