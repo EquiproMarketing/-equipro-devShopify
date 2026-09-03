@@ -92,3 +92,65 @@
   .shop-by-cat-v2__link:hover .shop-by-cat-v2__title {
     color: #06c; /* Azul enlace estilo Apple */
   }
+
+  /* Drag Container Wrapper */
+.shop-by-cat-v2__slider-wrapper {
+  position: relative;
+}
+
+/* Red fade mask on the right edge to hint more content */
+.shop-by-cat-v2__slider-wrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 50px;
+  height: 100%;
+  background: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(255, 255, 255, 0.9));
+  pointer-events: none;
+}
+
+/* Scrollable Container */
+.shop-by-cat-v2__slider {
+  display: flex;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  cursor: grab;
+  user-select: none;
+  padding-bottom: 12px;
+  -webkit-overflow-scrolling: touch;
+}
+
+.shop-by-cat-v2__slider.is-dragging {
+  cursor: grabbing;
+  scroll-behavior: auto;
+}
+
+/* List Layout */
+.shop-by-cat-v2__list {
+  display: flex;
+  gap: 20px;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+/* Item Sizing: Shows partially clipped item at the end */
+.shop-by-cat-v2__item {
+  flex: 0 0 140px; /* Fixed width per category card */
+}
+
+/* Custom Scrollbar */
+.shop-by-cat-v2__slider::-webkit-scrollbar {
+  height: 4px;
+}
+
+.shop-by-cat-v2__slider::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.shop-by-cat-v2__slider::-webkit-scrollbar-thumb {
+  background: #a22938;
+  border-radius: 4px;
+}

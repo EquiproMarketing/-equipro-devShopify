@@ -6,33 +6,87 @@
       <h2 class="shop-by-cat-v2__heading">{{ section.settings.title | escape }}</h2>
     {%- endif -%}
 
-    <div class="shop-by-cat-v2__slider">
-      <ul class="shop-by-cat-v2__list" role="list">
-        {%- for block in section.blocks -%}
-          <li class="shop-by-cat-v2__item" {{ block.shopify_attributes }}>
-            <a href="{{ block.settings.link | default: '#' }}" class="shop-by-cat-v2__link">
-              <div class="shop-by-cat-v2__image-wrapper">
-                {%- if block.settings.image != blank -%}
-                  <img
-                    src="{{ block.settings.image | image_url: width: 200 }}"
-                    alt="{{ block.settings.title | escape }}"
-                    loading="lazy"
-                    width="100"
-                    height="100"
-                    class="shop-by-cat-v2__image"
-                  >
-                {%- else -%}
-                  {{ 'product-1' | placeholder_svg_tag: 'shop-by-cat-v2__placeholder' }}
-                {%- endif -%}
-              </div>
-              <span class="shop-by-cat-v2__title">{{ block.settings.title }}</span>
-            </a>
-          </li>
-        {%- endfor -%}
-      </ul>
+    <div class="shop-by-cat-v2__slider-wrapper">
+      <div class="shop-by-cat-v2__slider" id="CategorySlider-{{ section.id }}">
+        <ul class="shop-by-cat-v2__list" role="list">
+          {%- for block in section.blocks -%}
+            <li class="shop-by-cat-v2__item" {{ block.shopify_attributes }}>
+              <a href="{{ block.settings.link | default: '#' }}" class="shop-by-cat-v2__link">
+                <div class="shop-by-cat-v2__image-wrapper">
+                  {%- if block.settings.image != blank -%}
+                    <img
+                      src="{{ block.settings.image | image_url: width: 200 }}"
+                      alt="{{ block.settings.title | escape }}"
+                      loading="lazy"
+                      width="100"
+                      height="100"
+                      class="shop-by-cat-v2__image"
+                    >
+                  {%- else -%}
+                    {{ 'product-1' | placeholder_svg_tag: 'shop-by-cat-v2__placeholder' }}
+                  {%- endif -%}
+                </div>
+                <span class="shop-by-cat-v2__title">{{ block.settings.title }}</span>
+              </a>
+            </li>
+          {%- endfor -%}
+        </ul>
+      </div>
     </div>
   </div>
 </section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const slider = document.getElementById('CategorySlider-{{ section.id }}');
+    if (!slider) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+    let isDragging = false;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      isDragging = false;
+      slider.classList.add('is-dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 1.5; // Drag speed multiplier
+      
+      if (Math.abs(walk) > 5) {
+        isDragging = true;
+      }
+      
+      slider.scrollLeft = scrollLeft - walk;
+    });
+
+    // Prevent link trigger when user drags
+    slider.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        if (isDragging) {
+          e.preventDefault();
+        }
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
