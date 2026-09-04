@@ -1,25 +1,28 @@
 {{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="subcategories-wrapper page-width" id="SubcategoriesGrid-{{ section.id }}">
-  <!-- Back Button -->
-  <div class="subcategories__back">
-    <a href="javascript:history.back()" class="back-link">
-      <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-      </svg>
-      <span>{{ section.settings.back_text | default: "Back" }}</span>
-    </a>
+  <!-- Top Bar: Back Button Left + Centered Bold Title -->
+  <div class="subcategories__top-bar">
+    <div class="subcategories__back">
+      <a href="javascript:history.back()" class="back-link">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>{{ section.settings.back_text | default: "Back" }}</span>
+      </a>
+    </div>
+
+    <div class="subcategories__header-centered">
+      <h1 class="subcategories__title">
+        {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
+      </h1>
+    </div>
+
+    <!-- Empty Spacer Balance for Perfect Center Alignment -->
+    <div class="subcategories__top-bar-spacer"></div>
   </div>
 
   <div class="subcategories__container">
-    {% if section.settings.show_header %}
-      <div class="subcategories__header">
-        <h1 class="subcategories__title">
-          {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
-        </h1>
-      </div>
-    {% endif %}
-
     <!-- Bento Grid (3 Columns) -->
     <div class="subcategories__grid">
       {% if section.blocks.size > 0 %}
@@ -30,7 +33,7 @@
             style="background-color: {{ block.settings.bg_color | default: '#e8e8ed' }};"
             {{ block.shopify_attributes }}
           >
-            <!-- Title Top Centered -->
+            <!-- Title Top Centered Inside Card -->
             <div class="bento-tile__header">
               <h2 class="bento-tile__title">{{ block.settings.title }}</h2>
             </div>
@@ -85,12 +88,6 @@
       "id": "back_text",
       "label": "Back Link Text",
       "default": "Back"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_header",
-      "label": "Show Main Section Header",
-      "default": false
     },
     {
       "type": "text",
