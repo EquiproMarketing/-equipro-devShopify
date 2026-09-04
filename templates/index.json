@@ -1,3 +1,12 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "hero_banner": {
@@ -14,7 +23,7 @@
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
             "button_link": "",
-            "subheading_color": "#FFFFFF",
+            "subheading_color": "#ffffff",
             "heading_color": "#ffffff",
             "text_color": "#f5f5f7",
             "btn_bg_color": "#ab273b",
@@ -32,9 +41,9 @@
             "text": "Quiet, versatile, and built to last.",
             "button_label": "Shop Now",
             "button_link": "",
-            "subheading_color": "#FFFFFF",
+            "subheading_color": "#ffffff",
             "heading_color": "#ffffff",
-            "text_color": "#FFFFFF",
+            "text_color": "#ffffff",
             "btn_bg_color": "#ab273b",
             "btn_text_color": "#ffffff"
           }
@@ -51,7 +60,7 @@
             "button_label": "Shop Now",
             "button_link": "",
             "subheading_color": "#ab273b",
-            "heading_color": "#972E42",
+            "heading_color": "#972e42",
             "text_color": "#f5f5f7",
             "btn_bg_color": "#ab273b",
             "btn_text_color": "#ffffff"
@@ -647,7 +656,90 @@
       }
     },
     "pre_footer_hub": {
-      "type": "pre-footer-hub"
+      "type": "pre-footer-hub",
+      "blocks": {
+        "staggered_card_UJTMdb": {
+          "type": "staggered_card",
+          "settings": {
+            "image_fit": "cover",
+            "tag": "Support",
+            "tag_color": "#a22938",
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "color_list": "#ffffff, #191919, #2d1e3e",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_KALUrn": {
+          "type": "staggered_card",
+          "settings": {
+            "image_fit": "cover",
+            "tag": "Support",
+            "tag_color": "#a22938",
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "color_list": "#ffffff, #191919, #2d1e3e",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_Vj7nQV": {
+          "type": "staggered_card",
+          "settings": {
+            "image_fit": "cover",
+            "tag": "Support",
+            "tag_color": "#a22938",
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "color_list": "#ffffff, #191919, #2d1e3e",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_xVJCmd": {
+          "type": "staggered_card",
+          "settings": {
+            "image_fit": "cover",
+            "tag": "Support",
+            "tag_color": "#a22938",
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "color_list": "#ffffff, #191919, #2d1e3e",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        }
+      },
+      "block_order": [
+        "staggered_card_UJTMdb",
+        "staggered_card_KALUrn",
+        "staggered_card_Vj7nQV",
+        "staggered_card_xVJCmd"
+      ],
+      "settings": {
+        "main_title": "Customization & Support Hub"
+      }
     },
     "custom_spa_pack_builder_BDtr9H": {
       "type": "custom-spa-pack-builder",
