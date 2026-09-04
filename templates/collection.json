@@ -23,7 +23,7 @@
           "type": "subcategory",
           "settings": {
             "title": "Electric",
-            "link": "",
+            "link": "shopify://collections/electric",
             "bg_color": "#e8e8ed"
           }
         },
@@ -31,7 +31,7 @@
           "type": "subcategory",
           "settings": {
             "title": "Hydraulic / Mechanical",
-            "link": "",
+            "link": "shopify://collections/hydraulic-mechanical",
             "bg_color": "#e8e8ed"
           }
         },
@@ -39,7 +39,7 @@
           "type": "subcategory",
           "settings": {
             "title": "Portable",
-            "link": "",
+            "link": "shopify://collections/portable",
             "bg_color": "#e8e8ed"
           }
         }
