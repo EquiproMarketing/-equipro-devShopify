@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PRE-FOOTER HUB STAGGERED (PORSCHE STYLE MASONRY)
+   PRE-FOOTER HUB STAGGERED (4:5 VERTICAL ASPECT RATIO)
    ========================================================================== */
 
    .pre-footer-hub {
@@ -23,10 +23,12 @@
     align-items: start;
   }
   
-  /* PORSCHE CARD STYLING */
+  /* PORSCHE CARD STYLING WITH 4:5 ASPECT RATIO */
   .porsche-card {
     position: relative;
-    border-radius: 24px;
+    aspect-ratio: 4 / 5; /* 4:5 Vertical proportions */
+    width: 100%;
+    border-radius: 28px;
     overflow: hidden;
     background-color: var(--porsche-bg, #111111);
     color: var(--porsche-text-color, #ffffff);
@@ -39,24 +41,11 @@
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
   }
   
-  /* STAGGERED OFFSET (DESCALADO SUTIL COLUMNA DERECHA) */
+  /* STAGGERED OFFSET (COLUMNA DERECHA) */
   @media (min-width: 768px) {
     .porsche-card--offset {
-      margin-top: 48px; /* Offset vertical sutil */
+      margin-top: 48px;
     }
-  }
-  
-  /* HEIGHT / ASPECT RATIOS */
-  .porsche-card--tall {
-    min-height: 520px;
-  }
-  
-  .porsche-card--portrait {
-    min-height: 460px;
-  }
-  
-  .porsche-card--compact {
-    min-height: 380px;
   }
   
   .porsche-card:hover {
@@ -66,7 +55,7 @@
   
   @media (min-width: 768px) {
     .porsche-card--offset:hover {
-      transform: translateY(42px); /* Mantiene el offset + hover */
+      transform: translateY(42px);
     }
   }
   
@@ -100,21 +89,21 @@
     transform: scale(1.04);
   }
   
-  /* PORSCHE DARK GRADIENT OVERLAY FOR READABILITY */
+  /* GRADIENT OVERLAY FOR TEXT READABILITY */
   .porsche-card__gradient {
     position: absolute;
     inset: 0;
     background: linear-gradient(
       to top,
       rgba(0, 0, 0, 0.88) 0%,
-      rgba(0, 0, 0, 0.5) 45%,
-      rgba(0, 0, 0, 0.1) 100%
+      rgba(0, 0, 0, 0.45) 50%,
+      rgba(0, 0, 0, 0.08) 100%
     );
     z-index: 2;
     pointer-events: none;
   }
   
-  /* CENTERED FEATURED PRODUCT IMAGE (E.G. VIOLET / PRODUCT HIGHLIGHT) */
+  /* CENTERED FEATURED PRODUCT IMAGE */
   .porsche-card__product-feature {
     position: absolute;
     top: 15%;
@@ -181,7 +170,7 @@
     box-shadow: 0 2px 6px rgba(0,0,0,0.25);
   }
   
-  /* PORSCHE PILL BUTTONS */
+  /* PILL BUTTONS */
   .porsche-card__actions {
     display: flex;
     align-items: center;
@@ -202,7 +191,7 @@
     text-decoration: none;
     font-weight: 500;
     font-size: 0.82rem;
-    transition: all 0.25 ease;
+    transition: all 0.25s ease;
   }
   
   .porsche-btn:hover {
@@ -240,7 +229,7 @@
     }
   
     .porsche-card {
-      min-height: 380px;
+      aspect-ratio: 4 / 5;
       padding: 1.75rem 1.25rem;
       border-radius: 20px;
     }

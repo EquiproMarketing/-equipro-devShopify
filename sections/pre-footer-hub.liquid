@@ -7,15 +7,14 @@
     </div>
   {% endif %}
 
-  <!-- Staggered Offset Grid (Masonry 2-Column Style) -->
+  <!-- Staggered Offset Grid (Masonry 2-Column Style, 4:5 Aspect Ratio) -->
   <div class="pre-footer-hub__grid">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {% assign is_even = forloop.index | modulo: 2 %}
-        {% assign card_aspect = block.settings.aspect_ratio | default: "portrait" %}
 
         <div 
-          class="porsche-card porsche-card--{{ card_aspect }} {% if is_even == 0 %}porsche-card--offset{% endif %} animate-on-scroll" 
+          class="porsche-card {% if is_even == 0 %}porsche-card--offset{% endif %} animate-on-scroll" 
           style="
             --porsche-bg: {{ block.settings.bg_color | default: '#111111' }};
             --porsche-text-color: {{ block.settings.text_color | default: '#ffffff' }};
@@ -31,13 +30,13 @@
                 class="porsche-card__img porsche-card__img--{{ block.settings.image_fit | default: 'cover' }}" 
                 loading="lazy" 
                 width="600" 
-                height="800"
+                height="750"
               >
             {% endif %}
             <div class="porsche-card__gradient"></div>
           </div>
 
-          <!-- Product Feature Highlight (e.g., Violet / Product Centered inside Solid Cards) -->
+          <!-- Product Feature Highlight -->
           {% if block.settings.featured_product_image != blank %}
             <div class="porsche-card__product-feature">
               <img 
@@ -67,7 +66,7 @@
               <p class="porsche-card__text">{{ block.settings.text }}</p>
             {% endif %}
 
-            <!-- Color Swatches Row (Optional) -->
+            <!-- Color Swatches Row -->
             {% if block.settings.color_list != blank %}
               {% assign colors = block.settings.color_list | split: "," %}
               <div class="porsche-card__swatches">
@@ -158,18 +157,7 @@
         {
           "type": "image_picker",
           "id": "featured_product_image",
-          "label": "Centered Product Image (e.g. Bed or Car image)"
-        },
-        {
-          "type": "select",
-          "id": "aspect_ratio",
-          "label": "Card Height / Aspect",
-          "options": [
-            { "value": "tall", "label": "Tall (Más alta)" },
-            { "value": "portrait", "label": "Standard Portrait" },
-            { "value": "compact", "label": "Compact" }
-          ],
-          "default": "portrait"
+          "label": "Centered Product Image"
         },
         {
           "type": "select",
