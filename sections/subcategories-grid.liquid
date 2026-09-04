@@ -1,7 +1,6 @@
 {{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
 
-<div class="subcategories-wrapper page-width" id="SubcategoriesGrid-{{ section.id }}">
-  <!-- Top Bar: Back Button Left + Centered Bold Title -->
+<div class="subcategories page-width" id="SubcategoriesGrid-{{ section.id }}">
   <div class="subcategories__top-bar">
     <div class="subcategories__back">
       <a href="javascript:history.back()" class="back-link">
@@ -12,85 +11,79 @@
       </a>
     </div>
 
-    <div class="subcategories__header-centered">
+    <div class="subcategories__header">
       <h1 class="subcategories__title">
         {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
       </h1>
     </div>
 
-    <div class="subcategories__top-bar-spacer"></div>
+    <div class="subcategories__spacer"></div>
   </div>
 
-  <div class="subcategories__container">
-    <!-- Bento Grid (3 Columns) -->
-    <div class="subcategories__grid">
-      {% if section.blocks.size > 0 %}
-        {% for block in section.blocks %}
-          {% assign img_fit = block.settings.image_fit | default: "cover" %}
-          {% assign img_size = block.settings.image_size | default: 100 %}
-          {% assign title_size = block.settings.title_font_size | default: 28 %}
-          {% assign title_color = block.settings.title_color | default: "#000000" %}
-          {% assign shadow_color = block.settings.shadow_color | default: "rgba(0,0,0,0.3)" %}
-          {% assign shadow_blur = block.settings.shadow_blur | default: 8 %}
-          {% assign shadow_offset_y = block.settings.shadow_offset_y | default: 4 %}
+  <div class="subcategories__grid">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign img_fit = block.settings.image_fit | default: "cover" %}
+        {% assign img_size = block.settings.image_size | default: 100 %}
+        {% assign title_size = block.settings.title_font_size | default: 28 %}
+        {% assign title_color = block.settings.title_color | default: "#000000" %}
+        {% assign shadow_color = block.settings.shadow_color | default: "rgba(0,0,0,0.3)" %}
+        {% assign shadow_blur = block.settings.shadow_blur | default: 8 %}
+        {% assign shadow_y = block.settings.shadow_offset_y | default: 4 %}
 
-          <a 
-            href="{{ block.settings.link | default: '#' }}" 
-            class="bento-tile bento-tile--fit-{{ img_fit }}" 
-            style="
-              background-color: {{ block.settings.bg_color | default: '#e8e8ed' }};
-              --bento-title-size: {{ title_size }}px;
-              --bento-title-color: {{ title_color }};
-              --bento-shadow-color: {{ shadow_color }};
-              --bento-shadow-blur: {{ shadow_blur }}px;
-              --bento-shadow-y: {{ shadow_offset_y }}px;
-              --bento-img-size: {{ img_size }}%;
-            "
-            {{ block.shopify_attributes }}
-          >
-            <!-- Title Top Centered -->
-            <div class="bento-tile__header">
-              <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}has-custom-shadow{% endif %}">
-                {{ block.settings.title }}
-              </h2>
-            </div>
+        <a 
+          href="{{ block.settings.link | default: '#' }}" 
+          class="bento-tile bento-tile--fit-{{ img_fit }}" 
+          style="
+            --tile-bg: {{ block.settings.bg_color | default: '#e8e8ed' }};
+            --tile-title-size: {{ title_size }}px;
+            --tile-title-color: {{ title_color }};
+            --tile-shadow-color: {{ shadow_color }};
+            --tile-shadow-blur: {{ shadow_blur }}px;
+            --tile-shadow-y: {{ shadow_y }}px;
+            --tile-img-size: {{ img_size }}%;
+          "
+          {{ block.shopify_attributes }}
+        >
+          <div class="bento-tile__header">
+            <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}bento-tile__title--shadow{% endif %}">
+              {{ block.settings.title }}
+            </h2>
+          </div>
 
-            <!-- Image Container -->
-            <div class="bento-tile__image-wrapper">
-              {% if block.settings.image != blank %}
-                <img 
-                  src="{{ block.settings.image | image_url: width: 1000 }}" 
-                  alt="{{ block.settings.title | escape }}" 
-                  class="bento-tile__img" 
-                  loading="lazy" 
-                  width="500" 
-                  height="500"
-                >
-              {% else %}
-                <div class="bento-tile__placeholder">
-                  {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
-                </div>
-              {% endif %}
-            </div>
-          </a>
-        {% endfor %}
-      {% else %}
-        {% comment %} FALLBACK BENTO TILES {% endcomment %}
-        {% assign default_titles = "Electric, Hydraulic / Mechanical, Portable" | split: "," %}
-        {% for title in default_titles %}
-          <a href="#" class="bento-tile">
-            <div class="bento-tile__header">
-              <h2 class="bento-tile__title">{{ title | strip }}</h2>
-            </div>
-            <div class="bento-tile__image-wrapper">
+          <div class="bento-tile__media">
+            {% if block.settings.image != blank %}
+              <img 
+                src="{{ block.settings.image | image_url: width: 1000 }}" 
+                alt="{{ block.settings.title | escape }}" 
+                class="bento-tile__image" 
+                loading="lazy" 
+                width="500" 
+                height="500"
+              >
+            {% else %}
               <div class="bento-tile__placeholder">
-                {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
+                {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg' }}
               </div>
+            {% endif %}
+          </div>
+        </a>
+      {% endfor %}
+    {% else %}
+      {% assign default_titles = "Electric, Hydraulic / Mechanical, Portable" | split: "," %}
+      {% for title in default_titles %}
+        <a href="#" class="bento-tile">
+          <div class="bento-tile__header">
+            <h2 class="bento-tile__title">{{ title | strip }}</h2>
+          </div>
+          <div class="bento-tile__media">
+            <div class="bento-tile__placeholder">
+              {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg' }}
             </div>
-          </a>
-        {% endfor %}
-      {% endif %}
-    </div>
+          </div>
+        </a>
+      {% endfor %}
+    {% endif %}
   </div>
 </div>
 
@@ -136,7 +129,7 @@
         },
         {
           "type": "header",
-          "content": "Tile Styling & Background"
+          "content": "Tile Background"
         },
         {
           "type": "color",
@@ -202,7 +195,7 @@
         },
         {
           "type": "header",
-          "content": "Image Customization"
+          "content": "Image Controls"
         },
         {
           "type": "select",
@@ -231,18 +224,9 @@
     {
       "name": "Subcategories Bento Grid",
       "blocks": [
-        {
-          "type": "subcategory",
-          "settings": { "title": "Electric" }
-        },
-        {
-          "type": "subcategory",
-          "settings": { "title": "Hydraulic / Mechanical" }
-        },
-        {
-          "type": "subcategory",
-          "settings": { "title": "Portable" }
-        }
+        { "type": "subcategory", "settings": { "title": "Electric" } },
+        { "type": "subcategory", "settings": { "title": "Hydraulic / Mechanical" } },
+        { "type": "subcategory", "settings": { "title": "Portable" } }
       ]
     }
   ]
