@@ -1,6 +1,7 @@
 {{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="subcategories page-width" id="SubcategoriesGrid-{{ section.id }}">
+  <!-- Top Bar Alignment -->
   <div class="subcategories__top-bar">
     <div class="subcategories__back">
       <a href="javascript:history.back()" class="back-link">
@@ -20,6 +21,7 @@
     <div class="subcategories__spacer"></div>
   </div>
 
+  <!-- Grid Layout -->
   <div class="subcategories__grid">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
@@ -45,7 +47,7 @@
           "
           {{ block.shopify_attributes }}
         >
-          <div class="bento-tile__header">
+          <div class="bento-tile__header {% if block.settings.enable_text_overlay %}bento-tile__header--overlay{% endif %}">
             <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}bento-tile__title--shadow{% endif %}">
               {{ block.settings.title }}
             </h2>
@@ -129,7 +131,7 @@
         },
         {
           "type": "header",
-          "content": "Tile Background"
+          "content": "Tile Styling"
         },
         {
           "type": "color",
@@ -156,6 +158,13 @@
           "unit": "px",
           "label": "Title Font Size",
           "default": 28
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_text_overlay",
+          "label": "Enable Gradient Overlay Behind Text",
+          "default": false,
+          "info": "Adds subtle gradient for text contrast over bright images."
         },
         {
           "type": "header",
