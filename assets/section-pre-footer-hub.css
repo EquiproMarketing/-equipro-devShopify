@@ -1,0 +1,168 @@
+/* ==========================================================================
+   PRE-FOOTER HUB SECTION (SCROLL TRIGGERED BENTO)
+   ========================================================================== */
+
+   .pre-footer-hub {
+    padding-top: 3rem;
+    padding-bottom: 4rem;
+  }
+  
+  .pre-footer-hub__grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.75rem;
+  }
+  
+  /* Card Component */
+  .pre-footer-card {
+    background-color: #f5f5f7;
+    border-radius: 28px;
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+  
+  .pre-footer-card--accent {
+    background-color: #fafafc;
+  }
+  
+  .pre-footer-card--colors {
+    background-color: #f2f2f7;
+  }
+  
+  .pre-footer-card__tag {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    color: #a22938;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 0.5rem;
+  }
+  
+  .pre-footer-card__title {
+    font-size: 1.8rem;
+    font-weight: 800;
+    color: #1d1d1f;
+    margin: 0 0 0.75rem 0;
+    line-height: 1.25;
+  }
+  
+  .pre-footer-card__text {
+    font-size: 0.95rem;
+    color: #6e6e73;
+    margin: 0 0 1.5rem 0;
+    line-height: 1.5;
+  }
+  
+  /* Buttons and Links */
+  .pre-footer-card__actions {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-wrap: wrap;
+  }
+  
+  .hub-btn--primary {
+    background-color: #a22938;
+    color: #ffffff;
+    padding: 0.75rem 1.25rem;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease;
+  }
+  
+  .hub-btn--primary:hover {
+    background-color: #801f2b;
+  }
+  
+  .hub-btn--outline {
+    border: 1px solid #a22938;
+    color: #a22938;
+    padding: 0.75rem 1.25rem;
+    border-radius: 22px;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+  
+  .hub-btn--outline:hover {
+    background-color: #a22938;
+    color: #ffffff;
+  }
+  
+  .hub-btn--link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 0.95rem;
+  }
+  
+  .hub-btn--link:hover {
+    text-decoration: underline;
+  }
+  
+  /* Dynamic Color Swatches */
+  .pre-footer-swatches {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+  }
+  
+  .pre-footer-swatch {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: #ffffff;
+    padding: 6px 12px;
+    border-radius: 16px;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+  }
+  
+  .pre-footer-swatch__dot {
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 0, 0, 0.15);
+  }
+  
+  .pre-footer-swatch__label {
+    font-size: 0.82rem;
+    font-weight: 600;
+    color: #1d1d1f;
+  }
+  
+  /* Scroll Trigger Animations */
+  .animate-on-scroll {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: opacity 0.6s cubic-bezier(0.16, 1, 0.3, 1), transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  }
+  
+  .animate-on-scroll.is-visible {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  /* Responsive Rules */
+  @media (max-width: 767px) {
+    .pre-footer-hub__grid {
+      grid-template-columns: 1fr;
+      gap: 1.25rem;
+    }
+  
+    .pre-footer-card {
+      padding: 1.75rem;
+    }
+  
+    .pre-footer-card__title {
+      font-size: 1.4rem;
+    }
+  }

@@ -1,0 +1,197 @@
+{{ 'section-pre-footer-hub.css' | asset_url | stylesheet_tag }}
+
+<section class="pre-footer-hub page-width" id="PreFooterHub-{{ section.id }}">
+  <div class="pre-footer-hub__grid">
+    
+    {% comment %} BLOCK 1: SUPPORT & DOWNLOADS HUB {% endcomment %}
+    <div class="pre-footer-card pre-footer-card--accent animate-on-scroll">
+      <div class="pre-footer-card__content">
+        <span class="pre-footer-card__tag">{{ section.settings.support_tag | default: "Support & Docs" }}</span>
+        <h2 class="pre-footer-card__title">{{ section.settings.support_title | default: "Need Technical Guides & Support?" }}</h2>
+        <p class="pre-footer-card__text">{{ section.settings.support_text | default: "Access product manuals, PDF spec sheets, or reach out directly to our support team." }}</p>
+        
+        <div class="pre-footer-card__actions">
+          {% if section.settings.support_link != blank %}
+            <a href="{{ section.settings.support_link }}" class="hub-btn hub-btn--primary">
+              {{ section.settings.support_btn_text | default: "Get Support" }}
+            </a>
+          {% endif %}
+
+          {% if section.settings.pdf_link != blank %}
+            <a href="{{ section.settings.pdf_link }}" class="hub-btn hub-btn--outline" target="_blank">
+              {{ section.settings.pdf_btn_text | default: "Download PDFs ➔" }}
+            </a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+
+    {% comment %} BLOCK 2: DYNAMIC NEW COLORS SHOWCASE {% endcomment %}
+    <div class="pre-footer-card pre-footer-card--colors animate-on-scroll">
+      <div class="pre-footer-card__content">
+        <span class="pre-footer-card__tag">{{ section.settings.colors_tag | default: "Customization" }}</span>
+        <h2 class="pre-footer-card__title">{{ section.settings.colors_title | default: "New Colors for Beds & Stools" }}</h2>
+        <p class="pre-footer-card__text">{{ section.settings.colors_text | default: "Explore our latest premium upholstery palette designed for modern treatment spaces." }}</p>
+
+        {% comment %} DYNAMIC COLOR SWATCHES LIST {% endcomment %}
+        <div class="pre-footer-swatches">
+          {% for block in section.blocks %}
+            {% if block.type == 'color_swatch' %}
+              <div class="pre-footer-swatch" {{ block.shopify_attributes }}>
+                <span class="pre-footer-swatch__dot" style="background-color: {{ block.settings.hex_code }};"></span>
+                <span class="pre-footer-swatch__label">{{ block.settings.color_name }}</span>
+              </div>
+            {% endif %}
+          {% endfor %}
+        </div>
+
+        {% if section.settings.colors_link != blank %}
+          <a href="{{ section.settings.colors_link }}" class="hub-btn hub-btn--link">
+            {{ section.settings.colors_btn_text | default: "See All Customization Options >" }}
+          </a>
+        {% endif %}
+      </div>
+    </div>
+
+  </div>
+</section>
+
+{% comment %} SCROLL INTERSECTION OBSERVER SCRIPT {% endcomment %}
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const observerOptions = {
+      threshold: 0.15,
+      rootMargin: "0px 0px -50px 0px"
+    };
+
+    const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, observerOptions);
+
+    document.querySelectorAll('#PreFooterHub-{{ section.id }} .animate-on-scroll').forEach(el => {
+      observer.observe(el);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Pre-Footer Hub",
+  "tag": "section",
+  "class": "section-pre-footer-hub",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Support & Docs Card"
+    },
+    {
+      "type": "text",
+      "id": "support_tag",
+      "label": "Card Tag",
+      "default": "Support & Docs"
+    },
+    {
+      "type": "text",
+      "id": "support_title",
+      "label": "Title",
+      "default": "Need Technical Guides & Support?"
+    },
+    {
+      "type": "textarea",
+      "id": "support_text",
+      "label": "Description",
+      "default": "Access product manuals, PDF spec sheets, or reach out directly to our support team."
+    },
+    {
+      "type": "text",
+      "id": "support_btn_text",
+      "label": "Support Button Label",
+      "default": "Get Support"
+    },
+    {
+      "type": "url",
+      "id": "support_link",
+      "label": "Support Page URL"
+    },
+    {
+      "type": "text",
+      "id": "pdf_btn_text",
+      "label": "PDF Button Label",
+      "default": "Download PDFs ➔"
+    },
+    {
+      "type": "url",
+      "id": "pdf_link",
+      "label": "PDF / Specs URL"
+    },
+    {
+      "type": "header",
+      "content": "Customization & Colors Card"
+    },
+    {
+      "type": "text",
+      "id": "colors_tag",
+      "label": "Card Tag",
+      "default": "Customization"
+    },
+    {
+      "type": "text",
+      "id": "colors_title",
+      "label": "Title",
+      "default": "New Colors for Beds & Stools"
+    },
+    {
+      "type": "textarea",
+      "id": "colors_text",
+      "label": "Description",
+      "default": "Explore our latest premium upholstery palette designed for modern treatment spaces."
+    },
+    {
+      "type": "text",
+      "id": "colors_btn_text",
+      "label": "Link Text",
+      "default": "See All Customization Options >"
+    },
+    {
+      "type": "url",
+      "id": "colors_link",
+      "label": "Customization Page URL"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "color_swatch",
+      "name": "Color Swatch",
+      "settings": [
+        {
+          "type": "text",
+          "id": "color_name",
+          "label": "Color Name",
+          "default": "Alpine White"
+        },
+        {
+          "type": "color",
+          "id": "hex_code",
+          "label": "HEX Color",
+          "default": "#f5f5f7"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Pre-Footer Hub",
+      "blocks": [
+        { "type": "color_swatch", "settings": { "color_name": "White", "hex_code": "#ffffff" } },
+        { "type": "color_swatch", "settings": { "color_name": "Charcoal", "hex_code": "#2c2c2e" } },
+        { "type": "color_swatch", "settings": { "color_name": "Taupe", "hex_code": "#8b8579" } }
+      ]
+    }
+  ]
+}
+{% endschema %}
