@@ -55,10 +55,30 @@
       "settings": {
         "title": ""
       }
+    },
+    "subcategories_grid_YDaDfr": {
+      "type": "subcategories-grid",
+      "blocks": {
+        "subcategory_XNDR7a": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_XNDR7a"
+      ],
+      "name": "Subcategories Grid",
+      "settings": {
+        "title": "Treatment Tables"
+      }
     }
   },
   "order": [
     "banner",
-    "subcollections_grid"
+    "subcollections_grid",
+    "subcategories_grid_YDaDfr"
   ]
 }
