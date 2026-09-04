@@ -10,75 +10,47 @@
 {
   "wrapper": "div",
   "sections": {
-    "banner": {
-      "type": "collection-banner",
-      "settings": {
-        "custom_title": "Treatment Tables",
-        "custom_description": "<p>Ergonomically designed, high-performance treatment tables engineered for maximum client comfort, silent height transitions, and uncompromised clinical durability.</p>",
-        "fallback_description": "Ergonomically designed, high-performance treatment tables engineered for maximum client comfort, silent height transitions, and uncompromised clinical durability.",
-        "overlay_opacity": 40
-      }
-    },
-    "subcollections_grid": {
-      "type": "section-bento-grid-v2",
-      "blocks": {
-        "sub_4": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "shopify://collections/electric",
-            "title": "Electric"
-          }
-        },
-        "sub_5": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "shopify://collections/hydraulic-mechanical",
-            "title": "Hydraulic / Mechanical"
-          }
-        },
-        "sub_6": {
-          "type": "collection_item",
-          "settings": {
-            "collection": "",
-            "custom_link": "shopify://collections/portable",
-            "title": "Portable"
-          }
-        }
-      },
-      "block_order": [
-        "sub_4",
-        "sub_5",
-        "sub_6"
-      ],
-      "settings": {
-        "title": ""
-      }
-    },
     "subcategories_grid_YDaDfr": {
       "type": "subcategories-grid",
       "blocks": {
+        "subcategory_8gX69M": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed"
+          }
+        },
+        "subcategory_eFQJiK": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed"
+          }
+        },
         "subcategory_XNDR7a": {
           "type": "subcategory",
           "settings": {
             "title": "Electric",
-            "link": ""
+            "link": "",
+            "bg_color": "#e8e8ed"
           }
         }
       },
       "block_order": [
+        "subcategory_8gX69M",
+        "subcategory_eFQJiK",
         "subcategory_XNDR7a"
       ],
       "name": "Subcategories Grid",
       "settings": {
+        "back_text": "Back",
         "title": "Treatment Tables"
       }
     }
   },
   "order": [
-    "banner",
-    "subcollections_grid",
     "subcategories_grid_YDaDfr"
   ]
 }

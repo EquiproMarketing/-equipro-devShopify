@@ -16,33 +16,63 @@
         "hide_on_mobile": true
       }
     },
-    "banner": {
-      "type": "collection-banner",
+    "subcategories_grid_HniybM": {
+      "type": "subcategories-grid",
+      "blocks": {
+        "subcategory_rLkYyD": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "shopify://collections/electric",
+            "bg_color": "#e8e8ed"
+          }
+        },
+        "subcategory_me8aYk": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Hydraulic / Mechanical",
+            "link": "shopify://collections/hydraulic-mechanical",
+            "bg_color": "#e8e8ed"
+          }
+        },
+        "subcategory_QVcFrN": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Portable",
+            "link": "shopify://collections/portable",
+            "bg_color": "#e8e8ed"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_rLkYyD",
+        "subcategory_me8aYk",
+        "subcategory_QVcFrN"
+      ],
+      "name": "Subcategories Bento Grid",
       "settings": {
-        "custom_title": "",
-        "custom_description": "",
-        "fallback_description": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
-        "overlay_opacity": 40
+        "back_text": "Back",
+        "title": "Treatment Tables"
       }
-    },
-    "product_grid": {
-      "type": "main-collection-product-grid",
-      "settings": {}
     },
     "positive_impact": {
       "type": "positive-impact",
+      "disabled": true,
       "settings": {}
     },
     "why_category": {
       "type": "why-our-category",
+      "disabled": true,
       "settings": {}
     },
     "video": {
       "type": "category-video",
+      "disabled": true,
       "settings": {}
     },
     "faq": {
       "type": "category-faq",
+      "disabled": true,
       "settings": {
         "heading": "Your Questions, Answered",
         "subheading": "Find answers to frequently asked technical and equipment questions.",
@@ -68,8 +98,7 @@
   },
   "order": [
     "subnav",
-    "banner",
-    "product_grid",
+    "subcategories_grid_HniybM",
     "positive_impact",
     "why_category",
     "video",
