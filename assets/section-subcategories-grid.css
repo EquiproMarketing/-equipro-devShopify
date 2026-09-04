@@ -39,14 +39,14 @@
 
 .subcategories__title {
   font-size: 2.2rem;
-  font-weight: 800; /* Extra bold title */
+  font-weight: 800;
   color: #1d1d1f;
   margin: 0;
   letter-spacing: -0.02em;
 }
 
 .subcategories__top-bar-spacer {
-  width: 120px; /* Same width as back button to ensure absolute center */
+  width: 120px;
 }
 
 /* BENTO 3-COLUMN GRID */
@@ -61,7 +61,7 @@
   position: relative;
   background-color: #e8e8ed;
   border-radius: 28px;
-  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  padding: 2.5rem 0 0 0; /* Padding top for title, 0 padding on sides/bottom for full bleed image */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,40 +79,62 @@
   border-color: rgba(162, 41, 56, 0.2);
 }
 
+/* HEADER TOP CENTERED TITLE WITH CUSTOMIZABLE SIZE & SHADOW */
 .bento-tile__header {
   width: 100%;
   text-align: center;
-  z-index: 2;
+  padding: 0 1.5rem;
+  z-index: 5;
 }
 
 .bento-tile__title {
-  font-size: 1.8rem;
+  font-size: var(--bento-title-size, 28px);
   font-weight: 800;
-  color: #000000;
+  color: var(--bento-title-color, #000000);
   margin: 0;
-  line-height: 1.25;
+  line-height: 1.2;
   letter-spacing: -0.02em;
+  transition: color 0.2s ease;
 }
 
+.bento-tile__title.has-shadow {
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+}
+
+/* CENTERED / FULL BLEED PRODUCT IMAGE AREA */
 .bento-tile__image-wrapper {
   width: 100%;
   flex-grow: 1;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
   justify-content: center;
-  margin-top: 1.5rem;
+  margin-top: 1rem;
   position: relative;
+  overflow: hidden;
 }
 
 .bento-tile__img {
-  max-width: 85%;
-  max-height: 85%;
-  object-fit: contain;
+  width: var(--bento-img-size, 100%);
+  height: 100%;
+  display: block;
   transition: transform 0.35s ease;
 }
 
+/* COVER MODE (FULL CARD BLEED) */
+.bento-tile--fit-cover .bento-tile__img {
+  object-fit: cover;
+  object-position: center bottom;
+}
+
+/* CONTAIN MODE (FIT INSIDE CARD) */
+.bento-tile--fit-contain .bento-tile__img {
+  object-fit: contain;
+  object-position: center bottom;
+  max-height: 90%;
+}
+
 .bento-tile:hover .bento-tile__img {
-  transform: scale(1.06);
+  transform: scale(1.05);
 }
 
 .bento-tile__placeholder {
@@ -137,12 +159,12 @@
   }
 
   .bento-tile {
-    padding: 1.8rem 1rem 1.5rem 1rem;
+    padding-top: 1.8rem;
     border-radius: 22px;
   }
 
   .bento-tile__title {
-    font-size: 1.35rem;
+    font-size: calc(var(--bento-title-size, 28px) * 0.82);
   }
 
   .subcategories__title {
