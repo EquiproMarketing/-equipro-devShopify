@@ -1,5 +1,5 @@
 /* ==========================================================================
-   SUBCATEGORIES BENTO GRID SECTION
+   SUBCATEGORIES BENTO GRID SECTION (FULL BLEED NO-BAND LAYOUT)
    ========================================================================== */
 
    .subcategories {
@@ -7,8 +7,7 @@
     padding-bottom: 4rem;
   }
   
-  /* Header Top Bar Layout
-     ========================================================================== */
+  /* Header Top Bar Layout */
   .subcategories__top-bar {
     display: flex;
     align-items: center;
@@ -45,25 +44,22 @@
     letter-spacing: -0.02em;
   }
   
-  /* Bento Grid Layout
-     ========================================================================== */
+  /* Bento Grid Layout */
   .subcategories__grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 1.75rem;
   }
   
-  /* Bento Tile Card Component
-     ========================================================================== */
+  /* Bento Tile Card Component */
   .bento-tile {
     position: relative;
     background-color: var(--tile-bg, #e8e8ed);
     border-radius: 28px;
-    padding-top: 2.2rem;
+    padding: 0; /* Zero padding to prevent inner background bands */
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     text-decoration: none;
     aspect-ratio: 4 / 5;
     overflow: hidden;
@@ -77,46 +73,19 @@
     border-color: rgba(162, 41, 56, 0.2);
   }
   
-  /* Header Inside Card with Dynamic Opacity Background */
-  .bento-tile__header {
-    width: 100%;
-    text-align: center;
-    padding: 0.75rem 1.5rem;
-    z-index: 5;
-    background-color: rgb(from var(--tile-title-bg, #ffffff) r g b / var(--tile-title-bg-opacity, 0));
-    transition: background-color 0.2s ease;
-  }
-  
-  .bento-tile__title {
-    font-size: var(--tile-title-size, 28px);
-    font-weight: 800;
-    color: var(--tile-title-color, #000000);
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: -0.02em;
-    background: transparent;
-    transition: color 0.2s ease, text-shadow 0.2s ease;
-  }
-  
-  /* Custom Text Shadow */
-  .bento-tile__title--shadow {
-    text-shadow: 0px var(--tile-shadow-y, 4px) var(--tile-shadow-blur, 8px) var(--tile-shadow-color, rgba(0,0,0,0.3));
-  }
-  
-  /* Image Container */
+  /* Full Bleed Image Container (Absolute Fill) */
   .bento-tile__media {
+    position: absolute;
+    inset: 0;
     width: 100%;
-    flex-grow: 1;
-    display: flex;
-    align-items: flex-end;
-    justify-content: center;
-    margin-top: 1rem;
-    position: relative;
+    height: 100%;
+    z-index: 1;
     overflow: hidden;
+    background: transparent;
   }
   
   .bento-tile__image {
-    width: var(--tile-img-size, 100%);
+    width: 100%;
     height: 100%;
     display: block;
     transition: transform 0.35s ease;
@@ -124,13 +93,12 @@
   
   .bento-tile--fit-cover .bento-tile__image {
     object-fit: cover;
-    object-position: center bottom;
+    object-position: center;
   }
   
   .bento-tile--fit-contain .bento-tile__image {
     object-fit: contain;
     object-position: center bottom;
-    max-height: 90%;
   }
   
   .bento-tile:hover .bento-tile__image {
@@ -151,16 +119,45 @@
     opacity: 0.35;
   }
   
-  /* Media Queries (Responsive)
-     ========================================================================== */
+  /* Floating Title Overlay (Positioned On Top of Image) */
+  .bento-tile__header {
+    position: relative;
+    z-index: 10;
+    width: 100%;
+    text-align: center;
+    padding: 2.2rem 1.5rem 0 1.5rem;
+    background: transparent !important;
+    pointer-events: none;
+  }
+  
+  .bento-tile__title {
+    font-size: var(--tile-title-size, 28px);
+    font-weight: 800;
+    color: var(--tile-title-color, #000000);
+    margin: 0;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    background: transparent !important;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+  }
+  
+  /* Custom Text Shadow */
+  .bento-tile__title--shadow {
+    text-shadow: 0px var(--tile-shadow-y, 4px) var(--tile-shadow-blur, 8px) var(--tile-shadow-color, rgba(0,0,0,0.3));
+  }
+  
+  /* Responsive Rules */
   @media (max-width: 991px) {
     .subcategories__grid {
       grid-template-columns: repeat(3, 1fr);
       gap: 1.25rem;
     }
   
-    .bento-tile {
+    .bento-tile__header {
       padding-top: 1.8rem;
+    }
+  
+    .bento-tile {
       border-radius: 22px;
     }
   

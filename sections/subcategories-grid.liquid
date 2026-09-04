@@ -1,6 +1,7 @@
 {{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="subcategories page-width" id="SubcategoriesGrid-{{ section.id }}">
+  <!-- Top Bar Alignment -->
   <div class="subcategories__top-bar">
     <div class="subcategories__back">
       <a href="javascript:history.back()" class="back-link">
@@ -20,15 +21,13 @@
     <div class="subcategories__spacer"></div>
   </div>
 
+  <!-- Grid Layout -->
   <div class="subcategories__grid">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {% assign img_fit = block.settings.image_fit | default: "cover" %}
-        {% assign img_size = block.settings.image_size | default: 100 %}
         {% assign title_size = block.settings.title_font_size | default: 28 %}
         {% assign title_color = block.settings.title_color | default: "#000000" %}
-        {% assign title_bg = block.settings.title_bg_color | default: "#ffffff" %}
-        {% assign title_bg_opacity = block.settings.title_bg_opacity | default: 0 | divided_by: 100.0 %}
         {% assign shadow_color = block.settings.shadow_color | default: "rgba(0,0,0,0.3)" %}
         {% assign shadow_blur = block.settings.shadow_blur | default: 8 %}
         {% assign shadow_y = block.settings.shadow_offset_y | default: 4 %}
@@ -40,21 +39,13 @@
             --tile-bg: {{ block.settings.bg_color | default: '#e8e8ed' }};
             --tile-title-size: {{ title_size }}px;
             --tile-title-color: {{ title_color }};
-            --tile-title-bg: {{ title_bg }};
-            --tile-title-bg-opacity: {{ title_bg_opacity }};
             --tile-shadow-color: {{ shadow_color }};
             --tile-shadow-blur: {{ shadow_blur }}px;
             --tile-shadow-y: {{ shadow_y }}px;
-            --tile-img-size: {{ img_size }}%;
           "
           {{ block.shopify_attributes }}
         >
-          <div class="bento-tile__header">
-            <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}bento-tile__title--shadow{% endif %}">
-              {{ block.settings.title }}
-            </h2>
-          </div>
-
+          <!-- Absolute Full Card Image Background -->
           <div class="bento-tile__media">
             {% if block.settings.image != blank %}
               <img 
@@ -71,19 +62,26 @@
               </div>
             {% endif %}
           </div>
+
+          <!-- Floating Title Directly Over Image (Zero Background Band) -->
+          <div class="bento-tile__header">
+            <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}bento-tile__title--shadow{% endif %}">
+              {{ block.settings.title }}
+            </h2>
+          </div>
         </a>
       {% endfor %}
     {% else %}
       {% assign default_titles = "Electric, Hydraulic / Mechanical, Portable" | split: "," %}
       {% for title in default_titles %}
         <a href="#" class="bento-tile">
-          <div class="bento-tile__header">
-            <h2 class="bento-tile__title">{{ title | strip }}</h2>
-          </div>
           <div class="bento-tile__media">
             <div class="bento-tile__placeholder">
               {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg' }}
             </div>
+          </div>
+          <div class="bento-tile__header">
+            <h2 class="bento-tile__title">{{ title | strip }}</h2>
           </div>
         </a>
       {% endfor %}
@@ -134,7 +132,7 @@
         {
           "type": "color",
           "id": "bg_color",
-          "label": "Tile Background Color",
+          "label": "Tile Fallback Background",
           "default": "#e8e8ed"
         },
         {
@@ -152,23 +150,6 @@
           "unit": "px",
           "label": "Title Font Size",
           "default": 28
-        },
-        {
-          "type": "color",
-          "id": "title_bg_color",
-          "label": "Title Background Box Color",
-          "default": "#ffffff"
-        },
-        {
-          "type": "range",
-          "id": "title_bg_opacity",
-          "min": 0,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "label": "Title Background Box Opacity",
-          "default": 0,
-          "info": "Set to 0% for transparent background."
         },
         {
           "type": "checkbox",
@@ -211,16 +192,6 @@
             { "value": "contain", "label": "Fit Complete Image (Contain)" }
           ],
           "default": "cover"
-        },
-        {
-          "type": "range",
-          "id": "image_size",
-          "min": 50,
-          "max": 100,
-          "step": 5,
-          "unit": "%",
-          "label": "Image Scale / Width",
-          "default": 100
         }
       ]
     }
