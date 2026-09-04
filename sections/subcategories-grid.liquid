@@ -12,42 +12,60 @@
   </div>
 
   <div class="subcategories__container">
-    <!-- Header -->
-    <div class="subcategories__header">
-      <h1 class="subcategories__title">
-        {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
-      </h1>
-    </div>
+    {% if section.settings.show_header %}
+      <div class="subcategories__header">
+        <h1 class="subcategories__title">
+          {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
+        </h1>
+      </div>
+    {% endif %}
 
-    <!-- Modular Grid (3 Columns) -->
+    <!-- Bento Grid (3 Columns) -->
     <div class="subcategories__grid">
       {% if section.blocks.size > 0 %}
         {% for block in section.blocks %}
-          <a href="{{ block.settings.link | default: '#' }}" class="subcategory-tile" {{ block.shopify_attributes }}>
-            <div class="subcategory-tile__bg">
-              {% if block.settings.image != blank %}
-                <img src="{{ block.settings.image | image_url: width: 800 }}" alt="{{ block.settings.title | escape }}" class="subcategory-tile__img" loading="lazy" width="400" height="300">
-              {% else %}
-                <div class="subcategory-tile__placeholder"></div>
-              {% endif %}
-              <div class="subcategory-tile__overlay"></div>
+          <a 
+            href="{{ block.settings.link | default: '#' }}" 
+            class="bento-tile" 
+            style="background-color: {{ block.settings.bg_color | default: '#e8e8ed' }};"
+            {{ block.shopify_attributes }}
+          >
+            <!-- Title Top Centered -->
+            <div class="bento-tile__header">
+              <h2 class="bento-tile__title">{{ block.settings.title }}</h2>
             </div>
-            <div class="subcategory-tile__content">
-              <span class="subcategory-tile__name">{{ block.settings.title }}</span>
+
+            <!-- Image Center / Bottom -->
+            <div class="bento-tile__image-wrapper">
+              {% if block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 800 }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  class="bento-tile__img" 
+                  loading="lazy" 
+                  width="400" 
+                  height="400"
+                >
+              {% else %}
+                <div class="bento-tile__placeholder">
+                  {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
+                </div>
+              {% endif %}
             </div>
           </a>
         {% endfor %}
       {% else %}
-        {% comment %} FALLBACK TILES FOR THEME EDITOR PREVIEW {% endcomment %}
+        {% comment %} FALLBACK BENTO TILES {% endcomment %}
         {% assign default_titles = "Electric, Hydraulic / Mechanical, Portable" | split: "," %}
         {% for title in default_titles %}
-          <a href="#" class="subcategory-tile">
-            <div class="subcategory-tile__bg">
-              <div class="subcategory-tile__placeholder"></div>
-              <div class="subcategory-tile__overlay"></div>
+          <a href="#" class="bento-tile">
+            <div class="bento-tile__header">
+              <h2 class="bento-tile__title">{{ title | strip }}</h2>
             </div>
-            <div class="subcategory-tile__content">
-              <span class="subcategory-tile__name">{{ title | strip }}</span>
+            <div class="bento-tile__image-wrapper">
+              <div class="bento-tile__placeholder">
+                {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
+              </div>
             </div>
           </a>
         {% endfor %}
@@ -58,7 +76,7 @@
 
 {% schema %}
 {
-  "name": "Subcategories Grid",
+  "name": "Subcategories Bento Grid",
   "tag": "section",
   "class": "section-subcategories-grid",
   "settings": [
@@ -69,21 +87,27 @@
       "default": "Back"
     },
     {
+      "type": "checkbox",
+      "id": "show_header",
+      "label": "Show Main Section Header",
+      "default": false
+    },
+    {
       "type": "text",
       "id": "title",
-      "label": "Main Category Title Override",
-      "info": "Leave empty to use Collection Title"
+      "label": "Main Category Title",
+      "default": "Treatment Tables"
     }
   ],
   "blocks": [
     {
       "type": "subcategory",
-      "name": "Subcategory Tile",
+      "name": "Bento Tile",
       "settings": [
         {
           "type": "text",
           "id": "title",
-          "label": "Subcategory Name",
+          "label": "Subcategory Title",
           "default": "Electric"
         },
         {
@@ -94,14 +118,20 @@
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Subcategory Image"
+          "label": "Product / Category Image"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Tile Background Color",
+          "default": "#e8e8ed"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Subcategories Grid",
+      "name": "Subcategories Bento Grid",
       "blocks": [
         {
           "type": "subcategory",

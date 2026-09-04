@@ -4,7 +4,7 @@
 }
 
 .subcategories__back {
-  margin-bottom: 1.5rem;
+  margin-bottom: 2rem;
 }
 
 .subcategories__back .back-link {
@@ -22,108 +22,130 @@
 }
 
 .subcategories__title {
-  font-size: 2rem;
-  font-weight: 700;
-  color: #a22938;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1d1d1f;
   margin: 0;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.02em;
 }
 
-/* 3-COLUMN GRID LAYOUT */
+/* BENTO 3-COLUMN GRID */
 .subcategories__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
-  gap: 1.5rem;
+  gap: 1.75rem;
 }
 
-/* SUBCATEGORY TILE COMPONENT */
-.subcategory-tile {
+/* BENTO CARD TILE STYLING */
+.bento-tile {
   position: relative;
-  border-radius: 20px;
-  overflow: hidden;
-  aspect-ratio: 4 / 3;
+  background-color: #e8e8ed;
+  border-radius: 28px;
+  padding: 2.5rem 1.5rem 2rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   text-decoration: none;
-  display: block;
-  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.06);
-  border: 1px solid #f0f0f0;
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease;
+  aspect-ratio: 4 / 5;
+  overflow: hidden;
+  border: 1px solid rgba(0, 0, 0, 0.04);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
-.subcategory-tile:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+.bento-tile:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(162, 41, 56, 0.2);
 }
 
-.subcategory-tile__bg {
-  position: absolute;
-  inset: 0;
+/* HEADER TOP CENTERED TITLE */
+.bento-tile__header {
   width: 100%;
-  height: 100%;
-  background-color: #f5f5f7;
-}
-
-.subcategory-tile__img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  object-position: center;
-  transition: transform 0.4s ease;
-}
-
-.subcategory-tile:hover .subcategory-tile__img {
-  transform: scale(1.05);
-}
-
-.subcategory-tile__placeholder {
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(135deg, #e2e8f0 0%, #cbd5e1 100%);
-}
-
-.subcategory-tile__overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.65) 0%, rgba(0, 0, 0, 0.1) 60%, rgba(0, 0, 0, 0) 100%);
-  transition: opacity 0.3s ease;
-}
-
-.subcategory-tile__content {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  padding: 1.5rem;
+  text-align: center;
   z-index: 2;
 }
 
-.subcategory-tile__name {
-  color: #ffffff;
-  font-size: 1.25rem;
-  font-weight: 700;
-  line-height: 1.2;
-  display: block;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+.bento-tile__title {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: #000000;
+  margin: 0;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+}
+
+/* CENTERED PRODUCT IMAGE AREA */
+.bento-tile__image-wrapper {
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1.5rem;
+  position: relative;
+}
+
+.bento-tile__img {
+  max-width: 85%;
+  max-height: 85%;
+  object-fit: contain;
+  transition: transform 0.35s ease;
+}
+
+.bento-tile:hover .bento-tile__img {
+  transform: scale(1.06);
+}
+
+.bento-tile__placeholder {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bento-tile__svg-placeholder {
+  width: 100px;
+  height: 100px;
+  opacity: 0.35;
 }
 
 /* RESPONSIVE BREAKPOINTS */
 @media (max-width: 991px) {
   .subcategories__grid {
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(3, 1fr);
     gap: 1.25rem;
+  }
+
+  .bento-tile {
+    padding: 1.8rem 1rem 1.5rem 1rem;
+    border-radius: 22px;
+  }
+
+  .bento-tile__title {
+    font-size: 1.35rem;
   }
 }
 
-@media (max-width: 575px) {
+@media (max-width: 767px) {
+  .subcategories__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  .bento-tile {
+    aspect-ratio: 3 / 4;
+  }
+}
+
+@media (max-width: 480px) {
   .subcategories__grid {
     grid-template-columns: 1fr;
     gap: 1rem;
   }
 
-  .subcategory-tile {
-    aspect-ratio: 16 / 9;
-  }
-
-  .subcategories__title {
-    font-size: 1.6rem;
+  .bento-tile {
+    aspect-ratio: 4 / 3;
   }
 }
