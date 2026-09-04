@@ -7,71 +7,87 @@
     </div>
   {% endif %}
 
+  <!-- Staggered Offset Grid (Masonry 2-Column Style) -->
   <div class="pre-footer-hub__grid">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
-        {% assign img_fit = block.settings.image_fit | default: "cover" %}
-        
+        {% assign is_even = forloop.index | modulo: 2 %}
+        {% assign card_aspect = block.settings.aspect_ratio | default: "portrait" %}
+
         <div 
-          class="pre-footer-card pre-footer-card--{{ img_fit }} animate-on-scroll" 
+          class="porsche-card porsche-card--{{ card_aspect }} {% if is_even == 0 %}porsche-card--offset{% endif %} animate-on-scroll" 
           style="
-            background-color: {{ block.settings.bg_color | default: '#f5f5f7' }};
-            --card-text-color: {{ block.settings.text_color | default: '#1d1d1f' }};
+            --porsche-bg: {{ block.settings.bg_color | default: '#111111' }};
+            --porsche-text-color: {{ block.settings.text_color | default: '#ffffff' }};
           "
           {{ block.shopify_attributes }}
         >
-          <!-- Full Bleed Image Background / Container -->
-          <div class="pre-footer-card__media">
+          <!-- Full Bleed Background Media -->
+          <div class="porsche-card__media">
             {% if block.settings.image != blank %}
               <img 
-                src="{{ block.settings.image | image_url: width: 1000 }}" 
+                src="{{ block.settings.image | image_url: width: 1200 }}" 
                 alt="{{ block.settings.title | escape }}" 
-                class="pre-footer-card__img" 
+                class="porsche-card__img porsche-card__img--{{ block.settings.image_fit | default: 'cover' }}" 
                 loading="lazy" 
                 width="600" 
-                height="600"
+                height="800"
               >
             {% endif %}
-            <div class="pre-footer-card__overlay" style="opacity: {{ block.settings.overlay_opacity | default: 0 | divided_by: 100.0 }};"></div>
+            <div class="porsche-card__gradient"></div>
           </div>
 
-          <!-- Card Content Floating Over Image -->
-          <div class="pre-footer-card__content">
+          <!-- Product Feature Highlight (e.g., Violet / Product Centered inside Solid Cards) -->
+          {% if block.settings.featured_product_image != blank %}
+            <div class="porsche-card__product-feature">
+              <img 
+                src="{{ block.settings.featured_product_image | image_url: width: 800 }}" 
+                alt="{{ block.settings.title | escape }}" 
+                class="porsche-card__product-img" 
+                loading="lazy"
+                width="400"
+                height="400"
+              >
+            </div>
+          {% endif %}
+
+          <!-- Content Bottom Overlay -->
+          <div class="porsche-card__content">
             {% if block.settings.tag != blank %}
-              <span class="pre-footer-card__tag" style="color: {{ block.settings.tag_color | default: '#a22938' }};">
+              <span class="porsche-card__tag" style="color: {{ block.settings.tag_color | default: '#a22938' }};">
                 {{ block.settings.tag }}
               </span>
             {% endif %}
 
             {% if block.settings.title != blank %}
-              <h3 class="pre-footer-card__title">{{ block.settings.title }}</h3>
+              <h3 class="porsche-card__title">{{ block.settings.title }}</h3>
             {% endif %}
 
             {% if block.settings.text != blank %}
-              <p class="pre-footer-card__text">{{ block.settings.text }}</p>
+              <p class="porsche-card__text">{{ block.settings.text }}</p>
             {% endif %}
 
-            <!-- Dynamic Swatches (Optional overlay if color swatches are supplied) -->
+            <!-- Color Swatches Row (Optional) -->
             {% if block.settings.color_list != blank %}
               {% assign colors = block.settings.color_list | split: "," %}
-              <div class="pre-footer-swatches">
+              <div class="porsche-card__swatches">
                 {% for hex in colors %}
-                  <span class="pre-footer-swatch" style="background-color: {{ hex | strip }};"></span>
+                  <span class="porsche-swatch" style="background-color: {{ hex | strip }};"></span>
                 {% endfor %}
               </div>
             {% endif %}
 
-            <!-- Action Buttons -->
-            <div class="pre-footer-card__actions">
+            <!-- Action Buttons / Pills -->
+            <div class="porsche-card__actions">
               {% if block.settings.btn_1_link != blank %}
-                <a href="{{ block.settings.btn_1_link }}" class="hub-btn hub-btn--primary">
-                  {{ block.settings.btn_1_text | default: "Learn More" }}
+                <a href="{{ block.settings.btn_1_link }}" class="porsche-btn">
+                  {{ block.settings.btn_1_text | default: "Discover Options" }}
                 </a>
               {% endif %}
 
               {% if block.settings.btn_2_link != blank %}
-                <a href="{{ block.settings.btn_2_link }}" class="hub-btn hub-btn--secondary" {% if block.settings.btn_2_is_pdf %}target="_blank"{% endif %}>
-                  {{ block.settings.btn_2_text | default: "Download Spec PDF ➔" }}
+                <a href="{{ block.settings.btn_2_link }}" class="porsche-btn porsche-btn--secondary" {% if block.settings.btn_2_is_pdf %}target="_blank"{% endif %}>
+                  {{ block.settings.btn_2_text | default: "Download Specs PDF ➔" }}
                 </a>
               {% endif %}
             </div>
@@ -80,15 +96,18 @@
       {% endfor %}
     {% else %}
       {% comment %} DEFAULT FALLBACK CARDS {% endcomment %}
-      <div class="pre-footer-card animate-on-scroll">
-        <div class="pre-footer-card__content">
-          <span class="pre-footer-card__tag">Support & Specs</span>
-          <h3 class="pre-footer-card__title">Technical Support & PDF Manuals</h3>
-          <p class="pre-footer-card__text">Download product specification sheets or contact our service team.</p>
-          <div class="pre-footer-card__actions">
-            <a href="#" class="hub-btn hub-btn--primary">Get Support</a>
-            <a href="#" class="hub-btn hub-btn--secondary">Download PDFs ➔</a>
-          </div>
+      <div class="porsche-card animate-on-scroll">
+        <div class="porsche-card__content">
+          <h3 class="porsche-card__title">Support & Service.</h3>
+          <p class="porsche-card__text">Contact our clinical support specialists near you.</p>
+          <a href="#" class="porsche-btn">Get Technical Support</a>
+        </div>
+      </div>
+      <div class="porsche-card porsche-card--offset animate-on-scroll" style="--porsche-bg: #2d1e3e;">
+        <div class="porsche-card__content">
+          <h3 class="porsche-card__title">Personalization & Finishes.</h3>
+          <p class="porsche-card__text">Discover custom upholstery finishes for treatment beds and stools.</p>
+          <a href="#" class="porsche-btn">Explore Custom Colors</a>
         </div>
       </div>
     {% endif %}
@@ -97,7 +116,7 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = { threshold: 0.15 };
+    const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -115,7 +134,7 @@
 
 {% schema %}
 {
-  "name": "Pre-Footer Hub",
+  "name": "Pre-Footer Hub Staggered",
   "tag": "section",
   "class": "section-pre-footer-hub",
   "settings": [
@@ -128,39 +147,45 @@
   ],
   "blocks": [
     {
-      "type": "hub_card",
-      "name": "Hub Bento Card",
+      "type": "staggered_card",
+      "name": "Porsche Style Card",
       "settings": [
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Card Background / Product Image"
+          "label": "Full Bleed Background Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "featured_product_image",
+          "label": "Centered Product Image (e.g. Bed or Car image)"
+        },
+        {
+          "type": "select",
+          "id": "aspect_ratio",
+          "label": "Card Height / Aspect",
+          "options": [
+            { "value": "tall", "label": "Tall (Más alta)" },
+            { "value": "portrait", "label": "Standard Portrait" },
+            { "value": "compact", "label": "Compact" }
+          ],
+          "default": "portrait"
         },
         {
           "type": "select",
           "id": "image_fit",
-          "label": "Image Display Mode",
+          "label": "Image Fit Mode",
           "options": [
-            { "value": "cover", "label": "Full Card Cover (Fondo completo)" },
-            { "value": "contain", "label": "Contain Product (Ajustar producto)" }
+            { "value": "cover", "label": "Cover Entire Card" },
+            { "value": "contain", "label": "Contain Image" }
           ],
           "default": "cover"
         },
         {
-          "type": "range",
-          "id": "overlay_opacity",
-          "min": 0,
-          "max": 80,
-          "step": 5,
-          "unit": "%",
-          "label": "Dark Overlay Opacity",
-          "default": 10
-        },
-        {
           "type": "text",
           "id": "tag",
-          "label": "Card Tag",
-          "default": "New Colors"
+          "label": "Tag",
+          "default": "Support"
         },
         {
           "type": "color",
@@ -171,60 +196,60 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Card Title",
-          "default": "New Colors for Beds & Stools"
+          "label": "Title",
+          "default": "Personnalisation et finitions."
         },
         {
           "type": "textarea",
           "id": "text",
           "label": "Description",
-          "default": "Explore our latest premium upholstery options tailored for clinical spaces."
+          "default": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique."
         },
         {
           "type": "text",
           "id": "color_list",
-          "label": "Color Swatches Hex List (Comma separated)",
-          "default": "#ffffff, #191919, #4c4c4c, #1b1e2e",
-          "info": "Example: #ffffff, #000000, #a22938"
+          "label": "Color Swatches Hex List",
+          "default": "#ffffff, #191919, #2d1e3e",
+          "info": "Comma separated: #ffffff, #000000"
         },
         {
           "type": "color",
           "id": "bg_color",
           "label": "Card Background Color",
-          "default": "#f5f5f7"
+          "default": "#111111"
         },
         {
           "type": "color",
           "id": "text_color",
           "label": "Text Color",
-          "default": "#1d1d1f"
+          "default": "#ffffff"
         },
         {
           "type": "text",
           "id": "btn_1_text",
-          "label": "Primary Button Text",
-          "default": "Explore Customization"
+          "label": "Button 1 Text",
+          "default": "Découvrez les finitions"
         },
         {
           "type": "url",
           "id": "btn_1_link",
-          "label": "Primary Button Link"
+          "label": "Button 1 Link"
         },
         {
           "type": "text",
           "id": "btn_2_text",
-          "label": "Secondary Button Text",
-          "default": "Download Specs PDF ➔"
+          "label": "Button 2 Text",
+          "default": "Télécharger la fiche technique (PDF)"
         },
         {
           "type": "url",
           "id": "btn_2_link",
-          "label": "Secondary Button Link"
+          "label": "Button 2 Link"
         },
         {
           "type": "checkbox",
           "id": "btn_2_is_pdf",
-          "label": "Open Secondary Link in New Tab (PDF)",
+          "label": "Open Button 2 in New Tab (PDF)",
           "default": true
         }
       ]
@@ -232,22 +257,39 @@
   ],
   "presets": [
     {
-      "name": "Pre-Footer Hub",
+      "name": "Pre-Footer Hub Staggered",
       "blocks": [
         {
-          "type": "hub_card",
+          "type": "staggered_card",
           "settings": {
-            "tag": "Technical Support",
-            "title": "Need Guides or PDF Spec Sheets?",
-            "text": "Access manuals, warranty forms, or speak directly with our tech support."
+            "title": "Equipro Connect.",
+            "text": "Accédez aux manuels, guides de soutien technique et service après-vente.",
+            "btn_1_text": "Service et Support"
           }
         },
         {
-          "type": "hub_card",
+          "type": "staggered_card",
           "settings": {
-            "tag": "Customization",
-            "title": "New Colors for Beds & Stools",
-            "text": "Upgrade your spa clinic aesthetic with our vibrant new upholstery finishes."
+            "title": "Teintes au choix.",
+            "text": "Découvrez les couleurs intérieures et extérieures très spéciales disponibles pour vos lits et tabourets.",
+            "bg_color": "#2c1f3d",
+            "btn_1_text": "Découvrez les choix de couleurs"
+          }
+        },
+        {
+          "type": "staggered_card",
+          "settings": {
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre notre manufacturier.",
+            "btn_1_text": "En savoir plus"
+          }
+        },
+        {
+          "type": "staggered_card",
+          "settings": {
+            "title": "Contact.",
+            "text": "Contactez un représentant Equipro près de chez vous.",
+            "btn_1_text": "Formulaire de contact"
           }
         }
       ]
