@@ -12,43 +12,72 @@
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
         {% assign is_even = forloop.index | modulo: 2 %}
+        {% assign enable_rotator = block.settings.enable_interactive_rotator %}
 
         <div 
-          class="porsche-card {% if is_even == 0 %}porsche-card--offset{% endif %} animate-on-scroll" 
+          class="porsche-card {% if is_even == 0 %}porsche-card--offset{% endif %} {% if enable_rotator %}js-interactive-card{% endif %} animate-on-scroll" 
           style="
             --porsche-bg: {{ block.settings.bg_color | default: '#111111' }};
             --porsche-text-color: {{ block.settings.text_color | default: '#ffffff' }};
           "
           {{ block.shopify_attributes }}
         >
-          <!-- Full Bleed Background Media -->
+          <!-- Multi-Image Rotator Layer -->
           <div class="porsche-card__media">
-            {% if block.settings.image != blank %}
+            {% if block.settings.image_1 != blank %}
               <img 
-                src="{{ block.settings.image | image_url: width: 1200 }}" 
+                src="{{ block.settings.image_1 | image_url: width: 1200 }}" 
                 alt="{{ block.settings.title | escape }}" 
-                class="porsche-card__img porsche-card__img--{{ block.settings.image_fit | default: 'cover' }}" 
+                class="porsche-card__img porsche-card__img--active js-rotator-img" 
                 loading="lazy" 
                 width="600" 
                 height="750"
               >
             {% endif %}
+
+            {% if enable_rotator %}
+              {% if block.settings.image_2 != blank %}
+                <img 
+                  src="{{ block.settings.image_2 | image_url: width: 1200 }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  class="porsche-card__img js-rotator-img" 
+                  loading="lazy" 
+                  width="600" 
+                  height="750"
+                >
+              {% endif %}
+              {% if block.settings.image_3 != blank %}
+                <img 
+                  src="{{ block.settings.image_3 | image_url: width: 1200 }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  class="porsche-card__img js-rotator-img" 
+                  loading="lazy" 
+                  width="600" 
+                  height="750"
+                >
+              {% endif %}
+              {% if block.settings.image_4 != blank %}
+                <img 
+                  src="{{ block.settings.image_4 | image_url: width: 1200 }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  class="porsche-card__img js-rotator-img" 
+                  loading="lazy" 
+                  width="600" 
+                  height="750"
+                >
+              {% endif %}
+
+              <!-- Bullet Indicators for Active Image -->
+              <div class="porsche-card__rotator-dots js-rotator-dots">
+                <span class="porsche-dot porsche-dot--active"></span>
+                {% if block.settings.image_2 != blank %}<span class="porsche-dot"></span>{% endif %}
+                {% if block.settings.image_3 != blank %}<span class="porsche-dot"></span>{% endif %}
+                {% if block.settings.image_4 != blank %}<span class="porsche-dot"></span>{% endif %}
+              </div>
+            {% endif %}
+
             <div class="porsche-card__gradient"></div>
           </div>
-
-          <!-- Product Feature Highlight -->
-          {% if block.settings.featured_product_image != blank %}
-            <div class="porsche-card__product-feature">
-              <img 
-                src="{{ block.settings.featured_product_image | image_url: width: 800 }}" 
-                alt="{{ block.settings.title | escape }}" 
-                class="porsche-card__product-img" 
-                loading="lazy"
-                width="400"
-                height="400"
-              >
-            </div>
-          {% endif %}
 
           <!-- Content Bottom Overlay -->
           <div class="porsche-card__content">
@@ -113,8 +142,10 @@
   </div>
 </section>
 
+<!-- Mousemove Interactive Multi-Image Rotator Script -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
+    // 1. Scroll Observer for smooth entrance animations
     const observerOptions = { threshold: 0.1 };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
@@ -128,12 +159,54 @@
     document.querySelectorAll('#PreFooterHub-{{ section.id }} .animate-on-scroll').forEach(el => {
       observer.observe(el);
     });
+
+    // 2. Interactive Cursor Position Image Switcher
+    const interactiveCards = document.querySelectorAll('#PreFooterHub-{{ section.id }} .js-interactive-card');
+
+    interactiveCards.forEach(card => {
+      const images = card.querySelectorAll('.js-rotator-img');
+      const dots = card.querySelectorAll('.porsche-dot');
+      const totalImages = images.length;
+
+      if (totalImages <= 1) return;
+
+      card.addEventListener('mousemove', function(e) {
+        const rect = card.getBoundingClientRect();
+        const mouseX = e.clientX - rect.left;
+        const cardWidth = rect.width;
+
+        // Calculate active index based on cursor horizontal position percentage
+        let activeIndex = Math.floor((mouseX / cardWidth) * totalImages);
+        if (activeIndex < 0) activeIndex = 0;
+        if (activeIndex >= totalImages) activeIndex = totalImages - 1;
+
+        // Update active image class
+        images.forEach((img, idx) => {
+          img.classList.toggle('porsche-card__img--active', idx === activeIndex);
+        });
+
+        // Update active indicator dot
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('porsche-dot--active', idx === activeIndex);
+        });
+      });
+
+      // Reset to primary image when cursor leaves card area
+      card.addEventListener('mouseleave', function() {
+        images.forEach((img, idx) => {
+          img.classList.toggle('porsche-card__img--active', idx === 0);
+        });
+        dots.forEach((dot, idx) => {
+          dot.classList.toggle('porsche-dot--active', idx === 0);
+        });
+      });
+    });
   });
 </script>
 
 {% schema %}
 {
-  "name": "Pre-Footer Hub Staggered",
+  "name": "Pre-Footer Hub Interactive",
   "tag": "section",
   "class": "section-pre-footer-hub",
   "settings": [
@@ -150,24 +223,39 @@
       "name": "Porsche Style Card",
       "settings": [
         {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Full Bleed Background Image"
+          "type": "header",
+          "content": "Interactive Multi-Image Settings"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_interactive_rotator",
+          "label": "Enable Cursor Movement Image Rotator",
+          "default": true,
+          "info": "Switches through images dynamically as the user moves the mouse across the card."
         },
         {
           "type": "image_picker",
-          "id": "featured_product_image",
-          "label": "Centered Product Image"
+          "id": "image_1",
+          "label": "Primary Image 1 (Default)"
         },
         {
-          "type": "select",
-          "id": "image_fit",
-          "label": "Image Fit Mode",
-          "options": [
-            { "value": "cover", "label": "Cover Entire Card" },
-            { "value": "contain", "label": "Contain Image" }
-          ],
-          "default": "cover"
+          "type": "image_picker",
+          "id": "image_2",
+          "label": "Hover Image 2"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_3",
+          "label": "Hover Image 3"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_4",
+          "label": "Hover Image 4"
+        },
+        {
+          "type": "header",
+          "content": "Card Content & Customization"
         },
         {
           "type": "text",
@@ -245,7 +333,7 @@
   ],
   "presets": [
     {
-      "name": "Pre-Footer Hub Staggered",
+      "name": "Pre-Footer Hub Interactive",
       "blocks": [
         {
           "type": "staggered_card",
@@ -262,22 +350,6 @@
             "text": "Découvrez les couleurs intérieures et extérieures très spéciales disponibles pour vos lits et tabourets.",
             "bg_color": "#2c1f3d",
             "btn_1_text": "Découvrez les choix de couleurs"
-          }
-        },
-        {
-          "type": "staggered_card",
-          "settings": {
-            "title": "Personnalisation et finitions.",
-            "text": "Découvrez les possibilités de personnalisation qu'offre notre manufacturier.",
-            "btn_1_text": "En savoir plus"
-          }
-        },
-        {
-          "type": "staggered_card",
-          "settings": {
-            "title": "Contact.",
-            "text": "Contactez un représentant Equipro près de chez vous.",
-            "btn_1_text": "Formulaire de contact"
           }
         }
       ]
