@@ -1,12 +1,3 @@
-/*
- * ------------------------------------------------------------
- * IMPORTANT: The contents of this file are auto-generated.
- *
- * This file may be updated by the Shopify admin theme editor
- * or related systems. Please exercise caution as any changes
- * made to this file may be overwritten.
- * ------------------------------------------------------------
- */
 {
   "sections": {
     "hero_banner": {
@@ -121,7 +112,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
-            "title": "Facial Units",
+            "title": "Facial Units",
             "link": ""
           }
         },
@@ -655,6 +646,9 @@
         "autoplay_speed": 5000
       }
     },
+    "pre_footer_hub": {
+      "type": "pre-footer-hub"
+    },
     "custom_spa_pack_builder_BDtr9H": {
       "type": "custom-spa-pack-builder",
       "blocks": {
@@ -818,6 +812,7 @@
     "custom_subcategory_slider_YFNFXr",
     "custom_subcategory_slider_HPxgWp",
     "image_slider",
+    "pre_footer_hub",
     "custom_spa_pack_builder_BDtr9H"
   ]
 }

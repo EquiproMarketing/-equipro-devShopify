@@ -1,69 +1,103 @@
 {{ 'section-pre-footer-hub.css' | asset_url | stylesheet_tag }}
 
 <section class="pre-footer-hub page-width" id="PreFooterHub-{{ section.id }}">
-  <div class="pre-footer-hub__grid">
-    
-    {% comment %} BLOCK 1: SUPPORT & DOWNLOADS HUB {% endcomment %}
-    <div class="pre-footer-card pre-footer-card--accent animate-on-scroll">
-      <div class="pre-footer-card__content">
-        <span class="pre-footer-card__tag">{{ section.settings.support_tag | default: "Support & Docs" }}</span>
-        <h2 class="pre-footer-card__title">{{ section.settings.support_title | default: "Need Technical Guides & Support?" }}</h2>
-        <p class="pre-footer-card__text">{{ section.settings.support_text | default: "Access product manuals, PDF spec sheets, or reach out directly to our support team." }}</p>
-        
-        <div class="pre-footer-card__actions">
-          {% if section.settings.support_link != blank %}
-            <a href="{{ section.settings.support_link }}" class="hub-btn hub-btn--primary">
-              {{ section.settings.support_btn_text | default: "Get Support" }}
-            </a>
-          {% endif %}
-
-          {% if section.settings.pdf_link != blank %}
-            <a href="{{ section.settings.pdf_link }}" class="hub-btn hub-btn--outline" target="_blank">
-              {{ section.settings.pdf_btn_text | default: "Download PDFs ➔" }}
-            </a>
-          {% endif %}
-        </div>
-      </div>
+  {% if section.settings.main_title != blank %}
+    <div class="pre-footer-hub__header animate-on-scroll">
+      <h2 class="pre-footer-hub__main-title">{{ section.settings.main_title }}</h2>
     </div>
+  {% endif %}
 
-    {% comment %} BLOCK 2: DYNAMIC NEW COLORS SHOWCASE {% endcomment %}
-    <div class="pre-footer-card pre-footer-card--colors animate-on-scroll">
-      <div class="pre-footer-card__content">
-        <span class="pre-footer-card__tag">{{ section.settings.colors_tag | default: "Customization" }}</span>
-        <h2 class="pre-footer-card__title">{{ section.settings.colors_title | default: "New Colors for Beds & Stools" }}</h2>
-        <p class="pre-footer-card__text">{{ section.settings.colors_text | default: "Explore our latest premium upholstery palette designed for modern treatment spaces." }}</p>
+  <div class="pre-footer-hub__grid">
+    {% if section.blocks.size > 0 %}
+      {% for block in section.blocks %}
+        {% assign img_fit = block.settings.image_fit | default: "cover" %}
+        
+        <div 
+          class="pre-footer-card pre-footer-card--{{ img_fit }} animate-on-scroll" 
+          style="
+            background-color: {{ block.settings.bg_color | default: '#f5f5f7' }};
+            --card-text-color: {{ block.settings.text_color | default: '#1d1d1f' }};
+          "
+          {{ block.shopify_attributes }}
+        >
+          <!-- Full Bleed Image Background / Container -->
+          <div class="pre-footer-card__media">
+            {% if block.settings.image != blank %}
+              <img 
+                src="{{ block.settings.image | image_url: width: 1000 }}" 
+                alt="{{ block.settings.title | escape }}" 
+                class="pre-footer-card__img" 
+                loading="lazy" 
+                width="600" 
+                height="600"
+              >
+            {% endif %}
+            <div class="pre-footer-card__overlay" style="opacity: {{ block.settings.overlay_opacity | default: 0 | divided_by: 100.0 }};"></div>
+          </div>
 
-        {% comment %} DYNAMIC COLOR SWATCHES LIST {% endcomment %}
-        <div class="pre-footer-swatches">
-          {% for block in section.blocks %}
-            {% if block.type == 'color_swatch' %}
-              <div class="pre-footer-swatch" {{ block.shopify_attributes }}>
-                <span class="pre-footer-swatch__dot" style="background-color: {{ block.settings.hex_code }};"></span>
-                <span class="pre-footer-swatch__label">{{ block.settings.color_name }}</span>
+          <!-- Card Content Floating Over Image -->
+          <div class="pre-footer-card__content">
+            {% if block.settings.tag != blank %}
+              <span class="pre-footer-card__tag" style="color: {{ block.settings.tag_color | default: '#a22938' }};">
+                {{ block.settings.tag }}
+              </span>
+            {% endif %}
+
+            {% if block.settings.title != blank %}
+              <h3 class="pre-footer-card__title">{{ block.settings.title }}</h3>
+            {% endif %}
+
+            {% if block.settings.text != blank %}
+              <p class="pre-footer-card__text">{{ block.settings.text }}</p>
+            {% endif %}
+
+            <!-- Dynamic Swatches (Optional overlay if color swatches are supplied) -->
+            {% if block.settings.color_list != blank %}
+              {% assign colors = block.settings.color_list | split: "," %}
+              <div class="pre-footer-swatches">
+                {% for hex in colors %}
+                  <span class="pre-footer-swatch" style="background-color: {{ hex | strip }};"></span>
+                {% endfor %}
               </div>
             {% endif %}
-          {% endfor %}
+
+            <!-- Action Buttons -->
+            <div class="pre-footer-card__actions">
+              {% if block.settings.btn_1_link != blank %}
+                <a href="{{ block.settings.btn_1_link }}" class="hub-btn hub-btn--primary">
+                  {{ block.settings.btn_1_text | default: "Learn More" }}
+                </a>
+              {% endif %}
+
+              {% if block.settings.btn_2_link != blank %}
+                <a href="{{ block.settings.btn_2_link }}" class="hub-btn hub-btn--secondary" {% if block.settings.btn_2_is_pdf %}target="_blank"{% endif %}>
+                  {{ block.settings.btn_2_text | default: "Download Spec PDF ➔" }}
+                </a>
+              {% endif %}
+            </div>
+          </div>
         </div>
-
-        {% if section.settings.colors_link != blank %}
-          <a href="{{ section.settings.colors_link }}" class="hub-btn hub-btn--link">
-            {{ section.settings.colors_btn_text | default: "See All Customization Options >" }}
-          </a>
-        {% endif %}
+      {% endfor %}
+    {% else %}
+      {% comment %} DEFAULT FALLBACK CARDS {% endcomment %}
+      <div class="pre-footer-card animate-on-scroll">
+        <div class="pre-footer-card__content">
+          <span class="pre-footer-card__tag">Support & Specs</span>
+          <h3 class="pre-footer-card__title">Technical Support & PDF Manuals</h3>
+          <p class="pre-footer-card__text">Download product specification sheets or contact our service team.</p>
+          <div class="pre-footer-card__actions">
+            <a href="#" class="hub-btn hub-btn--primary">Get Support</a>
+            <a href="#" class="hub-btn hub-btn--secondary">Download PDFs ➔</a>
+          </div>
+        </div>
       </div>
-    </div>
-
+    {% endif %}
   </div>
 </section>
 
-{% comment %} SCROLL INTERSECTION OBSERVER SCRIPT {% endcomment %}
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const observerOptions = {
-      threshold: 0.15,
-      rootMargin: "0px 0px -50px 0px"
-    };
-
+    const observerOptions = { threshold: 0.15 };
     const observer = new IntersectionObserver((entries, observer) => {
       entries.forEach(entry => {
         if (entry.isIntersecting) {
@@ -86,99 +120,112 @@
   "class": "section-pre-footer-hub",
   "settings": [
     {
-      "type": "header",
-      "content": "Support & Docs Card"
-    },
-    {
       "type": "text",
-      "id": "support_tag",
-      "label": "Card Tag",
-      "default": "Support & Docs"
-    },
-    {
-      "type": "text",
-      "id": "support_title",
-      "label": "Title",
-      "default": "Need Technical Guides & Support?"
-    },
-    {
-      "type": "textarea",
-      "id": "support_text",
-      "label": "Description",
-      "default": "Access product manuals, PDF spec sheets, or reach out directly to our support team."
-    },
-    {
-      "type": "text",
-      "id": "support_btn_text",
-      "label": "Support Button Label",
-      "default": "Get Support"
-    },
-    {
-      "type": "url",
-      "id": "support_link",
-      "label": "Support Page URL"
-    },
-    {
-      "type": "text",
-      "id": "pdf_btn_text",
-      "label": "PDF Button Label",
-      "default": "Download PDFs ➔"
-    },
-    {
-      "type": "url",
-      "id": "pdf_link",
-      "label": "PDF / Specs URL"
-    },
-    {
-      "type": "header",
-      "content": "Customization & Colors Card"
-    },
-    {
-      "type": "text",
-      "id": "colors_tag",
-      "label": "Card Tag",
-      "default": "Customization"
-    },
-    {
-      "type": "text",
-      "id": "colors_title",
-      "label": "Title",
-      "default": "New Colors for Beds & Stools"
-    },
-    {
-      "type": "textarea",
-      "id": "colors_text",
-      "label": "Description",
-      "default": "Explore our latest premium upholstery palette designed for modern treatment spaces."
-    },
-    {
-      "type": "text",
-      "id": "colors_btn_text",
-      "label": "Link Text",
-      "default": "See All Customization Options >"
-    },
-    {
-      "type": "url",
-      "id": "colors_link",
-      "label": "Customization Page URL"
+      "id": "main_title",
+      "label": "Section Title",
+      "default": "Customization & Support Hub"
     }
   ],
   "blocks": [
     {
-      "type": "color_swatch",
-      "name": "Color Swatch",
+      "type": "hub_card",
+      "name": "Hub Bento Card",
       "settings": [
         {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Card Background / Product Image"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image Display Mode",
+          "options": [
+            { "value": "cover", "label": "Full Card Cover (Fondo completo)" },
+            { "value": "contain", "label": "Contain Product (Ajustar producto)" }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "range",
+          "id": "overlay_opacity",
+          "min": 0,
+          "max": 80,
+          "step": 5,
+          "unit": "%",
+          "label": "Dark Overlay Opacity",
+          "default": 10
+        },
+        {
           "type": "text",
-          "id": "color_name",
-          "label": "Color Name",
-          "default": "Alpine White"
+          "id": "tag",
+          "label": "Card Tag",
+          "default": "New Colors"
         },
         {
           "type": "color",
-          "id": "hex_code",
-          "label": "HEX Color",
+          "id": "tag_color",
+          "label": "Tag Color",
+          "default": "#a22938"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Card Title",
+          "default": "New Colors for Beds & Stools"
+        },
+        {
+          "type": "textarea",
+          "id": "text",
+          "label": "Description",
+          "default": "Explore our latest premium upholstery options tailored for clinical spaces."
+        },
+        {
+          "type": "text",
+          "id": "color_list",
+          "label": "Color Swatches Hex List (Comma separated)",
+          "default": "#ffffff, #191919, #4c4c4c, #1b1e2e",
+          "info": "Example: #ffffff, #000000, #a22938"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Card Background Color",
           "default": "#f5f5f7"
+        },
+        {
+          "type": "color",
+          "id": "text_color",
+          "label": "Text Color",
+          "default": "#1d1d1f"
+        },
+        {
+          "type": "text",
+          "id": "btn_1_text",
+          "label": "Primary Button Text",
+          "default": "Explore Customization"
+        },
+        {
+          "type": "url",
+          "id": "btn_1_link",
+          "label": "Primary Button Link"
+        },
+        {
+          "type": "text",
+          "id": "btn_2_text",
+          "label": "Secondary Button Text",
+          "default": "Download Specs PDF ➔"
+        },
+        {
+          "type": "url",
+          "id": "btn_2_link",
+          "label": "Secondary Button Link"
+        },
+        {
+          "type": "checkbox",
+          "id": "btn_2_is_pdf",
+          "label": "Open Secondary Link in New Tab (PDF)",
+          "default": true
         }
       ]
     }
@@ -187,9 +234,22 @@
     {
       "name": "Pre-Footer Hub",
       "blocks": [
-        { "type": "color_swatch", "settings": { "color_name": "White", "hex_code": "#ffffff" } },
-        { "type": "color_swatch", "settings": { "color_name": "Charcoal", "hex_code": "#2c2c2e" } },
-        { "type": "color_swatch", "settings": { "color_name": "Taupe", "hex_code": "#8b8579" } }
+        {
+          "type": "hub_card",
+          "settings": {
+            "tag": "Technical Support",
+            "title": "Need Guides or PDF Spec Sheets?",
+            "text": "Access manuals, warranty forms, or speak directly with our tech support."
+          }
+        },
+        {
+          "type": "hub_card",
+          "settings": {
+            "tag": "Customization",
+            "title": "New Colors for Beds & Stools",
+            "text": "Upgrade your spa clinic aesthetic with our vibrant new upholstery finishes."
+          }
+        }
       ]
     }
   ]

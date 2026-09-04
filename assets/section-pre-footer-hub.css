@@ -1,10 +1,19 @@
 /* ==========================================================================
-   PRE-FOOTER HUB SECTION (SCROLL TRIGGERED BENTO)
+   PRE-FOOTER HUB BENTO SECTION
    ========================================================================== */
 
    .pre-footer-hub {
-    padding-top: 3rem;
-    padding-bottom: 4rem;
+    padding-top: 3.5rem;
+    padding-bottom: 5rem;
+  }
+  
+  .pre-footer-hub__main-title {
+    font-size: 2.2rem;
+    font-weight: 800;
+    color: #1d1d1f;
+    text-align: center;
+    margin-bottom: 2.5rem;
+    letter-spacing: -0.02em;
   }
   
   .pre-footer-hub__grid {
@@ -13,51 +22,114 @@
     gap: 1.75rem;
   }
   
-  /* Card Component */
+  /* Bento Hub Card Component */
   .pre-footer-card {
-    background-color: #f5f5f7;
+    position: relative;
     border-radius: 28px;
-    padding: 2.5rem;
-    border: 1px solid rgba(0, 0, 0, 0.04);
+    overflow: hidden;
+    min-height: 380px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: flex-end;
+    padding: 2.5rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
   }
   
-  .pre-footer-card--accent {
-    background-color: #fafafc;
+  .pre-footer-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
   }
   
-  .pre-footer-card--colors {
-    background-color: #f2f2f7;
+  /* Card Media Background (Full Bleed Image) */
+  .pre-footer-card__media {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+  
+  .pre-footer-card__img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    transition: transform 0.4s ease;
+  }
+  
+  .pre-footer-card--cover .pre-footer-card__img {
+    object-fit: cover;
+    object-position: center;
+  }
+  
+  .pre-footer-card--contain .pre-footer-card__img {
+    object-fit: contain;
+    object-position: center right;
+  }
+  
+  .pre-footer-card:hover .pre-footer-card__img {
+    transform: scale(1.04);
+  }
+  
+  .pre-footer-card__overlay {
+    position: absolute;
+    inset: 0;
+    background-color: #000000;
+    z-index: 2;
+    pointer-events: none;
+  }
+  
+  /* Floating Card Content */
+  .pre-footer-card__content {
+    position: relative;
+    z-index: 5;
+    color: var(--card-text-color, #1d1d1f);
   }
   
   .pre-footer-card__tag {
     font-size: 0.8rem;
     font-weight: 700;
     text-transform: uppercase;
-    color: #a22938;
-    letter-spacing: 0.05em;
-    display: block;
+    letter-spacing: 0.06em;
+    display: inline-block;
     margin-bottom: 0.5rem;
   }
   
   .pre-footer-card__title {
     font-size: 1.8rem;
     font-weight: 800;
-    color: #1d1d1f;
+    color: inherit;
     margin: 0 0 0.75rem 0;
     line-height: 1.25;
+    letter-spacing: -0.01em;
   }
   
   .pre-footer-card__text {
     font-size: 0.95rem;
-    color: #6e6e73;
-    margin: 0 0 1.5rem 0;
+    color: inherit;
+    opacity: 0.85;
+    margin: 0 0 1.25rem 0;
     line-height: 1.5;
+    max-width: 90%;
   }
   
-  /* Buttons and Links */
+  /* Swatches */
+  .pre-footer-swatches {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 1.25rem;
+  }
+  
+  .pre-footer-swatch {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 2px solid #ffffff;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.15);
+  }
+  
+  /* Action Buttons */
   .pre-footer-card__actions {
     display: flex;
     align-items: center;
@@ -65,78 +137,35 @@
     flex-wrap: wrap;
   }
   
-  .hub-btn--primary {
-    background-color: #a22938;
-    color: #ffffff;
-    padding: 0.75rem 1.25rem;
+  .hub-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.75rem 1.35rem;
     border-radius: 22px;
     text-decoration: none;
     font-weight: 600;
     font-size: 0.9rem;
-    transition: background-color 0.2s ease;
+    transition: all 0.2s ease;
+  }
+  
+  .hub-btn--primary {
+    background-color: #a22938;
+    color: #ffffff;
   }
   
   .hub-btn--primary:hover {
     background-color: #801f2b;
   }
   
-  .hub-btn--outline {
-    border: 1px solid #a22938;
-    color: #a22938;
-    padding: 0.75rem 1.25rem;
-    border-radius: 22px;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.9rem;
-    transition: background-color 0.2s ease, color 0.2s ease;
-  }
-  
-  .hub-btn--outline:hover {
-    background-color: #a22938;
-    color: #ffffff;
-  }
-  
-  .hub-btn--link {
-    color: #0066cc;
-    text-decoration: none;
-    font-weight: 600;
-    font-size: 0.95rem;
-  }
-  
-  .hub-btn--link:hover {
-    text-decoration: underline;
-  }
-  
-  /* Dynamic Color Swatches */
-  .pre-footer-swatches {
-    display: flex;
-    align-items: center;
-    gap: 16px;
-    margin-bottom: 1.5rem;
-    flex-wrap: wrap;
-  }
-  
-  .pre-footer-swatch {
-    display: flex;
-    align-items: center;
-    gap: 8px;
-    background: #ffffff;
-    padding: 6px 12px;
-    border-radius: 16px;
-    border: 1px solid rgba(0, 0, 0, 0.08);
-  }
-  
-  .pre-footer-swatch__dot {
-    width: 14px;
-    height: 14px;
-    border-radius: 50%;
-    border: 1px solid rgba(0, 0, 0, 0.15);
-  }
-  
-  .pre-footer-swatch__label {
-    font-size: 0.82rem;
-    font-weight: 600;
+  .hub-btn--secondary {
+    background-color: rgba(255, 255, 255, 0.9);
     color: #1d1d1f;
+    backdrop-filter: blur(8px);
+  }
+  
+  .hub-btn--secondary:hover {
+    background-color: #ffffff;
+    color: #a22938;
   }
   
   /* Scroll Trigger Animations */
@@ -159,6 +188,7 @@
     }
   
     .pre-footer-card {
+      min-height: 320px;
       padding: 1.75rem;
     }
   
