@@ -1,208 +1,250 @@
-.subcategories-wrapper {
-  padding-top: 2rem;
-  padding-bottom: 4rem;
+{{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
+
+<div class="subcategories-wrapper page-width" id="SubcategoriesGrid-{{ section.id }}">
+  <!-- Top Bar: Back Button Left + Centered Bold Title -->
+  <div class="subcategories__top-bar">
+    <div class="subcategories__back">
+      <a href="javascript:history.back()" class="back-link">
+        <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span>{{ section.settings.back_text | default: "Back" }}</span>
+      </a>
+    </div>
+
+    <div class="subcategories__header-centered">
+      <h1 class="subcategories__title">
+        {{ section.settings.title | default: collection.title | default: "Treatment Tables" }}
+      </h1>
+    </div>
+
+    <div class="subcategories__top-bar-spacer"></div>
+  </div>
+
+  <div class="subcategories__container">
+    <!-- Bento Grid (3 Columns) -->
+    <div class="subcategories__grid">
+      {% if section.blocks.size > 0 %}
+        {% for block in section.blocks %}
+          {% assign img_fit = block.settings.image_fit | default: "cover" %}
+          {% assign img_size = block.settings.image_size | default: 100 %}
+          {% assign title_size = block.settings.title_font_size | default: 28 %}
+          {% assign title_color = block.settings.title_color | default: "#000000" %}
+          {% assign shadow_color = block.settings.shadow_color | default: "rgba(0,0,0,0.3)" %}
+          {% assign shadow_blur = block.settings.shadow_blur | default: 8 %}
+          {% assign shadow_offset_y = block.settings.shadow_offset_y | default: 4 %}
+
+          <a 
+            href="{{ block.settings.link | default: '#' }}" 
+            class="bento-tile bento-tile--fit-{{ img_fit }}" 
+            style="
+              background-color: {{ block.settings.bg_color | default: '#e8e8ed' }};
+              --bento-title-size: {{ title_size }}px;
+              --bento-title-color: {{ title_color }};
+              --bento-shadow-color: {{ shadow_color }};
+              --bento-shadow-blur: {{ shadow_blur }}px;
+              --bento-shadow-y: {{ shadow_offset_y }}px;
+              --bento-img-size: {{ img_size }}%;
+            "
+            {{ block.shopify_attributes }}
+          >
+            <!-- Title Top Centered -->
+            <div class="bento-tile__header">
+              <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}has-custom-shadow{% endif %}">
+                {{ block.settings.title }}
+              </h2>
+            </div>
+
+            <!-- Image Container -->
+            <div class="bento-tile__image-wrapper">
+              {% if block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 1000 }}" 
+                  alt="{{ block.settings.title | escape }}" 
+                  class="bento-tile__img" 
+                  loading="lazy" 
+                  width="500" 
+                  height="500"
+                >
+              {% else %}
+                <div class="bento-tile__placeholder">
+                  {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
+                </div>
+              {% endif %}
+            </div>
+          </a>
+        {% endfor %}
+      {% else %}
+        {% comment %} FALLBACK BENTO TILES {% endcomment %}
+        {% assign default_titles = "Electric, Hydraulic / Mechanical, Portable" | split: "," %}
+        {% for title in default_titles %}
+          <a href="#" class="bento-tile">
+            <div class="bento-tile__header">
+              <h2 class="bento-tile__title">{{ title | strip }}</h2>
+            </div>
+            <div class="bento-tile__image-wrapper">
+              <div class="bento-tile__placeholder">
+                {{ 'product-1' | placeholder_svg_tag: 'bento-tile__svg-placeholder' }}
+              </div>
+            </div>
+          </a>
+        {% endfor %}
+      {% endif %}
+    </div>
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Subcategories Bento Grid",
+  "tag": "section",
+  "class": "section-subcategories-grid",
+  "settings": [
+    {
+      "type": "text",
+      "id": "back_text",
+      "label": "Back Link Text",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Main Category Title",
+      "default": "Treatment Tables"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "subcategory",
+      "name": "Bento Tile",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Subcategory Title",
+          "default": "Electric"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Subcategory Link"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Product / Category Image"
+        },
+        {
+          "type": "header",
+          "content": "Tile Styling & Background"
+        },
+        {
+          "type": "color",
+          "id": "bg_color",
+          "label": "Tile Background Color",
+          "default": "#e8e8ed"
+        },
+        {
+          "type": "header",
+          "content": "Title Customization"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "title_font_size",
+          "min": 18,
+          "max": 42,
+          "step": 1,
+          "unit": "px",
+          "label": "Title Font Size",
+          "default": 28
+        },
+        {
+          "type": "header",
+          "content": "Text Shadow Controls"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_text_shadow",
+          "label": "Enable Custom Text Shadow",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "shadow_color",
+          "label": "Shadow Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "shadow_blur",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Shadow Blur / Softness",
+          "default": 8
+        },
+        {
+          "type": "range",
+          "id": "shadow_offset_y",
+          "min": -10,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Shadow Vertical Offset (Y)",
+          "default": 4
+        },
+        {
+          "type": "header",
+          "content": "Image Customization"
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image Fit Mode",
+          "options": [
+            { "value": "cover", "label": "Full Bleed / Cover" },
+            { "value": "contain", "label": "Fit Complete Image (Contain)" }
+          ],
+          "default": "cover"
+        },
+        {
+          "type": "range",
+          "id": "image_size",
+          "min": 50,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Image Scale / Width",
+          "default": 100
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subcategories Bento Grid",
+      "blocks": [
+        {
+          "type": "subcategory",
+          "settings": { "title": "Electric" }
+        },
+        {
+          "type": "subcategory",
+          "settings": { "title": "Hydraulic / Mechanical" }
+        },
+        {
+          "type": "subcategory",
+          "settings": { "title": "Portable" }
+        }
+      ]
+    }
+  ]
 }
-
-/* TOP BAR ALIGNMENT (BACK LEFT + CENTERED TITLE) */
-.subcategories__top-bar {
-  display: table;
-  width: 100%;
-  table-layout: fixed;
-  margin-bottom: 2.5rem;
-}
-
-.subcategories__back,
-.subcategories__header-centered,
-.subcategories__top-bar-spacer {
-  display: table-cell;
-  vertical-align: middle;
-}
-
-.subcategories__back {
-  width: 120px;
-  text-align: left;
-}
-
-.subcategories__back .back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 8px;
-  text-decoration: none;
-  color: #a22938;
-  font-weight: 600;
-  font-size: 0.95rem;
-}
-
-.subcategories__header-centered {
-  text-align: center;
-}
-
-.subcategories__title {
-  font-size: 2.2rem;
-  font-weight: 800;
-  color: #1d1d1f;
-  margin: 0;
-  letter-spacing: -0.02em;
-}
-
-.subcategories__top-bar-spacer {
-  width: 120px;
-}
-
-/* BENTO 3-COLUMN GRID */
-.subcategories__grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 1.75rem;
-}
-
-/* BENTO CARD TILE STYLING */
-.bento-tile {
-  position: relative;
-  background-color: #e8e8ed;
-  border-radius: 28px;
-  padding: 2.2rem 0 0 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  text-decoration: none;
-  aspect-ratio: 4 / 5;
-  overflow: hidden;
-  border: 1px solid rgba(0, 0, 0, 0.04);
-  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, border-color 0.3s ease;
-}
-
-.bento-tile:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.08);
-  border-color: rgba(162, 41, 56, 0.2);
-}
-
-/* HEADER TOP CENTERED TITLE (ZERO BACKGROUND BAND) */
-.bento-tile__header {
-  width: 100%;
-  text-align: center;
-  padding: 0 1.5rem;
-  z-index: 5;
-  background: transparent !important;
-}
-
-.bento-tile__title {
-  font-size: var(--bento-title-size, 28px);
-  font-weight: 800;
-  color: var(--bento-title-color, #000000);
-  margin: 0;
-  line-height: 1.2;
-  letter-spacing: -0.02em;
-  background: transparent !important;
-  transition: color 0.2s ease, text-shadow 0.2s ease;
-}
-
-/* CUSTOM DYNAMIC TEXT SHADOW */
-.bento-tile__title.has-custom-shadow {
-  text-shadow: 0px var(--bento-shadow-y, 4px) var(--bento-shadow-blur, 8px) var(--bento-shadow-color, rgba(0,0,0,0.3));
-}
-
-/* CENTERED / FULL BLEED PRODUCT IMAGE AREA */
-.bento-tile__image-wrapper {
-  width: 100%;
-  flex-grow: 1;
-  display: flex;
-  align-items: flex-end;
-  justify-content: center;
-  margin-top: 1rem;
-  position: relative;
-  overflow: hidden;
-  background: transparent;
-}
-
-.bento-tile__img {
-  width: var(--bento-img-size, 100%);
-  height: 100%;
-  display: block;
-  transition: transform 0.35s ease;
-}
-
-/* COVER MODE (FULL CARD BLEED) */
-.bento-tile--fit-cover .bento-tile__img {
-  object-fit: cover;
-  object-position: center bottom;
-}
-
-/* CONTAIN MODE (FIT INSIDE CARD) */
-.bento-tile--fit-contain .bento-tile__img {
-  object-fit: contain;
-  object-position: center bottom;
-  max-height: 90%;
-}
-
-.bento-tile:hover .bento-tile__img {
-  transform: scale(1.05);
-}
-
-.bento-tile__placeholder {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.bento-tile__svg-placeholder {
-  width: 100px;
-  height: 100px;
-  opacity: 0.35;
-}
-
-/* RESPONSIVE BREAKPOINTS */
-@media (max-width: 991px) {
-  .subcategories__grid {
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.25rem;
-  }
-
-  .bento-tile {
-    padding-top: 1.8rem;
-    border-radius: 22px;
-  }
-
-  .bento-tile__title {
-    font-size: calc(var(--bento-title-size, 28px) * 0.82);
-  }
-
-  .subcategories__title {
-    font-size: 1.75rem;
-  }
-}
-
-@media (max-width: 767px) {
-  .subcategories__grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 1rem;
-  }
-
-  .bento-tile {
-    aspect-ratio: 3 / 4;
-  }
-
-  .subcategories__back,
-  .subcategories__top-bar-spacer {
-    width: 80px;
-  }
-
-  .subcategories__title {
-    font-size: 1.4rem;
-  }
-}
-
-@media (max-width: 480px) {
-  .subcategories__grid {
-    grid-template-columns: 1fr;
-    gap: 1rem;
-  }
-
-  .bento-tile {
-    aspect-ratio: 4 / 3;
-  }
-}
+{% endschema %}

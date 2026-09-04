@@ -61,7 +61,7 @@
   position: relative;
   background-color: #e8e8ed;
   border-radius: 28px;
-  padding: 2.5rem 0 0 0; /* Padding top for title, 0 padding on sides/bottom for full bleed image */
+  padding: 2.2rem 0 0 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -79,12 +79,13 @@
   border-color: rgba(162, 41, 56, 0.2);
 }
 
-/* HEADER TOP CENTERED TITLE WITH CUSTOMIZABLE SIZE & SHADOW */
+/* HEADER TOP CENTERED TITLE */
 .bento-tile__header {
   width: 100%;
   text-align: center;
   padding: 0 1.5rem;
   z-index: 5;
+  background: transparent !important;
 }
 
 .bento-tile__title {
@@ -94,11 +95,13 @@
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
-  transition: color 0.2s ease;
+  background: transparent !important;
+  transition: color 0.2s ease, text-shadow 0.2s ease;
 }
 
-.bento-tile__title.has-shadow {
-  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.35);
+/* CUSTOM DYNAMIC TEXT SHADOW */
+.bento-tile__title.has-custom-shadow {
+  text-shadow: 0px var(--bento-shadow-y, 4px) var(--bento-shadow-blur, 8px) var(--bento-shadow-color, rgba(0,0,0,0.3));
 }
 
 /* CENTERED / FULL BLEED PRODUCT IMAGE AREA */
@@ -111,6 +114,7 @@
   margin-top: 1rem;
   position: relative;
   overflow: hidden;
+  background: transparent;
 }
 
 .bento-tile__img {
