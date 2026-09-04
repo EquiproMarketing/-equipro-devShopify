@@ -24,7 +24,15 @@
           "settings": {
             "title": "Electric",
             "link": "shopify://collections/electric",
-            "bg_color": "#e8e8ed"
+            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#7F7C7C",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "subcategory_me8aYk": {
@@ -32,7 +40,15 @@
           "settings": {
             "title": "Hydraulic / Mechanical",
             "link": "shopify://collections/hydraulic-mechanical",
-            "bg_color": "#e8e8ed"
+            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#A9A6A6",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "subcategory_QVcFrN": {
@@ -40,7 +56,15 @@
           "settings": {
             "title": "Portable",
             "link": "shopify://collections/portable",
-            "bg_color": "#e8e8ed"
+            "image": "shopify://shop_images/calypso-portable-multifunction-table-aluminum-frame-professional-wellness-studio-ei-23402.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#959595",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         }
       },
