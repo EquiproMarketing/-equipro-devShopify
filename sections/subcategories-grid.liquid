@@ -1,7 +1,6 @@
 {{ 'section-subcategories-grid.css' | asset_url | stylesheet_tag }}
 
 <div class="subcategories page-width" id="SubcategoriesGrid-{{ section.id }}">
-  <!-- Top Bar Alignment -->
   <div class="subcategories__top-bar">
     <div class="subcategories__back">
       <a href="javascript:history.back()" class="back-link">
@@ -21,7 +20,6 @@
     <div class="subcategories__spacer"></div>
   </div>
 
-  <!-- Grid Layout -->
   <div class="subcategories__grid">
     {% if section.blocks.size > 0 %}
       {% for block in section.blocks %}
@@ -29,6 +27,8 @@
         {% assign img_size = block.settings.image_size | default: 100 %}
         {% assign title_size = block.settings.title_font_size | default: 28 %}
         {% assign title_color = block.settings.title_color | default: "#000000" %}
+        {% assign title_bg = block.settings.title_bg_color | default: "#ffffff" %}
+        {% assign title_bg_opacity = block.settings.title_bg_opacity | default: 0 | divided_by: 100.0 %}
         {% assign shadow_color = block.settings.shadow_color | default: "rgba(0,0,0,0.3)" %}
         {% assign shadow_blur = block.settings.shadow_blur | default: 8 %}
         {% assign shadow_y = block.settings.shadow_offset_y | default: 4 %}
@@ -40,6 +40,8 @@
             --tile-bg: {{ block.settings.bg_color | default: '#e8e8ed' }};
             --tile-title-size: {{ title_size }}px;
             --tile-title-color: {{ title_color }};
+            --tile-title-bg: {{ title_bg }};
+            --tile-title-bg-opacity: {{ title_bg_opacity }};
             --tile-shadow-color: {{ shadow_color }};
             --tile-shadow-blur: {{ shadow_blur }}px;
             --tile-shadow-y: {{ shadow_y }}px;
@@ -47,7 +49,7 @@
           "
           {{ block.shopify_attributes }}
         >
-          <div class="bento-tile__header {% if block.settings.enable_text_overlay %}bento-tile__header--overlay{% endif %}">
+          <div class="bento-tile__header">
             <h2 class="bento-tile__title {% if block.settings.enable_text_shadow %}bento-tile__title--shadow{% endif %}">
               {{ block.settings.title }}
             </h2>
@@ -152,10 +154,21 @@
           "default": 28
         },
         {
-          "type": "checkbox",
-          "id": "enable_text_overlay",
-          "label": "Enable Gradient Overlay Behind Text",
-          "default": false
+          "type": "color",
+          "id": "title_bg_color",
+          "label": "Title Background Box Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "range",
+          "id": "title_bg_opacity",
+          "min": 0,
+          "max": 100,
+          "step": 5,
+          "unit": "%",
+          "label": "Title Background Box Opacity",
+          "default": 0,
+          "info": "Set to 0% for transparent background."
         },
         {
           "type": "checkbox",
