@@ -57,18 +57,22 @@
     },
     "positive_impact": {
       "type": "positive-impact",
+      "disabled": true,
       "settings": {}
     },
     "why_category": {
       "type": "why-our-category",
+      "disabled": true,
       "settings": {}
     },
     "video": {
       "type": "category-video",
+      "disabled": true,
       "settings": {}
     },
     "faq": {
       "type": "category-faq",
+      "disabled": true,
       "settings": {
         "heading": "Your Questions, Answered",
         "subheading": "Find answers to frequently asked technical and equipment questions.",
