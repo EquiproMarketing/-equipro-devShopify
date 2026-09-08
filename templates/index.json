@@ -671,7 +671,7 @@
             "tag_color": "#FFFFFF",
             "title": "Personnalisation et finitions.",
             "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
-            "color_list": "",
+            "color_list": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "bg_color": "#111111",
             "text_color": "#ffffff",
             "btn_1_text": "Découvrez les finitions",
