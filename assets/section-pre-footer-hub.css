@@ -1,5 +1,5 @@
 /* ==========================================================================
-   PRE-FOOTER HUB STAGGERED & INTERACTIVE 4-IMAGE ROTATOR
+   PRE-FOOTER HUB STAGGERED & INTERACTIVE ROTATOR (CLEAN IMAGES, SOFT ANIMATION)
    ========================================================================== */
 
    .pre-footer-hub {
@@ -60,7 +60,7 @@
     }
   }
   
-  /* MEDIA & IMAGE SWITCHING */
+  /* MEDIA & SMOOTH IMAGE FADE ANIMATION */
   .porsche-card__media {
     position: absolute;
     inset: 0;
@@ -78,16 +78,12 @@
     object-position: center;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease, transform 0.45s ease;
+    transition: opacity 0.4s cubic-bezier(0.16, 1, 0.3, 1);
   }
   
   .porsche-card__img--active {
     opacity: 1;
     visibility: visible;
-  }
-  
-  .porsche-card:hover .porsche-card__img--active {
-    transform: scale(1.04);
   }
   
   /* ROTATOR BULLET DOTS INDICATOR */
@@ -121,7 +117,7 @@
     transform: scale(1.3);
   }
   
-  /* GRADIENT OVERLAY FOR TEXT READABILITY */
+  /* OPTIONAL GRADIENT OVERLAY FOR TEXT READABILITY */
   .porsche-card__gradient {
     position: absolute;
     inset: 0;
@@ -154,7 +150,7 @@
   .porsche-card__title {
     font-size: 1.65rem;
     font-weight: 700;
-    color: #ffffff;
+    color: var(--porsche-text-color, #ffffff);
     margin: 0 0 0.6rem 0;
     line-height: 1.25;
     letter-spacing: -0.01em;
@@ -162,7 +158,8 @@
   
   .porsche-card__text {
     font-size: 0.88rem;
-    color: rgba(255, 255, 255, 0.78);
+    color: var(--porsche-text-color, rgba(255, 255, 255, 0.85));
+    opacity: 0.85;
     margin: 0 0 1.25rem 0;
     line-height: 1.45;
     max-width: 95%;
@@ -197,7 +194,7 @@
     align-items: center;
     padding: 0.65rem 1.25rem;
     background-color: rgba(255, 255, 255, 0.22);
-    color: #ffffff;
+    color: var(--porsche-text-color, #ffffff);
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     border: 1px solid rgba(255, 255, 255, 0.25);

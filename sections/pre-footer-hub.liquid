@@ -76,7 +76,9 @@
               </div>
             {% endif %}
 
-            <div class="porsche-card__gradient"></div>
+            {% if block.settings.enable_dark_overlay %}
+              <div class="porsche-card__gradient"></div>
+            {% endif %}
           </div>
 
           <!-- Content Bottom Overlay -->
@@ -175,23 +177,19 @@
         const mouseX = e.clientX - rect.left;
         const cardWidth = rect.width;
 
-        // Calculate active index based on cursor horizontal position percentage
         let activeIndex = Math.floor((mouseX / cardWidth) * totalImages);
         if (activeIndex < 0) activeIndex = 0;
         if (activeIndex >= totalImages) activeIndex = totalImages - 1;
 
-        // Update active image class
         images.forEach((img, idx) => {
           img.classList.toggle('porsche-card__img--active', idx === activeIndex);
         });
 
-        // Update active indicator dot
         dots.forEach((dot, idx) => {
           dot.classList.toggle('porsche-dot--active', idx === activeIndex);
         });
       });
 
-      // Reset to primary image when cursor leaves card area
       card.addEventListener('mouseleave', function() {
         images.forEach((img, idx) => {
           img.classList.toggle('porsche-card__img--active', idx === 0);
@@ -230,8 +228,14 @@
           "type": "checkbox",
           "id": "enable_interactive_rotator",
           "label": "Enable Cursor Movement Image Rotator",
-          "default": true,
-          "info": "Switches through images dynamically as the user moves the mouse across the card."
+          "default": true
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_dark_overlay",
+          "label": "Enable Dark Gradient Overlay",
+          "default": false,
+          "info": "Uncheck for clean, original bright images without dark gradient."
         },
         {
           "type": "image_picker",
@@ -285,8 +289,7 @@
           "type": "text",
           "id": "color_list",
           "label": "Color Swatches Hex List",
-          "default": "#ffffff, #191919, #2d1e3e",
-          "info": "Comma separated: #ffffff, #000000"
+          "default": "#ffffff, #191919, #2d1e3e"
         },
         {
           "type": "color",
