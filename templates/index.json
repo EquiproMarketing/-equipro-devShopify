@@ -662,12 +662,13 @@
           "type": "staggered_card",
           "settings": {
             "enable_interactive_rotator": true,
+            "enable_dark_overlay": false,
             "image_1": "shopify://shop_images/equipro-leather-upholstery-customization-premium-synthetic-textured-wellness-salon-clinic-seating.webp",
             "image_2": "shopify://shop_images/equipro-custom-upholstery-navy-blue-textured-synthetic-leather-high-durability-professional-treatment-seating.webp",
             "image_3": "shopify://shop_images/equipro-professional-upholstery-textured-synthetic-leather-high-durability-aesthetic-clinic-finish.webp",
             "image_4": "shopify://shop_images/equipro-professional-practitioner-chair-grey-textured-vinyl-upholstery-clinical-furniture-customization-color-charcoal.webp",
             "tag": "fabrication",
-            "tag_color": "#a22938",
+            "tag_color": "#FFFFFF",
             "title": "Personnalisation et finitions.",
             "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
             "color_list": "",
@@ -679,10 +680,30 @@
             "btn_2_link": "",
             "btn_2_is_pdf": true
           }
+        },
+        "staggered_card_CN7qhL": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": true,
+            "enable_dark_overlay": false,
+            "tag": "Support",
+            "tag_color": "#a22938",
+            "title": "Personnalisation et finitions.",
+            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "color_list": "#ffffff, #191919, #2d1e3e",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
         }
       },
       "block_order": [
-        "staggered_card_xVJCmd"
+        "staggered_card_xVJCmd",
+        "staggered_card_CN7qhL"
       ],
       "settings": {
         "main_title": "Customization & Support Hub"
