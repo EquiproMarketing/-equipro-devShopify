@@ -684,8 +684,8 @@
         "staggered_card_CN7qhL": {
           "type": "staggered_card",
           "settings": {
-            "enable_interactive_rotator": true,
-            "enable_dark_overlay": false,
+            "enable_interactive_rotator": false,
+            "enable_dark_overlay": true,
             "image_1": "shopify://shop_images/equipro-24-7-support-technical-assistance-aesthetic-treatment-chair-wellness-clinic.webp",
             "tag": "Support",
             "tag_color": "#a22938",
@@ -709,9 +709,9 @@
             "image_1": "shopify://shop_images/equipro-ergonomic-backrest-stool-pneumatic-practitioner-seat-white-vinyl-salon-wellness-31100-31200-31300.webp",
             "tag": "Support",
             "tag_color": "#a22938",
-            "title": "Personnalisation et finitions.",
-            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
-            "color_list": "#ffffff, #191919, #2d1e3e",
+            "title": "Assembly manuals & guides.",
+            "text": "Download our assembly manuals and find simple step-by-step guides to replace bulbs, change filters, or use your equipment.",
+            "color_list": "",
             "bg_color": "#111111",
             "text_color": "#ffffff",
             "btn_1_text": "Découvrez les finitions",
