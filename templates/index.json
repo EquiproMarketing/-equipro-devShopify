@@ -704,8 +704,8 @@
         "staggered_card_wQgJT4": {
           "type": "staggered_card",
           "settings": {
-            "enable_interactive_rotator": true,
-            "enable_dark_overlay": false,
+            "enable_interactive_rotator": false,
+            "enable_dark_overlay": true,
             "image_1": "shopify://shop_images/equipro-ergonomic-backrest-stool-pneumatic-practitioner-seat-white-vinyl-salon-wellness-31100-31200-31300.webp",
             "tag": "Support",
             "tag_color": "#a22938",
