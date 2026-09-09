@@ -10,11 +10,7 @@
       {%- for block in section.blocks -%}
         {%- assign card_product = block.settings.product -%}
         
-        {%- comment -%} 
-          1. RESOLUCIÓN DINÁMICA DE TÍTULO:
-             Si hay producto seleccionado, se usa card_product.title automáticamente.
-             Si el usuario escribe algo en block.settings.title, se usa la edición.
-        {%- endcomment -%}
+        {%- comment -%} DYNAMIC TITLE RESOLUTION {%- endcomment -%}
         {%- if block.settings.title != blank -%}
           {%- assign display_title = block.settings.title -%}
         {%- elsif card_product != blank -%}
@@ -23,10 +19,7 @@
           {%- assign display_title = nil -%}
         {%- endif -%}
 
-        {%- comment -%} 
-          2. RESOLUCIÓN DINÁMICA DE PRECIO:
-             Extrae el precio real del producto (formateado en moneda de la tienda).
-        {%- endcomment -%}
+        {%- comment -%} DYNAMIC PRICE RESOLUTION {%- endcomment -%}
         {%- if block.settings.price != blank -%}
           {%- assign display_price = block.settings.price -%}
         {%- elsif card_product != blank -%}
@@ -41,11 +34,7 @@
           {%- assign display_price = nil -%}
         {%- endif -%}
 
-        {%- comment -%} 
-          3. RESOLUCIÓN DINÁMICA DE IMAGEN Y HOVER:
-             Si hay producto, toma su imagen destacada. Si tiene varias imágenes,
-             toma la segunda para el efecto hover.
-        {%- endcomment -%}
+        {%- comment -%} DYNAMIC IMAGE & HOVER RESOLUTION {%- endcomment -%}
         {%- assign display_image = block.settings.product_image -%}
         {%- if display_image == blank and card_product.featured_media != blank -%}
           {%- assign display_image = card_product.featured_media -%}
@@ -56,10 +45,7 @@
           {%- assign hover_image = card_product.media[1] -%}
         {%- endif -%}
 
-        {%- comment -%} 
-          4. RESOLUCIÓN DINÁMICA DE ENLACES (URLs):
-             Si se selecciona un producto, apunta automáticamente a su página.
-        {%- endcomment -%}
+        {%- comment -%} DYNAMIC URL RESOLUTION {%- endcomment -%}
         {%- assign display_url = block.settings.btn_primary_url -%}
         {%- if display_url == blank and card_product != blank -%}
           {%- assign display_url = card_product.url -%}
@@ -144,13 +130,13 @@
             <div class="custom-treatment-card__actions">
               {%- if display_url != blank -%}
                 <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                  {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
+                  {{ block.settings.btn_primary_text | default: 'Learn More' }}
                 </a>
               {%- endif -%}
 
               {%- if display_buy_url != blank -%}
                 <a href="{{ display_buy_url }}" class="custom-treatment-btn custom-treatment-btn--link">
-                  {{ block.settings.btn_secondary_text | default: 'Acheter >' }}
+                  {{ block.settings.btn_secondary_text | default: 'Buy Now >' }}
                 </a>
               {%- endif -%}
             </div>
@@ -204,7 +190,7 @@
           "type": "text",
           "id": "subtitle",
           "label": "Subtitle / Description",
-          "default": "Parfaite alliée de votre pratique."
+          "default": "Perfect partner for your clinical practice."
         },
         {
           "type": "text",
@@ -244,7 +230,7 @@
           "type": "text",
           "id": "btn_primary_text",
           "label": "Primary Button Text",
-          "default": "En savoir plus"
+          "default": "Learn More"
         },
         {
           "type": "url",
@@ -255,7 +241,7 @@
           "type": "text",
           "id": "btn_secondary_text",
           "label": "Secondary Button Text",
-          "default": "Acheter >"
+          "default": "Buy Now >"
         },
         {
           "type": "url",
