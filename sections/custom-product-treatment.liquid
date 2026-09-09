@@ -10,12 +10,16 @@
       {%- for block in section.blocks -%}
         {%- assign card_product = block.settings.product -%}
         
-        {%- comment -%} DYNAMIC PRODUCT DATA FALLBACKS {%- endcomment -%}
-        {%- assign display_title = block.settings.title | default: card_product.title | default: 'Product Title' -%}
-        {%- assign display_url = block.settings.btn_primary_url | default: card_product.url | default: '#' -%}
-        {%- assign display_buy_url = block.settings.btn_secondary_url | default: card_product.url | default: '#' -%}
-        
-        {%- comment -%} PRICE RESOLUTION {%- endcomment -%}
+        {%- comment -%} RESOLUCIÓN DE TÍTULO AUTOMÁTICO / EDITABLE {%- endcomment -%}
+        {%- if block.settings.title != blank -%}
+          {%- assign display_title = block.settings.title -%}
+        {%- elsif card_product != blank -%}
+          {%- assign display_title = card_product.title -%}
+        {%- else -%}
+          {%- assign display_title = 'Product Title' -%}
+        {%- endif -%}
+
+        {%- comment -%} RESOLUCIÓN DE PRECIO AUTOMÁTICO / EDITABLE {%- endcomment -%}
         {%- if block.settings.price != blank -%}
           {%- assign display_price = block.settings.price -%}
         {%- elsif card_product != blank -%}
@@ -30,15 +34,19 @@
           {%- assign display_price = 'À partir de 1 299 $' -%}
         {%- endif -%}
 
-        {%- comment -%} IMAGE RESOLUTION {%- endcomment -%}
+        {%- comment -%} RESOLUCIÓN DE IMAGEN AUTOMÁTICA / EDITABLE {%- endcomment -%}
         {%- assign display_image = block.settings.product_image -%}
         {%- if display_image == blank and card_product.featured_media != blank -%}
           {%- assign display_image = card_product.featured_media -%}
         {%- endif -%}
 
+        {%- comment -%} RESOLUCIÓN DE URLS {%- endcomment -%}
+        {%- assign display_url = block.settings.btn_primary_url | default: card_product.url | default: '#' -%}
+        {%- assign display_buy_url = block.settings.btn_secondary_url | default: card_product.url | default: '#' -%}
+
         <div class="custom-treatment-card" {{ block.shopify_attributes }}>
           
-          {%- comment -%} APPLE-STYLE ROUNDED IMAGE CONTAINER (4:5 ASPECT RATIO) {%- endcomment -%}
+          {%- comment -%} CONTENEDOR DE IMAGEN (4:5 ASPECT RATIO) {%- endcomment -%}
           <div 
             class="custom-treatment-card__image-container"
             style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
@@ -59,7 +67,7 @@
             {%- endif -%}
           </div>
 
-          {%- comment -%} COLOR SWATCHES {%- endcomment -%}
+          {%- comment -%} MUESTRAS DE COLOR {%- endcomment -%}
           <div class="custom-treatment-card__swatches">
             {%- assign colors = block.settings.available_colors | split: ',' -%}
             {%- for color_code in colors -%}
@@ -74,7 +82,7 @@
             {%- endfor -%}
           </div>
 
-          {%- comment -%} CARD DETAILS AND TEXTS {%- endcomment -%}
+          {%- comment -%} DETALLES Y TEXTOS {%- endcomment -%}
           <div class="custom-treatment-card__content">
             <h3 class="custom-treatment-card__title">
               <a href="{{ display_url }}">{{ display_title }}</a>
@@ -88,7 +96,7 @@
               <p class="custom-treatment-card__price">{{ display_price }}</p>
             {%- endif -%}
 
-            {%- comment -%} ACTION BUTTONS {%- endcomment -%}
+            {%- comment -%} BOTONES DE ACCIÓN {%- endcomment -%}
             <div class="custom-treatment-card__actions">
               <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
                 {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
@@ -126,22 +134,22 @@
       "settings": [
         {
           "type": "header",
-          "content": "Product Selection"
+          "content": "Automated Product Link"
         },
         {
           "type": "product",
           "id": "product",
           "label": "Select Product",
-          "info": "Pulls title, main image, price, and URL automatically from Shopify."
+          "info": "Selecting a product automatically fills Title, Image, Price, and Link."
         },
         {
           "type": "header",
-          "content": "Custom Overrides (Optional)"
+          "content": "Custom Overrides (Edit Auto Values)"
         },
         {
           "type": "image_picker",
           "id": "product_image",
-          "label": "Custom Image (Overrides product image)"
+          "label": "Override Product Image"
         },
         {
           "type": "color",
@@ -152,7 +160,8 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Custom Product Name (Overrides product title)"
+          "label": "Override Product Title",
+          "info": "Leave blank to use automatic product title."
         },
         {
           "type": "text",
@@ -163,7 +172,8 @@
         {
           "type": "text",
           "id": "price",
-          "label": "Custom Price Text (Overrides automatic product price)"
+          "label": "Override Price Text",
+          "info": "Leave blank to use automatic product price."
         },
         {
           "type": "textarea",
@@ -184,7 +194,7 @@
         {
           "type": "url",
           "id": "btn_primary_url",
-          "label": "Custom Link (Overrides product URL)"
+          "label": "Override Primary Button Link"
         },
         {
           "type": "header",
@@ -199,7 +209,7 @@
         {
           "type": "url",
           "id": "btn_secondary_url",
-          "label": "Custom Link URL (Overrides product URL)"
+          "label": "Override Secondary Link URL"
         }
       ]
     }
