@@ -8,6 +8,34 @@
 
     <div class="custom-treatment-grid">
       {%- for block in section.blocks -%}
+        {%- assign card_product = block.settings.product -%}
+        
+        {%- comment -%} DYNAMIC PRODUCT DATA FALLBACKS {%- endcomment -%}
+        {%- assign display_title = block.settings.title | default: card_product.title | default: 'Product Title' -%}
+        {%- assign display_url = block.settings.btn_primary_url | default: card_product.url | default: '#' -%}
+        {%- assign display_buy_url = block.settings.btn_secondary_url | default: card_product.url | default: '#' -%}
+        
+        {%- comment -%} PRICE RESOLUTION {%- endcomment -%}
+        {%- if block.settings.price != blank -%}
+          {%- assign display_price = block.settings.price -%}
+        {%- elsif card_product != blank -%}
+          {%- capture display_price -%}
+            {%- if card_product.price_varies -%}
+              {{ 'products.product.from_lowest_price_html' | t: lowest_price: card_product.price_min | money }}
+            {%- else -%}
+              {{ card_product.price | money }}
+            {%- endif -%}
+          {%- endcapture -%}
+        {%- else -%}
+          {%- assign display_price = 'À partir de 1 299 $' -%}
+        {%- endif -%}
+
+        {%- comment -%} IMAGE RESOLUTION {%- endcomment -%}
+        {%- assign display_image = block.settings.product_image -%}
+        {%- if display_image == blank and card_product.featured_media != blank -%}
+          {%- assign display_image = card_product.featured_media -%}
+        {%- endif -%}
+
         <div class="custom-treatment-card" {{ block.shopify_attributes }}>
           
           {%- comment -%} APPLE-STYLE ROUNDED IMAGE CONTAINER (4:5 ASPECT RATIO) {%- endcomment -%}
@@ -15,15 +43,17 @@
             class="custom-treatment-card__image-container"
             style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
           >
-            {%- if block.settings.product_image != blank -%}
-              <img
-                src="{{ block.settings.product_image | image_url: width: 500 }}"
-                alt="{{ block.settings.title | escape }}"
-                loading="lazy"
-                width="240"
-                height="300"
-                class="custom-treatment-card__image"
-              >
+            {%- if display_image != blank -%}
+              <a href="{{ display_url }}" class="custom-treatment-card__image-link">
+                <img
+                  src="{{ display_image | image_url: width: 600 }}"
+                  alt="{{ display_title | escape }}"
+                  loading="lazy"
+                  width="240"
+                  height="300"
+                  class="custom-treatment-card__image"
+                >
+              </a>
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
             {%- endif -%}
@@ -46,23 +76,25 @@
 
           {%- comment -%} CARD DETAILS AND TEXTS {%- endcomment -%}
           <div class="custom-treatment-card__content">
-            <h3 class="custom-treatment-card__title">{{ block.settings.title }}</h3>
+            <h3 class="custom-treatment-card__title">
+              <a href="{{ display_url }}">{{ display_title }}</a>
+            </h3>
             
             {%- if block.settings.subtitle != blank -%}
               <p class="custom-treatment-card__subtitle">{{ block.settings.subtitle }}</p>
             {%- endif -%}
 
-            {%- if block.settings.price != blank -%}
-              <p class="custom-treatment-card__price">{{ block.settings.price }}</p>
+            {%- if display_price != blank -%}
+              <p class="custom-treatment-card__price">{{ display_price }}</p>
             {%- endif -%}
 
             {%- comment -%} ACTION BUTTONS {%- endcomment -%}
             <div class="custom-treatment-card__actions">
-              <a href="{{ block.settings.btn_primary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--primary">
+              <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
                 {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
               </a>
 
-              <a href="{{ block.settings.btn_secondary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--link">
+              <a href="{{ display_buy_url }}" class="custom-treatment-btn custom-treatment-btn--link">
                 {{ block.settings.btn_secondary_text | default: 'Acheter >' }}
               </a>
             </div>
@@ -93,9 +125,23 @@
       "name": "Product Card",
       "settings": [
         {
+          "type": "header",
+          "content": "Product Selection"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product",
+          "info": "Pulls title, main image, price, and URL automatically from Shopify."
+        },
+        {
+          "type": "header",
+          "content": "Custom Overrides (Optional)"
+        },
+        {
           "type": "image_picker",
           "id": "product_image",
-          "label": "Product Image"
+          "label": "Custom Image (Overrides product image)"
         },
         {
           "type": "color",
@@ -106,8 +152,7 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Product Name",
-          "default": "Ultra-comfort"
+          "label": "Custom Product Name (Overrides product title)"
         },
         {
           "type": "text",
@@ -118,8 +163,7 @@
         {
           "type": "text",
           "id": "price",
-          "label": "Price Text",
-          "default": "À partir de 1 299 $"
+          "label": "Custom Price Text (Overrides automatic product price)"
         },
         {
           "type": "textarea",
@@ -140,7 +184,7 @@
         {
           "type": "url",
           "id": "btn_primary_url",
-          "label": "Button Link"
+          "label": "Custom Link (Overrides product URL)"
         },
         {
           "type": "header",
@@ -155,7 +199,7 @@
         {
           "type": "url",
           "id": "btn_secondary_url",
-          "label": "Link URL"
+          "label": "Custom Link URL (Overrides product URL)"
         }
       ]
     }
