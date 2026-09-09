@@ -33,77 +33,79 @@
         "hide_on_mobile": true
       }
     },
-    "subcategories_grid_HniybM": {
-      "type": "subcategories-grid",
+    "collection_banner_6nLHkW": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
+        "overlay_opacity": 40
+      }
+    },
+    "custom_product_treatment_wLEm4y": {
+      "type": "custom-product-treatment",
       "blocks": {
-        "subcategory_rLkYyD": {
-          "type": "subcategory",
+        "product_card_KGUQDw": {
+          "type": "product_card",
           "settings": {
-            "title": "Electric",
-            "link": "shopify://collections/electric",
-            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#7f7c7c",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "product_image": "shopify://shop_images/therabath-professional-paraffin-wax-bath-65100-tub-ii.webp",
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "shopify://products/65100-therabath-tub-ii",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
           }
         },
-        "subcategory_me8aYk": {
-          "type": "subcategory",
+        "product_card_tH3RNm": {
+          "type": "product_card",
           "settings": {
-            "title": "Hydraulic / Mechanical",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#a9a6a6",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
           }
         },
-        "subcategory_QVcFrN": {
-          "type": "subcategory",
+        "product_card_ffeRPh": {
+          "type": "product_card",
           "settings": {
-            "title": "Portable",
-            "link": "shopify://collections/portable",
-            "image": "shopify://shop_images/calypso-portable-multifunction-table-aluminum-frame-professional-wellness-studio-ei-23402.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#959595",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
           }
         }
       },
       "block_order": [
-        "subcategory_rLkYyD",
-        "subcategory_me8aYk",
-        "subcategory_QVcFrN"
+        "product_card_KGUQDw",
+        "product_card_tH3RNm",
+        "product_card_ffeRPh"
       ],
-      "name": "Subcategories Bento Grid",
+      "name": "Custom Product Treatment",
       "settings": {
-        "back_text": "Back",
-        "title": "Treatment Tables"
+        "title": "Beds & Stools"
       }
     },
     "positive_impact": {
       "type": "positive-impact",
-      "disabled": true,
       "settings": {}
     },
     "why_category": {
       "type": "why-our-category",
-      "disabled": true,
       "settings": {}
     },
     "video": {
@@ -112,7 +114,6 @@
     },
     "faq": {
       "type": "category-faq",
-      "disabled": true,
       "settings": {
         "heading": "Your Questions, Answered",
         "subheading": "Find answers to frequently asked technical and equipment questions.",
@@ -138,7 +139,8 @@
   },
   "order": [
     "subnav",
-    "subcategories_grid_HniybM",
+    "collection_banner_6nLHkW",
+    "custom_product_treatment_wLEm4y",
     "positive_impact",
     "why_category",
     "video",
