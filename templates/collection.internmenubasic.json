@@ -54,11 +54,11 @@
             "subtitle": "Perfect partner for your clinical practice.",
             "price": "",
             "card_bg_color": "#f5f5f7",
-            "available_colors": "#ffffff, #111111, #808080",
+            "available_colors": "",
             "btn_primary_text": "Learn More",
-            "btn_primary_url": "",
+            "btn_primary_url": "shopify://products/65100-therabath-tub-ii",
             "btn_secondary_text": "Buy Now >",
-            "btn_secondary_url": ""
+            "btn_secondary_url": "shopify://products/65100-therabath-tub-ii"
           }
         },
         "product_card_6UBwRJ": {
@@ -69,7 +69,7 @@
             "subtitle": "Perfect partner for your clinical practice.",
             "price": "",
             "card_bg_color": "#f5f5f7",
-            "available_colors": "#ffffff, #111111, #808080",
+            "available_colors": "",
             "btn_primary_text": "Learn More",
             "btn_primary_url": "",
             "btn_secondary_text": "Buy Now >",
@@ -84,7 +84,7 @@
             "subtitle": "Perfect partner for your clinical practice.",
             "price": "",
             "card_bg_color": "#f5f5f7",
-            "available_colors": "#ffffff, #111111, #808080",
+            "available_colors": "",
             "btn_primary_text": "Learn More",
             "btn_primary_url": "",
             "btn_secondary_text": "Buy Now >",
@@ -99,7 +99,7 @@
             "subtitle": "Perfect partner for your clinical practice.",
             "price": "",
             "card_bg_color": "#f5f5f7",
-            "available_colors": "#ffffff, #111111, #808080",
+            "available_colors": "",
             "btn_primary_text": "Learn More",
             "btn_primary_url": "",
             "btn_secondary_text": "Buy Now >",
