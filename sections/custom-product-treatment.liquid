@@ -7,146 +7,209 @@
     {%- endif -%}
 
     <div class="custom-treatment-grid">
+      {%- comment -%} 1. BLOQUES MANUALES (REORDENAR/OCULTAR ESPECÍFICOS) {%- endcomment -%}
       {%- if section.blocks.size > 0 -%}
         {%- for block in section.blocks -%}
-          {%- comment -%} VERIFICAR SI LA TARJETA ESTÁ OCULTA {%- endcomment -%}
           {%- if block.settings.hide_card == true -%}{%- continue -%}{%- endif -%}
 
           {%- assign product = block.settings.product -%}
-          
-          {%- comment -%} EXTRAER DATOS AUTOMÁTICOS DEL PRODUCTO CON OPCIÓN DE SOBRESCRIBIR {%- endcomment -%}
-          {%- assign display_title = block.settings.title | default: product.title -%}
-          {%- assign display_description = block.settings.description | default: product.description | strip_html | truncatewords: 10 -%}
-          {%- assign display_url = product.url -%}
-          {%- assign display_image = block.settings.custom_image | default: product.featured_media -%}
-          
-          {%- assign variant_id = product.selected_or_first_available_variant.id -%}
-          {%- assign is_available = product.selected_or_first_available_variant.available -%}
-          
-          {%- assign hover_image = nil -%}
-          {%- if block.settings.custom_hover_image != blank -%}
-            {%- assign hover_image = block.settings.custom_hover_image -%}
-          {%- elsif product.media.size > 1 -%}
-            {%- assign hover_image = product.media[1] -%}
-          {%- endif -%}
-
-          {%- capture display_price -%}
-            {%- if product.price_varies -%}
-              {{ 'products.product.from_lowest_price_html' | t: lowest_price: product.price_min | money }}
-            {%- elsif product.price != blank -%}
-              {{ product.price | money }}
-            {%- else -%}
-              {{ block.settings.custom_price }}
+          {%- if product != blank -%}
+            {%- assign display_title = block.settings.title | default: product.title -%}
+            {%- assign display_description = block.settings.description | default: product.description | strip_html | truncatewords: 10 -%}
+            {%- assign display_url = product.url -%}
+            {%- assign display_image = block.settings.custom_image | default: product.featured_media -%}
+            
+            {%- assign variant_id = product.selected_or_first_available_variant.id -%}
+            {%- assign is_available = product.selected_or_first_available_variant.available -%}
+            
+            {%- assign hover_image = nil -%}
+            {%- if block.settings.custom_hover_image != blank -%}
+              {%- assign hover_image = block.settings.custom_hover_image -%}
+            {%- elsif product.media.size > 1 -%}
+              {%- assign hover_image = product.media[1] -%}
             {%- endif -%}
-          {%- endcapture -%}
 
-          <div class="custom-treatment-card" {{ block.shopify_attributes }}>
-            <!-- CONTENEDOR DE IMAGEN (ASPECT RATIO 4:5) -->
-            <div 
-              class="custom-treatment-card__image-container"
-              style="background-color: {{ section.settings.card_bg_color | default: '#f5f5f7' }};"
-            >
-              {%- if display_image != blank -%}
-                <a href="{{ display_url | default: '#' }}" class="custom-treatment-card__image-link">
-                  <img
-                    src="{{ display_image | image_url: width: 600 }}"
-                    alt="{{ display_title | escape }}"
-                    loading="lazy"
-                    width="240"
-                    height="300"
-                    class="custom-treatment-card__image {% if hover_image != blank %}custom-treatment-card__image--primary{% endif %}"
-                  >
-                  {%- if hover_image != blank -%}
+            {%- capture display_price -%}
+              {%- if product.price_varies -%}
+                {{ 'products.product.from_lowest_price_html' | t: lowest_price: product.price_min | money }}
+              {%- else -%}
+                {{ product.price | money }}
+              {%- endif -%}
+            {%- endcapture -%}
+
+            <div class="custom-treatment-card" {{ block.shopify_attributes }}>
+              <div 
+                class="custom-treatment-card__image-container"
+                style="background-color: {{ section.settings.card_bg_color | default: '#f5f5f7' }};"
+              >
+                {%- if display_image != blank -%}
+                  <a href="{{ display_url }}" class="custom-treatment-card__image-link">
                     <img
-                      src="{{ hover_image | image_url: width: 600 }}"
+                      src="{{ display_image | image_url: width: 600 }}"
                       alt="{{ display_title | escape }}"
                       loading="lazy"
                       width="240"
                       height="300"
-                      class="custom-treatment-card__image custom-treatment-card__image--hover"
+                      class="custom-treatment-card__image {% if hover_image != blank %}custom-treatment-card__image--primary{% endif %}"
                     >
-                  {%- endif -%}
-                </a>
-              {%- else -%}
-                {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
-              {%- endif -%}
-            </div>
+                    {%- if hover_image != blank -%}
+                      <img
+                        src="{{ hover_image | image_url: width: 600 }}"
+                        alt="{{ display_title | escape }}"
+                        loading="lazy"
+                        width="240"
+                        height="300"
+                        class="custom-treatment-card__image custom-treatment-card__image--hover"
+                      >
+                    {%- endif -%}
+                  </a>
+                {%- else -%}
+                  {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
+                {%- endif -%}
+              </div>
 
-            <!-- CONTENIDO DE LA TARJETA -->
-            <div class="custom-treatment-card__content">
-              {%- if display_title != blank -%}
+              <div class="custom-treatment-card__content">
                 <h3 class="custom-treatment-card__title">
-                  {%- if display_url != blank -%}
-                    <a href="{{ display_url }}">{{ display_title }}</a>
-                  {%- else -%}
-                    {{ display_title }}
-                  {%- endif -%}
+                  <a href="{{ display_url }}">{{ display_title }}</a>
                 </h3>
-              {%- endif -%}
-              
-              <p class="custom-treatment-card__subtitle">
-                {{ block.settings.subtitle | default: product.vendor | default: section.settings.default_subtitle }}
-              </p>
+                
+                <p class="custom-treatment-card__subtitle">
+                  {{ block.settings.subtitle | default: product.vendor | default: section.settings.default_subtitle }}
+                </p>
 
-              {%- if display_description != blank -%}
                 <p class="custom-treatment-card__description">
                   {{ display_description }}
                 </p>
-              {%- endif -%}
 
-              {%- if display_price != blank -%}
                 <p class="custom-treatment-card__price">{{ display_price }}</p>
+
+                <div class="custom-treatment-card__actions">
+                  <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
+                    {{ section.settings.btn_primary_text | default: 'Learn More' }}
+                  </a>
+
+                  {%- if is_available -%}
+                    <button 
+                      type="button"
+                      class="custom-treatment-btn custom-treatment-btn--add-to-cart js-add-to-cart-btn"
+                      data-variant-id="{{ variant_id }}"
+                    >
+                      <span class="btn-text">{{ section.settings.btn_cart_text | default: 'Add to Cart' }}</span>
+                      <span class="btn-spinner" style="display:none;">...</span>
+                    </button>
+                  {%- else -%}
+                    <button type="button" class="custom-treatment-btn custom-treatment-btn--disabled" disabled>
+                      Sold Out
+                    </button>
+                  {%- endif -%}
+                </div>
+              </div>
+            </div>
+          {%- endif -%}
+        {%- endfor -%}
+
+      {%- comment -%} 2. CARGA AUTOMÁTICA DE COLECCIÓN (SI NO HAY BLOQUES) {%- endcomment -%}
+      {%- else -%}
+        {%- assign collection_target = section.settings.featured_collection -%}
+        {%- assign products_limit = section.settings.products_to_show | default: 8 -%}
+
+        {%- if collection_target != blank and collection_target.products.size > 0 -%}
+          {%- for product in collection_target.products limit: products_limit -%}
+            {%- assign display_title = product.title -%}
+            {%- assign display_url = product.url -%}
+            {%- assign display_image = product.featured_media -%}
+            {%- assign variant_id = product.selected_or_first_available_variant.id -%}
+            {%- assign is_available = product.selected_or_first_available_variant.available -%}
+            
+            {%- assign hover_image = nil -%}
+            {%- if product.media.size > 1 -%}
+              {%- assign hover_image = product.media[1] -%}
+            {%- endif -%}
+
+            {%- capture display_price -%}
+              {%- if product.price_varies -%}
+                {{ 'products.product.from_lowest_price_html' | t: lowest_price: product.price_min | money }}
+              {%- else -%}
+                {{ product.price | money }}
               {%- endif -%}
+            {%- endcapture -%}
 
-              <!-- BOTONES DE ACCIÓN (LEARN MORE + ADD TO CART AJAX) -->
-              <div class="custom-treatment-card__actions">
-                <a href="{{ display_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                  {{ section.settings.btn_primary_text | default: 'Learn More' }}
-                </a>
-
-                {%- if is_available and variant_id != blank -%}
-                  <button 
-                    type="button"
-                    class="custom-treatment-btn custom-treatment-btn--add-to-cart js-add-to-cart-btn"
-                    data-variant-id="{{ variant_id }}"
-                  >
-                    <span class="btn-text">{{ section.settings.btn_cart_text | default: 'Add to Cart' }}</span>
-                    <span class="btn-spinner" style="display:none;">...</span>
-                  </button>
+            <div class="custom-treatment-card">
+              <div 
+                class="custom-treatment-card__image-container"
+                style="background-color: {{ section.settings.card_bg_color | default: '#f5f5f7' }};"
+              >
+                {%- if display_image != blank -%}
+                  <a href="{{ display_url }}" class="custom-treatment-card__image-link">
+                    <img
+                      src="{{ display_image | image_url: width: 600 }}"
+                      alt="{{ display_title | escape }}"
+                      loading="lazy"
+                      width="240"
+                      height="300"
+                      class="custom-treatment-card__image {% if hover_image != blank %}custom-treatment-card__image--primary{% endif %}"
+                    >
+                    {%- if hover_image != blank -%}
+                      <img
+                        src="{{ hover_image | image_url: width: 600 }}"
+                        alt="{{ display_title | escape }}"
+                        loading="lazy"
+                        width="240"
+                        height="300"
+                        class="custom-treatment-card__image custom-treatment-card__image--hover"
+                      >
+                    {%- endif -%}
+                  </a>
                 {%- else -%}
-                  <button type="button" class="custom-treatment-btn custom-treatment-btn--disabled" disabled>
-                    Sold Out
-                  </button>
+                  {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
                 {%- endif -%}
               </div>
-            </div>
-          </div>
-        {%- endfor -%}
-      {%- else -%}
-        <!-- FALLBACK SI AÚN NO SE HAN AGREGADO BLOQUES -->
-        {%- for i in (1..4) -%}
-          <div class="custom-treatment-card">
-            <div class="custom-treatment-card__image-container" style="background-color: #f5f5f7;">
-              {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
-            </div>
-            <div class="custom-treatment-card__content">
-              <h3 class="custom-treatment-card__title">Sample Treatment Bed</h3>
-              <p class="custom-treatment-card__subtitle">Professional Spa Series</p>
-              <p class="custom-treatment-card__description">High-end ergonomic design for ultimate treatment comfort.</p>
-              <p class="custom-treatment-card__price">$1,299.00</p>
-              <div class="custom-treatment-card__actions">
-                <a href="#" class="custom-treatment-btn custom-treatment-btn--primary">Learn More</a>
-                <button type="button" class="custom-treatment-btn custom-treatment-btn--add-to-cart">Add to Cart</button>
+
+              <div class="custom-treatment-card__content">
+                <h3 class="custom-treatment-card__title">
+                  <a href="{{ display_url }}">{{ display_title }}</a>
+                </h3>
+                
+                <p class="custom-treatment-card__subtitle">
+                  {{ product.vendor | default: section.settings.default_subtitle }}
+                </p>
+
+                <p class="custom-treatment-card__description">
+                  {{ product.description | strip_html | truncatewords: 10 }}
+                </p>
+
+                <p class="custom-treatment-card__price">{{ display_price }}</p>
+
+                <div class="custom-treatment-card__actions">
+                  <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
+                    {{ section.settings.btn_primary_text | default: 'Learn More' }}
+                  </a>
+
+                  {%- if is_available -%}
+                    <button 
+                      type="button"
+                      class="custom-treatment-btn custom-treatment-btn--add-to-cart js-add-to-cart-btn"
+                      data-variant-id="{{ variant_id }}"
+                    >
+                      <span class="btn-text">{{ section.settings.btn_cart_text | default: 'Add to Cart' }}</span>
+                      <span class="btn-spinner" style="display:none;">...</span>
+                    </button>
+                  {%- else -%}
+                    <button type="button" class="custom-treatment-btn custom-treatment-btn--disabled" disabled>
+                      Sold Out
+                    </button>
+                  {%- endif -%}
+                </div>
               </div>
             </div>
-          </div>
-        {%- endfor -%}
+          {%- endfor -%}
+        {%- endif -%}
       {%- endif -%}
     </div>
   </div>
 </section>
 
-<!-- SCRIPT AJAX ADD TO CART -->
+<!-- AJAX ADD TO CART SCRIPT -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const sectionContainer = document.getElementById('treatment-section-{{ section.id }}');
@@ -233,6 +296,21 @@
       "default": "Beds & Stools"
     },
     {
+      "type": "collection",
+      "id": "featured_collection",
+      "label": "Select Automatic Collection",
+      "info": "Automatically fetches products from this collection unless manual blocks are added below."
+    },
+    {
+      "type": "range",
+      "id": "products_to_show",
+      "min": 2,
+      "max": 12,
+      "step": 1,
+      "label": "Collection Limit",
+      "default": 8
+    },
+    {
       "type": "color",
       "id": "card_bg_color",
       "label": "Card Background Color",
@@ -264,24 +342,18 @@
   "blocks": [
     {
       "type": "product_card",
-      "name": "Product Card",
+      "name": "Manual Product Card",
       "settings": [
         {
           "type": "checkbox",
           "id": "hide_card",
           "label": "Hide / Disable Card",
-          "default": false,
-          "info": "Check this box to temporarily hide this card from the store without deleting it."
+          "default": false
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product",
-          "info": "Selecting a product fills title, price, description, images, and add-to-cart action automatically."
-        },
-        {
-          "type": "header",
-          "content": "Custom Overrides (Optional)"
+          "label": "Select Product"
         },
         {
           "type": "text",
@@ -296,13 +368,7 @@
         {
           "type": "textarea",
           "id": "description",
-          "label": "Custom Short Description Override",
-          "info": "Leave blank to use the product summary."
-        },
-        {
-          "type": "text",
-          "id": "custom_price",
-          "label": "Custom Price Override (text)"
+          "label": "Custom Short Description Override"
         },
         {
           "type": "image_picker",
@@ -319,13 +385,7 @@
   ],
   "presets": [
     {
-      "name": "Custom Product Treatment",
-      "blocks": [
-        { "type": "product_card" },
-        { "type": "product_card" },
-        { "type": "product_card" },
-        { "type": "product_card" }
-      ]
+      "name": "Custom Product Treatment"
     }
   ]
 }
