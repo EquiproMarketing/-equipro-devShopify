@@ -4,12 +4,10 @@
 {% assign target_product = section.settings.featured_product | default: product %}
 
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
-  
-  <!-- Grid 1: Textos e Imágenes -->
-  <div class="product-main-grid">
+  <div class="product-master-grid">
     
-    <!-- Columna Izquierda: Información Principal -->
-    <div class="product-info-col">
+    <!-- COLUMNA IZQUIERDA: Info, Formulario de Compra, Acordeón y Envíos -->
+    <div class="product-left-col">
       <div class="product-page__back">
         <a href="javascript:history.back()" class="back-link">
           <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
@@ -23,7 +21,7 @@
         {{ section.settings.custom_title | default: target_product.title | default: "Round Air-lift Stool" }}
       </h1>
       
-      {% assign intro_text = section.settings.intro_highlight | default: target_product.metafields.custom.intro_highlight %}
+      {% assign intro_text = section.settings.intro_highlight %}
       {% if intro_text != blank %}
         <div class="product-info__intro-highlight">
           <p>{{ intro_text }}</p>
@@ -40,131 +38,50 @@
         {% endif %}
       </div>
 
-      {% if section.settings.subtitle != blank %}
-        <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
-      {% endif %}
-
-      {% if section.settings.secondary_text != blank %}
-        <div class="product-info__description">
-          <p>{{ section.settings.secondary_text }}</p>
-        </div>
-      {% endif %}
-    </div>
-
-    <!-- Columna Derecha: Galería (Imagen grande a la izquierda, miniaturas a la derecha) -->
-    <div class="product-gallery-col">
-      <div class="product-gallery">
-        <!-- Imagen Principal Grande -->
-        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
-          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
-          {% if first_img_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
-          {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
-          {% else %}
-            <div class="product-gallery__placeholder"></div>
-          {% endif %}
+      <!-- COMPRA -->
+      <div class="product-buy-box">
+        <div class="product-price">
+          {{ target_product.price | default: 32000 | money }}
         </div>
 
-        <!-- Miniaturas Verticales a la Derecha -->
-        <div class="product-gallery__thumbs">
-          {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
-          {% if img_blocks.size > 0 %}
-            {% for block in img_blocks limit: 4 %}
-              {% if block.settings.image != blank %}
-                <img 
-                  src="{{ block.settings.image | image_url: width: 200 }}" 
-                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.src)" 
-                  {{ block.shopify_attributes }}
-                >
-              {% else %}
-                <div class="thumb-img-placeholder {% if forloop.first %}is-active{% endif %}" onclick="changeMainImg('{{ target_product.featured_image | image_url: width: 900 }}')"></div>
-              {% endif %}
+        {% form 'product', target_product %}
+          <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
+
+          {% unless target_product.has_only_default_variant %}
+            {% for option in target_product.options_with_values %}
+              <div class="product-option">
+                <label>{{ option.name }}:</label>
+                <select name="options[{{ option.name | escape }}]" class="product-select">
+                  <option value="">Select {{ option.name }}</option>
+                  {% for value in option.values %}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
             {% endfor %}
-          {% elsif target_product.images.size > 0 %}
-            {% for image in target_product.images limit: 4 %}
-              <img 
-                src="{{ image | image_url: width: 200 }}" 
-                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.src)" 
-              >
-            {% endfor %}
-          {% else %}
-            {% for i in (1..4) %}
-              <div class="thumb-img-placeholder {% if forloop.first %}is-active{% endif %}"></div>
-            {% endfor %}
-          {% endif %}
-        </div>
-      </div>
+          {% endunless %}
 
-      {% if section.settings.show_compare_btn %}
-        <div class="product-compare-wrapper" style="margin-top: 1.5rem; text-align: center;">
-          <button class="product-compare-trigger-btn" id="OpenCompareModal">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-            <span>{{ section.settings.compare_btn_label | default: "Compare with other models" }}</span>
-          </button>
-        </div>
-      {% endif %}
-    </div>
-
-  </div>
-
-  <!-- Grid 2: Compra y Tabla -->
-  <div class="product-secondary-grid">
-    
-    <!-- Columna Izquierda: Bloque de Compra, Acordeón y Shipping -->
-    <div class="product-buy-col">
-      <div class="product-price">
-        {{ target_product.price | default: 320000 | money }}
-      </div>
-
-      {% form 'product', target_product %}
-        <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
-
-        {% unless target_product.has_only_default_variant %}
-          {% for option in target_product.options_with_values %}
-            <div class="product-option">
-              <label>{{ option.name }}:</label>
-              <select name="options[{{ option.name | escape }}]" class="product-select">
-                <option value="">Select {{ option.name }}</option>
-                {% for value in option.values %}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
-                  </option>
-                {% endfor %}
-              </select>
+          <div class="product-buy-row">
+            <div class="product-quantity">
+              <button type="button" onclick="adjustQty(-1)">−</button>
+              <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
+              <button type="button" onclick="adjustQty(1)">+</button>
             </div>
-          {% endfor %}
-        {% else %}
-          <div class="product-option">
-            <label>Color:</label>
-            <select class="product-select">
-              <option>Select Color</option>
-              <option>White</option>
-              <option>Black</option>
-            </select>
+
+            <button type="submit" class="product-add-cart-btn" {% unless target_product.available %}disabled{% endunless %}>
+              {% if target_product.available %}
+                {{ section.settings.btn_label | default: "ADD TO CART" }}
+              {% else %}
+                OUT OF STOCK
+              {% endif %}
+            </button>
           </div>
-        {% endunless %}
+        {% endform %}
+      </div>
 
-        <div class="product-buy-row">
-          <div class="product-quantity">
-            <button type="button" onclick="adjustQty(-1)">−</button>
-            <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
-            <button type="button" onclick="adjustQty(1)">+</button>
-          </div>
-
-          <button type="submit" class="product-add-cart-btn" {% unless target_product.available %}disabled{% endunless %}>
-            {% if target_product.available %}
-              {{ section.settings.btn_label | default: "ADD TO CART" }}
-            {% else %}
-              OUT OF STOCK
-            {% endif %}
-          </button>
-        </div>
-      {% endform %}
-
-      <!-- Acordeón Key Features -->
+      <!-- ACORDEÓN MEJORADO -->
       {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
       {% if section.settings.accordion_heading != blank %}
         <h2 class="product-acc-title">{{ section.settings.accordion_heading }}</h2>
@@ -178,7 +95,9 @@
                 <span>{{ block.settings.question }}</span>
                 <span class="accordion-icon">+</span>
               </summary>
-              <p>{{ block.settings.answer }}</p>
+              <div class="product-acc-content">
+                {{ block.settings.answer }}
+              </div>
             </details>
           {% endfor %}
         {% else %}
@@ -187,38 +106,82 @@
               <span>Clinical esthetician:</span>
               <span class="accordion-icon">+</span>
             </summary>
-            <p>Engineered for high precision facial treatments and long sessions.</p>
+            <div class="product-acc-content">
+              <p>Engineered for high precision facial treatments and long sessions.</p>
+            </div>
           </details>
           <details class="product-acc-item">
             <summary>
-              <span>Body treatment specialists and massage therapists:</span>
+              <span>Body treatment specialists:</span>
               <span class="accordion-icon">+</span>
             </summary>
-            <p>Superior weight distribution and silent electric lift control.</p>
-          </details>
-          <details class="product-acc-item">
-            <summary>
-              <span>Hair removal and multi-service aesthetic clinics:</span>
-              <span class="accordion-icon">+</span>
-            </summary>
-            <p>Ultra-resistant leatherette designed for seamless sanitation.</p>
+            <div class="product-acc-content">
+              <p>Superior weight distribution and silent electric lift control.</p>
+            </div>
           </details>
         {% endif %}
       </div>
 
-      <!-- Bloque Shipping -->
+      <!-- SHIPPING -->
       {% if section.settings.show_shipping %}
         <div class="product-shipping-block">
           <h3 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping" }}</h3>
           <div class="shipping-description">
-            {{ section.settings.shipping_text | default: "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>" }}
+            {{ section.settings.shipping_text | default: "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>" }}
           </div>
         </div>
       {% endif %}
     </div>
 
-    <!-- Columna Derecha: Tabla de Especificaciones Editables -->
-    <div class="product-table-col">
+    <!-- COLUMNA DERECHA: Galería + Tabla (Alineadas sin espacio muerto) -->
+    <div class="product-right-col">
+      <div class="product-gallery">
+        <div class="product-gallery__main aspect-ratio-{{ section.settings.image_aspect_ratio }}">
+          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
+          {% if first_img_block.settings.image != blank %}
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+          {% elsif target_product.featured_image != blank %}
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
+          {% else %}
+            <div class="product-gallery__placeholder"></div>
+          {% endif %}
+        </div>
+
+        <div class="product-gallery__thumbs">
+          {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
+          {% if img_blocks.size > 0 %}
+            {% for block in img_blocks limit: 4 %}
+              {% if block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 200 }}" 
+                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                  onclick="changeMainImg(this.src)" 
+                  {{ block.shopify_attributes }}
+                >
+              {% endif %}
+            {% endfor %}
+          {% elsif target_product.images.size > 0 %}
+            {% for image in target_product.images limit: 4 %}
+              <img 
+                src="{{ image | image_url: width: 200 }}" 
+                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                onclick="changeMainImg(this.src)" 
+              >
+            {% endfor %}
+          {% endif %}
+        </div>
+      </div>
+
+      {% if section.settings.show_compare_btn %}
+        <div class="product-compare-wrapper">
+          <button class="product-compare-trigger-btn" id="OpenCompareModal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            <span>{{ section.settings.compare_btn_label | default: "Compare with other models" }}</span>
+          </button>
+        </div>
+      {% endif %}
+
+      <!-- TABLA DE ESPECIFICACIONES -->
       {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
       {% if section.settings.show_tech_table %}
         <div class="tech-table-container">
@@ -230,12 +193,27 @@
               </tr>
             </thead>
             <tbody>
-              {% for block in spec_blocks %}
-                <tr {{ block.shopify_attributes }}>
-                  <td class="tech-table__label">{{ block.settings.label }}</td>
-                  <td class="tech-table__value">{{ block.settings.value }}</td>
+              {% if spec_blocks.size > 0 %}
+                {% for block in spec_blocks %}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="tech-table__label">{{ block.settings.label }}</td>
+                    <td class="tech-table__value">{{ block.settings.value }}</td>
+                  </tr>
+                {% endfor %}
+              {% else %}
+                <tr>
+                  <td class="tech-table__label">Manufacturer</td>
+                  <td class="tech-table__value">Equipro Beauty</td>
                 </tr>
-              {% endfor %}
+                <tr>
+                  <td class="tech-table__label">SKU / Model</td>
+                  <td class="tech-table__value">{{ target_product.selected_or_first_available_variant.sku | default: "EI-502" }}</td>
+                </tr>
+                <tr>
+                  <td class="tech-table__label">Warranty</td>
+                  <td class="tech-table__value">2 Years Limited Warranty</td>
+                </tr>
+              {% endif %}
             </tbody>
           </table>
         </div>
@@ -243,22 +221,23 @@
     </div>
 
   </div>
-
 </div>
 
 {% render 'quote-modal' %}
 
 <script>
   function changeMainImg(src) {
-    document.getElementById('MainProductImg').src = src;
-    document.querySelectorAll('.thumb-img, .thumb-img-placeholder').forEach(el => el.classList.remove('is-active'));
-    if (event && event.target) {
-      event.target.classList.add('is-active');
+    const mainImg = document.getElementById('MainProductImg');
+    if (mainImg) mainImg.src = src;
+    document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
+    if (window.event && window.event.target) {
+      window.event.target.classList.add('is-active');
     }
   }
 
   function adjustQty(val) {
     const input = document.getElementById('QuantityInput');
+    if (!input) return;
     let current = parseInt(input.value) || 1;
     current += val;
     if (current < 1) current = 1;
@@ -280,14 +259,10 @@
 
 {% schema %}
 {
-  "name": "Main Product Layout",
+  "name": "Main Product",
   "tag": "section",
   "class": "section-main-product",
   "settings": [
-    {
-      "type": "header",
-      "content": "Navigation & Title Overrides"
-    },
     {
       "type": "text",
       "id": "back_text",
@@ -297,40 +272,17 @@
     {
       "type": "text",
       "id": "custom_title",
-      "label": "Custom Title Override",
-      "info": "Leave empty to use native Product Title"
-    },
-    {
-      "type": "header",
-      "content": "Text & Descriptions"
+      "label": "Custom Title Override"
     },
     {
       "type": "textarea",
       "id": "intro_highlight",
-      "label": "Intro Highlight Text (Red Border)",
-      "default": "Engineered to optimize practitioner comfort during long sessions."
+      "label": "Intro Highlight Text"
     },
     {
       "type": "richtext",
       "id": "custom_description",
-      "label": "Main Description Override",
-      "info": "Leave empty to use default product description."
-    },
-    {
-      "type": "text",
-      "id": "subtitle",
-      "label": "Secondary Section Title",
-      "default": "Precision Engineering for Lasting Stability"
-    },
-    {
-      "type": "textarea",
-      "id": "secondary_text",
-      "label": "Secondary Paragraph Text",
-      "default": "Stain resistance is central to the Equipro approach."
-    },
-    {
-      "type": "header",
-      "content": "Gallery Aspect Ratio Settings"
+      "label": "Main Description Override"
     },
     {
       "type": "select",
@@ -356,14 +308,9 @@
       "default": "Compare with other models"
     },
     {
-      "type": "header",
-      "content": "Product Target & Purchasing"
-    },
-    {
       "type": "product",
       "id": "featured_product",
-      "label": "Link Specific Product",
-      "info": "Bind purchase form to a specific product"
+      "label": "Link Specific Product"
     },
     {
       "type": "text",
@@ -372,18 +319,10 @@
       "default": "ADD TO CART"
     },
     {
-      "type": "header",
-      "content": "Accordion Section Settings"
-    },
-    {
       "type": "text",
       "id": "accordion_heading",
       "label": "Accordion Main Title",
       "default": "Key Features for the Professional Station"
-    },
-    {
-      "type": "header",
-      "content": "Shipping Block Settings"
     },
     {
       "type": "checkbox",
@@ -401,11 +340,7 @@
       "type": "richtext",
       "id": "shipping_text",
       "label": "Shipping Description Text",
-      "default": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>"
-    },
-    {
-      "type": "header",
-      "content": "Technical Specifications Table"
+      "default": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>"
     },
     {
       "type": "checkbox",
@@ -429,7 +364,7 @@
   "blocks": [
     {
       "type": "gallery_image",
-      "name": "Gallery Image (Max 4)",
+      "name": "Gallery Image",
       "limit": 4,
       "settings": [
         {
@@ -478,74 +413,7 @@
   ],
   "presets": [
     {
-      "name": "Main Product Layout",
-      "blocks": [
-        { "type": "gallery_image" },
-        { "type": "gallery_image" },
-        { "type": "gallery_image" },
-        { "type": "gallery_image" },
-        {
-          "type": "faq_item",
-          "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Engineered for high precision facial treatments and long sessions.</p>"
-          }
-        },
-        {
-          "type": "faq_item",
-          "settings": {
-            "question": "Body treatment specialists and massage therapists:",
-            "answer": "<p>Superior weight distribution and silent electric lift control.</p>"
-          }
-        },
-        {
-          "type": "faq_item",
-          "settings": {
-            "question": "Hair removal and multi-service aesthetic clinics:",
-            "answer": "<p>Ultra-resistant leatherette designed for seamless sanitation.</p>"
-          }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Manufacturer", "value": "Equipro Beauty" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Model SKU", "value": "EI-502" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Primary Materials", "value": "High-quality vinyl upholstery, reinforced steel frame, electric actuators" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Dimensions (L x W x H)", "value": "69\" L x 28\" W x 21\" / 39\" H" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Weight", "value": "209 lb (95 kg)" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Adjustability", "value": "Fully electric adjustments: height from 21\" to 39\", backrest, legrest, and tilt" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Height Range", "value": "21\" to 39\" (53 cm to 99 cm)" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Seating Width", "value": "28 inches (71 cm)" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Certifications", "value": "CSA & UL approved electrical components" }
-        },
-        {
-          "type": "spec_row",
-          "settings": { "label": "Warranty", "value": "1 year" }
-        }
-      ]
+      "name": "Main Product"
     }
   ]
 }
