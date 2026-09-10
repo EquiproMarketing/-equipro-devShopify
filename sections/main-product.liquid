@@ -45,7 +45,7 @@
         </div>
       {% endif %}
 
-      <!-- CAJA DE COMPRA DINÁMICA CON OPCIONES CONFIGURABLES -->
+      <!-- CAJA DE COMPRA -->
       <div class="product-buy-box">
         <div class="product-price">
           {{ target_product.price | money }}
@@ -54,41 +54,20 @@
         {% form 'product', target_product %}
           <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
 
-          {%- comment -%} RENDERING DE VARIANTES CON FILTROS Y TOGGLE {%- endcomment -%}
-          {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
-            <div class="product-options-container">
-              {% for option in target_product.options_with_values %}
-                {% assign option_name_downcase = option.name | downcase %}
-                
-                {%- comment -%} VERIFICACIÓN DE PERMISOS SEGÚN CHECKBOXES DEL CUSTOMIZER {%- endcomment -%}
-                {% assign show_option = true %}
-                {% if option_name_downcase contains 'color' and section.settings.show_color_option == false %}
-                  {% assign show_option = false %}
-                {% elsif option_name_downcase contains 'size' or option_name_downcase contains 'talla' %}
-                  {% if section.settings.show_size_option == false %}
-                    {% assign show_option = false %}
-                  {% endif %}
-                {% endif %}
-
-                {% if show_option %}
-                  <div class="product-option">
-                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
-                    <select 
-                      id="Option-{{ section.id }}-{{ forloop.index0 }}" 
-                      name="options[{{ option.name | escape }}]" 
-                      class="product-select"
-                    >
-                      {% for value in option.values %}
-                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                          {{ value }}
-                        </option>
-                      {% endfor %}
-                    </select>
-                  </div>
-                {% endif %}
-              {% endfor %}
-            </div>
-          {% endif %}
+          {% unless target_product.has_only_default_variant %}
+            {% for option in target_product.options_with_values %}
+              <div class="product-option">
+                <label>{{ option.name }}:</label>
+                <select name="options[{{ option.name | escape }}]" class="product-select">
+                  {% for value in option.values %}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endfor %}
+          {% endunless %}
 
           <div class="product-buy-row">
             <div class="product-quantity">
@@ -107,6 +86,7 @@
           </div>
         {% endform %}
       </div>
+    </div>
 
     <!-- COLUMNA DERECHA -->
     <div class="product-right-col">
@@ -258,29 +238,6 @@
   "presets": [
     {
       "name": "Main Product Top"
-    }
-    {
-      "type": "header",
-      "content": "Variant Options Display"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_variant_selectors",
-      "label": "Enable Variant Dropdowns",
-      "default": true,
-      "info": "Master switch to show/hide variant selectors when available."
-    },
-    {
-      "type": "checkbox",
-      "id": "show_color_option",
-      "label": "Show Color Selector",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_size_option",
-      "label": "Show Size/Talla Selector",
-      "default": true
     }
   ]
 }
