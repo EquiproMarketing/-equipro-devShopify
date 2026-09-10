@@ -5,12 +5,12 @@
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
   <div class="product-master-grid">
     
-    <!-- COLUMNA IZQUIERDA: TEXTOS Y COMPRA -->
+    <!-- COLUMNA IZQUIERDA -->
     <div class="product-left-col">
       <div class="product-page__back">
         <a href="javascript:history.back()" class="back-link">
           <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
+            <path d="M7 1L1 6L7 11" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"/>
           </svg>
           <span>{{ section.settings.back_text | default: "Back" }}</span>
         </a>
@@ -23,7 +23,7 @@
       {% assign intro_text = section.settings.intro_highlight %}
       {% if intro_text != blank %}
         <div class="product-info__intro-highlight">
-          <strong>{{ intro_text }}</strong>
+          <p>{{ intro_text }}</p>
         </div>
       {% endif %}
 
@@ -35,19 +35,17 @@
         {% endif %}
       </div>
 
-      {% if section.settings.quote_text != blank %}
-        <blockquote class="product-info__quote">
-          "{{ section.settings.quote_text }}"
-        </blockquote>
+      {% if section.settings.subtitle != blank %}
+        <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
       {% endif %}
 
       {% if section.settings.secondary_description != blank %}
-        <div class="product-info__description product-info__description--secondary">
+        <div class="product-info__description">
           {{ section.settings.secondary_description }}
         </div>
       {% endif %}
 
-      <!-- CAJA DE COMPRA (BUY BOX) -->
+      <!-- CAJA DE COMPRA -->
       <div class="product-buy-box">
         <div class="product-price">
           {{ target_product.price | money }}
@@ -56,7 +54,6 @@
         {% form 'product', target_product %}
           <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
 
-          {%- comment -%} SOLO MOSTRAR SELECTOR SI TIENE MÁS DE 1 VARIANTE REAL {%- endcomment -%}
           {% unless target_product.has_only_default_variant %}
             {% for option in target_product.options_with_values %}
               <div class="product-option">
@@ -91,7 +88,7 @@
       </div>
     </div>
 
-    <!-- COLUMNA DERECHA: GALERÍA Y BOTÓN COMPARE -->
+    <!-- COLUMNA DERECHA -->
     <div class="product-right-col">
       <div class="product-gallery">
         <div class="product-gallery__main">
@@ -130,7 +127,6 @@
         </div>
       </div>
 
-      {%- comment -%} TOGGLE BOTÓN COMPARAR {%- endcomment -%}
       {% if section.settings.show_compare_btn %}
         <div class="product-compare-wrapper">
           <button class="product-compare-trigger-btn" id="OpenCompareModal">
@@ -182,9 +178,9 @@
       "label": "Custom Title Override"
     },
     {
-      "type": "text",
+      "type": "textarea",
       "id": "intro_highlight",
-      "label": "Bold Intro Highlight Line"
+      "label": "Intro Highlight Line (Red Bar)"
     },
     {
       "type": "richtext",
@@ -193,8 +189,8 @@
     },
     {
       "type": "text",
-      "id": "quote_text",
-      "label": "Middle Highlight Quote / Sentence"
+      "id": "subtitle",
+      "label": "Red Subtitle (Middle)"
     },
     {
       "type": "richtext",
