@@ -12,7 +12,7 @@
 
       {%- if collection_target != blank and collection_target.products.size > 0 -%}
         {%- for product in collection_target.products limit: products_limit -%}
-          {%- comment -%} DYNAMIC PRODUCT VALUES FROM COLLECTION {%- comment -%}
+          {%- comment -%} DYNAMIC PRODUCT VALUES FROM COLLECTION {%- endcomment -%}
           {%- assign display_title = product.title -%}
           {%- assign display_url = product.url -%}
           {%- assign display_image = product.featured_media -%}
