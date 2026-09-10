@@ -8,6 +8,54 @@
 
     <div class="custom-treatment-grid">
       {%- for block in section.blocks -%}
+        {%- assign card_product = block.settings.product -%}
+        
+        {%- comment -%} DYNAMIC TITLE RESOLUTION {%- endcomment -%}
+        {%- if block.settings.title != blank -%}
+          {%- assign display_title = block.settings.title -%}
+        {%- elsif card_product != blank -%}
+          {%- assign display_title = card_product.title -%}
+        {%- else -%}
+          {%- assign display_title = nil -%}
+        {%- endif -%}
+
+        {%- comment -%} DYNAMIC PRICE RESOLUTION {%- endcomment -%}
+        {%- if block.settings.price != blank -%}
+          {%- assign display_price = block.settings.price -%}
+        {%- elsif card_product != blank -%}
+          {%- capture display_price -%}
+            {%- if card_product.price_varies -%}
+              {{ 'products.product.from_lowest_price_html' | t: lowest_price: card_product.price_min | money }}
+            {%- else -%}
+              {{ card_product.price | money }}
+            {%- endif -%}
+          {%- endcapture -%}
+        {%- else -%}
+          {%- assign display_price = nil -%}
+        {%- endif -%}
+
+        {%- comment -%} DYNAMIC IMAGE & HOVER RESOLUTION {%- endcomment -%}
+        {%- assign display_image = block.settings.product_image -%}
+        {%- if display_image == blank and card_product.featured_media != blank -%}
+          {%- assign display_image = card_product.featured_media -%}
+        {%- endif -%}
+
+        {%- assign hover_image = block.settings.hover_image -%}
+        {%- if hover_image == blank and card_product.media.size > 1 -%}
+          {%- assign hover_image = card_product.media[1] -%}
+        {%- endif -%}
+
+        {%- comment -%} DYNAMIC URL RESOLUTION {%- endcomment -%}
+        {%- assign display_url = block.settings.btn_primary_url -%}
+        {%- if display_url == blank and card_product != blank -%}
+          {%- assign display_url = card_product.url -%}
+        {%- endif -%}
+
+        {%- assign display_buy_url = block.settings.btn_secondary_url -%}
+        {%- if display_buy_url == blank and card_product != blank -%}
+          {%- assign display_buy_url = card_product.url -%}
+        {%- endif -%}
+
         <div class="custom-treatment-card" {{ block.shopify_attributes }}>
           
           {%- comment -%} APPLE-STYLE ROUNDED IMAGE CONTAINER (4:5 ASPECT RATIO) {%- endcomment -%}
@@ -15,56 +63,82 @@
             class="custom-treatment-card__image-container"
             style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};"
           >
-            {%- if block.settings.product_image != blank -%}
-              <img
-                src="{{ block.settings.product_image | image_url: width: 500 }}"
-                alt="{{ block.settings.title | escape }}"
-                loading="lazy"
-                width="240"
-                height="300"
-                class="custom-treatment-card__image"
-              >
+            {%- if display_image != blank -%}
+              <a href="{{ display_url | default: '#' }}" class="custom-treatment-card__image-link">
+                <img
+                  src="{{ display_image | image_url: width: 600 }}"
+                  alt="{{ display_title | default: card_product.title | escape }}"
+                  loading="lazy"
+                  width="240"
+                  height="300"
+                  class="custom-treatment-card__image {% if hover_image != blank %}custom-treatment-card__image--primary{% endif %}"
+                >
+                {%- if hover_image != blank -%}
+                  <img
+                    src="{{ hover_image | image_url: width: 600 }}"
+                    alt="{{ display_title | default: card_product.title | escape }}"
+                    loading="lazy"
+                    width="240"
+                    height="300"
+                    class="custom-treatment-card__image custom-treatment-card__image--hover"
+                  >
+                {%- endif -%}
+              </a>
             {%- else -%}
               {{ 'product-1' | placeholder_svg_tag: 'custom-treatment-card__placeholder' }}
             {%- endif -%}
           </div>
 
           {%- comment -%} COLOR SWATCHES {%- endcomment -%}
-          <div class="custom-treatment-card__swatches">
-            {%- assign colors = block.settings.available_colors | split: ',' -%}
-            {%- for color_code in colors -%}
-              {%- assign clean_color = color_code | strip -%}
-              {%- if clean_color != blank -%}
-                <span 
-                  class="custom-treatment-card__swatch-dot" 
-                  style="background-color: {{ clean_color }};"
-                  title="{{ clean_color }}"
-                ></span>
-              {%- endif -%}
-            {%- endfor -%}
-          </div>
+          {%- if block.settings.available_colors != blank -%}
+            <div class="custom-treatment-card__swatches">
+              {%- assign colors = block.settings.available_colors | split: ',' -%}
+              {%- for color_code in colors -%}
+                {%- assign clean_color = color_code | strip -%}
+                {%- if clean_color != blank -%}
+                  <span 
+                    class="custom-treatment-card__swatch-dot" 
+                    style="background-color: {{ clean_color }};"
+                    title="{{ clean_color }}"
+                  ></span>
+                {%- endif -%}
+              {%- endfor -%}
+            </div>
+          {%- endif -%}
 
           {%- comment -%} CARD DETAILS AND TEXTS {%- endcomment -%}
           <div class="custom-treatment-card__content">
-            <h3 class="custom-treatment-card__title">{{ block.settings.title }}</h3>
+            {%- if display_title != blank -%}
+              <h3 class="custom-treatment-card__title">
+                {%- if display_url != blank -%}
+                  <a href="{{ display_url }}">{{ display_title }}</a>
+                {%- else -%}
+                  {{ display_title }}
+                {%- endif -%}
+              </h3>
+            {%- endif -%}
             
             {%- if block.settings.subtitle != blank -%}
               <p class="custom-treatment-card__subtitle">{{ block.settings.subtitle }}</p>
             {%- endif -%}
 
-            {%- if block.settings.price != blank -%}
-              <p class="custom-treatment-card__price">{{ block.settings.price }}</p>
+            {%- if display_price != blank -%}
+              <p class="custom-treatment-card__price">{{ display_price }}</p>
             {%- endif -%}
 
             {%- comment -%} ACTION BUTTONS {%- endcomment -%}
             <div class="custom-treatment-card__actions">
-              <a href="{{ block.settings.btn_primary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                {{ block.settings.btn_primary_text | default: 'En savoir plus' }}
-              </a>
+              {%- if display_url != blank -%}
+                <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
+                  {{ block.settings.btn_primary_text | default: 'Learn More' }}
+                </a>
+              {%- endif -%}
 
-              <a href="{{ block.settings.btn_secondary_url | default: '#' }}" class="custom-treatment-btn custom-treatment-btn--link">
-                {{ block.settings.btn_secondary_text | default: 'Acheter >' }}
-              </a>
+              {%- if display_buy_url != blank -%}
+                <a href="{{ display_buy_url }}" class="custom-treatment-btn custom-treatment-btn--link">
+                  {{ block.settings.btn_secondary_text | default: 'Buy Now >' }}
+                </a>
+              {%- endif -%}
             </div>
           </div>
 
@@ -93,33 +167,54 @@
       "name": "Product Card",
       "settings": [
         {
+          "type": "header",
+          "content": "Product Selection"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product",
+          "info": "Pulls title, price, image, and URLs automatically from Shopify."
+        },
+        {
+          "type": "header",
+          "content": "Custom Overrides (Optional Edits)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Title Override",
+          "info": "Leave blank to use automatic product title."
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Subtitle / Description",
+          "default": "Perfect partner for your clinical practice."
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Custom Price Override",
+          "info": "Leave blank to use automatic product price."
+        },
+        {
           "type": "image_picker",
           "id": "product_image",
-          "label": "Product Image"
+          "label": "Custom Primary Image",
+          "info": "Leave blank to use product featured image."
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Custom Hover Image",
+          "info": "Leave blank to use product secondary image."
         },
         {
           "type": "color",
           "id": "card_bg_color",
           "label": "Card Background Color",
           "default": "#f5f5f7"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Product Name",
-          "default": "Ultra-comfort"
-        },
-        {
-          "type": "text",
-          "id": "subtitle",
-          "label": "Subtitle / Description",
-          "default": "Parfaite alliée de votre pratique."
-        },
-        {
-          "type": "text",
-          "id": "price",
-          "label": "Price Text",
-          "default": "À partir de 1 299 $"
         },
         {
           "type": "textarea",
@@ -129,33 +224,29 @@
         },
         {
           "type": "header",
-          "content": "Primary Button"
+          "content": "Button Labels & Links"
         },
         {
           "type": "text",
           "id": "btn_primary_text",
-          "label": "Button Text",
-          "default": "En savoir plus"
+          "label": "Primary Button Text",
+          "default": "Learn More"
         },
         {
           "type": "url",
           "id": "btn_primary_url",
-          "label": "Button Link"
-        },
-        {
-          "type": "header",
-          "content": "Secondary Link"
+          "label": "Custom Primary URL Override"
         },
         {
           "type": "text",
           "id": "btn_secondary_text",
-          "label": "Link Text",
-          "default": "Acheter >"
+          "label": "Secondary Button Text",
+          "default": "Buy Now >"
         },
         {
           "type": "url",
           "id": "btn_secondary_url",
-          "label": "Link URL"
+          "label": "Custom Secondary URL Override"
         }
       ]
     }
