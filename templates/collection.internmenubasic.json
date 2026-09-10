@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subnav": {
+      "type": "category-subnav",
+      "blocks": {
+        "card_item_AUg6gC": {
+          "type": "card_item",
+          "settings": {
+            "parent_category": "",
+            "sub_category": "N/A",
+            "collection": "",
+            "product": "",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_item_AUg6gC"
+      ],
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
+      }
+    },
+    "collection_banner_6nLHkW": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
+        "overlay_opacity": 40
+      }
+    },
+    "custom_product_treatment_wLEm4y": {
+      "type": "custom-product-treatment",
+      "blocks": {
+        "product_card_KGUQDw": {
+          "type": "product_card",
+          "settings": {
+            "product_image": "shopify://shop_images/therabath-professional-paraffin-wax-bath-65100-tub-ii.webp",
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "shopify://products/65100-therabath-tub-ii",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_tH3RNm": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        },
+        "product_card_ffeRPh": {
+          "type": "product_card",
+          "settings": {
+            "card_bg_color": "#f5f5f7",
+            "title": "Ultra-comfort",
+            "subtitle": "Parfaite alliée de votre pratique.",
+            "price": "À partir de 1 299 $",
+            "available_colors": "#ffffff, #111111, #808080",
+            "btn_primary_text": "En savoir plus",
+            "btn_primary_url": "",
+            "btn_secondary_text": "Acheter >",
+            "btn_secondary_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "product_card_KGUQDw",
+        "product_card_tH3RNm",
+        "product_card_ffeRPh"
+      ],
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "Beds & Stools"
+      }
+    },
+    "positive_impact": {
+      "type": "positive-impact",
+      "settings": {}
+    },
+    "why_category": {
+      "type": "why-our-category",
+      "settings": {}
+    },
+    "video": {
+      "type": "category-video",
+      "settings": {}
+    },
+    "faq": {
+      "type": "category-faq",
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "reviews": {
+      "type": "customer-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "subnav",
+    "collection_banner_6nLHkW",
+    "custom_product_treatment_wLEm4y",
+    "positive_impact",
+    "why_category",
+    "video",
+    "faq",
+    "reviews"
+  ]
+}

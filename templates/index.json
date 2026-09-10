@@ -239,6 +239,17 @@
             "link": "shopify://products/multiderm-5-en-1"
           }
         },
+        "custom_card_3WjHXz": {
+          "type": "custom_card",
+          "settings": {
+            "card_bg": "#ffffff",
+            "tag": "Nouveau",
+            "title": "Stool with Backrest",
+            "price": "69,00 $",
+            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "link": ""
+          }
+        },
         "custom_card_k38Qj8": {
           "type": "custom_card",
           "settings": {
@@ -288,7 +299,7 @@
             "title": "Spa Cabi",
             "price": "from CA$830,00",
             "swatches": "",
-            "link": ""
+            "link": "shopify://products/spa-cabi-professional-towel-warmer-ei-61102s-equipro"
           }
         },
         "custom_card_AjpNta": {
@@ -347,6 +358,7 @@
       "block_order": [
         "custom_card_rFaJei",
         "custom_card_AWHND6",
+        "custom_card_3WjHXz",
         "custom_card_k38Qj8",
         "custom_card_re7QVY",
         "custom_card_WpAkFt",
@@ -662,14 +674,55 @@
           "type": "staggered_card",
           "settings": {
             "enable_interactive_rotator": true,
+            "enable_dark_overlay": false,
             "image_1": "shopify://shop_images/equipro-leather-upholstery-customization-premium-synthetic-textured-wellness-salon-clinic-seating.webp",
             "image_2": "shopify://shop_images/equipro-custom-upholstery-navy-blue-textured-synthetic-leather-high-durability-professional-treatment-seating.webp",
             "image_3": "shopify://shop_images/equipro-professional-upholstery-textured-synthetic-leather-high-durability-aesthetic-clinic-finish.webp",
             "image_4": "shopify://shop_images/equipro-professional-practitioner-chair-grey-textured-vinyl-upholstery-clinical-furniture-customization-color-charcoal.webp",
-            "tag": "fabrication",
-            "tag_color": "#a22938",
-            "title": "Personnalisation et finitions.",
-            "text": "Découvrez les possibilités de personnalisation qu'offre Equipro pour votre mobilier de clinique.",
+            "tag": "Customization",
+            "tag_color": "#FFFFFF",
+            "title": "Customization and finishes.",
+            "text": "Discover the customization possibilities Equipro offers for your clinic furniture.",
+            "color_list": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_CN7qhL": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": false,
+            "enable_dark_overlay": true,
+            "image_1": "shopify://shop_images/equipro-24-7-support-technical-assistance-aesthetic-treatment-chair-wellness-clinic.webp",
+            "tag": "Support",
+            "tag_color": "#FFFFFF",
+            "title": "24/7 support & contact.",
+            "text": "Need help? Our emergency line is available 24/7. Reach us anytime for assistance with your equipment.",
+            "color_list": "",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "",
+            "btn_1_link": "shopify://pages/manuals",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_wQgJT4": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": false,
+            "enable_dark_overlay": true,
+            "image_1": "shopify://shop_images/equipro-ergonomic-backrest-stool-pneumatic-practitioner-seat-white-vinyl-salon-wellness-31100-31200-31300.webp",
+            "tag": "Support",
+            "tag_color": "#FFFFFF",
+            "title": "Assembly manuals & guides.",
+            "text": "Download our assembly manuals and find simple step-by-step guides to replace bulbs, change filters, or use your equipment.",
             "color_list": "",
             "bg_color": "#111111",
             "text_color": "#ffffff",
@@ -682,7 +735,9 @@
         }
       },
       "block_order": [
-        "staggered_card_xVJCmd"
+        "staggered_card_xVJCmd",
+        "staggered_card_CN7qhL",
+        "staggered_card_wQgJT4"
       ],
       "settings": {
         "main_title": "Customization & Support Hub"
