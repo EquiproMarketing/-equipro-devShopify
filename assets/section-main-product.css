@@ -1,85 +1,109 @@
-<style>
-  /* STYLES FOR MAIN PRODUCT LAYOUT */
-  .product-page {
-    padding-top: 20px;
-    padding-bottom: 60px;
+/* ==========================================================================
+   1. MAIN PRODUCT TOP SECTION
+   ========================================================================== */
+   .product-page {
+    padding-top: 24px;
+    padding-bottom: 40px;
   }
-
+  
   .product-master-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 40px;
+    gap: 48px;
     align-items: start;
   }
-
+  
   /* LEFT COLUMN: INFO & BUY BOX */
   .product-left-col {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
   }
-
+  
   .product-page__back .back-link {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    color: #a22938;
+    color: #ab273b;
     text-decoration: none;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 500;
+    transition: opacity 0.2s ease;
   }
-
+  
+  .product-page__back .back-link:hover {
+    opacity: 0.8;
+  }
+  
   .product-info__title {
     font-size: 2.2rem;
     font-weight: 700;
     color: #1d1d1f;
     margin: 0;
     line-height: 1.2;
+    letter-spacing: -0.015em;
   }
-
-  .product-info__intro-highlight {
-    border-left: 3px solid #a22938;
-    padding-left: 14px;
-    color: #515154;
-    font-size: 0.95rem;
+  
+  .product-info__intro-highlight strong {
+    font-weight: 700;
+    color: #1d1d1f;
+    font-size: 1rem;
     line-height: 1.4;
   }
-
+  
   .product-info__description {
     font-size: 0.95rem;
     color: #3a3a3c;
-    line-height: 1.5;
+    line-height: 1.55;
   }
-
+  
+  .product-info__description p {
+    margin: 0 0 10px 0;
+  }
+  
+  /* HIGHLIGHT QUOTES & SENTENCES */
+  .product-info__quote {
+    margin: 12px 0;
+    padding: 12px 18px;
+    border-left: 4px solid #ab273b;
+    background-color: #fafafc;
+    border-radius: 0 8px 8px 0;
+    font-style: italic;
+    font-weight: 500;
+    color: #1d1d1f;
+    font-size: 0.98rem;
+    line-height: 1.45;
+  }
+  
   /* BUY BOX & OPTIONS */
   .product-buy-box {
-    background: #f9f9fb;
+    background: #f5f5f7;
     border-radius: 16px;
     padding: 24px;
-    border: 1px solid #e5e5e7;
     display: flex;
     flex-direction: column;
     gap: 16px;
+    margin-top: 8px;
   }
-
+  
   .product-price {
     font-size: 1.8rem;
     font-weight: 700;
     color: #1d1d1f;
   }
-
+  
   .product-option {
     display: flex;
     flex-direction: column;
     gap: 6px;
   }
-
+  
   .product-option label {
     font-size: 0.85rem;
     font-weight: 600;
     color: #1d1d1f;
   }
-
+  
   .product-select {
     width: 100%;
     padding: 10px 14px;
@@ -87,132 +111,101 @@
     border: 1px solid #d2d2d7;
     background-color: #ffffff;
     font-size: 0.9rem;
+    color: #1d1d1f;
   }
-
+  
   .product-buy-row {
     display: flex;
     gap: 12px;
     align-items: center;
-    margin-top: 8px;
   }
-
+  
   .product-quantity {
     display: flex;
     align-items: center;
     border: 1px solid #d2d2d7;
     border-radius: 8px;
-    background: #fff;
+    background: #ffffff;
     overflow: hidden;
+    height: 44px;
   }
-
+  
   .product-quantity button {
     background: none;
     border: none;
-    padding: 10px 14px;
+    padding: 0 14px;
     font-size: 1.1rem;
     cursor: pointer;
     color: #1d1d1f;
+    height: 100%;
   }
-
+  
   .product-quantity input {
-    width: 40px;
+    width: 38px;
     border: none;
     text-align: center;
     font-size: 0.95rem;
     font-weight: 600;
+    color: #1d1d1f;
   }
-
+  
   .product-add-cart-btn {
     flex: 1;
-    background-color: #a22938;
+    height: 44px;
+    background-color: #ab273b;
     color: #ffffff;
     border: none;
-    padding: 12px 24px;
+    padding: 0 24px;
     border-radius: 8px;
-    font-size: 0.9rem;
+    font-size: 0.88rem;
     font-weight: 600;
+    letter-spacing: 0.03em;
     cursor: pointer;
     transition: background-color 0.2s ease;
   }
-
+  
   .product-add-cart-btn:hover {
-    background-color: #821f2c;
+    background-color: #8c1e2e;
   }
-
-  /* ACCORDION */
-  .product-acc-title {
-    font-size: 1.2rem;
-    font-weight: 600;
-    color: #1d1d1f;
-    margin-top: 10px;
-    margin-bottom: 0;
+  
+  .product-add-cart-btn:disabled {
+    background-color: #d2d2d7;
+    cursor: not-allowed;
   }
-
-  .product-acc-list {
-    display: flex;
-    flex-direction: column;
-    border-top: 1px solid #e5e5e7;
-  }
-
-  .product-acc-item {
-    border-bottom: 1px solid #e5e5e7;
-    padding: 14px 0;
-  }
-
-  .product-acc-item summary {
-    font-weight: 600;
-    font-size: 0.95rem;
-    color: #1d1d1f;
-    cursor: pointer;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    list-style: none;
-  }
-
-  .product-acc-content {
-    padding-top: 10px;
-    color: #515154;
-    font-size: 0.88rem;
-    line-height: 1.5;
-  }
-
-  /* RIGHT COLUMN: GALLERY & SPEC TABLE */
+  
+  /* RIGHT COLUMN: GALLERY */
   .product-right-col {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
   }
-
+  
   .product-gallery {
     display: flex;
-    gap: 16px;
+    gap: 14px;
   }
-
+  
   .product-gallery__main {
     flex: 1;
     background-color: #f5f5f7;
     border-radius: 16px;
     overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
     aspect-ratio: 4 / 5;
   }
-
+  
   .product-gallery__main img {
     width: 100%;
     height: 100%;
     object-fit: cover;
   }
-
+  
   .product-gallery__thumbs {
     display: flex;
     flex-direction: column;
     gap: 10px;
     width: 80px;
   }
-
+  
   .thumb-img, .thumb-img-placeholder {
     width: 80px;
     height: 80px;
@@ -223,391 +216,172 @@
     border: 2px solid transparent;
     transition: border-color 0.2s ease;
   }
-
+  
   .thumb-img.is-active {
-    border-color: #a22938;
+    border-color: #ab273b;
   }
-
-  /* TECH SPEC TABLE */
+  
+  /* COMPARE BUTTON */
+  .product-compare-wrapper {
+    display: flex;
+    justify-content: center;
+    margin-top: 4px;
+  }
+  
+  .product-compare-trigger-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #f5f5f7;
+    color: #1d1d1f;
+    border: 1px solid #d2d2d7;
+    padding: 8px 18px;
+    border-radius: 980px;
+    font-size: 0.82rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+  }
+  
+  .product-compare-trigger-btn:hover {
+    background-color: #e8e8ed;
+    border-color: #c7c7cc;
+  }
+  
+  
+  /* ==========================================================================
+     2. PRODUCT CHARACTERISTICS SECTION
+     ========================================================================== */
+  .product-characteristics-grid {
+    margin-top: 30px;
+    align-items: stretch;
+  }
+  
+  .product-characteristics-left {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  /* ACCORDION */
+  .product-acc-title {
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0 0 16px 0;
+  }
+  
+  .product-acc-list {
+    display: flex;
+    flex-direction: column;
+    border-top: 1px solid #e5e5e7;
+    margin-bottom: 28px;
+  }
+  
+  .product-acc-item {
+    border-bottom: 1px solid #e5e5e7;
+    padding: 14px 0;
+  }
+  
+  .product-acc-item summary {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: #1d1d1f;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    list-style: none;
+  }
+  
+  .product-acc-item summary::-webkit-details-marker {
+    display: none;
+  }
+  
+  .product-acc-content {
+    padding-top: 10px;
+    color: #515154;
+    font-size: 0.88rem;
+    line-height: 1.5;
+  }
+  
+  /* SHIPPING BLOCK (STICKY BOTTOM) */
+  .product-shipping-block {
+    margin-top: auto;
+    background: #f5f5f7;
+    border-radius: 12px;
+    padding: 20px;
+  }
+  
+  .product-shipping__title {
+    font-size: 0.98rem;
+    font-weight: 700;
+    color: #1d1d1f;
+    margin: 0 0 6px 0;
+  }
+  
+  .shipping-description {
+    font-size: 0.86rem;
+    color: #515154;
+    line-height: 1.45;
+  }
+  
+  .shipping-description p {
+    margin: 0;
+  }
+  
+  /* TECHNICAL TABLE & HTML INJECTION (.equipro-specs-container / .equipro-table) */
+  .equipro-specs-container,
   .tech-table-container {
     border-radius: 12px;
     overflow: hidden;
     border: 1px solid #e5e5e7;
     background: #ffffff;
   }
-
+  
+  .equipro-table,
   .tech-table {
     width: 100%;
     border-collapse: collapse;
+    text-align: left;
   }
-
+  
+  .equipro-table th,
   .tech-table th {
     background-color: #f5f5f7;
-    color: #a22938;
+    color: #ab273b;
     font-size: 0.75rem;
     font-weight: 700;
     padding: 12px 16px;
-    text-align: left;
+    text-transform: uppercase;
     letter-spacing: 0.05em;
+    border-bottom: 1px solid #e5e5e7;
   }
-
+  
+  .equipro-table td,
   .tech-table td {
     padding: 12px 16px;
     font-size: 0.85rem;
+    color: #1d1d1f;
     border-top: 1px solid #e5e5e7;
+    line-height: 1.4;
   }
-
+  
+  .equipro-table td.feature-label,
   .tech-table__label {
     font-weight: 600;
-    color: #a22938;
-    width: 40%;
+    color: #ab273b;
+    width: 38%;
+    background-color: #fafafc;
   }
-
-  .tech-table__value {
-    color: #1d1d1f;
-  }
-
+  
   /* RESPONSIVE BREAKPOINT */
   @media (max-width: 890px) {
     .product-master-grid {
       grid-template-columns: 1fr;
-      gap: 30px;
+      gap: 32px;
+    }
+  
+    .product-shipping-block {
+      margin-top: 24px;
     }
   }
-</style>
-
-<div class="product-page page-width" id="ProductMain-{{ section.id }}">
-  <div class="product-master-grid">
-    
-    <!-- LEFT COLUMN -->
-    <div class="product-left-col">
-      <div class="product-page__back">
-        <a href="javascript:history.back()" class="back-link">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
-          </svg>
-          <span>{{ section.settings.back_text | default: "Back" }}</span>
-        </a>
-      </div>
-
-      <h1 class="product-info__title">
-        {{ section.settings.custom_title | default: product.title | default: "Round Air-lift Stool" }}
-      </h1>
-      
-      {% assign intro_text = section.settings.intro_highlight %}
-      {% if intro_text != blank %}
-        <div class="product-info__intro-highlight">
-          <p>{{ intro_text }}</p>
-        </div>
-      {% endif %}
-
-      <div class="product-info__description">
-        {% if section.settings.custom_description != blank %}
-          {{ section.settings.custom_description }}
-        {% elsif product.description != blank %}
-          {{ product.description }}
-        {% else %}
-          <p>The 31100 Air-lift stool is purpose-built for licensed professionals, including aestheticians, clinical spa technicians, and massage therapists.</p>
-        {% endif %}
-      </div>
-
-      <!-- PURCHASE FORM BOX -->
-      <div class="product-buy-box">
-        <div class="product-price">
-          {{ product.price | default: 32000 | money }}
-        </div>
-
-        {% form 'product', product %}
-          <input type="hidden" name="id" value="{{ product.selected_or_first_available_variant.id }}">
-
-          {% unless product.has_only_default_variant %}
-            {% for option in product.options_with_values %}
-              <div class="product-option">
-                <label>{{ option.name }}:</label>
-                <select name="options[{{ option.name | escape }}]" class="product-select">
-                  <option value="">Select {{ option.name }}</option>
-                  {% for value in option.values %}
-                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                      {{ value }}
-                    </option>
-                  {% endfor %}
-                </select>
-              </div>
-            {% endfor %}
-          {% endunless %}
-
-          <div class="product-buy-row">
-            <div class="product-quantity">
-              <button type="button" onclick="adjustQty(-1)">−</button>
-              <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
-              <button type="button" onclick="adjustQty(1)">+</button>
-            </div>
-
-            <button type="submit" class="product-add-cart-btn" {% unless product.available %}disabled{% endunless %}>
-              {% if product.available %}
-                {{ section.settings.btn_label | default: "ADD TO CART" }}
-              {% else %}
-                OUT OF STOCK
-              {% endif %}
-            </button>
-          </div>
-        {% endform %}
-      </div>
-
-      <!-- ACCORDION -->
-      {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
-      {% if section.settings.accordion_heading != blank %}
-        <h2 class="product-acc-title">{{ section.settings.accordion_heading }}</h2>
-      {% endif %}
-
-      <div class="product-acc-list">
-        {% if faq_blocks.size > 0 %}
-          {% for block in faq_blocks %}
-            <details class="product-acc-item" {{ block.shopify_attributes }}>
-              <summary>
-                <span>{{ block.settings.question }}</span>
-                <span class="accordion-icon">+</span>
-              </summary>
-              <div class="product-acc-content">
-                {{ block.settings.answer }}
-              </div>
-            </details>
-          {% endfor %}
-        {% else %}
-          <details class="product-acc-item">
-            <summary>
-              <span>Clinical esthetician:</span>
-              <span class="accordion-icon">+</span>
-            </summary>
-            <div class="product-acc-content">
-              <p>Engineered for high precision facial treatments and long sessions.</p>
-            </div>
-          </details>
-        {% endif %}
-      </div>
-    </div>
-
-    <!-- RIGHT COLUMN -->
-    <div class="product-right-col">
-      <div class="product-gallery">
-        <div class="product-gallery__main">
-          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
-          {% if first_img_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
-          {% elsif product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ product.featured_image | image_url: width: 900 }}" alt="{{ product.title | escape }}">
-          {% else %}
-            <div class="thumb-img-placeholder"></div>
-          {% endif %}
-        </div>
-
-        <div class="product-gallery__thumbs">
-          {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
-          {% if img_blocks.size > 0 %}
-            {% for block in img_blocks limit: 4 %}
-              {% if block.settings.image != blank %}
-                <img 
-                  src="{{ block.settings.image | image_url: width: 200 }}" 
-                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.src)" 
-                  {{ block.shopify_attributes }}
-                >
-              {% endif %}
-            {% endfor %}
-          {% elsif product.images.size > 0 %}
-            {% for image in product.images limit: 4 %}
-              <img 
-                src="{{ image | image_url: width: 200 }}" 
-                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.src)" 
-              >
-            {% endfor %}
-          {% endif %}
-        </div>
-      </div>
-
-      <!-- TECH TABLE -->
-      {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
-      {% if section.settings.show_tech_table %}
-        <div class="tech-table-container">
-          <table class="tech-table">
-            <thead>
-              <tr>
-                <th>{{ section.settings.table_col1_header | default: "TECHNICAL ASPECT" }}</th>
-                <th>{{ section.settings.table_col2_header | default: "SPECIFICATION DETAILS" }}</th>
-              </tr>
-            </thead>
-            <tbody>
-              {% if spec_blocks.size > 0 %}
-                {% for block in spec_blocks %}
-                  <tr {{ block.shopify_attributes }}>
-                    <td class="tech-table__label">{{ block.settings.label }}</td>
-                    <td class="tech-table__value">{{ block.settings.value }}</td>
-                  </tr>
-                {% endfor %}
-              {% else %}
-                <tr>
-                  <td class="tech-table__label">Manufacturer</td>
-                  <td class="tech-table__value">Equipro Beauty</td>
-                </tr>
-                <tr>
-                  <td class="tech-table__label">SKU / Model</td>
-                  <td class="tech-table__value">{{ product.selected_or_first_available_variant.sku | default: "EI-502" }}</td>
-                </tr>
-              {% endif %}
-            </tbody>
-          </table>
-        </div>
-      {% endif %}
-    </div>
-
-  </div>
-</div>
-
-<script>
-  function changeMainImg(src) {
-    const mainImg = document.getElementById('MainProductImg');
-    if (mainImg) mainImg.src = src;
-    document.querySelectorAll('.thumb-img').forEach(el => el.classList.remove('is-active'));
-    if (window.event && window.event.target) {
-      window.event.target.classList.add('is-active');
-    }
-  }
-
-  function adjustQty(val) {
-    const input = document.getElementById('QuantityInput');
-    if (!input) return;
-    let current = parseInt(input.value) || 1;
-    current += val;
-    if (current < 1) current = 1;
-    input.value = current;
-  }
-
-  document.addEventListener('DOMContentLoaded', () => {
-    const accordions = document.querySelectorAll('.product-acc-item');
-    accordions.forEach(acc => {
-      acc.addEventListener('toggle', () => {
-        const icon = acc.querySelector('.accordion-icon');
-        if (icon) {
-          icon.textContent = acc.open ? '−' : '+';
-        }
-      });
-    });
-  });
-</script>
-
-{% schema %}
-{
-  "name": "Main Product",
-  "tag": "section",
-  "class": "section-main-product",
-  "settings": [
-    {
-      "type": "text",
-      "id": "back_text",
-      "label": "Back Link Text",
-      "default": "Back"
-    },
-    {
-      "type": "text",
-      "id": "custom_title",
-      "label": "Custom Title Override"
-    },
-    {
-      "type": "textarea",
-      "id": "intro_highlight",
-      "label": "Intro Highlight Text"
-    },
-    {
-      "type": "richtext",
-      "id": "custom_description",
-      "label": "Main Description Override"
-    },
-    {
-      "type": "text",
-      "id": "btn_label",
-      "label": "Button Text",
-      "default": "ADD TO CART"
-    },
-    {
-      "type": "text",
-      "id": "accordion_heading",
-      "label": "Accordion Main Title",
-      "default": "Key Features for the Professional Station"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_tech_table",
-      "label": "Show Technical Table",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "table_col1_header",
-      "label": "Left Column Header",
-      "default": "TECHNICAL ASPECT"
-    },
-    {
-      "type": "text",
-      "id": "table_col2_header",
-      "label": "Right Column Header",
-      "default": "SPECIFICATION DETAILS"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "gallery_image",
-      "name": "Gallery Image",
-      "limit": 4,
-      "settings": [
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Select Image"
-        }
-      ]
-    },
-    {
-      "type": "faq_item",
-      "name": "Accordion Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "question",
-          "label": "Title",
-          "default": "Clinical esthetician:"
-        },
-        {
-          "type": "richtext",
-          "id": "answer",
-          "label": "Description / Content",
-          "default": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
-        }
-      ]
-    },
-    {
-      "type": "spec_row",
-      "name": "Table Spec Row",
-      "settings": [
-        {
-          "type": "text",
-          "id": "label",
-          "label": "Technical Aspect (Red)",
-          "default": "Manufacturer"
-        },
-        {
-          "type": "text",
-          "id": "value",
-          "label": "Specification Detail",
-          "default": "Equipro Beauty"
-        }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Main Product"
-    }
-  ]
-}
-{% endschema %}
