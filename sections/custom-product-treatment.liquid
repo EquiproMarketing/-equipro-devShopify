@@ -7,7 +7,7 @@
     {%- endif -%}
 
     <div class="custom-treatment-grid">
-      {%- comment -%} 1. MANUALLY ORDERED PRODUCTS VIA BLOCKS {%- endcomment -%}
+      {%- comment -%} CASO 1: REORDENAMIENTO MANUAL MEDIANTE BLOQUES {%- endcomment -%}
       {%- if section.blocks.size > 0 -%}
         {%- for block in section.blocks -%}
           {%- assign product = block.settings.product -%}
@@ -98,7 +98,7 @@
           {%- endif -%}
         {%- endfor -%}
 
-      {%- comment -%} 2. FALLBACK TO AUTOMATIC COLLECTION ORDER IF NO BLOCKS ADDED {%- endcomment -%}
+      {%- comment -%} CASO 2: CARGA AUTOMÁTICA DE COLECCIÓN {%- endcomment -%}
       {%- else -%}
         {%- assign collection_target = section.settings.featured_collection -%}
         {%- assign products_limit = section.settings.products_to_show | default: 8 -%}
@@ -195,7 +195,7 @@
   </div>
 </section>
 
-<!-- AJAX ADD TO CART SCRIPT -->
+<!-- SCRIPT AJAX ADD TO CART -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const sectionContainer = document.getElementById('treatment-section-{{ section.id }}');
@@ -284,8 +284,8 @@
     {
       "type": "collection",
       "id": "featured_collection",
-      "label": "Fallback Collection",
-      "info": "Used automatically if no individual Product blocks are added below."
+      "label": "Select Automatic Collection",
+      "info": "Automatic binding: pulls all products directly from this collection unless custom blocks are added below."
     },
     {
       "type": "range",
@@ -293,7 +293,7 @@
       "min": 2,
       "max": 12,
       "step": 1,
-      "label": "Collection Products Limit",
+      "label": "Products to Show",
       "default": 8
     },
     {
@@ -328,7 +328,7 @@
   "blocks": [
     {
       "type": "product_item",
-      "name": "Custom Ordered Product",
+      "name": "Custom Product (Manual)",
       "settings": [
         {
           "type": "product",
@@ -338,18 +338,17 @@
         {
           "type": "text",
           "id": "title",
-          "label": "Title Override",
-          "info": "Leave blank to use exact product title."
+          "label": "Custom Title Override"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle Override"
+          "label": "Custom Subtitle Override"
         },
         {
           "type": "image_picker",
           "id": "custom_image",
-          "label": "Primary Image Override"
+          "label": "Custom Image Override"
         }
       ]
     }
