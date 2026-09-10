@@ -23,105 +23,98 @@
           "type": "spec_row",
           "settings": {
             "label": "Model SKU",
-            "value": "Equipro Beauty"
+            "value": "EI-66001"
           }
         },
         "spec_row_jqyUGD": {
           "type": "spec_row",
           "settings": {
             "label": "Primary Materials",
-            "value": "Equipro Beauty"
+            "value": "Durable heating pad with washable cover"
           }
         },
         "spec_row_tYBUwH": {
           "type": "spec_row",
           "settings": {
             "label": "Dimensions (L x W x H)",
-            "value": "Equipro Beauty"
+            "value": "72\" L x 30\" W"
           }
         },
         "spec_row_rdBpRD": {
           "type": "spec_row",
           "settings": {
             "label": "Weight",
-            "value": "Equipro Beauty"
+            "value": "3.5 lb (1.6 kg)"
           }
         },
         "spec_row_jVNwT9": {
           "type": "spec_row",
           "settings": {
-            "label": "Adjustability",
-            "value": "Equipro Beauty"
+            "label": "Temperature Range",
+            "value": "100°F to 110°F (37°C to 43°C)"
           }
         },
         "spec_row_dRARqG": {
           "type": "spec_row",
           "settings": {
-            "label": "Swivel System",
-            "value": "Equipro Beauty"
+            "label": "Intensity Levels",
+            "value": "Two adjustable levels of intensity"
           }
         },
         "spec_row_pVDK8Q": {
           "type": "spec_row",
           "settings": {
-            "label": "Positioning",
-            "value": "Equipro Beauty"
+            "label": "Power",
+            "value": "Approximately 50 Watts"
           }
         },
         "spec_row_e6UJTL": {
           "type": "spec_row",
           "settings": {
-            "label": "Upholstery",
-            "value": "Equipro Beauty"
+            "label": "Power / Voltage",
+            "value": "Standard 110-120V North American compatibility"
           }
         },
         "spec_row_KMLHzL": {
           "type": "spec_row",
           "settings": {
-            "label": "Armrests",
-            "value": "Equipro Beauty"
+            "label": "Accessories Included",
+            "value": "Washable cover"
           }
         },
         "spec_row_kFYAFt": {
           "type": "spec_row",
           "settings": {
-            "label": "Number of Functions",
-            "value": "Equipro Beauty"
+            "label": "Safety Features",
+            "value": "Thermostatic control, consistent safe temperature maintenance"
           }
         },
         "spec_row_r9PLMa": {
           "type": "spec_row",
           "settings": {
-            "label": "Safety Features",
-            "value": "Equipro Beauty"
+            "label": "Certifications",
+            "value": "CSA & UL approved electrical components"
           }
         },
         "spec_row_mBEg94": {
           "type": "spec_row",
           "settings": {
-            "label": "Certifications",
-            "value": "Equipro Beauty"
+            "label": "Warranty",
+            "value": "1 year"
           }
         },
         "spec_row_8RXETc": {
           "type": "spec_row",
           "settings": {
-            "label": "Warranty",
-            "value": "Equipro Beauty"
+            "label": "Country of Origin",
+            "value": "Canada"
           }
         },
         "spec_row_i9AWkd": {
           "type": "spec_row",
           "settings": {
-            "label": "Country of Origin",
-            "value": "Equipro Beauty"
-          }
-        },
-        "spec_row_xfHCtN": {
-          "type": "spec_row",
-          "settings": {
             "label": "Intended Use",
-            "value": "Equipro Beauty"
+            "value": "Professional treatment table warming pad for client comfort during facials, massages, and body treatments"
           }
         }
       },
@@ -140,20 +133,19 @@
         "spec_row_r9PLMa",
         "spec_row_mBEg94",
         "spec_row_8RXETc",
-        "spec_row_i9AWkd",
-        "spec_row_xfHCtN"
+        "spec_row_i9AWkd"
       ],
       "settings": {
         "back_text": "Back",
-        "custom_title": "Maxi-Comfort 360º Professional Treatment Chair",
-        "intro_highlight": "Designed to elevate practitioner ergonomics, this professional workstation integrates a seamless 360° hydraulic swivel with robust North American manufacturing standards, ensuring unparalleled access and stability during intricate aesthetic services.",
-        "custom_description": "<p>Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists. Its fully adjustable design targets postural strain during high-volume clinic days, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, brow sculpting, or specialized skincare protocols, this professional station adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p><p></p>",
-        "subtitle": "The Gold Standard in Versatile Esthetic Ergonomics",
-        "secondary_text": "Unrivaled durability is central to the Equipro approach. To preserve the ultra-white finish and structural integrity of the Maxi-Comfort 360º, wipe down the surface with gentle professional cleansers formulated for spa environments daily. The premium leatherette provides heavy-duty resistance, ensuring pristine condition across full 8-hour shifts. Consistent care prevents wear, guaranteeing reliable hygiene.",
+        "custom_title": "66001 Heat pad",
+        "intro_highlight": "Engineered to optimize thermal consistency in professional skincare environments, this heavy-duty heating pad bridges the gap between client relaxation and strict institutional execution. Handcrafted under rigid North American manufacturing standards, its integration into your treatment workflow enhances the performance of topical formulas while supporting long-term practitioner positioning during intensive protocols.",
+        "custom_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
+        "subtitle": "Multi-Zone Thermal Optimization for High-End Salons",
+        "secondary_text": "Hygiene and material preservation are central to the Equipro approach. To preserve the flexible structure and uniform heat conductivity of the 66001 Heat pad, routine surface sanitation should be executed with a professional disinfectant spray formulated for non-porous salon environments after every client encounter. The protective outer surface exhibits high chemical resistance properties, ensuring an unblemished, sanitized condition across high-volume operational years. Consistent care prevents localized degradation, preserves internal core insulation, and maximizes total operational reliability.",
         "image_aspect_ratio": "2-3",
-        "show_compare_btn": true,
+        "show_compare_btn": false,
         "compare_btn_label": "Compare with other models",
-        "featured_product": "maxi-comfort-360",
+        "featured_product": "66001-heat-pad",
         "btn_label": "ADD TO CART",
         "accordion_heading": "Key Features for the Professional Station",
         "show_shipping": true,
