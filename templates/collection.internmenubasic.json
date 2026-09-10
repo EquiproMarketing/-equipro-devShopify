@@ -45,77 +45,15 @@
     },
     "custom_product_treatment_iRXMD6": {
       "type": "custom-product-treatment",
-      "blocks": {
-        "product_card_Dc6kjz": {
-          "type": "product_card",
-          "settings": {
-            "product": "65100-therabath-tub-ii",
-            "title": "",
-            "subtitle": "Perfect partner for your clinical practice.",
-            "price": "",
-            "card_bg_color": "#f5f5f7",
-            "available_colors": "",
-            "btn_primary_text": "Learn More",
-            "btn_primary_url": "shopify://products/65100-therabath-tub-ii",
-            "btn_secondary_text": "Buy Now >",
-            "btn_secondary_url": "shopify://products/65100-therabath-tub-ii"
-          }
-        },
-        "product_card_6UBwRJ": {
-          "type": "product_card",
-          "settings": {
-            "product": "66007-spaslim-heating-blanket",
-            "title": "",
-            "subtitle": "Perfect partner for your clinical practice.",
-            "price": "",
-            "card_bg_color": "#f5f5f7",
-            "available_colors": "",
-            "btn_primary_text": "Learn More",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Buy Now >",
-            "btn_secondary_url": ""
-          }
-        },
-        "product_card_7ntxTt": {
-          "type": "product_card",
-          "settings": {
-            "product": "66001-heat-pad",
-            "title": "",
-            "subtitle": "Perfect partner for your clinical practice.",
-            "price": "",
-            "card_bg_color": "#f5f5f7",
-            "available_colors": "",
-            "btn_primary_text": "Learn More",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Buy Now >",
-            "btn_secondary_url": ""
-          }
-        },
-        "product_card_QnAqHw": {
-          "type": "product_card",
-          "settings": {
-            "product": "",
-            "title": "",
-            "subtitle": "Perfect partner for your clinical practice.",
-            "price": "",
-            "card_bg_color": "#f5f5f7",
-            "available_colors": "",
-            "btn_primary_text": "Learn More",
-            "btn_primary_url": "",
-            "btn_secondary_text": "Buy Now >",
-            "btn_secondary_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "product_card_Dc6kjz",
-        "product_card_6UBwRJ",
-        "product_card_7ntxTt",
-        "product_card_QnAqHw"
-      ],
       "name": "Custom Product Treatment",
       "settings": {
-        "title": ""
+        "title": "",
+        "featured_collection": "wellness-therapy",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
       }
     },
     "positive_impact": {
