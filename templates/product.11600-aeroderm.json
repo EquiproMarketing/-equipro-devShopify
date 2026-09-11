@@ -71,6 +71,34 @@
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Impact-Resistant Steel Enclosure: Rigidly constructed with premium heavy-duty materials to lock down long-term performance outcome reliability in busy commercial settings."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Accessory Bay",
+            "text": "Quick-Access Storage Layout: A streamlined engineering approach featuring dedicated accessory holders designed to protect glass components for the operator and client, optimizing physical workspace room."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Ultra-Compact Profile",
+            "text": "Ergonomic Desktop Configuration: Sleek functional layout that ensures seamless structural compatibility with standard clinical cart configurations or modular workspace setups."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
         "image_position": "right",
