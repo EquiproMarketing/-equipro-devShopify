@@ -1,105 +1,101 @@
 /* BENTO GRID V2 - SONY / APPLE STYLE MINIMAL CARDS */
 
 .collections-bento-v2-wrapper {
-    padding-top: 3rem;
-    padding-bottom: 5rem;
-  }
-  
-  .collections-bento-v2__heading {
-    font-size: 2.5rem;
-    font-weight: 700;
-    color: #1d1d1f;
-    margin-bottom: 2.5rem;
-    text-align: center;
-    letter-spacing: -0.02em;
-  }
-  
-  /* 3-COLUMN GRID DISPLAY (6 CARDS TOTAL = 2 ROWS OF 3) */
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+}
+
+.collections-bento-v2__heading {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 2.5rem;
+  text-align: center;
+  letter-spacing: -0.02em;
+}
+
+/* GRID LAYOUT */
+.collections-bento-v2__grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+@media screen and (max-width: 989px) {
   .collections-bento-v2__grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.25rem;
   }
-  
-  @media screen and (max-width: 989px) {
-    .collections-bento-v2__grid {
-      grid-template-columns: repeat(2, 1fr);
-      gap: 1.25rem;
-    }
+}
+
+@media screen and (max-width: 640px) {
+  .collections-bento-v2__grid {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 1.25rem;
   }
-  
-  @media screen and (max-width: 640px) {
-    .collections-bento-v2__grid {
-      grid-template-columns: repeat(1, 1fr);
-      gap: 1.25rem;
-    }
-  }
-  
-  /* FULL CARD CLICKABLE TILE */
-  .bento-v2-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    aspect-ratio: 4 / 5;
-    background-color: #e6e6e8; /* Light gray background matching screenshot */
-    border-radius: 24px;
-    padding: 2rem 1.25rem 1.25rem 1.25rem;
-    text-decoration: none;
-    overflow: hidden;
-    position: relative;
-    transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
-    will-change: transform;
-  }
-  
-  /* HOVER EFFECT: ENTIRE CARD SCALES UP WITH SHADOW */
-  .bento-v2-card:hover {
-    transform: scale(1.03);
-    box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
-    z-index: 2;
-  }
-  
-  /* CARD HEADER & TITLE */
-  .bento-v2-card__header {
-    width: 100%;
-    text-align: center;
-    z-index: 2;
-  }
-  
-  .bento-v2-card__title {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #000000;
-    margin: 0;
-    line-height: 1.2;
-    letter-spacing: -0.01em;
-  }
-  
-/* CARD MEDIA & IMAGE CONTAINER - ANCHO COMPLETO */
-.bento-v2-card__media {
-  position: relative;
+}
+
+/* TARJETA PRINCIPAL */
+.bento-v2-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   width: 100%;
-  display: block;
-  margin-top: 1.25rem;
+  background-color: #e8eaed; /* Tono de gris suave Apple/Sony */
+  border-radius: 28px;
+  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  text-decoration: none;
   overflow: hidden;
-  border-radius: 12px; /* Opcional: suaviza las esquinas de la foto dentro de la tarjeta */
+  position: relative;
+  transition: transform 0.35s cubic-bezier(0.25, 1, 0.5, 1), box-shadow 0.35s ease;
+  will-change: transform;
+}
+
+.bento-v2-card:hover {
+  transform: translateY(-4px) scale(1.015);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  z-index: 2;
+}
+
+/* HEADER Y TÍTULO */
+.bento-v2-card__header {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  z-index: 2;
+}
+
+.bento-v2-card__title {
+  font-size: 1.65rem;
+  font-weight: 800;
+  margin: 0;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
+}
+
+/* MARCO Y FOTO COMPLETA DENTRO DE LA TARJETA */
+.bento-v2-card__media {
+  width: 100%;
+  border-radius: 20px; /* Esquinas redondeadas internas como en la captura */
+  overflow: hidden;
+  display: block;
+  background: transparent;
 }
 
 .bento-v2-card__img {
-  width: 100% !important;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   display: block;
-  object-fit: cover;
+  object-fit: contain; /* Garantiza la foto entera sin recortes */
   transition: transform 0.4s ease;
 }
 
 .bento-v2-card:hover .bento-v2-card__img {
-  transform: scale(1.04);
+  transform: scale(1.03);
 }
-  
-  .bento-v2-card__placeholder {
-    width: 50%;
-    height: 50%;
-    fill: #86868b;
-  }
+
+.bento-v2-card__placeholder {
+  width: 100%;
+  height: 250px;
+  fill: #86868b;
+}
