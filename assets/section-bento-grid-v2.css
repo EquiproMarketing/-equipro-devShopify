@@ -34,15 +34,17 @@
   }
 }
 
-/* TARJETA PREDETERMINADA CON BORDES Y FONDO */
+/* TARJETA CON ALTURA Y PROPORCIÓN FIJA */
 .bento-v2-card {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   width: 100%;
+  aspect-ratio: 4 / 5;
   background-color: #e8eaed;
   border-radius: 28px;
-  padding: 2rem 1.25rem 1.25rem 1.25rem;
+  padding: 1.75rem 1.25rem 1.25rem 1.25rem;
   text-decoration: none;
   overflow: hidden;
   position: relative;
@@ -62,6 +64,7 @@
   text-align: center;
   margin-bottom: 1.25rem;
   z-index: 2;
+  flex-shrink: 0;
 }
 
 .bento-v2-card__title {
@@ -72,21 +75,21 @@
   letter-spacing: -0.02em;
 }
 
-/* CONTENEDOR DE IMAGEN - AJUSTE DE ANCHO COMPLETO */
+/* CONTENEDOR DE IMAGEN - DEBAJO DEL TEXTO OCUPANDO EL ESPACIO RESTANTE */
 .bento-v2-card__media {
   width: 100%;
+  flex: 1;
   border-radius: 20px;
   overflow: hidden;
   display: block;
-  line-height: 0;
+  position: relative;
 }
 
 .bento-v2-card__img {
   width: 100% !important;
-  height: auto !important;
-  max-width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
   display: block !important;
-  object-fit: contain !important;
   transition: transform 0.4s ease;
 }
 
@@ -96,6 +99,6 @@
 
 .bento-v2-card__placeholder {
   width: 100%;
-  height: 220px;
+  height: 100%;
   fill: #86868b;
 }
