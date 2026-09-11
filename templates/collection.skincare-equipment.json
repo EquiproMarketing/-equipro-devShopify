@@ -1,0 +1,148 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subnav": {
+      "type": "category-subnav",
+      "blocks": {
+        "card_item_AUg6gC": {
+          "type": "card_item",
+          "settings": {
+            "parent_category": "",
+            "sub_category": "N/A",
+            "collection": "",
+            "product": "",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_item_AUg6gC"
+      ],
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
+      }
+    },
+    "subcategories_grid_HniybM": {
+      "type": "subcategories-grid",
+      "blocks": {
+        "subcategory_rLkYyD": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "shopify://collections/electric",
+            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#ffffff",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#7f7c7c",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_me8aYk": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Hydraulic / Mechanical",
+            "link": "shopify://collections/hydraulic-mechanical",
+            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#ffffff",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#a9a6a6",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_QVcFrN": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Portable",
+            "link": "shopify://collections/portable",
+            "image": "shopify://shop_images/calypso-portable-multifunction-table-aluminum-frame-professional-wellness-studio-ei-23402.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#ffffff",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#959595",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_rLkYyD",
+        "subcategory_me8aYk",
+        "subcategory_QVcFrN"
+      ],
+      "name": "Subcategories Bento Grid",
+      "settings": {
+        "back_text": "Back",
+        "title": "Treatment Tables"
+      }
+    },
+    "positive_impact": {
+      "type": "positive-impact",
+      "disabled": true,
+      "settings": {}
+    },
+    "why_category": {
+      "type": "why-our-category",
+      "disabled": true,
+      "settings": {}
+    },
+    "video": {
+      "type": "category-video",
+      "settings": {}
+    },
+    "faq": {
+      "type": "category-faq",
+      "disabled": true,
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "reviews": {
+      "type": "customer-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "subnav",
+    "subcategories_grid_HniybM",
+    "positive_impact",
+    "why_category",
+    "video",
+    "faq",
+    "reviews"
+  ]
+}
