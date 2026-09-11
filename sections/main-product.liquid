@@ -60,7 +60,6 @@
               {% for option in target_product.options_with_values %}
                 {% assign option_name_downcase = option.name | downcase %}
                 
-                {%- comment -%} VERIFICACIÓN DE PERMISOS SEGÚN CHECKBOXES DEL CUSTOMIZER {%- endcomment -%}
                 {% assign show_option = true %}
                 {% if option_name_downcase contains 'color' and section.settings.show_color_option == false %}
                   {% assign show_option = false %}
@@ -107,6 +106,7 @@
           </div>
         {% endform %}
       </div>
+    </div>
 
     <!-- COLUMNA DERECHA -->
     <div class="product-right-col">
@@ -218,6 +218,32 @@
       "label": "Secondary Description Paragraph"
     },
     {
+      "type": "header",
+      "content": "Variant Options Display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_selectors",
+      "label": "Enable Variant Dropdowns",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_option",
+      "label": "Show Color Selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_size_option",
+      "label": "Show Size/Talla Selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product Target & Purchasing"
+    },
+    {
       "type": "product",
       "id": "featured_product",
       "label": "Link Specific Product"
@@ -258,29 +284,6 @@
   "presets": [
     {
       "name": "Main Product Top"
-    }
-    {
-      "type": "header",
-      "content": "Variant Options Display"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_variant_selectors",
-      "label": "Enable Variant Dropdowns",
-      "default": true,
-      "info": "Master switch to show/hide variant selectors when available."
-    },
-    {
-      "type": "checkbox",
-      "id": "show_color_option",
-      "label": "Show Color Selector",
-      "default": true
-    },
-    {
-      "type": "checkbox",
-      "id": "show_size_option",
-      "label": "Show Size/Talla Selector",
-      "default": true
     }
   ]
 }
