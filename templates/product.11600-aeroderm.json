@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "11600 - Aeroderm",
+        "intro_highlight": "The Aeroderm 11600 is a versatile, professional-grade compact unit that seamlessly integrates high-efficiency suction and spray functions to deliver superior skin purification, toning, and advanced preparation for facial protocols.",
+        "custom_description": "<p>The Aeroderm multi-function facial unit sets a new benchmark in skincare integration through an exact intersection of practitioner ergonomics and world-class North American manufacturing standards. Developed specifically to address the daily rigors of fast-paced professional treatment rooms, this compact workstation streamlines multi-step dermal sequencing without forcing the operator to constantly swap out separate bulky desktops, preserving valuable physical working room while maintaining absolute client safety.</p>",
+        "subtitle": "Advanced Suction & Spray Technology",
+        "secondary_description": "<p>Hardware durability remains central to the Equipro approach. To preserve the structural quality and professional finish of the Aeroderm, routinely sanitize the external chassis, glass suction components, and storage fittings with non-corrosive disinfectant wipes formulated for high-end salon environments after every treatment session. The outer surface boasts superior scratch and chemical resistance property settings, ensuring a pristine appearance across extended years of continuous facility operation. Consistent care directly prevents product degradation and maximizes operational performance safety.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "aeroderm",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Licensed Aesthetician:",
+            "answer": "<p>The Aeroderm functions as an indispensable asset during deep-pore cleansing and manual extraction pre-conditioning. By pairing its calibrated pneumatic suction with the targeted glass blackhead remover cupping component, the practicing aesthetician can effortlessly pull surface impurities out of the follicular walls. This mechanical approach replaces aggressive physical manual squeezing, protecting the specialist from repetitive wrist strain while offering the client a comfortable, inflammation-free clearing session.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technician:",
+            "answer": "<p>In high-volume clinical rooms, maintaining a strict procedural tempo is critical to daily profitability. The Aeroderm integrates a dual-mode active system featuring independent misting lines and vacuum suction paths that adjust on demand. This permits the technician to transition instantly from active pore purging to refreshing spray misting without power lag, reducing treatment downtime and delivering immediate, repeatable skin calming after intensive resurfacing.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Specialized Skincare Consultant:",
+            "answer": "<p>For diagnostic consultations and customized facial massage routines, the unit delivers fine-tuned variable intensity adjustments. Utilizing the specialized anti-wrinkle and facial massage glass suction cups, the consultant can perform delicate lymphatic sweeping safely along sensitive dermal pathways. This mechanical stimulation improves localized circulation and product responsiveness, offering visible skin plumping and a premium sensory experience.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11600</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial chassis with chemical-resistant protective coating and high-grade blown glass accessory attachments</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Pneumatic vacuum suction and micro-fine atomized spray delivery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>2 distinct functions: deep vacuum purification/toning and liquid mist dispersion</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precision manual vacuum/spray intensity adjustment dial</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Vacuum Capabilities</td>\n        <td>Targeted extraction of comedones, sebum stimulation, and superficial lymphatic drainage</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Spray Compatibility</td>\n        <td>Aqueous astringents, liquid toners, and floral waters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 professional glass suction cups (anti-wrinkle, comedone/blackhead extraction, and massage), 2 refillable spray bottles, and flexible connecting tubing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Integrated top-chassis accessory deck for secure holding of glass cups and spray bottles</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All internal electrical components are fully CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Calibration",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_aspect_ratio": "4-3",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
