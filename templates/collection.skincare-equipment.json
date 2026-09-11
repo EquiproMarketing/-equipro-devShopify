@@ -59,10 +59,11 @@
             "collection": "",
             "custom_link": "shopify://collections/facial-units",
             "title": "Facial Units",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
             "bg_color": "#e8e8ed",
-            "title_color": "#000000",
+            "title_color": "#FFFFFF",
             "title_font_size": 28,
-            "enable_text_shadow": false,
+            "enable_text_shadow": true,
             "shadow_color": "#000000",
             "shadow_blur": 8,
             "shadow_offset_y": 4,
@@ -144,7 +145,7 @@
       ],
       "name": "Bento Grid V2",
       "settings": {
-        "title": "Products"
+        "title": "Skincare-equipment"
       }
     },
     "positive_impact": {
