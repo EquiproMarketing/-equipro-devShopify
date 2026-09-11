@@ -8,29 +8,62 @@
       <div style="display: flex; flex-direction: column; gap: 20px;">
         {% for item in cart.items %}
           <div style="display: flex; gap: 20px; border-bottom: 1px solid #e5e5e7; padding-bottom: 20px; align-items: center;">
+            
+            <!-- IMAGEN DEL PRODUCTO -->
             <div style="width: 100px; height: 100px; border-radius: 12px; overflow: hidden; background: #f5f5f7; flex-shrink: 0; border: 1px solid #e5e5e7;">
               {% if item.image %}
                 <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
               {% endif %}
             </div>
 
+            <!-- DETALLES Y VARIANTES -->
             <div style="flex: 1;">
-              <a href="{{ item.url }}" style="font-size: 1.05rem; font-weight: 600; color: #1d1d1f; text-decoration: none;">{{ item.product.title }}</a>
+              <a href="{{ item.url }}" style="font-size: 1.1rem; font-weight: 600; color: #1d1d1f; text-decoration: none; display: block;">
+                {{ item.product.title }}
+              </a>
+
+              <!-- Desglose de Variantes (Color, Tamaño, etc.) -->
               {% unless item.product.has_only_default_variant %}
-                <p style="font-size: 0.85rem; color: #6e6e73; margin: 4px 0 0 0;">{{ item.variant.title }}</p>
+                <div style="font-size: 0.88rem; color: #6e6e73; margin-top: 4px;">
+                  {% for option in item.options_with_values %}
+                    <span>{{ option.name }}: <strong>{{ option.value }}</strong></span>{% unless forloop.last %} &bull; {% endunless %}
+                  {% endfor %}
+                </div>
               {% endunless %}
-              <div style="font-size: 1rem; font-weight: 700; color: #ab273b; margin-top: 8px;">{{ item.final_line_price | money }}</div>
+
+              <!-- Propiedades personalizadas si existen -->
+              {% assign property_size = item.properties | size %}
+              {% if property_size > 0 %}
+                <div style="font-size: 0.82rem; color: #86868b; margin-top: 4px;">
+                  {% for p in item.properties %}
+                    {% unless p.last == blank %}
+                      <div>{{ p.first }}: {{ p.last }}</div>
+                    {% endunless %}
+                  {% endfor %}
+                </div>
+              {% endif %}
+
+              <div style="font-size: 1.05rem; font-weight: 700; color: #ab273b; margin-top: 8px;">
+                {{ item.final_line_price | money }}
+              </div>
             </div>
 
-            <div class="product-quantity" style="height: 38px;">
-              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" style="width: 50px; text-align: center; border: 1px solid #d2d2d7; border-radius: 4px;">
+            <!-- SELECTOR DE CANTIDAD LIMPIO (- / +) -->
+            <div style="display: flex; align-items: center; border: 1px solid #d2d2d7; border-radius: 6px; overflow: hidden; height: 36px; background: #ffffff;">
+              <button type="button" class="js-main-qty-btn" data-action="minus" style="background: none; border: none; padding: 0 12px; cursor: pointer; color: #1d1d1f; font-size: 1rem; height: 100%; display: flex; align-items: center;">−</button>
+              
+              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" style="width: 36px; border: none; text-align: center; font-size: 0.9rem; font-weight: 600; color: #1d1d1f; -moz-appearance: textfield; padding: 0;">
+              
+              <button type="button" class="js-main-qty-btn" data-action="plus" style="background: none; border: none; padding: 0 12px; cursor: pointer; color: #1d1d1f; font-size: 1rem; height: 100%; display: flex; align-items: center;">+</button>
             </div>
 
-            <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0" style="color: #86868b; font-size: 0.85rem; text-decoration: underline; margin-left: 10px;">Remove</a>
+            <!-- BOTÓN ELIMINAR -->
+            <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0" style="color: #86868b; font-size: 0.85rem; text-decoration: underline; margin-left: 12px;">Remove</a>
           </div>
         {% endfor %}
       </div>
 
+      <!-- SUBTOTAL Y ACCIONES -->
       <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
         <div style="font-size: 1.25rem; font-weight: 700; color: #1d1d1f;">
           Subtotal: <span style="color: #ab273b;">{{ cart.total_price | money }}</span>
@@ -38,18 +71,45 @@
         <p style="font-size: 0.85rem; color: #6e6e73; margin: 0;">Taxes and shipping calculated at checkout.</p>
         
         <div style="display: flex; gap: 12px; margin-top: 10px;">
-          <button type="submit" name="update" class="product-compare-trigger-btn" style="height: 44px; padding: 0 20px; cursor: pointer;">Update Cart</button>
-          <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 30px; cursor: pointer;">Checkout</button>
+          <button type="submit" name="update" class="product-compare-trigger-btn" style="height: 44px; padding: 0 24px; cursor: pointer; border-radius: 22px;">Update Cart</button>
+          <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 32px; cursor: pointer; border-radius: 22px;">CHECKOUT</button>
         </div>
       </div>
     </form>
   {% else %}
     <div style="text-align: center; padding: 60px 0;">
       <p style="font-size: 1.1rem; color: #6e6e73;">Your cart is currently empty.</p>
-      <a href="/collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px;">Continue Shopping</a>
+      <a href="/collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">Continue Shopping</a>
     </div>
   {% endif %}
 </div>
+
+<style>
+  /* Oculta las flechas por defecto de los campos numéricos */
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] {
+    -moz-appearance: textfield;
+  }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    document.querySelectorAll('.js-main-qty-btn').forEach(btn => {
+      btn.addEventListener('click', (e) => {
+        const action = btn.getAttribute('data-action');
+        const input = btn.parentElement.querySelector('input');
+        let currentVal = parseInt(input.value) || 0;
+
+        if (action === 'plus') input.value = currentVal + 1;
+        if (action === 'minus' && currentVal > 0) input.value = currentVal - 1;
+      });
+    });
+  });
+</script>
 
 {% schema %}
 {
