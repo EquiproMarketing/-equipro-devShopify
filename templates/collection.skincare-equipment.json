@@ -42,7 +42,15 @@
             "collection": "",
             "custom_link": "shopify://collections/streamers",
             "title": "Streamers",
-            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp"
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_GD34AQ": {
@@ -50,7 +58,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/facial-units",
-            "title": "Facial Units"
+            "title": "Facial Units",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_RebBNy": {
@@ -58,7 +74,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/columns",
-            "title": "Columns"
+            "title": "Columns",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_zma7X8": {
@@ -66,7 +90,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/wax-heaters",
-            "title": "Wax-heaters"
+            "title": "Wax-heaters",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_kr4UGe": {
@@ -74,7 +106,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/towel-warmers",
-            "title": "Towel Warmers"
+            "title": "Towel Warmers",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_pykgUc": {
@@ -82,7 +122,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/skin-analyzer",
-            "title": "Skin Analyzer"
+            "title": "Skin Analyzer",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         }
       },
