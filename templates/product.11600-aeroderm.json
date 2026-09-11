@@ -71,6 +71,34 @@
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Impact-Resistant Steel Enclosure: Rigidly constructed with premium heavy-duty materials to lock down long-term performance outcome reliability in busy commercial settings."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Accessory Bay",
+            "text": "Quick-Access Storage Layout: A streamlined engineering approach featuring dedicated accessory holders designed to protect glass components for the operator and client, optimizing physical workspace room."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Ultra-Compact Profile",
+            "text": "Ergonomic Desktop Configuration: Sleek functional layout that ensures seamless structural compatibility with standard clinical cart configurations or modular workspace setups."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
         "image_position": "right",
@@ -94,22 +122,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Setup and Connection",
+            "text": "Place the compact Aeroderm unit securely onto a stable treatment cart and plug the plastic lines into their respective vacuum and spray quick-connect inlets."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Spray Preparation",
+            "text": "Fill the plastic misting container with professional-grade skin toner or botanical mist, locking it to the spray nozzle head."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Glass Attachment Selection",
+            "text": "Choose the specific glass cupping component needed for the procedure (anti-wrinkle, blackhead remover, or massage) and slide it firmly into the suction adapter tool."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Intensity Calibration",
+            "text": "Power on the system and adjust the primary dial to the lowest setting before completing contact with the target facial area."
+          }
+        },
+        "instruction_item_x6Kb8r": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Modality Execution",
+            "text": "Move the active glass head smoothly along natural muscle contours, regulating suction intensity via the built-in thumb port on the connector."
           }
         },
         "section_header_dGJcmr": {
@@ -121,22 +163,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Lifting Technique",
+            "text": "Always vent the vacuum circuit via the adapter air hole before lifting the glass cup directly off the client's skin to prevent capillary stress."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Fluid Safeguards",
+            "text": "Never operate the vacuum modality without verifying that the inline capture mechanism is empty to prevent fluids from reaching the internal motor."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Component Inspections",
+            "text": "Visually inspect all glass attachments under strong magnification prior to every treatment session to guarantee components are completely free of structural micro-cracks."
           }
         }
       },
@@ -145,14 +187,17 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_x6Kb8r",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
         "instruction_item_P8t7dx"
       ],
       "settings": {
+        "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
         "image_position": "left",
-        "image_aspect_ratio": "4-3",
+        "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
         "text_color": "#444444",
         "bg_color": "#ffffff",
@@ -168,43 +213,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What specific glass attachments are included inside the standard Aeroderm package?",
+            "answer": "<p><strong>The station ships complete with three target glass cupping components.</strong> You receive an anti-wrinkle cup, a blackhead removal tool, and a facial massage attachment.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What is the standard factory warranty period for this professional device?",
+            "answer": "<p><strong>Equipro backs this system with a comprehensive two-year commercial warranty.</strong> This covers structural components and factory assembly defects from your purchase date.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Can the spray system operate with standard water or essential botanical blends?",
+            "answer": "<p><strong>Yes, the misting diffuser accommodates liquid toners and floral waters.</strong> Always ensure solutions are finely filtered to avoid blocking the spray nozzle.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Does the vacuum suction require separate filters to protect the motor assembly?",
+            "answer": "<p><strong>The unit relies on a protective line configuration to block fluids.</strong> Routinely check lines to ensure zero moisture bypass into the central pump chamber.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Is this professional system certified for use in commercial settings across Canada?",
+            "answer": "<p><strong>Yes, all electrical parts are fully CSA and UL approved.</strong> This guarantees compliance with safety metrics for institutional salon settings.</p>"
           }
         },
         "faq_item_eGYQwE": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Where is the manufacturing and assembly center for Equipro's facial equipment line?",
+            "answer": "<p><strong>Every Aeroderm station is designed, built, and calibrated in North America.</strong> This ensures reliable access to certified components and technical service support.</p>"
           }
         }
       },

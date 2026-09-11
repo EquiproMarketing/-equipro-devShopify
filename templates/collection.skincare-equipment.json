@@ -1,0 +1,150 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subnav": {
+      "type": "category-subnav",
+      "blocks": {
+        "card_item_AUg6gC": {
+          "type": "card_item",
+          "settings": {
+            "parent_category": "",
+            "sub_category": "N/A",
+            "collection": "",
+            "product": "",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_item_AUg6gC"
+      ],
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
+      }
+    },
+    "section_bento_grid_v2_MTxgDi": {
+      "type": "section-bento-grid-v2",
+      "blocks": {
+        "collection_item_EajrAM": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/streamers",
+            "title": "Streamers"
+          }
+        },
+        "collection_item_GD34AQ": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/facial-units",
+            "title": "Facial Units"
+          }
+        },
+        "collection_item_RebBNy": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/columns",
+            "title": "Columns"
+          }
+        },
+        "collection_item_zma7X8": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/wax-heaters",
+            "title": "Wax-heaters"
+          }
+        },
+        "collection_item_kr4UGe": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/towel-warmers",
+            "title": "Towel Warmers"
+          }
+        },
+        "collection_item_pykgUc": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/skin-analyzer",
+            "title": "Skin Analyzer"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_EajrAM",
+        "collection_item_GD34AQ",
+        "collection_item_RebBNy",
+        "collection_item_zma7X8",
+        "collection_item_kr4UGe",
+        "collection_item_pykgUc"
+      ],
+      "name": "Bento Grid V2",
+      "settings": {
+        "title": "Products"
+      }
+    },
+    "positive_impact": {
+      "type": "positive-impact",
+      "disabled": true,
+      "settings": {}
+    },
+    "why_category": {
+      "type": "why-our-category",
+      "disabled": true,
+      "settings": {}
+    },
+    "video": {
+      "type": "category-video",
+      "settings": {}
+    },
+    "faq": {
+      "type": "category-faq",
+      "disabled": true,
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "reviews": {
+      "type": "customer-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "subnav",
+    "section_bento_grid_v2_MTxgDi",
+    "positive_impact",
+    "why_category",
+    "video",
+    "faq",
+    "reviews"
+  ]
+}
