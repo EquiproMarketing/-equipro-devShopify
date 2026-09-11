@@ -11,147 +11,57 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "blocks": {
-        "spec_row_zk4QN7": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Manufacturer",
-            "value": "Equipro Beauty"
-          }
-        },
-        "spec_row_z7epLe": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Model SKU",
-            "value": "EI-66001"
-          }
-        },
-        "spec_row_jqyUGD": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Primary Materials",
-            "value": "Durable heating pad with washable cover"
-          }
-        },
-        "spec_row_tYBUwH": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Dimensions (L x W x H)",
-            "value": "72\" L x 30\" W"
-          }
-        },
-        "spec_row_rdBpRD": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Weight",
-            "value": "3.5 lb (1.6 kg)"
-          }
-        },
-        "spec_row_jVNwT9": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Temperature Range",
-            "value": "100°F to 110°F (37°C to 43°C)"
-          }
-        },
-        "spec_row_dRARqG": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Intensity Levels",
-            "value": "Two adjustable levels of intensity"
-          }
-        },
-        "spec_row_pVDK8Q": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Power",
-            "value": "Approximately 50 Watts"
-          }
-        },
-        "spec_row_e6UJTL": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Power / Voltage",
-            "value": "Standard 110-120V North American compatibility"
-          }
-        },
-        "spec_row_KMLHzL": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Accessories Included",
-            "value": "Washable cover"
-          }
-        },
-        "spec_row_kFYAFt": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Safety Features",
-            "value": "Thermostatic control, consistent safe temperature maintenance"
-          }
-        },
-        "spec_row_r9PLMa": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Certifications",
-            "value": "CSA & UL approved electrical components"
-          }
-        },
-        "spec_row_mBEg94": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Warranty",
-            "value": "1 year"
-          }
-        },
-        "spec_row_8RXETc": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Country of Origin",
-            "value": "Canada"
-          }
-        },
-        "spec_row_i9AWkd": {
-          "type": "spec_row",
-          "settings": {
-            "label": "Intended Use",
-            "value": "Professional treatment table warming pad for client comfort during facials, massages, and body treatments"
-          }
-        }
-      },
-      "block_order": [
-        "spec_row_zk4QN7",
-        "spec_row_z7epLe",
-        "spec_row_jqyUGD",
-        "spec_row_tYBUwH",
-        "spec_row_rdBpRD",
-        "spec_row_jVNwT9",
-        "spec_row_dRARqG",
-        "spec_row_pVDK8Q",
-        "spec_row_e6UJTL",
-        "spec_row_KMLHzL",
-        "spec_row_kFYAFt",
-        "spec_row_r9PLMa",
-        "spec_row_mBEg94",
-        "spec_row_8RXETc",
-        "spec_row_i9AWkd"
-      ],
       "settings": {
         "back_text": "Back",
         "custom_title": "66001 Heat pad",
         "intro_highlight": "Engineered to optimize thermal consistency in professional skincare environments, this heavy-duty heating pad bridges the gap between client relaxation and strict institutional execution. Handcrafted under rigid North American manufacturing standards, its integration into your treatment workflow enhances the performance of topical formulas while supporting long-term practitioner positioning during intensive protocols.",
         "custom_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
-        "subtitle": "Multi-Zone Thermal Optimization for High-End Salons",
-        "secondary_text": "Hygiene and material preservation are central to the Equipro approach. To preserve the flexible structure and uniform heat conductivity of the 66001 Heat pad, routine surface sanitation should be executed with a professional disinfectant spray formulated for non-porous salon environments after every client encounter. The protective outer surface exhibits high chemical resistance properties, ensuring an unblemished, sanitized condition across high-volume operational years. Consistent care prevents localized degradation, preserves internal core insulation, and maximizes total operational reliability.",
-        "image_aspect_ratio": "2-3",
-        "show_compare_btn": false,
-        "compare_btn_label": "Compare with other models",
+        "subtitle": "ufhasdbkjdsbkajsbdc",
+        "secondary_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
         "featured_product": "66001-heat-pad",
         "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical esthetician:",
+            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical esthetician:",
+            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical esthetician:",
+            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
         "accordion_heading": "Key Features for the Professional Station",
         "show_shipping": true,
         "shipping_title": "Shipping",
-        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping <strong>takes 2–3 business days</strong></p>",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -328,6 +238,7 @@
   },
   "order": [
     "main",
+    "main_product_characteristics_Hp7Baq",
     "banner_features",
     "how_to",
     "faq",

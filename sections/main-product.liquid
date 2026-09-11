@@ -45,7 +45,7 @@
         </div>
       {% endif %}
 
-      <!-- CAJA DE COMPRA DINÁMICA CON OPCIONES CONFIGURABLES -->
+      <!-- CAJA DE COMPRA -->
       <div class="product-buy-box">
         <div class="product-price">
           {{ target_product.price | money }}
@@ -54,6 +54,7 @@
         {% form 'product', target_product %}
           <input type="hidden" name="id" value="{{ target_product.selected_or_first_available_variant.id }}">
 
+ HEAD
           {%- comment -%} RENDERING DE VARIANTES CON FILTROS Y TOGGLE {%- endcomment -%}
           {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
             <div class="product-options-container">
@@ -88,6 +89,22 @@
               {% endfor %}
             </div>
           {% endif %}
+
+          {% unless target_product.has_only_default_variant %}
+            {% for option in target_product.options_with_values %}
+              <div class="product-option">
+                <label>{{ option.name }}:</label>
+                <select name="options[{{ option.name | escape }}]" class="product-select">
+                  {% for value in option.values %}
+                    <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                      {{ value }}
+                    </option>
+                  {% endfor %}
+                </select>
+              </div>
+            {% endfor %}
+          {% endunless %}
+63155312d664926289c33b94e219919a79d2d836
 
           <div class="product-buy-row">
             <div class="product-quantity">
