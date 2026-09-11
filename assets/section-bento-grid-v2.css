@@ -1,4 +1,4 @@
-/* BENTO GRID V2 - MINIMAL CARDS */
+/* BENTO GRID V2 - DYNAMIC VARIABLE STRUCTURE */
 
 .collections-bento-v2-wrapper {
   padding-top: 3rem;
@@ -8,12 +8,13 @@
 .collections-bento-v2__heading {
   font-size: 2.5rem;
   font-weight: 700;
+  color: #1d1d1f;
   margin-bottom: 2.5rem;
   text-align: center;
   letter-spacing: -0.02em;
 }
 
-/* GRID LAYOUT */
+/* 3-COLUMN GRID DISPLAY */
 .collections-bento-v2__grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -34,17 +35,17 @@
   }
 }
 
-/* TARJETA CON ALTURA Y PROPORCIÓN FIJA */
+/* BENTO CARD CONTAINER WITH CSS VARIABLES */
 .bento-v2-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
   aspect-ratio: 4 / 5;
-  background-color: #e8eaed;
-  border-radius: 28px;
-  padding: 1.75rem 1.25rem 1.25rem 1.25rem;
+  background-color: var(--tile-bg, #e8e8ed);
+  border-radius: 24px;
+  padding: 2.25rem 1.25rem 1.25rem 1.25rem;
   text-decoration: none;
   overflow: hidden;
   position: relative;
@@ -53,52 +54,75 @@
 }
 
 .bento-v2-card:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.08);
+  transform: scale(1.02);
+  box-shadow: 0 16px 36px rgba(0, 0, 0, 0.12);
   z-index: 2;
 }
 
-/* HEADER Y TÍTULO DE TARJETA */
+/* HEADER AND TITLE WITH CSS VARIABLES */
 .bento-v2-card__header {
   width: 100%;
   text-align: center;
-  margin-bottom: 1.25rem;
   z-index: 2;
-  flex-shrink: 0;
+  margin-bottom: 1rem;
 }
 
 .bento-v2-card__title {
-  font-size: 1.6rem;
+  font-size: var(--tile-title-size, 24px);
   font-weight: 700;
+  color: var(--tile-title-color, #000000);
   margin: 0;
   line-height: 1.2;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.01em;
+  transition: color 0.2s ease;
 }
 
-/* CONTENEDOR DE IMAGEN - DEBAJO DEL TEXTO OCUPANDO EL ESPACIO RESTANTE */
+.bento-v2-card__title--shadow {
+  text-shadow: 0px var(--tile-shadow-y, 4px) var(--tile-shadow-blur, 8px) var(--tile-shadow-color, rgba(0, 0, 0, 0.3));
+}
+
+/* MEDIA CONTAINER */
 .bento-v2-card__media {
+  position: relative;
   width: 100%;
   flex: 1;
-  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 18px;
   overflow: hidden;
-  display: block;
-  position: relative;
 }
 
 .bento-v2-card__img {
-  width: 100% !important;
-  height: 100% !important;
-  object-fit: cover !important;
-  display: block !important;
+  width: 100%;
+  height: 100%;
+  display: block;
   transition: transform 0.4s ease;
 }
 
+/* FIT MODES */
+.bento-v2-card--fit-cover .bento-v2-card__img {
+  object-fit: cover;
+}
+
+.bento-v2-card--fit-contain .bento-v2-card__img {
+  object-fit: contain;
+}
+
 .bento-v2-card:hover .bento-v2-card__img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .bento-v2-card__placeholder {
   width: 100%;
   height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bento-v2-card__svg {
+  width: 50%;
+  height: 50%;
   fill: #86868b;
 }
