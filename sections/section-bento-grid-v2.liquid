@@ -12,7 +12,7 @@
       {%- assign card_image = block.settings.image | default: block.settings.collection.featured_image -%}
 
       {%- assign img_fit = block.settings.image_fit | default: 'cover' -%}
-      {%- assign title_size = block.settings.title_font_size | default: 24 -%}
+      {%- assign title_size = block.settings.title_font_size | default: 28 -%}
       {%- assign title_color = block.settings.title_color | default: '#000000' -%}
       {%- assign shadow_color = block.settings.shadow_color | default: 'rgba(0,0,0,0.3)' -%}
       {%- assign shadow_blur = block.settings.shadow_blur | default: 8 -%}
@@ -31,18 +31,13 @@
         "
         {{ block.shopify_attributes }}
       >
-        <div class="bento-v2-card__header">
-          <h3 class="bento-v2-card__title {% if block.settings.enable_text_shadow %}bento-v2-card__title--shadow{% endif %}">
-            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
-          </h3>
-        </div>
-
+        <!-- Full Bleed Image Container (Absolute Fill) -->
         <div class="bento-v2-card__media">
           {%- if card_image != blank -%}
             <img 
-              src="{{ card_image | image_url: width: 800 }}" 
+              src="{{ card_image | image_url: width: 1000 }}" 
               alt="{{ block.settings.title | default: card_image.alt | escape }}" 
-              class="bento-v2-card__img" 
+              class="bento-v2-card__image" 
               loading="lazy" 
               width="500" 
               height="500"
@@ -52,6 +47,13 @@
               {{ 'product-1' | placeholder_svg_tag: 'bento-v2-card__svg' }}
             </div>
           {%- endif -%}
+        </div>
+
+        <!-- Floating Title Overlay (Positioned On Top of Image) -->
+        <div class="bento-v2-card__header">
+          <h3 class="bento-v2-card__title {% if block.settings.enable_text_shadow %}bento-v2-card__title--shadow{% endif %}">
+            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
+          </h3>
         </div>
       </a>
     {%- endfor -%}
@@ -118,12 +120,12 @@
         {
           "type": "range",
           "id": "title_font_size",
-          "min": 16,
+          "min": 18,
           "max": 42,
           "step": 1,
           "unit": "px",
           "label": "Title Font Size",
-          "default": 24
+          "default": 28
         },
         {
           "type": "checkbox",
@@ -135,7 +137,7 @@
           "type": "color",
           "id": "shadow_color",
           "label": "Shadow Color",
-          "default": "rgba(0,0,0,0.3)"
+          "default": "#000000"
         },
         {
           "type": "range",
