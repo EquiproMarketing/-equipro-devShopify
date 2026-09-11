@@ -163,22 +163,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Lifting Technique",
+            "text": "Always vent the vacuum circuit via the adapter air hole before lifting the glass cup directly off the client's skin to prevent capillary stress."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Fluid Safeguards",
+            "text": "Never operate the vacuum modality without verifying that the inline capture mechanism is empty to prevent fluids from reaching the internal motor."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Component Inspections",
+            "text": "Visually inspect all glass attachments under strong magnification prior to every treatment session to guarantee components are completely free of structural micro-cracks."
           }
         }
       },
@@ -195,8 +195,9 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
+        "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
         "image_position": "left",
-        "image_aspect_ratio": "4-3",
+        "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
         "text_color": "#444444",
         "bg_color": "#ffffff",
