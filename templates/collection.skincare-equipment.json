@@ -33,67 +33,69 @@
         "hide_on_mobile": true
       }
     },
-    "subcategories_grid_HniybM": {
-      "type": "subcategories-grid",
+    "section_bento_grid_v2_MTxgDi": {
+      "type": "section-bento-grid-v2",
       "blocks": {
-        "subcategory_rLkYyD": {
-          "type": "subcategory",
+        "collection_item_EajrAM": {
+          "type": "collection_item",
           "settings": {
-            "title": "Electric",
-            "link": "shopify://collections/electric",
-            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#7f7c7c",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "collection": "",
+            "custom_link": "shopify://collections/streamers",
+            "title": "Streamers"
           }
         },
-        "subcategory_me8aYk": {
-          "type": "subcategory",
+        "collection_item_GD34AQ": {
+          "type": "collection_item",
           "settings": {
-            "title": "Hydraulic / Mechanical",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#a9a6a6",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "collection": "",
+            "custom_link": "shopify://collections/facial-units",
+            "title": "Facial Units"
           }
         },
-        "subcategory_QVcFrN": {
-          "type": "subcategory",
+        "collection_item_RebBNy": {
+          "type": "collection_item",
           "settings": {
-            "title": "Portable",
-            "link": "shopify://collections/portable",
-            "image": "shopify://shop_images/calypso-portable-multifunction-table-aluminum-frame-professional-wellness-studio-ei-23402.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#959595",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
+            "collection": "",
+            "custom_link": "shopify://collections/columns",
+            "title": "Columns"
+          }
+        },
+        "collection_item_zma7X8": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/wax-heaters",
+            "title": "Wax-heaters"
+          }
+        },
+        "collection_item_kr4UGe": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/towel-warmers",
+            "title": "Towel Warmers"
+          }
+        },
+        "collection_item_pykgUc": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/skin-analyzer",
+            "title": "Skin Analyzer"
           }
         }
       },
       "block_order": [
-        "subcategory_rLkYyD",
-        "subcategory_me8aYk",
-        "subcategory_QVcFrN"
+        "collection_item_EajrAM",
+        "collection_item_GD34AQ",
+        "collection_item_RebBNy",
+        "collection_item_zma7X8",
+        "collection_item_kr4UGe",
+        "collection_item_pykgUc"
       ],
-      "name": "Subcategories Bento Grid",
+      "name": "Bento Grid V2",
       "settings": {
-        "back_text": "Back",
-        "title": "Treatment Tables"
+        "title": "Products"
       }
     },
     "positive_impact": {
@@ -138,7 +140,7 @@
   },
   "order": [
     "subnav",
-    "subcategories_grid_HniybM",
+    "section_bento_grid_v2_MTxgDi",
     "positive_impact",
     "why_category",
     "video",
