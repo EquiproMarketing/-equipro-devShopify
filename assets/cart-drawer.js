@@ -94,19 +94,19 @@ class CartDrawer {
   // Inicializar globalmente para poder invocarlo desde los botones de Add to Cart
   window.cartDrawer = new CartDrawer();
 
-  // Intercepta los clics en el icono del carrito del Header
-document.addEventListener('DOMContentLoaded', () => {
-  const cartLinks = document.querySelectorAll('a[href="/cart"], a[href*="/cart"]');
-  
-  cartLinks.forEach(link => {
-    // Si el enlace no está dentro del propio drawer, abre el drawer lateral
-    if (!link.closest('#CartDrawer')) {
-      link.addEventListener('click', (e) => {
-        e.preventDefault();
-        if (window.cartDrawer) {
-          window.cartDrawer.open();
+  document.addEventListener('DOMContentLoaded', () => {
+    // Solo intercepta clics en /cart si vienen de enlaces fuera de la página de carrito activa
+    const isCartPage = window.location.pathname.includes('/cart');
+    
+    if (!isCartPage) {
+      const cartLinks = document.querySelectorAll('a[href="/cart"], a[href*="/cart"]');
+      cartLinks.forEach(link => {
+        if (!link.closest('#CartDrawer')) {
+          link.addEventListener('click', (e) => {
+            e.preventDefault();
+            if (window.cartDrawer) window.cartDrawer.open();
+          });
         }
       });
     }
   });
-});
