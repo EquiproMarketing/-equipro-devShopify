@@ -13,14 +13,17 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "66001 Heat pad",
-        "intro_highlight": "Engineered to optimize thermal consistency in professional skincare environments, this heavy-duty heating pad bridges the gap between client relaxation and strict institutional execution. Handcrafted under rigid North American manufacturing standards, its integration into your treatment workflow enhances the performance of topical formulas while supporting long-term practitioner positioning during intensive protocols.",
-        "custom_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
-        "subtitle": "ufhasdbkjdsbkajsbdc",
-        "secondary_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
-        "featured_product": "66001-heat-pad",
+        "custom_title": "11600 - Aeroderm",
+        "intro_highlight": "The Aeroderm 11600 is a versatile, professional-grade compact unit that seamlessly integrates high-efficiency suction and spray functions to deliver superior skin purification, toning, and advanced preparation for facial protocols.",
+        "custom_description": "<p>The Aeroderm multi-function facial unit sets a new benchmark in skincare integration through an exact intersection of practitioner ergonomics and world-class North American manufacturing standards. Developed specifically to address the daily rigors of fast-paced professional treatment rooms, this compact workstation streamlines multi-step dermal sequencing without forcing the operator to constantly swap out separate bulky desktops, preserving valuable physical working room while maintaining absolute client safety.</p>",
+        "subtitle": "Advanced Suction & Spray Technology",
+        "secondary_description": "<p>Hardware durability remains central to the Equipro approach. To preserve the structural quality and professional finish of the Aeroderm, routinely sanitize the external chassis, glass suction components, and storage fittings with non-corrosive disinfectant wipes formulated for high-end salon environments after every treatment session. The outer surface boasts superior scratch and chemical resistance property settings, ensuring a pristine appearance across extended years of continuous facility operation. Consistent care directly prevents product degradation and maximizes operational performance safety.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "aeroderm",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": true,
+        "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
       }
     },
@@ -30,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Licensed Aesthetician:",
+            "answer": "<p>The Aeroderm functions as an indispensable asset during deep-pore cleansing and manual extraction pre-conditioning. By pairing its calibrated pneumatic suction with the targeted glass blackhead remover cupping component, the practicing aesthetician can effortlessly pull surface impurities out of the follicular walls. This mechanical approach replaces aggressive physical manual squeezing, protecting the specialist from repetitive wrist strain while offering the client a comfortable, inflammation-free clearing session.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Clinical Spa Technician:",
+            "answer": "<p>In high-volume clinical rooms, maintaining a strict procedural tempo is critical to daily profitability. The Aeroderm integrates a dual-mode active system featuring independent misting lines and vacuum suction paths that adjust on demand. This permits the technician to transition instantly from active pore purging to refreshing spray misting without power lag, reducing treatment downtime and delivering immediate, repeatable skin calming after intensive resurfacing.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Specialized Skincare Consultant:",
+            "answer": "<p>For diagnostic consultations and customized facial massage routines, the unit delivers fine-tuned variable intensity adjustments. Utilizing the specialized anti-wrinkle and facial massage glass suction cups, the consultant can perform delicate lymphatic sweeping safely along sensitive dermal pathways. This mechanical stimulation improves localized circulation and product responsiveness, offering visible skin plumping and a premium sensory experience.</p>"
           }
         }
       },
@@ -61,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11600</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial chassis with chemical-resistant protective coating and high-grade blown glass accessory attachments</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Pneumatic vacuum suction and micro-fine atomized spray delivery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>2 distinct functions: deep vacuum purification/toning and liquid mist dispersion</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precision manual vacuum/spray intensity adjustment dial</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Vacuum Capabilities</td>\n        <td>Targeted extraction of comedones, sebum stimulation, and superficial lymphatic drainage</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Spray Compatibility</td>\n        <td>Aqueous astringents, liquid toners, and floral waters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 professional glass suction cups (anti-wrinkle, comedone/blackhead extraction, and massage), 2 refillable spray bottles, and flexible connecting tubing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Integrated top-chassis accessory deck for secure holding of glass cups and spray bottles</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All internal electrical components are fully CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
