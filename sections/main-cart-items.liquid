@@ -8,20 +8,22 @@
       <div style="display: flex; flex-direction: column; gap: 20px;">
         {% for item in cart.items %}
           <div style="display: flex; gap: 20px; border-bottom: 1px solid #e5e5e7; padding-bottom: 20px; align-items: center;">
-            <div style="width: 100px; height: 100px; border-radius: 12px; overflow: hidden; background: #f5f5f7; flex-shrink: 0;">
-              <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
+            <div style="width: 100px; height: 100px; border-radius: 12px; overflow: hidden; background: #f5f5f7; flex-shrink: 0; border: 1px solid #e5e5e7;">
+              {% if item.image %}
+                <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
+              {% endif %}
             </div>
 
             <div style="flex: 1;">
-              <a href="{{ item.url }}" style="font-size: 1.1rem; font-weight: 600; color: #1d1d1f; text-decoration: none;">{{ item.product.title }}</a>
+              <a href="{{ item.url }}" style="font-size: 1.05rem; font-weight: 600; color: #1d1d1f; text-decoration: none;">{{ item.product.title }}</a>
               {% unless item.product.has_only_default_variant %}
-                <p style="font-size: 0.88rem; color: #6e6e73; margin: 4px 0 0 0;">{{ item.variant.title }}</p>
+                <p style="font-size: 0.85rem; color: #6e6e73; margin: 4px 0 0 0;">{{ item.variant.title }}</p>
               {% endunless %}
               <div style="font-size: 1rem; font-weight: 700; color: #ab273b; margin-top: 8px;">{{ item.final_line_price | money }}</div>
             </div>
 
             <div class="product-quantity" style="height: 38px;">
-              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" style="width: 50px;">
+              <input type="number" name="updates[]" id="updates_{{ item.key }}" value="{{ item.quantity }}" min="0" style="width: 50px; text-align: center; border: 1px solid #d2d2d7; border-radius: 4px;">
             </div>
 
             <a href="{{ routes.cart_change_url }}?line={{ forloop.index }}&quantity=0" style="color: #86868b; font-size: 0.85rem; text-decoration: underline; margin-left: 10px;">Remove</a>
@@ -36,8 +38,8 @@
         <p style="font-size: 0.85rem; color: #6e6e73; margin: 0;">Taxes and shipping calculated at checkout.</p>
         
         <div style="display: flex; gap: 12px; margin-top: 10px;">
-          <button type="submit" name="update" class="product-compare-trigger-btn" style="height: 44px; padding: 0 20px;">Update Cart</button>
-          <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 30px;">Checkout</button>
+          <button type="submit" name="update" class="product-compare-trigger-btn" style="height: 44px; padding: 0 20px; cursor: pointer;">Update Cart</button>
+          <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 30px; cursor: pointer;">Checkout</button>
         </div>
       </div>
     </form>
@@ -48,3 +50,15 @@
     </div>
   {% endif %}
 </div>
+
+{% schema %}
+{
+  "name": "Main Cart Items",
+  "settings": [],
+  "presets": [
+    {
+      "name": "Main Cart Items"
+    }
+  ]
+}
+{% endschema %}
