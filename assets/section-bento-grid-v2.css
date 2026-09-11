@@ -1,4 +1,4 @@
-/* BENTO GRID V2 - SONY / APPLE STYLE MINIMAL CARDS */
+/* BENTO GRID V2 - STYLE MINIMAL CARDS */
 
 .collections-bento-v2-wrapper {
   padding-top: 3rem;
@@ -34,16 +34,17 @@
   }
 }
 
-/* TARJETA PRINCIPAL */
+/* TARJETA CON DIMENSIÓN Y PROPORCIÓN FIJA (NO SE AGRANDA POR LA IMAGEN) */
 .bento-v2-card {
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
+  justify-content: space-between;
   align-items: center;
   width: 100%;
-  background-color: #e8eaed; /* Tono de gris suave Apple/Sony */
+  aspect-ratio: 4 / 5;
+  background-color: #e8eaed; /* Tono gris suave Apple/Sony */
   border-radius: 28px;
-  padding: 2.25rem 1.5rem 1.5rem 1.5rem;
+  padding: 2rem 1.25rem 1.25rem 1.25rem;
   text-decoration: none;
   overflow: hidden;
   position: relative;
@@ -57,45 +58,50 @@
   z-index: 2;
 }
 
-/* HEADER Y TÍTULO */
+/* HEADER Y TÍTULO DE TARJETA */
 .bento-v2-card__header {
   width: 100%;
   text-align: center;
-  margin-bottom: 1.5rem;
   z-index: 2;
+  margin-bottom: 1rem;
 }
 
 .bento-v2-card__title {
-  font-size: 1.65rem;
-  font-weight: 800;
+  font-size: 1.6rem;
+  font-weight: 700;
   margin: 0;
   line-height: 1.2;
   letter-spacing: -0.02em;
 }
 
-/* MARCO Y FOTO COMPLETA DENTRO DE LA TARJETA */
+/* CONTENEDOR INTERNO DE IMAGEN - OCUPA EL ANCHO COMPLETO Y EL ESPACIO RESTANTE */
 .bento-v2-card__media {
+  position: relative;
   width: 100%;
-  border-radius: 20px; /* Esquinas redondeadas internas como en la captura */
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px;
   overflow: hidden;
-  display: block;
   background: transparent;
 }
 
+/* IMAGEN FIT: SE ADAPTA AL CONTENEDOR SIN DEFORMAR LA TARJETA */
 .bento-v2-card__img {
   width: 100%;
-  height: auto;
+  height: 100%;
+  object-fit: cover;
   display: block;
-  object-fit: contain; /* Garantiza la foto entera sin recortes */
   transition: transform 0.4s ease;
 }
 
 .bento-v2-card:hover .bento-v2-card__img {
-  transform: scale(1.03);
+  transform: scale(1.04);
 }
 
 .bento-v2-card__placeholder {
   width: 100%;
-  height: 250px;
+  height: 100%;
   fill: #86868b;
 }
