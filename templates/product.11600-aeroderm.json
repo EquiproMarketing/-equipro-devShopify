@@ -122,22 +122,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Setup and Connection",
+            "text": "Place the compact Aeroderm unit securely onto a stable treatment cart and plug the plastic lines into their respective vacuum and spray quick-connect inlets."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Spray Preparation",
+            "text": "Fill the plastic misting container with professional-grade skin toner or botanical mist, locking it to the spray nozzle head."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Glass Attachment Selection",
+            "text": "Choose the specific glass cupping component needed for the procedure (anti-wrinkle, blackhead remover, or massage) and slide it firmly into the suction adapter tool."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Intensity Calibration",
+            "text": "Power on the system and adjust the primary dial to the lowest setting before completing contact with the target facial area."
+          }
+        },
+        "instruction_item_x6Kb8r": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Modality Execution",
+            "text": "Move the active glass head smoothly along natural muscle contours, regulating suction intensity via the built-in thumb port on the connector."
           }
         },
         "section_header_dGJcmr": {
@@ -173,6 +187,8 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_x6Kb8r",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
