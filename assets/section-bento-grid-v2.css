@@ -45,7 +45,7 @@
     aspect-ratio: 4 / 5;
     background-color: #e6e6e8; /* Light gray background matching screenshot */
     border-radius: 24px;
-    padding: 2.5rem 1.5rem 1.5rem 1.5rem;
+    padding: 2rem 1.25rem 1.25rem 1.25rem;
     text-decoration: none;
     overflow: hidden;
     position: relative;
@@ -76,28 +76,27 @@
     letter-spacing: -0.01em;
   }
   
-  /* CARD MEDIA & IMAGE CONTAINER */
-  .bento-v2-card__media {
-    position: relative;
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-top: 1rem;
-    overflow: hidden;
-  }
-  
-  .bento-v2-card__img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
-    transition: transform 0.4s ease;
-  }
-  
-  .bento-v2-card:hover .bento-v2-card__img {
-    transform: scale(1.05);
-  }
+/* CARD MEDIA & IMAGE CONTAINER - ANCHO COMPLETO */
+.bento-v2-card__media {
+  position: relative;
+  width: 100%;
+  display: block;
+  margin-top: 1.25rem;
+  overflow: hidden;
+  border-radius: 12px; /* Opcional: suaviza las esquinas de la foto dentro de la tarjeta */
+}
+
+.bento-v2-card__img {
+  width: 100% !important;
+  height: auto !important;
+  display: block;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.bento-v2-card:hover .bento-v2-card__img {
+  transform: scale(1.04);
+}
   
   .bento-v2-card__placeholder {
     width: 50%;
