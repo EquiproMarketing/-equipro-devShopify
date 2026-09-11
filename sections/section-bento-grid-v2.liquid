@@ -19,15 +19,17 @@
     {%- for block in section.blocks -%}
       {%- assign custom_url = block.settings.custom_link -%}
       {%- assign target_url = custom_url | default: block.settings.collection.url | default: '#' -%}
+      
+      {%- assign card_image = block.settings.image | default: block.settings.collection.featured_image -%}
 
       <a href="{{ target_url }}" class="bento-v2-card" {{ block.shopify_attributes }}>
         <div class="bento-v2-card__header">
           <h3 
             class="bento-v2-card__title"
             style="
-              color: {{ section.settings.card_title_color }};
-              {% if section.settings.enable_card_text_shadow %}
-                text-shadow: {{ section.settings.card_shadow_offset_x }}px {{ section.settings.card_shadow_offset_y }}px {{ section.settings.card_shadow_blur }}px {{ section.settings.card_shadow_color }};
+              color: {{ block.settings.card_title_color }};
+              {% if block.settings.enable_card_text_shadow %}
+                text-shadow: {{ block.settings.card_shadow_offset_x }}px {{ block.settings.card_shadow_offset_y }}px {{ block.settings.card_shadow_blur }}px {{ block.settings.card_shadow_color }};
               {% endif %}
             "
           >
@@ -36,10 +38,13 @@
         </div>
 
         <div class="bento-v2-card__media">
-          {%- if block.settings.image != blank -%}
-            {{ block.settings.image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'bento-v2-card__img', alt: block.settings.title }}
-          {%- elsif block.settings.collection.featured_image != blank -%}
-            {{ block.settings.collection.featured_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'bento-v2-card__img', alt: block.settings.collection.title }}
+          {%- if card_image != blank -%}
+            <img 
+              src="{{ card_image | image_url: width: 800 }}" 
+              alt="{{ block.settings.title | default: card_image.alt | escape }}"
+              loading="lazy"
+              class="bento-v2-card__img"
+            >
           {%- else -%}
             {{ 'product-1' | placeholder_svg_tag: 'bento-v2-card__placeholder' }}
           {%- endif -%}
@@ -66,7 +71,7 @@
     },
     {
       "type": "header",
-      "content": "Section Title Styling"
+      "content": "Main Section Heading Styling"
     },
     {
       "type": "color",
@@ -77,7 +82,7 @@
     {
       "type": "checkbox",
       "id": "enable_text_shadow",
-      "label": "Enable Section Heading Shadow",
+      "label": "Enable Heading Shadow",
       "default": false
     },
     {
@@ -115,58 +120,6 @@
       "unit": "px",
       "label": "Shadow Blur Radius",
       "default": 4
-    },
-    {
-      "type": "header",
-      "content": "Card Title Styling"
-    },
-    {
-      "type": "color",
-      "id": "card_title_color",
-      "label": "Card Title Color",
-      "default": "#000000"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_card_text_shadow",
-      "label": "Enable Card Title Shadow",
-      "default": false
-    },
-    {
-      "type": "color",
-      "id": "card_shadow_color",
-      "label": "Card Shadow Color",
-      "default": "rgba(0,0,0,0.2)"
-    },
-    {
-      "type": "range",
-      "id": "card_shadow_offset_x",
-      "min": -10,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Card Shadow Offset X",
-      "default": 0
-    },
-    {
-      "type": "range",
-      "id": "card_shadow_offset_y",
-      "min": -10,
-      "max": 10,
-      "step": 1,
-      "unit": "px",
-      "label": "Card Shadow Offset Y",
-      "default": 1
-    },
-    {
-      "type": "range",
-      "id": "card_shadow_blur",
-      "min": 0,
-      "max": 20,
-      "step": 1,
-      "unit": "px",
-      "label": "Card Shadow Blur Radius",
-      "default": 2
     }
   ],
   "blocks": [
@@ -193,6 +146,58 @@
           "type": "image_picker",
           "id": "image",
           "label": "Custom Card Image"
+        },
+        {
+          "type": "header",
+          "content": "Card Text Styling"
+        },
+        {
+          "type": "color",
+          "id": "card_title_color",
+          "label": "Card Title Color",
+          "default": "#000000"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_card_text_shadow",
+          "label": "Enable Title Text Shadow",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "card_shadow_color",
+          "label": "Text Shadow Color",
+          "default": "rgba(0,0,0,0.2)"
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_offset_x",
+          "min": -10,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Text Shadow Offset X",
+          "default": 0
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_offset_y",
+          "min": -10,
+          "max": 10,
+          "step": 1,
+          "unit": "px",
+          "label": "Text Shadow Offset Y",
+          "default": 1
+        },
+        {
+          "type": "range",
+          "id": "card_shadow_blur",
+          "min": 0,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Text Shadow Blur",
+          "default": 2
         }
       ]
     }
