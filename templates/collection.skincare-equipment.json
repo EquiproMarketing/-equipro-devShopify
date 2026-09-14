@@ -42,7 +42,15 @@
             "collection": "",
             "custom_link": "shopify://collections/streamers",
             "title": "Streamers",
-            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp"
+            "image": "shopify://shop_images/equipro-professional-skincare-steamers-ozone-function-spa-wellness-facility-high-durability-equipment.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#ffffff",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 14,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_GD34AQ": {
@@ -50,7 +58,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/facial-units",
-            "title": "Facial Units"
+            "title": "Facial Units",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#ffffff",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 14,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_RebBNy": {
@@ -58,7 +75,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/columns",
-            "title": "Columns"
+            "title": "Columns",
+            "image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 14,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_zma7X8": {
@@ -66,7 +92,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/wax-heaters",
-            "title": "Wax-heaters"
+            "title": "Wax-heaters",
+            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 14,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_kr4UGe": {
@@ -74,7 +109,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/towel-warmers",
-            "title": "Towel Warmers"
+            "title": "Towel Warmers",
+            "image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 14,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_pykgUc": {
@@ -82,7 +126,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/skin-analyzer",
-            "title": "Skin Analyzer"
+            "title": "Skin Analyzer",
+            "image": "shopify://shop_images/equipro-skin-analyzers-professional-uv-light-skin-analysis-system-esthetician-clinic-equipment.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 15,
+            "shadow_offset_y": -3,
+            "image_fit": "cover"
           }
         }
       },
@@ -96,7 +149,7 @@
       ],
       "name": "Bento Grid V2",
       "settings": {
-        "title": "Products"
+        "title": "Skincare-equipment"
       }
     },
     "positive_impact": {
