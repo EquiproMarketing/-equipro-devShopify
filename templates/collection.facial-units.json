@@ -64,8 +64,59 @@
     },
     "why_our_category_HPkHy7": {
       "type": "why-our-category",
+      "blocks": {
+        "feature_E4YWfX": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        "feature_WBFqmU": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Modular Integration",
+            "item_text": "Designed to operate flawlessly as standalone tabletop units or to be integrated directly into our Multi-Function Columns."
+          }
+        },
+        "feature_QwDFEF": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Premium Glass & Attachments",
+            "item_text": "Includes professional-grade accessories, shock-resistant glass electrodes, and sanitizable treatment heads built for continuous salon use."
+          }
+        },
+        "feature_XDw3i4": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Reliable Output Stability",
+            "item_text": "Advanced internal circuitry prevents power surges or drops, delivering a steady, dependable current throughout the entire service."
+          }
+        }
+      },
+      "block_order": [
+        "feature_E4YWfX",
+        "feature_WBFqmU",
+        "feature_QwDFEF",
+        "feature_XDw3i4"
+      ],
       "name": "Why Our Category",
-      "settings": {}
+      "settings": {
+        "title": "Why Our Trolleys",
+        "image_border_radius": 12,
+        "bg_color": "#a22938",
+        "title_color": "#ffffff",
+        "item_title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "divider_color": "#ffffff33",
+        "title_size": 28,
+        "item_title_size": 16,
+        "item_text_size": 14,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
     }
   },
   "order": [
