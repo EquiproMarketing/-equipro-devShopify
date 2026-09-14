@@ -36,12 +36,42 @@
     "positive_impact_DDyxFL": {
       "type": "positive-impact",
       "name": "Positive Impact",
+      "settings": {
+        "title": "Our Positive Impact",
+        "text": "Elevate your clinical results with versatile, space-conscious equipment. Our professional facial units feature precise current regulation and ergonomic accessories, allowing you to easily customize advanced exfoliation, penetration, and purification steps.",
+        "btn_label": "CONTACT US FOR RECOMMENDATIONS",
+        "btn_url": "",
+        "btn_bg_color": "#a22938",
+        "btn_text_color": "#ffffff",
+        "btn_bg_hover_color": "#8b2029",
+        "btn_text_hover_color": "#ffffff",
+        "btn_font_size": 14,
+        "btn_border_radius": 12,
+        "btn_padding_v": 14,
+        "btn_padding_h": 32,
+        "title_color": "#1a1a1a",
+        "title_size": 32,
+        "text_color": "#a22938",
+        "text_size": 20,
+        "text_max_width": 850,
+        "show_top_divider": true,
+        "show_bottom_divider": true,
+        "divider_color": "#a22938",
+        "divider_opacity": 30,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "why_our_category_HPkHy7": {
+      "type": "why-our-category",
+      "name": "Why Our Category",
       "settings": {}
     }
   },
   "order": [
     "collection_banner_MXi4BC",
     "custom_product_treatment_fBzzfA",
-    "positive_impact_DDyxFL"
+    "positive_impact_DDyxFL",
+    "why_our_category_HPkHy7"
   ]
 }
