@@ -10,47 +10,38 @@
 {
   "wrapper": "div",
   "sections": {
-    "subcategories_grid_YDaDfr": {
-      "type": "subcategories-grid",
-      "blocks": {
-        "subcategory_8gX69M": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Electric",
-            "link": "",
-            "bg_color": "#e8e8ed"
-          }
-        },
-        "subcategory_eFQJiK": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Electric",
-            "link": "",
-            "bg_color": "#e8e8ed"
-          }
-        },
-        "subcategory_XNDR7a": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Electric",
-            "link": "",
-            "bg_color": "#e8e8ed"
-          }
-        }
-      },
-      "block_order": [
-        "subcategory_8gX69M",
-        "subcategory_eFQJiK",
-        "subcategory_XNDR7a"
-      ],
-      "name": "Subcategories Grid",
+    "collection_banner_MXi4BC": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
       "settings": {
-        "back_text": "Back",
-        "title": "Treatment Tables"
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
+        "overlay_opacity": 40
       }
+    },
+    "custom_product_treatment_fBzzfA": {
+      "type": "custom-product-treatment",
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "",
+        "featured_collection": "facial-units",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
+      }
+    },
+    "positive_impact_DDyxFL": {
+      "type": "positive-impact",
+      "name": "Positive Impact",
+      "settings": {}
     }
   },
   "order": [
-    "subcategories_grid_YDaDfr"
+    "collection_banner_MXi4BC",
+    "custom_product_treatment_fBzzfA",
+    "positive_impact_DDyxFL"
   ]
 }
