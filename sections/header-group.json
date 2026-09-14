@@ -21,48 +21,35 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
-        "card_item_FcndwN": {
-          "type": "card_item",
+        "auto_collection_3WiNNw": {
+          "type": "auto_collection",
           "settings": {
-            "parent_category": "Stools",
-            "sub_category": "",
-            "collection": "stools",
-            "product": "ergonomic-stool-with-backrest",
-            "custom_title": "",
-            "custom_image": "shopify://shop_images/31300copie2.png",
-            "badge_text": "top seller",
-            "custom_url": ""
-          }
-        },
-        "card_item_3fBpy4": {
-          "type": "card_item",
-          "settings": {
-            "parent_category": "Treatment Tables",
-            "sub_category": "Electric",
-            "collection": "electric",
-            "product": "ei-502-infinity",
-            "custom_title": "",
-            "badge_text": "",
-            "custom_url": ""
-          }
-        },
-        "card_item_mjLKfD": {
-          "type": "card_item",
-          "settings": {
-            "parent_category": "",
-            "sub_category": "",
+            "target_category": "",
             "collection": "",
-            "product": "",
-            "custom_title": "",
-            "badge_text": "",
-            "custom_url": ""
+            "products_to_show": 6
+          }
+        },
+        "auto_collection_9cqw7c": {
+          "type": "auto_collection",
+          "settings": {
+            "target_category": "",
+            "collection": "electric",
+            "products_to_show": 6
+          }
+        },
+        "auto_collection_XUTBLH": {
+          "type": "auto_collection",
+          "settings": {
+            "target_category": "",
+            "collection": "columns",
+            "products_to_show": 6
           }
         }
       },
       "block_order": [
-        "card_item_FcndwN",
-        "card_item_3fBpy4",
-        "card_item_mjLKfD"
+        "auto_collection_3WiNNw",
+        "auto_collection_9cqw7c",
+        "auto_collection_XUTBLH"
       ],
       "name": "Category Subnav Bar",
       "settings": {
