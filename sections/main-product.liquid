@@ -72,7 +72,7 @@
 
                 {% if show_option %}
                   <div class="product-option">
-                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}:</label>
+                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
                     <select 
                       id="Option-{{ section.id }}-{{ forloop.index0 }}" 
                       name="options[{{ option.name | escape }}]" 
