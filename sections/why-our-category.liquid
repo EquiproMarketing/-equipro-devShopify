@@ -1,63 +1,348 @@
-<div class="why-category">
+<div class="why-category" id="WhyCategory-{{ section.id }}">
   <div class="why-category__container page-width">
+    
     <!-- Left Image -->
     <div class="why-category__media why-category__media--left">
-      <div class="why-category__img-placeholder"></div>
+      {%- if section.settings.image_left != blank -%}
+        <img 
+          src="{{ section.settings.image_left | image_url: width: 800 }}" 
+          alt="{{ section.settings.title | escape }}" 
+          loading="lazy" 
+          class="why-category__img"
+        >
+      {%- else -%}
+        <div class="why-category__img-placeholder"></div>
+      {%- endif -%}
     </div>
 
     <!-- Center Content -->
     <div class="why-category__content">
-      <h2 class="why-category__title">Why Our Trolleys</h2>
+      {%- if section.settings.title != blank -%}
+        <h2 class="why-category__title">{{ section.settings.title }}</h2>
+      {%- endif -%}
       
-      <div class="why-category__item">
-        <strong>Integrated Power Bar</strong>
-        <p>Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords.</p>
-      </div>
-
-      <div class="why-category__item">
-        <strong>Mag-Lamp Holder Insert</strong>
-        <p>Pre-engineered mounting holes designed to securely hold Equipro magnifying lamps without requiring bulky, separate clamp brackets.</p>
-      </div>
-
-      <div class="why-category__item">
-        <strong>Ultra-Quiet Caster Wheels</strong>
-        <p>Polyurethane, hair-resistant rolling casters that glide silently across spa floors and lock firmly into place when stability is needed.</p>
-      </div>
-
-      <div class="why-category__item">
-        <strong>Chemical-Resistant Surfaces</strong>
-        <p>Finished with high-durability baked enamel or tempered glass trays designed to resist stains, hot wax spills, and clinical disinfectants.</p>
-      </div>
+      {%- for block in section.blocks -%}
+        <div class="why-category__item" {{ block.shopify_attributes }}>
+          {%- if block.settings.item_title != blank -%}
+            <strong>{{ block.settings.item_title }}</strong>
+          {%- endif -%}
+          {%- if block.settings.item_text != blank -%}
+            <p>{{ block.settings.item_text }}</p>
+          {%- endif -%}
+        </div>
+      {%- endfor -%}
     </div>
 
     <!-- Right Image -->
     <div class="why-category__media why-category__media--right">
-      <div class="why-category__img-placeholder"></div>
+      {%- if section.settings.image_right != blank -%}
+        <img 
+          src="{{ section.settings.image_right | image_url: width: 800 }}" 
+          alt="{{ section.settings.title | escape }}" 
+          loading="lazy" 
+          class="why-category__img"
+        >
+      {%- else -%}
+        <div class="why-category__img-placeholder"></div>
+      {%- endif -%}
     </div>
+
   </div>
 </div>
 
 <style>
-.why-category { background-color: #a22938; color: #ffffff; padding: 4rem 0; margin: 3rem 0; }
-.why-category__container { display: grid; grid-template-columns: 1fr 1.5fr 1fr; gap: 2.5rem; align-items: center; }
-.why-category__media { width: 100%; aspect-ratio: 3 / 4; border-radius: 12px; overflow: hidden; }
-.why-category__img-placeholder { width: 100%; height: 100%; background-color: rgba(255,255,255,0.2); }
-.why-category__title { font-size: 1.8rem; font-weight: 700; margin-bottom: 2rem; border-bottom: 1px solid rgba(255,255,255,0.3); padding-bottom: 0.5rem; }
-.why-category__item { margin-bottom: 1.5rem; border-bottom: 1px solid rgba(255,255,255,0.2); padding-bottom: 1rem; }
-.why-category__item strong { display: block; font-size: 1rem; margin-bottom: 0.25rem; }
-.why-category__item p { font-size: 0.85rem; line-height: 1.4; opacity: 0.9; margin: 0; }
+#WhyCategory-{{ section.id }} {
+  background-color: {{ section.settings.bg_color }};
+  color: {{ section.settings.text_color }};
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+  margin-top: {{ section.settings.margin_top }}px;
+  margin-bottom: {{ section.settings.margin_bottom }}px;
+}
 
-/* En móvil las imágenes laterales desaparecen y solo queda el texto */
+#WhyCategory-{{ section.id }} .why-category__container {
+  display: grid;
+  grid-template-columns: 1fr 1.5fr 1fr;
+  gap: 2.5rem;
+  align-items: center;
+}
+
+#WhyCategory-{{ section.id }} .why-category__media {
+  width: 100%;
+  aspect-ratio: 3 / 4;
+  border-radius: {{ section.settings.image_border_radius }}px;
+  overflow: hidden;
+}
+
+#WhyCategory-{{ section.id }} .why-category__img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+#WhyCategory-{{ section.id }} .why-category__img-placeholder {
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+#WhyCategory-{{ section.id }} .why-category__title {
+  font-size: {{ section.settings.title_size }}px;
+  font-weight: 700;
+  color: {{ section.settings.title_color }};
+  margin-bottom: 2rem;
+  border-bottom: 1px solid {{ section.settings.divider_color }};
+  padding-bottom: 0.5rem;
+}
+
+#WhyCategory-{{ section.id }} .why-category__item {
+  margin-bottom: 1.5rem;
+  border-bottom: 1px solid {{ section.settings.divider_color }};
+  padding-bottom: 1rem;
+}
+
+#WhyCategory-{{ section.id }} .why-category__item:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+  margin-bottom: 0;
+}
+
+#WhyCategory-{{ section.id }} .why-category__item strong {
+  display: block;
+  font-size: {{ section.settings.item_title_size }}px;
+  color: {{ section.settings.item_title_color }};
+  margin-bottom: 0.25rem;
+}
+
+#WhyCategory-{{ section.id }} .why-category__item p {
+  font-size: {{ section.settings.item_text_size }}px;
+  color: {{ section.settings.text_color }};
+  line-height: 1.4;
+  opacity: 0.9;
+  margin: 0;
+}
+
 @media (max-width: 989px) {
-  .why-category__container { grid-template-columns: 1fr !important; }
-  .why-category__media { display: none !important; }
+  #WhyCategory-{{ section.id }} .why-category__container {
+    grid-template-columns: 1fr !important;
+  }
+  #WhyCategory-{{ section.id }} .why-category__media {
+    display: none !important;
+  }
 }
 </style>
 
 {% schema %}
 {
   "name": "Why Our Category",
-  "settings": [],
-  "presets": [{ "name": "Why Our Category" }]
+  "tag": "section",
+  "class": "section-why-category",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Section Title"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading",
+      "default": "Why Our Trolleys"
+    },
+    {
+      "type": "header",
+      "content": "Side Images"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_left",
+      "label": "Left Image"
+    },
+    {
+      "type": "image_picker",
+      "id": "image_right",
+      "label": "Right Image"
+    },
+    {
+      "type": "range",
+      "id": "image_border_radius",
+      "min": 0,
+      "max": 30,
+      "step": 2,
+      "unit": "px",
+      "label": "Image Border Radius",
+      "default": 12
+    },
+    {
+      "type": "header",
+      "content": "Colors & Styling"
+    },
+    {
+      "type": "color",
+      "id": "bg_color",
+      "label": "Background Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Main Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "item_title_color",
+      "label": "Feature Title Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Line Color",
+      "default": "rgba(255, 255, 255, 0.2)"
+    },
+    {
+      "type": "header",
+      "content": "Typography Sizes"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 42,
+      "step": 1,
+      "unit": "px",
+      "label": "Main Title Size",
+      "default": 28
+    },
+    {
+      "type": "range",
+      "id": "item_title_size",
+      "min": 14,
+      "max": 24,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature Title Size",
+      "default": 16
+    },
+    {
+      "type": "range",
+      "id": "item_text_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Feature Description Size",
+      "default": 14
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 20,
+      "max": 120,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 64
+    },
+    {
+      "type": "range",
+      "id": "margin_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Margin",
+      "default": 48
+    },
+    {
+      "type": "range",
+      "id": "margin_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Margin",
+      "default": 48
+    }
+  ],
+  "blocks": [
+    {
+      "type": "feature",
+      "name": "Feature Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "item_title",
+          "label": "Feature Title",
+          "default": "Integrated Power Bar"
+        },
+        {
+          "type": "textarea",
+          "id": "item_text",
+          "label": "Feature Description",
+          "default": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Why Our Category",
+      "blocks": [
+        {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "item_title": "Mag-Lamp Holder Insert",
+            "item_text": "Pre-engineered mounting holes designed to securely hold Equipro magnifying lamps without requiring bulky, separate clamp brackets."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "item_title": "Ultra-Quiet Caster Wheels",
+            "item_text": "Polyurethane, hair-resistant rolling casters that glide silently across spa floors and lock firmly into place when stability is needed."
+          }
+        },
+        {
+          "type": "feature",
+          "settings": {
+            "item_title": "Chemical-Resistant Surfaces",
+            "item_text": "Finished with high-durability baked enamel or tempered glass trays designed to resist stains, hot wax spills, and clinical disinfectants."
+          }
+        }
+      ]
+    }
+  ]
 }
 {% endschema %}
