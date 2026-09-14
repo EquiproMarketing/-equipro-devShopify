@@ -1,0 +1,56 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div",
+  "sections": {
+    "subcategories_grid_YDaDfr": {
+      "type": "subcategories-grid",
+      "blocks": {
+        "subcategory_8gX69M": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed"
+          }
+        },
+        "subcategory_eFQJiK": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed"
+          }
+        },
+        "subcategory_XNDR7a": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_8gX69M",
+        "subcategory_eFQJiK",
+        "subcategory_XNDR7a"
+      ],
+      "name": "Subcategories Grid",
+      "settings": {
+        "back_text": "Back",
+        "title": "Treatment Tables"
+      }
+    }
+  },
+  "order": [
+    "subcategories_grid_YDaDfr"
+  ]
+}
