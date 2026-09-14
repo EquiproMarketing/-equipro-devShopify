@@ -24,15 +24,17 @@
         "auto_collection_3WiNNw": {
           "type": "auto_collection",
           "settings": {
-            "target_category": "",
-            "collection": "",
+            "parent_category": "Skincare Equipment",
+            "sub_category": "Facil Units",
+            "collection": "facial-units",
             "products_to_show": 6
           }
         },
         "auto_collection_9cqw7c": {
           "type": "auto_collection",
           "settings": {
-            "target_category": "",
+            "parent_category": "",
+            "sub_category": "",
             "collection": "electric",
             "products_to_show": 6
           }
@@ -40,7 +42,8 @@
         "auto_collection_XUTBLH": {
           "type": "auto_collection",
           "settings": {
-            "target_category": "",
+            "parent_category": "",
+            "sub_category": "",
             "collection": "columns",
             "products_to_show": 6
           }
