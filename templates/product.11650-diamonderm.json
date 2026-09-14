@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "11800 - Multiderm (5 in 1)",
+        "intro_highlight": "The Multiderm (5 in 1) workstation consolidates vital treatment modalities into a single, high-efficiency system engineered specifically to minimize practitioner operational footprints while upholding rigorous North American manufacturing standards.",
+        "custom_description": "<p>Multiderm (5 in 1) is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Clinical Spa Technicians. Its precision-engineered chassis targets shoulder fatigue during high-volume clinic days, enabling sharper focus on treatment execution and enhanced client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with intuitive one-hand control and instant-response calibration.</p>",
+        "subtitle": "Advanced Quintuple Modality Integration System",
+        "secondary_description": "<p>Uncompromising durability is central to the Equipro approach. To preserve the structural integrity and aesthetic finish of the Multiderm (5 in 1), regular sanitization with hospital-grade surface disinfectants formulated for clinical environments must be executed daily. The heavy-duty exterior casing offers high chemical resistance, ensuring an immaculate condition outcome across an extended multi-year operational timeframe. Consistent care preserves electrical connectivity, guards against fluid ingress, and guarantees long-term mechanical reliability.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "multiderm-5-en-1",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Esthetician:",
+            "answer": "<p>For the Clinical Esthetician executing advanced corrective facials, the integrated high-frequency module delivers localized thermal energy to the epidermal layers, significantly accelerating cellular turnover and purifying congested pores. This specialized modality stabilizes the skin's electrical potential immediately following intensive extraction cycles, ensuring rapid vasoconstriction and a dramatic reduction in transient redness before the client departs the treatment room.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technician:",
+            "answer": "<p>For the Clinical Spa Therapist managing multi-step clinical optimization protocols, the high-performance vacuum and spray systems provide seamless sebum extraction and micro-targeted nutrient misting. By coupling adjustable mechanical suction with ultra-fine atomization, the practitioner can effortlessly lift deep impurities without causing vascular distension, immediately priming the skin barrier for maximum absorption of high-potency topical serums.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Cosmetic Injector or Pre-Post Operative Skin Specialist:",
+            "answer": "<p>For the Cosmetic Injector or Pre-Post Operative Skin Specialist, the galvanic current functionality offers precise iontophoresis and desincrustation capabilities. This advanced electronic modulation controls polarity to deeply infuse water-soluble compounds into the dermal matrices or emulsify hardened follicular blockages, creating an optimized, deeply hydrated tissue environment that complements advanced clinical procedures.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11800</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty metal enameled chassis, stainless steel components, industrial grade electronics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>5 Integrated professional functions (Aeroderm, Ioniderm, Rotoderm, Infraderm, High-Frequency)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Modern digital interface with capacitive touchpad screen</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Adjustment</td>\n        <td>Variable precision intensity controls for individual modalities</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>120V, 50/60 Hz, energy-efficient dedicated power circuit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 High-frequency glass electrodes, galvanic mass &amp; wires, 1 deep cleanser, Spontex sponges, 3 natural bristle brushes, 1 spray diffuser, 3 glass suction cups (anti-wrinkle, blackhead, massage)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility &amp; Handling</td>\n        <td>Retractable, twisted handle cords for optimal handset extension</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated client shock-absorbing isolation system, internal circuit breaker protection</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL Approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years limited warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Industrial-Grade Chassis: Constructed with premium-grade steel and scratch-resistant finishes to maintain structural integrity in high-traffic aesthetic clinics."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Modular Component Layout",
+            "text": "Precision-nested internal modules designed to streamline workflow configurations for solo practitioners and multi-room facility teams, boosting multi-modality efficiency."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Sleek Executive Profile",
+            "text": "A refined architectural presence that fits seamlessly into contemporary luxury spa decors and upscale holistic clinical environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-multiderm-5-in-1-ultra-modern-aesthetic-equipment-11800.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "System Initialization",
+            "text": "Ensure the main power cable is securely connected to a dedicated, grounded wall outlet and toggle the master breaker switches on."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Modality Calibration",
+            "text": "Select the desired handpiece accessory (High Frequency, Rotary Brush, Galvanic, Vacuum, or Spray) and connect it to its corresponding isolated port."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Parameter Setting",
+            "text": "Adjust the analog intensity dials or digital interface controls slowly, starting at the baseline value to safely gauge individual client sensory thresholds."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Application Sequencing",
+            "text": "Execute the programmed clinical skincare steps systematically, ensuring all unused handpieces remain properly nested in their insulated protective cradles."
+          }
+        },
+        "instruction_item_x6Kb8r": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Cycle Shutdown",
+            "text": "Turn off individual module toggles, return current selectors to zero, wipe down all active treatment leads, and engage the master power shut-off."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Contraindication Verification",
+            "text": "Never apply active electrical currents, such as galvanic or high frequency, to clients possessing internal cardiac pacemakers, metal implants, or active circulatory disorders."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Fluid Isolation Protocols",
+            "text": "Maintain a strictly dry operational zone; do not allow conductive topical gels, serums, or moisture to penetrate internal venting grilles or connection ports."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Sanitization Restrictions",
+            "text": "Ensure the system is fully powered down and unplugged before performing routine exterior casing wipe-downs to eliminate any risk of electrical arcs."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_x6Kb8r",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-multiderm-5-in-1-professional-skincare-system-11800.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What functions are included in the Multiderm (5 in 1) system?",
+            "answer": "<p><strong>It consolidates high frequency, galvanic current, vacuum, spray, and rotary brush modalities.</strong> This provides comprehensive facial treatment capabilities in one footprint.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the Multiderm (5 in 1) manufactured in North America?",
+            "answer": "<p><strong>Yes, Equipro engineers and manufactures this system directly within North American production facilities.</strong> This ensures strict quality control and rapid component support.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the individual modalities be repaired independently?",
+            "answer": "<p><strong>The unit features modular internal component engineering for isolated servicing configurations.</strong> This minimizes total clinic downtime if single parts require maintenance.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What type of training is required to operate this equipment?",
+            "answer": "<p><strong>Operation is restricted to licensed estheticians, certified skincare technicians, or trained professionals.</strong> Users must understand advanced skincare electrical currents.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit accommodate standard North American voltage requirements?",
+            "answer": "<p><strong>Yes, it is fully wired for standard, reliable 120V operational configurations.</strong> It plugs seamlessly into standard commercial salon wall outlets.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use third-party attachments with the Multiderm station?",
+            "answer": "<p><strong>We strongly recommend using authentic Equipro components to guarantee calibrated output safety.</strong> Third-party accessories may compromise system voltage regulation.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
