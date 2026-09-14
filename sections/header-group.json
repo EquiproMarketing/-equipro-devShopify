@@ -21,6 +21,15 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "auto_collection_6g3XRp": {
+          "type": "auto_collection",
+          "settings": {
+            "parent_category": "Skincare Equipment)",
+            "sub_category": "Skin Analizer",
+            "collection": "skin-analyzer",
+            "products_to_show": 6
+          }
+        },
         "auto_collection_49rzPj": {
           "type": "auto_collection",
           "settings": {
@@ -29,23 +38,11 @@
             "collection": "facial-units",
             "products_to_show": 6
           }
-        },
-        "custom_card_YWFeqL": {
-          "type": "custom_card",
-          "settings": {
-            "parent_category": "",
-            "sub_category": "",
-            "product": "",
-            "collection": "",
-            "custom_title": "",
-            "badge_text": "",
-            "custom_url": ""
-          }
         }
       },
       "block_order": [
-        "auto_collection_49rzPj",
-        "custom_card_YWFeqL"
+        "auto_collection_6g3XRp",
+        "auto_collection_49rzPj"
       ],
       "name": "Category Subnav Bar",
       "settings": {
