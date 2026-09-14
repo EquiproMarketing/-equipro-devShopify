@@ -19,20 +19,10 @@
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
-          {%- assign nav_parent = link.title | downcase | strip -%}
-
-          {%- comment -%} Check for sub-navigation items or linked blocks {%- endcomment -%}
+          {%- assign nav_parent_handle = link.title | handleize -%}
           {%- assign has_dropdown = false -%}
-          {%- if link.links.size > 0 -%}
+          {%- if link.links.size > 0 or section.blocks.size > 0 -%}
             {%- assign has_dropdown = true -%}
-          {%- else -%}
-            {%- for block in section.blocks -%}
-              {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
-              {%- if block_parent == nav_parent -%}
-                {%- assign has_dropdown = true -%}
-                {%- break -%}
-              {%- endif -%}
-            {%- endfor -%}
           {%- endif -%}
 
           {%- assign is_active = false -%}
@@ -41,10 +31,7 @@
           {%- endif -%}
 
           <li class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}">
-            <a 
-              href="{{ link.url }}" 
-              class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
-            >
+            <a href="{{ link.url }}" class="category-subnav__bar-link{% if is_active %} is-active{% endif %}">
               <span>{{ link.title }}</span>
               {%- if has_dropdown -%}
                 <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -57,29 +44,14 @@
               <div class="category-megamenu">
                 <div class="category-megamenu__container page-width">
                   
-                  {%- comment -%} Check for sidebar presence {%- endcomment -%}
-                  {%- assign show_sidebar = false -%}
+                  {%- comment -%} SIDEBAR SECUNDARIO {%- endcomment -%}
                   {%- if link.links.size > 0 -%}
-                    {%- assign show_sidebar = true -%}
-                  {%- else -%}
-                    {%- for block in section.blocks -%}
-                      {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
-                      {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
-                      {%- if block_parent == nav_parent and block_sub != 'n/a' and block_sub != '' -%}
-                        {%- assign show_sidebar = true -%}
-                        {%- break -%}
-                      {%- endif -%}
-                    {%- endfor -%}
-                  {%- endif -%}
-
-                  {%- if show_sidebar -%}
-                    {%- comment -%} LEVEL 2: Left Sidebar {%- endcomment -%}
                     <div class="category-megamenu__sidebar">
                       <ul class="category-megamenu__sidebar-list">
                         {%- for childlink in link.links -%}
                           <li 
                             class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}" 
-                            data-target-tab="tab-{{ forloop.index }}-{{ link.title | handleize }}"
+                            data-target-tab="tab-{{ forloop.index }}-{{ nav_parent_handle }}"
                           >
                             <a href="{{ childlink.url }}" class="category-megamenu__sidebar-link">
                               <span>{{ childlink.title }}</span>
@@ -93,66 +65,70 @@
                     </div>
                   {%- endif -%}
 
-                  {%- comment -%} LEVEL 3: Right Panel Cards {%- endcomment -%}
-                  <div class="category-megamenu__content{% unless show_sidebar %} full-width-content{% endunless %}">
-                    
-                    {%- if link.links.size > 0 -%}
-                      {%- for childlink in link.links -%}
-                        {%- assign nav_sub = childlink.title | downcase | strip -%}
-                        <div 
-                          class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}" 
-                          id="tab-{{ forloop.index }}-{{ link.title | handleize }}"
-                        >
-                          <div class="category-megamenu__grid">
-                            {%- if childlink.links.size > 0 -%}
-                              {%- for grandchild in childlink.links -%}
-                                {%- assign card_img = nil -%}
-                                {%- if grandchild.type == 'collection_link' and grandchild.object.image -%}
-                                  {%- assign card_img = grandchild.object.image -%}
-                                {%- elsif grandchild.type == 'product_link' and grandchild.object.featured_image -%}
-                                  {%- assign card_img = grandchild.object.featured_image -%}
+                  {%- comment -%} PANEL DE TARJETAS DE PRODUCTOS / COLECCIONES {%- endcomment -%}
+                  <div class="category-megamenu__content{% if link.links.size == 0 %} full-width-content{% endif %}">
+                    <div class="category-megamenu__tab-panel is-active">
+                      <div class="category-megamenu__grid">
+
+                        {%- comment -%} 1. AUTO-GENERACIÓN POR MENÚ NATIVO {%- endcomment -%}
+                        {%- for childlink in link.links -%}
+                          {%- if childlink.links.size > 0 -%}
+                            {%- for grandchild in childlink.links -%}
+                              {%- assign card_img = grandchild.object.featured_image | default: grandchild.object.image -%}
+                              <a href="{{ grandchild.url }}" class="category-megamenu__card">
+                                <div class="category-megamenu__card-image">
+                                  {%- if card_img != blank -%}
+                                    <img src="{{ card_img | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
+                                  {%- else -%}
+                                    <div class="category-megamenu__card-placeholder"></div>
+                                  {%- endif -%}
+                                </div>
+                                <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
+                              </a>
+                            {%- endfor -%}
+                          {%- endif -%}
+                        {%- endfor -%}
+
+                        {%- comment -%} 2. GENERACIÓN VÍA BLOQUES PERSONALIZADOS Y DINÁMICOS {%- endcomment -%}
+                        {%- for block in section.blocks -%}
+                          {%- assign block_category_handle = block.settings.target_category | handleize -%}
+
+                          {%- if block_category_handle == nav_parent_handle or block.settings.target_category == blank -%}
+                            
+                            {%- case block.type -%}
+                              
+                              {%- when 'auto_collection' -%}
+                                {%- assign target_coll = block.settings.collection -%}
+                                {%- assign limit_count = block.settings.products_to_show -%}
+                                
+                                {%- if target_coll != blank -%}
+                                  {%- for prod in target_coll.products limit: limit_count -%}
+                                    <a href="{{ prod.url }}" class="category-megamenu__card" {{ block.shopify_attributes }}>
+                                      <div class="category-megamenu__card-image">
+                                        {%- if prod.featured_image != blank -%}
+                                          <img src="{{ prod.featured_image | image_url: width: 400 }}" alt="{{ prod.title | escape }}" loading="lazy" width="200" height="200">
+                                        {%- else -%}
+                                          <div class="category-megamenu__card-placeholder"></div>
+                                        {%- endif -%}
+                                      </div>
+                                      <span class="category-megamenu__card-title">{{ prod.title }}</span>
+                                    </a>
+                                  {%- endfor -%}
                                 {%- endif -%}
 
-                                <a href="{{ grandchild.url }}" class="category-megamenu__card">
-                                  <div class="category-megamenu__card-image">
-                                    {%- if card_img != blank -%}
-                                      <img src="{{ card_img | image_url: width: 400 }}" alt="{{ grandchild.title | escape }}" loading="lazy" width="200" height="200">
-                                    {%- else -%}
-                                      <div class="category-megamenu__card-placeholder"></div>
-                                    {%- endif -%}
-                                  </div>
-                                  <span class="category-megamenu__card-title">{{ grandchild.title }}</span>
-                                </a>
-                              {%- endfor -%}
-                            {%- endif -%}
-
-                            {%- for block in section.blocks -%}
-                              {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
-                              {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
-
-                              {%- if block_parent == nav_parent and block_sub == nav_sub -%}
-                                {%- assign selected_collection = block.settings.collection -%}
+                              {%- when 'custom_card' -%}
                                 {%- assign selected_product = block.settings.product -%}
+                                {%- assign selected_collection = block.settings.collection -%}
 
-                                {%- if selected_product != blank -%}
-                                  {%- assign final_url = selected_product.url -%}
-                                  {%- assign final_title = block.settings.custom_title | default: selected_product.title -%}
-                                  {%- assign final_image = block.settings.custom_image | default: selected_product.featured_image -%}
-                                {%- elsif selected_collection != blank -%}
-                                  {%- assign final_url = selected_collection.url -%}
-                                  {%- assign final_title = block.settings.custom_title | default: selected_collection.title -%}
-                                  {%- assign final_image = block.settings.custom_image | default: selected_collection.featured_image -%}
-                                {%- else -%}
-                                  {%- assign final_url = block.settings.custom_url -%}
-                                  {%- assign final_title = block.settings.custom_title -%}
-                                  {%- assign final_image = block.settings.custom_image -%}
-                                {%- endif -%}
+                                {%- assign final_url = selected_product.url | default: selected_collection.url | default: block.settings.custom_url -%}
+                                {%- assign final_title = block.settings.custom_title | default: selected_product.title | default: selected_collection.title -%}
+                                {%- assign final_image = block.settings.custom_image | default: selected_product.featured_image | default: selected_collection.featured_image -%}
 
                                 {%- if final_title != blank -%}
                                   <a href="{{ final_url | default: '#' }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
                                     <div class="category-megamenu__card-image">
                                       {%- if final_image != blank -%}
-                                        <img src="{{ final_image | image_url: width: 500 }}" alt="{{ final_title | escape }}" loading="lazy" width="220" height="220">
+                                        <img src="{{ final_image | image_url: width: 400 }}" alt="{{ final_title | escape }}" loading="lazy" width="200" height="200">
                                       {%- else -%}
                                         <div class="category-megamenu__card-placeholder"></div>
                                       {%- endif -%}
@@ -163,58 +139,14 @@
                                     <span class="category-megamenu__card-title">{{ final_title }}</span>
                                   </a>
                                 {%- endif -%}
-                              {%- endif -%}
-                            {%- endfor -%}
-                          </div>
-                        </div>
-                      {%- endfor -%}
 
-                    {%- else -%}
-                      <div class="category-megamenu__tab-panel is-active">
-                        <div class="category-megamenu__grid">
-                          {%- for block in section.blocks -%}
-                            {%- assign block_parent = block.settings.parent_category | downcase | strip -%}
-                            {%- assign block_sub = block.settings.sub_category | downcase | strip -%}
+                            {%- endcase -%}
 
-                            {%- if block_parent == nav_parent and block_sub == 'n/a' or block_sub == '' -%}
-                              {%- assign selected_collection = block.settings.collection -%}
-                              {%- assign selected_product = block.settings.product -%}
+                          {%- endif -%}
+                        {%- endfor -%}
 
-                              {%- if selected_product != blank -%}
-                                {%- assign final_url = selected_product.url -%}
-                                {%- assign final_title = block.settings.custom_title | default: selected_product.title -%}
-                                {%- assign final_image = block.settings.custom_image | default: selected_product.featured_image -%}
-                              {%- elsif selected_collection != blank -%}
-                                {%- assign final_url = selected_collection.url -%}
-                                {%- assign final_title = block.settings.custom_title | default: selected_collection.title -%}
-                                {%- assign final_image = block.settings.custom_image | default: selected_collection.featured_image -%}
-                              {%- else -%}
-                                {%- assign final_url = block.settings.custom_url -%}
-                                {%- assign final_title = block.settings.custom_title -%}
-                                {%- assign final_image = block.settings.custom_image -%}
-                              {%- endif -%}
-
-                              {%- if final_title != blank -%}
-                                <a href="{{ final_url | default: '#' }}" class="category-megamenu__card custom-promo-card" {{ block.shopify_attributes }}>
-                                  <div class="category-megamenu__card-image">
-                                    {%- if final_image != blank -%}
-                                      <img src="{{ final_image | image_url: width: 500 }}" alt="{{ final_title | escape }}" loading="lazy" width="220" height="220">
-                                    {%- else -%}
-                                      <div class="category-megamenu__card-placeholder"></div>
-                                    {%- endif -%}
-                                    {%- if block.settings.badge_text != blank -%}
-                                      <span class="custom-promo-badge">{{ block.settings.badge_text }}</span>
-                                    {%- endif -%}
-                                  </div>
-                                  <span class="category-megamenu__card-title">{{ final_title }}</span>
-                                </a>
-                              {%- endif -%}
-                            {%- endif -%}
-                          {%- endfor -%}
-                        </div>
                       </div>
-                    {%- endif -%}
-
+                    </div>
                   </div>
 
                 </div>
@@ -268,51 +200,55 @@
       "type": "checkbox",
       "id": "hide_on_mobile",
       "label": "Hide on Mobile & Tablet",
-      "default": true,
-      "info": "Hides this navigation bar on screen widths below 990px."
+      "default": true
     }
   ],
   "blocks": [
     {
-      "type": "card_item",
-      "name": "Visual Card",
+      "type": "auto_collection",
+      "name": "⚡ Auto-Show Collection",
       "settings": [
         {
-          "type": "header",
-          "content": "Hierarchy Assignment"
-        },
-        {
           "type": "text",
-          "id": "parent_category",
-          "label": "1. Main Category Name",
-          "info": "Exact name of top bar item (e.g., Treatment Beds)"
-        },
-        {
-          "type": "text",
-          "id": "sub_category",
-          "label": "2. Subcategory Name",
-          "default": "N/A",
-          "info": "Set as N/A or leave empty if this category has no subcategories and cards should show directly."
-        },
-        {
-          "type": "header",
-          "content": "Link Target (Pick Collection OR Product)"
+          "id": "target_category",
+          "label": "Target Category Title",
+          "info": "Type category name (e.g. Facial Units). Leave empty to show everywhere."
         },
         {
           "type": "collection",
           "id": "collection",
-          "label": "Link to Collection",
-          "info": "Automatically extracts collection image, title, and URL."
+          "label": "Select Collection to Display"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 16,
+          "step": 1,
+          "label": "Number of Products to Show",
+          "default": 6
+        }
+      ]
+    },
+    {
+      "type": "custom_card",
+      "name": "📌 Specific Product / Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "target_category",
+          "label": "Target Category Title",
+          "info": "Type category name (e.g. Facial Units)."
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Link to Product",
-          "info": "Automatically extracts product featured image, title, and URL."
+          "label": "Pick Product"
         },
         {
-          "type": "header",
-          "content": "Custom Overrides (Optional)"
+          "type": "collection",
+          "id": "collection",
+          "label": "Or Pick Collection"
         },
         {
           "type": "text",
@@ -327,12 +263,12 @@
         {
           "type": "text",
           "id": "badge_text",
-          "label": "Badge Tag (e.g. New, Top Seller)"
+          "label": "Badge (e.g. Best Seller, New)"
         },
         {
           "type": "url",
           "id": "custom_url",
-          "label": "Custom Link URL Override"
+          "label": "Custom Link URL"
         }
       ]
     }
