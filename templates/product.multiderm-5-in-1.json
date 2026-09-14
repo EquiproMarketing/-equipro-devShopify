@@ -76,21 +76,21 @@
           "type": "feature_item",
           "settings": {
             "title": "Unrivaled Durability",
-            "text": "Impact-Resistant Steel Enclosure: Rigidly constructed with premium heavy-duty materials to lock down long-term performance outcome reliability in busy commercial settings."
+            "text": "Industrial-Grade Chassis: Constructed with premium-grade steel and scratch-resistant finishes to maintain structural integrity in high-traffic aesthetic clinics."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Integrated Accessory Bay",
-            "text": "Quick-Access Storage Layout: A streamlined engineering approach featuring dedicated accessory holders designed to protect glass components for the operator and client, optimizing physical workspace room."
+            "title": "Modular Component Layout",
+            "text": "Precision-nested internal modules designed to streamline workflow configurations for solo practitioners and multi-room facility teams, boosting multi-modality efficiency."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Ultra-Compact Profile",
-            "text": "Ergonomic Desktop Configuration: Sleek functional layout that ensures seamless structural compatibility with standard clinical cart configurations or modular workspace setups."
+            "title": "Sleek Executive Profile",
+            "text": "A refined architectural presence that fits seamlessly into contemporary luxury spa decors and upscale holistic clinical environments."
           }
         }
       },
@@ -101,6 +101,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-multiderm-5-in-1-ultra-modern-aesthetic-equipment-11800.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -122,36 +123,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and Connection",
-            "text": "Place the compact Aeroderm unit securely onto a stable treatment cart and plug the plastic lines into their respective vacuum and spray quick-connect inlets."
+            "bold_prefix": "System Initialization",
+            "text": "Ensure the main power cable is securely connected to a dedicated, grounded wall outlet and toggle the master breaker switches on."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Spray Preparation",
-            "text": "Fill the plastic misting container with professional-grade skin toner or botanical mist, locking it to the spray nozzle head."
+            "bold_prefix": "Modality Calibration",
+            "text": "Select the desired handpiece accessory (High Frequency, Rotary Brush, Galvanic, Vacuum, or Spray) and connect it to its corresponding isolated port."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Glass Attachment Selection",
-            "text": "Choose the specific glass cupping component needed for the procedure (anti-wrinkle, blackhead remover, or massage) and slide it firmly into the suction adapter tool."
+            "bold_prefix": "Parameter Setting",
+            "text": "Adjust the analog intensity dials or digital interface controls slowly, starting at the baseline value to safely gauge individual client sensory thresholds."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Intensity Calibration",
-            "text": "Power on the system and adjust the primary dial to the lowest setting before completing contact with the target facial area."
+            "bold_prefix": "Application Sequencing",
+            "text": "Execute the programmed clinical skincare steps systematically, ensuring all unused handpieces remain properly nested in their insulated protective cradles."
           }
         },
         "instruction_item_x6Kb8r": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Modality Execution",
-            "text": "Move the active glass head smoothly along natural muscle contours, regulating suction intensity via the built-in thumb port on the connector."
+            "bold_prefix": "Cycle Shutdown",
+            "text": "Turn off individual module toggles, return current selectors to zero, wipe down all active treatment leads, and engage the master power shut-off."
           }
         },
         "section_header_dGJcmr": {
@@ -163,22 +164,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Lifting Technique",
-            "text": "Always vent the vacuum circuit via the adapter air hole before lifting the glass cup directly off the client's skin to prevent capillary stress."
+            "bold_prefix": "Contraindication Verification",
+            "text": "Never apply active electrical currents, such as galvanic or high frequency, to clients possessing internal cardiac pacemakers, metal implants, or active circulatory disorders."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Fluid Safeguards",
-            "text": "Never operate the vacuum modality without verifying that the inline capture mechanism is empty to prevent fluids from reaching the internal motor."
+            "bold_prefix": "Fluid Isolation Protocols",
+            "text": "Maintain a strictly dry operational zone; do not allow conductive topical gels, serums, or moisture to penetrate internal venting grilles or connection ports."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Component Inspections",
-            "text": "Visually inspect all glass attachments under strong magnification prior to every treatment session to guarantee components are completely free of structural micro-cracks."
+            "bold_prefix": "Sanitization Restrictions",
+            "text": "Ensure the system is fully powered down and unplugged before performing routine exterior casing wipe-downs to eliminate any risk of electrical arcs."
           }
         }
       },
@@ -195,7 +196,7 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
-        "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
+        "image": "shopify://shop_images/equipro-multiderm-5-in-1-professional-skincare-system-11800.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
@@ -213,43 +214,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What specific glass attachments are included inside the standard Aeroderm package?",
-            "answer": "<p><strong>The station ships complete with three target glass cupping components.</strong> You receive an anti-wrinkle cup, a blackhead removal tool, and a facial massage attachment.</p>"
+            "question": "What functions are included in the Multiderm (5 in 1) system?",
+            "answer": "<p><strong>It consolidates high frequency, galvanic current, vacuum, spray, and rotary brush modalities.</strong> This provides comprehensive facial treatment capabilities in one footprint.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the standard factory warranty period for this professional device?",
-            "answer": "<p><strong>Equipro backs this system with a comprehensive two-year commercial warranty.</strong> This covers structural components and factory assembly defects from your purchase date.</p>"
+            "question": "Is the Multiderm (5 in 1) manufactured in North America?",
+            "answer": "<p><strong>Yes, Equipro engineers and manufactures this system directly within North American production facilities.</strong> This ensures strict quality control and rapid component support.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Can the spray system operate with standard water or essential botanical blends?",
-            "answer": "<p><strong>Yes, the misting diffuser accommodates liquid toners and floral waters.</strong> Always ensure solutions are finely filtered to avoid blocking the spray nozzle.</p>"
+            "question": "Can the individual modalities be repaired independently?",
+            "answer": "<p><strong>The unit features modular internal component engineering for isolated servicing configurations.</strong> This minimizes total clinic downtime if single parts require maintenance.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the vacuum suction require separate filters to protect the motor assembly?",
-            "answer": "<p><strong>The unit relies on a protective line configuration to block fluids.</strong> Routinely check lines to ensure zero moisture bypass into the central pump chamber.</p>"
+            "question": "What type of training is required to operate this equipment?",
+            "answer": "<p><strong>Operation is restricted to licensed estheticians, certified skincare technicians, or trained professionals.</strong> Users must understand advanced skincare electrical currents.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Is this professional system certified for use in commercial settings across Canada?",
-            "answer": "<p><strong>Yes, all electrical parts are fully CSA and UL approved.</strong> This guarantees compliance with safety metrics for institutional salon settings.</p>"
+            "question": "Does the unit accommodate standard North American voltage requirements?",
+            "answer": "<p><strong>Yes, it is fully wired for standard, reliable 120V operational configurations.</strong> It plugs seamlessly into standard commercial salon wall outlets.</p>"
           }
         },
         "faq_item_eGYQwE": {
           "type": "faq_item",
           "settings": {
-            "question": "Where is the manufacturing and assembly center for Equipro's facial equipment line?",
-            "answer": "<p><strong>Every Aeroderm station is designed, built, and calibrated in North America.</strong> This ensures reliable access to certified components and technical service support.</p>"
+            "question": "Can I use third-party attachments with the Multiderm station?",
+            "answer": "<p><strong>We strongly recommend using authentic Equipro components to guarantee calibrated output safety.</strong> Third-party accessories may compromise system voltage regulation.</p>"
           }
         }
       },
