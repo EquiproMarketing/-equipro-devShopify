@@ -13,15 +13,15 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "11650 Diamonderm",
-        "intro_highlight": "The Diamonderm represents a sophisticated intersection of practitioner-focused ergonomics and rigorous North American manufacturing, delivering a reliable, high-precision solution for professional skin resurfacing and texture refinement.",
-        "custom_description": "<p>While standard entry-level systems often utilize plastic components that degrade under frequent chemical exposure, the Diamonderm is engineered with industrial-grade stainless steel handles and components. Our commitment to durability means that while standard units may require annual replacements, the Diamonderm is designed to withstand the rigors of continuous, high-volume professional environments for years.</p>",
-        "subtitle": "High-Precision Pneumatic Technology for Specialized Dermal Care",
-        "secondary_description": "<p>The Diamonderm is purpose-built for skincare professionals, including Estheticians, Clinical Spa Therapists, and Skincare Specialists. Its ergonomic, precision-engineered design targets wrist discomfort and fatigue during extended treatment sessions, enabling sharper focus on technical precision and treatment execution. Whether you are performing deep-pore cleansing, anti-aging resurfacing, or brow area refinement, this professional station adjusts to your workflow need with intuitive one-hand control and seamless intensity calibration.</p>",
+        "custom_title": "Rotoderm",
+        "intro_highlight": "The Rotoderm is a precision-engineered rotary system designed to elevate professional exfoliation and cleansing standards through North American manufacturing quality. Its variable speed control allows for tailored intensity, ensuring consistent, high-performance results across diverse skin types and treatment modalities.",
+        "custom_description": "<p>The Rotoderm is purpose-built for skincare professionals, including aestheticians, Clinical spa therapists, and skin care specialists. Its ergonomic, precision-engineered design targets potential wrist discomfort during extended treatment sessions, enabling sharper focus on treatment execution and secondary benefit through enhanced operational efficiency. Whether you are performing deep-pore cleansing, pre-peel exfoliation, or surface smoothing, this professional station adjusts to your workflow need with intuitive one-hand control and instant-response calibration.</p>",
+        "subtitle": "Engineered for the Modern Practitioner",
+        "secondary_description": "<p>Standard devices often utilize fixed-speed motors with rigid plastic housings that succumb to wear within 18 months. The Equipro Rotoderm utilizes a high-torque, variable-speed motor housed in industrial-grade components, backed by our commitment to long-term operational reliability in high-traffic aesthetic environments.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
-        "featured_product": "diamonderm",
+        "featured_product": "rotoderm",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -34,21 +34,21 @@
           "type": "faq_item",
           "settings": {
             "question": "Esthetician:",
-            "answer": "<p>For the Esthetician, the Diamonderm’s variable intensity settings allow for the seamless transition between gentle exfoliation for sensitive skin and more aggressive resurfacing for treatment-resistant areas, ensuring service consistency across every client profile.</p>"
+            "answer": "<p>For the <strong>Esthetician</strong>, the Rotoderm’s variable speed control offers the precision necessary for deep-pore cleansing without compromising delicate barrier integrity. By adjusting the brush intensity, you can customize the treatment for sensitive skin types, ensuring a soothing experience while effectively removing impurities.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Spa Therapist:",
-            "answer": "<p>For the Clinical Spa Therapist, the device provides the technical precision required for pre-procedure skin preparation. The robust stainless steel handles offer the tactile feedback necessary for controlled, repeatable results during high-volume clinic days, maximizing operational efficiency without sacrificing treatment quality.</p>"
+            "question": "Clinical Spa Therapist:",
+            "answer": "<p>For the <strong>Clinical Spa Therapist</strong>, this device serves as an essential prep tool before advanced clinical procedures. Consistent exfoliation ensures optimal product penetration and light-based therapy absorption, directly enhancing the efficacy of subsequent service steps and delivering repeatable, superior clinical results.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
             "question": "Skincare Specialist:",
-            "answer": "<p>For the Skincare Specialist, this workstation integrates into existing protocols with ease. The intuitive interface and integrated storage ensure that during full 8-hour shifts, you maintain a clutter-free, functional environment that keeps your focus entirely on the client’s skin health and comfort.</p>"
+            "answer": "<p>For the <strong>Skin Care Specialist</strong>, the unit’s retractable, twisted cord design provides superior ergonomic mobility. This allows for seamless movement around the client’s face, reducing wrist strain during high-volume clinic days and maintaining a professional, clutter-free workspace.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>Technical Aspect</th>\n        <th>Specification Details</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty Equipment</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11650 Diamonderm</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stainless steel ergonomic handpieces, high-precision diamond tips, robust compact housing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Technology</td>\n        <td>Microdermabrasion with crystal-free diamond tip exfoliation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions</td>\n        <td>11\" X 7\" X 3.5\" H (28 cm X 18 cm X 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb / 4 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Control</td>\n        <td>Variable intensity settings adaptable to each skin type</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Handpieces</td>\n        <td>3 ergonomic stainless steel handpieces included</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Diamond Tips</td>\n        <td>9 diamond tips included for precise smoothing, brightening, and rejuvenation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage</td>\n        <td>Integrated storage holes for diamond tips for organized workspace</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Design Features</td>\n        <td>Compact professional model, robust construction for daily salon use</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11500</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial chassis with chemical-resistant protective coating and integrated thermoplastic accessory holder</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Mechanical rotary facial brushing for enhanced cleansing, exfoliation, and skin preparation[cite: 1]</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Manual rotary variable speed control dial</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility Features</td>\n        <td>High-flexibility twisted retractable handset cord providing optimal range of motion</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 professional natural bristle brushes: 1 soft natural bristle brush (0.75\"), 1 soft natural bristle brush (1.5\"), and 1 firm natural bristle brush (1.5\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Molded built-in accessory storage deck on top of the chassis</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All internal electrical components are fully CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty covering both parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
