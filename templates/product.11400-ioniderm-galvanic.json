@@ -101,6 +101,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-11400-ioniderm-galvanic-machine-professional-aesthetic-treatment-system.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -195,7 +196,7 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
-        "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
+        "image": "shopify://shop_images/equipro-ioniderm-compact-galvanic-skincare-machine-professional-esthetician-sku-11400.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
