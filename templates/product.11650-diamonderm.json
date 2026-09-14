@@ -75,22 +75,22 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Unrivaled Durability",
-            "text": "Industrial-Grade Chassis: Constructed with premium-grade steel and scratch-resistant finishes to maintain structural integrity in high-traffic aesthetic clinics."
+            "title": "Variable Intensity Calibration",
+            "text": "High-precision vacuum control with robust internal components to ensure steady performance in high-volume clinics."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Modular Component Layout",
-            "text": "Precision-nested internal modules designed to streamline workflow configurations for solo practitioners and multi-room facility teams, boosting multi-modality efficiency."
+            "title": "Ergonomic Stainless Steel Handles",
+            "text": "Balanced, precision-weight handles designed to minimize hand strain for Estheticians and Skincare Specialists, facilitating effortless treatment."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Sleek Executive Profile",
-            "text": "A refined architectural presence that fits seamlessly into contemporary luxury spa decors and upscale holistic clinical environments."
+            "title": "Integrated Storage System",
+            "text": "Functional design that keeps the nine included diamond tips organized, sterile, and immediately accessible for any treatment environment."
           }
         }
       },
@@ -123,8 +123,8 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "System Initialization",
-            "text": "Ensure the main power cable is securely connected to a dedicated, grounded wall outlet and toggle the master breaker switches on."
+            "bold_prefix": "Connect",
+            "text": "the desired diamond tip to the stainless steel handle and ensure a firm seal."
           }
         },
         "instruction_item_8VfGh8": {

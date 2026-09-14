@@ -93,7 +93,7 @@
           {% unless target_product.has_only_default_variant %}
             {% for option in target_product.options_with_values %}
               <div class="product-option">
-                <label>{{ option.name }}:</label>
+                <label>{{ option.name }}</label>
                 <select name="options[{{ option.name | escape }}]" class="product-select">
                   {% for value in option.values %}
                     <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
