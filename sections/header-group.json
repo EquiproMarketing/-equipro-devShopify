@@ -21,38 +21,31 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
-        "auto_collection_3WiNNw": {
+        "auto_collection_49rzPj": {
           "type": "auto_collection",
           "settings": {
-            "parent_category": "Skincare Equipment",
+            "parent_category": "Skincare Equipment)",
             "sub_category": "Facil Units",
             "collection": "facial-units",
             "products_to_show": 6
           }
         },
-        "auto_collection_9cqw7c": {
-          "type": "auto_collection",
+        "custom_card_YWFeqL": {
+          "type": "custom_card",
           "settings": {
             "parent_category": "",
             "sub_category": "",
-            "collection": "electric",
-            "products_to_show": 6
-          }
-        },
-        "auto_collection_XUTBLH": {
-          "type": "auto_collection",
-          "settings": {
-            "parent_category": "",
-            "sub_category": "",
-            "collection": "columns",
-            "products_to_show": 6
+            "product": "",
+            "collection": "",
+            "custom_title": "",
+            "badge_text": "",
+            "custom_url": ""
           }
         }
       },
       "block_order": [
-        "auto_collection_3WiNNw",
-        "auto_collection_9cqw7c",
-        "auto_collection_XUTBLH"
+        "auto_collection_49rzPj",
+        "custom_card_YWFeqL"
       ],
       "name": "Category Subnav Bar",
       "settings": {
