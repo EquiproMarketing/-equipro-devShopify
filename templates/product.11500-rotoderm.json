@@ -75,22 +75,22 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Variable Intensity Calibration",
-            "text": "High-precision vacuum control with robust internal components to ensure steady performance in high-volume clinics."
+            "title": "Variable Speed Control",
+            "text": "Precision motor adjustments with intuitive dial-control to regulate intensity for diverse skin types and treatment intensities in high-volume settings."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Ergonomic Stainless Steel Handles",
-            "text": "Balanced, precision-weight handles designed to minimize hand strain for Estheticians and Skincare Specialists, facilitating effortless treatment."
+            "title": "Retractable Cord System",
+            "text": "Advanced design featuring a twisted, retractable cord designed to eliminate cable drag for Estheticians and Skincare Specialists, enabling seamless workflow."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Integrated Storage System",
-            "text": "Functional design that keeps the nine included diamond tips organized, sterile, and immediately accessible for any treatment environment."
+            "title": "Professional Attachment Set",
+            "text": "A curated suite of three natural-bristle brushes that provides adaptable texture profiles for varied service needs and enhanced client comfort."
           }
         }
       },
@@ -123,29 +123,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Connect",
-            "text": "the desired diamond tip to the stainless steel handle and ensure a firm seal."
+            "bold_prefix": "Select the appropriate",
+            "text": "brush (soft for sensitive, firm for standard exfoliation) and attach securely."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Adjust the main intensity",
-            "text": "dial to the appropriate setting based on the client's skin sensitivity."
+            "bold_prefix": "Apply a professional-grade",
+            "text": "cleansing medium to the skin."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "After the session,",
-            "text": "detach and sterilize the diamond tips according to your local health standards."
+            "bold_prefix": "Power on",
+            "text": "and rotate the dial to your preferred speed setting."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Return all components",
-            "text": "to the integrated storage slots for quick retrieval during your next appointment."
+            "bold_prefix": "Use light,",
+            "text": "circular motions across the treatment area, avoiding direct pressure."
+          }
+        },
+        "instruction_item_9behFk": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power off,",
+            "text": "remove attachment, and sanitize according to clinic protocol."
           }
         },
         "section_header_dGJcmr": {
@@ -157,22 +164,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Always perform",
-            "text": "a patch test on a small area of skin to determine the appropriate intensity for the individual client."
+            "bold_prefix": "Do not use on broken,",
+            "text": "inflamed, or compromised skin surfaces."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Ensure the vacuum",
-            "text": "filter is inspected weekly and replaced as needed to maintain optimal suction pressure."
+            "bold_prefix": "Always maintain",
+            "text": "light pressure to avoid over-exfoliation and potential tissue irritation."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "The device should only",
-            "text": "be operated by licensed skincare professionals trained in microdermabrasion techniques."
+            "bold_prefix": "Inspect the unit cord",
+            "text": "for wear daily to ensure electrical integrity during operation."
           }
         }
       },
@@ -182,6 +189,7 @@
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
         "instruction_item_rRgyKc",
+        "instruction_item_9behFk",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
@@ -206,50 +214,36 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What is included with the Diamonderm unit?",
-            "answer": "<p>The unit comes fully equipped with 3 stainless steel handles and 9 interchangeable diamond tips.</p>"
+            "question": "What types of brushes come with the Rotoderm?",
+            "answer": "<h4></h4><p>The unit includes three natural fiber brushes: two soft brushes (one 0.75\" and one 1.5\") for delicate skin, and one firm 1.5\" brush for deeper exfoliation and skin preparation.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the Diamonderm require disposable crystal cartridges?",
-            "answer": "<p>No, it uses a crystal-free diamond tip system that eliminates consumable crystal expenses.</p>"
+            "question": "Is the speed adjustable?",
+            "answer": "<p>Yes, the Rotoderm features variable speed control, allowing the professional to precisely dial in the rotation intensity based on the specific treatment protocol and skin sensitivity.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty coverage applies to this device?",
-            "answer": "<p><strong>The Diamonderm is backed by a full 2-year manufacturer warranty covering parts and labor.</strong></p>"
+            "question": "How do I maintain the brushes?",
+            "answer": "<p>The brushes should be sanitized according to professional standards after each use. The compact unit itself is designed for heavy-duty professional use with minimal maintenance required.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Where is the Diamonderm manufactured?",
-            "answer": "<p>It is engineered and manufactured in North America adhering to international safety standards.</p>"
+            "question": "What is the warranty coverage?",
+            "answer": "<p><strong>Equipro offers industry-leading coverage.</strong> Please contact your sales representative for specific duration details.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the electrical components safety certified?",
-            "answer": "<p>Yes, all electrical components in Equipro equipment are CSA and UL approved.</p>"
-          }
-        },
-        "faq_item_eGYQwE": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What are the physical dimensions of the machine?",
-            "answer": "<p><strong>The compact unit measures 11 inches by 7 inches by 3.5 inches high.</strong></p>"
-          }
-        },
-        "faq_item_9NLxKH": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Can the suction intensity be customized per client?",
-            "answer": "<p>Yes, it features a variable intensity dial for precise vacuum suction control.</p>"
+            "question": "Can I use the brushes on all skin types?",
+            "answer": "<p><strong>Yes, by adjusting speed.</strong> Use soft bristles for sensitive skin and firm for deep cleansing.</p>"
           }
         }
       },
@@ -258,9 +252,7 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6",
-        "faq_item_eGYQwE",
-        "faq_item_9NLxKH"
+        "faq_item_GkbCk6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
