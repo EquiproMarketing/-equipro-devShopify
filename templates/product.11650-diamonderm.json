@@ -130,56 +130,49 @@
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Modality Calibration",
-            "text": "Select the desired handpiece accessory (High Frequency, Rotary Brush, Galvanic, Vacuum, or Spray) and connect it to its corresponding isolated port."
+            "bold_prefix": "Adjust the main intensity",
+            "text": "dial to the appropriate setting based on the client's skin sensitivity."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Parameter Setting",
-            "text": "Adjust the analog intensity dials or digital interface controls slowly, starting at the baseline value to safely gauge individual client sensory thresholds."
+            "bold_prefix": "After the session,",
+            "text": "detach and sterilize the diamond tips according to your local health standards."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Application Sequencing",
-            "text": "Execute the programmed clinical skincare steps systematically, ensuring all unused handpieces remain properly nested in their insulated protective cradles."
-          }
-        },
-        "instruction_item_x6Kb8r": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Cycle Shutdown",
-            "text": "Turn off individual module toggles, return current selectors to zero, wipe down all active treatment leads, and engage the master power shut-off."
+            "bold_prefix": "Return all components",
+            "text": "to the integrated storage slots for quick retrieval during your next appointment."
           }
         },
         "section_header_dGJcmr": {
           "type": "section_header",
           "settings": {
-            "title": "How to Use"
+            "title": "Safety & Disclaimers"
           }
         },
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Contraindication Verification",
-            "text": "Never apply active electrical currents, such as galvanic or high frequency, to clients possessing internal cardiac pacemakers, metal implants, or active circulatory disorders."
+            "bold_prefix": "Always perform",
+            "text": "a patch test on a small area of skin to determine the appropriate intensity for the individual client."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Fluid Isolation Protocols",
-            "text": "Maintain a strictly dry operational zone; do not allow conductive topical gels, serums, or moisture to penetrate internal venting grilles or connection ports."
+            "bold_prefix": "Ensure the vacuum",
+            "text": "filter is inspected weekly and replaced as needed to maintain optimal suction pressure."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Sanitization Restrictions",
-            "text": "Ensure the system is fully powered down and unplugged before performing routine exterior casing wipe-downs to eliminate any risk of electrical arcs."
+            "bold_prefix": "The device should only",
+            "text": "be operated by licensed skincare professionals trained in microdermabrasion techniques."
           }
         }
       },
@@ -189,7 +182,6 @@
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
         "instruction_item_rRgyKc",
-        "instruction_item_x6Kb8r",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
