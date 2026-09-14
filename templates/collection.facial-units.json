@@ -17,7 +17,8 @@
         "custom_title": "",
         "custom_description": "",
         "fallback_description": "Professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
-        "overlay_opacity": 40
+        "custom_image": "shopify://shop_images/equipro-professional-aesthetic-workstation-multiderm-series.webp",
+        "overlay_opacity": 5
       }
     },
     "custom_product_treatment_fBzzfA": {
@@ -103,6 +104,8 @@
       "name": "Why Our Category",
       "settings": {
         "title": "Why Our Trolleys",
+        "image_left": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+        "image_right": "shopify://shop_images/equipro-professional-facial-workstation-multiderm-aeroderm-ioniderm-system.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -117,12 +120,78 @@
         "margin_top": 48,
         "margin_bottom": 48
       }
+    },
+    "category_faq_hci6YV": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_mQyJEm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do these units require special electrical outlets?",
+            "answer": "<p>No. Our facial units are fully optimized to deliver professional-grade power while operating safely on standard single wall outlets, making them incredibly versatile for any layout.</p>"
+          }
+        },
+        "faq_item_6JPk9T": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which specialized modalities are available in your facial units?",
+            "answer": "<p>Our professional range covers all essential clinical modalities, including High Frequency (for sanitizing and oxygenation), Galvanic (for disincrustation and iontophoresis), Rotary Brush (for mechanical exfoliation), and Vacuum & Spray (for deep pore extraction and product misting).</p>"
+          }
+        },
+        "faq_item_wrH6FL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can these compact units be mounted on a multi-function column later?",
+            "answer": "<p>Yes. One of the main benefits of Equipro engineering is modularity. You can start with a standalone tabletop facial unit today and easily slide it into our specialized workstation columns if your clinic expands.</p>"
+          }
+        },
+        "faq_item_7jEBAm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I properly sanitize the electrodes and treatment attachments?",
+            "answer": "<p>Glass electrodes and rotary brushes should be cleaned with anti-bacterial soap and water, then fully immersed in a hospital-grade disinfectant solution (like Barbicide) according to local regulations. Never submerge the electrical handpieces.</p>"
+          }
+        },
+        "faq_item_LN3LcU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the replacement glass electrodes or brushes sold separately?",
+            "answer": "<p>Absolutely. We maintain a full inventory of replacement parts, including various shapes of high-frequency glass electrodes (mushroom, spoon, pointer) and different sizes of facial brushes, making it easy to refresh your kit.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mQyJEm",
+        "faq_item_6JPk9T",
+        "faq_item_wrH6FL",
+        "faq_item_7jEBAm",
+        "faq_item_LN3LcU"
+      ],
+      "name": "Category FAQ",
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
     }
   },
   "order": [
     "collection_banner_MXi4BC",
     "custom_product_treatment_fBzzfA",
     "positive_impact_DDyxFL",
-    "why_our_category_HPkHy7"
+    "why_our_category_HPkHy7",
+    "category_faq_hci6YV"
   ]
 }
