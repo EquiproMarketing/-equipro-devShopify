@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Licensed Esthetician:",
+            "answer": "<p>The Infraderm provides an essential foundation for clarifying and advanced facial regimens. Utilizing its custom-molded purple and pink electrodes, skincare specialists can seamlessly address congestion, promote post-extraction cellular recovery, and deliver targeted antibacterial benefits. The variable intensity control enables the practitioner to instantly modulate energy flow, ensuring that delicate skin types receive non-invasive, highly effective care without triggering undue erythema.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Aesthetic Clinic Director:",
+            "answer": "<p>For facilities demanding maximum operational throughput and room versatility, this lightweight, compact device optimizes workstation logistics. The integrated electrode storage compartment mitigates the high operational cost of accidental tool breakage, keeping delicate components organized, secured, and ready for back-to-back treatment configurations. It serves as a high-margin service differentiator that elevates standard facial protocols.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Specialized Skincare Technician",
+            "answer": "<p>When managing intensive or localized skin rebalancing protocols, practitioner mobility is paramount. The Infraderm features an industrial-grade, retractable twisted cord that effortlessly stretches to accommodate multi-angle practitioner movement without dragging across the client's field of treatment. This structural flexibility minimizes wrist fatigue during extended clinical applications while maximizing the delivery of the indirect massage modality.</p>"
           }
         }
       },
@@ -64,15 +64,44 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11300</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Steel case, baked enamel finish, electrostatic powder paint coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>28 cm x 18 cm x 8 cm (11\" x 7\" x 3\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>5 kg (11 lbs)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>18 Watts / 120 Volts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Cycles</td>\n        <td>60 Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Analog rotary intensity control knob with ON/OFF switch</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>1 (High-Frequency Effluvation and Direct/Indirect Treatment)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 electrodes: 1 large surface (purple), 1 small surface (pink), 1 indirect massage (spiral); retractable handle cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated \"Comfort System\" technology to eliminate current feedback tingling; 1 AMP-250V fast-blow safety fuse protection</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA Approved, UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_RC6zrP": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Shock-Absorbing System: Internal dampening engineered with specialized housing to eliminate micro-vibrations and optimize client comfort in high-volume clinics."
+          }
+        },
+        "feature_item_xdMC3p": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Retractable Heavy-Duty Cord",
+            "text": "Industrial twisted wand cord designed to offer fluid mobility for the professional while instantly contracting to stay clear of the sterile field."
+          }
+        },
+        "feature_item_MPq7cP": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Heavy-duty frame construction fabricated with robust structural components to withstand high-volume usage."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_RC6zrP",
+        "feature_item_xdMC3p",
+        "feature_item_MPq7cP"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-infraderm-high-frequency-professional-aesthetic-unit-11300.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -94,49 +123,49 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "",
+            "text": "Place the Infraderm unit on a flat, stable service table or mount it securely within an Equipro modular column system."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "",
+            "text": "Prior to powering on the device, gently insert the chosen glass electrode (large purple, small pink, or indirect massage) straight into the insulated wand until completely seated."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "",
+            "text": "Ensure the intensity control knob is set to zero, plug the unit into a grounded electrical outlet, and toggle the main power switch."
           }
         },
         "section_header_dGJcmr": {
           "type": "section_header",
           "settings": {
-            "title": "How to Use"
+            "title": "Safety & Disclaimers"
           }
         },
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Environmental Integrity",
+            "text": "The equipment must be kept in a dry environment at all times; do not store or operate the unit in areas where liquids or heavy condensation may breach the outer chassis."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Electrode Verification",
+            "text": "Inspect glass electrodes for structural micro-cracks or chips before every service session; never supply electrical currents to a compromised glass component."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Certified Maintenance:",
+            "text": "All electrical internal adjustments must be handled exclusively by certified Equipro technicians; opening the protective chassis by unauthorized parties immediately voids the professional warranty."
           }
         }
       },
@@ -151,8 +180,9 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
+        "image": "shopify://shop_images/equipro-11300-infraderm-high-frequency-professional-skincare-unit.webp",
         "image_position": "left",
-        "image_aspect_ratio": "4-3",
+        "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
         "text_color": "#444444",
         "bg_color": "#ffffff",
@@ -168,43 +198,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What electrodes are included with the Infraderm?",
+            "answer": "<p>It comes with three specialized electrodes: one large purple surface electrode, one small pink surface electrode, and one indirect massage electrode for manual therapy integration.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Is the Infraderm suitable for mobile use?",
+            "answer": "<p>Yes. Its compact size and retractable, twisted handle cord make it ideal for smaller treatment rooms or shared workspaces where mobility is key.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "How does the shock-absorbing system work?",
+            "answer": "<p>This system is designed to eliminate the \"zap\" or sudden intensity spikes during electrode contact, providing a premium, comfortable experience for sensitive clients.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What are the mandatory routine maintenance steps?",
+            "answer": "<p><strong>Wipe down the outer casing daily and sanitize the glass electrodes post-treatment.</strong> Use non-abrasive clinical disinfectants and keep the machine stored in a dry environment.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What type of warranty coverage accompanies this equipment?",
+            "answer": "<p><strong>The machine is backed by a full two-year professional warranty.</strong> This covers parts and labor authorized by certified repair technicians, excluding shipping fees.</p>"
           }
         },
         "faq_item_eGYQwE": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Can this facial device be integrated into an existing column?",
+            "answer": "<p><strong>Yes, it is designed to mount within Equipro modular space towers.</strong> It fits seamlessly onto the <span style=\"text-decoration:underline\"><strong>Modular Column </strong></span>or <span style=\"text-decoration:underline\"><strong>Deluxe Column </strong></span>systems alongside companion devices.</p>"
           }
         }
       },
