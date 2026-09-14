@@ -122,7 +122,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
             "title": "Facial Units",
-            "link": ""
+            "link": "shopify://collections/facial-units"
           }
         },
         "category_item_B9RXVp": {
@@ -680,7 +680,7 @@
             "image_3": "shopify://shop_images/equipro-professional-upholstery-textured-synthetic-leather-high-durability-aesthetic-clinic-finish.webp",
             "image_4": "shopify://shop_images/equipro-professional-practitioner-chair-grey-textured-vinyl-upholstery-clinical-furniture-customization-color-charcoal.webp",
             "tag": "Customization",
-            "tag_color": "#FFFFFF",
+            "tag_color": "#ffffff",
             "title": "Customization and finishes.",
             "text": "Discover the customization possibilities Equipro offers for your clinic furniture.",
             "color_list": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
@@ -700,7 +700,7 @@
             "enable_dark_overlay": true,
             "image_1": "shopify://shop_images/equipro-24-7-support-technical-assistance-aesthetic-treatment-chair-wellness-clinic.webp",
             "tag": "Support",
-            "tag_color": "#FFFFFF",
+            "tag_color": "#ffffff",
             "title": "24/7 support & contact.",
             "text": "Need help? Our emergency line is available 24/7. Reach us anytime for assistance with your equipment.",
             "color_list": "",
@@ -720,7 +720,7 @@
             "enable_dark_overlay": true,
             "image_1": "shopify://shop_images/equipro-ergonomic-backrest-stool-pneumatic-practitioner-seat-white-vinyl-salon-wellness-31100-31200-31300.webp",
             "tag": "Support",
-            "tag_color": "#FFFFFF",
+            "tag_color": "#ffffff",
             "title": "Assembly manuals & guides.",
             "text": "Download our assembly manuals and find simple step-by-step guides to replace bulbs, change filters, or use your equipment.",
             "color_list": "",
