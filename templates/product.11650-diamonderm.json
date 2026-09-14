@@ -206,43 +206,50 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What functions are included in the Multiderm (5 in 1) system?",
-            "answer": "<p><strong>It consolidates high frequency, galvanic current, vacuum, spray, and rotary brush modalities.</strong> This provides comprehensive facial treatment capabilities in one footprint.</p>"
+            "question": "What is included with the Diamonderm unit?",
+            "answer": "<p>The unit comes fully equipped with 3 stainless steel handles and 9 interchangeable diamond tips.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the Multiderm (5 in 1) manufactured in North America?",
-            "answer": "<p><strong>Yes, Equipro engineers and manufactures this system directly within North American production facilities.</strong> This ensures strict quality control and rapid component support.</p>"
+            "question": "Does the Diamonderm require disposable crystal cartridges?",
+            "answer": "<p>No, it uses a crystal-free diamond tip system that eliminates consumable crystal expenses.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Can the individual modalities be repaired independently?",
-            "answer": "<p><strong>The unit features modular internal component engineering for isolated servicing configurations.</strong> This minimizes total clinic downtime if single parts require maintenance.</p>"
+            "question": "What warranty coverage applies to this device?",
+            "answer": "<p><strong>The Diamonderm is backed by a full 2-year manufacturer warranty covering parts and labor.</strong></p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "What type of training is required to operate this equipment?",
-            "answer": "<p><strong>Operation is restricted to licensed estheticians, certified skincare technicians, or trained professionals.</strong> Users must understand advanced skincare electrical currents.</p>"
+            "question": "Where is the Diamonderm manufactured?",
+            "answer": "<p>It is engineered and manufactured in North America adhering to international safety standards.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the unit accommodate standard North American voltage requirements?",
-            "answer": "<p><strong>Yes, it is fully wired for standard, reliable 120V operational configurations.</strong> It plugs seamlessly into standard commercial salon wall outlets.</p>"
+            "question": "Are the electrical components safety certified?",
+            "answer": "<p>Yes, all electrical components in Equipro equipment are CSA and UL approved.</p>"
           }
         },
         "faq_item_eGYQwE": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use third-party attachments with the Multiderm station?",
-            "answer": "<p><strong>We strongly recommend using authentic Equipro components to guarantee calibrated output safety.</strong> Third-party accessories may compromise system voltage regulation.</p>"
+            "question": "What are the physical dimensions of the machine?",
+            "answer": "<p><strong>The compact unit measures 11 inches by 7 inches by 3.5 inches high.</strong></p>"
+          }
+        },
+        "faq_item_9NLxKH": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the suction intensity be customized per client?",
+            "answer": "<p>Yes, it features a variable intensity dial for precise vacuum suction control.</p>"
           }
         }
       },
@@ -252,7 +259,8 @@
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
         "faq_item_GkbCk6",
-        "faq_item_eGYQwE"
+        "faq_item_eGYQwE",
+        "faq_item_9NLxKH"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
