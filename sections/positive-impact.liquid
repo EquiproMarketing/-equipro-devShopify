@@ -1,42 +1,301 @@
-<div class="positive-impact page-width">
-  <div class="positive-impact__divider"></div>
-  <h2 class="positive-impact__title">Our Positive Impact</h2>
-  <p class="positive-impact__text">
-    Keep your essential tools and devices organized and within arm's reach. Our professional spa trolleys combine silent, effortless mobility with rigid structural stability, elevating the speed, flow, and cleanliness of every treatment protocol.
-  </p>
-  <a href="/pages/contact" class="positive-impact__btn">CONTACT US FOR RECOMMENDATIONS</a>
-  <div class="positive-impact__divider"></div>
+<div class="positive-impact page-width" id="PositiveImpact-{{ section.id }}">
+  {%- if section.settings.show_top_divider -%}
+    <div class="positive-impact__divider positive-impact__divider--top"></div>
+  {%- endif -%}
+
+  {%- if section.settings.title != blank -%}
+    <h2 class="positive-impact__title">{{ section.settings.title }}</h2>
+  {%- endif -%}
+
+  {%- if section.settings.text != blank -%}
+    <div class="positive-impact__text">
+      {{ section.settings.text }}
+    </div>
+  {%- endif -%}
+
+  {%- if section.settings.btn_label != blank -%}
+    <a href="{{ section.settings.btn_url | default: '/pages/contact' }}" class="positive-impact__btn">
+      {{ section.settings.btn_label }}
+    </a>
+  {%- endif -%}
+
+  {%- if section.settings.show_bottom_divider -%}
+    <div class="positive-impact__divider positive-impact__divider--bottom"></div>
+  {%- endif -%}
 </div>
 
 <style>
-.positive-impact { text-align: center; padding: 3rem 0; }
-.positive-impact__divider { height: 1px; background-color: #a22938; margin: 2rem 0; opacity: 0.3; }
-.positive-impact__title { font-size: 2rem; font-weight: 700; color: #1a1a1a; margin-bottom: 1.5rem; }
-.positive-impact__text {
-  font-size: 1.25rem;
+#PositiveImpact-{{ section.id }} {
+  text-align: center;
+  padding-top: {{ section.settings.padding_top }}px;
+  padding-bottom: {{ section.settings.padding_bottom }}px;
+}
+
+#PositiveImpact-{{ section.id }} .positive-impact__divider {
+  height: 1px;
+  background-color: {{ section.settings.divider_color }};
+  margin: 2rem 0;
+  opacity: {{ section.settings.divider_opacity | divided_by: 100.0 }};
+}
+
+#PositiveImpact-{{ section.id }} .positive-impact__title {
+  font-size: {{ section.settings.title_size }}px;
+  font-weight: 700;
+  color: {{ section.settings.title_color }};
+  margin-bottom: 1.5rem;
+  line-height: 1.2;
+}
+
+#PositiveImpact-{{ section.id }} .positive-impact__text {
+  font-size: {{ section.settings.text_size }}px;
   font-weight: 600;
-  color: #a22938;
-  max-width: 850px;
+  color: {{ section.settings.text_color }};
+  max-width: {{ section.settings.text_max_width }}px;
   margin: 0 auto 2rem auto;
   line-height: 1.4;
 }
-.positive-impact__btn {
+
+#PositiveImpact-{{ section.id }} .positive-impact__btn {
   display: inline-block;
-  background-color: #a22938;
-  color: #ffffff;
-  padding: 0.9rem 2rem;
-  border-radius: 12px;
+  background-color: {{ section.settings.btn_bg_color }};
+  color: {{ section.settings.btn_text_color }};
+  padding: {{ section.settings.btn_padding_v }}px {{ section.settings.btn_padding_h }}px;
+  border-radius: {{ section.settings.btn_border_radius }}px;
   text-decoration: none;
   font-weight: 700;
-  font-size: 0.85rem;
+  font-size: {{ section.settings.btn_font_size }}px;
   letter-spacing: 0.05em;
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+#PositiveImpact-{{ section.id }} .positive-impact__btn:hover {
+  background-color: {{ section.settings.btn_bg_hover_color }};
+  color: {{ section.settings.btn_text_hover_color }};
+  transform: translateY(-2px);
+}
+
+@media screen and (max-width: 767px) {
+  #PositiveImpact-{{ section.id }} .positive-impact__title {
+    font-size: calc({{ section.settings.title_size }}px * 0.8);
+  }
+  #PositiveImpact-{{ section.id }} .positive-impact__text {
+    font-size: calc({{ section.settings.text_size }}px * 0.85);
+  }
 }
 </style>
 
 {% schema %}
 {
   "name": "Positive Impact",
-  "settings": [],
-  "presets": [{ "name": "Positive Impact" }]
+  "tag": "section",
+  "class": "section-positive-impact",
+  "enabled_on": {
+    "templates": ["*"]
+  },
+  "settings": [
+    {
+      "type": "header",
+      "content": "Content Settings"
+    },
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Heading Title",
+      "default": "Our Positive Impact"
+    },
+    {
+      "type": "textarea",
+      "id": "text",
+      "label": "Description Text",
+      "default": "Keep your essential tools and devices organized and within arm's reach. Our professional spa trolleys combine silent, effortless mobility with rigid structural stability, elevating the speed, flow, and cleanliness of every treatment protocol."
+    },
+    {
+      "type": "header",
+      "content": "Button Settings"
+    },
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Button Label",
+      "default": "CONTACT US FOR RECOMMENDATIONS"
+    },
+    {
+      "type": "url",
+      "id": "btn_url",
+      "label": "Button Link",
+      "default": "/pages/contact"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_color",
+      "label": "Button Background Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_color",
+      "label": "Button Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "color",
+      "id": "btn_bg_hover_color",
+      "label": "Button Hover Background",
+      "default": "#8b2029"
+    },
+    {
+      "type": "color",
+      "id": "btn_text_hover_color",
+      "label": "Button Hover Text Color",
+      "default": "#ffffff"
+    },
+    {
+      "type": "range",
+      "id": "btn_font_size",
+      "min": 12,
+      "max": 20,
+      "step": 1,
+      "unit": "px",
+      "label": "Button Font Size",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "btn_border_radius",
+      "min": 0,
+      "max": 40,
+      "step": 2,
+      "unit": "px",
+      "label": "Button Border Radius",
+      "default": 12
+    },
+    {
+      "type": "range",
+      "id": "btn_padding_v",
+      "min": 8,
+      "max": 30,
+      "step": 1,
+      "unit": "px",
+      "label": "Vertical Padding",
+      "default": 14
+    },
+    {
+      "type": "range",
+      "id": "btn_padding_h",
+      "min": 16,
+      "max": 60,
+      "step": 2,
+      "unit": "px",
+      "label": "Horizontal Padding",
+      "default": 32
+    },
+    {
+      "type": "header",
+      "content": "Typography & Colors"
+    },
+    {
+      "type": "color",
+      "id": "title_color",
+      "label": "Title Color",
+      "default": "#1a1a1a"
+    },
+    {
+      "type": "range",
+      "id": "title_size",
+      "min": 20,
+      "max": 48,
+      "step": 1,
+      "unit": "px",
+      "label": "Title Font Size",
+      "default": 32
+    },
+    {
+      "type": "color",
+      "id": "text_color",
+      "label": "Description Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "range",
+      "id": "text_size",
+      "min": 14,
+      "max": 28,
+      "step": 1,
+      "unit": "px",
+      "label": "Description Font Size",
+      "default": 20
+    },
+    {
+      "type": "range",
+      "id": "text_max_width",
+      "min": 500,
+      "max": 1200,
+      "step": 50,
+      "unit": "px",
+      "label": "Description Max Width",
+      "default": 850
+    },
+    {
+      "type": "header",
+      "content": "Dividers Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_top_divider",
+      "label": "Show Top Divider",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_bottom_divider",
+      "label": "Show Bottom Divider",
+      "default": true
+    },
+    {
+      "type": "color",
+      "id": "divider_color",
+      "label": "Divider Line Color",
+      "default": "#a22938"
+    },
+    {
+      "type": "range",
+      "id": "divider_opacity",
+      "min": 10,
+      "max": 100,
+      "step": 5,
+      "unit": "%",
+      "label": "Divider Opacity",
+      "default": 30
+    },
+    {
+      "type": "header",
+      "content": "Section Spacing"
+    },
+    {
+      "type": "range",
+      "id": "padding_top",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Top Padding",
+      "default": 40
+    },
+    {
+      "type": "range",
+      "id": "padding_bottom",
+      "min": 0,
+      "max": 100,
+      "step": 5,
+      "unit": "px",
+      "label": "Bottom Padding",
+      "default": 40
+    }
+  ],
+  "presets": [
+    {
+      "name": "Positive Impact"
+    }
+  ]
 }
 {% endschema %}
