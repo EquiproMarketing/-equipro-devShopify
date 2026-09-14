@@ -13,15 +13,15 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "11800 - Multiderm (5 in 1)",
-        "intro_highlight": "The Multiderm (5 in 1) workstation consolidates vital treatment modalities into a single, high-efficiency system engineered specifically to minimize practitioner operational footprints while upholding rigorous North American manufacturing standards.",
-        "custom_description": "<p>Multiderm (5 in 1) is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Clinical Spa Technicians. Its precision-engineered chassis targets shoulder fatigue during high-volume clinic days, enabling sharper focus on treatment execution and enhanced client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with intuitive one-hand control and instant-response calibration.</p>",
-        "subtitle": "Advanced Quintuple Modality Integration System",
-        "secondary_description": "<p>Uncompromising durability is central to the Equipro approach. To preserve the structural integrity and aesthetic finish of the Multiderm (5 in 1), regular sanitization with hospital-grade surface disinfectants formulated for clinical environments must be executed daily. The heavy-duty exterior casing offers high chemical resistance, ensuring an immaculate condition outcome across an extended multi-year operational timeframe. Consistent care preserves electrical connectivity, guards against fluid ingress, and guarantees long-term mechanical reliability.</p>",
+        "custom_title": "11650 Diamonderm",
+        "intro_highlight": "The Diamonderm represents a sophisticated intersection of practitioner-focused ergonomics and rigorous North American manufacturing, delivering a reliable, high-precision solution for professional skin resurfacing and texture refinement.",
+        "custom_description": "<p>While standard entry-level systems often utilize plastic components that degrade under frequent chemical exposure, the Diamonderm is engineered with industrial-grade stainless steel handles and components. Our commitment to durability means that while standard units may require annual replacements, the Diamonderm is designed to withstand the rigors of continuous, high-volume professional environments for years.</p>",
+        "subtitle": "High-Precision Pneumatic Technology for Specialized Dermal Care",
+        "secondary_description": "<p>The Diamonderm is purpose-built for skincare professionals, including Estheticians, Clinical Spa Therapists, and Skincare Specialists. Its ergonomic, precision-engineered design targets wrist discomfort and fatigue during extended treatment sessions, enabling sharper focus on technical precision and treatment execution. Whether you are performing deep-pore cleansing, anti-aging resurfacing, or brow area refinement, this professional station adjusts to your workflow need with intuitive one-hand control and seamless intensity calibration.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
-        "featured_product": "multiderm-5-en-1",
+        "featured_product": "diamonderm",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical Esthetician:",
-            "answer": "<p>For the Clinical Esthetician executing advanced corrective facials, the integrated high-frequency module delivers localized thermal energy to the epidermal layers, significantly accelerating cellular turnover and purifying congested pores. This specialized modality stabilizes the skin's electrical potential immediately following intensive extraction cycles, ensuring rapid vasoconstriction and a dramatic reduction in transient redness before the client departs the treatment room.</p>"
+            "question": "Esthetician:",
+            "answer": "<p>For the Esthetician, the Diamonderm’s variable intensity settings allow for the seamless transition between gentle exfoliation for sensitive skin and more aggressive resurfacing for treatment-resistant areas, ensuring service consistency across every client profile.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical Spa Technician:",
-            "answer": "<p>For the Clinical Spa Therapist managing multi-step clinical optimization protocols, the high-performance vacuum and spray systems provide seamless sebum extraction and micro-targeted nutrient misting. By coupling adjustable mechanical suction with ultra-fine atomization, the practitioner can effortlessly lift deep impurities without causing vascular distension, immediately priming the skin barrier for maximum absorption of high-potency topical serums.</p>"
+            "question": "Spa Therapist:",
+            "answer": "<p>For the Clinical Spa Therapist, the device provides the technical precision required for pre-procedure skin preparation. The robust stainless steel handles offer the tactile feedback necessary for controlled, repeatable results during high-volume clinic days, maximizing operational efficiency without sacrificing treatment quality.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Cosmetic Injector or Pre-Post Operative Skin Specialist:",
-            "answer": "<p>For the Cosmetic Injector or Pre-Post Operative Skin Specialist, the galvanic current functionality offers precise iontophoresis and desincrustation capabilities. This advanced electronic modulation controls polarity to deeply infuse water-soluble compounds into the dermal matrices or emulsify hardened follicular blockages, creating an optimized, deeply hydrated tissue environment that complements advanced clinical procedures.</p>"
+            "question": "Skincare Specialist:",
+            "answer": "<p>For the Skincare Specialist, this workstation integrates into existing protocols with ease. The intuitive interface and integrated storage ensure that during full 8-hour shifts, you maintain a clutter-free, functional environment that keeps your focus entirely on the client’s skin health and comfort.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11800</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty metal enameled chassis, stainless steel components, industrial grade electronics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>5 Integrated professional functions (Aeroderm, Ioniderm, Rotoderm, Infraderm, High-Frequency)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Modern digital interface with capacitive touchpad screen</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Adjustment</td>\n        <td>Variable precision intensity controls for individual modalities</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>120V, 50/60 Hz, energy-efficient dedicated power circuit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 High-frequency glass electrodes, galvanic mass &amp; wires, 1 deep cleanser, Spontex sponges, 3 natural bristle brushes, 1 spray diffuser, 3 glass suction cups (anti-wrinkle, blackhead, massage)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility &amp; Handling</td>\n        <td>Retractable, twisted handle cords for optimal handset extension</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated client shock-absorbing isolation system, internal circuit breaker protection</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL Approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years limited warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>Technical Aspect</th>\n        <th>Specification Details</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty Equipment</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11650 Diamonderm</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stainless steel ergonomic handpieces, high-precision diamond tips, robust compact housing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Technology</td>\n        <td>Microdermabrasion with crystal-free diamond tip exfoliation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions</td>\n        <td>11\" X 7\" X 3.5\" H (28 cm X 18 cm X 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb / 4 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Control</td>\n        <td>Variable intensity settings adaptable to each skin type</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Handpieces</td>\n        <td>3 ergonomic stainless steel handpieces included</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Diamond Tips</td>\n        <td>9 diamond tips included for precise smoothing, brightening, and rejuvenation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage</td>\n        <td>Integrated storage holes for diamond tips for organized workspace</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Design Features</td>\n        <td>Compact professional model, robust construction for daily salon use</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
