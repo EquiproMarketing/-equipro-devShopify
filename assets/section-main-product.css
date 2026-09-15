@@ -1,12 +1,12 @@
 /* ==========================================================================
-   1. MAIN PRODUCT TOP SECTION
+   1. MAIN PRODUCT TOP SECTION - DESKTOP ( >= 768px )
    ========================================================================== */
    .product-page {
     padding-top: 24px;
     padding-bottom: 40px;
   }
   
-  /* BALANCED 50/50 GRID EN ESCRITORIO */
+  /* GRID PRINCIPAL 50/50 */
   .product-master-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -14,11 +14,15 @@
     align-items: start;
   }
   
-  /* LEFT COLUMN LAYOUT */
+  /* COLUMNA IZQUIERDA (ENCAPSULA TODO EL CONTENIDO IZQUIERDO EN DESKTOP) */
   .product-left-col {
-    display: flex;
-    flex-direction: column;
+    display: flex !important;
+    flex-direction: column !important;
     gap: 18px;
+  }
+  
+  .product-page__back {
+    margin-bottom: 4px;
   }
   
   .product-page__back .back-link {
@@ -177,7 +181,7 @@
     border-color: #ab273b;
   }
   
-  /* RIGHT COLUMN: GALLERY POSITIONED LOWER */
+  /* COLUMNA DERECHA: GALERÍA */
   .product-right-col {
     display: flex;
     flex-direction: column;
@@ -234,7 +238,7 @@
     box-shadow: 0 0 0 1px #1d1d1f;
   }
   
-  /* COMPARE BUTTON STYLES */
+  /* BOTÓN COMPARAR */
   .product-compare-wrapper {
     display: flex;
     justify-content: center;
@@ -263,12 +267,8 @@
     color: #ffffff;
   }
   
-  .product-compare-trigger-btn svg {
-    stroke: currentColor;
-  }
-  
   /* ==========================================================================
-     REORDENAMIENTO EXCLUSIVO EN MÓVIL (PANTALLAS <= 767PX)
+     2. REORDENAMIENTO EXCLUSIVO EN MÓVIL ( <= 767px )
      ========================================================================== */
   @media screen and (max-width: 767px) {
     .product-master-grid {
@@ -277,25 +277,25 @@
       gap: 1.25rem;
     }
   
-    /* Descomponemos los contenedores hijos para poder ordenar sus elementos individualmente */
+    /* Desempaquetar contenedores SOLO en móvil */
     .product-left-col,
     .product-right-col {
-      display: contents;
+      display: contents !important;
     }
   
-    /* 1. Botón Regresar (Back) */
+    /* 1. Back link */
     .product-mobile-order-back {
       order: 1;
       width: 100%;
     }
   
-    /* 2. Galería de Imágenes */
+    /* 2. Galería */
     .product-mobile-order-gallery {
       order: 2;
       width: 100%;
     }
   
-    /* 3. Nombre / Título del Producto */
+    /* 3. Título */
     .product-mobile-order-title {
       order: 3;
       width: 100%;
@@ -303,23 +303,24 @@
       margin-bottom: 0.25rem;
     }
   
-    /* 4. Caja de Compra (Variantes, Cantidad y Botón Add to Cart) */
+    /* 4. Caja de compra */
     .product-mobile-order-buybox {
       order: 4;
       width: 100%;
     }
   
-    /* 5. Bloque de Descripciones */
+    /* 5. Descripciones */
     .product-mobile-order-descriptions {
       order: 5;
       width: 100%;
       margin-top: 0.5rem;
     }
   
-    /* 6. Botón Comparar (Al final de la sección) */
+    /* 6. Botón comparar */
     .product-mobile-order-compare {
       order: 6;
       width: 100%;
       margin-top: 1.5rem;
+      padding-right: 0;
     }
   }
