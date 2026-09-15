@@ -1,0 +1,304 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "11100 - Vapoderm Digipro",
+        "intro_highlight": "The Vapoderm Digipro Steamer redefines skincare preparation by fusing North American manufacturing excellence with advanced ergonomic versatility, ensuring practitioners can deliver high-volume treatments without operational strain.",
+        "custom_description": "<p>The Vapoderm Digipro Steamer is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Skincare Specialist. Its fully adjustable design targets postural strain and shoulder fatigue during back-to-back appointments, enabling sharper focus on treatment execution and operational efficiency. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
+        "subtitle": "Ionized Vaporization for Advanced Skincare",
+        "secondary_description": "<p>Durable professional-grade equipment is central to the Equipro approach. To preserve the material integrity and finish of the Vapoderm Digipro Steamer, perform a routine wipe-down maintenance action with certified surface disinfectants formulated for clinical spa environments after each high-volume clinic day. The industrial exterior components maintain high resistance properties, ensuring a pristine condition outcome across a 15-to-20-year service life. Consistent care maximizes service consistency and ensures repeatable results.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "digipro-steamer",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Skincare specialists:",
+            "answer": "<p>The Vapoderm Digipro is purpose-built to elevate the capabilities of skincare specialists during intensive facial treatments. By delivering a continuous, high-volume flow of advanced ionized steam, the unit actively softens cellular blockages within the stratum corneum. This thermal relaxation enables the practitioner to perform manual extractions with minimal tissue trauma, minimizing post-treatment erythema and significantly improving operational efficiency during deep-pore cleansing workflows.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical spa therapists:",
+            "answer": "<p>For Clinical spa therapists executing multi-modality anti-aging regimens, the customizable three-level steam output serves as a crucial primer. Modulating the vapor intensity safely elevates skin temperature and microcirculation, dramatically boosting the transdermal absorption of specialized anti-aging, hydrating, and purifying topicals applied downstream. This targeted preparation allows clinical products to penetrate deeper and perform more effectively.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Aromatherapists and wellness clinicians:",
+            "answer": "<p>Aromatherapists and wellness clinicians can seamlessly customize client experiences utilizing the integrated essential oil distribution system. By marrying pure therapeutic thermal vapor with targeted botanical infusions, practitioners can transition standard facials into premium, holistic sensory treatments. The precise controls ensure safe, aromatic dispersion that expands menu offerings and heightens client satisfaction.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11100 (Vapoderm Digipro)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stain-resistant heavy-duty metal armature, premium thermoplastic/glass components, and external PVC canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Facial Steamer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Ionized steam output</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz external canister with integrated carrying handle</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Continuous Operation Time</td>\n        <td>40 minutes of continuous autonomous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional head and arm mechanism with fully adjustable height settings</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Aromatherapy Integration</td>\n        <td>Integrated specialized system designed for essential oil application</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Digital touchscreen panel with built-in timer and 3 steam level outputs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated safety thermostat auto-shutdown, drip-free nozzle assembly, and external canister protection guard</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10 in x 8.5 in x 32 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All electrical system components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Heavy-Duty Exterior Housing:",
+            "text": "Construction with industrial-grade materials to prevent outer finish degradation in humid aesthetic treatment rooms."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Triple-Level Vapor Modulation & Integrated Timer:",
+            "text": "A highly responsive control setup designed to adjust steam volume and duration for diverse client skin sensitivities and treatment parameters, enhancing service safety."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Multi-Directional Adjustment Arm:",
+            "text": "Fluid articulation qualities that ensure flawless position compatibility across any workspace layout or treatment table height."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-11100-digipro-professional-digital-steamer.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Water Reservoir Filling:",
+            "text": "Ensure the device is powered down, then utilize the simplified filling system to pour distilled water directly into the 42 oz external PVC canister via the handle access point."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Treatment Parameter Selection:",
+            "text": "Turn on the primary power switch and utilize the control interface to configure the built-in timer and select from the three available steam levels based on the client's skin assessment."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Positioning the Vapor Stream:",
+            "text": "Using the multi-directional arm and directional head, position the drip-free nozzle at a safe and comfortable distance over the target treatment zone."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Modality Integration:",
+            "text": "Allow the ionized steam to mist over the face for up to 40 minutes of continuous operation to prime the pores for extraction or deep hydration."
+          }
+        },
+        "instruction_item_bNn3ie": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "System Drainage:",
+            "text": "Following treatment completion and full cooling, utilize the simplified emptying system to purge remaining moisture from the canister, ensuring optimal hygiene."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Thermal Safety Maintenance:",
+            "text": "Practitioners must operate the device strictly with distilled water to prevent boiling volatility and keep an eye on the safety thermostat parameters to ensure no overheating occurs."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Nozzle Clearances:",
+            "text": "The drip-free steam nozzle must never be placed closer than 12–15 inches from the client's skin surface to prevent hot vapor spikes or moisture droplets from causing discomfort."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Canister Locking Inspections:",
+            "text": "Prior to initializing a heating cycle, confirm that the external PVC canister protector and handle are completely locked in place to avoid unintended steam discharge."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_bNn3ie",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the base included with the Vapoderm Digipro?",
+            "answer": "<p>The base is not included. However, it is compatible with the optional Rolling Base (Code 11901) for optimal stability and mobility.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the Digipro 11100 require distilled water?",
+            "answer": "<p><strong>Yes, always use distilled water</strong> to prevent mineral deposits and extend the life of the heating element.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the adjustable height range of this aesthetic steamer?",
+            "answer": "<p><strong>The height range adjusts dynamically via the main telescoping vertical rod extension system.</strong> It accommodates various table settings.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What maintenance is required for the Vapoderm Digipro steamer?",
+            "answer": "<p><strong>Empty the water canister daily and execute regular descale flushes to preserve heating elements.</strong> Clean with distilled water.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the Vapoderm Digipro steamer require professional assembly?",
+            "answer": "<p><strong>No, the device requires basic attachment of the arm, nozzle, and water reservoir container.</strong> It sets up within minutes.</p>"
+          }
+        },
+        "faq_item_4NzDpm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use tap water inside the Vapoderm Digipro canister?",
+            "answer": "<p><strong>No, tap water causes mineral scale buildup that triggers the internal thermal protection switches.</strong> Always use pure distilled water.</p>"
+          }
+        },
+        "faq_item_dU8eXe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long will the steamer operate on a single filled canister?",
+            "answer": "<p><strong>The 42 oz reservoir yields up to forty minutes of continuous specialized facial steaming.</strong> It covers complete client sessions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_4NzDpm",
+        "faq_item_dU8eXe"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
