@@ -39,7 +39,7 @@
       "name": "Positive Impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Elevate your clinical results with versatile, space-conscious equipment. Our professional facial units feature precise current regulation and ergonomic accessories, allowing you to easily customize advanced exfoliation, penetration, and purification steps.",
+        "text": "Experience unparalleled reliability and temperature stability in your waxing cabin. Our professional warmers are designed to maintain the perfect wax consistency throughout the day, ensuring a smooth application and maximum client comfort.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -69,29 +69,29 @@
         "feature_E4YWfX": {
           "type": "feature",
           "settings": {
-            "item_title": "Integrated Power Bar",
-            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+            "item_title": "Ultra-Precise Thermostat",
+            "item_text": "Advanced heating elements that maintain exact, consistent temperatures, preventing overheating or cooling drops."
           }
         },
         "feature_WBFqmU": {
           "type": "feature",
           "settings": {
-            "item_title": "Modular Integration",
-            "item_text": "Designed to operate flawlessly as standalone tabletop units or to be integrated directly into our Multi-Function Columns."
+            "item_title": "Rapid Meltdown",
+            "item_text": "Engineered to heat wax quickly and evenly, reducing prep time before your first appointment of the day."
           }
         },
         "feature_QwDFEF": {
           "type": "feature",
           "settings": {
-            "item_title": "Premium Glass & Attachments",
-            "item_text": "Includes professional-grade accessories, shock-resistant glass electrodes, and sanitizable treatment heads built for continuous salon use."
+            "item_title": "Durable Construction",
+            "item_text": "Built with high-grade, easy-to-clean materials designed to withstand daily professional wear and spillages."
           }
         },
         "feature_XDw3i4": {
           "type": "feature",
           "settings": {
-            "item_title": "Reliable Output Stability",
-            "item_text": "Advanced internal circuitry prevents power surges or drops, delivering a steady, dependable current throughout the entire service."
+            "item_title": "Ergonomic & Compact",
+            "item_text": "Sleek layouts that fit comfortably on any aesthetic cart, maximizing your workspace efficiency."
           }
         }
       },
