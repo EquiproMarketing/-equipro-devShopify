@@ -21,6 +21,15 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "auto_collection_ThRLYn": {
+          "type": "auto_collection",
+          "settings": {
+            "parent_category": "",
+            "sub_category": "Trolleys",
+            "collection": "trolleys",
+            "products_to_show": 6
+          }
+        },
         "auto_collection_ePz7tm": {
           "type": "auto_collection",
           "settings": {
@@ -113,6 +122,7 @@
         }
       },
       "block_order": [
+        "auto_collection_ThRLYn",
         "auto_collection_ePz7tm",
         "auto_collection_W6Ape6",
         "auto_collection_VL9APk",
