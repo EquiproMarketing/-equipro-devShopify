@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>E1-111</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>PVC external canister and structural casing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10\" x 8.5\" x 32\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional and adjustable head and arm, adjustable height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>650 Watts / 120 VAC, 60Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz PVC external canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>8 to 12 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Regular or ozonized (O3) ionized steam</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Time</td>\n        <td>40 minutes of continuous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Independent power and O3 ozone switches, manual water inlet knob</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Safety thermostat, canister protector, and thermal protection with auto shut-off for low water levels</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-111</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>PVC external canister and structural casing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10\" x 8.5\" x 32\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional and adjustable head and arm, adjustable height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>650 Watts / 120 VAC, 60Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz PVC external canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>8 to 12 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Regular or ozonized (O3) ionized steam</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Time</td>\n        <td>40 minutes of continuous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Independent power and O3 ozone switches, manual water inlet knob</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Safety thermostat, canister protector, and thermal protection with auto shut-off for low water levels</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -75,29 +75,37 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Variable Intensity Calibration",
-            "text": "High-precision vacuum control with robust internal components to ensure steady performance in high-volume clinics."
+            "title": "Manufacturing",
+            "text": "North American Engineered"
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Ergonomic Stainless Steel Handles",
-            "text": "Balanced, precision-weight handles designed to minimize hand strain for Estheticians and Skincare Specialists, facilitating effortless treatment."
+            "title": "Primary Materials",
+            "text": "Ultra-durable, stain-resistant leatherette; Reinforced plastic five-star base; High-density contoured foam"
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Integrated Storage System",
-            "text": "Functional design that keeps the nine included diamond tips organized, sterile, and immediately accessible for any treatment environment."
+            "title": "Lead Time",
+            "text": "Standard fulfillment 1-3 business days in Quebec."
+          }
+        },
+        "feature_item_C3Wmb8": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Maintenance",
+            "text": "Wipe with a damp cloth; avoid abrasive cleaners to protect the specialized leatherette coating."
           }
         }
       },
       "block_order": [
         "feature_item_8hwhpX",
         "feature_item_7BxRnE",
-        "feature_item_V4efCz"
+        "feature_item_V4efCz",
+        "feature_item_C3Wmb8"
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
