@@ -214,36 +214,50 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty coverage for the Vapoderm Classic?",
-            "answer": "<p>The Vapoderm Classic comes with a 1-year limited warranty covering parts and labor.</p>"
+            "question": "Is the base included with the Vapoderm Digipro?",
+            "answer": "<p>The base is not included. However, it is compatible with the optional Rolling Base (Code 11901) for optimal stability and mobility.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the Vapoderm Classic include a rolling base?",
-            "answer": "<p>No, the base is not included. It is compatible with the 11901 Stand with casters or modular columns for optimized workstation ergonomics.</p>"
+            "question": "Does the Digipro 11100 require distilled water?",
+            "answer": "<p><strong>Yes, always use distilled water</strong> to prevent mineral deposits and extend the life of the heating element.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "How long can the Vapoderm Classic operate continuously?",
-            "answer": "<p>The device provides 40 minutes of continuous ionized steam, ideal for back-to-back professional facial treatments.</p>"
+            "question": "What is the adjustable height range of this aesthetic steamer?",
+            "answer": "<p><strong>The height range adjusts dynamically via the main telescoping vertical rod extension system.</strong> It accommodates various table settings.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "What daily maintenance steps are required for this facial unit?",
-            "answer": "<p><strong>Wipe down the exterior and drain the water canister daily.</strong> Weekly usage of an approved descaling rinse prevents mineral buildup.</p>"
+            "question": "What maintenance is required for the Vapoderm Digipro steamer?",
+            "answer": "<p><strong>Empty the water canister daily and execute regular descale flushes to preserve heating elements.</strong> Clean with distilled water.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "How long will the system run on a single full canister?",
-            "answer": "<p><strong>The device offers up to 40 minutes of continuous steam.</strong> This duration allows for comprehensive face and neck preparation protocols.</p>"
+            "question": "Does the Vapoderm Digipro steamer require professional assembly?",
+            "answer": "<p><strong>No, the device requires basic attachment of the arm, nozzle, and water reservoir container.</strong> It sets up within minutes.</p>"
+          }
+        },
+        "faq_item_4NzDpm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use tap water inside the Vapoderm Digipro canister?",
+            "answer": "<p><strong>No, tap water causes mineral scale buildup that triggers the internal thermal protection switches.</strong> Always use pure distilled water.</p>"
+          }
+        },
+        "faq_item_dU8eXe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long will the steamer operate on a single filled canister?",
+            "answer": "<p><strong>The 42 oz reservoir yields up to forty minutes of continuous specialized facial steaming.</strong> It covers complete client sessions.</p>"
           }
         }
       },
@@ -252,7 +266,9 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_4NzDpm",
+        "faq_item_dU8eXe"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
