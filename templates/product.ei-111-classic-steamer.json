@@ -109,7 +109,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-diamonderm-compact-microdermabrasion-variable-intensity-pro-skin-exfoliation-sku-11650.webp",
+        "image": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -131,8 +131,8 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Connect",
-            "text": "the desired diamond tip to the stainless steel handle and ensure a firm seal."
+            "bold_prefix": "Securely lock",
+            "text": "the 42 oz external PVC canister into the main receiver mount using the integrated quick-grip handle."
           }
         },
         "instruction_item_8VfGh8": {
@@ -196,7 +196,7 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-diamonderm-compact-microdermabrasion-machine-integrated-tip-storage-beauty-aesthetician-sku-11650.webp",
+        "image": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
