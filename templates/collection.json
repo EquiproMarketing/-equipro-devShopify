@@ -108,6 +108,8 @@
       ],
       "settings": {
         "title": "Why Our Trolleys",
+        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
+        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -130,6 +132,50 @@
     },
     "faq": {
       "type": "category-faq",
+      "blocks": {
+        "faq_item_VhNPjK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the difference between the Digipro and Classic models?",
+            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+          }
+        },
+        "faq_item_Gn3pgW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use essential oils with these steamers?",
+            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+          }
+        },
+        "faq_item_kmRk4U": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do they have an automatic shutoff feature?",
+            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
+          }
+        },
+        "faq_item_n68NQD": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What type of water should I use?",
+            "answer": "<p>To maximize the lifespan of the heating element and prevent mineral buildup, we strictly recommend using distilled water.</p>"
+          }
+        },
+        "faq_item_ENr78Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty?",
+            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_VhNPjK",
+        "faq_item_Gn3pgW",
+        "faq_item_kmRk4U",
+        "faq_item_n68NQD",
+        "faq_item_ENr78Q"
+      ],
       "settings": {
         "heading": "Your Questions, Answered",
         "subheading": "Find answers to frequently asked technical and equipment questions.",
