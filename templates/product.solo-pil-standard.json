@@ -71,6 +71,34 @@
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability - Thermal Core:",
+            "text": "Integrated heavy-duty heating element engineered with reinforced insulation to sustain continuous, rapid thermal cycles in high-volume clinic days."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Precision Analog Regulation:",
+            "text": "Instant-response calibration dial designed to maintain optimal working temperature for warm and hot wax formulations, preventing product degradation."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Universal Chamber Sizing:",
+            "text": "Precision-engineered 3 5/8\" diameter stainless steel reservoir that offers seamless workflow integration across standard Canadian and European depilatory formats."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
         "image_position": "right",
