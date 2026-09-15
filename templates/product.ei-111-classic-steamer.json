@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "EI-111 Classic Steamer",
+        "intro_highlight": "The Vapoderm Classic is a professional-grade ionized facial steamer designed for consistent performance. It delivers a reliable stream of ionized steam to prepare the skin and facilitate effortless blackhead extractions in clinical settings.",
+        "custom_description": "<p>Vapoderm Digipro is purpose-built for licensed professionals, including skincare specialists, practicing aestheticians, and certified technicians. Its ergonomic, directional head and arm system targets postural strain during extended treatment sessions, enabling sharper focus on technical precision and service consistency. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
+        "subtitle": "Professional Reliability for Modern Estheticians",
+        "secondary_description": "<p>Bilingual technical resilience is central to the Equipro approach. To preserve the structural integrity and operational safety of Vapoderm Digipro, regular descaling with dedicated cleansing agents formulated for commercial environments must be performed weekly. The outer components feature high impact-resistance properties, ensuring an like-new condition outcome across a 15-to-20-year timeframe. Consistent care guarantees repeatable performance results and minimized workshop downtime.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "classic-steamer",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Precision Engineering & Safety Features:",
+            "answer": "<p>This unit features a directional and adjustable head and arm for perfect positioning. The 42 oz external PVC canister includes a practical handle and is protected by a dedicated canister shield and safety thermostat to prevent overheating during its 40-minute continuous operation.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Adjustable Ergonomics:",
+            "answer": "<p>Directional head and arm with adjustable height for precise steam placement.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Extended Autonomy:",
+            "answer": "<p>40 minutes of continuous ionized steam with a simplified filling and emptying system.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-111</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>PVC external canister and structural casing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10\" x 8.5\" x 32\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional and adjustable head and arm, adjustable height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>650 Watts / 120 VAC, 60Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz PVC external canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>8 to 12 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Regular or ozonized (O3) ionized steam</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Time</td>\n        <td>40 minutes of continuous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Independent power and O3 ozone switches, manual water inlet knob</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Safety thermostat, canister protector, and thermal protection with auto shut-off for low water levels</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Manufacturing",
+            "text": "North American Engineered"
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Primary Materials",
+            "text": "Ultra-durable, stain-resistant leatherette; Reinforced plastic five-star base; High-density contoured foam"
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Lead Time",
+            "text": "Standard fulfillment 1-3 business days in Quebec."
+          }
+        },
+        "feature_item_C3Wmb8": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Maintenance",
+            "text": "Wipe with a damp cloth; avoid abrasive cleaners to protect the specialized leatherette coating."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz",
+        "feature_item_C3Wmb8"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer-spa-equipment.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Securely lock",
+            "text": "the 42 oz external PVC canister into the main receiver mount using the integrated quick-grip handle."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Fill the canister",
+            "text": "with distilled water through the simplified filling inlet up to the clearly designated maximum level indicator."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power on",
+            "text": "the unit and utilize the digital interface to program the built-in timer and choose from the three available steam intensity settings."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Allow the system",
+            "text": "to achieve full operating temperature, then manipulate the directional head to angle the ionized vapor path directly toward the treatment zone."
+          }
+        },
+        "instruction_item_bNn3ie": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Once the session is complete,",
+            "text": "utilize the simplified emptying system to safely drain any remaining water from the cooling reservoir."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Thermostatic Monitoring:",
+            "text": "Never run the steamer without verifying that the water level is above the minimum baseline; the integrated safety thermostat will automatically trip if dry heating is detected."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Distance Calibration:",
+            "text": "Maintain a minimum clearance distance of 12 to 18 inches between the drip-free nozzle output and the client’s face to prevent thermal discomfort."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Canister Inspection:",
+            "text": "Regularly inspect the PVC canister walls and handle assembly for debris or mineral scaling before initiating a high-temperature operational cycle."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_bNn3ie",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage for the Vapoderm Classic?",
+            "answer": "<p>The Vapoderm Classic comes with a 1-year limited warranty covering parts and labor.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the Vapoderm Classic include a rolling base?",
+            "answer": "<p>No, the base is not included. It is compatible with the 11901 Stand with casters or modular columns for optimized workstation ergonomics.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long can the Vapoderm Classic operate continuously?",
+            "answer": "<p>The device provides 40 minutes of continuous ionized steam, ideal for back-to-back professional facial treatments.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What daily maintenance steps are required for this facial unit?",
+            "answer": "<p><strong>Wipe down the exterior and drain the water canister daily.</strong> Weekly usage of an approved descaling rinse prevents mineral buildup.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How long will the system run on a single full canister?",
+            "answer": "<p><strong>The device offers up to 40 minutes of continuous steam.</strong> This duration allows for comprehensive face and neck preparation protocols.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
