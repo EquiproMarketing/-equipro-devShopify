@@ -23,6 +23,7 @@
         "custom_title": "",
         "custom_description": "",
         "fallback_description": "Professional facial steamers with precise steam control and integrated ozone technology for deep cleansing and skincare treatments.",
+        "custom_image": "shopify://shop_images/professional-high-output-facial-steamer-salon-equipment-streamers-x2.webp",
         "overlay_opacity": 40
       }
     },
@@ -43,7 +44,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Keep your essential tools and devices organized and within arm's reach. Our professional spa trolleys combine silent, effortless mobility with rigid structural stability, elevating the speed, flow, and cleanliness of every treatment protocol.",
+        "text": "Discover our range of high-quality professional facial steamers designed for estheticians, spas, and skincare clinics. Featuring safe operation, durable heating elements, and optimal ozone vaporization for superior pore preparation and deep skin hydration.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -73,15 +74,15 @@
         "feature_JGhd6H": {
           "type": "feature",
           "settings": {
-            "item_title": "Integrated Power Bar",
-            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+            "item_title": "Perfect Hydration",
+            "item_text": "Steady and consistent steam flow for optimal pore opening and skin softening."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
-            "item_title": "Integrated Power Bar",
-            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+            "item_title": "Ozone Technology",
+            "item_text": "Integrated UV/Ozone option for antibacterial skin purification and oxygenation."
           }
         },
         "feature_ppVAe7": {
