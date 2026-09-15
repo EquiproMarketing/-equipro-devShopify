@@ -11,108 +11,124 @@
   "sections": {
     "subnav": {
       "type": "category-subnav",
-      "blocks": {
-        "card_item_AUg6gC": {
-          "type": "card_item",
-          "settings": {
-            "parent_category": "",
-            "sub_category": "N/A",
-            "collection": "",
-            "product": "",
-            "custom_title": "",
-            "badge_text": "",
-            "custom_url": ""
-          }
-        }
-      },
-      "block_order": [
-        "card_item_AUg6gC"
-      ],
       "settings": {
         "category_menu": "",
         "hide_on_mobile": true
       }
     },
-    "subcategories_grid_HniybM": {
-      "type": "subcategories-grid",
-      "blocks": {
-        "subcategory_rLkYyD": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Electric",
-            "link": "shopify://collections/electric",
-            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#7f7c7c",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
-          }
-        },
-        "subcategory_me8aYk": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Hydraulic / Mechanical",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#a9a6a6",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
-          }
-        },
-        "subcategory_QVcFrN": {
-          "type": "subcategory",
-          "settings": {
-            "title": "Portable",
-            "link": "shopify://collections/portable",
-            "image": "shopify://shop_images/calypso-portable-multifunction-table-aluminum-frame-professional-wellness-studio-ei-23402.webp",
-            "bg_color": "#e8e8ed",
-            "title_color": "#ffffff",
-            "title_font_size": 28,
-            "enable_text_shadow": true,
-            "shadow_color": "#959595",
-            "shadow_blur": 8,
-            "shadow_offset_y": 4,
-            "image_fit": "cover"
-          }
-        }
-      },
-      "block_order": [
-        "subcategory_rLkYyD",
-        "subcategory_me8aYk",
-        "subcategory_QVcFrN"
-      ],
-      "name": "Subcategories Bento Grid",
+    "collection_banner_qtVMrG": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
       "settings": {
-        "back_text": "Back",
-        "title": "Treatment Tables"
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional facial steamers with precise steam control and integrated ozone technology for deep cleansing and skincare treatments.",
+        "overlay_opacity": 40
+      }
+    },
+    "custom_product_treatment_TNRQeX": {
+      "type": "custom-product-treatment",
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "",
+        "featured_collection": "streamers",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
       }
     },
     "positive_impact": {
       "type": "positive-impact",
-      "disabled": true,
-      "settings": {}
+      "settings": {
+        "title": "Our Positive Impact",
+        "text": "Keep your essential tools and devices organized and within arm's reach. Our professional spa trolleys combine silent, effortless mobility with rigid structural stability, elevating the speed, flow, and cleanliness of every treatment protocol.",
+        "btn_label": "CONTACT US FOR RECOMMENDATIONS",
+        "btn_url": "",
+        "btn_bg_color": "#a22938",
+        "btn_text_color": "#ffffff",
+        "btn_bg_hover_color": "#8b2029",
+        "btn_text_hover_color": "#ffffff",
+        "btn_font_size": 14,
+        "btn_border_radius": 12,
+        "btn_padding_v": 14,
+        "btn_padding_h": 32,
+        "title_color": "#1a1a1a",
+        "title_size": 32,
+        "text_color": "#a22938",
+        "text_size": 20,
+        "text_max_width": 850,
+        "show_top_divider": true,
+        "show_bottom_divider": true,
+        "divider_color": "#a22938",
+        "divider_opacity": 30,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "why_category": {
       "type": "why-our-category",
-      "disabled": true,
-      "settings": {}
+      "blocks": {
+        "feature_JGhd6H": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        "feature_CFhXYt": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        "feature_ppVAe7": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        "feature_kaVhpH": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        }
+      },
+      "block_order": [
+        "feature_JGhd6H",
+        "feature_CFhXYt",
+        "feature_ppVAe7",
+        "feature_kaVhpH"
+      ],
+      "settings": {
+        "title": "Why Our Trolleys",
+        "image_border_radius": 12,
+        "bg_color": "#a22938",
+        "title_color": "#ffffff",
+        "item_title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "divider_color": "#ffffff33",
+        "title_size": 28,
+        "item_title_size": 16,
+        "item_text_size": 14,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
     },
     "video": {
       "type": "category-video",
+      "disabled": true,
       "settings": {}
     },
     "faq": {
       "type": "category-faq",
-      "disabled": true,
       "settings": {
         "heading": "Your Questions, Answered",
         "subheading": "Find answers to frequently asked technical and equipment questions.",
@@ -138,7 +154,8 @@
   },
   "order": [
     "subnav",
-    "subcategories_grid_HniybM",
+    "collection_banner_qtVMrG",
+    "custom_product_treatment_TNRQeX",
     "positive_impact",
     "why_category",
     "video",
