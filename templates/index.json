@@ -247,7 +247,7 @@
             "title": "Stool with Backrest",
             "price": "69,00 $",
             "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
-            "link": ""
+            "link": "shopify://products/ergonomic-stool-with-backrest"
           }
         },
         "custom_card_k38Qj8": {
@@ -351,7 +351,7 @@
             "title": "Aeroderm",
             "price": "CA$750,00",
             "swatches": "",
-            "link": ""
+            "link": "shopify://products/aeroderm"
           }
         }
       },
@@ -623,7 +623,7 @@
           "type": "subcategory_card",
           "settings": {
             "card_bg_color": "#f5f5f7",
-            "link": "",
+            "link": "shopify://collections/hydraulic-mechanical",
             "tag": "Hydraulic",
             "title": "Hydraulic Treatment Chairs",
             "subtitle": "Smooth manual elevation for versatile clinic setups.",
