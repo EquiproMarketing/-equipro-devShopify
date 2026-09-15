@@ -113,9 +113,9 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA (GALERÍA CON MINIATURAS EN LA PARTE INFERIOR) -->
+    <!-- COLUMNA DERECHA (GALERÍA DE IMÁGENES) -->
     <div class="product-right-col product-mobile-order-gallery">
-      <div class="product-gallery product-gallery--vertical-stack">
+      <div class="product-gallery">
         
         <!-- IMAGEN PRINCIPAL -->
         <div class="product-gallery__main">
@@ -129,8 +129,8 @@
           {% endif %}
         </div>
 
-        <!-- MINIATURAS HORIZONTALES ABAJO DE LA IMAGEN -->
-        <div class="product-gallery__thumbs product-gallery__thumbs--horizontal">
+        <!-- MINIATURAS (COLUMNA A LA DERECHA EN ESCRITORIO / FILA ABAJO EN MÓVIL) -->
+        <div class="product-gallery__thumbs">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
           {% if img_blocks.size > 0 %}
             {% for block in img_blocks limit: 4 %}
@@ -394,21 +394,21 @@
   cursor: pointer;
 }
 
+/* GALERÍA EN ESCRITORIO (IMAGEN A LA IZQUIERDA, MINIATURAS A LA DERECHA) */
 #ProductMain-{{ section.id }} .product-right-col {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-#ProductMain-{{ section.id }} .product-gallery.product-gallery--vertical-stack {
+#ProductMain-{{ section.id }} .product-gallery {
   display: flex;
-  flex-direction: column;
   gap: 16px;
-  width: 100%;
+  align-items: flex-start;
 }
 
 #ProductMain-{{ section.id }} .product-gallery__main {
-  width: 100%;
+  flex: 1;
   border-radius: 24px;
   overflow: hidden;
   background-color: #f5f5f7;
@@ -421,22 +421,21 @@
 #ProductMain-{{ section.id }} .product-gallery__main img {
   width: 100%;
   height: 100%;
-  max-height: 560px;
+  min-height: 480px;
   object-fit: contain;
   border-radius: 24px;
   display: block;
 }
 
-#ProductMain-{{ section.id }} .product-gallery__thumbs.product-gallery__thumbs--horizontal {
+#ProductMain-{{ section.id }} .product-gallery__thumbs {
   display: flex;
-  flex-direction: row;
-  justify-content: center;
+  flex-direction: column;
   gap: 12px;
-  width: 100%;
+  width: 76px;
 }
 
-#ProductMain-{{ section.id }} .product-gallery__thumbs--horizontal .thumb-img,
-#ProductMain-{{ section.id }} .product-gallery__thumbs--horizontal .thumb-img-placeholder {
+#ProductMain-{{ section.id }} .product-gallery__thumbs .thumb-img,
+#ProductMain-{{ section.id }} .product-gallery__thumbs .thumb-img-placeholder {
   width: 76px;
   height: 76px;
   border-radius: 12px;
@@ -447,7 +446,7 @@
   transition: all 0.2s ease;
 }
 
-#ProductMain-{{ section.id }} .product-gallery__thumbs--horizontal .thumb-img.is-active {
+#ProductMain-{{ section.id }} .product-gallery__thumbs .thumb-img.is-active {
   border-color: #ab273b;
   box-shadow: 0 0 0 2px #ab273b;
 }
@@ -457,6 +456,7 @@
   justify-content: center;
   align-items: center;
   margin-top: 12px;
+  padding-right: 92px; /* Compensación por el ancho de la columna de miniaturas */
   width: 100%;
 }
 
@@ -572,7 +572,7 @@
 }
 
 /* ==========================================================================
-   REORDENAMIENTO EXCLUSIVO EN MÓVIL ( <= 767px )
+   REORDENAMIENTO Y GALERÍA EN MÓVIL ( <= 767px )
    ========================================================================== */
 @media screen and (max-width: 767px) {
   #ProductMain-{{ section.id }} .product-master-grid {
@@ -586,11 +586,30 @@
     display: contents !important;
   }
 
+  /* GALERÍA EN MÓVIL: IMAGEN ARRIBA Y MINIATURAS ABAJO EN FILA HORIZONTAL */
+  #ProductMain-{{ section.id }} .product-gallery {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  #ProductMain-{{ section.id }} .product-gallery__thumbs {
+    flex-direction: row;
+    justify-content: center;
+    width: 100%;
+  }
+
+  #ProductMain-{{ section.id }} .product-gallery__thumbs .thumb-img,
+  #ProductMain-{{ section.id }} .product-gallery__thumbs .thumb-img-placeholder {
+    width: 76px;
+    height: 76px;
+  }
+
+  /* REORDEN DE BLOQUES EN MÓVIL */
   #ProductMain-{{ section.id }} .product-mobile-order-gallery { order: 1; width: 100%; }
   #ProductMain-{{ section.id }} .product-mobile-order-title { order: 2; width: 100%; margin-top: 0.5rem; margin-bottom: 0.25rem; }
   #ProductMain-{{ section.id }} .product-mobile-order-buybox { order: 3; width: 100%; }
   #ProductMain-{{ section.id }} .product-mobile-order-descriptions { order: 4; width: 100%; margin-top: 0.5rem; }
-  #ProductMain-{{ section.id }} .product-mobile-order-compare { order: 5; width: 100%; margin-top: 1.5rem; }
+  #ProductMain-{{ section.id }} .product-mobile-order-compare { order: 5; width: 100%; margin-top: 1.5rem; padding-right: 0; }
 }
 </style>
 
