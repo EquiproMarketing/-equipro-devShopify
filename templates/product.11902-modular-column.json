@@ -13,15 +13,15 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "11100 - Vapoderm Digipro",
-        "intro_highlight": "The Vapoderm Digipro Steamer redefines skincare preparation by fusing North American manufacturing excellence with advanced ergonomic versatility, ensuring practitioners can deliver high-volume treatments without operational strain.",
-        "custom_description": "<p>The Vapoderm Digipro Steamer is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Skincare Specialist. Its fully adjustable design targets postural strain and shoulder fatigue during back-to-back appointments, enabling sharper focus on treatment execution and operational efficiency. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
-        "subtitle": "Ionized Vaporization for Advanced Skincare",
-        "secondary_description": "<p>Durable professional-grade equipment is central to the Equipro approach. To preserve the material integrity and finish of the Vapoderm Digipro Steamer, perform a routine wipe-down maintenance action with certified surface disinfectants formulated for clinical spa environments after each high-volume clinic day. The industrial exterior components maintain high resistance properties, ensuring a pristine condition outcome across a 15-to-20-year service life. Consistent care maximizes service consistency and ensures repeatable results.</p>",
+        "custom_title": "11902 - modular-column",
+        "intro_highlight": "The Equipro Modular Column transforms clinical workspace management by centralizing essential treatment tools into a singular, highly adaptable architecture, meticulously manufactured in North America to support the intense demands of high-volume aesthetic facilities.",
+        "custom_description": "<p>The Modular Column is purpose-built for high-end aesthetic professionals, including Clinical Spa Therapists, Clinical Estheticians, and Cosmetic Injectors. Its precision-engineered vertical chassis targets chronic shoulder fatigue and postural strain during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing complex micro-needling, high-frequency therapies, or post-procedure recovery, this professional station adjusts to your specific workflow need with tool-less repositioning and optimal working height.</p>",
+        "subtitle": "Optimizing Clinical Efficiency through Intelligent Modular Design",
+        "secondary_description": "<p>Structural resilience is central to the Equipro approach. To preserve the high-gloss finish and electrical connectivity of the Modular Column, periodic sanitization with non-abrasive, alcohol-free surface cleansers formulated for clinical environments should be performed weekly. The industrial-grade steel frame offers superior impact resistance, ensuring an immaculate condition outcome across an extended multi-year operational timeframe. Consistent care prevents mechanical drag and protects delicate internal wiring channels.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
-        "featured_product": "digipro-steamer",
+        "featured_product": "modular-column-11902",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Skincare specialists:",
-            "answer": "<p>The Vapoderm Digipro is purpose-built to elevate the capabilities of skincare specialists during intensive facial treatments. By delivering a continuous, high-volume flow of advanced ionized steam, the unit actively softens cellular blockages within the stratum corneum. This thermal relaxation enables the practitioner to perform manual extractions with minimal tissue trauma, minimizing post-treatment erythema and significantly improving operational efficiency during deep-pore cleansing workflows.</p>"
+            "question": "Clinical Esthetician:",
+            "answer": "<p>For the Clinical Esthetician performing advanced corrective facial protocols, the Modular Column provides a centralized hub that eliminates the need for redundant side-tables. By housing integrated steamers, vacuum units, and magnifying lamps on a single, stabilized vertical mount, the practitioner gains precious floor space, allowing for fluid movement around the treatment bed and reduced cross-contamination risk during complex service sequences.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical spa therapists:",
-            "answer": "<p>For Clinical spa therapists executing multi-modality anti-aging regimens, the customizable three-level steam output serves as a crucial primer. Modulating the vapor intensity safely elevates skin temperature and microcirculation, dramatically boosting the transdermal absorption of specialized anti-aging, hydrating, and purifying topicals applied downstream. This targeted preparation allows clinical products to penetrate deeper and perform more effectively.</p>"
+            "question": "Clinical Spa Therapist:",
+            "answer": "<p>For the Clinical Spa Therapist managing high-tech rejuvenation suites, the column offers unmatched adaptability. The modular rail system allows for the rapid swapping of accessory holders as treatment technology evolves. Whether integrating new laser delivery systems or high-end diagnostic tools, the station ensures all handpieces and cables are managed securely, maintaining a clutter-free, professional environment that enhances client trust and procedural safety.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Aromatherapists and wellness clinicians:",
-            "answer": "<p>Aromatherapists and wellness clinicians can seamlessly customize client experiences utilizing the integrated essential oil distribution system. By marrying pure therapeutic thermal vapor with targeted botanical infusions, practitioners can transition standard facials into premium, holistic sensory treatments. The precise controls ensure safe, aromatic dispersion that expands menu offerings and heightens client satisfaction.</p>"
+            "question": "Tattooist or Permanent Makeup Specialist:",
+            "answer": "<p>For the Tattooist or Permanent Makeup Specialist requiring extreme technical precision, this system provides the ultimate ergonomic foundation. By elevating heavy power supplies and auxiliary lighting to the exact required eye level, the practitioner effectively mitigates visual fatigue and maintains a consistent, stable posture throughout lengthy sessions. This optimized configuration ensures that every stroke is delivered with absolute steadiness, regardless of the procedure's duration.</p>"
           }
         }
       },
@@ -75,22 +75,22 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Heavy-Duty Exterior Housing:",
-            "text": "Construction with industrial-grade materials to prevent outer finish degradation in humid aesthetic treatment rooms."
+            "title": "Unrivaled Durability:",
+            "text": "Industrial-Grade Steel Frame: Built with a robust metal column and a stain-resistant 5-branch black rolling base to ensure tip-free stability in busy aesthetic settings."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Triple-Level Vapor Modulation & Integrated Timer:",
-            "text": "A highly responsive control setup designed to adjust steam volume and duration for diverse client skin sensitivities and treatment parameters, enhancing service safety."
+            "title": "Integrated Power Architecture:",
+            "text": "Outfitted with a heavy-duty, built-in 6-outlet power strip designed to streamline device cords for solo practitioners and multi-room teams, minimizing cord tangles."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Multi-Directional Adjustment Arm:",
-            "text": "Fluid articulation qualities that ensure flawless position compatibility across any workspace layout or treatment table height."
+            "title": "Adjustable Multi-Device Footprint:",
+            "text": "A versatile design configured to carry 2 to 5 separate compact facial units alongside an integrated accessory tray, matching custom room layouts."
           }
         }
       },
@@ -101,7 +101,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-11100-digipro-professional-digital-steamer.webp",
+        "image": "shopify://shop_images/equipro-modular-column-adjustable-professional-aesthetic-apparatus-stand-plastic-trays-six-outlet-power-bar-sku-11902.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
