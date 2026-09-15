@@ -1,28 +1,28 @@
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
   {% assign target_product = section.settings.featured_product | default: product %}
 
+  <!-- 1. BACK LINK (A ANCHO COMPLETO ARRIBA DE TODO EL GRID) -->
+  <div class="product-page__back product-mobile-order-back">
+    <a href="javascript:history.back()" class="back-link">
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+        <path d="M7 1L1 6L7 11" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>{{ section.settings.back_text | default: "Back" }}</span>
+    </a>
+  </div>
+
   <!-- PARTE 1: GRID PRINCIPAL (TOP) -->
   <div class="product-master-grid">
     
     <!-- COLUMNA IZQUIERDA -->
     <div class="product-left-col">
-      
-      <!-- 1. BACK LINK -->
-      <div class="product-page__back product-mobile-order-back">
-        <a href="javascript:history.back()" class="back-link">
-          <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
-            <path d="M7 1L1 6L7 11" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          <span>{{ section.settings.back_text | default: "Back" }}</span>
-        </a>
-      </div>
 
-      <!-- 3. TÍTULO DEL PRODUCTO -->
+      <!-- TÍTULO DEL PRODUCTO -->
       <h1 class="product-info__title product-mobile-order-title">
         {{ section.settings.custom_title | default: target_product.title }}
       </h1>
 
-      <!-- 5. DESCRIPCIONES E HIGHLIGHTS -->
+      <!-- DESCRIPCIONES E HIGHLIGHTS -->
       <div class="product-mobile-order-descriptions">
         {% assign intro_text = section.settings.intro_highlight %}
         {% if intro_text != blank %}
@@ -50,7 +50,7 @@
         {% endif %}
       </div>
 
-      <!-- 4. CAJA DE COMPRA -->
+      <!-- CAJA DE COMPRA -->
       <div class="product-buy-box product-mobile-order-buybox">
         <div class="product-price">
           {{ target_product.price | money }}
@@ -117,7 +117,7 @@
     <div class="product-right-col product-mobile-order-gallery">
       <div class="product-gallery product-gallery--vertical-stack">
         
-        <!-- IMAGEN PRINCIPAL (A ANCHO COMPLETO) -->
+        <!-- IMAGEN PRINCIPAL -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           {% if first_img_block.settings.image != blank %}
@@ -228,6 +228,21 @@
   padding-bottom: 40px;
 }
 
+#ProductMain-{{ section.id }} .product-page__back {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+#ProductMain-{{ section.id }} .product-page__back .back-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: #1d1d1f;
+  text-decoration: none;
+  font-size: 0.85rem;
+  font-weight: 500;
+}
+
 #ProductMain-{{ section.id }} .product-master-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -239,16 +254,6 @@
   display: flex !important;
   flex-direction: column !important;
   gap: 18px;
-}
-
-#ProductMain-{{ section.id }} .product-page__back .back-link {
-  display: inline-flex;
-  align-items: center;
-  gap: 6px;
-  color: #1d1d1f;
-  text-decoration: none;
-  font-size: 0.82rem;
-  font-weight: 500;
 }
 
 #ProductMain-{{ section.id }} .product-info__title {
@@ -389,7 +394,6 @@
   cursor: pointer;
 }
 
-/* GALERÍA EN COLUMNA VERTICAL CON MINIATURAS HORIZONTALES */
 #ProductMain-{{ section.id }} .product-right-col {
   display: flex;
   flex-direction: column;
@@ -582,12 +586,11 @@
     display: contents !important;
   }
 
-  #ProductMain-{{ section.id }} .product-mobile-order-back { order: 1; width: 100%; }
-  #ProductMain-{{ section.id }} .product-mobile-order-gallery { order: 2; width: 100%; }
-  #ProductMain-{{ section.id }} .product-mobile-order-title { order: 3; width: 100%; margin-top: 0.5rem; margin-bottom: 0.25rem; }
-  #ProductMain-{{ section.id }} .product-mobile-order-buybox { order: 4; width: 100%; }
-  #ProductMain-{{ section.id }} .product-mobile-order-descriptions { order: 5; width: 100%; margin-top: 0.5rem; }
-  #ProductMain-{{ section.id }} .product-mobile-order-compare { order: 6; width: 100%; margin-top: 1.5rem; }
+  #ProductMain-{{ section.id }} .product-mobile-order-gallery { order: 1; width: 100%; }
+  #ProductMain-{{ section.id }} .product-mobile-order-title { order: 2; width: 100%; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+  #ProductMain-{{ section.id }} .product-mobile-order-buybox { order: 3; width: 100%; }
+  #ProductMain-{{ section.id }} .product-mobile-order-descriptions { order: 4; width: 100%; margin-top: 0.5rem; }
+  #ProductMain-{{ section.id }} .product-mobile-order-compare { order: 5; width: 100%; margin-top: 1.5rem; }
 }
 </style>
 
