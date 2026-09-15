@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Precision Engineering & Safety Features:",
-            "answer": "<p>This unit features a directional and adjustable head and arm for perfect positioning. The 42 oz external PVC canister includes a practical handle and is protected by a dedicated canister shield and safety thermostat to prevent overheating during its 40-minute continuous operation.</p>"
+            "question": "Skincare specialists:",
+            "answer": "<p>The Vapoderm Digipro is purpose-built to elevate the capabilities of skincare specialists during intensive facial treatments. By delivering a continuous, high-volume flow of advanced ionized steam, the unit actively softens cellular blockages within the stratum corneum. This thermal relaxation enables the practitioner to perform manual extractions with minimal tissue trauma, minimizing post-treatment erythema and significantly improving operational efficiency during deep-pore cleansing workflows.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Adjustable Ergonomics:",
-            "answer": "<p>Directional head and arm with adjustable height for precise steam placement.</p>"
+            "question": "Clinical spa therapists:",
+            "answer": "<p>For Clinical spa therapists executing multi-modality anti-aging regimens, the customizable three-level steam output serves as a crucial primer. Modulating the vapor intensity safely elevates skin temperature and microcirculation, dramatically boosting the transdermal absorption of specialized anti-aging, hydrating, and purifying topicals applied downstream. This targeted preparation allows clinical products to penetrate deeper and perform more effectively.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Extended Autonomy:",
-            "answer": "<p>40 minutes of continuous ionized steam with a simplified filling and emptying system.</p>"
+            "question": "Aromatherapists and wellness clinicians:",
+            "answer": "<p>Aromatherapists and wellness clinicians can seamlessly customize client experiences utilizing the integrated essential oil distribution system. By marrying pure therapeutic thermal vapor with targeted botanical infusions, practitioners can transition standard facials into premium, holistic sensory treatments. The precise controls ensure safe, aromatic dispersion that expands menu offerings and heightens client satisfaction.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-111</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>PVC external canister and structural casing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10\" x 8.5\" x 32\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional and adjustable head and arm, adjustable height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>650 Watts / 120 VAC, 60Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz PVC external canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>8 to 12 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Regular or ozonized (O3) ionized steam</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Time</td>\n        <td>40 minutes of continuous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Independent power and O3 ozone switches, manual water inlet knob</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Safety thermostat, canister protector, and thermal protection with auto shut-off for low water levels</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11100 (Vapoderm Digipro)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stain-resistant heavy-duty metal armature, premium thermoplastic/glass components, and external PVC canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Facial Steamer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Ionized steam output</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz external canister with integrated carrying handle</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Continuous Operation Time</td>\n        <td>40 minutes of continuous autonomous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional head and arm mechanism with fully adjustable height settings</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Aromatherapy Integration</td>\n        <td>Integrated specialized system designed for essential oil application</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Digital touchscreen panel with built-in timer and 3 steam level outputs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated safety thermostat auto-shutdown, drip-free nozzle assembly, and external canister protection guard</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10 in x 8.5 in x 32 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All electrical system components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -75,41 +75,33 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Manufacturing",
-            "text": "North American Engineered"
+            "title": "Heavy-Duty Exterior Housing:",
+            "text": "Construction with industrial-grade materials to prevent outer finish degradation in humid aesthetic treatment rooms."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Primary Materials",
-            "text": "Ultra-durable, stain-resistant leatherette; Reinforced plastic five-star base; High-density contoured foam"
+            "title": "Triple-Level Vapor Modulation & Integrated Timer:",
+            "text": "A highly responsive control setup designed to adjust steam volume and duration for diverse client skin sensitivities and treatment parameters, enhancing service safety."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Lead Time",
-            "text": "Standard fulfillment 1-3 business days in Quebec."
-          }
-        },
-        "feature_item_C3Wmb8": {
-          "type": "feature_item",
-          "settings": {
-            "title": "Maintenance",
-            "text": "Wipe with a damp cloth; avoid abrasive cleaners to protect the specialized leatherette coating."
+            "title": "Multi-Directional Adjustment Arm:",
+            "text": "Fluid articulation qualities that ensure flawless position compatibility across any workspace layout or treatment table height."
           }
         }
       },
       "block_order": [
         "feature_item_8hwhpX",
         "feature_item_7BxRnE",
-        "feature_item_V4efCz",
-        "feature_item_C3Wmb8"
+        "feature_item_V4efCz"
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer-spa-equipment.webp",
+        "image": "shopify://shop_images/equipro-11100-digipro-professional-digital-steamer.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -131,36 +123,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Securely lock",
-            "text": "the 42 oz external PVC canister into the main receiver mount using the integrated quick-grip handle."
+            "bold_prefix": "Water Reservoir Filling:",
+            "text": "Ensure the device is powered down, then utilize the simplified filling system to pour distilled water directly into the 42 oz external PVC canister via the handle access point."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Fill the canister",
-            "text": "with distilled water through the simplified filling inlet up to the clearly designated maximum level indicator."
+            "bold_prefix": "Treatment Parameter Selection:",
+            "text": "Turn on the primary power switch and utilize the control interface to configure the built-in timer and select from the three available steam levels based on the client's skin assessment."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Power on",
-            "text": "the unit and utilize the digital interface to program the built-in timer and choose from the three available steam intensity settings."
+            "bold_prefix": "Positioning the Vapor Stream:",
+            "text": "Using the multi-directional arm and directional head, position the drip-free nozzle at a safe and comfortable distance over the target treatment zone."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Allow the system",
-            "text": "to achieve full operating temperature, then manipulate the directional head to angle the ionized vapor path directly toward the treatment zone."
+            "bold_prefix": "Modality Integration:",
+            "text": "Allow the ionized steam to mist over the face for up to 40 minutes of continuous operation to prime the pores for extraction or deep hydration."
           }
         },
         "instruction_item_bNn3ie": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Once the session is complete,",
-            "text": "utilize the simplified emptying system to safely drain any remaining water from the cooling reservoir."
+            "bold_prefix": "System Drainage:",
+            "text": "Following treatment completion and full cooling, utilize the simplified emptying system to purge remaining moisture from the canister, ensuring optimal hygiene."
           }
         },
         "section_header_dGJcmr": {
@@ -172,22 +164,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Thermostatic Monitoring:",
-            "text": "Never run the steamer without verifying that the water level is above the minimum baseline; the integrated safety thermostat will automatically trip if dry heating is detected."
+            "bold_prefix": "Thermal Safety Maintenance:",
+            "text": "Practitioners must operate the device strictly with distilled water to prevent boiling volatility and keep an eye on the safety thermostat parameters to ensure no overheating occurs."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Distance Calibration:",
-            "text": "Maintain a minimum clearance distance of 12 to 18 inches between the drip-free nozzle output and the client’s face to prevent thermal discomfort."
+            "bold_prefix": "Nozzle Clearances:",
+            "text": "The drip-free steam nozzle must never be placed closer than 12–15 inches from the client's skin surface to prevent hot vapor spikes or moisture droplets from causing discomfort."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Canister Inspection:",
-            "text": "Regularly inspect the PVC canister walls and handle assembly for debris or mineral scaling before initiating a high-temperature operational cycle."
+            "bold_prefix": "Canister Locking Inspections:",
+            "text": "Prior to initializing a heating cycle, confirm that the external PVC canister protector and handle are completely locked in place to avoid unintended steam discharge."
           }
         }
       },
@@ -204,7 +196,7 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
