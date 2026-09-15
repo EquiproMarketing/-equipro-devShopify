@@ -6,23 +6,9 @@
     padding-bottom: 40px;
   }
   
-  /* GRID PRINCIPAL DE 2 COLUMNAS 50/50 EN ESCRITORIO */
-  .product-master-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 40px;
-    align-items: start;
-  }
-  
-  /* COLUMNA IZQUIERDA */
-  .product-left-col {
-    display: flex !important;
-    flex-direction: column !important;
-    gap: 18px;
-  }
-  
   .product-page__back {
-    margin-bottom: 4px;
+    margin-bottom: 20px;
+    width: 100%;
   }
   
   .product-page__back .back-link {
@@ -31,8 +17,21 @@
     gap: 6px;
     color: #1d1d1f;
     text-decoration: none;
-    font-size: 0.82rem;
+    font-size: 0.85rem;
     font-weight: 500;
+  }
+  
+  .product-master-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+  }
+  
+  .product-left-col {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 18px;
   }
   
   .product-info__title {
@@ -44,7 +43,6 @@
     letter-spacing: -0.015em;
   }
   
-  /* RED BAR HIGHLIGHT LINE */
   .product-info__intro-highlight {
     border-left: 3px solid #ab273b;
     padding-left: 16px;
@@ -74,7 +72,6 @@
     line-height: 1.25;
   }
   
-  /* BUY BOX */
   .product-buy-box {
     display: flex;
     flex-direction: column;
@@ -143,7 +140,6 @@
     background-color: #8c1e2e;
   }
   
-  /* OPTION CONTAINERS */
   .product-options-container {
     display: flex;
     flex-direction: column;
@@ -174,29 +170,23 @@
     color: #1d1d1f;
     outline: none;
     cursor: pointer;
-    transition: border-color 0.2s ease;
   }
   
-  .product-select:focus {
-    border-color: #ab273b;
-  }
-  
-  /* COLUMNA DERECHA: GALERÍA VERTICAL (IMAGEN ARRIBA, MINIATURAS ABAJO) */
+  /* GALERÍA EN ESCRITORIO (MINIATURAS A LA DERECHA) */
   .product-right-col {
     display: flex;
     flex-direction: column;
     gap: 20px;
   }
   
-  .product-gallery.product-gallery--vertical-stack {
+  .product-gallery {
     display: flex;
-    flex-direction: column;
     gap: 16px;
-    width: 100%;
+    align-items: flex-start;
   }
   
   .product-gallery__main {
-    width: 100%;
+    flex: 1;
     border-radius: 24px;
     overflow: hidden;
     background-color: #f5f5f7;
@@ -209,23 +199,20 @@
   .product-gallery__main img {
     width: 100%;
     height: 100%;
-    max-height: 560px;
+    min-height: 480px;
     object-fit: contain;
     border-radius: 24px;
     display: block;
   }
   
-  /* MINIATURAS HORIZONTALES ABAJO */
-  .product-gallery__thumbs.product-gallery__thumbs--horizontal {
+  .product-gallery__thumbs {
     display: flex;
-    flex-direction: row;
-    justify-content: center;
+    flex-direction: column;
     gap: 12px;
-    width: 100%;
+    width: 76px;
   }
   
-  .product-gallery__thumbs--horizontal .thumb-img,
-  .product-gallery__thumbs--horizontal .thumb-img-placeholder {
+  .thumb-img, .thumb-img-placeholder {
     width: 76px;
     height: 76px;
     border-radius: 12px;
@@ -236,17 +223,17 @@
     transition: all 0.2s ease;
   }
   
-  .product-gallery__thumbs--horizontal .thumb-img.is-active {
+  .thumb-img.is-active {
     border-color: #ab273b;
     box-shadow: 0 0 0 2px #ab273b;
   }
   
-  /* BOTÓN COMPARAR CENTRADO */
   .product-compare-wrapper {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-top: 12px;
+    padding-right: 92px;
     width: 100%;
   }
   
@@ -262,19 +249,13 @@
     font-size: 0.8rem;
     font-weight: 600;
     cursor: pointer;
-    transition: all 0.2s ease;
-  }
-  
-  .product-compare-trigger-btn:hover {
-    background-color: #ab273b;
-    color: #ffffff;
   }
   
   /* ==========================================================================
-     2. PRODUCT CHARACTERISTICS SECTION & SHIPPING
+     2. CARACTERÍSTICAS, TABLAS Y BLOQUE SHIPPING
      ========================================================================== */
   .product-characteristics-grid {
-    margin-top: 30px;
+    margin-top: 40px;
     align-items: stretch;
   }
   
@@ -325,11 +306,13 @@
     line-height: 1.5;
   }
   
+  /* BLOQUE SHIPPING */
   .product-shipping-block {
     margin-top: auto;
     background: #f5f5f7;
     border-radius: 12px;
     padding: 20px;
+    border: 1px solid #e5e5e7;
   }
   
   .product-shipping__title {
@@ -349,6 +332,7 @@
     margin: 0;
   }
   
+  /* TABLAS TÉCNICAS */
   .equipro-specs-container,
   .tech-table-container {
     width: 100%;
@@ -386,6 +370,11 @@
     line-height: 1.45;
   }
   
+  .equipro-table tr:last-child td,
+  .tech-table tr:last-child td {
+    border-bottom: none;
+  }
+  
   .equipro-table td.feature-label,
   .tech-table__label {
     font-weight: 700;
@@ -394,7 +383,7 @@
   }
   
   /* ==========================================================================
-     3. REORDENAMIENTO EXCLUSIVO EN MÓVIL ( <= 767px )
+     3. REORDENAMIENTO Y GALERÍA EN MÓVIL ( <= 767px )
      ========================================================================== */
   @media screen and (max-width: 767px) {
     .product-master-grid {
@@ -403,56 +392,33 @@
       gap: 1.25rem;
     }
   
-    /* Desempaquetar contenedores SOLO en móvil */
     .product-left-col,
     .product-right-col {
       display: contents !important;
     }
   
-    /* 1. Back link */
-    .product-mobile-order-back {
-      order: 1;
+    .product-gallery {
+      flex-direction: column;
       width: 100%;
     }
   
-    /* 2. Galería */
-    .product-mobile-order-gallery {
-      order: 2;
+    .product-gallery__thumbs {
+      flex-direction: row;
+      justify-content: center;
       width: 100%;
     }
   
-    /* 3. Título */
-    .product-mobile-order-title {
-      order: 3;
-      width: 100%;
-      margin-top: 0.5rem;
-      margin-bottom: 0.25rem;
+    .product-gallery__thumbs .thumb-img,
+    .product-gallery__thumbs .thumb-img-placeholder {
+      width: 76px;
+      height: 76px;
     }
   
-    /* 4. Caja de compra */
-    .product-mobile-order-buybox {
-      order: 4;
-      width: 100%;
-    }
-  
-    /* 5. Descripciones */
-    .product-mobile-order-descriptions {
-      order: 5;
-      width: 100%;
-      margin-top: 0.5rem;
-    }
-  
-    /* 6. Botón comparar */
-    .product-mobile-order-compare {
-      order: 6;
-      width: 100%;
-      margin-top: 1.5rem;
-      padding-right: 0;
-    }
-  
-    .product-right-col {
-      padding-top: 0;
-    }
+    .product-mobile-order-gallery { order: 1; width: 100%; }
+    .product-mobile-order-title { order: 2; width: 100%; margin-top: 0.5rem; margin-bottom: 0.25rem; }
+    .product-mobile-order-buybox { order: 3; width: 100%; }
+    .product-mobile-order-descriptions { order: 4; width: 100%; margin-top: 0.5rem; }
+    .product-mobile-order-compare { order: 5; width: 100%; margin-top: 1.5rem; padding-right: 0; }
   
     .product-shipping-block {
       margin-top: 24px;
