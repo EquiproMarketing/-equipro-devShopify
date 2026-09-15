@@ -90,7 +90,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-hydro-comfort-hydraulic-air-lift-facial-massage-depilation-table-sku-21100.webp",
             "title": "Mechanical",
-            "link": ""
+            "link": "shopify://collections/hydraulic-mechanical"
           }
         },
         "category_item_ebxfGg": {
@@ -98,7 +98,7 @@
           "settings": {
             "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
             "title": "Hydraulic",
-            "link": ""
+            "link": "shopify://collections/hydraulic-mechanical"
           }
         },
         "category_item_tME4fF": {
@@ -106,7 +106,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-beauty-bohemia-ei-23403-white-professional_1080x1080_c09f39e6-55da-4f2c-93b0-e2dd347d7de7.webp",
             "title": "Portable",
-            "link": ""
+            "link": "shopify://collections/portable"
           }
         },
         "category_item_dpjh46": {
@@ -114,7 +114,7 @@
           "settings": {
             "image": "shopify://shop_images/electric-clinical-treatment-chair-professional-spa-massage-table-white-Ei-502.webp",
             "title": "Electric",
-            "link": ""
+            "link": "shopify://collections/electric"
           }
         },
         "category_item_JVrMPE": {
@@ -130,7 +130,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-deluxe-column-11906-professional-facial-workstation-8-in-1.webp",
             "title": "Columns",
-            "link": ""
+            "link": "shopify://collections/columns"
           }
         },
         "category_item_ACVzqh": {
