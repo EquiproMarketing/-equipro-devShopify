@@ -409,3 +409,60 @@
 .product-select:focus {
   border-color: #ab273b;
 }
+
+/* ESTRUCTURA GENERAL DE ESCRITORIO */
+.product-master-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3.5rem;
+  align-items: start;
+}
+
+/* REORDENAMIENTO EXCLUSIVO EN MÓVIL (PANTALLAS <= 767PX) */
+@media screen and (max-width: 767px) {
+  .product-master-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.25rem;
+  }
+
+  /* 1. Botón Regresar (Back) */
+  .product-mobile-order-back {
+    order: 1;
+    width: 100%;
+  }
+
+  /* 2. Galería de Imágenes */
+  .product-mobile-order-gallery {
+    order: 2;
+    width: 100%;
+  }
+
+  /* 3. Nombre / Título del Producto */
+  .product-mobile-order-title {
+    order: 3;
+    width: 100%;
+    margin-top: 0.5rem;
+    margin-bottom: 0.25rem;
+  }
+
+  /* 4. Caja de Compra (Variantes, Cantidad y Botón Add to Cart) */
+  .product-mobile-order-buybox {
+    order: 4;
+    width: 100%;
+  }
+
+  /* 5. Bloque de Descripciones */
+  .product-mobile-order-descriptions {
+    order: 5;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+
+  /* 6. Botón Comparar (Al final de la sección) */
+  .product-mobile-order-compare {
+    order: 6;
+    width: 100%;
+    margin-top: 1.5rem;
+  }
+}
