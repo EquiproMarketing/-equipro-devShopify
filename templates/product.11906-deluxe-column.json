@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Licensed Esthetician:",
+            "answer": "<p>The Deluxe Column serves as the ultimate hub for facial rejuvenation treatments. By grouping the Vapoderm steamer, rotary brushes, and high-frequency modules onto a single mobile footprint, the esthetician eliminates the physical fatigue of twisting or reaching across the room. Pores are opened, extractions are executed seamlessly, and post-extraction purification is conducted smoothly because every tool sits at an optimal working height right next to the aesthetic chair.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Clinical Spa Technician:",
+            "answer": "<p>In high-volume clinical aesthetics, room turnover speed directly dictates clinic profitability. This modular tower layout optimizes workflow integration by providing a dedicated, built-in tissue dispenser, glove box holder, and trash receptacle. Technicians can execute advanced deep-cleansing peeling steps and instantly transition to calming modalities without walking away from the sterile zone, maintaining client connection throughout the service.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Cosmetic Tattoo Artist & Lash Technician:",
+            "answer": "<p>Precision detail work requires completely stable peripheral tools that do not shake or vibrate. When a heavy magnifying lamp or LED task light is attached directly to the integrated bracketry of the column, the weighted base ensures complete structural dampening. This rigidity eliminates micro-oscillations during fine pigment implantation or delicate lash extension placement, reducing visual strain and ensuring predictable, uniform application.</p>"
           }
         }
       },
@@ -64,15 +64,44 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11906</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial steel frame with stain-resistant coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>23\" x 20\" x 32\" H (58 cm x 51 cm x 81 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>44 lb (20 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Device Capacity</td>\n        <td>Accommodates from 2 to 9 aesthetic devices simultaneously</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Manual vertical height adjustment for customized workstation ergonomics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Integrated Power Strip</td>\n        <td>Heavy-duty electrical power bar with 6 grounded outlets</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility System</td>\n        <td>5 heavy-duty, ultra-quiet rolling casters for smooth treatment room transit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Built-in wastebasket/corbeille integrated into the base design</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Compatibility</td>\n        <td>Pre-configured to support vapozone, magnifying glass, and modular facial units</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Tip-resistant weighted low-profile star base and integrated cable management</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>Electrical components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty (parts and labor covered)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_WWnmjt": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Heavy-Duty Steel Construction: Fabricated with premium North American structural steel to ensure absolute stability and zero structural deflection in high-volume commercial treatment rooms."
+          }
+        },
+        "feature_item_WWRTKd": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Whisper-Quiet Mobility",
+            "text": "Non-Marking Silent Casters: Double-shielded polyurethane caster wheels designed to slide effortlessly across hardwood, tile, or laminate flooring for fluid, uninterrupted transitions between multi-technician treatment bays."
+          }
+        },
+        "feature_item_JEHaiX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Aesthetic Synergy",
+            "text": "Clean Commercial Silhouette: A streamlined, minimalist profile that seamlessly matches contemporary interior palettes while minimizing the hardware footprint inside small treatment spaces."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_WWnmjt",
+        "feature_item_WWRTKd",
+        "feature_item_JEHaiX"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-11906-deluxe-column-multiderm-facial-system.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -94,22 +123,29 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Secure Modular Attachments:",
+            "text": "Slide your chosen single units (such as high frequency, galvanic, or rotary brush) securely into the dedicated mounting slots on the core column structure."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Connect Internal Power:",
+            "text": "Route all individual unit power cables directly into the integrated 6-socket electrical surge protector power bar located on the rear base."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Position Accessories:",
+            "text": "Snap the factory-included facial tissue box dispenser, glove box sleeve, and heavy-duty waste basket onto their designated lower support brackets."
+          }
+        },
+        "instruction_item_bTi8Rd": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maneuver and Lock:",
+            "text": "Roll the column into position using the silent caster wheels, ensuring all lines are clear of the base before stabilizing the unit adjacent to your aesthetic treatment table."
           }
         },
         "section_header_dGJcmr": {
@@ -121,22 +157,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Maximum Load Weight:",
+            "text": "Do not exceed the structural limit of 9 grouped integrated tool functions simultaneously to maintain a perfect center of gravity."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Liquid Spill Prevention:",
+            "text": "Always position fluid bowls and facial steamers on their correct directional arms to prevent moisture dripping directly onto the lower electrical power strip."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Caster Clearance:",
+            "text": "Ensure the floor surface is clear of loose treatment cords or long apparel elements prior to rolling the base to avoid sudden stop hazards."
           }
         }
       },
@@ -145,6 +181,7 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_bTi8Rd",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
@@ -168,43 +205,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Does the column come with facial devices included?",
+            "answer": "<p><strong>No, this SKU is the structural column base only.</strong> All steamers, magnifying lamps, and electronic modular devices are sold separately to allow full customization.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "How many electrical outlets are built into the unit?",
+            "answer": "<p><strong>An integrated electrical power strip with 6 standard sockets is built-in.</strong> This allows you to power an entire multi-functional setup using just one main wall outlet.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "What accessories are included in the base price?",
+            "answer": "<p><strong>It includes a tissue holder, glove box holder, and a waste basket.</strong> These standard utility add-ons keep your sanitization items within immediate arms reach.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Can I install devices from other brands into this tower?",
+            "answer": "<p><strong>The mounting slots are factory-calibrated specifically for Equipro modular components.</strong> Non-brand equipment may not seat safely within the specialized mounting rails.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Is a magnifying lamp bracket included?",
+            "answer": "<p><strong>Yes, the structure features a built-in heavy lamp holder junction.</strong> This element accommodates standard industrial magnifying lamp stems securely without tilting.</p>"
           }
         },
         "faq_item_eGYQwE": {
           "type": "faq_item",
           "settings": {
-            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
-            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+            "question": "Where is this equipment manufactured?",
+            "answer": "<p><strong>Every unit is fully engineered and manufactured in Canada.</strong> This guarantees high-grade weld points, certified structural materials, and strict quality control.</p>"
           }
         }
       },
