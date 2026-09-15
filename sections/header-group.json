@@ -21,6 +21,15 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "auto_collection_gCMMTx": {
+          "type": "auto_collection",
+          "settings": {
+            "parent_category": "Skincare Equipment",
+            "sub_category": "Towel Warmers",
+            "collection": "towel-warmers",
+            "products_to_show": 6
+          }
+        },
         "auto_collection_eKDdFK": {
           "type": "auto_collection",
           "settings": {
@@ -59,6 +68,7 @@
         }
       },
       "block_order": [
+        "auto_collection_gCMMTx",
         "auto_collection_eKDdFK",
         "auto_collection_cUYN3J",
         "auto_collection_6g3XRp",
