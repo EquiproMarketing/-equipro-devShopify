@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Estheticians:",
+            "answer": "<p>Experienced Estheticians managing back-to-back appointments rely on the rapid heating element of the Solo-Pil Standard to eliminate client wait times. By maintaining a constant, predictable temperature profile throughout full 8-hour shifts, the system prevents the wax from thickening or overheating, allowing for seamless, fluid application during delicate facial hair removal and brow sculpting.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Clinical Spa Technicians:",
+            "answer": "<p>For Clinical Spa Technicians integrating depilatory services into broader aesthetic treatment plans, space-saving ergonomics are paramount. The compact footprint ($8.25\" \\times 7\" \\times 5\"H$) fits seamlessly onto auxiliary treatment trolleys without disrupting clean field protocols. The stable, insulated chassis ensures safe operation even when positioned in close proximity to advanced laser systems and facial treatment towers.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical esthetician:",
-            "answer": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+            "question": "Waxing Specialists:",
+            "answer": "<p>High-volume Waxing Specialists benefit directly from the universal 3 5/8-inch chamber compatibility. This standardized diameter allows technicians to rapidly swap direct-insert depilatory tins without needing specialized adapters, drastically reducing turnaround times between clients and ensuring strict adherence to clinic sanitation standards.</p>"
           }
         }
       },
@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Washable cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty metal housing with scratch-resistant white enamel coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Single Wax Heater</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Designed for warm or hot depilatory wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Reservoir Diameter</td>\n        <td>3.625 in (Formats Canadien et Européen)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precise dial-operated manual thermostat</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Element</td>\n        <td>High-performance rapid heating technology</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>8.25 in x 7.00 in x 5.00 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>7.0 lb / 3.2 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>On/Off indicator power switch and overheat protection thermostat</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Compatible Accessories</td>\n        <td>42100 Standard Aluminum Container (400 g / 14 oz capacity)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL Approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
