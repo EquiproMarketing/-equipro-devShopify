@@ -21,6 +21,15 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "auto_collection_zawRjk": {
+          "type": "auto_collection",
+          "settings": {
+            "parent_category": "Treatment Tables",
+            "sub_category": "Electric",
+            "collection": "electric",
+            "products_to_show": 6
+          }
+        },
         "auto_collection_xkpxmx": {
           "type": "auto_collection",
           "settings": {
@@ -77,6 +86,7 @@
         }
       },
       "block_order": [
+        "auto_collection_zawRjk",
         "auto_collection_xkpxmx",
         "auto_collection_gCMMTx",
         "auto_collection_eKDdFK",
