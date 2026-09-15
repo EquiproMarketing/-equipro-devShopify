@@ -138,7 +138,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-31300_ergonomic-air-lift-stool-white.webp",
             "title": "Stools",
-            "link": ""
+            "link": "shopify://collections/stools"
           }
         },
         "category_item_L88cDG": {
@@ -146,7 +146,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-63603-circus-magnifier-led-articulated-lamp.webp",
             "title": "Mag-Lamps",
-            "link": ""
+            "link": "shopify://collections/mag-lamps"
           }
         },
         "category_item_FNyhJK": {
@@ -154,7 +154,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-tm3-professional-service-table.webp",
             "title": "Trolleys",
-            "link": ""
+            "link": "shopify://collections/trolleys"
           }
         },
         "category_item_Nk8MQP": {
@@ -162,7 +162,7 @@
           "settings": {
             "image": "shopify://shop_images/ei-111-equipro-classic-facial-steamer-professional-spa-equipment.webp",
             "title": "Streamers",
-            "link": ""
+            "link": "shopify://collections/streamers"
           }
         },
         "category_item_j9NUhU": {
@@ -170,7 +170,7 @@
           "settings": {
             "image": "shopify://shop_images/equipros-duo-pil-precision-digital-wax-warmer_41202.webp",
             "title": "Wax-Heaters",
-            "link": ""
+            "link": "shopify://collections/wax-heaters"
           }
         },
         "category_item_wHPEpL": {
@@ -178,7 +178,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizing-cabinet-professional-salon-hygiene-equipment-white-finish-61102.webp",
             "title": "Towel Warmers",
-            "link": ""
+            "link": "shopify://collections/towel-warmers"
           }
         },
         "category_item_qhy7DG": {
@@ -186,7 +186,7 @@
           "settings": {
             "image": "shopify://shop_images/equipro-61402-visiderm-professional-skin-care-device.webp",
             "title": "Skin Analyzers",
-            "link": ""
+            "link": "shopify://collections/skin-analyzer"
           }
         }
       },
