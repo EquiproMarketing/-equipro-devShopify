@@ -3,9 +3,10 @@
 {% assign target_product = section.settings.featured_product | default: product %}
 
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
+  <!-- PARTE 1: GRID PRINCIPAL (TOP) -->
   <div class="product-master-grid">
     
-    <!-- COLUMNA IZQUIERDA (CONTENEDOR PADRE PARA ESCRITORIO) -->
+    <!-- COLUMNA IZQUIERDA (EN ESCRITORIO CONTIENE: BACK > TÍTULO > DESCRIPCIONES > BUY BOX) -->
     <div class="product-left-col">
       
       <!-- 1. BACK LINK -->
@@ -114,27 +115,30 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA (GALERÍA Y BOTÓN COMPARAR EN ESCRITORIO) -->
+    <!-- COLUMNA DERECHA (GALERÍA CON MINIATURAS EN LA PARTE INFERIOR) -->
     <div class="product-right-col product-mobile-order-gallery">
-      <div class="product-gallery">
+      <div class="product-gallery product-gallery--vertical-stack">
+        
+        <!-- IMAGEN PRINCIPAL (A ANCHO COMPLETO) -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           {% if first_img_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 900 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1000 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
           {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 900 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1000 }}" alt="{{ target_product.title | escape }}">
           {% else %}
             <div class="thumb-img-placeholder"></div>
           {% endif %}
         </div>
 
-        <div class="product-gallery__thumbs">
+        <!-- MINIATURAS HORIZONTALES ABAJO -->
+        <div class="product-gallery__thumbs product-gallery__thumbs--horizontal">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
           {% if img_blocks.size > 0 %}
             {% for block in img_blocks limit: 4 %}
               {% if block.settings.image != blank %}
                 <img 
-                  src="{{ block.settings.image | image_url: width: 200 }}" 
+                  src="{{ block.settings.image | image_url: width: 250 }}" 
                   class="thumb-img {% if forloop.first %}is-active{% endif %}" 
                   onclick="changeMainImg(this.src)" 
                   {{ block.shopify_attributes }}
@@ -144,13 +148,14 @@
           {% elsif target_product.images.size > 0 %}
             {% for image in target_product.images limit: 4 %}
               <img 
-                src="{{ image | image_url: width: 200 }}" 
+                src="{{ image | image_url: width: 250 }}" 
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
                 onclick="changeMainImg(this.src)" 
               >
             {% endfor %}
           {% endif %}
         </div>
+
       </div>
 
       <!-- BOTÓN COMPARAR -->
@@ -165,6 +170,55 @@
     </div>
 
   </div>
+
+  <!-- PARTE 2: CARACTERÍSTICAS, TABLA TÉCNICA Y BLOQUE DE SHIPPING -->
+  {% if section.settings.show_characteristics %}
+    <div class="product-characteristics-grid product-master-grid">
+      
+      <!-- IZQUIERDA: ACORDEÓN Y BLOQUE SHIPPING -->
+      <div class="product-characteristics-left">
+        {% if section.settings.characteristics_title != blank %}
+          <h3 class="product-acc-title">{{ section.settings.characteristics_title }}</h3>
+        {% endif %}
+
+        {% assign acc_blocks = section.blocks | where: "type", "accordion_item" %}
+        {% if acc_blocks.size > 0 %}
+          <div class="product-acc-list">
+            {% for block in acc_blocks %}
+              <details class="product-acc-item" {{ block.shopify_attributes }}>
+                <summary>
+                  <span>{{ block.settings.title }}</span>
+                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="#1d1d1f" stroke-width="1.5"/></svg>
+                </summary>
+                <div class="product-acc-content">
+                  {{ block.settings.content }}
+                </div>
+              </details>
+            {% endfor %}
+          </div>
+        {% endif %}
+
+        {% if section.settings.show_shipping_block %}
+          <div class="product-shipping-block">
+            <h4 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping & Delivery" }}</h4>
+            <div class="shipping-description">
+              {{ section.settings.shipping_content }}
+            </div>
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- DERECHA: TABLA DE ESPECIFICACIONES TÉCNICAS -->
+      <div class="product-characteristics-right">
+        {% if section.settings.custom_specs_html != blank %}
+          <div class="equipro-specs-container">
+            {{ section.settings.custom_specs_html }}
+          </div>
+        {% endif %}
+      </div>
+
+    </div>
+  {% endif %}
 </div>
 
 <script>
@@ -272,6 +326,48 @@
       "id": "compare_btn_label",
       "label": "Compare Button Text",
       "default": "Compare with other models"
+    },
+    {
+      "type": "header",
+      "content": "Characteristics & Specs Section"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_characteristics",
+      "label": "Show Lower Characteristics Section",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "characteristics_title",
+      "label": "Characteristics Accordion Title",
+      "default": "Characteristics"
+    },
+    {
+      "type": "html",
+      "id": "custom_specs_html",
+      "label": "Technical Specifications HTML Table"
+    },
+    {
+      "type": "header",
+      "content": "Shipping Block"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping_block",
+      "label": "Show Shipping Block",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_title",
+      "label": "Shipping Block Title",
+      "default": "Shipping & Delivery"
+    },
+    {
+      "type": "richtext",
+      "id": "shipping_content",
+      "label": "Shipping Block Content"
     }
   ],
   "blocks": [
@@ -284,6 +380,23 @@
           "type": "image_picker",
           "id": "image",
           "label": "Select Image"
+        }
+      ]
+    },
+    {
+      "type": "accordion_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Accordion Item Title",
+          "default": "Features"
+        },
+        {
+          "type": "richtext",
+          "id": "content",
+          "label": "Accordion Item Content"
         }
       ]
     }
