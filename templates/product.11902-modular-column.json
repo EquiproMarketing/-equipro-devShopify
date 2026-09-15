@@ -1,0 +1,304 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "11902  Modular column",
+        "intro_highlight": "The Equipro Modular Column transforms clinical workspace management by centralizing essential treatment tools into a singular, highly adaptable architecture, meticulously manufactured in North America to support the intense demands of high-volume aesthetic facilities.",
+        "custom_description": "<p>The Modular Column is purpose-built for high-end aesthetic professionals, including Clinical Spa Therapists, Clinical Estheticians, and Cosmetic Injectors. Its precision-engineered vertical chassis targets chronic shoulder fatigue and postural strain during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing complex micro-needling, high-frequency therapies, or post-procedure recovery, this professional station adjusts to your specific workflow need with tool-less repositioning and optimal working height.</p>",
+        "subtitle": "Optimizing Clinical Efficiency through Intelligent Modular Design",
+        "secondary_description": "<p>Structural resilience is central to the Equipro approach. To preserve the high-gloss finish and electrical connectivity of the Modular Column, periodic sanitization with non-abrasive, alcohol-free surface cleansers formulated for clinical environments should be performed weekly. The industrial-grade steel frame offers superior impact resistance, ensuring an immaculate condition outcome across an extended multi-year operational timeframe. Consistent care prevents mechanical drag and protects delicate internal wiring channels.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "modular-column-11902",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Esthetician:",
+            "answer": "<p>For the Clinical Esthetician performing advanced corrective facial protocols, the Modular Column provides a centralized hub that eliminates the need for redundant side-tables. By housing integrated steamers, vacuum units, and magnifying lamps on a single, stabilized vertical mount, the practitioner gains precious floor space, allowing for fluid movement around the treatment bed and reduced cross-contamination risk during complex service sequences.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Therapist:",
+            "answer": "<p>For the Clinical Spa Therapist managing high-tech rejuvenation suites, the column offers unmatched adaptability. The modular rail system allows for the rapid swapping of accessory holders as treatment technology evolves. Whether integrating new laser delivery systems or high-end diagnostic tools, the station ensures all handpieces and cables are managed securely, maintaining a clutter-free, professional environment that enhances client trust and procedural safety.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Tattooist or Permanent Makeup Specialist:",
+            "answer": "<p>For the Tattooist or Permanent Makeup Specialist requiring extreme technical precision, this system provides the ultimate ergonomic foundation. By elevating heavy power supplies and auxiliary lighting to the exact required eye level, the practitioner effectively mitigates visual fatigue and maintains a consistent, stable posture throughout lengthy sessions. This optimized configuration ensures that every stroke is delivered with absolute steadiness, regardless of the procedure's duration.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11100 (Vapoderm Digipro)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stain-resistant heavy-duty metal armature, premium thermoplastic/glass components, and external PVC canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Facial Steamer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Ionized steam output</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz external canister with integrated carrying handle</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Continuous Operation Time</td>\n        <td>40 minutes of continuous autonomous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional head and arm mechanism with fully adjustable height settings</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Aromatherapy Integration</td>\n        <td>Integrated specialized system designed for essential oil application</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Digital touchscreen panel with built-in timer and 3 steam level outputs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated safety thermostat auto-shutdown, drip-free nozzle assembly, and external canister protection guard</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10 in x 8.5 in x 32 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All electrical system components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability:",
+            "text": "Industrial-Grade Steel Frame: Built with a robust metal column and a stain-resistant 5-branch black rolling base to ensure tip-free stability in busy aesthetic settings."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Power Architecture:",
+            "text": "Outfitted with a heavy-duty, built-in 6-outlet power strip designed to streamline device cords for solo practitioners and multi-room teams, minimizing cord tangles."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Adjustable Multi-Device Footprint:",
+            "text": "A versatile design configured to carry 2 to 5 separate compact facial units alongside an integrated accessory tray, matching custom room layouts."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-modular-column-adjustable-professional-aesthetic-apparatus-stand-plastic-trays-six-outlet-power-bar-sku-11902.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Base Assembly:",
+            "text": "Secure the vertical column tightly into the center hub of the 11901 rolling caster base."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Device Bracket Positioning:",
+            "text": "Adjust the mounting slide brackets along the column tracks to fit the heights of your specific facial devices."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Interconnection:",
+            "text": "Connect the master plug of the built-in 6-outlet power bar into a grounded wall outlet."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Device Integration:",
+            "text": "Nest up to 5 compact devices into the column shelves, running their power lines directly into the integrated strip."
+          }
+        },
+        "instruction_item_bNn3ie": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height and Lock Adjustments:",
+            "text": "Set the overall system to your optimal working height and place the plastic accessory tray within easy reach."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maximum Weight Distribution:",
+            "text": "Always mount heavier treatment modules on the lower positions of the column to keep a low center of gravity and prevent tipping."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Capacity Monitoring:",
+            "text": "Do not exceed the cumulative amperage rating of the integrated 6-outlet power strip when running multiple devices simultaneously."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Dry Zone Maintenance:",
+            "text": "Ensure all wet items or treatment bowls are kept strictly away from the internal electrical plugs and power switch zones."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "instruction_item_bNn3ie",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are any treatment devices included with the Modular Column?",
+            "answer": "<p><strong>No, the column is an empty mobile tower station designed to hold your equipment.</strong> It is designed to accommodate 2 to 5 independent Equipro devices, which are purchased separately.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which base does this column system use for transit?",
+            "answer": "<p><strong>The unit comes supplied with the 11901 stain-resistant 5-branch black rolling base.</strong> This ensures smooth mobility over commercial salon floors and tight treatment room spaces.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it feature an integrated electrical power setup?",
+            "answer": "<p><strong>Yes, it includes a built-in 6-outlet power bar for streamlined power routing.</strong> This lets you connect multiple items into one central line, eliminating floor cable tangles.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can a magnifying lamp be attached to this column?",
+            "answer": "<p><strong>Yes, it works with auxiliary brackets like the 64301 adapter to mount steamers or lamps.</strong> This further consolidates your treatment footprint into one unit.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What accessories come standard with the 11902 model?",
+            "answer": "<p><strong>It features a stable support structure, adjustable height settings, and a plastic accessory tray.</strong> Devices and additional side racks are sold independently.</p>"
+          }
+        },
+        "faq_item_4NzDpm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the physical dimensions and weight of the tower?",
+            "answer": "<p><strong>It measures 32\" x 23\" x 20\" H and weighs approximately 15 lbs.</strong> This compact footprint preserves useful floor space next to treatment chairs.</p>"
+          }
+        },
+        "faq_item_dU8eXe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is Equipro’s return policy if the item does not fit my room?",
+            "answer": "<p><strong>Unsatisfied buyers have 15 days from purchase to arrange a return through their sales advisor.</strong> Returned items must be like-new condition, with shipping costs covered by the customer plus a 15% restocking fee.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_4NzDpm",
+        "faq_item_dU8eXe"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

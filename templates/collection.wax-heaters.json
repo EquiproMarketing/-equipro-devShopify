@@ -1,0 +1,203 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "wrapper": "div",
+  "sections": {
+    "collection_banner_MXi4BC": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Professional wax warmers engineered with precise temperature control and rapid, uniform heating for flawless and comfortable hair removal treatments.",
+        "custom_image": "shopify://shop_images/equipro-precision-professional-wax-heaters-spa-ambiance.webp",
+        "overlay_opacity": 5
+      }
+    },
+    "custom_product_treatment_fBzzfA": {
+      "type": "custom-product-treatment",
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "",
+        "featured_collection": "wax-heaters",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
+      }
+    },
+    "positive_impact_DDyxFL": {
+      "type": "positive-impact",
+      "name": "Positive Impact",
+      "settings": {
+        "title": "Our Positive Impact",
+        "text": "Experience unparalleled reliability and temperature stability in your waxing cabin. Our professional warmers are designed to maintain the perfect wax consistency throughout the day, ensuring a smooth application and maximum client comfort.",
+        "btn_label": "CONTACT US FOR RECOMMENDATIONS",
+        "btn_url": "",
+        "btn_bg_color": "#a22938",
+        "btn_text_color": "#ffffff",
+        "btn_bg_hover_color": "#8b2029",
+        "btn_text_hover_color": "#ffffff",
+        "btn_font_size": 14,
+        "btn_border_radius": 12,
+        "btn_padding_v": 14,
+        "btn_padding_h": 32,
+        "title_color": "#1a1a1a",
+        "title_size": 32,
+        "text_color": "#a22938",
+        "text_size": 20,
+        "text_max_width": 850,
+        "show_top_divider": true,
+        "show_bottom_divider": true,
+        "divider_color": "#a22938",
+        "divider_opacity": 30,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "why_our_category_HPkHy7": {
+      "type": "why-our-category",
+      "blocks": {
+        "feature_E4YWfX": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Ultra-Precise Thermostat",
+            "item_text": "Advanced heating elements that maintain exact, consistent temperatures, preventing overheating or cooling drops."
+          }
+        },
+        "feature_WBFqmU": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Rapid Meltdown",
+            "item_text": "Engineered to heat wax quickly and evenly, reducing prep time before your first appointment of the day."
+          }
+        },
+        "feature_QwDFEF": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Durable Construction",
+            "item_text": "Built with high-grade, easy-to-clean materials designed to withstand daily professional wear and spillages."
+          }
+        },
+        "feature_XDw3i4": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Ergonomic & Compact",
+            "item_text": "Sleek layouts that fit comfortably on any aesthetic cart, maximizing your workspace efficiency."
+          }
+        }
+      },
+      "block_order": [
+        "feature_E4YWfX",
+        "feature_WBFqmU",
+        "feature_QwDFEF",
+        "feature_XDw3i4"
+      ],
+      "name": "Why Our Category",
+      "settings": {
+        "title": "Why Our Wax Heaters",
+        "image_left": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+        "image_right": "shopify://shop_images/equipro-professional-facial-workstation-multiderm-aeroderm-ioniderm-system.webp",
+        "image_border_radius": 12,
+        "bg_color": "#a22938",
+        "title_color": "#ffffff",
+        "item_title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "divider_color": "#ffffff33",
+        "title_size": 28,
+        "item_title_size": 16,
+        "item_text_size": 14,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
+    },
+    "category_faq_hci6YV": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_mQyJEm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can these heaters be used for both hard and soft wax?",
+            "answer": "<p>Yes. Thanks to the wide and accurate temperature adjustable range, our professional heaters are perfectly suited for melting hard wax beads, strip wax tins, and paraffin.</p>"
+          }
+        },
+        "faq_item_6JPk9T": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do they accommodate standard-sized wax cans?",
+            "answer": "<p>Absolutely. The heating chambers are designed to perfectly fit standard professional wax tins directly, or you can use the removable inner inserts for loose wax.</p>"
+          }
+        },
+        "faq_item_wrH6FL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the benefit of a double wax heater configuration?",
+            "answer": "<p>A double system features completely independent thermostats, allowing you to heat soft wax in one chamber and hard wax in the other simultaneously at different temperatures, streamline your services.</p>"
+          }
+        },
+        "faq_item_7jEBAm": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I clean the wax warmer safely?",
+            "answer": "<p>We recommend cleaning the unit while it is still slightly warm (and unplugged) using a professional wax equipment cleaner or oil. Avoid harsh abrasives to protect the durable finish.</p>"
+          }
+        },
+        "faq_item_LN3LcU": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it feature an indicator light?",
+            "answer": "<p>Yes. Each heating chamber includes an intuitive pilot light that cycles on and off, letting you know when the heating elements are actively regulating the temperature.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mQyJEm",
+        "faq_item_6JPk9T",
+        "faq_item_wrH6FL",
+        "faq_item_7jEBAm",
+        "faq_item_LN3LcU"
+      ],
+      "name": "Category FAQ",
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "customer_reviews_TXxeVi": {
+      "type": "customer-reviews",
+      "name": "Customer Reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "collection_banner_MXi4BC",
+    "custom_product_treatment_fBzzfA",
+    "positive_impact_DDyxFL",
+    "why_our_category_HPkHy7",
+    "category_faq_hci6YV",
+    "customer_reviews_TXxeVi"
+  ]
+}

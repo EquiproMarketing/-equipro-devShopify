@@ -1,0 +1,296 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "41100-solo-pil-standard",
+        "intro_highlight": "Engineered at the exact intersection of practitioner ergonomics and rigorous North American manufacturing standards, the Solo-Pil Standard streamlines high-volume depilatory workflows. This purpose-built unit delivers instant thermal stability, allowing practicing specialists to maintain absolute focus on treatment execution rather than equipment monitoring.",
+        "custom_description": "<p>The Solo-Pil Standard is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Lash Technicians. Its precision-engineered thermal regulation targets visual fatigue and wrist discomfort during back-to-back appointments, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing brow sculpting, deep-pore cleansing prep, or full-body hair removal, this professional station adjusts to your modality-specific positioning with instant-response calibration and intuitive one-hand control.</p>",
+        "subtitle": "Professional Grade Reliability",
+        "secondary_description": "<p>Heavy-duty reliability is central to the Equipro approach. To preserve the rapid heating efficiency and thermal calibration of the Solo-Pil Standard, daily wipe-downs with a professional citrus-based solvent formulated for clinical spa environments are recommended. The internal heating chamber resists heavy chemical accumulation, ensuring flawless operational consistency across years of high-volume use. Consistent care guarantees repeatable results and reduced downtime.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "solo-pil-standard",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Estheticians:",
+            "answer": "<p>Experienced Estheticians managing back-to-back appointments rely on the rapid heating element of the Solo-Pil Standard to eliminate client wait times. By maintaining a constant, predictable temperature profile throughout full 8-hour shifts, the system prevents the wax from thickening or overheating, allowing for seamless, fluid application during delicate facial hair removal and brow sculpting.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technicians:",
+            "answer": "<p>For Clinical Spa Technicians integrating depilatory services into broader aesthetic treatment plans, space-saving ergonomics are paramount. The compact footprint ($8.25\" \\times 7\" \\times 5\"H$) fits seamlessly onto auxiliary treatment trolleys without disrupting clean field protocols. The stable, insulated chassis ensures safe operation even when positioned in close proximity to advanced laser systems and facial treatment towers.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Waxing Specialists:",
+            "answer": "<p>High-volume Waxing Specialists benefit directly from the universal 3 5/8-inch chamber compatibility. This standardized diameter allows technicians to rapidly swap direct-insert depilatory tins without needing specialized adapters, drastically reducing turnaround times between clients and ensuring strict adherence to clinic sanitation standards.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty metal housing with scratch-resistant white enamel coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Single Wax Heater</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Designed for warm or hot depilatory wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Reservoir Diameter</td>\n        <td>3.625 in (Formats Canadien et Européen)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precise dial-operated manual thermostat</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Element</td>\n        <td>High-performance rapid heating technology</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>8.25 in x 7.00 in x 5.00 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>7.0 lb / 3.2 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>On/Off indicator power switch and overheat protection thermostat</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Compatible Accessories</td>\n        <td>42100 Standard Aluminum Container (400 g / 14 oz capacity)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL Approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability - Thermal Core:",
+            "text": "Integrated heavy-duty heating element engineered with reinforced insulation to sustain continuous, rapid thermal cycles in high-volume clinic days."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Precision Analog Regulation:",
+            "text": "Instant-response calibration dial designed to maintain optimal working temperature for warm and hot wax formulations, preventing product degradation."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Universal Chamber Sizing:",
+            "text": "Precision-engineered 3 5/8\" diameter stainless steel reservoir that offers seamless workflow integration across standard Canadian and European depilatory formats."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chamber Preparation:",
+            "text": "Insert a compatible 3 5/8\" diameter depilatory tin or dedicated aluminum melting pot directly into the stainless steel heating reservoir."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power & Calibration:",
+            "text": "Connect the unit to a dedicated 110V/220V clinical power strip and turn the analog dial to the maximum setting to initiate the rapid heating cycle."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Thermal Stabilization:",
+            "text": "Once the product reaches complete liquefaction, reduce the precision thermostat to the specific manufacturer-recommended working temperature."
+          }
+        },
+        "instruction_item_tr6WqH": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Consistency Verification:",
+            "text": "Test the product's viscosity and temperature on the inner forearm before client application to ensure optimal thermal safety."
+          }
+        },
+        "instruction_item_BqmtiA": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Shutdown Protocol:",
+            "text": "Rotate the dial to the off position at the conclusion of the clinic day and allow the thermal chamber to cool completely before sanitization."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Dry Field Operation:",
+            "text": "Never pour water or cleaning solvents directly into the internal heating reservoir; the equipment must be kept in a dry environment at all times to prevent electrical shorting."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Authorized Servicing:",
+            "text": "All electrical repairs or component replacements must be authorized or executed by certified Equipro technicians to prevent thermal malfunctions and maintain active CSA/UL warranty status."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Thermal Protection:",
+            "text": "Always utilize heat-resistant tools or designated handles when removing internal melting pots from the active heating chamber to prevent operator burns."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_tr6WqH",
+        "instruction_item_BqmtiA",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What size wax tins are compatible with the Solo-Pil Standard?",
+            "answer": "<p>The 3 5/8-inch diameter chamber accommodates standard Canadian and European depilatory tins seamlessly.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit include an aluminum insert pot?",
+            "answer": "<p>No, removable aluminum melting pots are sold separately as customizable station accessories.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does the precision thermostat benefit depilatory application?",
+            "answer": "<p>It prevents thermal fluctuations, ensuring consistent wax viscosity and eliminating client burn risks.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can this warmer be left on continuously during full clinic days?",
+            "answer": "<p>Yes, the heavy-duty heating element is CSA and UL approved for continuous daily operation.iption de l’élément</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I clean spilled wax from the exterior chassis?",
+            "answer": "<p>Use a professional citrus-based depilatory solvent on a microfiber cloth while the unit is unplugged.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage for this equipment?",
+            "answer": "<p>The Solo-Pil Standard includes a comprehensive 2-year manufacturer warranty covering parts and labor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

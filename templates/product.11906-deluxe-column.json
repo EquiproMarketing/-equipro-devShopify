@@ -1,0 +1,287 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "11906 Deluxe Column",
+        "intro_highlight": "Engineered to solve space constraints in active treatment environments, the Deluxe Column establishes a zero-compromise foundation for multi-modality practitioners by combining robust Canadian steel fabrication with fluid, close-quarter ergonomics.",
+        "custom_description": "<p>The Deluxe Column is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Clinical Spa Technicians. Its precision-engineered, space-saving tower design targets lower-back tension and postural strain during back-to-back appointments, enabling sharper focus on treatment execution and enhanced client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with friction-free adjustment and intuitive one-hand control.</p>",
+        "subtitle": "Professional Versatility & High-Capacity Organization",
+        "secondary_description": "<p>Industrial powder coating is central to the Equipro approach. To preserve the pristine finish and antimicrobial properties of the Deluxe Column, wipe down all external frames with a soft cloth formulated for salon environments daily. The high-density steel frame provides superior chemical and scratch resistance, ensuring an immaculate appearance across an extended operational lifespan. Consistent care prevents finish degradation and maximizes your equipment's long-term resale value.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "deluxe-column-11906",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Licensed Esthetician:",
+            "answer": "<p>The Deluxe Column serves as the ultimate hub for facial rejuvenation treatments. By grouping the Vapoderm steamer, rotary brushes, and high-frequency modules onto a single mobile footprint, the esthetician eliminates the physical fatigue of twisting or reaching across the room. Pores are opened, extractions are executed seamlessly, and post-extraction purification is conducted smoothly because every tool sits at an optimal working height right next to the aesthetic chair.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technician:",
+            "answer": "<p>In high-volume clinical aesthetics, room turnover speed directly dictates clinic profitability. This modular tower layout optimizes workflow integration by providing a dedicated, built-in tissue dispenser, glove box holder, and trash receptacle. Technicians can execute advanced deep-cleansing peeling steps and instantly transition to calming modalities without walking away from the sterile zone, maintaining client connection throughout the service.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Cosmetic Tattoo Artist & Lash Technician:",
+            "answer": "<p>Precision detail work requires completely stable peripheral tools that do not shake or vibrate. When a heavy magnifying lamp or LED task light is attached directly to the integrated bracketry of the column, the weighted base ensures complete structural dampening. This rigidity eliminates micro-oscillations during fine pigment implantation or delicate lash extension placement, reducing visual strain and ensuring predictable, uniform application.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11906</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial steel frame with stain-resistant coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>23\" x 20\" x 32\" H (58 cm x 51 cm x 81 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>44 lb (20 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Device Capacity</td>\n        <td>Accommodates from 2 to 9 aesthetic devices simultaneously</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Manual vertical height adjustment for customized workstation ergonomics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Integrated Power Strip</td>\n        <td>Heavy-duty electrical power bar with 6 grounded outlets</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility System</td>\n        <td>5 heavy-duty, ultra-quiet rolling casters for smooth treatment room transit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Built-in wastebasket/corbeille integrated into the base design</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Compatibility</td>\n        <td>Pre-configured to support vapozone, magnifying glass, and modular facial units</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Tip-resistant weighted low-profile star base and integrated cable management</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>Electrical components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty (parts and labor covered)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_WWnmjt": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Heavy-Duty Steel Construction: Fabricated with premium North American structural steel to ensure absolute stability and zero structural deflection in high-volume commercial treatment rooms."
+          }
+        },
+        "feature_item_WWRTKd": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Whisper-Quiet Mobility",
+            "text": "Non-Marking Silent Casters: Double-shielded polyurethane caster wheels designed to slide effortlessly across hardwood, tile, or laminate flooring for fluid, uninterrupted transitions between multi-technician treatment bays."
+          }
+        },
+        "feature_item_JEHaiX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Aesthetic Synergy",
+            "text": "Clean Commercial Silhouette: A streamlined, minimalist profile that seamlessly matches contemporary interior palettes while minimizing the hardware footprint inside small treatment spaces."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_WWnmjt",
+        "feature_item_WWRTKd",
+        "feature_item_JEHaiX"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-11906-deluxe-column-multiderm-facial-system.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Secure Modular Attachments:",
+            "text": "Slide your chosen single units (such as high frequency, galvanic, or rotary brush) securely into the dedicated mounting slots on the core column structure."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Connect Internal Power:",
+            "text": "Route all individual unit power cables directly into the integrated 6-socket electrical surge protector power bar located on the rear base."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position Accessories:",
+            "text": "Snap the factory-included facial tissue box dispenser, glove box sleeve, and heavy-duty waste basket onto their designated lower support brackets."
+          }
+        },
+        "instruction_item_bTi8Rd": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maneuver and Lock:",
+            "text": "Roll the column into position using the silent caster wheels, ensuring all lines are clear of the base before stabilizing the unit adjacent to your aesthetic treatment table."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maximum Load Weight:",
+            "text": "Do not exceed the structural limit of 9 grouped integrated tool functions simultaneously to maintain a perfect center of gravity."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Liquid Spill Prevention:",
+            "text": "Always position fluid bowls and facial steamers on their correct directional arms to prevent moisture dripping directly onto the lower electrical power strip."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Caster Clearance:",
+            "text": "Ensure the floor surface is clear of loose treatment cords or long apparel elements prior to rolling the base to avoid sudden stop hazards."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_bTi8Rd",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image_position": "left",
+        "image_aspect_ratio": "4-3",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the column come with facial devices included?",
+            "answer": "<p><strong>No, this SKU is the structural column base only.</strong> All steamers, magnifying lamps, and electronic modular devices are sold separately to allow full customization.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How many electrical outlets are built into the unit?",
+            "answer": "<p><strong>An integrated electrical power strip with 6 standard sockets is built-in.</strong> This allows you to power an entire multi-functional setup using just one main wall outlet.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What accessories are included in the base price?",
+            "answer": "<p><strong>It includes a tissue holder, glove box holder, and a waste basket.</strong> These standard utility add-ons keep your sanitization items within immediate arms reach.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I install devices from other brands into this tower?",
+            "answer": "<p><strong>The mounting slots are factory-calibrated specifically for Equipro modular components.</strong> Non-brand equipment may not seat safely within the specialized mounting rails.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is a magnifying lamp bracket included?",
+            "answer": "<p><strong>Yes, the structure features a built-in heavy lamp holder junction.</strong> This element accommodates standard industrial magnifying lamp stems securely without tilting.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Where is this equipment manufactured?",
+            "answer": "<p><strong>Every unit is fully engineered and manufactured in Canada.</strong> This guarantees high-grade weld points, certified structural materials, and strict quality control.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
