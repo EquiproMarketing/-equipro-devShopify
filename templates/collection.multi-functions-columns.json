@@ -108,8 +108,8 @@
       ],
       "settings": {
         "title": "Why Our Collumns",
-        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
-        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image_left": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+        "image_right": "shopify://shop_images/equipro-11906-deluxe-column-aesthetic-multipurpose-station.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -136,15 +136,15 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between the Digipro and Classic models?",
-            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+            "question": "Can I customize the modalities included in the column?",
+            "answer": "<p>Yes. Our multi-function systems are designed with modular flexibility in mind. You can select the specific technologies such as rotary brushes, high frequency, galvanic, or vacuum—that best match your service menu.</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use essential oils with these steamers?",
-            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+            "question": "What happens if one module requires maintenance?",
+            "answer": "<p>Our columns are engineered for seamless serviceability. Individual modules can be easily serviced or replaced independently without having to send the entire workstation or column back to our facility.</p>"
           }
         },
         "faq_item_kmRk4U": {
