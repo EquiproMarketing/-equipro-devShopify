@@ -21,6 +21,15 @@
     "category_subnav_CdbCNN": {
       "type": "category-subnav",
       "blocks": {
+        "auto_collection_W6Ape6": {
+          "type": "auto_collection",
+          "settings": {
+            "parent_category": "Treatment Tables",
+            "sub_category": "Portable",
+            "collection": "portable",
+            "products_to_show": 6
+          }
+        },
         "auto_collection_VL9APk": {
           "type": "auto_collection",
           "settings": {
@@ -95,6 +104,7 @@
         }
       },
       "block_order": [
+        "auto_collection_W6Ape6",
         "auto_collection_VL9APk",
         "auto_collection_zawRjk",
         "auto_collection_xkpxmx",
