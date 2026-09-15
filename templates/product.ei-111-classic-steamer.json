@@ -138,22 +138,29 @@
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Adjust the main intensity",
-            "text": "dial to the appropriate setting based on the client's skin sensitivity."
+            "bold_prefix": "Fill the canister",
+            "text": "with distilled water through the simplified filling inlet up to the clearly designated maximum level indicator."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "After the session,",
-            "text": "detach and sterilize the diamond tips according to your local health standards."
+            "bold_prefix": "Power on",
+            "text": "the unit and utilize the digital interface to program the built-in timer and choose from the three available steam intensity settings."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Return all components",
-            "text": "to the integrated storage slots for quick retrieval during your next appointment."
+            "bold_prefix": "Allow the system",
+            "text": "to achieve full operating temperature, then manipulate the directional head to angle the ionized vapor path directly toward the treatment zone."
+          }
+        },
+        "instruction_item_bNn3ie": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Once the session is complete,",
+            "text": "utilize the simplified emptying system to safely drain any remaining water from the cooling reservoir."
           }
         },
         "section_header_dGJcmr": {
@@ -165,22 +172,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Always perform",
-            "text": "a patch test on a small area of skin to determine the appropriate intensity for the individual client."
+            "bold_prefix": "Thermostatic Monitoring:",
+            "text": "Never run the steamer without verifying that the water level is above the minimum baseline; the integrated safety thermostat will automatically trip if dry heating is detected."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Ensure the vacuum",
-            "text": "filter is inspected weekly and replaced as needed to maintain optimal suction pressure."
+            "bold_prefix": "Distance Calibration:",
+            "text": "Maintain a minimum clearance distance of 12 to 18 inches between the drip-free nozzle output and the client’s face to prevent thermal discomfort."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "The device should only",
-            "text": "be operated by licensed skincare professionals trained in microdermabrasion techniques."
+            "bold_prefix": "Canister Inspection:",
+            "text": "Regularly inspect the PVC canister walls and handle assembly for debris or mineral scaling before initiating a high-temperature operational cycle."
           }
         }
       },
@@ -190,6 +197,7 @@
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
         "instruction_item_rRgyKc",
+        "instruction_item_bNn3ie",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
