@@ -16,7 +16,7 @@
       "settings": {
         "custom_title": "",
         "custom_description": "",
-        "fallback_description": "Professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
+        "fallback_description": "Professional wax warmers engineered with precise temperature control and rapid, uniform heating for flawless and comfortable hair removal treatments.",
         "custom_image": "shopify://shop_images/equipro-professional-aesthetic-workstation-multiderm-series.webp",
         "overlay_opacity": 5
       }
@@ -26,7 +26,7 @@
       "name": "Custom Product Treatment",
       "settings": {
         "title": "",
-        "featured_collection": "facial-units",
+        "featured_collection": "wax-heaters",
         "products_to_show": 8,
         "card_bg_color": "#f5f5f7",
         "default_subtitle": "Professional Treatment Series",
