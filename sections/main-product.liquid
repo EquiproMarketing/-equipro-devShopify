@@ -170,55 +170,6 @@
     </div>
 
   </div>
-
-  <!-- PARTE 2: CARACTERÍSTICAS, TABLA TÉCNICA Y BLOQUE DE SHIPPING -->
-  {% if section.settings.show_characteristics %}
-    <div class="product-characteristics-grid product-master-grid">
-      
-      <!-- IZQUIERDA: ACORDEÓN Y BLOQUE SHIPPING -->
-      <div class="product-characteristics-left">
-        {% if section.settings.characteristics_title != blank %}
-          <h3 class="product-acc-title">{{ section.settings.characteristics_title }}</h3>
-        {% endif %}
-
-        {% assign acc_blocks = section.blocks | where: "type", "accordion_item" %}
-        {% if acc_blocks.size > 0 %}
-          <div class="product-acc-list">
-            {% for block in acc_blocks %}
-              <details class="product-acc-item" {{ block.shopify_attributes }}>
-                <summary>
-                  <span>{{ block.settings.title }}</span>
-                  <svg width="12" height="8" viewBox="0 0 12 8" fill="none"><path d="M1 1L6 6L11 1" stroke="#1d1d1f" stroke-width="1.5"/></svg>
-                </summary>
-                <div class="product-acc-content">
-                  {{ block.settings.content }}
-                </div>
-              </details>
-            {% endfor %}
-          </div>
-        {% endif %}
-
-        {% if section.settings.show_shipping_block %}
-          <div class="product-shipping-block">
-            <h4 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping & Delivery" }}</h4>
-            <div class="shipping-description">
-              {{ section.settings.shipping_content }}
-            </div>
-          </div>
-        {% endif %}
-      </div>
-
-      <!-- DERECHA: TABLA DE ESPECIFICACIONES TÉCNICAS -->
-      <div class="product-characteristics-right">
-        {% if section.settings.custom_specs_html != blank %}
-          <div class="equipro-specs-container tech-table-container">
-            {{ section.settings.custom_specs_html }}
-          </div>
-        {% endif %}
-      </div>
-
-    </div>
-  {% endif %}
 </div>
 
 <script>
@@ -326,48 +277,6 @@
       "id": "compare_btn_label",
       "label": "Compare Button Text",
       "default": "Compare with other models"
-    },
-    {
-      "type": "header",
-      "content": "Characteristics & Specs Section"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_characteristics",
-      "label": "Show Lower Characteristics Section",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "characteristics_title",
-      "label": "Characteristics Accordion Title",
-      "default": "Characteristics"
-    },
-    {
-      "type": "html",
-      "id": "custom_specs_html",
-      "label": "Technical Specifications HTML Table"
-    },
-    {
-      "type": "header",
-      "content": "Shipping Block"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_shipping_block",
-      "label": "Show Shipping Block",
-      "default": true
-    },
-    {
-      "type": "text",
-      "id": "shipping_title",
-      "label": "Shipping Block Title",
-      "default": "Shipping & Delivery"
-    },
-    {
-      "type": "richtext",
-      "id": "shipping_content",
-      "label": "Shipping Block Content"
     }
   ],
   "blocks": [
@@ -380,23 +289,6 @@
           "type": "image_picker",
           "id": "image",
           "label": "Select Image"
-        }
-      ]
-    },
-    {
-      "type": "accordion_item",
-      "name": "Accordion Item",
-      "settings": [
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Accordion Item Title",
-          "default": "Features"
-        },
-        {
-          "type": "richtext",
-          "id": "content",
-          "label": "Accordion Item Content"
         }
       ]
     }
