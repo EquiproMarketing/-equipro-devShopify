@@ -123,36 +123,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Water Reservoir Filling:",
-            "text": "Ensure the device is powered down, then utilize the simplified filling system to pour distilled water directly into the 42 oz external PVC canister via the handle access point."
+            "bold_prefix": "Base Assembly:",
+            "text": "Secure the vertical column tightly into the center hub of the 11901 rolling caster base."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Treatment Parameter Selection:",
-            "text": "Turn on the primary power switch and utilize the control interface to configure the built-in timer and select from the three available steam levels based on the client's skin assessment."
+            "bold_prefix": "Device Bracket Positioning:",
+            "text": "Adjust the mounting slide brackets along the column tracks to fit the heights of your specific facial devices."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Positioning the Vapor Stream:",
-            "text": "Using the multi-directional arm and directional head, position the drip-free nozzle at a safe and comfortable distance over the target treatment zone."
+            "bold_prefix": "Power Interconnection:",
+            "text": "Connect the master plug of the built-in 6-outlet power bar into a grounded wall outlet."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Modality Integration:",
-            "text": "Allow the ionized steam to mist over the face for up to 40 minutes of continuous operation to prime the pores for extraction or deep hydration."
+            "bold_prefix": "Device Integration:",
+            "text": "Nest up to 5 compact devices into the column shelves, running their power lines directly into the integrated strip."
           }
         },
         "instruction_item_bNn3ie": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "System Drainage:",
-            "text": "Following treatment completion and full cooling, utilize the simplified emptying system to purge remaining moisture from the canister, ensuring optimal hygiene."
+            "bold_prefix": "Height and Lock Adjustments:",
+            "text": "Set the overall system to your optimal working height and place the plastic accessory tray within easy reach."
           }
         },
         "section_header_dGJcmr": {
@@ -164,22 +164,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Thermal Safety Maintenance:",
-            "text": "Practitioners must operate the device strictly with distilled water to prevent boiling volatility and keep an eye on the safety thermostat parameters to ensure no overheating occurs."
+            "bold_prefix": "Maximum Weight Distribution:",
+            "text": "Always mount heavier treatment modules on the lower positions of the column to keep a low center of gravity and prevent tipping."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Nozzle Clearances:",
-            "text": "The drip-free steam nozzle must never be placed closer than 12–15 inches from the client's skin surface to prevent hot vapor spikes or moisture droplets from causing discomfort."
+            "bold_prefix": "Power Capacity Monitoring:",
+            "text": "Do not exceed the cumulative amperage rating of the integrated 6-outlet power strip when running multiple devices simultaneously."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Canister Locking Inspections:",
-            "text": "Prior to initializing a heating cycle, confirm that the external PVC canister protector and handle are completely locked in place to avoid unintended steam discharge."
+            "bold_prefix": "Dry Zone Maintenance:",
+            "text": "Ensure all wet items or treatment bowls are kept strictly away from the internal electrical plugs and power switch zones."
           }
         }
       },
