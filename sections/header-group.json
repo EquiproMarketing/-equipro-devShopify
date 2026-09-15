@@ -25,7 +25,7 @@
           "type": "auto_collection",
           "settings": {
             "parent_category": "Stools",
-            "sub_category": "",
+            "sub_category": "Stools",
             "collection": "stools",
             "products_to_show": 6
           }
