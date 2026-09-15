@@ -122,49 +122,63 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Chamber Preparation:",
+            "text": "Insert a compatible 3 5/8\" diameter depilatory tin or dedicated aluminum melting pot directly into the stainless steel heating reservoir."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Power & Calibration:",
+            "text": "Connect the unit to a dedicated 110V/220V clinical power strip and turn the analog dial to the maximum setting to initiate the rapid heating cycle."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Thermal Stabilization:",
+            "text": "Once the product reaches complete liquefaction, reduce the precision thermostat to the specific manufacturer-recommended working temperature."
+          }
+        },
+        "instruction_item_tr6WqH": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Consistency Verification:",
+            "text": "Test the product's viscosity and temperature on the inner forearm before client application to ensure optimal thermal safety."
+          }
+        },
+        "instruction_item_BqmtiA": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Shutdown Protocol:",
+            "text": "Rotate the dial to the off position at the conclusion of the clinic day and allow the thermal chamber to cool completely before sanitization."
           }
         },
         "section_header_dGJcmr": {
           "type": "section_header",
           "settings": {
-            "title": "How to Use"
+            "title": "Safety & Disclaimers"
           }
         },
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Dry Field Operation:",
+            "text": "Never pour water or cleaning solvents directly into the internal heating reservoir; the equipment must be kept in a dry environment at all times to prevent electrical shorting."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Authorized Servicing:",
+            "text": "All electrical repairs or component replacements must be authorized or executed by certified Equipro technicians to prevent thermal malfunctions and maintain active CSA/UL warranty status."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Calibration",
-            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height."
+            "bold_prefix": "Thermal Protection:",
+            "text": "Always utilize heat-resistant tools or designated handles when removing internal melting pots from the active heating chamber to prevent operator burns."
           }
         }
       },
@@ -173,6 +187,8 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_tr6WqH",
+        "instruction_item_BqmtiA",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
