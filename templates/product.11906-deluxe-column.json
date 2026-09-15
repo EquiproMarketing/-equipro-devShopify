@@ -23,7 +23,7 @@
         "show_size_option": true,
         "featured_product": "deluxe-column-11906",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": true,
+        "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
       }
     },
