@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Duo-Pil Standard Maxi Wax Warmer",
+          "intro_highlight": "Engineered to support continuous multi-modality depilatory services in bustling aesthetic environments, the Duo-Pil Maxi integrates high-capacity thermal distribution with practitioner-focused spatial layout. Built strictly around advanced North American electrical safety standards, this specialized dual-chamber unit isolates thermal regulation so practicing specialists can maintain uninterrupted treatment workflows.",
+          "custom_description": "<p>The Duo-Pil Maxi is purpose-built for practicing specialists, including Estheticians, Medical Spa Therapists, and Lash Technicians. Its ergonomic thermal regulation targets visual fatigue and postural strain during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing brow sculpting, deep-pore cleansing prep, or full-body hair removal, this professional station adjusts to your modality-specific positioning with instant-response calibration and intuitive one-hand control.</p>",
+          "subtitle": "Advanced Dual Reservoir & Independent Regulation System",
+          "secondary_description": "<p>Heavy-duty dependability is central to the Equipro approach. To preserve the rapid heating efficiency and thermal precision of the Duo-Pil Maxi, daily surface wiping with a professional citrus-based solvent formulated for high-volume spa environments is recommended. The insulated stainless steel warming core resists harsh residue buildup, ensuring repeatable thermal output across years of rigorous commercial operation. Consistent care delivers service consistency and reduced downtime.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "duo-pil-maxi",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Waxing Specialists:",
+              "answer": "<p>High-volume waxing specialists benefit from the dual-chamber configuration, allowing simultaneous heating of small delicate wax tins and high-capacity bulk reservoirs to streamline full-body depilatory workflows.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Technicians:",
+              "answer": "<p>For Clinical Spa Technicians managing multi-service rooms, the dual independent thermostats allow precise temperature separation for warm and hot wax formulations without risk of thermal cross-contamination.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Salon Entrepreneurs:",
+              "answer": "<p>Salon owners gain long-term equipment reliability with heavy-duty enamel-painted steel casing, CSA/UL approved electrical components, and a comprehensive 2-year limited warranty.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41200</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Enamel-painted steel casing, high-grade thermoplastic components, and dual internal aluminum reservoirs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional dual-container analog wax heater</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>36.20 cm x 24.13 cm x 12.70 cm (14.25\" x 9.5\" x 5\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>5.50 kg (12 lb)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>120 V AC, 60 Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>Two independent heating chambers measuring 9.21 cm (3 5/8\") and 15.24 cm (6\") in diameter</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>Rapid meltdown cycle</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Designed for warm or hot wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Maximum Temperature</td>\n        <td>Adjustable analog range up to 85°C (185°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Two precise, independent rotary thermostat dials for individualized temperature control</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Internal thermal cutoff fuses, indicator lights, and heavy-duty insulated power cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years limited manufacturer warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Impact-Resistant Steel Enclosure:",
+              "text": "Rigidly constructed with premium heavy-duty materials to lock down long-term performance outcome reliability in busy commercial settings."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Integrated Accessory Bay: Quick-Access Storage Layout:",
+              "text": "A streamlined engineering approach featuring dedicated accessory holders designed to protect glass components for the operator and client, optimizing physical workspace room."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Ultra-Compact Profile: Ergonomic Desktop Configuration:",
+              "text": "Sleek functional layout that ensures seamless structural compatibility with standard clinical cart configurations or modular workspace setups."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Chamber Loading:",
+              "text": "Drop a standard depilatory tin into the 3 5/8-inch well and a dedicated bulk aluminum melting pot (SKU 42101) into the 6-inch warming reservoir."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Initiation:",
+              "text": "Plug the commercial cord into a dedicated clinical power strip and rotate both analog dials to maximum to trigger the rapid heating cycle."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Viscosity Calibration:",
+              "text": "Once complete product liquefaction occurs in each tank, dial back the independent thermostats to the specific manufacturer-recommended working thresholds."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Patch Testing:",
+              "text": "Always verify product viscosity and temperature on the practitioner's inner wrist prior to touching client skin to guarantee thermal safety."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Shift Shutdown:",
+              "text": "Turn both analog calibration dials to the absolute off position at shift completion and allow the internal wells to cool entirely before sanitizing."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Dry Environment Mandate:",
+              "text": "Never introduce water, steam, or liquid cleaning solvents directly into the unlined heating wells; equipment must remain dry to prevent severe electrical shorting."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Certified Servicing:",
+              "text": "All component replacements or internal electrical servicing must be authorized or performed by certified Equipro technicians to prevent thermal hazards and preserve active CSA/UL listings."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Thermal Protection:",
+              "text": "Practitioners must strictly utilize heat-resistant tools or dual designated pot handles when extracting hot metal containers from the active heating core."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What size depilatory containers fit inside the Duo-Pil Maxi?",
+              "answer": "<p>It features two independent heating chambers measuring 3 5/8 inches (9.21 cm) and 6 inches (15.24 cm) in diameter to accommodate standard tins and bulk cassolette pots.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does this model come with the aluminum melting pots included?",
+              "answer": "<p>The 6-inch aluminum bulk pot (SKU 42101) and 3 5/8-inch pot (SKU 42100) are sold separately as station accessories.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do the dual thermostats benefit treatment room workflows?",
+              "answer": "<p>Independent rotary thermostats allow precise, individual temperature regulation for two distinct wax formulations simultaneously without waiting time.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can this 250-watt unit operate continuously throughout a packed spa shift?",
+              "answer": "<p>Yes, its heavy-duty thermal components are CSA and UL certified for continuous commercial operation.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the safest protocol for removing wax drips from the chassis?",
+              "answer": "<p>Daily wiping with a citrus-based solvent formulated for spa equipment is recommended while the unit is unplugged and cool.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What commercial warranty backs this equipment?",
+              "answer": "<p>The Duo-Pil Maxi is protected by a comprehensive 2-year manufacturer warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
