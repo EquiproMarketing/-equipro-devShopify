@@ -1,6 +1,5 @@
 {% comment %}
-  Detección automática de la colección para comparar.
-  Prioridad: 1. Colección seleccionada en Settings, 2. Primera colección del producto, 3. Colección All.
+  Detección de colección de calentadores de cera
 {% endcomment %}
 {% assign target_collection = section.settings.compare_collection | default: product.collections.first %}
 {% if target_collection == blank %}
@@ -11,8 +10,8 @@
 <div class="compare-modal-overlay" id="CompareModalStep1">
   <div class="compare-modal">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Products to Compare" }}</h2>
-    <p class="compare-modal__sub">Choose models from {{ target_collection.title }} to start the comparison:</p>
+    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Wax Heaters to Compare" }}</h2>
+    <p class="compare-modal__sub">Choose up to 6 models to compare technical specifications:</p>
 
     <div class="compare-select-list">
       <!-- Este Modelo -->
@@ -22,9 +21,9 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Otros Productos de la misma Categoría/Colección -->
+      <!-- Otros Productos de Wax Heaters -->
       {% assign other_products = target_collection.products | where_exp: "item", "item.id != product.id" %}
-      {% for item in other_products limit: 6 %}
+      {% for item in other_products limit: 5 %}
         <label class="compare-select-item is-selected">
           <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
           <span>{{ item.title }}</span>
@@ -36,12 +35,12 @@
   </div>
 </div>
 
-<!-- STEP 2: PRODUCT COMPARISON TABLE MODAL -->
+<!-- STEP 2: TECHNICAL COMPARISON TABLE MODAL -->
 <div class="compare-modal-overlay" id="CompareModalStep2">
   <div class="compare-modal compare-modal--wide">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">Product Comparison</h2>
-    <p class="compare-modal__sub">Swipe horizontally to compare alternative models against this one.</p>
+    <h2 class="compare-modal__title">Wax Warmer Comparison</h2>
+    <p class="compare-modal__sub">Compare capacity, tank size, and thermal control specifications.</p>
 
     <div class="compare-table-scroll">
       <table class="compare-table">
@@ -49,69 +48,156 @@
           <tr>
             <th class="sticky-col">Key Features</th>
             
-            <!-- COLUMNA PRODUCTO ACTUAL -->
+            <!-- COLUMNA MODELO ACTUAL -->
             <th class="this-model-col compare-col" data-product-id="{{ product.id }}">
               <span class="this-model-badge">This Model</span>
               <div class="compare-product-img">
                 {% if product.featured_image != blank %}
-                  <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}">
+                  <img src="{{ product.featured_image | image_url: width: 140 }}" alt="{{ product.title | escape }}">
                 {% else %}
                   <div class="placeholder-img"></div>
                 {% endif %}
               </div>
               <strong>{{ product.title }}</strong>
               <div class="compare-product-price">{{ product.price | money }}</div>
-              <a href="{{ product.url }}" class="compare-product-btn">View Product</a>
+              <a href="{{ product.url }}" class="compare-product-btn">View Details</a>
             </th>
 
-            <!-- COLUMNAS OTROS PRODUCTOS DE LA COLECCIÓN -->
-            {% for item in other_products limit: 6 %}
+            <!-- COLUMNAS OTROS MODELOS -->
+            {% for item in other_products limit: 5 %}
               <th class="compare-col" data-product-id="{{ item.id }}">
                 <div class="compare-product-img">
                   {% if item.featured_image != blank %}
-                    <img src="{{ item.featured_image | image_url: width: 120 }}" alt="{{ item.title | escape }}">
+                    <img src="{{ item.featured_image | image_url: width: 140 }}" alt="{{ item.title | escape }}">
                   {% else %}
                     <div class="placeholder-img"></div>
                   {% endif %}
                 </div>
                 <strong>{{ item.title }}</strong>
                 <div class="compare-product-price">{{ item.price | money }}</div>
-                <a href="{{ item.url }}" class="compare-product-btn">View Product</a>
+                <a href="{{ item.url }}" class="compare-product-btn">View Details</a>
               </th>
             {% endfor %}
           </tr>
         </thead>
         <tbody>
+          <!-- 1. MODEL SKU -->
           <tr>
-            <td class="sticky-col">SKU / Model</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.variants.first.sku | default: product.id }}</td>
-            {% for item in other_products limit: 6 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.variants.first.sku | default: item.id }}</td>
-            {% endfor %}
-          </tr>
-          <tr>
-            <td class="sticky-col">Availability</td>
+            <td class="sticky-col">Model SKU</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
+              <strong>{{ product.variants.first.sku | default: "41202" }}</strong>
             </td>
-            {% for item in other_products limit: 6 %}
+            {% for item in other_products limit: 5 %}
               <td class="compare-col" data-product-id="{{ item.id }}">
-                {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
+                <strong>{{ item.variants.first.sku | default: item.id }}</strong>
               </td>
             {% endfor %}
           </tr>
+
+          <!-- 2. NUMBER OF TANKS / RESERVOIRS -->
           <tr>
-            <td class="sticky-col">Vendor / Line</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.vendor }}</td>
-            {% for item in other_products limit: 6 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.vendor }}</td>
+            <td class="sticky-col">Number of Tanks</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              {% assign title_down = product.title | downcase %}
+              {% if title_down contains 'duo' or title_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
+            </td>
+            {% for item in other_products limit: 5 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                {% assign item_title_down = item.title | downcase %}
+                {% if item_title_down contains 'duo' or item_title_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
+              </td>
             {% endfor %}
           </tr>
+
+          <!-- 3. TANK CAPACITY & DIAMETERS -->
           <tr>
-            <td class="sticky-col">Type</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.type | default: "Standard" }}</td>
-            {% for item in other_products limit: 6 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.type | default: "Standard" }}</td>
+            <td class="sticky-col">Tank Dimensions / Format</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              {% assign title_down = product.title | downcase %}
+              {% if title_down contains '41100' or title_down contains 'solo-pil standard' %}
+                3 5/8" (Canadian / European Format)
+              {% elsif title_down contains '41101' or title_down contains 'solo-pil maxi' %}
+                4" (US Format)
+              {% elsif title_down contains '41200' or title_down contains 'duo-pil maxi' %}
+                Dual: 3 5/8" & 6" Bulk Reservoir
+              {% elsif title_down contains '41201' or title_down contains 'duo-pil standard' %}
+                Dual: 3 5/8" (Can/Eur) & 4" (US)
+              {% elsif title_down contains '41202' or title_down contains 'duo-pil precision' %}
+                Dual Precision: 3 5/8" & 4" Wells
+              {% else %}
+                {{ product.metafields.custom.tank_capacity | default: "Standard Professional Well" }}
+              {% endif %}
+            </td>
+            {% for item in other_products limit: 5 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                {% assign item_title_down = item.title | downcase %}
+                {% if item_title_down contains '41100' or item_title_down contains 'solo-pil standard' %}
+                  3 5/8" (Canadian / European Format)
+                {% elsif item_title_down contains '41101' or item_title_down contains 'solo-pil maxi' %}
+                  4" (US Format)
+                {% elsif item_title_down contains '41200' or item_title_down contains 'duo-pil maxi' %}
+                  Dual: 3 5/8" & 6" Bulk Reservoir
+                {% elsif item_title_down contains '41201' or item_title_down contains 'duo-pil standard' %}
+                  Dual: 3 5/8" (Can/Eur) & 4" (US)
+                {% elsif item_title_down contains '41202' or item_title_down contains 'duo-pil precision' %}
+                  Dual Precision: 3 5/8" & 4" Wells
+                {% else %}
+                  {{ item.metafields.custom.tank_capacity | default: "Standard Professional Well" }}
+                {% endif %}
+              </td>
+            {% endfor %}
+          </tr>
+
+          <!-- 4. CONTROL TYPE & REGULATION -->
+          <tr>
+            <td class="sticky-col">Thermostat Control</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              {% assign title_down = product.title | downcase %}
+              {% if title_down contains 'precision' or title_down contains '41202' %}
+                Dual Ultra-Precise Electronic Thermostat (±2°C)
+              {% elsif title_down contains 'duo' %}
+                Dual Independent Rotary Thermostats
+              {% else %}
+                Manual Precision Analog Dial
+              {% endif %}
+            </td>
+            {% for item in other_products limit: 5 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                {% assign item_title_down = item.title | downcase %}
+                {% if item_title_down contains 'precision' or item_title_down contains '41202' %}
+                  Dual Ultra-Precise Electronic Thermostat (±2°C)
+                {% elsif item_title_down contains 'duo' %}
+                  Dual Independent Rotary Thermostats
+                {% else %}
+                  Manual Precision Analog Dial
+                {% endif %}
+              </td>
+            {% endfor %}
+          </tr>
+
+          <!-- 5. WAX COMPATIBILITY -->
+          <tr>
+            <td class="sticky-col">Wax Compatibility</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              Warm Wax & Hot Depilatory Formulations
+            </td>
+            {% for item in other_products limit: 5 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                Warm Wax & Hot Depilatory Formulations
+              </td>
+            {% endfor %}
+          </tr>
+
+          <!-- 6. CERTIFICATIONS & WARRANTY -->
+          <tr>
+            <td class="sticky-col">Warranty & Safety</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              2 Years Warranty | CSA & UL Approved
+            </td>
+            {% for item in other_products limit: 5 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                2 Years Warranty | CSA & UL Approved
+              </td>
             {% endfor %}
           </tr>
         </tbody>
@@ -134,7 +220,7 @@
 .compare-modal {
   background: #fff; border-radius: 24px; padding: 2.5rem; width: 90%; max-width: 550px; position: relative; max-height: 90vh; overflow-y: auto;
 }
-.compare-modal--wide { max-width: 1050px; }
+.compare-modal--wide { max-width: 1100px; }
 .compare-modal__close { position: absolute; top: 1.5rem; right: 1.5rem; background: #eee; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
 .compare-modal__title { font-size: 2rem; font-weight: 700; color: #a22938; margin-bottom: 0.5rem; }
 .compare-modal__sub { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
@@ -147,15 +233,16 @@
 
 /* TABLE COMPARISON */
 .compare-table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
-.compare-table { width: 100%; border-collapse: collapse; min-width: 650px; }
-.compare-table th, .compare-table td { padding: 1rem; border: 1px solid #eee; text-align: center; font-size: 0.85rem; }
+.compare-table { width: 100%; border-collapse: collapse; min-width: 750px; }
+.compare-table th, .compare-table td { padding: 1rem; border: 1px solid #eee; text-align: center; font-size: 0.85rem; line-height: 1.4; }
+.sticky-col { text-align: left !important; font-weight: 700; background: #fafafa; color: #111; width: 180px; }
 .this-model-col { border: 2px solid #a22938 !important; background: #fdf5f6; }
-.this-model-badge { background: #a22938; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 10px; }
-.compare-product-img { width: 70px; height: 70px; margin: 0.5rem auto; display: flex; align-items: center; justify-content: center; }
+.this-model-badge { background: #a22938; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 10px; display: inline-block; margin-bottom: 6px; }
+.compare-product-img { width: 80px; height: 80px; margin: 0.5rem auto; display: flex; align-items: center; justify-content: center; }
 .compare-product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
 .placeholder-img { width: 100%; height: 100%; background: #eee; border-radius: 8px; }
-.compare-product-price { font-weight: 700; color: #a22938; margin: 0.3rem 0; }
-.compare-product-btn { display: block; background: #a22938; color: #fff; padding: 0.4rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; font-weight: 600; margin-top: 0.4rem; }
+.compare-product-price { font-weight: 700; color: #a22938; margin: 0.3rem 0; font-size: 1rem; }
+.compare-product-btn { display: inline-block; background: #a22938; color: #fff; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; font-weight: 600; margin-top: 0.4rem; }
 .compare-modal__footer { display: flex; justify-content: center; gap: 1rem; }
 .compare-btn-sec { padding: 0.75rem 2rem; border-radius: 20px; border: 1px solid #ccc; background: #fff; cursor: pointer; font-weight: 600; }
 
@@ -171,7 +258,6 @@
       });
     }
 
-    // Toggle para los checkboxes de selección
     const checkboxes = document.querySelectorAll('.compare-checkbox');
     checkboxes.forEach(chk => {
       chk.addEventListener('change', function() {
@@ -191,7 +277,6 @@
   }
 
   function goToStep2() {
-    // Oculta/Muestra las columnas según los checkboxes seleccionados en el Paso 1
     const checkboxes = document.querySelectorAll('.compare-checkbox');
     checkboxes.forEach(chk => {
       const prodId = chk.getAttribute('data-product-id');
@@ -212,7 +297,7 @@
 
   function goToStep1() {
     document.getElementById('CompareModalStep2').classList.remove('is-open');
-    document.getElementById('CompareModalStep1').classList.add('is-open');
+    document.getElementById('CompareModalStep1').classList.open;
   }
 </script>
 
@@ -229,8 +314,7 @@
     {
       "type": "collection",
       "id": "compare_collection",
-      "label": "Override Collection to Compare",
-      "info": "If left empty, it will automatically use the collection of the current product."
+      "label": "Override Collection to Compare"
     }
   ],
   "presets": [{ "name": "Product Compare Modal" }]
