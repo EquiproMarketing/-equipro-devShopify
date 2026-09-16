@@ -2,23 +2,8 @@
     "sections": {
       "subnav": {
         "type": "category-subnav",
-        "blocks": {
-          "card_item_mag_sub": {
-            "type": "card_item",
-            "settings": {
-              "parent_category": "Skincare Equipment",
-              "sub_category": "Mag-lamps",
-              "collection": "mag-lamps",
-              "product": "",
-              "custom_title": "Mag-Lamps",
-              "badge_text": "Professional",
-              "custom_url": ""
-            }
-          }
-        },
-        "block_order": [
-          "card_item_mag_sub"
-        ],
+        "blocks": {},
+        "block_order": [],
         "settings": {
           "category_menu": "skincare-equipment",
           "hide_on_mobile": true
