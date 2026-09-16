@@ -6,6 +6,7 @@
   {% assign target_collection = collections['all'] %}
 {% endif %}
 
+{% assign current_sku = product.variants.first.sku | default: '' %}
 {% assign current_type_raw = product.type | downcase %}
 {% assign product_url_raw = product.url | downcase %}
 {% assign product_title_down = product.title | downcase %}
@@ -39,13 +40,17 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Filtrado estricto para evitar duplicados del mismo producto -->
-      {% assign other_products = target_collection.products | where_exp: "item", "item.handle != product.handle" %}
-      {% for item in other_products limit: 5 %}
-        <label class="compare-select-item is-selected">
-          <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
-          <span>{{ item.title }}</span>
-        </label>
+      <!-- Filtrado estricto por ID, Handle y SKU para garantizar cero duplicados -->
+      {% assign items_count = 0 %}
+      {% for item in target_collection.products %}
+        {% assign item_sku = item.variants.first.sku | default: '' %}
+        {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+          {% assign items_count = items_count | plus: 1 %}
+          <label class="compare-select-item is-selected">
+            <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
+            <span>{{ item.title }}</span>
+          </label>
+        {% endif %}
       {% endfor %}
     </div>
 
@@ -82,19 +87,24 @@
             </th>
 
             <!-- COLUMNAS OTROS MODELOS -->
-            {% for item in other_products limit: 5 %}
-              <th class="compare-col" data-product-id="{{ item.id }}">
-                <div class="compare-product-img">
-                  {% if item.featured_image != blank %}
-                    <img src="{{ item.featured_image | image_url: width: 140 }}" alt="{{ item.title | escape }}">
-                  {% else %}
-                    <div class="placeholder-img"></div>
-                  {% endif %}
-                </div>
-                <strong>{{ item.title }}</strong>
-                <div class="compare-product-price">{{ item.price | money }}</div>
-                <a href="{{ item.url }}" class="compare-product-btn">View Details</a>
-              </th>
+            {% assign items_count = 0 %}
+            {% for item in target_collection.products %}
+              {% assign item_sku = item.variants.first.sku | default: '' %}
+              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                {% assign items_count = items_count | plus: 1 %}
+                <th class="compare-col" data-product-id="{{ item.id }}">
+                  <div class="compare-product-img">
+                    {% if item.featured_image != blank %}
+                      <img src="{{ item.featured_image | image_url: width: 140 }}" alt="{{ item.title | escape }}">
+                    {% else %}
+                      <div class="placeholder-img"></div>
+                    {% endif %}
+                  </div>
+                  <strong>{{ item.title }}</strong>
+                  <div class="compare-product-price">{{ item.price | money }}</div>
+                  <a href="{{ item.url }}" class="compare-product-btn">View Details</a>
+                </th>
+              {% endif %}
             {% endfor %}
           </tr>
         </thead>
@@ -105,27 +115,37 @@
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
               <strong>{{ product.variants.first.sku | default: product.id }}</strong>
             </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                <strong>{{ item.variants.first.sku | default: item.id }}</strong>
-              </td>
+            {% assign items_count = 0 %}
+            {% for item in target_collection.products %}
+              {% assign item_sku = item.variants.first.sku | default: '' %}
+              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                {% assign items_count = items_count | plus: 1 %}
+                <td class="compare-col" data-product-id="{{ item.id }}">
+                  <strong>{{ item.variants.first.sku | default: item.id }}</strong>
+                </td>
+              {% endif %}
             {% endfor %}
           </tr>
 
           {% case category_key %}
             {% when 'steamers' %}
-              <!-- ================= STEAMERS SPECIFICATIONS ================= -->
+              <!-- STEAMERS SPECIFICATIONS -->
               <tr>
                 <td class="sticky-col">Control Technology</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
                   {% if t_down contains 'digipro' or t_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
                 </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% assign it_down = item.title | downcase %}
-                    {% if it_down contains 'digipro' or it_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
-                  </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'digipro' or it_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
+                    </td>
+                  {% endif %}
                 {% endfor %}
               </tr>
               <tr>
@@ -133,116 +153,74 @@
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   Integrated Purifying Ozone Lamp
                 </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    Integrated Purifying Ozone Lamp
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Water Jar / Capacity</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  High-Capacity Thermal Glass Reservoir
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    High-Capacity Thermal Glass Reservoir
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Arm & Nozzle Adjustability</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  360° Directional Swivel Nozzle
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    360° Directional Swivel Nozzle
-                  </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      Integrated Purifying Ozone Lamp
+                    </td>
+                  {% endif %}
                 {% endfor %}
               </tr>
 
             {% when 'wax_heaters' %}
-              <!-- ================= WAX HEATERS SPECIFICATIONS ================= -->
+              <!-- WAX HEATERS SPECIFICATIONS -->
               <tr>
                 <td class="sticky-col">Number of Tanks</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
                   {% if t_down contains 'duo' or t_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
                 </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% assign it_down = item.title | downcase %}
-                    {% if it_down contains 'duo' or it_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Chamber Sizes / Format</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains '41100' or t_down contains 'solo-pil standard' %}3 5/8" (Canadian / European Format)
-                  {% elsif t_down contains '41101' or t_down contains 'solo-pil maxi' %}4" (US Format)
-                  {% elsif t_down contains '41200' or t_down contains 'duo-pil maxi' %}Dual: 3 5/8" & 6" Bulk Reservoir
-                  {% elsif t_down contains '41201' or t_down contains 'duo-pil standard' %}Dual: 3 5/8" (Can/Eur) & 4" (US)
-                  {% elsif t_down contains '41202' or t_down contains 'duo-pil precision' %}Dual Precision: 3 5/8" & 4" Wells
-                  {% else %}{{ product.metafields.custom.tank_capacity | default: "Standard Professional Well" }}{% endif %}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% assign it_down = item.title | downcase %}
-                    {% if it_down contains '41100' or it_down contains 'solo-pil standard' %}3 5/8" (Canadian / European Format)
-                    {% elsif it_down contains '41101' or it_down contains 'solo-pil maxi' %}4" (US Format)
-                    {% elsif it_down contains '41200' or it_down contains 'duo-pil maxi' %}Dual: 3 5/8" & 6" Bulk Reservoir
-                    {% elsif it_down contains '41201' or it_down contains 'duo-pil standard' %}Dual: 3 5/8" (Can/Eur) & 4" (US)
-                    {% elsif it_down contains '41202' or it_down contains 'duo-pil precision' %}Dual Precision: 3 5/8" & 4" Wells
-                    {% else %}{{ item.metafields.custom.tank_capacity | default: "Standard Professional Well" }}{% endif %}
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Thermostat Regulation</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'precision' or t_down contains '41202' %}Dual Electronic Thermostat (±2°C Precision)
-                  {% elsif t_down contains 'duo' %}Dual Independent Rotary Thermostats
-                  {% else %}Manual Precision Analog Dial{% endif %}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% assign it_down = item.title | downcase %}
-                    {% if it_down contains 'precision' or it_down contains '41202' %}Dual Electronic Thermostat (±2°C Precision)
-                    {% elsif it_down contains 'duo' %}Dual Independent Rotary Thermostats
-                    {% else %}Manual Precision Analog Dial{% endif %}
-                  </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'duo' or it_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
+                    </td>
+                  {% endif %}
                 {% endfor %}
               </tr>
 
             {% else %}
-              <!-- ================= GENERIC CLEAN FALLBACK ================= -->
+              <!-- FALLBACK -->
               <tr>
                 <td class="sticky-col">Product Status</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
                 </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
-                  </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
+                    </td>
+                  {% endif %}
                 {% endfor %}
               </tr>
           {% endcase %}
 
-          <!-- CERTIFICATIONS & WARRANTY (APLICA A TODO EQUIPAMIENTO EQUIPRO) -->
+          <!-- WARRANTY & SAFETY -->
           <tr>
             <td class="sticky-col">Warranty & Safety</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
               2 Years Warranty | CSA & UL Approved
             </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                2 Years Warranty | CSA & UL Approved
-              </td>
+            {% assign items_count = 0 %}
+            {% for item in target_collection.products %}
+              {% assign item_sku = item.variants.first.sku | default: '' %}
+              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                {% assign items_count = items_count | plus: 1 %}
+                <td class="compare-col" data-product-id="{{ item.id }}">
+                  2 Years Warranty | CSA & UL Approved
+                </td>
+              {% endif %}
             {% endfor %}
           </tr>
         </tbody>
