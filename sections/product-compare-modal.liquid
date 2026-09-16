@@ -15,7 +15,7 @@
 {% assign category_key = 'generic' %}
 {% if current_type_raw contains 'wax' or product_url_raw contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
   {% assign category_key = 'wax_heaters' %}
-{% elsif current_type_raw contains 'steamer' or product_url_raw contains 'steamers' or product_title_down contains 'steamer' or product_title_down contains 'vapoderm' or product_title_down contains 'digipro' %}
+{% elsif current_type_raw contains 'steamer' or product_url_raw contains 'steamers' or product_title_down contains 'steamer' or product_title_down contains 'vapoderm' or product_title_down contains 'digipro' or product_title_down contains 'classic steamer' %}
   {% assign category_key = 'steamers' %}
 {% elsif current_type_raw contains 'table' or current_type_raw contains 'bed' or product_url_raw contains 'tables' or product_title_down contains 'table' %}
   {% assign category_key = 'treatment_tables' %}
@@ -40,7 +40,7 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Filtrado estricto por ID, Handle y SKU para garantizar cero duplicados -->
+      <!-- Filtrado estricto por ID, Handle y SKU para cero duplicados -->
       {% assign items_count = 0 %}
       {% for item in target_collection.products %}
         {% assign item_sku = item.variants.first.sku | default: '' %}
@@ -62,8 +62,8 @@
 <div class="compare-modal-overlay" id="CompareModalStep2">
   <div class="compare-modal compare-modal--wide">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">Technical Model Comparison</h2>
-    <p class="compare-modal__sub">Compare key specs side by side to choose the best option for your workspace.</p>
+    <h2 class="compare-modal__title">Technical Steamer Comparison</h2>
+    <p class="compare-modal__sub">Compare key performance specs side by side to choose the best steamer for your treatment room.</p>
 
     <div class="compare-table-scroll">
       <table class="compare-table">
@@ -129,12 +129,16 @@
 
           {% case category_key %}
             {% when 'steamers' %}
-              <!-- STEAMERS SPECIFICATIONS -->
+              <!-- ================= STEAMERS SPECIFICATIONS ================= -->
               <tr>
-                <td class="sticky-col">Control Technology</td>
+                <td class="sticky-col">Steam Output Levels</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'digipro' or t_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}
+                    3 Selectable Steam Levels (Digital)
+                  {% else %}
+                    Standard Continuous Steam Output
+                  {% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -143,15 +147,25 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'digipro' or it_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}
+                        3 Selectable Steam Levels (Digital)
+                      {% else %}
+                        Standard Continuous Steam Output
+                      {% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
+
               <tr>
-                <td class="sticky-col">Ozone Function</td>
+                <td class="sticky-col">Integrated Timer</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Integrated Purifying Ozone Lamp
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}
+                    Yes (Integrated Digital Timer)
+                  {% else %}
+                    No (Manual Operation)
+                  {% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -159,7 +173,117 @@
                   {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
-                      Integrated Purifying Ozone Lamp
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}
+                        Yes (Integrated Digital Timer)
+                      {% else %}
+                        No (Manual Operation)
+                      {% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Essential Oils System</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}
+                    Integrated Essential Oil System
+                  {% else %}
+                    Optional Aromatherapy Strip
+                  {% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}
+                        Integrated Essential Oil System
+                      {% else %}
+                        Optional Aromatherapy Strip
+                      {% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Jar Capacity & Autonomy</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  42 oz Exterior PVC Jar with Handle (40 min Autonomy)
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      42 oz Exterior PVC Jar with Handle (40 min Autonomy)
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Arm & Nozzle Design</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  Directional / Adjustable Head & Arm with Special No-Drip Nozzle
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      Directional / Adjustable Head & Arm with Special No-Drip Nozzle
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Dimensions & Weight</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  10" x 8.5" x 32" H | 21 lbs (9 kg)
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      10" x 8.5" x 32" H | 21 lbs (9 kg)
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Warranty Coverage</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}
+                    2 Years Full Manufacturer Warranty
+                  {% else %}
+                    1 Year Manufacturer Warranty
+                  {% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}
+                        2 Years Full Manufacturer Warranty
+                      {% else %}
+                        1 Year Manufacturer Warranty
+                      {% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
@@ -206,11 +330,11 @@
               </tr>
           {% endcase %}
 
-          <!-- WARRANTY & SAFETY -->
+          <!-- SAFETY & COMPLIANCE -->
           <tr>
-            <td class="sticky-col">Warranty & Safety</td>
+            <td class="sticky-col">Safety Certification</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              2 Years Warranty | CSA & UL Approved
+              CSA & UL Approved Electrical Components
             </td>
             {% assign items_count = 0 %}
             {% for item in target_collection.products %}
@@ -218,7 +342,7 @@
               {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
                 {% assign items_count = items_count | plus: 1 %}
                 <td class="compare-col" data-product-id="{{ item.id }}">
-                  2 Years Warranty | CSA & UL Approved
+                  CSA & UL Approved Electrical Components
                 </td>
               {% endif %}
             {% endfor %}
