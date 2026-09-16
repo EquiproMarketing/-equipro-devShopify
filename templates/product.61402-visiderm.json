@@ -1,0 +1,279 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Visiderm Skin Analysis Station",
+          "intro_highlight": "The Visiderm skin analysis station provides an optimized diagnostic foundation for advanced skincare environments by balancing practitioner ergonomics with premium Canadian manufacturing standards.",
+          "custom_description": "<p>The Visiderm is engineered to elevate early-stage client consultations through highly precise structural skin analysis. Featuring a specialized 3 diopter optical magnification lens and powered by six synchronized neon tubes, this compact powerhouse delivers shadow-free, crystal-clear illumination across the entire facial landscape. It enables advanced skincare providers to identify deep-seated dermal irregularities, structural sun damage, and localized hydration imbalances before they become visible to the naked eye.</p>",
+          "subtitle": "Advanced Optical Diagnostics for Premium Salons",
+          "secondary_description": "<p>Positive attribute construction is central to the Equipro approach. To preserve the optical clarity and professional aesthetics of Visiderm, routine maintenance action with mild cleaning agents formulated for clinical environments should be performed after every consultation. The outer surface boasts superior scratch resistance property, ensuring an pristine condition outcome across a multi-year operational timeframe. Consistent care guarantees long-term service consistency and enhanced client comfort.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "visiderm",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Professional Applications:",
+              "answer": "<p>Enables practicing estheticians to perform structured dermal evaluations, identifying subsurface hydration loss, sebum buildup, and pigmentation irregularities during initial consultations.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinic Spa Therapist:",
+              "answer": "<p>Delivers shadow-free 3-diopter optical magnification and 6 synchronized neon tubes for precise diagnostic clarity during clinical skin treatments and facial prep.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Cosmetic Injector:",
+              "answer": "<p>Allows clear visualization of skin texture and structural vascularity prior to advanced cosmetic and facial rejuvenation procedures.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>61402</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Robust housing with integrated magnification lens and neon tube lighting system</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>13\" x 10\" x 18\" H (33 cm x 25.4 cm x 45.7 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>20 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification</td>\n        <td>3 diopters magnification lens for detailed skin examination</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>6 neon tubes for enhanced visualization under specialized lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Integrated on/off switch for neon lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American electrical requirements (ETL approved)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Skin analysis and consultation tool with magnification and specialized lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>ETL approved, stable base design for safe professional use</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>ETL approved; CSA & UL compliant components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin analysis and client consultations in aesthetic and spa settings</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability:",
+              "text": "High-grade optical lens construction with an integrated multi-tube housing assembly to ensure flawless diagnostic performance outcome in high-volume clinic days."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Advanced Ergonomics:",
+              "text": "Precision balanced chassis configuration designed to benefit technical precision for practitioners, maximizing professional operational efficiency."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Clinical Aesthetic:",
+              "text": "A clean, professional premium white finish that ensures seamless workspace compatibility within any high-end salon or medi-spa environment."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Mounting & Setup:",
+              "text": "Secure the Visiderm on a stable workstation or mount it directly onto an approved Equipro deluxe column via the proper adapter bracket."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Connection:",
+              "text": "Plug the unit into an approved wall outlet or a designated 6-outlet master power bar, confirming the localized line voltage."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Client Positioning:",
+              "text": "Direct the client to place their face comfortably within the specialized viewing enclosure, ensuring a complete seal against ambient room light."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Diagnostic Activation:",
+              "text": "Activate the integrated power switch to initialize all six diagnostic neon tubes simultaneously."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Skin Examination:",
+              "text": "Observe the target area through the high-grade 3 diopter magnification viewing pane to analyze the subsurface structures."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Environmental Control:",
+              "text": "The equipment must be kept in a completely dry, climate-controlled indoor environment at all times to avoid electrical oxidation."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Authorized Service:",
+              "text": "All structural repairs or technical modifications must be performed exclusively by certified Equipro technicians to prevent voiding the factory warranty."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Liquid Avoidance:",
+              "text": "Do not spray liquid sanitizers directly into the internal light ballasts or onto the exposed electrical circuitry during room turnaround."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do I clean and maintain the optical system?",
+              "answer": "<p>Wipe optical components with non-abrasive lens cleaning cloths and mild cleaning agents formulated for clinical optical equipment.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can the internal illumination tubes be replaced by the user?",
+              "answer": "<p>Replacement neon tubes are available as replacement parts and can be swapped following the manufacturer guide.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the warranty coverage for the Visiderm?",
+              "answer": "<p>The Visiderm includes a 1-Year Manufacturer Warranty covering parts and labor.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Are the electrical components safe for clinical use?",
+              "answer": "<p>Yes, all internal electrical components are ETL approved and CSA & UL compliant for commercial clinical standards.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the return policy for this equipment?",
+              "answer": "<p>Equipment returns are subject to Equipro commercial distributor policies and warranty terms.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
