@@ -1,287 +1,299 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "settings": {
-          "back_text": "Back",
-          "custom_title": "Duo-Pil Precision Professional Wax Warmer",
-          "intro_highlight": "Crafted for high-volume aesthetic environments, the Duo-pil Précision 41202 represents the standard in North American manufacturing, prioritizing practitioner ergonomics and uncompromising thermal stability. By eliminating temperature fluctuations, this dual-well system allows professionals to maintain a seamless workflow and optimal consistency during intensive depilation services.",
-          "custom_description": "<p>The Duo-pil Précision 41202 is purpose-built for licensed professionals, including Estheticians, Brow Specialists, and Clinical Spa Techs. Its fully adjustable dual-thermostat design targets workflow delays during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing full-body depilation, facial waxing, or specialized brow sculpting, this professional station adjusts to your seamless workflow integration with instant-response calibration and friction-free adjustment.</p>",
-          "subtitle": "Independent Dual-Thermostat Temperature Control",
-          "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optimal performance and thermal efficiency of the Duo-pil Précision, wipe down heating chambers with professional wax solvent formulated for aesthetic environments daily. The heavy-duty metallic casing features inherent resistance to residue buildup, ensuring a pristine professional appearance across years of heavy usage. Consistent care extends heating element lifespan and maintains uniform temperature distribution.</p>",
-          "show_variant_selectors": true,
-          "show_color_option": true,
-          "show_size_option": true,
-          "featured_product": "duo-pil-precision",
-          "btn_label": "ADD TO CART",
-          "show_compare_btn": false,
-          "compare_btn_label": "Compare with other models"
-        }
-      },
-      "main_product_characteristics_Hp7Baq": {
-        "type": "main-product-characteristics",
-        "blocks": {
-          "faq_item_mcpNpt": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Esthetician:",
-              "answer": "<p>Allows high-volume estheticians to maintain soft wax and hard wax at distinct, highly regulated temperatures, eliminating client wait times during full-body and facial depilatory services.</p>"
-            }
-          },
-          "faq_item_74hYTC": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Brow Specialist:",
-              "answer": "<p>Delivers ultra-precise temperature regulation (±2°C) required for delicate facial hair removal and brow sculpting, ensuring optimal viscosity for sensitive skin areas.</p>"
-            }
-          },
-          "faq_item_bhzmwM": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Clinical Spa Tech:",
-              "answer": "<p>Dual 3-5/8\" and 4\" chambers seamlessly fit both Canadian/European and US standard wax containers, providing maximum versatility across multi-room commercial clinical settings.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_mcpNpt",
-          "faq_item_74hYTC",
-          "faq_item_bhzmwM"
-        ],
-        "name": "Product Characteristics",
-        "settings": {
-          "accordion_heading": "Professional Applications",
-          "show_shipping": true,
-          "shipping_title": "Shipping",
-          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
-          "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41202</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Sturdy heat-resistant external casing with professional-grade aluminum internal components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>12.75\" x 8.5\" x 5\" (32.4 cm x 21.6 cm x 12.7 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>10 lb (4.5 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Reservoir Configuration</td>\n        <td>Dual independent heating wells measuring 3.625\" (3 5/8\") and 4\" in diameter</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Format Compatibility</td>\n        <td>Simultaneously accommodates Canadian / European standard format (3 5/8\") and US standard format (4\") wax containers</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Two completely independent, ultra-precise electronic thermostats</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Stability</td>\n        <td>Highly stable regulation with a tolerance precision of ±2° Celsius</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Specially engineered for low-temperature hot wax or warm wax applications</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>Ultra-fast thermal response system designed for rapid melting and stabilization</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Electrical Approvals</td>\n        <td>All internal electrical infrastructure features CSA and UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Main heating unit only (Standard wax pots / cassolettes sold separately)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Full Manufacturer Warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
-          "table_col1_header": "TECHNICAL ASPECT",
-          "table_col2_header": "SPECIFICATION DETAILS"
-        }
-      },
-      "banner_features": {
-        "type": "product-key-features-banner",
-        "blocks": {
-          "feature_item_8YjzYH": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Rapid-Heating Core:",
-              "text": "Engineered with a 250-watt internal element to ensure rapid wax melting in high-demand aesthetic salons."
-            }
-          },
-          "feature_item_F4iL9F": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Dual Tank Configuration:",
-              "text": "Independent 4-inch tanks designed to accommodate both lukewarm and hot wax simultaneously for versatile technicians, maximizing service efficiency."
-            }
-          },
-          "feature_item_RXpARk": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Heavy-Duty Construction:",
-              "text": "Commercial-grade metal housing that withstands constant daily use in a busy professional environment."
-            }
-          }
-        },
-        "block_order": [
-          "feature_item_8YjzYH",
-          "feature_item_F4iL9F",
-          "feature_item_RXpARk"
-        ],
-        "settings": {
-          "heading": "Key Features for the Professional Station",
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "right",
-          "bg_color": "#a22938",
-          "text_color": "#ffffff",
-          "padding_top": 60,
-          "padding_bottom": 60,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "how_to": {
-        "type": "product-how-to",
-        "blocks": {
-          "section_header_XjqiGV": {
-            "type": "section_header",
-            "settings": {
-              "title": "How to Use"
-            }
-          },
-          "instruction_item_fd7CbG": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Chamber Setup:",
-              "text": "Insert the appropriate professional wax containers (cassolettes) into the heating tanks."
-            }
-          },
-          "instruction_item_8VfGh8": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Initial Rapid Heat:",
-              "text": "Turn on the unit and set both independent thermostats to the maximum setting for rapid initial melting."
-            }
-          },
-          "instruction_item_z9KEfh": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Temperature Calibration:",
-              "text": "Once the wax reaches a liquid state, reduce the thermostats to the desired working temperatures for lukewarm or hot wax."
-            }
-          },
-          "instruction_item_tr6WqH": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Safety Check:",
-              "text": "Test the wax temperature on the inner wrist before application to ensure client comfort and safety."
-            }
-          },
-          "instruction_item_BqmtiA": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "End of Day Shutdown:",
-              "text": "Turn off the unit and cover the tanks at the end of the day to maintain hygiene and protect the wax."
-            }
-          },
-          "section_header_dGJcmr": {
-            "type": "section_header",
-            "settings": {
-              "title": "Safety & Disclaimers"
-            }
-          },
-          "instruction_item_CRmBXw": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Container Mandate:",
-              "text": "Never pour wax directly into the heating tanks; always use approved metal inserts or original wax tins."
-            }
-          },
-          "instruction_item_QqEHKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Power Placement:",
-              "text": "Keep the unit away from water sources and ensure the power cord is clear of high-traffic areas."
-            }
-          },
-          "instruction_item_P8t7dx": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Sanitization Safety:",
-              "text": "Allow the unit to cool completely before attempting any deep cleaning with professional wax solvents."
-            }
-          }
-        },
-        "block_order": [
-          "section_header_XjqiGV",
-          "instruction_item_fd7CbG",
-          "instruction_item_8VfGh8",
-          "instruction_item_z9KEfh",
-          "instruction_item_tr6WqH",
-          "instruction_item_BqmtiA",
-          "section_header_dGJcmr",
-          "instruction_item_CRmBXw",
-          "instruction_item_QqEHKc",
-          "instruction_item_P8t7dx"
-        ],
-        "settings": {
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "left",
-          "image_aspect_ratio": "adapt",
-          "title_color": "#a22938",
-          "text_color": "#444444",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "faq": {
-        "type": "category-faq",
-        "blocks": {
-          "faq_item_JkpEmj": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Are the wax containers included with the unit?",
-              "answer": "<p>No, standard wax pots and cassolettes are sold separately as station accessories.</p>"
-            }
-          },
-          "faq_item_r7tr7G": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Can I use hard and soft wax at the same time?",
-              "answer": "<p>Yes, the independent dual thermostats allow you to run lukewarm soft wax and hot hard wax simultaneously at different temperatures.</p>"
-            }
-          },
-          "faq_item_dd9n3Q": {
-            "type": "faq_item",
-            "settings": {
-              "question": "How fast does the wax heat up?",
-              "answer": "<p>The 250-watt internal element features an ultra-fast thermal response system for rapid melting and stabilization.</p>"
-            }
-          },
-          "faq_item_8YiyhY": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What are the dimensions of the heating tanks?",
-              "answer": "<p>The dual independent wells measure 3.625 inches (3 5/8\") and 4 inches in diameter to fit Canadian/European and US format tins.</p>"
-            }
-          },
-          "faq_item_GkbCk6": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Is this unit manufactured in North America?",
-              "answer": "<p>Yes, it is built according to rigorous North American manufacturing standards with CSA and UL approved internal electrical components.</p>"
-            }
-          },
-          "faq_item_eGYQwE": {
-            "type": "faq_item",
-            "settings": {
-              "question": "How do I clean spilled wax off the unit?",
-              "answer": "<p>Allow the unit to cool completely, then wipe down the metal chassis with a professional citrus-based wax solvent.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_JkpEmj",
-          "faq_item_r7tr7G",
-          "faq_item_dd9n3Q",
-          "faq_item_8YiyhY",
-          "faq_item_GkbCk6",
-          "faq_item_eGYQwE"
-        ],
-        "settings": {
-          "heading": "Your Questions, Answered",
-          "subheading": "Find answers to frequently asked technical and equipment questions.",
-          "layout": "grid",
-          "header_position": "left",
-          "open_first_item": true,
-          "title_color": "#a22938",
-          "question_color": "#111111",
-          "answer_color": "#555555",
-          "toggle_color": "#a22938",
-          "border_color": "#1a1a1a",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "compare_modal": {
-        "type": "product-compare-modal",
-        "settings": {}
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Duo-Pil Precision Professional Wax Warmer",
+        "intro_highlight": "Crafted for high-volume aesthetic environments, the Duo-pil Précision 41202 represents the standard in North American manufacturing, prioritizing practitioner ergonomics and uncompromising thermal stability. By eliminating temperature fluctuations, this dual-well system allows professionals to maintain a seamless workflow and optimal consistency during intensive depilation services.",
+        "custom_description": "<p>The Duo-pil Précision 41202 is purpose-built for licensed professionals, including Estheticians, Brow Specialists, and Clinical Spa Techs. Its fully adjustable dual-thermostat design targets workflow delays during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing full-body depilation, facial waxing, or specialized brow sculpting, this professional station adjusts to your seamless workflow integration with instant-response calibration and friction-free adjustment.</p>",
+        "subtitle": "Independent Dual-Thermostat Temperature Control",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optimal performance and thermal efficiency of the Duo-pil Précision, wipe down heating chambers with professional wax solvent formulated for aesthetic environments daily. The heavy-duty metallic casing features inherent resistance to residue buildup, ensuring a pristine professional appearance across years of heavy usage. Consistent care extends heating element lifespan and maintains uniform temperature distribution.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "duo-pil-precision",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
       }
     },
-    "order": [
-      "main",
-      "main_product_characteristics_Hp7Baq",
-      "banner_features",
-      "how_to",
-      "faq",
-      "compare_modal"
-    ]
-  }
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>Allows high-volume estheticians to maintain soft wax and hard wax at distinct, highly regulated temperatures, eliminating client wait times during full-body and facial depilatory services.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Brow Specialist:",
+            "answer": "<p>Delivers ultra-precise temperature regulation (±2°C) required for delicate facial hair removal and brow sculpting, ensuring optimal viscosity for sensitive skin areas.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Tech:",
+            "answer": "<p>Dual 3-5/8\" and 4\" chambers seamlessly fit both Canadian/European and US standard wax containers, providing maximum versatility across multi-room commercial clinical settings.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41202</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Sturdy heat-resistant external casing with professional-grade aluminum internal components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>12.75\" x 8.5\" x 5\" (32.4 cm x 21.6 cm x 12.7 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>10 lb (4.5 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Reservoir Configuration</td>\n        <td>Dual independent heating wells measuring 3.625\" (3 5/8\") and 4\" in diameter</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Format Compatibility</td>\n        <td>Simultaneously accommodates Canadian / European standard format (3 5/8\") and US standard format (4\") wax containers</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Two completely independent, ultra-precise electronic thermostats</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Stability</td>\n        <td>Highly stable regulation with a tolerance precision of ±2° Celsius</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Specially engineered for low-temperature hot wax or warm wax applications</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>Ultra-fast thermal response system designed for rapid melting and stabilization</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Electrical Approvals</td>\n        <td>All internal electrical infrastructure features CSA and UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Main heating unit only (Standard wax pots / cassolettes sold separately)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Full Manufacturer Warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Rapid-Heating Core:",
+            "text": "Engineered with a 250-watt internal element to ensure rapid wax melting in high-demand aesthetic salons."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Dual Tank Configuration:",
+            "text": "Independent 4-inch tanks designed to accommodate both lukewarm and hot wax simultaneously for versatile technicians, maximizing service efficiency."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Heavy-Duty Construction:",
+            "text": "Commercial-grade metal housing that withstands constant daily use in a busy professional environment."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chamber Setup:",
+            "text": "Insert the appropriate professional wax containers (cassolettes) into the heating tanks."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Initial Rapid Heat:",
+            "text": "Turn on the unit and set both independent thermostats to the maximum setting for rapid initial melting."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Temperature Calibration:",
+            "text": "Once the wax reaches a liquid state, reduce the thermostats to the desired working temperatures for lukewarm or hot wax."
+          }
+        },
+        "instruction_item_tr6WqH": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Safety Check:",
+            "text": "Test the wax temperature on the inner wrist before application to ensure client comfort and safety."
+          }
+        },
+        "instruction_item_BqmtiA": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "End of Day Shutdown:",
+            "text": "Turn off the unit and cover the tanks at the end of the day to maintain hygiene and protect the wax."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Container Mandate:",
+            "text": "Never pour wax directly into the heating tanks; always use approved metal inserts or original wax tins."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Placement:",
+            "text": "Keep the unit away from water sources and ensure the power cord is clear of high-traffic areas."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Sanitization Safety:",
+            "text": "Allow the unit to cool completely before attempting any deep cleaning with professional wax solvents."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_tr6WqH",
+        "instruction_item_BqmtiA",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the wax containers included with the unit?",
+            "answer": "<p>No, standard wax pots and cassolettes are sold separately as station accessories.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I use hard and soft wax at the same time?",
+            "answer": "<p>Yes, the independent dual thermostats allow you to run lukewarm soft wax and hot hard wax simultaneously at different temperatures.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How fast does the wax heat up?",
+            "answer": "<p>The 250-watt internal element features an ultra-fast thermal response system for rapid melting and stabilization.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the dimensions of the heating tanks?",
+            "answer": "<p>The dual independent wells measure 3.625 inches (3 5/8\") and 4 inches in diameter to fit Canadian/European and US format tins.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this unit manufactured in North America?",
+            "answer": "<p>Yes, it is built according to rigorous North American manufacturing standards with CSA and UL approved internal electrical components.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I clean spilled wax off the unit?",
+            "answer": "<p>Allow the unit to cool completely, then wipe down the metal chassis with a professional citrus-based wax solvent.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Products to Compare",
+        "compare_collection": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
