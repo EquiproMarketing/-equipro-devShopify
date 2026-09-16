@@ -136,36 +136,36 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between the Digipro and Classic models?",
-            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+            "question": "What is the difference between 3D and 5D?",
+            "answer": "<p>3D (approx. 3.5 diopters) offers a good balance between magnification and working distance. 5D provides stronger magnification for very detailed work such as micropigmentation or advanced extractions, but with a shorter working distance.</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use essential oils with these steamers?",
-            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+            "question": "Do the LEDs produce heat?",
+            "answer": "<p>No. Our lamps use cool LED technology that produces almost no heat, making them comfortable for both the client and the practitioner during long sessions.</p>"
           }
         },
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Do they have an automatic shutoff feature?",
-            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
+            "question": "Are these lamps suitable for professional use?",
+            "answer": "<p>Yes. They are designed for daily intensive use in esthetic clinics, spas, and beauty salons.</p>"
           }
         },
         "faq_item_n68NQD": {
           "type": "faq_item",
           "settings": {
-            "question": "What type of water should I use?",
-            "answer": "<p>To maximize the lifespan of the heating element and prevent mineral buildup, we strictly recommend using distilled water.</p>"
+            "question": "What is the warranty?",
+            "answer": "<p>All our magnifying lamps come with a manufacturer’s warranty. Details are available on each product page.</p>"
           }
         },
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty?",
-            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+            "question": "How do I choose the right model?",
+            "answer": "<p>For general facial and skincare treatments, 3D is usually sufficient. For highly detailed procedures, choose 5D.</p>"
           }
         }
       },
