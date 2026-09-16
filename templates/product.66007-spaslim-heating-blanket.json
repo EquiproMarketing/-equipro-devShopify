@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "SpaSlim Professional Heating Blanket",
+          "intro_highlight": "The SpaSlim Heating Blanket represents a critical baseline for client thermal regulation, seamlessly integrating North American manufacturing precision with exceptional practitioner workflow standards. Built for durability in professional settings, this specialized heated mattress eliminates the common clinical chill that disrupts client relaxation, allowing skincare practitioners to maintain uncompromised technical accuracy during long-duration treatments.",
+          "custom_description": "<p>SpaSlim Heating Blanket is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Skincare Specialist. Its ergonomic, precision-engineered design targets lower-back tension during extended treatment sessions, enabling sharper focus on treatment execution and enhanced client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your workflow need with instant-response calibration and intuitive one-hand control.</p>",
+          "subtitle": "Multi-Zone Thermal Optimization for High-End Salons",
+          "secondary_description": "<p>Positive attribute is central to the Equipro approach. To preserve the technical precision and repeatable results of SpaSlim Heating Blanket, maintenance action with a soft sanitizing agent formulated for professional clinic environments should be completed after every session. The surface component exhibits exceptional chemical and wear resistance property, ensuring an unblemished aesthetic condition outcome across a multi-year timeframe. Consistent care delivers optimized operational efficiency and guards against premature structural wear.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "spaslim-heating-blanket",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Licensed Esthetician:",
+              "answer": "<p>Maintains optimal client body temperature during extended facial treatments, peels, and body wrap protocols with 3 independently controlled heating zones.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Massage & Body Therapist:",
+              "answer": "<p>Provides deep-tissue warming across an adjustable 30°C to 60°C temperature range, relaxing muscles prior to therapeutic massage and body contouring.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Technician:",
+              "answer": "<p>Constructed from M1 fireproof, waterproof, antimicrobial, and fungicide-treated fabric with built-in internal heat protectors for maximum clinical safety.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>66007</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Waterproof, fireproof (M1 approved) fabric treated with anti-microbial and fungicide properties</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 36\" W (183 cm x 91.4 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>18 lb (8.3 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Zones</td>\n        <td>3 independently controlled heating zones</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>30°C to 60°C (86°F to 140°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Wattage</td>\n        <td>330 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>User-friendly handset / touchpad control with built-in timer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated heat protectors, waterproof construction, M1 fireproof rating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CE approved, CSA & UL compatible electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional spa heating blanket for body treatments, infrared therapy, and client comfort</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability (Advanced Surface Treatment):",
+              "text": "Construction with antimicrobial, waterproof, and fungicide-treated materials to guarantee maximum hygiene and stain resistance in high-volume treatment environments."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "M1 Safety Accreditation:",
+              "text": "Design approach implementing fully insulated internal thermal protectors engineered to deliver flawless overheat protection for practitioners and clients."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Precision Control Interface:",
+              "text": "Functional quality featuring an integrated timer and a highly accurate 30°C to 60°C adjustable temperature spectrum across 3 independent zones."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Station Preparation:",
+              "text": "Lay the 36“ x 72” mattress completely flat on a treatment table, ensuring no folds or overlapping sections exist in the internal heating grids."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Interface Calibration:",
+              "text": "Connect the system to a certified power outlet, set the built-in automatic countdown timer, and turn on the control interface."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Anatomical Mapping:",
+              "text": "Adjust the heat settings for each of the 3 separate zones independently, tailoring the thermal output to match the specific needs of the scheduled skincare service."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Target Temperature Selection:",
+              "text": "Set the exact temperature parameter within the safe, adjustable professional range of 30°C to 60°C (86°F to 140°F)."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Post-Treatment Reset:",
+              "text": "Turn off the power controls between treatment sessions, let the surface cool down entirely, and sanitize the outer waterproof cover before the next appointment."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Crease Prevention:",
+              "text": "Do not operate the unit while folded, bunched, or heavily creased, as irregular compression can cause hot spots and stress the internal thermal elements."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Liquid Management:",
+              "text": "While the external treatment layer is entirely waterproof, do not submerge the power cables, control box, or terminal connectors in liquids."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Structural Safety Inspections:",
+              "text": "Visually inspect the surface cover and wiring connectors routinely for signs of wear; use only manufacturer-authorized parts for upkeep."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What are the precise product layout dimensions?",
+              "answer": "<p>The SpaSlim Heating Blanket measures 72\" L x 36\" W (183 cm x 91.4 cm) and weighs 18 lbs (8.3 kg).</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can the individual heat settings be modified?",
+              "answer": "<p>Yes, it features 3 independently controlled heating zones that can be adjusted separately using the handset controller.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the exact temperature range available?",
+              "answer": "<p>The blanket offers a precise adjustable temperature spectrum from 30°C to 60°C (86°F to 140°F).</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How should the protective material be cleaned?",
+              "answer": "<p>Wipe down the waterproof, antimicrobial surface cover with a soft sanitizing agent formulated for clinical spa environments after each treatment session.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does this unit require complex station assembly?",
+              "answer": "<p>No, it lays flat directly on your treatment table and connects to a certified power outlet ready for instant operation.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What type of warranty coverage is provided?",
+              "answer": "<p>The SpaSlim Heating Blanket includes a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
