@@ -6,20 +6,21 @@
   {% assign target_collection = collections['all'] %}
 {% endif %}
 
-{% assign current_type = product.type | downcase %}
+{% assign current_type_raw = product.type | downcase %}
+{% assign product_url_raw = product.url | downcase %}
 {% assign product_title_down = product.title | downcase %}
 
 <!-- Detección de Categoría Dominante -->
 {% assign category_key = 'generic' %}
-{% if current_type contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
+{% if current_type_raw contains 'wax' or product_url_raw contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
   {% assign category_key = 'wax_heaters' %}
-{% elsif current_type contains 'table' or current_type contains 'bed' or product_title_down contains 'table' or product_title_down contains 'bed' %}
-  {% assign category_key = 'treatment_tables' %}
-{% elsif current_type contains 'towel' or product_title_down contains 'towel' or product_title_down contains 'cabi' %}
-  {% assign category_key = 'towel_warmers' %}
-{% elsif current_type contains 'steamer' or product_title_down contains 'steamer' or product_title_down contains 'vapor' %}
+{% elsif current_type_raw contains 'steamer' or product_url_raw contains 'steamers' or product_title_down contains 'steamer' or product_title_down contains 'vapoderm' or product_title_down contains 'digipro' %}
   {% assign category_key = 'steamers' %}
-{% elsif current_type contains 'stool' or product_title_down contains 'stool' or product_title_down contains 'chair' %}
+{% elsif current_type_raw contains 'table' or current_type_raw contains 'bed' or product_url_raw contains 'tables' or product_title_down contains 'table' %}
+  {% assign category_key = 'treatment_tables' %}
+{% elsif current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'towel' or product_title_down contains 'cabi' %}
+  {% assign category_key = 'towel_warmers' %}
+{% elsif current_type_raw contains 'stool' or product_url_raw contains 'stools' or product_title_down contains 'stool' %}
   {% assign category_key = 'stools' %}
 {% endif %}
 
@@ -28,7 +29,7 @@
   <div class="compare-modal">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
     <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Models to Compare" }}</h2>
-    <p class="compare-modal__sub">Choose up to 6 models from this line to compare technical specifications:</p>
+    <p class="compare-modal__sub">Choose up to 5 alternative models to compare against {{ product.title }}:</p>
 
     <div class="compare-select-list">
       <!-- Este Modelo -->
@@ -38,8 +39,8 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Otros Productos de la misma categoría -->
-      {% assign other_products = target_collection.products | where_exp: "item", "item.id != product.id" %}
+      <!-- Filtrado estricto para evitar duplicados del mismo producto -->
+      {% assign other_products = target_collection.products | where_exp: "item", "item.handle != product.handle" %}
       {% for item in other_products limit: 5 %}
         <label class="compare-select-item is-selected">
           <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
@@ -98,7 +99,7 @@
           </tr>
         </thead>
         <tbody>
-          <!-- 1. MODEL SKU / IDENTIFIER -->
+          <!-- 1. MODEL SKU -->
           <tr>
             <td class="sticky-col">Model SKU</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
@@ -112,6 +113,55 @@
           </tr>
 
           {% case category_key %}
+            {% when 'steamers' %}
+              <!-- ================= STEAMERS SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Control Technology</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'digipro' or t_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% assign it_down = item.title | downcase %}
+                    {% if it_down contains 'digipro' or it_down contains 'digital' %}Digital Micro-Processor Control{% else %}Heavy-Duty Analog Control{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Ozone Function</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  Integrated Purifying Ozone Lamp
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    Integrated Purifying Ozone Lamp
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Water Jar / Capacity</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  High-Capacity Thermal Glass Reservoir
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    High-Capacity Thermal Glass Reservoir
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Arm & Nozzle Adjustability</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  360° Directional Swivel Nozzle
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    360° Directional Swivel Nozzle
+                  </td>
+                {% endfor %}
+              </tr>
+
             {% when 'wax_heaters' %}
               <!-- ================= WAX HEATERS SPECIFICATIONS ================= -->
               <tr>
@@ -168,105 +218,10 @@
                 {% endfor %}
               </tr>
 
-            {% when 'treatment_tables' %}
-              <!-- ================= TREATMENT TABLES SPECIFICATIONS ================= -->
-              <tr>
-                <td class="sticky-col">Motor System</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {{ product.metafields.custom.motors_count | default: "Multi-Engine Electric Actuators" }}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {{ item.metafields.custom.motors_count | default: "Multi-Engine Electric Actuators" }}
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Adjustability</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Height, Backrest & Legrest Motorized
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    Height, Backrest & Legrest Motorized
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Weight Capacity</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {{ product.metafields.custom.weight_capacity | default: "450 lbs Heavy-Duty Structure" }}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {{ item.metafields.custom.weight_capacity | default: "450 lbs Heavy-Duty Structure" }}
-                  </td>
-                {% endfor %}
-              </tr>
-
-            {% when 'towel_warmers' %}
-              <!-- ================= TOWEL WARMERS SPECIFICATIONS ================= -->
-              <tr>
-                <td class="sticky-col">Towel Capacity</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {{ product.metafields.custom.towel_capacity | default: "12 - 24 Facial Towels" }}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {{ item.metafields.custom.towel_capacity | default: "12 - 24 Facial Towels" }}
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">UV Sterilization</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Integrated UV Disinfection Lamp
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    Integrated UV Disinfection Lamp
-                  </td>
-                {% endfor %}
-              </tr>
-
-            {% when 'stools' %}
-              <!-- ================= STOOLS SPECIFICATIONS ================= -->
-              <tr>
-                <td class="sticky-col">Elevation System</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Pneumatic Air-Lift Cylinder
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    Pneumatic Air-Lift Cylinder
-                  </td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Backrest Configuration</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'backrest' or t_down contains 'ergonomic' %}Ergonomic Lumbar Support{% else %}Standard Backless Design{% endif %}
-                </td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">
-                    {% assign it_down = item.title | downcase %}
-                    {% if it_down contains 'backrest' or it_down contains 'ergonomic' %}Ergonomic Lumbar Support{% else %}Standard Backless Design{% endif %}
-                  </td>
-                {% endfor %}
-              </tr>
-
             {% else %}
-              <!-- ================= GENERIC FALLBACK SPECIFICATIONS ================= -->
+              <!-- ================= GENERIC CLEAN FALLBACK ================= -->
               <tr>
-                <td class="sticky-col">Category Line</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.type | default: "Professional Equipment" }}</td>
-                {% for item in other_products limit: 5 %}
-                  <td class="compare-col" data-product-id="{{ item.id }}">{{ item.type | default: "Professional Equipment" }}</td>
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Availability</td>
+                <td class="sticky-col">Product Status</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
                 </td>
