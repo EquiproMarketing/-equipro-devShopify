@@ -1,279 +1,299 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "settings": {
-          "back_text": "Back",
-          "custom_title": "Dainolite Magnifier LED (3D or 5D)",
-          "intro_highlight": "The Dainolite Magnifier LED delivers professional-grade optical clarity and cool-to-the-touch illumination, engineered specifically to support estheticians and med-spa specialists during detailed skin examinations.",
-          "custom_description": "<p>The Dainolite Magnifier Lamp is built in accordance with Equipro's tradition of quality North American manufacturing. Extensively tested to withstand the rigors of high-volume aesthetic environments, it features powerful LED lighting, a hygienic dust and sun protector, and a flexible reach to the center of the lens. Choose between 3.5 diopters (3D) and 5 diopters (5D) configurations to match your precise clinical needs.</p>",
-          "subtitle": "Professional Optical Clarity & Reliable Durability",
-          "secondary_description": "<p>Designed for multi-year commercial service, the Dainolite magnifier combines robust build quality with energy-efficient LED technology. Routine care with optical lens cloths preserves surface integrity and guarantees uncompromised visual precision across everyday salon routines.</p>",
-          "show_variant_selectors": true,
-          "show_color_option": false,
-          "show_size_option": true,
-          "featured_product": "dainolite-magnifier-led-3d-or-5d",
-          "btn_label": "ADD TO CART",
-          "show_compare_btn": true,
-          "compare_btn_label": "Compare with other models"
-        }
-      },
-      "main_product_characteristics_Hp7Baq": {
-        "type": "main-product-characteristics",
-        "blocks": {
-          "faq_item_mcpNpt": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Licensed Esthetician:",
-              "answer": "<p>Provides shadow-free cool LED illumination and crystal-clear 3D or 5D magnification for detailed facial analyses and extractions.</p>"
-            }
-          },
-          "faq_item_74hYTC": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Med-Spa Specialist:",
-              "answer": "<p>Engineered to endure rigorous daily clinic schedules with reliable arm positioning and integrated dust and sun lens protection.</p>"
-            }
-          },
-          "faq_item_bhzmwM": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Salon Director:",
-              "answer": "<p>Backed by Equipro's North American manufacturing standards, featuring standard 110-120V compatibility and 1-year commercial warranty coverage.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_mcpNpt",
-          "faq_item_74hYTC",
-          "faq_item_bhzmwM"
-        ],
-        "name": "Product Characteristics",
-        "settings": {
-          "accordion_heading": "Professional Applications",
-          "show_shipping": true,
-          "shipping_title": "Shipping",
-          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
-          "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro / Dainolite</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>63303</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification Options</td>\n        <td>3.5 diopters (3D / 1.85x) or 5 diopters (5D / 2.25x) versions available</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>7 lb (3.2 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Arm Reach</td>\n        <td>Up to 43\" - 49\" reach to center of lens</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>Powerful, cool-to-the-touch LED lighting technology</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Special Features</td>\n        <td>Hygienic dust and sun protector integrated into the head assembly</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American 110-120V compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada / North America</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin examination and detailed aesthetic treatments</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
-          "table_col1_header": "TECHNICAL ASPECT",
-          "table_col2_header": "SPECIFICATION DETAILS"
-        }
-      },
-      "banner_features": {
-        "type": "product-key-features-banner",
-        "blocks": {
-          "feature_item_8YjzYH": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Cool-to-the-Touch LED Illumination:",
-              "text": "Delivers bright, energy-efficient lighting optimized for clinical skincare analysis without radiating excess heat onto the client."
-            }
-          },
-          "feature_item_F4iL9F": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Hygienic Lens Protection:",
-              "text": "Equipped with a built-in dust and sun protector shield to prevent optical degradation and eliminate solar hazard risks when idle."
-            }
-          },
-          "feature_item_RXpARk": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Rigorous Med-Spa Durability:",
-              "text": "Extensively tested by manufacturers to handle high-frequency commercial treatment room rotations smoothly."
-            }
-          }
-        },
-        "block_order": [
-          "feature_item_8YjzYH",
-          "feature_item_F4iL9F",
-          "feature_item_RXpARk"
-        ],
-        "settings": {
-          "heading": "Key Features for the Professional Station",
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "right",
-          "bg_color": "#a22938",
-          "text_color": "#ffffff",
-          "padding_top": 60,
-          "padding_bottom": 60,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "how_to": {
-        "type": "product-how-to",
-        "blocks": {
-          "section_header_XjqiGV": {
-            "type": "section_header",
-            "settings": {
-              "title": "How to Use"
-            }
-          },
-          "instruction_item_fd7CbG": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Mounting Setup:",
-              "text": "Securely attach the magnifier stem to your compatible Equipro floor base, rolling cart, or wall mounting bracket."
-            }
-          },
-          "instruction_item_8VfGh8": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Power Initialization:",
-              "text": "Plug the power cord into a grounded 110V outlet and activate the power switch for instant-start LED illumination."
-            }
-          },
-          "instruction_item_z9KEfh": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Lens Uncovering:",
-              "text": "Flip open the integrated hygienic dust and sun protector to expose the precision optical glass."
-            }
-          },
-          "instruction_item_tr6WqH": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Ergonomic Positioning:",
-              "text": "Adjust the balanced articulated arm to position the lens smoothly over the treatment zone at the preferred focal distance."
-            }
-          },
-          "instruction_item_BqmtiA": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Post-Treatment Care:",
-              "text": "Close the protective dust cover immediately following the procedure to safeguard the lens surface."
-            }
-          },
-          "section_header_dGJcmr": {
-            "type": "section_header",
-            "settings": {
-              "title": "Safety & Disclaimers"
-            }
-          },
-          "instruction_item_CRmBXw": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Solar Hazard Protection:",
-              "text": "Never leave the magnifying lens uncovered near direct sunlight windows, as the glass can concentrate rays and create a severe fire hazard."
-            }
-          },
-          "instruction_item_QqEHKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Mechanical Limits:",
-              "text": "Do not force the articulated arm beyond its maximum designed extension threshold to prevent internal tension strain."
-            }
-          },
-          "instruction_item_P8t7dx": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Authorized Maintenance:",
-              "text": "Electrical repairs and internal component servicing must be handled by certified technicians to maintain compliance."
-            }
-          }
-        },
-        "block_order": [
-          "section_header_XjqiGV",
-          "instruction_item_fd7CbG",
-          "instruction_item_8VfGh8",
-          "instruction_item_z9KEfh",
-          "instruction_item_tr6WqH",
-          "instruction_item_BqmtiA",
-          "section_header_dGJcmr",
-          "instruction_item_CRmBXw",
-          "instruction_item_QqEHKc",
-          "instruction_item_P8t7dx"
-        ],
-        "settings": {
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "left",
-          "image_aspect_ratio": "adapt",
-          "title_color": "#a22938",
-          "text_color": "#444444",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "faq": {
-        "type": "category-faq",
-        "blocks": {
-          "faq_item_JkpEmj": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What diopter options are available for this lamp?",
-              "answer": "<p>It is available in 3.5 Diopters (3D) and 5 Diopters (5D) configurations selectable via product variants.</p>"
-            }
-          },
-          "faq_item_r7tr7G": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Does the lamp include a protective cover?",
-              "answer": "<p>Yes, it features an integrated hygienic dust and sun protector shield built into the lamp head.</p>"
-            }
-          },
-          "faq_item_dd9n3Q": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the arm reach distance?",
-              "answer": "<p>The balanced articulated arm offers an extended reach of up to 43 to 49 inches to the center of the lens.</p>"
-            }
-          },
-          "faq_item_8YiyhY": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Are mounting accessories included with purchase?",
-              "answer": "<p>Mounting stems are standard, but specific desk bases, wall brackets, or rolling cart mounts are sold separately depending on salon layout requirements.</p>"
-            }
-          },
-          "faq_item_GkbCk6": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What type of warranty coverage is provided?",
-              "answer": "<p>The Dainolite Magnifier is protected by a 1-year limited manufacturer warranty covering parts and labor.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_JkpEmj",
-          "faq_item_r7tr7G",
-          "faq_item_dd9n3Q",
-          "faq_item_8YiyhY",
-          "faq_item_GkbCk6"
-        ],
-        "settings": {
-          "heading": "Your Questions, Answered",
-          "subheading": "Find answers to frequently asked technical and equipment questions.",
-          "layout": "grid",
-          "header_position": "left",
-          "open_first_item": true,
-          "title_color": "#a22938",
-          "question_color": "#111111",
-          "answer_color": "#555555",
-          "toggle_color": "#a22938",
-          "border_color": "#1a1a1a",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "compare_modal": {
-        "type": "product-compare-modal",
-        "settings": {}
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Dainolite Magnifier LED (3D or 5D)",
+        "intro_highlight": "The Dainolite Magnifier LED delivers professional-grade optical clarity and cool-to-the-touch illumination, engineered specifically to support estheticians and med-spa specialists during detailed skin examinations.",
+        "custom_description": "<p>The Dainolite Magnifier Lamp is built in accordance with Equipro's tradition of quality North American manufacturing. Extensively tested to withstand the rigors of high-volume aesthetic environments, it features powerful LED lighting, a hygienic dust and sun protector, and a flexible reach to the center of the lens. Choose between 3.5 diopters (3D) and 5 diopters (5D) configurations to match your precise clinical needs.</p>",
+        "subtitle": "Professional Optical Clarity & Reliable Durability",
+        "secondary_description": "<p>Designed for multi-year commercial service, the Dainolite magnifier combines robust build quality with energy-efficient LED technology. Routine care with optical lens cloths preserves surface integrity and guarantees uncompromised visual precision across everyday salon routines.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": true,
+        "featured_product": "dainolite-magnifier-led-3d-or-5d",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
       }
     },
-    "order": [
-      "main",
-      "main_product_characteristics_Hp7Baq",
-      "banner_features",
-      "how_to",
-      "faq",
-      "compare_modal"
-    ]
-  }
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Licensed Esthetician:",
+            "answer": "<p>Provides shadow-free cool LED illumination and crystal-clear 3D or 5D magnification for detailed facial analyses and extractions.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Med-Spa Specialist:",
+            "answer": "<p>Engineered to endure rigorous daily clinic schedules with reliable arm positioning and integrated dust and sun lens protection.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Salon Director:",
+            "answer": "<p>Backed by Equipro's North American manufacturing standards, featuring standard 110-120V compatibility and 1-year commercial warranty coverage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro / Dainolite</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>63303</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification Options</td>\n        <td>3.5 diopters (3D / 1.85x) or 5 diopters (5D / 2.25x) versions available</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>7 lb (3.2 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Arm Reach</td>\n        <td>Up to 43\" - 49\" reach to center of lens</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>Powerful, cool-to-the-touch LED lighting technology</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Special Features</td>\n        <td>Hygienic dust and sun protector integrated into the head assembly</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American 110-120V compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada / North America</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin examination and detailed aesthetic treatments</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Cool-to-the-Touch LED Illumination:",
+            "text": "Delivers bright, energy-efficient lighting optimized for clinical skincare analysis without radiating excess heat onto the client."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Hygienic Lens Protection:",
+            "text": "Equipped with a built-in dust and sun protector shield to prevent optical degradation and eliminate solar hazard risks when idle."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Rigorous Med-Spa Durability:",
+            "text": "Extensively tested by manufacturers to handle high-frequency commercial treatment room rotations smoothly."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/dainolite-magnifier-led-task-lamp-dust-protector-aesthetician-salon-lighting-63303.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Mounting Setup:",
+            "text": "Securely attach the magnifier stem to your compatible Equipro floor base, rolling cart, or wall mounting bracket."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Initialization:",
+            "text": "Plug the power cord into a grounded 110V outlet and activate the power switch for instant-start LED illumination."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Lens Uncovering:",
+            "text": "Flip open the integrated hygienic dust and sun protector to expose the precision optical glass."
+          }
+        },
+        "instruction_item_tr6WqH": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Ergonomic Positioning:",
+            "text": "Adjust the balanced articulated arm to position the lens smoothly over the treatment zone at the preferred focal distance."
+          }
+        },
+        "instruction_item_BqmtiA": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Post-Treatment Care:",
+            "text": "Close the protective dust cover immediately following the procedure to safeguard the lens surface."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Solar Hazard Protection:",
+            "text": "Never leave the magnifying lens uncovered near direct sunlight windows, as the glass can concentrate rays and create a severe fire hazard."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Mechanical Limits:",
+            "text": "Do not force the articulated arm beyond its maximum designed extension threshold to prevent internal tension strain."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Authorized Maintenance:",
+            "text": "Electrical repairs and internal component servicing must be handled by certified technicians to maintain compliance."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_tr6WqH",
+        "instruction_item_BqmtiA",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/dainolite-magnifier-led-articulated-arm-hygienic-cover-professional-wellness-studio-sku-63303.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What level of magnification does the Dainolite Magnifier provide?",
+            "answer": "<p><strong>It offers 3.5 diopters of clear optical magnification.</strong> Ideal for detailed aesthetic procedures and skin analysis.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the LED lighting adjustable for different treatments?",
+            "answer": "<p><strong>Yes, it features high-performance LED illumination</strong> designed to provide bright, shadow-free lighting for clinical tasks.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the maximum total extension of the articulated arm?",
+            "answer": "<p><strong>The arm extends to a total length of 43 inches</strong> measured at the center of the lens.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit include a protective dust cover?",
+            "answer": "<p><strong>Yes, it comes equipped with a hygienic dust cover</strong> to keep the lens clean and safe between appointments.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What mounting options are available for this magnifier?",
+            "answer": "<p><strong>It is fully compatible with standard Equipro rolling bases</strong>, wall brackets, and table clamps.</p>"
+          }
+        },
+        "faq_item_mizjJt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage for this equipment?",
+            "answer": "<p><strong>It includes a comprehensive 2-year manufacturer warranty</strong> covering parts and workmanship defects.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_mizjJt"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Models to Compare",
+        "compare_collection": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
