@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Heat Pad Professional Treatment Table Warmer",
+          "intro_highlight": "Engineered to optimize thermal consistency in professional skincare environments, this heavy-duty heating pad bridges the gap between client relaxation and strict institutional execution. Handcrafted under rigid North American manufacturing standards, its integration into your treatment workflow enhances the performance of topical formulas while supporting long-term practitioner positioning during intensive protocols.",
+          "custom_description": "<p>The 66001 Heat pad is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Lash Technicians. Its precision-engineered warming surface targets postural strain and lower-back tension during extended treatment sessions, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, post-procedure recovery, or advanced skin rejuvenation, this treatment equipment adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
+          "subtitle": "Multi-Zone Thermal Optimization for High-End Salons",
+          "secondary_description": "<p>Hygiene and material preservation are central to the Equipro approach. To preserve the flexible structure and uniform heat conductivity of the 66001 Heat pad, routine surface sanitation should be executed with a professional disinfectant spray formulated for non-porous salon environments after every client encounter. The protective outer surface exhibits high chemical resistance properties, ensuring an unblemished, sanitized condition across high-volume operational years. Consistent care prevents localized degradation, preserves internal core insulation, and maximizes total operational reliability.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "heat-pad-66001",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Licensed Esthetician:",
+              "answer": "<p>Enhances client relaxation and topical formula absorption during facials, skin rejuvenation, and deep-cleansing treatments with two adjustable levels of soothing heat.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Technicians & Cosmetic Injectors:",
+              "answer": "<p>Reduces lower-back tension and client restlessness during long-duration procedures with standardized 30\" x 72\" full-length bed coverage.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Technician:",
+              "answer": "<p>Built with heavy-duty commercial-grade wiring, thermostatic control (37°C to 43°C), washable protective cover, and full CSA & UL electrical safety certifications.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-66001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heating pad with washable protective cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 30\" W (183 cm x 76.2 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.5 lb (1.6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>100°F to 110°F (37°C to 43°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intensity Levels</td>\n        <td>Two adjustable levels of intensity</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Wattage</td>\n        <td>Approximately 50 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Removable, washable protective cover</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, consistent safe temperature maintenance</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional treatment table warming pad for client comfort during facials, massages, and body treatments</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Heavy-Duty Internal Elements:",
+              "text": "Constructed with commercial-grade resistance wiring to guarantee uniform heat generation without functional decay in high-frequency commercial spa settings."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Intelligent Thermal Regulation: Multi-Level Adjustable Thermostat:",
+              "text": "An intuitive control interface designed to maintain target temperatures between 37°C and 43°C for skincare specialists and body technicians."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Universal Ergonomic Footprint: 30“ x 72” Proportional Coverage:",
+              "text": "A standardized functional quality that ensures seamless layout compatibility with any professional treatment table or aesthetic station."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Station Placement:",
+              "text": "Spread the heating pad flat over the primary upholstery of your treatment bed, ensuring it is entirely free of folds, wrinkles, or bunched edges before covering it with a protective linen or vinyl sheet."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Activation:",
+              "text": "Plug the heavy-duty power connector into a certified wall outlet and toggle the main power switch to initiate internal circuit calibration."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Temperature Tuning:",
+              "text": "Use the adjustment dial to calibrate the system to the requested setting, choosing an optimal operational baseline between 37°C and 43°C (100°F and 110°F)."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Pre-Treatment Warm Up:",
+              "text": "Activate the system approximately 10 minutes prior to client booking to allow the core elements to reach total thermal saturation and uniform surface output."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Post-Treatment Shutdown:",
+              "text": "Power down the unit immediately following the conclusion of daily shifts, clearing the surface of linens to facilitate rapid cooling and standard sanitation."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Moisture Prevention Protocols:",
+              "text": "Do not immerse the electrical components or controller in liquid; ensure the unit is protected by an impervious barrier sheet during wet body treatments or hydro-exfoliation."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Crease and Fold Avoidance:",
+              "text": "Never operate the heating pad when bunched or folded, as this can compress internal wiring, distort the thermal sensors, and void the factory warranty."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Authorized Modification Restriction:",
+              "text": "Any internal structural modifications, repairs, or splicing performed by uncertified personnel instantly invalidates all international safety certifications and factory guarantees."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the precise temperature adjustment range?",
+              "answer": "<p>The 66001 Heat Pad offers two adjustable intensity levels maintaining temperatures between 100°F and 110°F (37°C to 43°C).</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What are the exact product dimensions and weight?",
+              "answer": "<p>The pad measures 72\" L x 30\" W (183 cm x 76.2 cm) and weighs 3.5 lbs (1.6 kg).</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does it include a protective cover?",
+              "answer": "<p>Yes, it comes complete with a removable and washable protective cover.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What are the daily maintenance requirements for this equipment?",
+              "answer": "<p>Sanitize the surface cover after each client with a non-porous salon disinfectant spray, and wash the outer protective cover periodically.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can it be safely utilized during intense body wraps?",
+              "answer": "<p>Yes, provided an impervious moisture barrier sheet protects the pad and controller from direct liquid contact.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What type of warranty coverage protects this product?",
+              "answer": "<p>The Heat Pad is backed by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
