@@ -13,14 +13,14 @@
 
 <!-- Detección de Categoría Dominante -->
 {% assign category_key = 'generic' %}
-{% if current_type_raw contains 'wax' or product_url_raw contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
+{% if current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'towel' or product_title_down contains 'cabi' %}
+  {% assign category_key = 'towel_warmers' %}
+{% elsif current_type_raw contains 'wax' or product_url_raw contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
   {% assign category_key = 'wax_heaters' %}
 {% elsif current_type_raw contains 'steamer' or product_url_raw contains 'steamers' or product_title_down contains 'steamer' or product_title_down contains 'vapoderm' or product_title_down contains 'digipro' or product_title_down contains 'classic steamer' %}
   {% assign category_key = 'steamers' %}
 {% elsif current_type_raw contains 'table' or current_type_raw contains 'bed' or product_url_raw contains 'tables' or product_title_down contains 'table' %}
   {% assign category_key = 'treatment_tables' %}
-{% elsif current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'towel' or product_title_down contains 'cabi' %}
-  {% assign category_key = 'towel_warmers' %}
 {% elsif current_type_raw contains 'stool' or product_url_raw contains 'stools' or product_title_down contains 'stool' %}
   {% assign category_key = 'stools' %}
 {% endif %}
@@ -62,8 +62,13 @@
 <div class="compare-modal-overlay" id="CompareModalStep2">
   <div class="compare-modal compare-modal--wide">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">Technical Steamer Comparison</h2>
-    <p class="compare-modal__sub">Compare key performance specs side by side to choose the best steamer for your treatment room.</p>
+    <h2 class="compare-modal__title">
+      {% if category_key == 'towel_warmers' %}Technical Towel Warmer Comparison
+      {% elsif category_key == 'steamers' %}Technical Steamer Comparison
+      {% elsif category_key == 'wax_heaters' %}Technical Wax Warmer Comparison
+      {% else %}Technical Model Comparison{% endif %}
+    </h2>
+    <p class="compare-modal__sub">Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
 
     <div class="compare-table-scroll">
       <table class="compare-table">
@@ -128,17 +133,120 @@
           </tr>
 
           {% case category_key %}
+            {% when 'towel_warmers' %}
+              <!-- ================= TOWEL WARMERS SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Towel Capacity (13" x 24")</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'mini' or t_down contains '61100' %}6 Facial Towels
+                  {% elsif t_down contains 'spa' or t_down contains '61102' %}24 Facial Towels
+                  {% else %}12 Facial Towels{% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'mini' or it_down contains '61100' %}6 Facial Towels
+                      {% elsif it_down contains 'spa' or it_down contains '61102' %}24 Facial Towels
+                      {% else %}12 Facial Towels{% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Compartments</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'spa' or t_down contains '61102' %}2 Independent Compartments{% else %}1 Single Compartment{% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'spa' or it_down contains '61102' %}2 Independent Compartments{% else %}1 Single Compartment{% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">External Dimensions</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'mini' or t_down contains '61100' %}13" L x 12" D x 10" H
+                  {% elsif t_down contains 'spa' or t_down contains '61102' %}18" L x 13.5" D x 21.5" H
+                  {% else %}18" L x 13" D x 11" H{% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'mini' or it_down contains '61100' %}13" L x 12" D x 10" H
+                      {% elsif it_down contains 'spa' or it_down contains '61102' %}18" L x 13.5" D x 21.5" H
+                      {% else %}18" L x 13" D x 11" H{% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Weight</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'mini' or t_down contains '61100' %}12 lbs / 6 kg
+                  {% elsif t_down contains 'spa' or t_down contains '61102' %}44 lbs / 20 kg
+                  {% else %}29 lbs / 13 kg{% endif %}
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      {% assign it_down = item.title | downcase %}
+                      {% if it_down contains 'mini' or it_down contains '61100' %}12 lbs / 6 kg
+                      {% elsif it_down contains 'spa' or it_down contains '61102' %}44 lbs / 20 kg
+                      {% else %}29 lbs / 13 kg{% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
+              <tr>
+                <td class="sticky-col">Primary Function</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  High-efficiency thermal heating for facial towels
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      High-efficiency thermal heating for facial towels
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+
             {% when 'steamers' %}
               <!-- ================= STEAMERS SPECIFICATIONS ================= -->
               <tr>
                 <td class="sticky-col">Steam Output Levels</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'digipro' or t_down contains '11100' %}
-                    3 Selectable Steam Levels (Digital)
-                  {% else %}
-                    Standard Continuous Steam Output
-                  {% endif %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}3 Selectable Steam Levels (Digital){% else %}Standard Continuous Steam Output{% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -147,25 +255,16 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'digipro' or it_down contains '11100' %}
-                        3 Selectable Steam Levels (Digital)
-                      {% else %}
-                        Standard Continuous Steam Output
-                      {% endif %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}3 Selectable Steam Levels (Digital){% else %}Standard Continuous Steam Output{% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
-
               <tr>
                 <td class="sticky-col">Integrated Timer</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'digipro' or t_down contains '11100' %}
-                    Yes (Integrated Digital Timer)
-                  {% else %}
-                    No (Manual Operation)
-                  {% endif %}
+                  {% if t_down contains 'digipro' or t_down contains '11100' %}Yes (Integrated Digital Timer){% else %}No (Manual Operation){% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -174,123 +273,14 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'digipro' or it_down contains '11100' %}
-                        Yes (Integrated Digital Timer)
-                      {% else %}
-                        No (Manual Operation)
-                      {% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Essential Oils System</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'digipro' or t_down contains '11100' %}
-                    Integrated Essential Oil System
-                  {% else %}
-                    Optional Aromatherapy Strip
-                  {% endif %}
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'digipro' or it_down contains '11100' %}
-                        Integrated Essential Oil System
-                      {% else %}
-                        Optional Aromatherapy Strip
-                      {% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Jar Capacity & Autonomy</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  42 oz Exterior PVC Jar with Handle (40 min Autonomy)
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      42 oz Exterior PVC Jar with Handle (40 min Autonomy)
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Arm & Nozzle Design</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Directional / Adjustable Head & Arm with Special No-Drip Nozzle
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      Directional / Adjustable Head & Arm with Special No-Drip Nozzle
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Dimensions & Weight</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  10" x 8.5" x 32" H | 21 lbs (9 kg)
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      10" x 8.5" x 32" H | 21 lbs (9 kg)
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Warranty Coverage</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'digipro' or t_down contains '11100' %}
-                    2 Years Full Manufacturer Warranty
-                  {% else %}
-                    1 Year Manufacturer Warranty
-                  {% endif %}
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'digipro' or it_down contains '11100' %}
-                        2 Years Full Manufacturer Warranty
-                      {% else %}
-                        1 Year Manufacturer Warranty
-                      {% endif %}
+                      {% if it_down contains 'digipro' or it_down contains '11100' %}Yes (Integrated Digital Timer){% else %}No (Manual Operation){% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
 
             {% when 'wax_heaters' %}
-              <!-- WAX HEATERS SPECIFICATIONS -->
+              <!-- ================= WAX HEATERS SPECIFICATIONS ================= -->
               <tr>
                 <td class="sticky-col">Number of Tanks</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
@@ -311,7 +301,7 @@
               </tr>
 
             {% else %}
-              <!-- FALLBACK -->
+              <!-- ================= FALLBACK ================= -->
               <tr>
                 <td class="sticky-col">Product Status</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
@@ -330,11 +320,13 @@
               </tr>
           {% endcase %}
 
-          <!-- SAFETY & COMPLIANCE -->
+          <!-- WARRANTY & SAFETY (TODAS LAS LÍNEAS EQUIPRO) -->
           <tr>
-            <td class="sticky-col">Safety Certification</td>
+            <td class="sticky-col">Warranty & Safety</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              CSA & UL Approved Electrical Components
+              {% assign t_down = product.title | downcase %}
+              {% if t_down contains 'cabi' %}1 Year Warranty | CSA & UL Approved
+              {% else %}2 Years Warranty | CSA & UL Approved{% endif %}
             </td>
             {% assign items_count = 0 %}
             {% for item in target_collection.products %}
@@ -342,7 +334,9 @@
               {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
                 {% assign items_count = items_count | plus: 1 %}
                 <td class="compare-col" data-product-id="{{ item.id }}">
-                  CSA & UL Approved Electrical Components
+                  {% assign it_down = item.title | downcase %}
+                  {% if it_down contains 'cabi' %}1 Year Warranty | CSA & UL Approved
+                  {% else %}2 Years Warranty | CSA & UL Approved{% endif %}
                 </td>
               {% endif %}
             {% endfor %}
