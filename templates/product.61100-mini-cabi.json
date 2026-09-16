@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Mini Cabi Professional Towel Warmer",
+          "intro_highlight": "The Equipro Mini Cabi is the gold standard in compact towel hygiene, engineered for high-traffic aesthetic clinics and spas. This professional-grade unit combines rapid thermal heating with integrated UV sterilization to ensure every treatment begins with a safe, soothing, and premium experience.",
+          "custom_description": "<p>The Mini Cabi is purpose-built for licensed professionals, including Estheticians, Skincare Specialists, and Clinical Spa Technicians. Its heavy-duty, compact design targets treatment room congestion and operational friction during back-to-back appointments, enabling sharper focus on service execution and client relaxation. Whether you are performing hot towel compresses, facial prep protocols, or hygienic tool sanitation, this clinical device adjusts to your multi-technician adaptability with constant thermal regulation and instant-response sterilization.</p>",
+          "subtitle": "Engineered for Precise Thermal Hygiene & Compact Station Efficiency",
+          "secondary_description": "<p>Structural integrity and mechanical reliability are central to the Equipro approach. To preserve the heating consistency and UV lamp lifespan of Mini Cabi, routine wiping with non-abrasive surface disinfectants formulated for clinical environments should be performed at the end of each shift. The powder-coated metallic exterior provides exceptional scratch and stain resistance, ensuring pristine operational condition across a 15-to-20-year lifespan. Consistent care prevents moisture buildup and maintains optimal reflection inside the chamber.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "mini-cabi-ei-61100m",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": true,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Licensed Estheticians & Skincare Specialists:",
+              "answer": "<p>Provides rapid thermal heating and constant 80°C temperature holding for moist facial towels during deep-cleansing prep protocols, facial massage, and skincare treatments.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Technicians & Spa Therapists:",
+              "answer": "<p>Compact desktop footprint eliminates room congestion while providing integrated UV light sterilization for hygienic tool sanitation between client appointments.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Salon Entrepreneurs & Spa Directors:",
+              "answer": "<p>Delivers exceptional long-term ROI with heavy-duty steel construction, powder-coated scratch-resistant casing, and full CSA/UL electrical safety certifications.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty Equipment</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-61100M</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>High-quality compact steel housing with powder-coated metallic exterior</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Technology</td>\n        <td>Constant thermal heating with integrated UV light sterilization unit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x D x H)</td>\n        <td>13\" L x 12\" D x 10\" H (33 cm x 30.5 cm x 25.4 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Capacity</td>\n        <td>Holds 6 facial towels (13\" x 24\") and small aesthetic implements</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>12 lbs (6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Temperature</td>\n        <td>Constant thermal heating up to 80°C</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power Requirements</td>\n        <td>120 V AC, standard plug with CSA & UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 Year Manufacturer Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certification</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Heavy-Duty Steel Construction:",
+              "text": "Built with high-grade metal housing to maintain structural integrity and heat containment in high-volume clinic settings."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Precision Thermal Control: Constant 80°C Heating System:",
+              "text": "Integrated thermal elements designed to maintain stable, comfortable towel temperatures without scorching or temperature fluctuations."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Integrated Sanitation Protection: Built-in UV Sterilization Unit:",
+              "text": "Internal UV light system that maintains exceptional hygiene standards in demanding spa environments."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "System Setup:",
+              "text": "Place the unit on a flat, stable treatment trolley or counter and plug it into a standard certified outlet."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Towel Loading:",
+              "text": "Dampen 6 facial towels (13\" x 24\"), wring out excess water, roll them neatly, and place them inside the internal wire rack."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Activation:",
+              "text": "Close the door securely and flip the main power switch to initiate automatic 80°C heating and internal UV sterilization."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Treatment Retrieval:",
+              "text": "Open the cabinet during treatments to retrieve warm towels as needed, ensuring the door is closed immediately to retain internal heat."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "End-of-Day Care:",
+              "text": "Turn off the power switch, remove any remaining towels, empty the lower condensation drip tray, and wipe down the interior dry."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Moisture Management:",
+              "text": "Ensure towels are damp but not dripping wet before loading to prevent water buildup around heating elements."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Thermal Handling:",
+              "text": "Use tongs or thermal gloves when handling hot towels directly from the chamber to avoid skin burns."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "UV Safety Protocol:",
+              "text": "Avoid staring directly into the UV lamp when opening the cabinet door during active operation."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the holding capacity of the Mini Cabi?",
+              "answer": "<p>The Mini Cabi is designed to accommodate up to 6 standard facial towels (13\" x 24\").</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What temperature does the cabinet maintain?",
+              "answer": "<p>It maintains a constant internal operating temperature of 80°C for optimal towel warmth and hygiene.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does the Mini Cabi feature UV sterilization?",
+              "answer": "<p>Yes, it includes an integrated internal UV light sterilization system for enhanced sanitation.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What are the external dimensions of the unit?",
+              "answer": "<p>The external dimensions are 13\" L x 12\" D x 10\" H (33 cm x 30.5 cm x 25.4 cm) with a weight of 12 lbs (6 kg).</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What warranty is provided with the Mini Cabi?",
+              "answer": "<p>The Mini Cabi includes a 1-Year Manufacturer Warranty covering parts and labor.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Are the electrical parts safety certified?",
+              "answer": "<p>Yes, all internal electrical components are fully CSA and UL approved for commercial spa operation.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
