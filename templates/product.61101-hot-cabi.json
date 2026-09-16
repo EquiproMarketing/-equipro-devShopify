@@ -5,14 +5,14 @@
         "settings": {
           "back_text": "Back",
           "custom_title": "Hot Cabi Professional Towel Warmer",
-          "intro_highlight": "The Equipro Hot Cabi is an essential centerpiece for high-traffic aesthetic clinics and medical spas, engineered to deliver constant thermal warmth alongside germicidal UV sterilization. This professional medium-capacity unit ensures every facial protocol or body treatment begins with impeccably sanitized, soothing hot towels.",
-          "custom_description": "<p>The Hot Cabi 61101H is purpose-built for licensed Estheticians, Skincare Specialists, and Clinical Spa Technicians. Its medium desktop footprint eliminates treatment room congestion while doubling towel capacity for back-to-back appointments. Whether you are conducting deep-pore cleansing protocols, soothing facial massage, or hygienic tool sanitation, this clinical warming station maintains constant thermal regulation and instant-response germicidal protection.</p>",
-          "subtitle": "Engineered for Precise Thermal Hygiene & Medium Station Efficiency",
-          "secondary_description": "<p>Mechanical dependability and thermal containment are central to the Equipro engineering approach. To preserve internal heating consistency and maximize UV lamp lifespan, routine wiping with non-abrasive surface disinfectants formulated for clinical spa environments should be performed at the end of each shift. The enamel-coated metallic chassis and aluminum interior chamber resist oxidation, corrosion, and residue buildup, ensuring decades of reliable commercial operation.</p>",
+          "intro_highlight": "Engineered and manufactured in North America to rigorous international standards, the Hot Cabi merges consistent gentle heat distribution with ergonomic practitioner workflows to optimize clinical skincare treatments and client comfort.",
+          "custom_description": "<p>The Hot Cabi 61101 is purpose-built for licensed professionals, including practicing estheticians, Medical Spa Therapists, and Cosmetic Injectors. Its compact tabletop footprint targets treatment room congestion during back-to-back appointments, enabling sharper focus on service execution and treatment execution. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with instant-response calibration and seamless operation.</p>",
+          "subtitle": "Professional Reliability & Precision",
+          "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the structural integrity and optical cleanliness of Hot Cabi, wipe down surfaces regularly with surface disinfectant formulated for clinical environments weekly. The high-density housing, stainless steel interior, and durable powder-coated exterior resist chemical wear and ambient degradation, ensuring flawless performance across 15 to 20 years of continuous salon use. Consistent care maintains optimal warming efficiency and protects your investment.</p>",
           "show_variant_selectors": true,
           "show_color_option": true,
           "show_size_option": true,
-          "featured_product": "hot-cabi-ei-61101h",
+          "featured_product": "hot-cabi-61101",
           "btn_label": "ADD TO CART",
           "show_compare_btn": true,
           "compare_btn_label": "Compare with other models"
@@ -24,22 +24,22 @@
           "faq_item_mcpNpt": {
             "type": "faq_item",
             "settings": {
-              "question": "Licensed Estheticians & Skincare Specialists:",
-              "answer": "<p>Maintains a medium capacity of 12 facial towels (13\" x 24\") at a constant 80°C (176°F), enabling continuous back-to-back facial prep and hot compress protocols without temperature loss.</p>"
+              "question": "Practicing Esthetician:",
+              "answer": "<p>Maintains a capacity of 12 facial towels (13\" x 24\") at an optimized temperature range (120-160°F / 49-71°C) with consistent heat distribution for facial prep and hot compress treatments.</p>"
             }
           },
           "faq_item_74hYTC": {
             "type": "faq_item",
             "settings": {
-              "question": "Clinical Spa Technicians & Spa Therapists:",
-              "answer": "<p>Features a built-in germicidal UV lamp system that sanitizes towels and implements during warming cycles, upholding rigid clinical sanitation standards.</p>"
+              "question": "Spa Therapist:",
+              "answer": "<p>Features simple on/off control with an indicator light, insulated construction, and internal thermostat control with overheat protection for continuous room workflow.</p>"
             }
           },
           "faq_item_bhzmwM": {
             "type": "faq_item",
             "settings": {
-              "question": "Salon Entrepreneurs & Spa Directors:",
-              "answer": "<p>Delivers exceptional long-term reliability with heavy-duty enamel-painted steel casing, corrosion-resistant aluminum lining, and full CSA/UL electrical safety certifications.</p>"
+              "question": "Cosmetic & Clinical Skin Specialists:",
+              "answer": "<p>Built with a stainless steel interior, powder-coated exterior housing, and full CSA & UL certifications for high-volume daily clinic use in professional aesthetic environments.</p>"
             }
           }
         },
@@ -55,7 +55,7 @@
           "shipping_title": "Shipping",
           "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
           "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty Equipment</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-61101H</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Enamel-coated steel exterior housing with oxidation-resistant aluminum interior chamber</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Technology</td>\n        <td>Constant thermal heating with integrated germicidal UV bulb sterilization unit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Exterior Dimensions (L x D x H)</td>\n        <td>18\" L x 13\" D x 13\" H (45.7 cm x 33 cm x 33 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Interior Dimensions (L x D x H)</td>\n        <td>10.5\" L x 7.5\" D x 8.5\" H (26.7 cm x 19 cm x 21.6 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Capacity</td>\n        <td>12 facial towels (13\" x 24\") and small aesthetic accessories</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>29 lbs (13 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Temperature</td>\n        <td>Constant thermal temperature control at 80°C (176°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power Requirements</td>\n        <td>120 V AC, 60 Hz standard voltage with CSA & UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 Year Manufacturer Warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certification</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>61101</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stainless steel interior, durable powder-coated exterior housing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>External: 18\" L x 13\" D x 11\" H; Internal: 10.5\" L x 7.5\" D x 8.5\" H</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>29 lb (13 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Capacity</td>\n        <td>12 facial towels (13\" x 24\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating System</td>\n        <td>Electric towel warmer with consistent, gentle heat distribution</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>Optimized for safe towel warming (typically 120-160°F / 49-71°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Simple on/off switch with indicator light</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American 110-120V electrical compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostat control, overheat protection, insulated construction</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Removable towel rack, power cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 Year Limited Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional warming of facial towels for skincare treatments and client comfort</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
           "table_col1_header": "TECHNICAL ASPECT",
           "table_col2_header": "SPECIFICATION DETAILS"
         }
@@ -66,22 +66,22 @@
           "feature_item_8YjzYH": {
             "type": "feature_item",
             "settings": {
-              "title": "Unrivaled Durability: Heavy-Duty Steel Construction:",
-              "text": "Engineered with an enamel-coated metal exterior and aluminum interior casing to prevent oxidation and ensure long-term structural integrity in busy spas."
+              "title": "Unrivaled Durability: Robust Housing Construction:",
+              "text": "Assembled with high-grade components to withstand high-volume daily clinic use in professional aesthetic environments."
             }
           },
           "feature_item_F4iL9F": {
             "type": "feature_item",
             "settings": {
-              "title": "Precision Thermal Control: Constant 176°F (80°C) Heating:",
-              "text": "Integrated thermal elements maintain stable, soothing towel temperatures continuously throughout the shift without hot spots or scorching."
+              "title": "Precision Thermal Control: Overheat Protected System:",
+              "text": "Internal thermostat control with gentle, continuous heat distribution (120-160°F) to ensure safe towel warming."
             }
           },
           "feature_item_RXpARk": {
             "type": "feature_item",
             "settings": {
-              "title": "Integrated Sanitation Protection: Germicidal UV Lamp:",
-              "text": "Built-in UV light tube provides active germicidal sanitation for towels and treatment implements during warming."
+              "title": "Streamlined Workspace Design: Compact Tabletop Footprint:",
+              "text": "Integrates seamlessly into any existing treatment room or trolley setup while accommodating 12 standard facial towels."
             }
           }
         },
@@ -114,36 +114,36 @@
           "instruction_item_fd7CbG": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Station Preparation:",
-              "text": "Place the Hot Cabi on a sturdy treatment cart or countertop and connect it to a dedicated 120V clinical power supply."
+              "bold_prefix": "Positioning:",
+              "text": "Position the Hot Cabi unit on a stable, flat surface within your treatment area and connect the power cord to a grounded 110-120V outlet."
             }
           },
           "instruction_item_8VfGh8": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Towel Preparation & Loading:",
-              "text": "Moisten up to 12 facial towels (13\" x 24\"), wring out excess water thoroughly, roll them neatly, and arrange them inside the internal wire basket."
+              "bold_prefix": "Towel Loading:",
+              "text": "Moisten up to 12 facial towels (13\" x 24\"), wring out excess moisture thoroughly, roll them, and place them on the removable internal rack."
             }
           },
           "instruction_item_z9KEfh": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Power Initiation:",
-              "text": "Close the cabinet door securely and toggle the power switch to start automatic 80°C (176°F) thermal heating and active UV germicidal sanitation."
+              "bold_prefix": "Power On:",
+              "text": "Flip the main switch to activate the heating system; the power indicator light will illuminate during operation."
             }
           },
           "instruction_item_tr6WqH": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Treatment Retrieval:",
-              "text": "Retrieve warm towels as needed during facial or body protocols, ensuring the door is promptly closed to retain internal temperature."
+              "bold_prefix": "Towel Retrieval:",
+              "text": "Retrieve warm towels as needed during treatments, closing the insulated door immediately to maintain internal temperature."
             }
           },
           "instruction_item_BqmtiA": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Shift Shutdown & Sanitization:",
-              "text": "At shift completion, turn off the unit, remove unused towels, empty the condensation tray, and wipe down internal surfaces until completely dry."
+              "bold_prefix": "Daily Shutdown:",
+              "text": "Power off the device upon completion of shift, remove remaining towels, and sanitize exterior and interior touchpoints with a clinical disinfectant wipe."
             }
           },
           "section_header_dGJcmr": {
@@ -155,22 +155,22 @@
           "instruction_item_CRmBXw": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Moisture Control:",
-              "text": "Never insert soaking wet towels into the cabinet; excess water accumulation can damage internal electrical heating elements."
+              "bold_prefix": "Moisture Safety:",
+              "text": "Never insert soaking wet towels dripping excess water directly into the unit to protect internal electrical components."
             }
           },
           "instruction_item_QqEHKc": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "Thermal Protection:",
-              "text": "Always verify towel warmth or use thermal tongs when retrieving items directly from the cabinet to prevent accidental skin discomfort."
+              "bold_prefix": "Thermal Handling:",
+              "text": "Always check towel warmth or use thermal tongs when retrieving items to prevent discomfort."
             }
           },
           "instruction_item_P8t7dx": {
             "type": "instruction_item",
             "settings": {
-              "bold_prefix": "UV Safety Standard:",
-              "text": "Avoid prolonged direct visual contact with the active UV lamp during opening to protect eyesight."
+              "bold_prefix": "Dry Environment Mandate:",
+              "text": "Operate the device solely within dry indoor treatment rooms, adhering to standard electrical safety protocols."
             }
           }
         },
@@ -205,42 +205,42 @@
           "faq_item_JkpEmj": {
             "type": "faq_item",
             "settings": {
-              "question": "What is the holding capacity of the Hot Cabi?",
-              "answer": "<p>The Hot Cabi holds up to 12 standard facial towels measuring 13\" x 24\".</p>"
+              "question": "What is the holding capacity of the Hot Cabi 61101?",
+              "answer": "<p>It holds up to 12 standard facial towels measuring 13\" x 24\".</p>"
             }
           },
           "faq_item_r7tr7G": {
             "type": "faq_item",
             "settings": {
-              "question": "What operating temperature does the unit maintain?",
-              "answer": "<p>It features constant thermal temperature control maintaining a steady 176°F (80°C).</p>"
+              "question": "What temperature range does this unit reach?",
+              "answer": "<p>It is optimized for safe, gentle towel warming between 120-160°F (49-71°C).</p>"
             }
           },
           "faq_item_dd9n3Q": {
             "type": "faq_item",
             "settings": {
-              "question": "Does the Hot Cabi include a germicidal UV light?",
-              "answer": "<p>Yes, it includes an integrated germicidal UV bulb to sanitize towels and accessories during operation.</p>"
+              "question": "What safety features are built into the cabinet?",
+              "answer": "<p>It includes an internal thermostat control, overheat protection system, and insulated casing.</p>"
             }
           },
           "faq_item_8YiyhY": {
             "type": "faq_item",
             "settings": {
-              "question": "What are the exterior dimensions and weight of the unit?",
-              "answer": "<p>Exterior dimensions are 18\" L x 13\" D x 13\" H with a total weight of 29 lbs (13 kg).</p>"
+              "question": "What are the dimensions and weight?",
+              "answer": "<p>External: 18\" L x 13\" D x 11\" H; Internal: 10.5\" L x 7.5\" D x 8.5\" H. Total weight is 29 lbs (13 kg).</p>"
             }
           },
           "faq_item_GkbCk6": {
             "type": "faq_item",
             "settings": {
-              "question": "Is the Hot Cabi electrical safety certified?",
-              "answer": "<p>Yes, all internal electrical components are fully CSA and UL approved for North American commercial standards.</p>"
+              "question": "Does it include a removable rack?",
+              "answer": "<p>Yes, it includes a removable internal towel rack and power cord.</p>"
             }
           },
           "faq_item_eGYQwE": {
             "type": "faq_item",
             "settings": {
-              "question": "What manufacturer warranty covers this equipment?",
+              "question": "What warranty covers this product?",
               "answer": "<p>The Hot Cabi is backed by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
             }
           }
