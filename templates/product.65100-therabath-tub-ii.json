@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Therabath Tub II Professional Paraffin Bath",
+          "intro_highlight": "The Therabath Tub II provides an optimized thermodynamic profile tailored explicitly to intense skincare workflows, balancing exceptional heat-retention properties with a space-saving structure crafted in North American production lines.",
+          "custom_description": "<p>Standard generic imports often rely on flimsy plastic tubs and fluctuating internal heating filaments that result in dangerous hot spots or extended melting delays. Equipro counters this with its signature commercial-grade build quality: an industrial-insulated inner anodized aluminum tank engineered for uniform heat distribution, heavy-duty outer composite molding, and an integrated safety-thermostat regulator. Backed by certified CSA and UL electrical approval, it delivers an extended 15-to-20-year operational life expectancy that lightweight alternatives cannot compete with.</p>",
+          "subtitle": "Deep-Tissue Thermal Conditioning & Advanced Station Efficiency",
+          "secondary_description": "<p>Positive attribute is central to the Equipro approach. To preserve the surface integrity and thermal conductivity of Therabath Tub II, periodic sanitation with specialized sanitizing sprays formulated for professional spa environments should be completed weekly. The inner aluminum basin features advanced scratch and chemical resistance property, ensuring an immaculate, non-porous condition outcome across years of continuous operation. Consistent care maintains flawless operational hygiene, prevents residue accumulation, and extends total device performance.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "therabath-tub-ii",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Licensed Esthetician:",
+              "answer": "<p>Delivers deep thermal conditioning and hydration for hand and foot paraffin therapy treatments during advanced facial and spa body care protocols.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Therapist:",
+              "answer": "<p>Maintains an optimized safe operating temperature range (126–134°F / 52–57°C) with thermostatic control and overheat protection for soothing joint and tissue therapy.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Nail Salon Technician:",
+              "answer": "<p>Features a 6 lbs paraffin wax capacity and anodized aluminum tank construction for continuous daily manicure and pedicure station integration.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>65100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Durable heated tub construction with anodized aluminum tank</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>14\" L x 8\" W x 8\" H (35.6 cm x 20.3 cm x 20.3 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>15 lb (7 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Capacity</td>\n        <td>Holds up to 6 lbs of paraffin wax (included)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating System</td>\n        <td>Electric heated paraffin bath for consistent temperature</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>Optimized safe operating temperature for paraffin therapy (approx. 126–134°F / 52–57°C)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American electrical compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>6 lbs of paraffin wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Thermostatic control, overheat protection, multi-insulated housing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional paraffin heat therapy for hands, feet, and joints</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Heavy-Duty Tank Construction:",
+              "text": "Built with premium anodized aluminum and robust outer composite housings to withstand constant thermal cycles in demanding everyday commercial spa settings."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Ergonomic Safety Design: Multi-Insulated Housing:",
+              "text": "Multi-insulated approach protecting the outer shell designed to protect both the practitioner and salon clients from external heat transferring, minimizing accidental burns."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Seamless Workspace Integration:",
+              "text": "Compact footprint profile that seamlessly fits into any modular rolling column, facial cart, or minimalist beauty workspace arrangement."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Station Setup:",
+              "text": "Place the equipment on a level, stable, heat-resistant workstation trolley away from direct sinks."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Wax Filling:",
+              "text": "Fill the inner anodized container with the included professional paraffin wax blocks, ensuring it remains between the designated minimum and maximum lines."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Activation:",
+              "text": "Plug the power cord into a standard grounded outlet and turn on the main switch to activate the regulated heating element."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Melting & Testing:",
+              "text": "Allow the paraffin wax to melt completely into a uniform liquid state; always test the temperature on your inner wrist before treating a client."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Treatment Application:",
+              "text": "Submerge the client’s hand or foot cleanly into the liquid layer 3 to 5 times to form a thick, heat-retaining glove, then wrap it in a protective liner and insulated mitt."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Thermal Verification:",
+              "text": "Never submerge a client's hands or feet into the basin without performing an initial temperature safety test on a small patch of skin first."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Fluid Control Protocols:",
+              "text": "Do not expose the internal electrical housing or power switches to water, damp linens, or liquid sanitizers."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Inflammatory Contraindications:",
+              "text": "Avoid applying heated paraffin over open wounds, skin ulcerations, severe skin inflammations, or areas with compromised temperature sensitivity."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the wax capacity of this unit?",
+              "answer": "<p>The Therabath Tub II holds up to 6 lbs of paraffin wax (which comes included with the unit).</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What are the outer dimensions of the system?",
+              "answer": "<p>Outer dimensions are 14\" L x 8\" W x 8\" H (35.6 cm x 20.3 cm x 20.3 cm) with a total weight of 15 lbs (7 kg).</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the operating temperature range?",
+              "answer": "<p>It maintains an optimized safe operating temperature range of approximately 126–134°F (52–57°C) for thermal therapy.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How often must the paraffin wax be replaced?",
+              "answer": "<p>Paraffin should be refreshed periodically depending on client volume, or whenever sediment accumulates at the bottom of the anodized tank.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does this unit require complete out-of-box assembly?",
+              "answer": "<p>No, the Therabath Tub II comes pre-assembled and includes 6 lbs of professional paraffin wax ready for setup.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the duration of the commercial manufacturer warranty?",
+              "answer": "<p>The Therabath Tub II is backed by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
