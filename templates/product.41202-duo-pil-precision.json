@@ -273,7 +273,9 @@
       },
       "compare_modal": {
         "type": "product-compare-modal",
-        "settings": {}
+        "settings": {
+            "compare_collection": "wax-heaters"
+        }
       }
     },
     "order": [
