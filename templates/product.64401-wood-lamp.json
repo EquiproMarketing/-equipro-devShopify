@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Wood Lamp Professional Skin Analyzer",
+          "intro_highlight": "The Equipro Wood's Lamp delivers an essential diagnostic baseline for advanced skincare treatments, bridging the gap between clinical insight and everyday practitioner ergonomics. Manufactured in North America to strict performance standards, this compact handheld device provides instant diagnostic clarity without overcomplicating the consultation workflow.",
+          "custom_description": "<p>The Wood's Lamp is purpose-built for skincare specialists, including certified technicians, licensed professionals, and practicing aestheticians. Its ergonomic, precision-engineered design targets visual fatigue and wrist discomfort during high-volume clinic days, enabling sharper focus on treatment execution and repeatable results. Whether you are performing deep-pore cleansing, microdermabrasion, or a comprehensive client consultation, this precision tool adapts to your multi-technician adaptability with friction-free adjustment and seamless workflow integration.</p>",
+          "subtitle": "Advanced Ultraviolet Skin Analysis for Precision Aesthetics",
+          "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optical clarity and professional performance of the Wood's Lamp, regular maintenance actions should be performed with specific cleaning products formulated for clean clinical environments after every use. The high-grade exterior casing offers exceptional wear resistance, ensuring an immaculate condition outcome across an extended multi-year timeframe. Consistent care preserves structural longevity and maximizes operational revenue.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": true,
+          "show_size_option": true,
+          "featured_product": "wood-lamp",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Advanced Skincare Specialists:",
+              "answer": "<p>Provides instant UV fluorescence examination to identify subsurface dehydration, lipid distribution, and dermal irregularities under precision 3-diopter magnification.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Directors:",
+              "answer": "<p>Equipped with 4 neon UV tubes (16 Watts) and optional column bracket compatibility (SKU 11106) for flexible multi-room clinic deployment.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Salon Entrepreneurs:",
+              "answer": "<p>Compact 3 lb portable design backed by full CSA & UL electrical safety certifications and a 1-year limited manufacturer warranty.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>64401</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Compact durable housing with high-quality magnifying lens and neon tube assembly</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>Compact portable design (approx. 10\" x 8\" x 12\" / 25.4 cm x 20.3 cm x 30.5 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3 lb / 1 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification</td>\n        <td>3 diopters magnifying lens for detailed skin analysis</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>4 neon tubes (16 Watts) for Wood's lamp ultraviolet examination</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>On/Off switch for neon lighting system</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American voltage, 16 Watts power consumption</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Skin examination under Wood's lamp ultraviolet light with magnification</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable compact design, protective housing for tubes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved components; meets international standards</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin analysis and diagnosis in aesthetic and spa environments</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability (3-Diopter Optical Lens):",
+              "text": "Precision-ground magnification engineered with premium glass components to deliver flawless visual clarity during thorough skin examinations."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Intelligent Station Integration (Optional Column Bracket):",
+              "text": "An adaptable design approach that allows the lamp to attach securely to the Deluxe Column (SKU 11106) using a specialized bracket, optimizing workflow for busy operators."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Streamlined Ergonomics:",
+              "text": "A lightweight, highly maneuverable handheld form factor that maintains absolute compatibility with any high-end professional beauty aesthetic station."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Darken the Consultation Space:",
+              "text": "Ensure the treatment room is fully blacked out or shaded to allow the ultraviolet light to fluoresce correctly on the skin surface."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Position the Client:",
+              "text": "Comfortably secure the client on a treatment chair, ensuring their face is easily accessible and horizontal."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Activate and Guide:",
+              "text": "Power on the lamp, allowing the short neon tube to achieve instant illumination stability."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Maintain Optimal Distance:",
+              "text": "Hold the 3-diopter lens roughly 4 to 6 inches away from the client’s face, adjusting the angle to evaluate specific target zones."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Document the Blueprint:",
+              "text": "Evaluate the varying colors displayed (e.g., bright blue-white for hydration, orange/pink for lipid zones) to map out the customized skincare treatment."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Avoid Ocular Exposure:",
+              "text": "Never direct the activated ultraviolet light path directly into the open eyes of the client or the practitioner."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Dry Storage Protocols:",
+              "text": "The equipment must be kept in a dry, humidity-controlled environment at all times to protect the internal electrical ballasts."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Certified Servicing:",
+              "text": "All technical repairs or internal maintenance must be performed strictly by Equipro certified technicians to avoid voiding the warranty."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the warranty for the Wood Lamp 64401?",
+              "answer": "<p>The Wood Lamp is covered by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Is this device safe for professional use?",
+              "answer": "<p>Yes, all internal electrical components are CSA and UL approved and compliant with international safety standards.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How long can I expect this lamp to last?",
+              "answer": "<p>With routine care and dry clinical storage, the durable housing and optical assembly are designed for multi-year commercial service.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What regular maintenance is mandatory for this Lamp?",
+              "answer": "<p>Clean external surfaces and optical lenses regularly with non-abrasive disinfectants formulated for clinical equipment after each consultation.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can this unit be mounted to an existing Equipro workstation?",
+              "answer": "<p>Yes, it attaches securely to the Deluxe Column (SKU 11106) using a specialized optional bracket.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What replacement light bulb does this skin scanner require?",
+              "answer": "<p>It requires a standard short replacement ultraviolet T-9 germicidal neon light bulb (Replacement SKU 1216).</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
