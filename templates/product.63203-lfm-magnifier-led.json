@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "LED LFM Magnifier (3D or 5D)",
+          "intro_highlight": "The LED LFM Magnifier balances high-precision optics with the rugged reliability of North American manufacturing, providing practitioners with a stable, distortion-free viewing field essential for intricate skincare modalities.",
+          "custom_description": "<p>The \"Equipro Difference\" is quantified by a 15 to 20-year life expectancy, significantly outpacing standard plastic-housed magnifiers. While standard units often utilize friction-based joints that degrade over time, the LFM features a robust metal structure and an arm tested for high-cycle professional use. Choose between 3D (3.5 diopters) and 5D (5 diopters) configurations.</p>",
+          "subtitle": "Precision Clarity for Detailed Analysis & High-Precision Workflows",
+          "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optical clarity and structural integrity of the LED LFM Magnifier, perform routine lens cleaning with a soft microfiber cloth formulated for professional environments weekly. The metal housing provides high resistance to common salon residues, ensuring an \"as-new\" condition outcome across years of service.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": false,
+          "show_size_option": true,
+          "featured_product": "led-lfm-magnifier-3d-or-5d",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": true,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Esthetician:",
+              "answer": "<p>Delivers clinical clarity and distortion-free viewing during detailed skin analyses and facial treatments using precision 3D or 5D optics.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Medical Spa Therapist:",
+              "answer": "<p>Equipped with instant-start LED lighting featuring 2 adjustable intensity levels and reliable tightening knobs at each articulation for stable positioning.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Lash Technician & Specialist:",
+              "answer": "<p>Features a robust metal frame construction, 43-inch arm extension (47\" reach footprint), and CSA & UL approved electrical components for heavy daily salon use.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>63203 (3D / 3.5D) / 63205 (5D)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Metal frame and arm construction</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification Options</td>\n        <td>3.5 diopters (3D) or 5 diopters (5D)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Arm Extension / Reach</td>\n        <td>43 inches (109 cm) to 47 inches articulated reach</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>7 lb (3.2 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>LED lights with 2 intensity levels and instant start</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Knobs at each articulation for precise and easy positioning</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Durable metal construction, reliable articulations, stable base compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional magnifying LED lamp for detailed skincare, facial treatments, and aesthetic procedures</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Metal Head and Structure:",
+              "text": "Constructed with industrial-grade materials to ensure structural stability in high-traffic salon environments."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Enhanced Precision: Diopter Magnification:",
+              "text": "Precision-engineered lens options (3D or 5D) designed to provide clinical clarity for aestheticians and skincare specialists."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Optimal Ergonomics: Articulated Arm:",
+              "text": "A functional quality featuring adjustment knobs at each joint, ensuring seamless compatibility with various treatment room layouts."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Station Mounting:",
+              "text": "Secure the magnifier firmly to a stable Equipro floor base, wall mount, or table bracket."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power & Illumination:",
+              "text": "Switch on the unit for instant-start LED illumination without warm-up time."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Intensity Control:",
+              "text": "Select between the two light intensity levels using the integrated control to match your treatment environment."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Arm Positioning:",
+              "text": "Position the articulated arm using the joint knobs to achieve the optimal focal length for the specific procedure."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Shadow Elimination:",
+              "text": "Rotate the directional head smoothly to eliminate shadows on the treatment area."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Optical Safety:",
+              "text": "Never leave the magnifying lens exposed to direct sunlight, as it may act as a convex burning glass and create a fire hazard."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Structural Integrity:",
+              "text": "Do not exceed the intended extension range of the articulated arm to prevent tipping or joint stress."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Environmental Care:",
+              "text": "Always store and operate equipment in a dry environment to protect internal electrical components."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the magnification strength of this model?",
+              "answer": "<p>It is available in 3D (3.5 Diopters) and 5D (5 Diopters) optical configurations selectable directly via product variants.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How far does the arm extend for treatments?",
+              "answer": "<p>The articulated steel arm extends up to 43 inches (109 cm) with robust positioning knobs at each joint.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What kind of maintenance does the LED system require?",
+              "answer": "<p>Routine lens cleaning weekly with a soft microfiber cloth formulated for professional environments keeps the optical glass pristine.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Is assembly required for this magnifying lamp?",
+              "answer": "<p>The lamp comes ready for setup; simply mount the stem into an approved Equipro base, cart bracket, or wall mount.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Can the light intensity be adjusted?",
+              "answer": "<p>Yes, the LED system features 2 adjustable intensity levels with an instant-start switch.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the warranty coverage for this product?",
+              "answer": "<p>The LED LFM Magnifier is backed by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
