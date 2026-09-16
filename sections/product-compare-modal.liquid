@@ -142,11 +142,11 @@
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
                   {% if t_down contains 'circus' or t_down contains '63603' %}
-                    Available in 3D (3.5 Diopters) & 5D (5 Diopters)
+                    Available in 3D (Standard Precision) & 5D (High Magnification)
                   {% elsif t_down contains '5d' %}
-                    5 Diopters (High Magnification)
+                    5D (High Magnification)
                   {% else %}
-                    3.5 Diopters (Standard Precision)
+                    3D (Standard Precision)
                   {% endif %}
                 </td>
                 {% assign items_count = 0 %}
@@ -157,11 +157,11 @@
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
                       {% if it_down contains 'circus' or it_down contains '63603' %}
-                        Available in 3D (3.5 Diopters) & 5D (5 Diopters)
+                        Available in 3D (Standard Precision) & 5D (High Magnification)
                       {% elsif it_down contains '5d' %}
-                        5 Diopters (High Magnification)
+                        5D (High Magnification)
                       {% else %}
-                        3.5 Diopters (Standard Precision)
+                        3D (Standard Precision)
                       {% endif %}
                     </td>
                   {% endif %}
