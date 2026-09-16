@@ -13,7 +13,7 @@
 
 <!-- Detección de Categoría Dominante -->
 {% assign category_key = 'generic' %}
-{% if current_type_raw contains 'mag' or product_url_raw contains 'mag' or product_title_down contains 'magnifier' or product_title_down contains 'lamp' %}
+{% if current_type_raw contains 'mag' or product_url_raw contains 'mag' or product_title_down contains 'magnifier' or product_title_down contains 'lamp' or product_title_down contains 'circus' %}
   {% assign category_key = 'mag_lamps' %}
 {% elsif current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'cabi' %}
   {% assign category_key = 'towel_warmers' %}
@@ -38,7 +38,7 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Filtrado estricto por ID, Handle y SKU -->
+      <!-- Filtrado estricto por ID, Handle y SKU para cero duplicados -->
       {% assign items_count = 0 %}
       {% for item in target_collection.products %}
         {% assign item_sku = item.variants.first.sku | default: '' %}
@@ -62,9 +62,11 @@
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
     <h2 class="compare-modal__title">
       {% if category_key == 'mag_lamps' %}Technical Magnifying Lamp Comparison
+      {% elsif category_key == 'towel_warmers' %}Technical Towel Warmer Comparison
+      {% elsif category_key == 'steamers' %}Technical Steamer Comparison
       {% else %}Technical Model Comparison{% endif %}
     </h2>
-    <p class="compare-modal__sub">Compare key optical and structural specifications side by side.</p>
+    <p class="compare-modal__sub">Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
 
     <div class="compare-table-scroll">
       <table class="compare-table">
@@ -83,7 +85,9 @@
                 {% endif %}
               </div>
               <strong>{{ product.title }}</strong>
-              <div class="compare-product-price">{{ product.price | money }}</div>
+              <div class="compare-product-price">
+                {% if product.price_varies %}From {% endif %}{{ product.price | money }}
+              </div>
               <a href="{{ product.url }}" class="compare-product-btn">View Details</a>
             </th>
 
@@ -102,7 +106,9 @@
                     {% endif %}
                   </div>
                   <strong>{{ item.title }}</strong>
-                  <div class="compare-product-price">{{ item.price | money }}</div>
+                  <div class="compare-product-price">
+                    {% if item.price_varies %}From {% endif %}{{ item.price | money }}
+                  </div>
                   <a href="{{ item.url }}" class="compare-product-btn">View Details</a>
                 </th>
               {% endif %}
@@ -132,15 +138,15 @@
             {% when 'mag_lamps' %}
               <!-- ================= MAG LAMPS SPECIFICATIONS ================= -->
               <tr>
-                <td class="sticky-col">Diopter Options</td>
+                <td class="sticky-col">Diopter Options & Glass</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% if t_down contains '5d' or t_down contains '63605' %}
-                    5 Diopters (2.25x)
-                  {% elsif t_down contains '3d' or t_down contains '63603' or t_down contains '63303' or t_down contains '63203' %}
-                    3.5 Diopters (1.875x)
+                  {% if t_down contains '3d' or t_down contains '3.5' or t_down contains '63603' %}
+                    3.5 Diopters (Standard Precision)
+                  {% elsif t_down contains '5d' or t_down contains '63605' %}
+                    5 Diopters (High Magnification)
                   {% else %}
-                    3.5D & 5D Available
+                    Available in 3D & 5D Variants
                   {% endif %}
                 </td>
                 {% assign items_count = 0 %}
@@ -150,26 +156,24 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% if it_down contains '5d' or it_down contains '63605' %}
-                        5 Diopters (2.25x)
-                      {% elsif it_down contains '3d' or it_down contains '63603' or it_down contains '63303' or it_down contains '63203' %}
-                        3.5 Diopters (1.875x)
+                      {% if it_down contains '3d' or it_down contains '3.5' or it_down contains '63603' %}
+                        3.5 Diopters (Standard Precision)
+                      {% elsif it_down contains '5d' or it_down contains '63605' %}
+                        5 Diopters (High Magnification)
                       {% else %}
-                        3.5D & 5D Available
+                        Available in 3D & 5D Variants
                       {% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
-
               <tr>
                 <td class="sticky-col">Weight</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
                   {% if t_down contains 'circus' or t_down contains '63603' %}10 lbs (5 kg)
                   {% elsif t_down contains 'kfm' or t_down contains '63104' %}9 lbs (4 kg)
-                  {% elsif t_down contains 'dainolite' or t_down contains '63303' or t_down contains 'lfm' or t_down contains '63203' %}7 lbs (3.2 kg)
-                  {% else %}7 - 10 lbs{% endif %}
+                  {% else %}7 lbs (3.2 kg){% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -180,19 +184,37 @@
                       {% assign it_down = item.title | downcase %}
                       {% if it_down contains 'circus' or it_down contains '63603' %}10 lbs (5 kg)
                       {% elsif it_down contains 'kfm' or it_down contains '63104' %}9 lbs (4 kg)
-                      {% elsif it_down contains 'dainolite' or it_down contains '63303' or it_down contains 'lfm' or it_down contains '63203' %}7 lbs (3.2 kg)
-                      {% else %}7 - 10 lbs{% endif %}
+                      {% else %}7 lbs (3.2 kg){% endif %}
+                    </td>
+                  {% endif %}
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Arm Reach & Technology</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  47" Spring-Balanced Enclosed Steel Arm
+                </td>
+                {% assign items_count = 0 %}
+                {% for item in target_collection.products %}
+                  {% assign item_sku = item.variants.first.sku | default: '' %}
+                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
+                    {% assign items_count = items_count | plus: 1 %}
+                    <td class="compare-col" data-product-id="{{ item.id }}">
+                      47" Spring-Balanced Enclosed Steel Arm
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
 
+            {% when 'towel_warmers' %}
+              <!-- ================= TOWEL WARMERS SPECIFICATIONS ================= -->
               <tr>
-                <td class="sticky-col">Arm Extension & Springs</td>
+                <td class="sticky-col">Towel Capacity (13" x 24")</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'circus' %}47" Spring-Balanced Enclosed Steel Arm
-                  {% else %}43" Articulated Steel Arm{% endif %}
+                  {% if t_down contains 'mini' or t_down contains '61100' %}6 Facial Towels
+                  {% elsif t_down contains 'spa' or t_down contains '61102' %}24 Facial Towels
+                  {% else %}12 Facial Towels{% endif %}
                 </td>
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
@@ -201,32 +223,16 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'circus' %}47" Spring-Balanced Enclosed Steel Arm
-                      {% else %}43" Articulated Steel Arm{% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-
-              <tr>
-                <td class="sticky-col">Lighting Technology</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Dimmable LED Array (Instant Start)
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      Dimmable LED Array (Instant Start)
+                      {% if it_down contains 'mini' or it_down contains '61100' %}6 Facial Towels
+                      {% elsif it_down contains 'spa' or it_down contains '61102' %}24 Facial Towels
+                      {% else %}12 Facial Towels{% endif %}
                     </td>
                   {% endif %}
                 {% endfor %}
               </tr>
 
             {% else %}
-              <!-- FALLBACK -->
+              <!-- ================= FALLBACK ================= -->
               <tr>
                 <td class="sticky-col">Product Status</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
