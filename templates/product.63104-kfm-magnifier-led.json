@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "KFM LED Magnifier (3D or 5D)",
+          "intro_highlight": "The KFM LED Magnifier is engineered to bridge the gap between high-definition optical clarity and the rigorous mechanical demands of a high-volume North American clinic.",
+          "custom_description": "<p>The KFM LED Magnifier is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Cosmetic Injectors. Its precision-engineered arm targets postural strain during extended treatment sessions, enabling sharper focus on treatment execution and repeatable results. Choose between 3D (3.5 diopters) and 5D (5 diopters) optical configurations.</p>",
+          "subtitle": "Precision Engineering for High-Clarity Skincare",
+          "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optical clarity and mechanical fluidness of the KFM LED Magnifier, wipe the lens with a microfiber cloth formulated for professional environments weekly. The industrial-grade surface provides high resistance property, ensuring pristine condition across years of heavy use.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": false,
+          "show_size_option": true,
+          "featured_product": "kfm-led-magnifier-3d-or-5d",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": true,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Skincare Specialist:",
+              "answer": "<p>Provides shadow-free illumination and distortion-free 3D or 5D optical clarity for precise dermal analysis and extractions.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Cosmetic Injector:",
+              "answer": "<p>Delivers heavy-duty drift-free positioning backed by rigorous cycle testing and ergonomic reach for facial mapping.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Clinical Spa Therapist:",
+              "answer": "<p>Features a 9 lb (4 kg) balanced build, dimmable LED lights with instant start, and full CSA & UL electrical safety certifications.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>63104 (3.5D) / 63105 (5D)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>High-impact polymer housing, durable steel arm</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification Options</td>\n        <td>3.5 diopters (3D) or 5 diopters (5D)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>Dimmable LED lights with intensity control and instant start</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mechanical Durability</td>\n        <td>Spring-balanced arm tested over 140,000 cycles; neck movement tested over 300,000 cycles (440,000 total test cycles)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Special Features</td>\n        <td>Hygienic dust protector included</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Color / Finish</td>\n        <td>White with black accents</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional magnifying LED lamp for detailed skincare, facial treatments, and aesthetic procedures</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: 440,000 Cycle Testing:",
+              "text": "Constructed with industrial-grade tension components to ensure zero-drift performance in high-volume clinics."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Optical Precision: Integrated Dimming:",
+              "text": "Design approach utilizing LED technology designed to provide shadow-free illumination for specialists and technicians, enhancing visual accuracy."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Clinical Integration: Ergonomic Extension:",
+              "text": "Aesthetic quality that ensures multi-technician adaptability across any modern spa environment."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Secure Mounting:",
+              "text": "Attach the magnifier firmly to a stable Equipro pedestal or wall mount."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power On:",
+              "text": "Utilize the instant-start switch for immediate flicker-free illumination."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Positioning:",
+              "text": "Use the 49.5\" extension arm to hover the lens 8-12 inches above the treatment area."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Intensity Adjustment:",
+              "text": "Use the dimming control to calibrate light levels based on skin sensitivity."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Lens Focus:",
+              "text": "Align your line of sight through the center of the 3D or 5D glass for maximum clarity."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Fire Safety:",
+              "text": "Always cover the glass lens when not in use to prevent concentrated sunlight from creating a fire hazard."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Structural Integrity:",
+              "text": "Do not exceed the intended extension limits or hang additional weight on the arm."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Cleaning Protocol:",
+              "text": "Use only non-abrasive, alcohol-free cleaners on the lens to prevent stripping the optical coating."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the magnification level of the KFM LED?",
+              "answer": "<p>It is available in 3D (3.5 Diopters) and 5D (5 Diopters) optical glass configurations selectable directly via variants.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the maximum reach of the arm?",
+              "answer": "<p>The spring-balanced arm offers an extended reach up to 49.5 inches with rigorous zero-drift durability.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How should the lens be maintained?",
+              "answer": "<p>Wipe weekly using a microfiber cloth formulated for professional environments with non-abrasive, alcohol-free cleaners.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does this unit require complex assembly?",
+              "answer": "<p>No, simply mount the stem securely into an approved Equipro pedestal or wall bracket.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Is the LED light dimmable?",
+              "answer": "<p>Yes, it features integrated dimming control with instant-start technology to calibrate illumination levels.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the warranty period for this magnifier?",
+              "answer": "<p>The KFM LED Magnifier is protected by a 1-year limited manufacturer warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
