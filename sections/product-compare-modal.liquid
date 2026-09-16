@@ -141,13 +141,12 @@
                 <td class="sticky-col">Diopter Options & Glass</td>
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
                   {% assign t_down = product.title | downcase %}
-                  {% assign sku_down = product.variants.first.sku | downcase %}
-                  {% if t_down contains '5d' or sku_down contains '63605' %}
-                    5 Diopters (2.25x High Magnification)
-                  {% elsif t_down contains '3d' or t_down contains '3.5' or sku_down contains '63603' or sku_down contains '63303' or sku_down contains '63203' %}
-                    3.5 Diopters (1.875x Standard Precision)
+                  {% if t_down contains 'circus' or t_down contains '63603' %}
+                    Available in 3D (3.5 Diopters) & 5D (5 Diopters)
+                  {% elsif t_down contains '5d' %}
+                    5 Diopters (High Magnification)
                   {% else %}
-                    Available in 3D & 5D Configurations
+                    3.5 Diopters (Standard Precision)
                   {% endif %}
                 </td>
                 {% assign items_count = 0 %}
@@ -157,13 +156,12 @@
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
                       {% assign it_down = item.title | downcase %}
-                      {% assign its_down = item.variants.first.sku | downcase %}
-                      {% if it_down contains '5d' or its_down contains '63605' %}
-                        5 Diopters (2.25x High Magnification)
-                      {% elsif it_down contains '3d' or it_down contains '3.5' or its_down contains '63603' or its_down contains '63303' or its_down contains '63203' %}
-                        3.5 Diopters (1.875x Standard Precision)
+                      {% if it_down contains 'circus' or it_down contains '63603' %}
+                        Available in 3D (3.5 Diopters) & 5D (5 Diopters)
+                      {% elsif it_down contains '5d' %}
+                        5 Diopters (High Magnification)
                       {% else %}
-                        Available in 3D & 5D Configurations
+                        3.5 Diopters (Standard Precision)
                       {% endif %}
                     </td>
                   {% endif %}
