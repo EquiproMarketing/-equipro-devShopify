@@ -1,287 +1,299 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "settings": {
-          "back_text": "Back",
-          "custom_title": "Solo-pil Maxi/US",
-          "intro_highlight": "Engineered to meet the fast-paced volume demands of American clinical treatment rooms, the Solo-Pil US balances high-capacity thermal output with an ultra-stable footprint. Designed strictly around advanced North American electrical safety benchmarks, this specialized chassis streamlines continuous product melting so practicing specialists never break their technical focus.",
-          "custom_description": "<p>The Solo-Pil US is purpose-built for practicing specialists, including Estheticians, Medical Spa Therapists, and Lash Technicians. Its ergonomic thermal regulation targets visual fatigue and postural strain during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing brow sculpting, deep-pore cleansing prep, or full-body hair removal, this professional station adjusts to your modality-specific positioning with instant-response calibration and intuitive one-hand control.</p>",
-          "subtitle": "Optimized for High-Volume Efficiency",
-          "secondary_description": "<p>Heavy-duty dependability is central to the Equipro approach. To preserve the rapid heating efficiency and thermal precision of the Solo-Pil US, daily surface wiping with a professional citrus-based solvent formulated for high-volume spa environments is recommended. The insulated stainless steel warming core resists harsh residue buildup, ensuring repeatable thermal output across years of rigorous commercial operation. Consistent care delivers service consistency and reduced downtime.</p>",
-          "show_variant_selectors": true,
-          "show_color_option": true,
-          "show_size_option": true,
-          "featured_product": "solo-pil-maxi",
-          "btn_label": "ADD TO CART",
-          "show_compare_btn": false,
-          "compare_btn_label": "Compare with other models"
-        }
-      },
-      "main_product_characteristics_Hp7Baq": {
-        "type": "main-product-characteristics",
-        "blocks": {
-          "faq_item_mcpNpt": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Waxing Specialists:",
-              "answer": "<p>High-volume Waxing Specialists benefit directly from the 4-inch US reservoir compatibility. Designed to accommodate standard American depilatory tins seamlessly, it enables rapid workflow transitions and reduces turnaround time between client sessions.</p>"
-            }
-          },
-          "faq_item_74hYTC": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Clinical Spa Technicians:",
-              "answer": "<p>For Clinical Spa Technicians requiring strict space efficiency, the compact 8.25\" x 7\" x 5\" footprint fits comfortably on mobile trolleys without cluttering treatment areas. Insulated components ensure safe operation alongside other clinical equipment.</p>"
-            }
-          },
-          "faq_item_bhzmwM": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Salon Entrepreneurs:",
-              "answer": "<p>Salon owners benefit from long-term durability and safety compliance. With CSA and UL approved electrical components and a 2-year limited manufacturer warranty, the Solo-Pil US provides reliable operation for commercial aesthetic facilities.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_mcpNpt",
-          "faq_item_74hYTC",
-          "faq_item_bhzmwM"
-        ],
-        "name": "Product Characteristics",
-        "settings": {
-          "accordion_heading": "Professional Applications",
-          "show_shipping": true,
-          "shipping_title": "Shipping",
-          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
-          "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41101</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Enamel-painted steel casing, high-grade thermoplastic components, internal aluminum reservoir</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional analog single-tank wax heater</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>20.95 cm x 17.78 cm x 12.70 cm (8.25\" x 7\" x 5\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.20 kg (7 lb)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>120 V AC, 60 Hz, 125 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>Integrated 10.16 cm (4\") diameter heating chamber</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>Rapid meltdown cycle: 15 to 20 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Designed for warm or hot wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Maximum Temperature</td>\n        <td>Adjustable analog range up to 85°C (185°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precise rotary thermostat dial for optimal temperature control</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Internal thermal cutoff fuse and heavy-duty insulated power cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years limited manufacturer warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
-          "table_col1_header": "TECHNICAL ASPECT",
-          "table_col2_header": "SPECIFICATION DETAILS"
-        }
-      },
-      "banner_features": {
-        "type": "product-key-features-banner",
-        "blocks": {
-          "feature_item_8YjzYH": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Unrivaled Durability - Thermal Core:",
-              "text": "Integrated heavy-duty heating core engineered with reinforced insulation to sustain high-temperature depilatory liquefaction in high-volume clinic days."
-            }
-          },
-          "feature_item_F4iL9F": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Analog Precision Dial:",
-              "text": "Instant-response calibration dial designed to maintain exact working temperatures for warm and hot wax formulations, preventing product degradation."
-            }
-          },
-          "feature_item_RXpARk": {
-            "type": "feature_item",
-            "settings": {
-              "title": "US Format Reservoir:",
-              "text": "Precision-engineered 4-inch diameter stainless steel heating well designed to provide seamless workflow integration for standardized American depilatory tins."
-            }
-          }
-        },
-        "block_order": [
-          "feature_item_8YjzYH",
-          "feature_item_F4iL9F",
-          "feature_item_RXpARk"
-        ],
-        "settings": {
-          "heading": "Key Features for the Professional Station",
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "right",
-          "bg_color": "#a22938",
-          "text_color": "#ffffff",
-          "padding_top": 60,
-          "padding_bottom": 60,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "how_to": {
-        "type": "product-how-to",
-        "blocks": {
-          "section_header_XjqiGV": {
-            "type": "section_header",
-            "settings": {
-              "title": "How to Use"
-            }
-          },
-          "instruction_item_fd7CbG": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Chamber Loading:",
-              "text": "Drop a standard 4-inch US depilatory tin or a dedicated Equipro aluminum melting pot directly into the stainless steel warming reservoir."
-            }
-          },
-          "instruction_item_8VfGh8": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Power Initiation:",
-              "text": "Plug the commercial cord into a dedicated clinical power strip and rotate the analog dial to maximum to trigger the rapid heating cycle."
-            }
-          },
-          "instruction_item_z9KEfh": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Viscosity Calibration:",
-              "text": "Once complete product liquefaction occurs, dial back the precision thermostat to the specific manufacturer-recommended working threshold."
-            }
-          },
-          "instruction_item_tr6WqH": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Patch Testing:",
-              "text": "Always verify product viscosity and temperature on the practitioner's inner wrist prior to touching client skin to guarantee thermal safety."
-            }
-          },
-          "instruction_item_BqmtiA": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Shift Shutdown:",
-              "text": "Turn the analog calibration dial to the absolute off position at shift completion and allow the internal well to cool entirely before sanitizing."
-            }
-          },
-          "section_header_dGJcmr": {
-            "type": "section_header",
-            "settings": {
-              "title": "Safety & Disclaimers"
-            }
-          },
-          "instruction_item_CRmBXw": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Dry Environment Mandate:",
-              "text": "Never introduce water, steam, or liquid cleaning solvents directly into the unlined heating well; equipment must remain dry to prevent severe electrical shorting."
-            }
-          },
-          "instruction_item_QqEHKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Certified Servicing:",
-              "text": "All component replacements or internal electrical servicing must be authorized or performed by certified Equipro technicians to prevent thermal hazards and preserve active CSA/UL listings."
-            }
-          },
-          "instruction_item_P8t7dx": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Thermal Protection:",
-              "text": "Practitioners must strictly utilize heat-resistant tools or designated pot handles when extracting hot metal containers from the active heating core."
-            }
-          }
-        },
-        "block_order": [
-          "section_header_XjqiGV",
-          "instruction_item_fd7CbG",
-          "instruction_item_8VfGh8",
-          "instruction_item_z9KEfh",
-          "instruction_item_tr6WqH",
-          "instruction_item_BqmtiA",
-          "section_header_dGJcmr",
-          "instruction_item_CRmBXw",
-          "instruction_item_QqEHKc",
-          "instruction_item_P8t7dx"
-        ],
-        "settings": {
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "left",
-          "image_aspect_ratio": "adapt",
-          "title_color": "#a22938",
-          "text_color": "#444444",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "faq": {
-        "type": "category-faq",
-        "blocks": {
-          "faq_item_JkpEmj": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What size depilatory containers fit inside the Solo-Pil US?",
-              "answer": "<p>The 4-inch (10.16 cm) diameter warming chamber is specifically designed to accommodate standard US format depilatory tins.</p>"
-            }
-          },
-          "faq_item_r7tr7G": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Does this model come with an aluminum melting pot?",
-              "answer": "<p>Aluminum melting pots are sold separately as optional station accessories.</p>"
-            }
-          },
-          "faq_item_dd9n3Q": {
-            "type": "faq_item",
-            "settings": {
-              "question": "How does analog thermal regulation protect product formulas?",
-              "answer": "<p>The rotary thermostat maintains steady temperatures up to 85°C (185°F), preventing overheating and preserving product consistency.</p>"
-            }
-          },
-          "faq_item_8YiyhY": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Can this unit operate continuously throughout a packed spa shift?",
-              "answer": "<p>Yes, it is engineered for heavy-duty commercial use with CSA and UL approved electrical components for continuous operation.</p>"
-            }
-          },
-          "faq_item_GkbCk6": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the safest protocol for removing wax drips from the chassis?",
-              "answer": "<p>Daily wiping with a citrus-based solvent formulated for spa equipment is recommended while the unit is unplugged and cool.</p>"
-            }
-          },
-          "faq_item_eGYQwE": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What commercial warranty backs this equipment?",
-              "answer": "<p>The Solo-Pil US includes a 2-year limited manufacturer warranty covering parts and labor.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_JkpEmj",
-          "faq_item_r7tr7G",
-          "faq_item_dd9n3Q",
-          "faq_item_8YiyhY",
-          "faq_item_GkbCk6",
-          "faq_item_eGYQwE"
-        ],
-        "settings": {
-          "heading": "Your Questions, Answered",
-          "subheading": "Find answers to frequently asked technical and equipment questions.",
-          "layout": "grid",
-          "header_position": "left",
-          "open_first_item": true,
-          "title_color": "#a22938",
-          "question_color": "#111111",
-          "answer_color": "#555555",
-          "toggle_color": "#a22938",
-          "border_color": "#1a1a1a",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "compare_modal": {
-        "type": "product-compare-modal",
-        "settings": {}
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Solo-pil Maxi/US",
+        "intro_highlight": "Engineered to meet the fast-paced volume demands of American clinical treatment rooms, the Solo-Pil US balances high-capacity thermal output with an ultra-stable footprint. Designed strictly around advanced North American electrical safety benchmarks, this specialized chassis streamlines continuous product melting so practicing specialists never break their technical focus.",
+        "custom_description": "<p>The Solo-Pil US is purpose-built for practicing specialists, including Estheticians, Medical Spa Therapists, and Lash Technicians. Its ergonomic thermal regulation targets visual fatigue and postural strain during full 8-hour shifts, enabling sharper focus on technical precision and service consistency. Whether you are performing brow sculpting, deep-pore cleansing prep, or full-body hair removal, this professional station adjusts to your modality-specific positioning with instant-response calibration and intuitive one-hand control.</p>",
+        "subtitle": "Optimized for High-Volume Efficiency",
+        "secondary_description": "<p>Heavy-duty dependability is central to the Equipro approach. To preserve the rapid heating efficiency and thermal precision of the Solo-Pil US, daily surface wiping with a professional citrus-based solvent formulated for high-volume spa environments is recommended. The insulated stainless steel warming core resists harsh residue buildup, ensuring repeatable thermal output across years of rigorous commercial operation. Consistent care delivers service consistency and reduced downtime.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "solo-pil-maxi",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
       }
     },
-    "order": [
-      "main",
-      "main_product_characteristics_Hp7Baq",
-      "banner_features",
-      "how_to",
-      "faq",
-      "compare_modal"
-    ]
-  }
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Waxing Specialists:",
+            "answer": "<p>High-volume Waxing Specialists benefit directly from the 4-inch US reservoir compatibility. Designed to accommodate standard American depilatory tins seamlessly, it enables rapid workflow transitions and reduces turnaround time between client sessions.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technicians:",
+            "answer": "<p>For Clinical Spa Technicians requiring strict space efficiency, the compact 8.25\" x 7\" x 5\" footprint fits comfortably on mobile trolleys without cluttering treatment areas. Insulated components ensure safe operation alongside other clinical equipment.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Salon Entrepreneurs:",
+            "answer": "<p>Salon owners benefit from long-term durability and safety compliance. With CSA and UL approved electrical components and a 2-year limited manufacturer warranty, the Solo-Pil US provides reliable operation for commercial aesthetic facilities.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>41101</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Enamel-painted steel casing, high-grade thermoplastic components, internal aluminum reservoir</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional analog single-tank wax heater</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>20.95 cm x 17.78 cm x 12.70 cm (8.25\" x 7\" x 5\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3.20 kg (7 lb)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>120 V AC, 60 Hz, 125 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>Integrated 10.16 cm (4\") diameter heating chamber</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Time</td>\n        <td>Rapid meltdown cycle: 15 to 20 minutes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Wax Compatibility</td>\n        <td>Designed for warm or hot wax</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Maximum Temperature</td>\n        <td>Adjustable analog range up to 85°C (185°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precise rotary thermostat dial for optimal temperature control</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Internal thermal cutoff fuse and heavy-duty insulated power cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years limited manufacturer warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability - Thermal Core:",
+            "text": "Integrated heavy-duty heating core engineered with reinforced insulation to sustain high-temperature depilatory liquefaction in high-volume clinic days."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Analog Precision Dial:",
+            "text": "Instant-response calibration dial designed to maintain exact working temperatures for warm and hot wax formulations, preventing product degradation."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "US Format Reservoir:",
+            "text": "Precision-engineered 4-inch diameter stainless steel heating well designed to provide seamless workflow integration for standardized American depilatory tins."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chamber Loading:",
+            "text": "Drop a standard 4-inch US depilatory tin or a dedicated Equipro aluminum melting pot directly into the stainless steel warming reservoir."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Initiation:",
+            "text": "Plug the commercial cord into a dedicated clinical power strip and rotate the analog dial to maximum to trigger the rapid heating cycle."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Viscosity Calibration:",
+            "text": "Once complete product liquefaction occurs, dial back the precision thermostat to the specific manufacturer-recommended working threshold."
+          }
+        },
+        "instruction_item_tr6WqH": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Patch Testing:",
+            "text": "Always verify product viscosity and temperature on the practitioner's inner wrist prior to touching client skin to guarantee thermal safety."
+          }
+        },
+        "instruction_item_BqmtiA": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Shift Shutdown:",
+            "text": "Turn the analog calibration dial to the absolute off position at shift completion and allow the internal well to cool entirely before sanitizing."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Dry Environment Mandate:",
+            "text": "Never introduce water, steam, or liquid cleaning solvents directly into the unlined heating well; equipment must remain dry to prevent severe electrical shorting."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Certified Servicing:",
+            "text": "All component replacements or internal electrical servicing must be authorized or performed by certified Equipro technicians to prevent thermal hazards and preserve active CSA/UL listings."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Thermal Protection:",
+            "text": "Practitioners must strictly utilize heat-resistant tools or designated pot handles when extracting hot metal containers from the active heating core."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_tr6WqH",
+        "instruction_item_BqmtiA",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What size depilatory containers fit inside the Solo-Pil US?",
+            "answer": "<p>The 4-inch (10.16 cm) diameter warming chamber is specifically designed to accommodate standard US format depilatory tins.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does this model come with an aluminum melting pot?",
+            "answer": "<p>Aluminum melting pots are sold separately as optional station accessories.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How does analog thermal regulation protect product formulas?",
+            "answer": "<p>The rotary thermostat maintains steady temperatures up to 85°C (185°F), preventing overheating and preserving product consistency.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can this unit operate continuously throughout a packed spa shift?",
+            "answer": "<p>Yes, it is engineered for heavy-duty commercial use with CSA and UL approved electrical components for continuous operation.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the safest protocol for removing wax drips from the chassis?",
+            "answer": "<p>Daily wiping with a citrus-based solvent formulated for spa equipment is recommended while the unit is unplugged and cool.</p>"
+          }
+        },
+        "faq_item_eGYQwE": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What commercial warranty backs this equipment?",
+            "answer": "<p>The Solo-Pil US includes a 2-year limited manufacturer warranty covering parts and labor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6",
+        "faq_item_eGYQwE"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Models to Compare",
+        "compare_collection": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
