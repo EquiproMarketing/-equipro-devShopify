@@ -32,7 +32,7 @@
       "name": "Custom Product Treatment",
       "settings": {
         "title": "",
-        "featured_collection": "skin-analyzer",
+        "featured_collection": "mag-lamps",
         "products_to_show": 8,
         "card_bg_color": "#f5f5f7",
         "default_subtitle": "Professional Treatment Series",
@@ -44,7 +44,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Discover our range of high-quality professional facial steamers designed for estheticians, spas, and skincare clinics. Featuring safe operation, durable heating elements, and optimal ozone vaporization for superior pore preparation and deep skin hydration.",
+        "text": "Discover our range of high-quality professional magnifying lamps designed for esthetics, skincare treatments, micropigmentation, extractions, and more. Bright, shadow-free LED lighting and durable arms built for daily professional use.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
