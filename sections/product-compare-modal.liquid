@@ -13,7 +13,7 @@
 
 <!-- Detección de Categoría Dominante -->
 {% assign category_key = 'generic' %}
-{% if current_type_raw contains 'mag' or product_url_raw contains 'mag' or product_title_down contains 'magnifier' or product_title_down contains 'lamp' or product_title_down contains 'circus' %}
+{% if current_type_raw contains 'mag' or product_url_raw contains 'mag' or product_title_down contains 'magnifier' or product_title_down contains 'lamp' or product_title_down contains 'circus' or product_title_down contains 'kfm' or product_title_down contains 'lfm' or product_title_down contains 'dainolite' %}
   {% assign category_key = 'mag_lamps' %}
 {% elsif current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'cabi' %}
   {% assign category_key = 'towel_warmers' %}
@@ -139,30 +139,18 @@
               <!-- ================= MAG LAMPS SPECIFICATIONS ================= -->
               <tr>
                 <td class="sticky-col">Diopter Options & Glass</td>
+                <!-- Columna principal -->
                 <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'circus' or t_down contains '63603' %}
-                    Available in 3D (Standard Precision) & 5D (High Magnification)
-                  {% elsif t_down contains '5d' %}
-                    5D (High Magnification)
-                  {% else %}
-                    3D (Standard Precision)
-                  {% endif %}
+                  Available in 3D (Standard Precision) & 5D (High Magnification)
                 </td>
+                <!-- Columnas de los demás productos de la comparativa -->
                 {% assign items_count = 0 %}
                 {% for item in target_collection.products %}
                   {% assign item_sku = item.variants.first.sku | default: '' %}
                   {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
                     {% assign items_count = items_count | plus: 1 %}
                     <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'circus' or it_down contains '63603' %}
-                        Available in 3D (Standard Precision) & 5D (High Magnification)
-                      {% elsif it_down contains '5d' %}
-                        5D (High Magnification)
-                      {% else %}
-                        3D (Standard Precision)
-                      {% endif %}
+                      Available in 3D (Standard Precision) & 5D (High Magnification)
                     </td>
                   {% endif %}
                 {% endfor %}
