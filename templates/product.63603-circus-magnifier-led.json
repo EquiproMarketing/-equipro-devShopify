@@ -1,0 +1,287 @@
+{
+    "sections": {
+      "main": {
+        "type": "main-product",
+        "settings": {
+          "back_text": "Back",
+          "custom_title": "Circus Magnifier LED (3D or 5D)",
+          "intro_highlight": "The Circus Magnifier LED delivers distortion-free optics and shadow-free illumination, engineered specifically to eliminate practitioner visual fatigue during detailed skin analyses and precision aesthetic treatments. Hand-assembled to strict North American manufacturing standards, this heavy-duty workstation tool combines fluid mechanical positioning with industrial-grade durability, ensuring seamless operational performance in high-volume clinics.",
+          "custom_description": "<p>Circus Magnifier LED is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, Lash Technicians, and Permanent Makeup Artists. Its precision-engineered structure targets visual fatigue during extended treatment sessions, enabling sharper focus on treatment execution and operational efficiency. Whether you are performing deep-pore cleansing, microdermabrasion, brow sculpting, or PMU, this precision tool adjusts to your modality-specific positioning with intuitive one-hand control and instant-response calibration.</p>",
+          "subtitle": "High-Definition Clarification & Shadow-Free LED Illumination",
+          "secondary_description": "<p>Standard magnifying lamps frequently suffer from internal spring fatigue, plastic joint degradation, and lens clouding, leading to drifting arms and distorted vision within months of high-volume use. The Equipro difference lies in our industrial-grade, fully enclosed spring-balanced steel articulated arm and premium optical-grade glass. Equipro's design completely encloses the mechanical components to eliminate pinching hazards and maintain consistent tension, providing a reliable, drift-free extension that outlasts standard commercial imports by years.</p>",
+          "show_variant_selectors": true,
+          "show_color_option": false,
+          "show_size_option": false,
+          "featured_product": "circus-magnifier-led-3d-or-5d",
+          "btn_label": "ADD TO CART",
+          "show_compare_btn": false,
+          "compare_btn_label": "Compare with other models"
+        }
+      },
+      "main_product_characteristics_Hp7Baq": {
+        "type": "main-product-characteristics",
+        "blocks": {
+          "faq_item_mcpNpt": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Master Esthetician:",
+              "answer": "<p>Provides shadow-free dimmable LED illumination and large distortion-free glass optics (3.5D or 5D) for precise dermal analysis and facial extractions.</p>"
+            }
+          },
+          "faq_item_74hYTC": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Cosmetic Injector:",
+              "answer": "<p>Delivers drift-free, fully enclosed spring-balanced arm positioning with 47-inch extension for accurate facial mapping and injection site clarity.</p>"
+            }
+          },
+          "faq_item_bhzmwM": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Permanent Makeup Artist & Lash Tech:",
+              "answer": "<p>Eliminates eye strain during delicate microblading, PMU, and lash application sessions with flexible head articulation tested over 300,000 cycles.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_mcpNpt",
+          "faq_item_74hYTC",
+          "faq_item_bhzmwM"
+        ],
+        "name": "Product Characteristics",
+        "settings": {
+          "accordion_heading": "Professional Applications",
+          "show_shipping": true,
+          "shipping_title": "Shipping",
+          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+          "show_tech_table": true,
+          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>63603 (3.5D) / 63605 (5D)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>High-impact polymer housing, 19mm square steel tubing arm with enclosed internal springs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification Options</td>\n        <td>3.5 diopters (1.875x) or 5 diopters (2.25x); 1.5 times larger lens than standard models</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Arm Extension / Reach</td>\n        <td>47 inches (119 cm) spring-balanced reach</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>10 lb (5 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>Dimmable LED light array with instant start</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mechanical Durability</td>\n        <td>Arm movement tested over 140,000 cycles; neck movement tested over 300,000 cycles</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Color / Finish</td>\n        <td>White with black accents</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard 110-120V North American compatibility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated protective lens dust cover, fully enclosed pinch-free spring mechanism</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional magnifying LED lamp for detailed skincare, facial treatments, and aesthetic procedures</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+          "table_col1_header": "TECHNICAL ASPECT",
+          "table_col2_header": "SPECIFICATION DETAILS"
+        }
+      },
+      "banner_features": {
+        "type": "product-key-features-banner",
+        "blocks": {
+          "feature_item_8YjzYH": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Unrivaled Durability: Heavy-Duty Articulated Arm:",
+              "text": "Construction with industrial-grade steel and internal springs to ensure drift-free positioning in high-volume clinic days."
+            }
+          },
+          "feature_item_F4iL9F": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Hygienic Integrity: Integrated Protective Shield:",
+              "text": "Design approach utilizing a secure dust cover designed to benefit the practitioner and client, maintaining absolute lens cleanliness and preventing ambient dust accumulation."
+            }
+          },
+          "feature_item_RXpARk": {
+            "type": "feature_item",
+            "settings": {
+              "title": "Aesthetic Integration: Clean Contemporary Profile:",
+              "text": "Functional quality that ensures universal compatibility with modular structural columns, wall mounts, or rolling caster bases within any modern spa environment."
+            }
+          }
+        },
+        "block_order": [
+          "feature_item_8YjzYH",
+          "feature_item_F4iL9F",
+          "feature_item_RXpARk"
+        ],
+        "settings": {
+          "heading": "Key Features for the Professional Station",
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "right",
+          "bg_color": "#a22938",
+          "text_color": "#ffffff",
+          "padding_top": 60,
+          "padding_bottom": 60,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "how_to": {
+        "type": "product-how-to",
+        "blocks": {
+          "section_header_XjqiGV": {
+            "type": "section_header",
+            "settings": {
+              "title": "How to Use"
+            }
+          },
+          "instruction_item_fd7CbG": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Mounting Setup:",
+              "text": "Securely mount the magnifier stem into your compatible Equipro salon cart, space-saving wall bracket, or mobile caster base."
+            }
+          },
+          "instruction_item_8VfGh8": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Power Connection:",
+              "text": "Connect the power cable to a grounded AC outlet and verify that the articulation tension knobs are adjusted to your preferred resistance."
+            }
+          },
+          "instruction_item_z9KEfh": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Dust Cover Opening:",
+              "text": "Open the integrated hygienic dust cover to expose the 3.5D or 5D optical lens."
+            }
+          },
+          "instruction_item_tr6WqH": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Positioning:",
+              "text": "Grip the ergonomic lens head handle and smoothly position the light field approximately 8 to 12 inches directly above the target treatment zone."
+            }
+          },
+          "instruction_item_BqmtiA": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Activation & Closure:",
+              "text": "Activate the power switch to illuminate the high-intensity LED array, and close the cover immediately following completion of the procedure to protect the glass optics."
+            }
+          },
+          "section_header_dGJcmr": {
+            "type": "section_header",
+            "settings": {
+              "title": "Safety & Disclaimers"
+            }
+          },
+          "instruction_item_CRmBXw": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Optic Safety Protocol:",
+              "text": "Never leave the magnifying lens exposed to direct sunlight, as the glass lens can act as a convex burning glass and create a severe fire hazard. Always close the protective dust cover when the lamp is not actively in use."
+            }
+          },
+          "instruction_item_QqEHKc": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Structural Manipulation:",
+              "text": "Avoid forcing the articulated arm beyond its structural 47-inch maximum extension or twisting the lamp head past its engineered mechanical limit stops."
+            }
+          },
+          "instruction_item_P8t7dx": {
+            "type": "instruction_item",
+            "settings": {
+              "bold_prefix": "Moisture Containment:",
+              "text": "Ensure the electrical housing and LED light array do not come into direct contact with streaming vapors, chemical oversprays, or liquid skincare solutions."
+            }
+          }
+        },
+        "block_order": [
+          "section_header_XjqiGV",
+          "instruction_item_fd7CbG",
+          "instruction_item_8VfGh8",
+          "instruction_item_z9KEfh",
+          "instruction_item_tr6WqH",
+          "instruction_item_BqmtiA",
+          "section_header_dGJcmr",
+          "instruction_item_CRmBXw",
+          "instruction_item_QqEHKc",
+          "instruction_item_P8t7dx"
+        ],
+        "settings": {
+          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+          "image_position": "left",
+          "image_aspect_ratio": "adapt",
+          "title_color": "#a22938",
+          "text_color": "#444444",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "faq": {
+        "type": "category-faq",
+        "blocks": {
+          "faq_item_JkpEmj": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Does the unit include a cover to protect the optical glass?",
+              "answer": "<p>Yes, it features an integrated flip-up protective dust cover that shields the lens from ambient dust and prevents solar glare hazards when not in use.</p>"
+            }
+          },
+          "faq_item_r7tr7G": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What is the maximum height range and mechanical reach of the arm?",
+              "answer": "<p>The spring-balanced articulated arm extends up to 47 inches (119 cm) with drift-free positioning.</p>"
+            }
+          },
+          "faq_item_dd9n3Q": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What diopter options are available for this lamp?",
+              "answer": "<p>It is available in 3.5 Diopters (1.875x magnification) under SKU 63603 and 5 Diopters (2.25x magnification) under SKU 63605.</p>"
+            }
+          },
+          "faq_item_8YiyhY": {
+            "type": "faq_item",
+            "settings": {
+              "question": "How do I perform routine maintenance on the magnifying lamp?",
+              "answer": "<p>Clean the optical glass lens with a microfiber cloth and non-abrasive optical lens cleaner, and wipe down the steel arm with clinical disinfectant wipes.</p>"
+            }
+          },
+          "faq_item_GkbCk6": {
+            "type": "faq_item",
+            "settings": {
+              "question": "Is assembly required for this professional magnifier lamp?",
+              "answer": "<p>The lamp head and arm come pre-assembled; simply insert the mounting stem into an approved Equipro trolley, wall mount, or rolling base.</p>"
+            }
+          },
+          "faq_item_eGYQwE": {
+            "type": "faq_item",
+            "settings": {
+              "question": "What type of commercial warranty coverage is included?",
+              "answer": "<p>The Circus Magnifier LED is backed by a 1-Year Limited Manufacturer Warranty covering parts and labor.</p>"
+            }
+          }
+        },
+        "block_order": [
+          "faq_item_JkpEmj",
+          "faq_item_r7tr7G",
+          "faq_item_dd9n3Q",
+          "faq_item_8YiyhY",
+          "faq_item_GkbCk6",
+          "faq_item_eGYQwE"
+        ],
+        "settings": {
+          "heading": "Your Questions, Answered",
+          "subheading": "Find answers to frequently asked technical and equipment questions.",
+          "layout": "grid",
+          "header_position": "left",
+          "open_first_item": true,
+          "title_color": "#a22938",
+          "question_color": "#111111",
+          "answer_color": "#555555",
+          "toggle_color": "#a22938",
+          "border_color": "#1a1a1a",
+          "bg_color": "#ffffff",
+          "padding_top": 40,
+          "padding_bottom": 40,
+          "margin_top": 40,
+          "margin_bottom": 40
+        }
+      },
+      "compare_modal": {
+        "type": "product-compare-modal",
+        "settings": {}
+      }
+    },
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
