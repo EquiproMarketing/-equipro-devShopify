@@ -23,7 +23,7 @@
         "show_size_option": true,
         "featured_product": "duo-pil-maxi",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": false,
+        "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
       }
     },
@@ -282,7 +282,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "modal_title": "Select Models to Compare",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
