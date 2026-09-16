@@ -1,17 +1,34 @@
 {% comment %}
-  Detección de colección de calentadores de cera
+  Detección de colección/tipo para la comparativa
 {% endcomment %}
 {% assign target_collection = section.settings.compare_collection | default: product.collections.first %}
 {% if target_collection == blank %}
   {% assign target_collection = collections['all'] %}
 {% endif %}
 
+{% assign current_type = product.type | downcase %}
+{% assign product_title_down = product.title | downcase %}
+
+<!-- Detección de Categoría Dominante -->
+{% assign category_key = 'generic' %}
+{% if current_type contains 'wax' or product_title_down contains 'pil' or product_title_down contains 'wax' %}
+  {% assign category_key = 'wax_heaters' %}
+{% elsif current_type contains 'table' or current_type contains 'bed' or product_title_down contains 'table' or product_title_down contains 'bed' %}
+  {% assign category_key = 'treatment_tables' %}
+{% elsif current_type contains 'towel' or product_title_down contains 'towel' or product_title_down contains 'cabi' %}
+  {% assign category_key = 'towel_warmers' %}
+{% elsif current_type contains 'steamer' or product_title_down contains 'steamer' or product_title_down contains 'vapor' %}
+  {% assign category_key = 'steamers' %}
+{% elsif current_type contains 'stool' or product_title_down contains 'stool' or product_title_down contains 'chair' %}
+  {% assign category_key = 'stools' %}
+{% endif %}
+
 <!-- STEP 1: SELECT PRODUCTS MODAL -->
 <div class="compare-modal-overlay" id="CompareModalStep1">
   <div class="compare-modal">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Wax Heaters to Compare" }}</h2>
-    <p class="compare-modal__sub">Choose up to 6 models to compare technical specifications:</p>
+    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Models to Compare" }}</h2>
+    <p class="compare-modal__sub">Choose up to 6 models from this line to compare technical specifications:</p>
 
     <div class="compare-select-list">
       <!-- Este Modelo -->
@@ -21,7 +38,7 @@
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <!-- Otros Productos de Wax Heaters -->
+      <!-- Otros Productos de la misma categoría -->
       {% assign other_products = target_collection.products | where_exp: "item", "item.id != product.id" %}
       {% for item in other_products limit: 5 %}
         <label class="compare-select-item is-selected">
@@ -39,8 +56,8 @@
 <div class="compare-modal-overlay" id="CompareModalStep2">
   <div class="compare-modal compare-modal--wide">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">Wax Warmer Comparison</h2>
-    <p class="compare-modal__sub">Compare capacity, tank size, and thermal control specifications.</p>
+    <h2 class="compare-modal__title">Technical Model Comparison</h2>
+    <p class="compare-modal__sub">Compare key specs side by side to choose the best option for your workspace.</p>
 
     <div class="compare-table-scroll">
       <table class="compare-table">
@@ -81,11 +98,11 @@
           </tr>
         </thead>
         <tbody>
-          <!-- 1. MODEL SKU -->
+          <!-- 1. MODEL SKU / IDENTIFIER -->
           <tr>
             <td class="sticky-col">Model SKU</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              <strong>{{ product.variants.first.sku | default: "41202" }}</strong>
+              <strong>{{ product.variants.first.sku | default: product.id }}</strong>
             </td>
             {% for item in other_products limit: 5 %}
               <td class="compare-col" data-product-id="{{ item.id }}">
@@ -94,101 +111,174 @@
             {% endfor %}
           </tr>
 
-          <!-- 2. NUMBER OF TANKS / RESERVOIRS -->
-          <tr>
-            <td class="sticky-col">Number of Tanks</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              {% assign title_down = product.title | downcase %}
-              {% if title_down contains 'duo' or title_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
-            </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                {% assign item_title_down = item.title | downcase %}
-                {% if item_title_down contains 'duo' or item_title_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
-              </td>
-            {% endfor %}
-          </tr>
+          {% case category_key %}
+            {% when 'wax_heaters' %}
+              <!-- ================= WAX HEATERS SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Number of Tanks</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'duo' or t_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% assign it_down = item.title | downcase %}
+                    {% if it_down contains 'duo' or it_down contains '412' %}2 Independent Tanks{% else %}1 Single Tank{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Chamber Sizes / Format</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains '41100' or t_down contains 'solo-pil standard' %}3 5/8" (Canadian / European Format)
+                  {% elsif t_down contains '41101' or t_down contains 'solo-pil maxi' %}4" (US Format)
+                  {% elsif t_down contains '41200' or t_down contains 'duo-pil maxi' %}Dual: 3 5/8" & 6" Bulk Reservoir
+                  {% elsif t_down contains '41201' or t_down contains 'duo-pil standard' %}Dual: 3 5/8" (Can/Eur) & 4" (US)
+                  {% elsif t_down contains '41202' or t_down contains 'duo-pil precision' %}Dual Precision: 3 5/8" & 4" Wells
+                  {% else %}{{ product.metafields.custom.tank_capacity | default: "Standard Professional Well" }}{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% assign it_down = item.title | downcase %}
+                    {% if it_down contains '41100' or it_down contains 'solo-pil standard' %}3 5/8" (Canadian / European Format)
+                    {% elsif it_down contains '41101' or it_down contains 'solo-pil maxi' %}4" (US Format)
+                    {% elsif it_down contains '41200' or it_down contains 'duo-pil maxi' %}Dual: 3 5/8" & 6" Bulk Reservoir
+                    {% elsif it_down contains '41201' or it_down contains 'duo-pil standard' %}Dual: 3 5/8" (Can/Eur) & 4" (US)
+                    {% elsif it_down contains '41202' or it_down contains 'duo-pil precision' %}Dual Precision: 3 5/8" & 4" Wells
+                    {% else %}{{ item.metafields.custom.tank_capacity | default: "Standard Professional Well" }}{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Thermostat Regulation</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'precision' or t_down contains '41202' %}Dual Electronic Thermostat (±2°C Precision)
+                  {% elsif t_down contains 'duo' %}Dual Independent Rotary Thermostats
+                  {% else %}Manual Precision Analog Dial{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% assign it_down = item.title | downcase %}
+                    {% if it_down contains 'precision' or it_down contains '41202' %}Dual Electronic Thermostat (±2°C Precision)
+                    {% elsif it_down contains 'duo' %}Dual Independent Rotary Thermostats
+                    {% else %}Manual Precision Analog Dial{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
 
-          <!-- 3. TANK CAPACITY & DIAMETERS -->
-          <tr>
-            <td class="sticky-col">Tank Dimensions / Format</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              {% assign title_down = product.title | downcase %}
-              {% if title_down contains '41100' or title_down contains 'solo-pil standard' %}
-                3 5/8" (Canadian / European Format)
-              {% elsif title_down contains '41101' or title_down contains 'solo-pil maxi' %}
-                4" (US Format)
-              {% elsif title_down contains '41200' or title_down contains 'duo-pil maxi' %}
-                Dual: 3 5/8" & 6" Bulk Reservoir
-              {% elsif title_down contains '41201' or title_down contains 'duo-pil standard' %}
-                Dual: 3 5/8" (Can/Eur) & 4" (US)
-              {% elsif title_down contains '41202' or title_down contains 'duo-pil precision' %}
-                Dual Precision: 3 5/8" & 4" Wells
-              {% else %}
-                {{ product.metafields.custom.tank_capacity | default: "Standard Professional Well" }}
-              {% endif %}
-            </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                {% assign item_title_down = item.title | downcase %}
-                {% if item_title_down contains '41100' or item_title_down contains 'solo-pil standard' %}
-                  3 5/8" (Canadian / European Format)
-                {% elsif item_title_down contains '41101' or item_title_down contains 'solo-pil maxi' %}
-                  4" (US Format)
-                {% elsif item_title_down contains '41200' or item_title_down contains 'duo-pil maxi' %}
-                  Dual: 3 5/8" & 6" Bulk Reservoir
-                {% elsif item_title_down contains '41201' or item_title_down contains 'duo-pil standard' %}
-                  Dual: 3 5/8" (Can/Eur) & 4" (US)
-                {% elsif item_title_down contains '41202' or item_title_down contains 'duo-pil precision' %}
-                  Dual Precision: 3 5/8" & 4" Wells
-                {% else %}
-                  {{ item.metafields.custom.tank_capacity | default: "Standard Professional Well" }}
-                {% endif %}
-              </td>
-            {% endfor %}
-          </tr>
+            {% when 'treatment_tables' %}
+              <!-- ================= TREATMENT TABLES SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Motor System</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {{ product.metafields.custom.motors_count | default: "Multi-Engine Electric Actuators" }}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {{ item.metafields.custom.motors_count | default: "Multi-Engine Electric Actuators" }}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Adjustability</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  Height, Backrest & Legrest Motorized
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    Height, Backrest & Legrest Motorized
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Weight Capacity</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {{ product.metafields.custom.weight_capacity | default: "450 lbs Heavy-Duty Structure" }}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {{ item.metafields.custom.weight_capacity | default: "450 lbs Heavy-Duty Structure" }}
+                  </td>
+                {% endfor %}
+              </tr>
 
-          <!-- 4. CONTROL TYPE & REGULATION -->
-          <tr>
-            <td class="sticky-col">Thermostat Control</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              {% assign title_down = product.title | downcase %}
-              {% if title_down contains 'precision' or title_down contains '41202' %}
-                Dual Ultra-Precise Electronic Thermostat (±2°C)
-              {% elsif title_down contains 'duo' %}
-                Dual Independent Rotary Thermostats
-              {% else %}
-                Manual Precision Analog Dial
-              {% endif %}
-            </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                {% assign item_title_down = item.title | downcase %}
-                {% if item_title_down contains 'precision' or item_title_down contains '41202' %}
-                  Dual Ultra-Precise Electronic Thermostat (±2°C)
-                {% elsif item_title_down contains 'duo' %}
-                  Dual Independent Rotary Thermostats
-                {% else %}
-                  Manual Precision Analog Dial
-                {% endif %}
-              </td>
-            {% endfor %}
-          </tr>
+            {% when 'towel_warmers' %}
+              <!-- ================= TOWEL WARMERS SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Towel Capacity</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {{ product.metafields.custom.towel_capacity | default: "12 - 24 Facial Towels" }}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {{ item.metafields.custom.towel_capacity | default: "12 - 24 Facial Towels" }}
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">UV Sterilization</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  Integrated UV Disinfection Lamp
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    Integrated UV Disinfection Lamp
+                  </td>
+                {% endfor %}
+              </tr>
 
-          <!-- 5. WAX COMPATIBILITY -->
-          <tr>
-            <td class="sticky-col">Wax Compatibility</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              Warm Wax & Hot Depilatory Formulations
-            </td>
-            {% for item in other_products limit: 5 %}
-              <td class="compare-col" data-product-id="{{ item.id }}">
-                Warm Wax & Hot Depilatory Formulations
-              </td>
-            {% endfor %}
-          </tr>
+            {% when 'stools' %}
+              <!-- ================= STOOLS SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Elevation System</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  Pneumatic Air-Lift Cylinder
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    Pneumatic Air-Lift Cylinder
+                  </td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Backrest Configuration</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% assign t_down = product.title | downcase %}
+                  {% if t_down contains 'backrest' or t_down contains 'ergonomic' %}Ergonomic Lumbar Support{% else %}Standard Backless Design{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% assign it_down = item.title | downcase %}
+                    {% if it_down contains 'backrest' or it_down contains 'ergonomic' %}Ergonomic Lumbar Support{% else %}Standard Backless Design{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
 
-          <!-- 6. CERTIFICATIONS & WARRANTY -->
+            {% else %}
+              <!-- ================= GENERIC FALLBACK SPECIFICATIONS ================= -->
+              <tr>
+                <td class="sticky-col">Category Line</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.type | default: "Professional Equipment" }}</td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">{{ item.type | default: "Professional Equipment" }}</td>
+                {% endfor %}
+              </tr>
+              <tr>
+                <td class="sticky-col">Availability</td>
+                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+                  {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
+                </td>
+                {% for item in other_products limit: 5 %}
+                  <td class="compare-col" data-product-id="{{ item.id }}">
+                    {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
+                  </td>
+                {% endfor %}
+              </tr>
+          {% endcase %}
+
+          <!-- CERTIFICATIONS & WARRANTY (APLICA A TODO EQUIPAMIENTO EQUIPRO) -->
           <tr>
             <td class="sticky-col">Warranty & Safety</td>
             <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
@@ -297,7 +387,7 @@
 
   function goToStep1() {
     document.getElementById('CompareModalStep2').classList.remove('is-open');
-    document.getElementById('CompareModalStep1').classList.open;
+    document.getElementById('CompareModalStep1').classList.add('is-open');
   }
 </script>
 
@@ -309,7 +399,7 @@
       "type": "text",
       "id": "modal_title",
       "label": "Modal Step 1 Title",
-      "default": "Select Products to Compare"
+      "default": "Select Models to Compare"
     },
     {
       "type": "collection",
