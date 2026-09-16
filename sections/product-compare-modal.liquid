@@ -1,31 +1,35 @@
+{% comment %}
+  Detección automática de la colección para comparar.
+  Prioridad: 1. Colección seleccionada en Settings, 2. Primera colección del producto, 3. Colección All.
+{% endcomment %}
+{% assign target_collection = section.settings.compare_collection | default: product.collections.first %}
+{% if target_collection == blank %}
+  {% assign target_collection = collections['all'] %}
+{% endif %}
+
 <!-- STEP 1: SELECT PRODUCTS MODAL -->
 <div class="compare-modal-overlay" id="CompareModalStep1">
   <div class="compare-modal">
     <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">Select Products to Compare</h2>
-    <p class="compare-modal__sub">Choose up to 7 models to start the comparison:</p>
+    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Products to Compare" }}</h2>
+    <p class="compare-modal__sub">Choose models from {{ target_collection.title }} to start the comparison:</p>
 
     <div class="compare-select-list">
+      <!-- Este Modelo -->
       <label class="compare-select-item is-selected">
-        <input type="checkbox" checked disabled>
-        <span>Round air-lift stool with backrest (31200)</span>
+        <input type="checkbox" checked disabled class="compare-checkbox" data-product-id="{{ product.id }}">
+        <span>{{ product.title }}</span>
         <span class="this-model-tag">This Model</span>
       </label>
 
-      <label class="compare-select-item">
-        <input type="checkbox">
-        <span>Round air-lift stool without backrest (31100)</span>
-      </label>
-
-      <label class="compare-select-item">
-        <input type="checkbox">
-        <span>Ergonomic stool with backrest (31300)</span>
-      </label>
-
-      <label class="compare-select-item">
-        <input type="checkbox">
-        <span>Ergonomic stool with adjustable backrest (31301)</span>
-      </label>
+      <!-- Otros Productos de la misma Categoría/Colección -->
+      {% assign other_products = target_collection.products | where_exp: "item", "item.id != product.id" %}
+      {% for item in other_products limit: 6 %}
+        <label class="compare-select-item is-selected">
+          <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
+          <span>{{ item.title }}</span>
+        </label>
+      {% endfor %}
     </div>
 
     <button class="compare-modal__submit-btn" onclick="goToStep2()">View Comparison</button>
@@ -44,33 +48,72 @@
         <thead>
           <tr>
             <th class="sticky-col">Key Features</th>
-            <th class="this-model-col">
+            
+            <!-- COLUMNA PRODUCTO ACTUAL -->
+            <th class="this-model-col compare-col" data-product-id="{{ product.id }}">
               <span class="this-model-badge">This Model</span>
-              <div class="compare-product-img"></div>
-              <strong>Round air-lift stool with backrest (31200)</strong>
-              <div class="compare-product-price">$355.00</div>
-              <a href="#" class="compare-product-btn">View Product</a>
+              <div class="compare-product-img">
+                {% if product.featured_image != blank %}
+                  <img src="{{ product.featured_image | image_url: width: 120 }}" alt="{{ product.title | escape }}">
+                {% else %}
+                  <div class="placeholder-img"></div>
+                {% endif %}
+              </div>
+              <strong>{{ product.title }}</strong>
+              <div class="compare-product-price">{{ product.price | money }}</div>
+              <a href="{{ product.url }}" class="compare-product-btn">View Product</a>
             </th>
-            <th>
-              <div class="compare-product-img"></div>
-              <strong>Ergonomic stool with backrest (31300)</strong>
-              <div class="compare-product-price">$385.00</div>
-              <a href="#" class="compare-product-btn">View Product</a>
-            </th>
-            <th>
-              <div class="compare-product-img"></div>
-              <strong>Ergonomic stool with adjustable backrest (31301)</strong>
-              <div class="compare-product-price">$425.00</div>
-              <a href="#" class="compare-product-btn">View Product</a>
-            </th>
+
+            <!-- COLUMNAS OTROS PRODUCTOS DE LA COLECCIÓN -->
+            {% for item in other_products limit: 6 %}
+              <th class="compare-col" data-product-id="{{ item.id }}">
+                <div class="compare-product-img">
+                  {% if item.featured_image != blank %}
+                    <img src="{{ item.featured_image | image_url: width: 120 }}" alt="{{ item.title | escape }}">
+                  {% else %}
+                    <div class="placeholder-img"></div>
+                  {% endif %}
+                </div>
+                <strong>{{ item.title }}</strong>
+                <div class="compare-product-price">{{ item.price | money }}</div>
+                <a href="{{ item.url }}" class="compare-product-btn">View Product</a>
+              </th>
+            {% endfor %}
           </tr>
         </thead>
         <tbody>
-          <tr><td class="sticky-col">Type</td><td>Air-lift / Pneumatic</td><td>Air-lift / Pneumatic</td><td>Air-lift / Pneumatic</td></tr>
-          <tr><td class="sticky-col">Height Adjustment</td><td>20.5" to 27.5"</td><td>20.5" to 27.5"</td><td>20.5" to 27.5"</td></tr>
-          <tr><td class="sticky-col">Width Options</td><td>15" (Standard round)</td><td>Ergonomic contoured seat</td><td>Ergonomic contoured seat</td></tr>
-          <tr><td class="sticky-col">Weight</td><td>25 lbs</td><td>25 lbs</td><td>25 lbs</td></tr>
-          <tr><td class="sticky-col">Warranty</td><td>2 years</td><td>2 years</td><td>2 years</td></tr>
+          <tr>
+            <td class="sticky-col">SKU / Model</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.variants.first.sku | default: product.id }}</td>
+            {% for item in other_products limit: 6 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.variants.first.sku | default: item.id }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td class="sticky-col">Availability</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
+              {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
+            </td>
+            {% for item in other_products limit: 6 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">
+                {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
+              </td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td class="sticky-col">Vendor / Line</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.vendor }}</td>
+            {% for item in other_products limit: 6 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.vendor }}</td>
+            {% endfor %}
+          </tr>
+          <tr>
+            <td class="sticky-col">Type</td>
+            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">{{ product.type | default: "Standard" }}</td>
+            {% for item in other_products limit: 6 %}
+              <td class="compare-col" data-product-id="{{ item.id }}">{{ item.type | default: "Standard" }}</td>
+            {% endfor %}
+          </tr>
         </tbody>
       </table>
     </div>
@@ -99,8 +142,8 @@
 .compare-select-item { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border-radius: 12px; border: 1px solid #eee; cursor: pointer; font-size: 0.9rem; }
 .compare-select-item.is-selected { border-color: #a22938; background: #fdf5f6; }
 .this-model-tag { margin-left: auto; background: #a22938; color: #fff; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 600; }
-.compare-modal__submit-btn { width: 100%; background: #ccc; color: #fff; padding: 1rem; border-radius: 25px; border: none; font-weight: 700; cursor: pointer; }
-.compare-select-item.is-selected ~ .compare-modal__submit-btn, .compare-modal__submit-btn:hover { background: #a22938; }
+.compare-modal__submit-btn { width: 100%; background: #a22938; color: #fff; padding: 1rem; border-radius: 25px; border: none; font-weight: 700; cursor: pointer; transition: background 0.2s ease; }
+.compare-modal__submit-btn:hover { background: #8c1e2e; }
 
 /* TABLE COMPARISON */
 .compare-table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
@@ -108,16 +151,38 @@
 .compare-table th, .compare-table td { padding: 1rem; border: 1px solid #eee; text-align: center; font-size: 0.85rem; }
 .this-model-col { border: 2px solid #a22938 !important; background: #fdf5f6; }
 .this-model-badge { background: #a22938; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 10px; }
-.compare-product-img { width: 60px; height: 60px; background: #eee; border-radius: 8px; margin: 0.5rem auto; }
+.compare-product-img { width: 70px; height: 70px; margin: 0.5rem auto; display: flex; align-items: center; justify-content: center; }
+.compare-product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
+.placeholder-img { width: 100%; height: 100%; background: #eee; border-radius: 8px; }
 .compare-product-price { font-weight: 700; color: #a22938; margin: 0.3rem 0; }
-.compare-product-btn { display: block; background: #a22938; color: #fff; padding: 0.4rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; }
+.compare-product-btn { display: block; background: #a22938; color: #fff; padding: 0.4rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; font-weight: 600; margin-top: 0.4rem; }
 .compare-modal__footer { display: flex; justify-content: center; gap: 1rem; }
 .compare-btn-sec { padding: 0.75rem 2rem; border-radius: 20px; border: 1px solid #ccc; background: #fff; cursor: pointer; font-weight: 600; }
+
+.compare-col.is-hidden { display: none !important; }
 </style>
 
 <script>
-  document.getElementById('OpenCompareModal').addEventListener('click', function() {
-    document.getElementById('CompareModalStep1').classList.add('is-open');
+  document.addEventListener('DOMContentLoaded', function() {
+    const triggerBtn = document.getElementById('OpenCompareModal');
+    if (triggerBtn) {
+      triggerBtn.addEventListener('click', function() {
+        document.getElementById('CompareModalStep1').classList.add('is-open');
+      });
+    }
+
+    // Toggle para los checkboxes de selección
+    const checkboxes = document.querySelectorAll('.compare-checkbox');
+    checkboxes.forEach(chk => {
+      chk.addEventListener('change', function() {
+        const parentLabel = this.closest('.compare-select-item');
+        if (this.checked) {
+          parentLabel.classList.add('is-selected');
+        } else {
+          parentLabel.classList.remove('is-selected');
+        }
+      });
+    });
   });
 
   function closeCompareModal() {
@@ -126,6 +191,21 @@
   }
 
   function goToStep2() {
+    // Oculta/Muestra las columnas según los checkboxes seleccionados en el Paso 1
+    const checkboxes = document.querySelectorAll('.compare-checkbox');
+    checkboxes.forEach(chk => {
+      const prodId = chk.getAttribute('data-product-id');
+      const cols = document.querySelectorAll(`.compare-col[data-product-id="${prodId}"]`);
+      
+      cols.forEach(col => {
+        if (chk.checked) {
+          col.classList.remove('is-hidden');
+        } else {
+          col.classList.add('is-hidden');
+        }
+      });
+    });
+
     document.getElementById('CompareModalStep1').classList.remove('is-open');
     document.getElementById('CompareModalStep2').classList.add('is-open');
   }
@@ -139,7 +219,20 @@
 {% schema %}
 {
   "name": "Product Compare Modal",
-  "settings": [],
+  "settings": [
+    {
+      "type": "text",
+      "id": "modal_title",
+      "label": "Modal Step 1 Title",
+      "default": "Select Products to Compare"
+    },
+    {
+      "type": "collection",
+      "id": "compare_collection",
+      "label": "Override Collection to Compare",
+      "info": "If left empty, it will automatically use the collection of the current product."
+    }
+  ],
   "presets": [{ "name": "Product Compare Modal" }]
 }
 {% endschema %}
