@@ -74,29 +74,29 @@
         "feature_JGhd6H": {
           "type": "feature",
           "settings": {
-            "item_title": "Perfect Hydration",
-            "item_text": "Steady and consistent steam flow for optimal pore opening and skin softening."
+            "item_title": "Consistent Thermal Control",
+            "item_text": "Maintains a perfect, uniform temperature range that is deeply soothing to the skin without overheating."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
-            "item_title": "Ozone Technology",
-            "item_text": "Integrated UV/Ozone option for antibacterial skin purification and oxygenation."
+            "item_title": "Premium Insulation",
+            "item_text": "Built with double-walled doors and high-density seals to retain heat efficiently and lower energy consumption."
           }
         },
         "feature_ppVAe7": {
           "type": "feature",
           "settings": {
-            "item_title": "Built to Last",
-            "item_text": "High-grade components, heavy-duty mobile stands, and advanced safety auto-shutoff features."
+            "item_title": "Integrated UV Sanitization",
+            "item_text": "Optional UV-C light function helps maintain absolute hygiene, keeping your linens fresh and sanitized."
           }
         },
         "feature_kaVhpH": {
           "type": "feature",
           "settings": {
-            "item_title": "Silent Operation",
-            "item_text": "Engineered to maintain a quiet, relaxing spa atmosphere during professional treatments."
+            "item_title": "Rust-Proof Interior",
+            "item_text": "Engineered with premium aluminum or stainless steel interiors and a condensation collection tray for easy daily maintenance."
           }
         }
       },
@@ -136,36 +136,36 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between the Digipro and Classic models?",
-            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+            "question": "How many towels can these cabinets hold?",
+            "answer": "<p>Capacity varies by model. Our compact professional units hold approximately 6 standard facial towels, while our large-capacity units can accommodate up to 24 or more, depending on how they are rolled.</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use essential oils with these steamers?",
-            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+            "question": "Do I need to wet the towels before placing them inside?",
+            "answer": "<p>Yes. These are hot-moist towel cabinets. Towels should be thoroughly pre-soaked, wrung out so they are damp, and then rolled before being placed on the wire shelves.</p>"
           }
         },
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Do they have an automatic shutoff feature?",
-            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
+            "question": "Can the UV sanitizing function be turned off separately?",
+            "answer": "<p>Yes. Our units feature independent control switches, allowing you to run the heating element and the UV sanitizing light together or completely separate based on your protocol.</p>"
           }
         },
         "faq_item_n68NQD": {
           "type": "faq_item",
           "settings": {
-            "question": "What type of water should I use?",
-            "answer": "<p>To maximize the lifespan of the heating element and prevent mineral buildup, we strictly recommend using distilled water.</p>"
+            "question": "How do I manage condensation and water buildup?",
+            "answer": "<p>Every Equipro towel warmer includes a removable condensation drip tray located underneath the door line. Simply pull out the tray at the end of each day, empty it, and wipe down the interior to keep the unit pristine.</p>"
           }
         },
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty?",
-            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+            "question": "How long does it take to reach operational temperature?",
+            "answer": "<p>The cabinet pre-heats efficiently and will bring damp towels to their optimal operating temperature in about 15 to 20 minutes from a cold start.</p>"
           }
         }
       },
