@@ -44,7 +44,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Discover our range of high-quality professional facial steamers designed for estheticians, spas, and skincare clinics. Featuring safe operation, durable heating elements, and optimal ozone vaporization for superior pore preparation and deep skin hydration.",
+        "text": "Transform your consultation process and build unwavering client trust. Our professional skin analyzers allow you to look beneath the surface, providing visual evidence of sun damage, dehydration, and clogged pores to back up your treatment and product recommendations.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -75,28 +75,28 @@
           "type": "feature",
           "settings": {
             "item_title": "Perfect Hydration",
-            "item_text": "Steady and consistent steam flow for optimal pore opening and skin softening."
+            "item_text": "Deep Sub-Surface Visualization — Utilizes filtered long-wave UV light to safely expose sun damage, sebum production, hyperpigmentation, and poor circulation before they appear on the surface."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
             "item_title": "Ozone Technology",
-            "item_text": "Integrated UV/Ozone option for antibacterial skin purification and oxygenation."
+            "item_text": "Enhanced Client Trust — Gives your clients a clear, objective look at their true skin health, significantly increasing treatment compliance and retail product sales."
           }
         },
         "feature_ppVAe7": {
           "type": "feature",
           "settings": {
             "item_title": "Built to Last",
-            "item_text": "High-grade components, heavy-duty mobile stands, and advanced safety auto-shutoff features."
+            "item_text": "Ergonomic Observation Hood — Designed with a premium blackout drape and comfortable viewer magnification lens for sharp, clear, and glare-free assessments."
           }
         },
         "feature_kaVhpH": {
           "type": "feature",
           "settings": {
-            "item_title": "Silent Operation",
-            "item_text": "Engineered to maintain a quiet, relaxing spa atmosphere during professional treatments."
+            "item_title": "How does the skin scanner technology work?",
+            "item_text": "The unit utilizes a specialized Wood's light source filtered through a unique lens. When the light hits the skin, different skin conditions fluoresce in specific, distinct colors—such as orange for oily patches, bright blue for deep hydration, and dark brown for sun damage."
           }
         }
       },
@@ -107,7 +107,7 @@
         "feature_kaVhpH"
       ],
       "settings": {
-        "title": "Why Our Trolleys",
+        "title": "Why Our Skin Analyzers",
         "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
         "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
         "image_border_radius": 12,
@@ -143,29 +143,29 @@
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use essential oils with these steamers?",
-            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+            "question": "Is the UV light source safe for the client's eyes?",
+            "answer": "<p>Yes, absolutely. The internal illumination is completely safe when used within standard diagnostic parameters. The machine's architecture and viewing mirrors are specifically engineered to shield the client's eyes comfortably while providing maximum visibility to the operator.</p>"
           }
         },
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Do they have an automatic shutoff feature?",
-            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
+            "question": "Does it require a fully dark room to work effectively?",
+            "answer": "<p>While a dimmed room optimizes the diagnostic experience, our skin analyzer is equipped with a high-density, professional blackout hood that effectively blocks out ambient salon light, allowing for accurate readings anywhere.</p>"
           }
         },
         "faq_item_n68NQD": {
           "type": "faq_item",
           "settings": {
-            "question": "What type of water should I use?",
-            "answer": "<p>To maximize the lifespan of the heating element and prevent mineral buildup, we strictly recommend using distilled water.</p>"
+            "question": "Can I integrate this into my existing consultation desk layout?",
+            "answer": "<p>Yes. It features a space-saving, stable tabletop base that fits comfortably on standard desks or counters, making it the perfect focal point for your introductory client onboarding and skin analysis steps.</p>"
           }
         },
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty?",
-            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+            "question": "Does the unit come with a color diagnostic chart?",
+            "answer": "<p>Yes, each analyzer includes a comprehensive, easy-to-read reference chart that correlates fluorescing colors with specific skin types and conditions, helping you explain the results clearly to your clients.</p>"
           }
         }
       },
