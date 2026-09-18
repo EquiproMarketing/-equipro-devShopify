@@ -1,0 +1,212 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "subnav": {
+      "type": "category-subnav",
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
+      }
+    },
+    "collection_banner_qtVMrG": {
+      "type": "collection-banner",
+      "name": "Collection Banner",
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Advanced skin scanning equipment using specialized illumination technology to reveal underlying skin conditions, pigmentations, and hydration levels for precise professional consultations.",
+        "custom_image": "shopify://shop_images/professional-high-output-facial-steamer-salon-equipment-streamers-x2.webp",
+        "overlay_opacity": 40
+      }
+    },
+    "custom_product_treatment_TNRQeX": {
+      "type": "custom-product-treatment",
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "",
+        "featured_collection": "skin-analyzer",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
+      }
+    },
+    "positive_impact": {
+      "type": "positive-impact",
+      "settings": {
+        "title": "Our Positive Impact",
+        "text": "Transform your consultation process and build unwavering client trust. Our professional skin analyzers allow you to look beneath the surface, providing visual evidence of sun damage, dehydration, and clogged pores to back up your treatment and product recommendations.",
+        "btn_label": "CONTACT US FOR RECOMMENDATIONS",
+        "btn_url": "",
+        "btn_bg_color": "#a22938",
+        "btn_text_color": "#ffffff",
+        "btn_bg_hover_color": "#8b2029",
+        "btn_text_hover_color": "#ffffff",
+        "btn_font_size": 14,
+        "btn_border_radius": 12,
+        "btn_padding_v": 14,
+        "btn_padding_h": 32,
+        "title_color": "#1a1a1a",
+        "title_size": 32,
+        "text_color": "#a22938",
+        "text_size": 20,
+        "text_max_width": 850,
+        "show_top_divider": true,
+        "show_bottom_divider": true,
+        "divider_color": "#a22938",
+        "divider_opacity": 30,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
+    },
+    "why_category": {
+      "type": "why-our-category",
+      "blocks": {
+        "feature_JGhd6H": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Perfect Hydration",
+            "item_text": "Deep Sub-Surface Visualization — Utilizes filtered long-wave UV light to safely expose sun damage, sebum production, hyperpigmentation, and poor circulation before they appear on the surface."
+          }
+        },
+        "feature_CFhXYt": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Ozone Technology",
+            "item_text": "Enhanced Client Trust — Gives your clients a clear, objective look at their true skin health, significantly increasing treatment compliance and retail product sales."
+          }
+        },
+        "feature_ppVAe7": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Built to Last",
+            "item_text": "Ergonomic Observation Hood — Designed with a premium blackout drape and comfortable viewer magnification lens for sharp, clear, and glare-free assessments."
+          }
+        },
+        "feature_kaVhpH": {
+          "type": "feature",
+          "settings": {
+            "item_title": "How does the skin scanner technology work?",
+            "item_text": "The unit utilizes a specialized Wood's light source filtered through a unique lens. When the light hits the skin, different skin conditions fluoresce in specific, distinct colors—such as orange for oily patches, bright blue for deep hydration, and dark brown for sun damage."
+          }
+        }
+      },
+      "block_order": [
+        "feature_JGhd6H",
+        "feature_CFhXYt",
+        "feature_ppVAe7",
+        "feature_kaVhpH"
+      ],
+      "settings": {
+        "title": "Why Our Skin Analyzers",
+        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
+        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image_border_radius": 12,
+        "bg_color": "#a22938",
+        "title_color": "#ffffff",
+        "item_title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "divider_color": "#ffffff33",
+        "title_size": 28,
+        "item_title_size": 16,
+        "item_text_size": 14,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
+    },
+    "video": {
+      "type": "category-video",
+      "disabled": true,
+      "settings": {}
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_VhNPjK": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the difference between the Digipro and Classic models?",
+            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+          }
+        },
+        "faq_item_Gn3pgW": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the UV light source safe for the client's eyes?",
+            "answer": "<p>Yes, absolutely. The internal illumination is completely safe when used within standard diagnostic parameters. The machine's architecture and viewing mirrors are specifically engineered to shield the client's eyes comfortably while providing maximum visibility to the operator.</p>"
+          }
+        },
+        "faq_item_kmRk4U": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it require a fully dark room to work effectively?",
+            "answer": "<p>While a dimmed room optimizes the diagnostic experience, our skin analyzer is equipped with a high-density, professional blackout hood that effectively blocks out ambient salon light, allowing for accurate readings anywhere.</p>"
+          }
+        },
+        "faq_item_n68NQD": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I integrate this into my existing consultation desk layout?",
+            "answer": "<p>Yes. It features a space-saving, stable tabletop base that fits comfortably on standard desks or counters, making it the perfect focal point for your introductory client onboarding and skin analysis steps.</p>"
+          }
+        },
+        "faq_item_ENr78Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit come with a color diagnostic chart?",
+            "answer": "<p>Yes, each analyzer includes a comprehensive, easy-to-read reference chart that correlates fluorescing colors with specific skin types and conditions, helping you explain the results clearly to your clients.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_VhNPjK",
+        "faq_item_Gn3pgW",
+        "faq_item_kmRk4U",
+        "faq_item_n68NQD",
+        "faq_item_ENr78Q"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "reviews": {
+      "type": "customer-reviews",
+      "settings": {}
+    }
+  },
+  "order": [
+    "subnav",
+    "collection_banner_qtVMrG",
+    "custom_product_treatment_TNRQeX",
+    "positive_impact",
+    "why_category",
+    "video",
+    "faq",
+    "reviews"
+  ]
+}
