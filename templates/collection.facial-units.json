@@ -185,6 +185,11 @@
         "margin_top": 40,
         "margin_bottom": 40
       }
+    },
+    "customer_reviews_FLM8wd": {
+      "type": "customer-reviews",
+      "name": "Customer Reviews",
+      "settings": {}
     }
   },
   "order": [
@@ -192,6 +197,7 @@
     "custom_product_treatment_fBzzfA",
     "positive_impact_DDyxFL",
     "why_our_category_HPkHy7",
-    "category_faq_hci6YV"
+    "category_faq_hci6YV",
+    "customer_reviews_FLM8wd"
   ]
 }
