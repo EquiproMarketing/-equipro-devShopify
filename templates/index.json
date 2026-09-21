@@ -490,6 +490,7 @@
             "collection": "facial-units",
             "product": "",
             "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
+            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
             "tag": "Collection",
@@ -506,10 +507,10 @@
             "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/trolleys",
-            "tag": "Treatment Chairs",
-            "title": "Portable Massage Tables",
-            "subtitle": "Lightweight, high-strength aluminum and wooden folding frames designed for mobile professionals and compact spaces.",
-            "price": "From CA$ 499.00",
+            "tag": "Collection",
+            "title": "Electric Massage Tables",
+            "subtitle": "Ultra-smooth, motorized treatment tables engineered for maximum client comfort, silent transitions, and optimal ergonomic positioning for the practitioner.",
+            "price": "",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
