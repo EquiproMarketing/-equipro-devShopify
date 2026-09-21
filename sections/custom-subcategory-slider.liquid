@@ -18,14 +18,14 @@
             
             {%- if target_col != blank -%}
               {%- assign display_url = target_col.url -%}
-              {%- assign display_title = target_col.title -%}
-              {%- assign display_image = target_col.image -%}
-              {%- assign display_subtitle = target_col.description | strip_html | truncatewords: 10 -%}
+              {%- assign display_title = block.settings.title | default: target_col.title -%}
+              {%- assign display_image = block.settings.image | default: target_col.image -%}
+              {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
             {%- else -%}
               {%- assign display_url = '#' -%}
               {%- assign display_title = 'Selecciona una Colección' -%}
               {%- assign display_image = blank -%}
-              {%- assign display_subtitle = 'La descripción aparecerá aquí automáticamente.' -%}
+              {%- assign display_subtitle = 'La descripción de la categoría aparecerá aquí.' -%}
             {%- endif -%}
 
             <div class="swiper-slide" {{ block.shopify_attributes }}>
@@ -58,13 +58,18 @@
             
             {%- if target_prod != blank -%}
               {%- assign display_url = target_prod.url -%}
-              {%- assign display_title = target_prod.title -%}
-              {%- assign display_image = target_prod.featured_media -%}
-              {%- assign hover_image = target_prod.media[1] -%}
-              {%- assign display_subtitle = target_prod.description | strip_html | truncatewords: 10 -%}
+              {%- assign display_title = block.settings.title | default: target_prod.title -%}
+              {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
+              {%- assign hover_image = block.settings.hover_image -%}
+              {%- if hover_image == blank and target_prod.media.size > 1 -%}
+                {%- assign hover_image = target_prod.media[1] -%}
+              {%- endif -%}
+              {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 10 -%}
               
               {%- capture display_price -%}
-                {%- if target_prod.price_varies -%}
+                {%- if block.settings.price != blank -%}
+                  {{ block.settings.price }}
+                {%- elsif target_prod.price_varies -%}
                   {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
                 {%- else -%}
                   {{ target_prod.price | money }}
@@ -81,7 +86,7 @@
 
             <div class="swiper-slide" {{ block.shopify_attributes }}>
               <div class="custom-subcat-card">
-                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap">
+                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                   <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                     {%- if display_image != blank -%}
                       <img src="{{ display_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--primary">
@@ -105,7 +110,7 @@
                   {%- endfor -%}
                 </div>
 
-                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap custom-subcat-card__content-link">
+                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
                   <div class="custom-subcat-card__content">
                     {%- if block.settings.tag != blank -%}
                       <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
@@ -122,7 +127,7 @@
 
                 {%- if target_prod != blank -%}
                   <div class="custom-subcat-card__actions">
-                    <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">Comprar</a>
+                    <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
                   </div>
                 {%- endif -%}
               </div>
@@ -189,6 +194,16 @@
           "type": "text",
           "id": "tag",
           "label": "Badge / Tag (Optional)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Title Override"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Custom Description Override"
         }
       ]
     },
@@ -211,6 +226,21 @@
           "type": "text",
           "id": "tag",
           "label": "Badge / Tag (Optional)"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom Title Override"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Custom Description Override"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Custom Price Override"
         },
         {
           "type": "textarea",
