@@ -50,6 +50,7 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center; /* Por defecto en desktop se centra */
 }
 .collection-banner__placeholder {
   position: absolute;
@@ -81,9 +82,14 @@
   color: rgba(255,255,255,0.9);
 }
 .collection-banner__desc p { margin: 0; }
+
 @media (max-width: 767px) {
   .collection-banner__content { padding: 1.5rem; }
   .collection-banner__title { font-size: 1.8rem; }
+  /* Forzamos que la imagen muestre el extremo derecho en pantallas móviles */
+  .collection-banner__bg {
+    object-position: right center;
+  }
 }
 </style>
 
