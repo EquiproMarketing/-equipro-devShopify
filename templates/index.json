@@ -473,6 +473,8 @@
         "subcategory_card_76RyFT": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/electric",
             "tag": "Treatment Chairs",
@@ -485,18 +487,23 @@
         "subcategory_card_RFztfx": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "facial-units",
+            "product": "",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "tag": "Treatment Chairs",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation and sturdy rotation mechanisms for versatile, power-free clinic setups.",
-            "price": "From CA$ 1,499.00",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/facial-units",
+            "tag": "Collection",
+            "title": "Facial Units",
+            "subtitle": "Discover our professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
+            "price": "",
+            "available_colors": "#ffffff,"
           }
         },
         "subcategory_card_3PcLMF": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/trolleys",
             "tag": "Treatment Chairs",
@@ -509,6 +516,8 @@
         "subcategory_card_kNMd6p": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/stools",
             "tag": "Stools",
@@ -521,6 +530,8 @@
         "subcategory_card_ykJEhh": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
             "tag": "FACIAL UNITS",
@@ -533,6 +544,8 @@
         "subcategory_card_Xnfck8": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/towel-warmers",
             "tag": "Towel Cabinets",
@@ -545,6 +558,8 @@
         "subcategory_card_MWxmgz": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/wellness-therapy",
             "tag": "Wellness Therapy",
@@ -557,6 +572,8 @@
         "subcategory_card_Eh8Frm": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "WAX HEATERS",
@@ -588,6 +605,8 @@
         "subcategory_card_MpAxqM": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -600,6 +619,8 @@
         "subcategory_card_ChAiXK": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -612,6 +633,8 @@
         "subcategory_card_WfgYK8": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -624,6 +647,8 @@
         "subcategory_card_FGmzWP": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/hydraulic-mechanical",
             "tag": "Hydraulic",
