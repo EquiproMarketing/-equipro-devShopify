@@ -22,9 +22,9 @@
       "settings": {
         "custom_title": "",
         "custom_description": "",
-        "fallback_description": "Advanced skin scanning equipment using specialized illumination technology to reveal underlying skin conditions, pigmentations, and hydration levels for precise professional consultations.",
-        "custom_image": "shopify://shop_images/equipro-skin-analizers-professional-fluorescence-aesthetic-imaging-consultation-system-high-fidelity.webp",
-        "overlay_opacity": 10
+        "fallback_description": "Professional hot towel cabinets designed to keep your linens perfectly warm, moist, and sanitized for an elevated client experience.",
+        "custom_image": "shopify://shop_images/professional-high-output-facial-steamer-salon-equipment-streamers-x2.webp",
+        "overlay_opacity": 40
       }
     },
     "custom_product_treatment_TNRQeX": {
@@ -32,7 +32,7 @@
       "name": "Custom Product Treatment",
       "settings": {
         "title": "",
-        "featured_collection": "skin-analyzer",
+        "featured_collection": "towel-warmers",
         "products_to_show": 8,
         "card_bg_color": "#f5f5f7",
         "default_subtitle": "Professional Treatment Series",
@@ -44,7 +44,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Transform your consultation process and build unwavering client trust. Our professional skin analyzers allow you to look beneath the surface, providing visual evidence of sun damage, dehydration, and clogged pores to back up your treatment and product recommendations.",
+        "text": "Enhance the comfort of every facial, massage, or body treatment. Our heavy-duty towel warmers offer reliable temperature regulation and premium insulation, ensuring a constant supply of soothing, warm towels throughout your busiest days.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -74,29 +74,29 @@
         "feature_JGhd6H": {
           "type": "feature",
           "settings": {
-            "item_title": "Perfect Hydration",
-            "item_text": "Deep Sub-Surface Visualization — Utilizes filtered long-wave UV light to safely expose sun damage, sebum production, hyperpigmentation, and poor circulation before they appear on the surface."
+            "item_title": "Consistent Thermal Control",
+            "item_text": "Maintains a perfect, uniform temperature range that is deeply soothing to the skin without overheating."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
-            "item_title": "Ozone Technology",
-            "item_text": "Enhanced Client Trust — Gives your clients a clear, objective look at their true skin health, significantly increasing treatment compliance and retail product sales."
+            "item_title": "Premium Insulation",
+            "item_text": "Built with double-walled doors and high-density seals to retain heat efficiently and lower energy consumption."
           }
         },
         "feature_ppVAe7": {
           "type": "feature",
           "settings": {
-            "item_title": "Built to Last",
-            "item_text": "Ergonomic Observation Hood — Designed with a premium blackout drape and comfortable viewer magnification lens for sharp, clear, and glare-free assessments."
+            "item_title": "Integrated UV Sanitization",
+            "item_text": "Optional UV-C light function helps maintain absolute hygiene, keeping your linens fresh and sanitized."
           }
         },
         "feature_kaVhpH": {
           "type": "feature",
           "settings": {
-            "item_title": "How does the skin scanner technology work?",
-            "item_text": "The unit utilizes a specialized Wood's light source filtered through a unique lens. When the light hits the skin, different skin conditions fluoresce in specific, distinct colors—such as orange for oily patches, bright blue for deep hydration, and dark brown for sun damage."
+            "item_title": "Rust-Proof Interior",
+            "item_text": "Engineered with premium aluminum or stainless steel interiors and a condensation collection tray for easy daily maintenance."
           }
         }
       },
@@ -107,7 +107,7 @@
         "feature_kaVhpH"
       ],
       "settings": {
-        "title": "Why Our Skin Analyzers",
+        "title": "Why Our Trolleys",
         "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
         "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
         "image_border_radius": 12,
@@ -136,36 +136,36 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between the Digipro and Classic models?",
-            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+            "question": "How many towels can these cabinets hold?",
+            "answer": "<p>Capacity varies by model. Our compact professional units hold approximately 6 standard facial towels, while our large-capacity units can accommodate up to 24 or more, depending on how they are rolled.</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the UV light source safe for the client's eyes?",
-            "answer": "<p>Yes, absolutely. The internal illumination is completely safe when used within standard diagnostic parameters. The machine's architecture and viewing mirrors are specifically engineered to shield the client's eyes comfortably while providing maximum visibility to the operator.</p>"
+            "question": "Do I need to wet the towels before placing them inside?",
+            "answer": "<p>Yes. These are hot-moist towel cabinets. Towels should be thoroughly pre-soaked, wrung out so they are damp, and then rolled before being placed on the wire shelves.</p>"
           }
         },
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Does it require a fully dark room to work effectively?",
-            "answer": "<p>While a dimmed room optimizes the diagnostic experience, our skin analyzer is equipped with a high-density, professional blackout hood that effectively blocks out ambient salon light, allowing for accurate readings anywhere.</p>"
+            "question": "Can the UV sanitizing function be turned off separately?",
+            "answer": "<p>Yes. Our units feature independent control switches, allowing you to run the heating element and the UV sanitizing light together or completely separate based on your protocol.</p>"
           }
         },
         "faq_item_n68NQD": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I integrate this into my existing consultation desk layout?",
-            "answer": "<p>Yes. It features a space-saving, stable tabletop base that fits comfortably on standard desks or counters, making it the perfect focal point for your introductory client onboarding and skin analysis steps.</p>"
+            "question": "How do I manage condensation and water buildup?",
+            "answer": "<p>Every Equipro towel warmer includes a removable condensation drip tray located underneath the door line. Simply pull out the tray at the end of each day, empty it, and wipe down the interior to keep the unit pristine.</p>"
           }
         },
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the unit come with a color diagnostic chart?",
-            "answer": "<p>Yes, each analyzer includes a comprehensive, easy-to-read reference chart that correlates fluorescing colors with specific skin types and conditions, helping you explain the results clearly to your clients.</p>"
+            "question": "How long does it take to reach operational temperature?",
+            "answer": "<p>The cabinet pre-heats efficiently and will bring damp towels to their optimal operating temperature in about 15 to 20 minutes from a cold start.</p>"
           }
         }
       },
