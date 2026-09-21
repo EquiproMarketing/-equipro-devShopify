@@ -12,13 +12,13 @@
           {%- assign target_col = block.settings.collection -%}
           {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} RESOLUCIÓN AUTOMÁTICA (COLECCIÓN O PRODUCTO) {%- endcomment -%}
+          {%- comment -%} RESOLUCIÓN AUTOMÁTICA DE DATOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
           {%- if target_col != blank -%}
             {%- assign display_url = target_col.url -%}
             {%- assign display_title = block.settings.title | default: target_col.title -%}
             {%- assign display_image = block.settings.image | default: target_col.image -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
             {%- assign hover_image = blank -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
             {%- assign display_price = '' -%}
             {%- assign is_product = false -%}
           {%- elsif target_prod != blank -%}
@@ -43,7 +43,7 @@
             {%- assign is_product = true -%}
           {%- else -%}
             {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Título de la tarjeta' -%}
+            {%- assign display_title = block.settings.title | default: 'Título del elemento' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
@@ -54,6 +54,7 @@
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
+              <!-- ENLACE Y CONTENEDOR DE IMAGEN -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
@@ -67,7 +68,7 @@
                 </div>
               </a>
 
-              <!-- COLOR SWATCHES (SÓLO SI EXISTEN) -->
+              <!-- COLOR SWATCHES (SÓLO PARA PRODUCTOS O SI SE CONFIGURAN) -->
               {%- if block.settings.available_colors != blank -%}
                 <div class="custom-subcat-card__swatches">
                   {%- assign colors = block.settings.available_colors | split: ',' -%}
@@ -80,6 +81,7 @@
                 </div>
               {%- endif -%}
 
+              <!-- DETALLES DE TEXTO ( TÍTULO Y DESCRIPCIÓN DE COLECCIÓN / PRODUCTO ) -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
                 <div class="custom-subcat-card__content">
                   {%- if block.settings.tag != blank -%}
@@ -95,6 +97,7 @@
                 </div>
               </a>
 
+              <!-- BOTÓN DE COMPRA EXCLUSIVO PARA PRODUCTOS -->
               {%- if is_product and target_prod != blank -%}
                 <div class="custom-subcat-card__actions">
                   <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
@@ -155,12 +158,12 @@
         {
           "type": "collection",
           "id": "collection",
-          "label": "Select Collection (Category)"
+          "label": "Select Collection (Auto-fetches image & description)"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product"
+          "label": "Select Product (Auto-fetches info & price)"
         },
         {
           "type": "header",
