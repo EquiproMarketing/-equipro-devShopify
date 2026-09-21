@@ -9,97 +9,66 @@
     <div class="swiper custom-subcat-swiper">
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
+          {%- assign target_col = block.settings.collection -%}
+          {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} ==========================================
-              BLOQUE TIPO COLECCIÓN (CATEGORÍA)
-              ========================================== {%- endcomment -%}
-          {%- if block.type == 'collection_card' -%}
-            {%- assign target_col = block.settings.collection -%}
-            
-            {%- if target_col != blank -%}
-              {%- assign display_url = target_col.url -%}
-              {%- assign display_title = block.settings.title | default: target_col.title -%}
-              {%- assign display_image = block.settings.image | default: target_col.image -%}
-              {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
-            {%- else -%}
-              {%- assign display_url = '#' -%}
-              {%- assign display_title = 'Selecciona una Colección' -%}
-              {%- assign display_image = blank -%}
-              {%- assign display_subtitle = 'La descripción de la categoría aparecerá aquí.' -%}
+          {%- comment -%} RESOLUCIÓN AUTOMÁTICA (COLECCIÓN O PRODUCTO) {%- endcomment -%}
+          {%- if target_col != blank -%}
+            {%- assign display_url = target_col.url -%}
+            {%- assign display_title = block.settings.title | default: target_col.title -%}
+            {%- assign display_image = block.settings.image | default: target_col.image -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
+            {%- assign hover_image = blank -%}
+            {%- assign display_price = '' -%}
+            {%- assign is_product = false -%}
+          {%- elsif target_prod != blank -%}
+            {%- assign display_url = target_prod.url -%}
+            {%- assign display_title = block.settings.title | default: target_prod.title -%}
+            {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
+            {%- assign hover_image = block.settings.hover_image -%}
+            {%- if hover_image == blank and target_prod.media.size > 1 -%}
+              {%- assign hover_image = target_prod.media[1] -%}
             {%- endif -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 10 -%}
+            
+            {%- capture display_price -%}
+              {%- if block.settings.price != blank -%}
+                {{ block.settings.price }}
+              {%- elsif target_prod.price_varies -%}
+                {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
+              {%- else -%}
+                {{ target_prod.price | money }}
+              {%- endif -%}
+            {%- endcapture -%}
+            {%- assign is_product = true -%}
+          {%- else -%}
+            {%- assign display_url = block.settings.link | default: '#' -%}
+            {%- assign display_title = block.settings.title | default: 'Título de la tarjeta' -%}
+            {%- assign display_image = block.settings.image -%}
+            {%- assign hover_image = block.settings.hover_image -%}
+            {%- assign display_subtitle = block.settings.subtitle -%}
+            {%- assign display_price = block.settings.price -%}
+            {%- assign is_product = false -%}
+          {%- endif -%}
 
-            <div class="swiper-slide" {{ block.shopify_attributes }}>
-              <a href="{{ display_url }}" class="custom-subcat-card">
+          <div class="swiper-slide" {{ block.shopify_attributes }}>
+            <div class="custom-subcat-card">
+              
+              <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
-                    <img src="{{ display_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image">
+                    <img src="{{ display_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--primary">
+                    {%- if hover_image != blank -%}
+                      <img src="{{ hover_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--secondary">
+                    {%- endif -%}
                   {%- else -%}
-                    {{ 'collection-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
-                  {%- endif -%}
-                </div>
-
-                <div class="custom-subcat-card__content">
-                  {%- if block.settings.tag != blank -%}
-                    <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
-                  {%- endif -%}
-                  <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
-                  {%- if display_subtitle != blank -%}
-                    <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
+                    {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
                   {%- endif -%}
                 </div>
               </a>
-            </div>
 
-          {%- comment -%} ==========================================
-              BLOQUE TIPO PRODUCTO
-              ========================================== {%- endcomment -%}
-          {%- elsif block.type == 'product_card' -%}
-            {%- assign target_prod = block.settings.product -%}
-            
-            {%- if target_prod != blank -%}
-              {%- assign display_url = target_prod.url -%}
-              {%- assign display_title = block.settings.title | default: target_prod.title -%}
-              {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
-              {%- assign hover_image = block.settings.hover_image -%}
-              {%- if hover_image == blank and target_prod.media.size > 1 -%}
-                {%- assign hover_image = target_prod.media[1] -%}
-              {%- endif -%}
-              {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 10 -%}
-              
-              {%- capture display_price -%}
-                {%- if block.settings.price != blank -%}
-                  {{ block.settings.price }}
-                {%- elsif target_prod.price_varies -%}
-                  {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
-                {%- else -%}
-                  {{ target_prod.price | money }}
-                {%- endif -%}
-              {%- endcapture -%}
-            {%- else -%}
-              {%- assign display_url = '#' -%}
-              {%- assign display_title = 'Selecciona un Producto' -%}
-              {%- assign display_image = blank -%}
-              {%- assign hover_image = blank -%}
-              {%- assign display_subtitle = 'Descripción automática del producto.' -%}
-              {%- assign display_price = 'CA$ 0.00' -%}
-            {%- endif -%}
-
-            <div class="swiper-slide" {{ block.shopify_attributes }}>
-              <div class="custom-subcat-card">
-                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
-                  <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
-                    {%- if display_image != blank -%}
-                      <img src="{{ display_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--primary">
-                      {%- if hover_image != blank -%}
-                        <img src="{{ hover_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--secondary">
-                      {%- endif -%}
-                    {%- else -%}
-                      {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
-                    {%- endif -%}
-                  </div>
-                </a>
-
-                <!-- COLOR SWATCHES -->
+              <!-- COLOR SWATCHES (SÓLO SI EXISTEN) -->
+              {%- if block.settings.available_colors != blank -%}
                 <div class="custom-subcat-card__swatches">
                   {%- assign colors = block.settings.available_colors | split: ',' -%}
                   {%- for color_code in colors -%}
@@ -109,31 +78,31 @@
                     {%- endif -%}
                   {%- endfor -%}
                 </div>
+              {%- endif -%}
 
-                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
-                  <div class="custom-subcat-card__content">
-                    {%- if block.settings.tag != blank -%}
-                      <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
-                    {%- endif -%}
-                    <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
-                    {%- if display_subtitle != blank -%}
-                      <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
-                    {%- endif -%}
-                    {%- if display_price != blank -%}
-                      <p class="custom-subcat-card__price">{{ display_price }}</p>
-                    {%- endif -%}
-                  </div>
-                </a>
+              <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
+                <div class="custom-subcat-card__content">
+                  {%- if block.settings.tag != blank -%}
+                    <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
+                  {%- endif -%}
+                  <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
+                  {%- if display_subtitle != blank -%}
+                    <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
+                  {%- endif -%}
+                  {%- if display_price != blank -%}
+                    <p class="custom-subcat-card__price">{{ display_price }}</p>
+                  {%- endif -%}
+                </div>
+              </a>
 
-                {%- if target_prod != blank -%}
-                  <div class="custom-subcat-card__actions">
-                    <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
-                  </div>
-                {%- endif -%}
-              </div>
+              {%- if is_product and target_prod != blank -%}
+                <div class="custom-subcat-card__actions">
+                  <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
+                </div>
+              {%- endif -%}
+
             </div>
-
-          {%- endif -%}
+          </div>
         {%- endfor -%}
       </div>
     </div>
@@ -176,45 +145,36 @@
   ],
   "blocks": [
     {
-      "type": "collection_card",
-      "name": "Collection (Category)",
+      "type": "subcategory_card",
+      "name": "Card Item",
       "settings": [
+        {
+          "type": "header",
+          "content": "Automatic Source (Choose one)"
+        },
         {
           "type": "collection",
           "id": "collection",
-          "label": "Select Collection (Auto-fetches info & image)"
+          "label": "Select Collection (Category)"
         },
-        {
-          "type": "color",
-          "id": "card_bg_color",
-          "label": "Card Background Color",
-          "default": "#f5f5f7"
-        },
-        {
-          "type": "text",
-          "id": "tag",
-          "label": "Badge / Tag (Optional)"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Custom Title Override"
-        },
-        {
-          "type": "text",
-          "id": "subtitle",
-          "label": "Custom Description Override"
-        }
-      ]
-    },
-    {
-      "type": "product_card",
-      "name": "Product Card",
-      "settings": [
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product (Auto-fetches info, price & button)"
+          "label": "Select Product"
+        },
+        {
+          "type": "header",
+          "content": "Custom Overrides (Optional)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Image Override"
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Custom Hover Image Override"
         },
         {
           "type": "color",
@@ -223,9 +183,14 @@
           "default": "#f5f5f7"
         },
         {
+          "type": "url",
+          "id": "link",
+          "label": "Custom URL Override"
+        },
+        {
           "type": "text",
           "id": "tag",
-          "label": "Badge / Tag (Optional)"
+          "label": "Badge / Tag"
         },
         {
           "type": "text",
@@ -254,10 +219,10 @@
     {
       "name": "Subcategory Slider",
       "blocks": [
-        { "type": "collection_card" },
-        { "type": "collection_card" },
-        { "type": "product_card" },
-        { "type": "product_card" }
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" },
+        { "type": "subcategory_card" }
       ]
     }
   ]
