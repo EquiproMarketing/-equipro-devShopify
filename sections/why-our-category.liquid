@@ -123,12 +123,20 @@
   margin: 0;
 }
 
+/* ADAPTACIÓN MÓVIL OPTIMIZADA */
 @media (max-width: 989px) {
   #WhyCategory-{{ section.id }} .why-category__container {
     grid-template-columns: 1fr !important;
+    gap: 2rem;
   }
-  #WhyCategory-{{ section.id }} .why-category__media {
+  /* Ocultamos solo la imagen derecha en móvil para mantener el diseño limpio y estilizado */
+  #WhyCategory-{{ section.id }} .why-category__media--right {
     display: none !important;
+  }
+  /* Ajustamos la imagen izquierda para que luzca proporcionada arriba o abajo del contenido */
+  #WhyCategory-{{ section.id }} .why-category__media--left {
+    max-height: 350px;
+    width: 100%;
   }
 }
 </style>
