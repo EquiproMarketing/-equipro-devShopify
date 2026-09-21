@@ -12,14 +12,24 @@
           {%- assign selected_product = block.settings.product -%}
           {%- assign selected_collection = block.settings.collection -%}
           
-          {%- comment -%} RESOLUCIÓN DINÁMICA DE DATOS (COLECCIÓN, PRODUCTO O MANUAL) {%- endcomment -%}
+          {%- comment -%} RESOLUCIÓN AUTOMÁTICA DE DATOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
           {%- if selected_collection != blank -%}
             {%- assign display_url = selected_collection.url -%}
             {%- assign display_title = block.settings.title | default: selected_collection.title -%}
             {%- assign display_image = block.settings.image | default: selected_collection.image -%}
             {%- assign display_subtitle = block.settings.subtitle | default: selected_collection.description | strip_html | truncatewords: 10 -%}
             {%- assign hover_image = block.settings.hover_image -%}
-            {%- assign display_price = '' -%}
+            
+            {%- comment -%} Obtener el precio más bajo de los productos de la colección {%- endcomment -%}
+            {%- capture display_price -%}
+              {%- if block.settings.price != blank -%}
+                {{ block.settings.price }}
+              {%- elsif selected_collection.products.size > 0 -%}
+                {%- assign lowest_price = selected_collection.products | map: 'price_min' | sort | first -%}
+                {{ 'products.product.from_lowest_price_html' | t: lowest_price: lowest_price | money }}
+              {%- endif -%}
+            {%- endcapture -%}
+
           {%- elsif selected_product != blank -%}
             {%- assign display_url = selected_product.url -%}
             {%- assign display_title = block.settings.title | default: selected_product.title -%}
@@ -40,7 +50,7 @@
             {%- endcapture -%}
           {%- else -%}
             {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Title' -%}
+            {%- assign display_title = block.settings.title | default: 'Category / Product' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
@@ -202,8 +212,7 @@
         {
           "type": "text",
           "id": "tag",
-          "label": "Badge / Tag",
-          "default": "Skincare"
+          "label": "Badge / Tag"
         },
         {
           "type": "text",
@@ -213,7 +222,7 @@
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle / Description Override"
+          "label": "Custom Subtitle Override"
         },
         {
           "type": "text",
