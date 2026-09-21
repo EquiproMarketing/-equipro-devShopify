@@ -20,9 +20,9 @@
       "type": "collection-banner",
       "name": "Collection Banner",
       "settings": {
-        "custom_title": "",
-        "custom_description": "",
-        "fallback_description": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
+        "custom_title": "Wellness-therapy",
+        "custom_description": "<p>Discover our range of high-quality professional heat therapy equipment designed for estheticians, spas, and wellness clinics, featuring precise temperature controls.</p>",
+        "fallback_description": "Discover our range of high-quality professional heat therapy equipment designed for estheticians, spas, and wellness clinics, featuring precise temperature controls.",
         "custom_image": "shopify://shop_images/equipro-wellness-therapy-spa-heat-system-relaxing-spa-equipment-sku-none.webp",
         "overlay_opacity": 5
       }
