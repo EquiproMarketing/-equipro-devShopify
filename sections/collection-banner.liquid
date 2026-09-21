@@ -15,7 +15,7 @@
         {%- if section.settings.custom_title != blank -%}
           {{ section.settings.custom_title | escape }}
         {%- else -%}
-          {{ collection.title | default: "Trolleys" }}
+          {{ collection.title | default: "Wellness therapy" }}
         {%- endif -%}
       </h1>
 
@@ -34,11 +34,11 @@
 </div>
 
 <style>
-.collection-banner { margin-top: 1rem; margin-bottom: 2rem; }
+.collection-banner { margin-top: 1.5rem; margin-bottom: 2.5rem; }
 .collection-banner__inner {
   position: relative;
   width: 100%;
-  min-height: 240px;
+  min-height: 260px;
   border-radius: 20px;
   overflow: hidden;
   display: flex;
@@ -66,25 +66,26 @@
 .collection-banner__content {
   position: relative;
   z-index: 2;
-  padding: 2.5rem 3rem;
-  max-width: 550px;
+  padding: 3rem 3.5rem;
+  max-width: 700px;
   color: #ffffff;
 }
 .collection-banner__title {
-  font-size: 2.4rem;
+  font-size: 2.6rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
-  color: #ffffff;
+  margin-bottom: 1rem;
+  color: #a22938; /* Color vino/rojo característico de la referencia */
+  letter-spacing: -0.02em;
 }
 .collection-banner__desc {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  color: rgba(255,255,255,0.9);
+  font-size: 1.05rem;
+  line-height: 1.55;
+  color: #333333; /* Texto oscuro limpio sobre fondo claro en móvil o legible sobre overlay */
 }
 .collection-banner__desc p { margin: 0; }
 
 @media (max-width: 767px) {
-  /* Ocultamos la imagen y el overlay oscuro de fondo en móvil */
+  /* En móvil quitamos la imagen de fondo y dejamos el diseño limpio tipo minimalista */
   .collection-banner__bg,
   .collection-banner__placeholder,
   .collection-banner__overlay {
@@ -99,35 +100,21 @@
     overflow: visible;
   }
 
-  /* Bloque del título con fondo rojo corporativo (#a22938) */
   .collection-banner__content {
-    background-color: #a22938;
-    color: #ffffff;
-    width: 100%;
+    background-color: #ffffff;
+    padding: 1.5rem 0.5rem;
     max-width: 100%;
-    padding: 1.75rem 1.25rem;
-    border-radius: 12px 12px 0 0;
   }
 
   .collection-banner__title {
-    font-size: 1.8rem;
-    color: #ffffff;
-    margin-bottom: 0;
+    font-size: 2.2rem;
+    color: #a22938; /* Título en el tono rojo solicitado */
+    margin-bottom: 0.75rem;
   }
 
-  /* Bloque de descripción debajo con texto negro sobre fondo blanco */
   .collection-banner__desc {
-    background-color: #ffffff;
-    color: #1d1d1f;
-    padding: 1.25rem;
-    border-radius: 0 0 12px 12px;
-    border: 1px solid #e5e5ea;
-    border-top: none;
-    font-size: 0.9rem;
-  }
-
-  .collection-banner__desc p {
-    color: #1d1d1f !important;
+    color: #555555; /* Descripción en tonos oscuros limpios */
+    font-size: 1rem;
   }
 }
 </style>
@@ -157,7 +144,7 @@
       "type": "textarea",
       "id": "fallback_description",
       "label": "Fallback Description",
-      "default": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
+      "default": "Discover our range of high-quality professional heat therapy equipment designed for estheticians, spas, and wellness clinics, featuring precise temperature controls.",
       "info": "Used only if both Custom Description and Collection Description are empty."
     },
     {
