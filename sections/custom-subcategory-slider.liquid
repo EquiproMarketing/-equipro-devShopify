@@ -12,50 +12,55 @@
           {%- assign selected_product = block.settings.product -%}
           {%- assign selected_collection = block.settings.collection -%}
           
-          {%- comment -%} RESOLUCIÓN AUTOMÁTICA DE DATOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
+          {%- comment -%} INICIALIZAR VARIABLES VACÍAS {%- endcomment -%}
+          {%- assign display_url = '#' -%}
+          {%- assign display_title = '' -%}
+          {%- assign display_image = blank -%}
+          {%- assign hover_image = blank -%}
+          {%- assign display_subtitle = '' -%}
+          {%- assign display_price = '' -%}
+
+          {%- comment -%} SI ES UNA COLECCIÓN (CATEGORÍA) {%- endcomment -%}
           {%- if selected_collection != blank -%}
             {%- assign display_url = selected_collection.url -%}
-            {%- assign display_title = block.settings.title | default: selected_collection.title -%}
-            {%- assign display_image = block.settings.image | default: selected_collection.image -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: selected_collection.description | strip_html | truncatewords: 10 -%}
-            {%- assign hover_image = block.settings.hover_image -%}
+            {%- assign display_title = selected_collection.title -%}
+            {%- assign display_image = selected_collection.image -%}
+            {%- assign display_subtitle = selected_collection.description | strip_html | truncatewords: 10 -%}
             
-            {%- comment -%} Obtener el precio más bajo de los productos de la colección {%- endcomment -%}
-            {%- capture display_price -%}
-              {%- if block.settings.price != blank -%}
-                {{ block.settings.price }}
-              {%- elsif selected_collection.products.size > 0 -%}
-                {%- assign lowest_price = selected_collection.products | map: 'price_min' | sort | first -%}
+            {%- comment -%} Precio más bajo de la colección {%- endcomment -%}
+            {%- if selected_collection.products.size > 0 -%}
+              {%- assign lowest_price = selected_collection.products | map: 'price_min' | sort | first -%}
+              {%- capture display_price -%}
                 {{ 'products.product.from_lowest_price_html' | t: lowest_price: lowest_price | money }}
-              {%- endif -%}
-            {%- endcapture -%}
+              {%- endcapture -%}
+            {%- endif -%}
 
+          {%- comment -%} SI ES UN PRODUCTO {%- endcomment -%}
           {%- elsif selected_product != blank -%}
             {%- assign display_url = selected_product.url -%}
-            {%- assign display_title = block.settings.title | default: selected_product.title -%}
-            {%- assign display_image = block.settings.image | default: selected_product.featured_media -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: selected_product.description | strip_html | truncatewords: 10 -%}
-            {%- assign hover_image = block.settings.hover_image -%}
-            {%- if hover_image == blank and selected_product.media.size > 1 -%}
+            {%- assign display_title = selected_product.title -%}
+            {%- assign display_image = selected_product.featured_media -%}
+            {%- assign display_subtitle = selected_product.description | strip_html | truncatewords: 10 -%}
+            {%- if selected_product.media.size > 1 -%}
               {%- assign hover_image = selected_product.media[1] -%}
             {%- endif -%}
+            
             {%- capture display_price -%}
-              {%- if block.settings.price != blank -%}
-                {{ block.settings.price }}
-              {%- elsif selected_product.price_varies -%}
+              {%- if selected_product.price_varies -%}
                 {{ 'products.product.from_lowest_price_html' | t: lowest_price: selected_product.price_min | money }}
               {%- else -%}
                 {{ selected_product.price | money }}
               {%- endif -%}
             {%- endcapture -%}
-          {%- else -%}
-            {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Category / Product' -%}
-            {%- assign display_image = block.settings.image -%}
-            {%- assign hover_image = block.settings.hover_image -%}
-            {%- assign display_subtitle = block.settings.subtitle -%}
-            {%- assign display_price = block.settings.price -%}
           {%- endif -%}
+
+          {%- comment -%} SOBREESCRITURAS MANUALES (SI EL USUARIO LAS ESCRIBE) {%- endcomment -%}
+          {%- if block.settings.link != blank -%}{%- assign display_url = block.settings.link -%}{%- endif -%}
+          {%- if block.settings.title != blank -%}{%- assign display_title = block.settings.title -%}{%- endif -%}
+          {%- if block.settings.image != blank -%}{%- assign display_image = block.settings.image -%}{%- endif -%}
+          {%- if block.settings.hover_image != blank -%}{%- assign hover_image = block.settings.hover_image -%}{%- endif -%}
+          {%- if block.settings.subtitle != blank -%}{%- assign display_subtitle = block.settings.subtitle -%}{%- endif -%}
+          {%- if block.settings.price != blank -%}{%- assign display_price = block.settings.price -%}{%- endif -%}
 
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             
@@ -105,13 +110,15 @@
                 {%- endfor -%}
               </div>
 
-              <!-- LEFT-ALIGNED CONTENT DETAILS -->
+              <!-- CONTENT DETAILS -->
               <div class="custom-subcat-card__content">
                 {%- if block.settings.tag != blank -%}
                   <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
                 {%- endif -%}
 
-                <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
+                {%- if display_title != blank -%}
+                  <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
+                {%- endif -%}
                 
                 {%- if display_subtitle != blank -%}
                   <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
