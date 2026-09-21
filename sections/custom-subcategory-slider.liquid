@@ -12,17 +12,23 @@
           {%- assign product_target = block.settings.product -%}
           {%- assign collection_target = block.settings.collection -%}
           
-          {%- comment -%} RESOLVER DATOS AUTOMÁTICOS (COLECCIÓN, PRODUCTO O MANUAL) {%- endcomment -%}
+          {%- comment -%} RESOLVER DATOS AUTOMÁTICOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
           {%- if collection_target != blank -%}
             {%- assign display_url = collection_target.url -%}
             {%- assign display_title = block.settings.title | default: collection_target.title -%}
             {%- assign display_image = block.settings.image | default: collection_target.image -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: collection_target.description | strip_html | truncatewords: 12 -%}
             {%- assign display_price = '' -%}
+            {%- assign hover_image = nil -%}
           {%- elsif product_target != blank -%}
             {%- assign display_url = product_target.url -%}
             {%- assign display_title = block.settings.title | default: product_target.title -%}
             {%- assign display_image = block.settings.image | default: product_target.featured_media -%}
-            {%- assign hover_image = block.settings.hover_image | default: product_target.media[1] -%}
+            {%- assign hover_image = block.settings.hover_image -%}
+            {%- if hover_image == blank and product_target.media.size > 1 -%}
+              {%- assign hover_image = product_target.media[1] -%}
+            {%- endif -%}
+            {%- assign display_subtitle = block.settings.subtitle -%}
             {%- capture display_price -%}
               {%- if block.settings.price != blank -%}
                 {{ block.settings.price }}
@@ -37,6 +43,7 @@
             {%- assign display_title = block.settings.title | default: 'Category / Product' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign hover_image = block.settings.hover_image -%}
+            {%- assign display_subtitle = block.settings.subtitle -%}
             {%- assign display_price = block.settings.price -%}
           {%- endif -%}
 
@@ -96,8 +103,8 @@
 
                 <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
                 
-                {%- if block.settings.subtitle != blank -%}
-                  <p class="custom-subcat-card__subtitle">{{ block.settings.subtitle }}</p>
+                {%- if display_subtitle != blank -%}
+                  <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
                 {%- endif -%}
 
                 {%- if display_price != blank -%}
@@ -160,12 +167,12 @@
         {
           "type": "collection",
           "id": "collection",
-          "label": "Select Collection (Category)"
+          "label": "Select Collection (Auto-fetch info)"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product"
+          "label": "Select Product (Auto-fetch info)"
         },
         {
           "type": "header",
@@ -206,8 +213,8 @@
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle / Description",
-          "default": "Explore professional skincare categories."
+          "label": "Subtitle / Description Override",
+          "default": "Explore professional categories."
         },
         {
           "type": "text",
