@@ -242,11 +242,13 @@
         "custom_card_3WjHXz": {
           "type": "custom_card",
           "settings": {
+            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
+            "hover_image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-wood-base-luxury-wellness-center-ei-508.webp",
             "card_bg": "#ffffff",
-            "tag": "Nouveau",
-            "title": "Stool with Backrest",
-            "price": "69,00 $",
-            "swatches": "#ff5a5f, #f4d06f, #3d5a80, #2b2d42",
+            "tag": "Best seller",
+            "title": "Elite Spa",
+            "price": "3,350.00 $",
+            "swatches": "",
             "link": "shopify://products/ergonomic-stool-with-backrest"
           }
         },
