@@ -12,15 +12,17 @@
           {%- assign target_col = block.settings.collection -%}
           {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} RESOLUCIÓN AUTOMÁTICA DE DATOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
+          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) {%- endcomment -%}
           {%- if target_col != blank -%}
             {%- assign display_url = target_col.url -%}
             {%- assign display_title = block.settings.title | default: target_col.title -%}
             {%- assign display_image = block.settings.image | default: target_col.image -%}
             {%- assign hover_image = blank -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 12 -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 15 -%}
             {%- assign display_price = '' -%}
             {%- assign is_product = false -%}
+
+          {%- comment -%} 2. CASO PRODUCTO {%- endcomment -%}
           {%- elsif target_prod != blank -%}
             {%- assign display_url = target_prod.url -%}
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
@@ -29,7 +31,7 @@
             {%- if hover_image == blank and target_prod.media.size > 1 -%}
               {%- assign hover_image = target_prod.media[1] -%}
             {%- endif -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 10 -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
             
             {%- capture display_price -%}
               {%- if block.settings.price != blank -%}
@@ -41,9 +43,11 @@
               {%- endif -%}
             {%- endcapture -%}
             {%- assign is_product = true -%}
+
+          {%- comment -%} 3. CASO MANUAL / VACÍO {%- endcomment -%}
           {%- else -%}
             {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Título del elemento' -%}
+            {%- assign display_title = block.settings.title | default: 'Selecciona una categoría o producto' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
@@ -54,13 +58,13 @@
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
-              <!-- ENLACE Y CONTENEDOR DE IMAGEN -->
+              <!-- IMAGEN -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
-                    <img src="{{ display_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--primary">
+                    <img src="{{ display_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--primary">
                     {%- if hover_image != blank -%}
-                      <img src="{{ hover_image | image_url: width: 500 }}" alt="{{ display_title | escape }}" loading="lazy" width="240" height="300" class="custom-subcat-card__image custom-subcat-card__image--secondary">
+                      <img src="{{ hover_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--secondary">
                     {%- endif -%}
                   {%- else -%}
                     {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
@@ -68,7 +72,7 @@
                 </div>
               </a>
 
-              <!-- COLOR SWATCHES (SÓLO PARA PRODUCTOS O SI SE CONFIGURAN) -->
+              <!-- SWATCHES DE COLOR -->
               {%- if block.settings.available_colors != blank -%}
                 <div class="custom-subcat-card__swatches">
                   {%- assign colors = block.settings.available_colors | split: ',' -%}
@@ -81,7 +85,7 @@
                 </div>
               {%- endif -%}
 
-              <!-- DETALLES DE TEXTO ( TÍTULO Y DESCRIPCIÓN DE COLECCIÓN / PRODUCTO ) -->
+              <!-- TEXTOS (TÍTULO Y DESCRIPCIÓN AUTOMÁTICA) -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
                 <div class="custom-subcat-card__content">
                   {%- if block.settings.tag != blank -%}
@@ -97,8 +101,8 @@
                 </div>
               </a>
 
-              <!-- BOTÓN DE COMPRA EXCLUSIVO PARA PRODUCTOS -->
-              {%- if is_product and target_prod != blank -%}
+              <!-- BOTÓN DE COMPRA (SÓLO PARA PRODUCTOS) -->
+              {%- if is_product -%}
                 <div class="custom-subcat-card__actions">
                   <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
                 </div>
@@ -149,71 +153,71 @@
   "blocks": [
     {
       "type": "subcategory_card",
-      "name": "Card Item",
+      "name": "Item Card",
       "settings": [
         {
           "type": "header",
-          "content": "Automatic Source (Choose one)"
+          "content": "Origen Automático (Elige uno)"
         },
         {
           "type": "collection",
           "id": "collection",
-          "label": "Select Collection (Auto-fetches image & description)"
+          "label": "Seleccionar Colección (Extrae imagen y descripción)"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product (Auto-fetches info & price)"
+          "label": "Seleccionar Producto (Extrae info, precio y botón)"
         },
         {
           "type": "header",
-          "content": "Custom Overrides (Optional)"
+          "content": "Sobreescrituras Manuales (Opcional)"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Custom Image Override"
+          "label": "Imagen personalizada"
         },
         {
           "type": "image_picker",
           "id": "hover_image",
-          "label": "Custom Hover Image Override"
+          "label": "Imagen al pasar el cursor (Hover)"
         },
         {
           "type": "color",
           "id": "card_bg_color",
-          "label": "Card Background Color",
+          "label": "Color de fondo de la tarjeta",
           "default": "#f5f5f7"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Custom URL Override"
+          "label": "Enlace personalizado"
         },
         {
           "type": "text",
           "id": "tag",
-          "label": "Badge / Tag"
+          "label": "Etiqueta / Badge"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Custom Title Override"
+          "label": "Título personalizado"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Custom Description Override"
+          "label": "Descripción personalizada"
         },
         {
           "type": "text",
           "id": "price",
-          "label": "Custom Price Override"
+          "label": "Precio personalizado"
         },
         {
           "type": "textarea",
           "id": "available_colors",
-          "label": "Color Swatches (HEX list separated by comma)"
+          "label": "Colores (HEX separados por comas)"
         }
       ]
     }
