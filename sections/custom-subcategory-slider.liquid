@@ -9,38 +9,38 @@
     <div class="swiper custom-subcat-swiper">
       <div class="swiper-wrapper">
         {%- for block in section.blocks -%}
-          {%- assign product_target = block.settings.product -%}
-          {%- assign collection_target = block.settings.collection -%}
+          {%- assign selected_product = block.settings.product -%}
+          {%- assign selected_collection = block.settings.collection -%}
           
-          {%- comment -%} RESOLVER DATOS AUTOMÁTICOS (COLECCIÓN O PRODUCTO) {%- endcomment -%}
-          {%- if collection_target != blank -%}
-            {%- assign display_url = collection_target.url -%}
-            {%- assign display_title = block.settings.title | default: collection_target.title -%}
-            {%- assign display_image = block.settings.image | default: collection_target.image -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: collection_target.description | strip_html | truncatewords: 12 -%}
-            {%- assign display_price = '' -%}
-            {%- assign hover_image = nil -%}
-          {%- elsif product_target != blank -%}
-            {%- assign display_url = product_target.url -%}
-            {%- assign display_title = block.settings.title | default: product_target.title -%}
-            {%- assign display_image = block.settings.image | default: product_target.featured_media -%}
+          {%- comment -%} RESOLUCIÓN DINÁMICA DE DATOS (COLECCIÓN, PRODUCTO O MANUAL) {%- endcomment -%}
+          {%- if selected_collection != blank -%}
+            {%- assign display_url = selected_collection.url -%}
+            {%- assign display_title = block.settings.title | default: selected_collection.title -%}
+            {%- assign display_image = block.settings.image | default: selected_collection.image -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: selected_collection.description | strip_html | truncatewords: 10 -%}
             {%- assign hover_image = block.settings.hover_image -%}
-            {%- if hover_image == blank and product_target.media.size > 1 -%}
-              {%- assign hover_image = product_target.media[1] -%}
+            {%- assign display_price = '' -%}
+          {%- elsif selected_product != blank -%}
+            {%- assign display_url = selected_product.url -%}
+            {%- assign display_title = block.settings.title | default: selected_product.title -%}
+            {%- assign display_image = block.settings.image | default: selected_product.featured_media -%}
+            {%- assign display_subtitle = block.settings.subtitle | default: selected_product.description | strip_html | truncatewords: 10 -%}
+            {%- assign hover_image = block.settings.hover_image -%}
+            {%- if hover_image == blank and selected_product.media.size > 1 -%}
+              {%- assign hover_image = selected_product.media[1] -%}
             {%- endif -%}
-            {%- assign display_subtitle = block.settings.subtitle -%}
             {%- capture display_price -%}
               {%- if block.settings.price != blank -%}
                 {{ block.settings.price }}
-              {%- elsif product_target.price_varies -%}
-                {{ 'products.product.from_lowest_price_html' | t: lowest_price: product_target.price_min | money }}
+              {%- elsif selected_product.price_varies -%}
+                {{ 'products.product.from_lowest_price_html' | t: lowest_price: selected_product.price_min | money }}
               {%- else -%}
-                {{ product_target.price | money }}
+                {{ selected_product.price | money }}
               {%- endif -%}
             {%- endcapture -%}
           {%- else -%}
             {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Category / Product' -%}
+            {%- assign display_title = block.settings.title | default: 'Title' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
@@ -167,12 +167,12 @@
         {
           "type": "collection",
           "id": "collection",
-          "label": "Select Collection (Auto-fetch info)"
+          "label": "Select Collection"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Select Product (Auto-fetch info)"
+          "label": "Select Product"
         },
         {
           "type": "header",
@@ -213,8 +213,7 @@
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Subtitle / Description Override",
-          "default": "Explore professional categories."
+          "label": "Subtitle / Description Override"
         },
         {
           "type": "text",
@@ -224,8 +223,7 @@
         {
           "type": "textarea",
           "id": "available_colors",
-          "label": "Color Swatches (HEX list separated by comma)",
-          "default": "#ffffff, #111111, #808080"
+          "label": "Color Swatches (HEX list separated by comma)"
         }
       ]
     }
