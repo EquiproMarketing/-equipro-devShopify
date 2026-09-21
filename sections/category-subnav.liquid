@@ -4,16 +4,37 @@
 
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
 
-  {%- if section.settings.hide_on_mobile -%}
-    <style>
+  <style>
+    {%- if section.settings.hide_on_mobile -%}
       @media screen and (max-width: 989px) {
         #shopify-section-{{ section.id }},
         .category-subnav {
           display: none !important;
         }
       }
-    </style>
-  {%- endif -%}
+    {%- else -%}
+      /* Estilos adaptativos móviles si se decide mostrar */
+      @media screen and (max-width: 989px) {
+        .category-subnav__bar {
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          padding-bottom: 5px;
+        }
+        .category-megamenu {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          height: 100vh !important;
+          background: #fff;
+          z-index: 9999;
+          overflow-y: auto;
+          padding: 2rem 1rem;
+        }
+      }
+    {%- endif -%}
+  </style>
 
   <nav class="category-subnav" aria-label="Category Navigation">
     <div class="page-width">
@@ -32,7 +53,7 @@
           {%- endif -%}
 
           <li class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}">
-            <a href="{{ link.url }}" class="category-subnav__bar-link{% if is_active %} is-active{% endif %}">
+            <a href="{{ link.url }}" class="category-subnav__bar-link{% if is_active %} is-active{% endif %}" {% if has_dropdown %}aria-expanded="false"{% endif %}>
               <span>{{ link.title }}</span>
               {%- if has_dropdown -%}
                 <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
@@ -225,23 +246,42 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
+    // Manejo de pestañas en el sidebar del megamenú (Soporte tanto hover como click táctil)
     const sidebarItems = document.querySelectorAll('.category-megamenu__sidebar-item');
 
     sidebarItems.forEach(item => {
-      item.addEventListener('mouseenter', () => {
-        const parentSidebar = item.closest('.category-megamenu__sidebar');
-        const parentContent = item.closest('.category-megamenu').querySelector('.category-megamenu__content');
-        const targetId = item.getAttribute('data-target-tab');
+      ['mouseenter', 'click'].forEach(eventType => {
+        item.addEventListener(eventType, (e) => {
+          if (eventType === 'click') e.preventDefault();
+          const parentSidebar = item.closest('.category-megamenu__sidebar');
+          const parentContent = item.closest('.category-megamenu').querySelector('.category-megamenu__content');
+          const targetId = item.getAttribute('data-target-tab');
 
-        if (!parentSidebar || !parentContent || !targetId) return;
+          if (!parentSidebar || !parentContent || !targetId) return;
 
-        parentSidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(el => el.classList.remove('is-selected'));
-        parentContent.querySelectorAll('.category-megamenu__tab-panel').forEach(el => el.classList.remove('is-active'));
+          parentSidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(el => el.classList.remove('is-selected'));
+          parentContent.querySelectorAll('.category-megamenu__tab-panel').forEach(el => el.classList.remove('is-active'));
 
-        item.classList.add('is-selected');
-        const targetPanel = parentContent.querySelector('#' + targetId);
-        if (targetPanel) {
-          targetPanel.classList.add('is-active');
+          item.classList.add('is-selected');
+          const targetPanel = parentContent.querySelector('#' + targetId);
+          if (targetPanel) {
+            targetPanel.classList.add('is-active');
+          }
+        });
+      });
+    });
+
+    // Soporte para despliegue táctil en móviles si no está oculto
+    const megamenuTriggers = document.querySelectorAll('.category-subnav__bar-item.has-megamenu > a');
+    megamenuTriggers.forEach(trigger => {
+      trigger.addEventListener('click', (e) => {
+        if (window.innerWidth <= 989) {
+          const parentLi = trigger.closest('.has-megamenu');
+          if (parentLi && !parentLi.classList.contains('is-mobile-open')) {
+            e.preventDefault();
+            document.querySelectorAll('.has-megamenu').forEach(el => el.classList.remove('is-mobile-open'));
+            parentLi.classList.add('is-mobile-open');
+          }
         }
       });
     });
