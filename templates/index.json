@@ -473,42 +473,69 @@
         "subcategory_card_76RyFT": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "skin-analyzer",
+            "product": "",
+            "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/electric",
-            "tag": "Treatment Chairs",
-            "title": "Electric Treatment Chairs",
-            "subtitle": "Multi-motor elevation and tilt controls for effortless client positioning during long clinical procedures.",
-            "price": "From CA$ 2,399.00",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/skin-analyzer",
+            "tag": "Collection",
+            "title": "Skin Analyzers",
+            "subtitle": "Advanced skin scanning equipment using specialized illumination technology to reveal underlying skin conditions, pigmentations, and hydration levels for precise professional consultations.",
+            "price": "From CA$ 380.00",
+            "available_colors": ""
           }
         },
         "subcategory_card_RFztfx": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "facial-units",
+            "product": "",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
+            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "tag": "Treatment Chairs",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation and sturdy rotation mechanisms for versatile, power-free clinic setups.",
-            "price": "From CA$ 1,499.00",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/facial-units",
+            "tag": "Collection",
+            "title": "Facial Units",
+            "subtitle": "Discover our professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "subcategory_card_Eh8Frm": {
+          "type": "subcategory_card",
+          "settings": {
+            "collection": "wax-heaters",
+            "product": "",
+            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "shopify://collections/wax-heaters",
+            "tag": "Collection",
+            "title": "Wax-Heaters",
+            "subtitle": "Professional wax warmers engineered with precise temperature control and rapid, uniform heating for flawless and comfortable hair removal treatments.",
+            "price": "",
+            "available_colors": ""
           }
         },
         "subcategory_card_3PcLMF": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "towel-warmers",
+            "product": "",
+            "image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/trolleys",
-            "tag": "Treatment Chairs",
-            "title": "Portable Massage Tables",
-            "subtitle": "Lightweight, high-strength aluminum and wooden folding frames designed for mobile professionals and compact spaces.",
-            "price": "From CA$ 499.00",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/towel-warmers",
+            "tag": "Collection",
+            "title": "Towel Warmers",
+            "subtitle": "Professional hot towel cabinets designed to keep your linens perfectly warm, moist, and sanitized for an elevated client experience.",
+            "price": "",
+            "available_colors": ""
           }
         },
         "subcategory_card_kNMd6p": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/stools",
             "tag": "Stools",
@@ -521,6 +548,8 @@
         "subcategory_card_ykJEhh": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
             "tag": "FACIAL UNITS",
@@ -533,6 +562,8 @@
         "subcategory_card_Xnfck8": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/towel-warmers",
             "tag": "Towel Cabinets",
@@ -545,6 +576,8 @@
         "subcategory_card_MWxmgz": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/wellness-therapy",
             "tag": "Wellness Therapy",
@@ -553,29 +586,17 @@
             "price": "From CA$ 105.00",
             "available_colors": ""
           }
-        },
-        "subcategory_card_Eh8Frm": {
-          "type": "subcategory_card",
-          "settings": {
-            "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "WAX HEATERS",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
-            "available_colors": "#ffffff, #111111, #808080"
-          }
         }
       },
       "block_order": [
         "subcategory_card_76RyFT",
         "subcategory_card_RFztfx",
+        "subcategory_card_Eh8Frm",
         "subcategory_card_3PcLMF",
         "subcategory_card_kNMd6p",
         "subcategory_card_ykJEhh",
         "subcategory_card_Xnfck8",
-        "subcategory_card_MWxmgz",
-        "subcategory_card_Eh8Frm"
+        "subcategory_card_MWxmgz"
       ],
       "name": "Subcategory Slider",
       "settings": {
@@ -588,6 +609,8 @@
         "subcategory_card_MpAxqM": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -600,6 +623,8 @@
         "subcategory_card_ChAiXK": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -612,6 +637,8 @@
         "subcategory_card_WfgYK8": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -624,6 +651,8 @@
         "subcategory_card_FGmzWP": {
           "type": "subcategory_card",
           "settings": {
+            "collection": "",
+            "product": "21200-aero-comfort",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/hydraulic-mechanical",
             "tag": "Hydraulic",
