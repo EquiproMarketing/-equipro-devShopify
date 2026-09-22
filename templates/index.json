@@ -548,14 +548,14 @@
         "subcategory_card_ykJEhh": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "hydraulic-mechanical",
             "product": "",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/facial-units",
-            "tag": "FACIAL UNITS",
-            "title": "EXPLORE OURS FACIAL UNITS",
-            "subtitle": "Elevate your clinical results with versatile, space-conscious equipment.",
-            "price": "From CA$ 590.00",
+            "link": "shopify://collections/hydraulic-mechanical",
+            "tag": "Treatment tables",
+            "title": "Hydraulic / Mechanical",
+            "subtitle": "Heavy-duty, fluid-operated treatment tables offering reliable elevation and manual position adjustments without the need for electrical outlets or cords.",
+            "price": "",
             "available_colors": ""
           }
         },
