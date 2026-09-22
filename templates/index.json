@@ -526,7 +526,8 @@
           "settings": {
             "collection": "towel-warmers",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
             "image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/towel-warmers",
