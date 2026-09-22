@@ -534,15 +534,15 @@
         "subcategory_card_kNMd6p": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "electric",
             "product": "",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/stools",
-            "tag": "Stools",
-            "title": "Ergonomic Technician Stools",
-            "subtitle": "High-density posture-support seating with smooth pneumatic lift for long clinical procedures.",
-            "price": "From CA$ 1,499",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/electric",
+            "tag": "Treatment Tables",
+            "title": "Electric Tables",
+            "subtitle": "Ultra-smooth, motorized treatment tables engineered for maximum client comfort, silent transitions, and optimal ergonomic positioning for the practitioner.",
+            "price": "",
+            "available_colors": ""
           }
         },
         "subcategory_card_ykJEhh": {
