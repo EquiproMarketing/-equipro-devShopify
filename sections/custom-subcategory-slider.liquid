@@ -12,27 +12,21 @@
           {%- assign target_col = block.settings.collection -%}
           {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) - SÓLO 1 IMAGEN {%- endcomment -%}
+          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) {%- endcomment -%}
           {%- if target_col != blank -%}
             {%- assign display_url = target_col.url -%}
             {%- assign display_title = block.settings.title | default: target_col.title -%}
             {%- assign display_image = block.settings.image | default: target_col.image -%}
-            {%- assign hover_image = blank -%}{%- comment -%} Las colecciones no llevan hover de segunda imagen {%- endcomment -%}
             {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 15 -%}
             {%- assign display_price = '' -%}
             {%- assign is_product = false -%}
 
-          {%- comment -%} 2. CASO PRODUCTO - SOPORTA HOVER DE SEGUNDA IMAGEN {%- endcomment -%}
+          {%- comment -%} 2. CASO PRODUCTO {%- endcomment -%}
           {%- elsif target_prod != blank -%}
             {%- assign display_url = target_prod.url -%}
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
             {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
             
-            {%- assign hover_image = block.settings.hover_image -%}
-            {%- if hover_image == blank and target_prod.media.size > 1 -%}
-              {%- assign hover_image = target_prod.media[1].preview_image -%}
-            {%- endif -%}
-
             {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
             
             {%- capture display_price -%}
@@ -51,16 +45,25 @@
             {%- assign display_url = block.settings.link | default: '#' -%}
             {%- assign display_title = block.settings.title | default: 'Selecciona una categoría o producto' -%}
             {%- assign display_image = block.settings.image -%}
-            {%- assign hover_image = block.settings.hover_image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
             {%- assign display_price = block.settings.price -%}
             {%- assign is_product = false -%}
           {%- endif -%}
 
+          {%- comment -%} RESOLUCIÓN DE IMAGEN DE HOVER (SÓLO SI ESTÁ ACTIVADO Y EXISTE) {%- endcomment -%}
+          {%- assign hover_image = blank -%}
+          {%- if block.settings.enable_hover -%}
+            {%- if block.settings.hover_image != blank -%}
+              {%- assign hover_image = block.settings.hover_image -%}
+            {%- elsif target_prod != blank and target_prod.media.size > 1 -%}
+              {%- assign hover_image = target_prod.media[1].preview_image -%}
+            {%- endif -%}
+          {%- endif -%}
+
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
-              <!-- IMAGEN (CON HOVER CONDICIONAL SÓLO SI EXISTE SEGUNDA IMAGEN) -->
+              <!-- IMAGEN PRINCIPAL Y HOVER OPCIONAL -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
@@ -174,17 +177,28 @@
         },
         {
           "type": "header",
+          "content": "Configuración de Imagen y Hover"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_hover",
+          "label": "Activar imagen secundaria en Hover",
+          "default": false,
+          "info": "Actívalo solo en tarjetas de productos para mostrar la segunda foto de su galería al pasar el cursor."
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Imagen de Hover Personalizada (Opcional)"
+        },
+        {
+          "type": "header",
           "content": "Sobreescrituras Manuales (Opcional)"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Imagen personalizada"
-        },
-        {
-          "type": "image_picker",
-          "id": "hover_image",
-          "label": "Imagen al pasar el cursor (Hover - Solo productos)"
+          "label": "Imagen principal personalizada"
         },
         {
           "type": "color",
