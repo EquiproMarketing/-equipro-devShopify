@@ -475,6 +475,7 @@
           "settings": {
             "collection": "skin-analyzer",
             "product": "",
+            "enable_hover": false,
             "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/skin-analyzer",
@@ -490,8 +491,9 @@
           "settings": {
             "collection": "facial-units",
             "product": "",
-            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
+            "enable_hover": true,
             "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
             "tag": "Collection",
@@ -506,6 +508,7 @@
           "settings": {
             "collection": "wax-heaters",
             "product": "",
+            "enable_hover": false,
             "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/wax-heaters",
@@ -521,6 +524,7 @@
           "settings": {
             "collection": "towel-warmers",
             "product": "",
+            "enable_hover": false,
             "image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/towel-warmers",
@@ -536,6 +540,7 @@
           "settings": {
             "collection": "electric",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/electric",
             "tag": "Treatment Tables",
@@ -550,6 +555,7 @@
           "settings": {
             "collection": "hydraulic-mechanical",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/hydraulic-mechanical",
             "tag": "Treatment tables",
@@ -564,6 +570,7 @@
           "settings": {
             "collection": "",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/towel-warmers",
             "tag": "Towel Cabinets",
@@ -578,6 +585,7 @@
           "settings": {
             "collection": "",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/wellness-therapy",
             "tag": "Wellness Therapy",
@@ -611,6 +619,7 @@
           "settings": {
             "collection": "",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -625,6 +634,7 @@
           "settings": {
             "collection": "",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -639,6 +649,7 @@
           "settings": {
             "collection": "",
             "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "Hydraulic",
@@ -653,6 +664,7 @@
           "settings": {
             "collection": "",
             "product": "21200-aero-comfort",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/hydraulic-mechanical",
             "tag": "Hydraulic",
