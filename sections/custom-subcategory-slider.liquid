@@ -27,10 +27,13 @@
             {%- assign display_url = target_prod.url -%}
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
             {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
+            
+            {%- comment -%} Forzar captura de la segunda imagen del producto para el hover {%- endcomment -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- if hover_image == blank and target_prod.media.size > 1 -%}
-              {%- assign hover_image = target_prod.media[1] -%}
+              {%- assign hover_image = target_prod.media[1].preview_image -%}
             {%- endif -%}
+
             {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
             
             {%- capture display_price -%}
@@ -58,16 +61,17 @@
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
-              <!-- IMAGEN -->
+              <!-- IMAGEN PRINCIPAL Y HOVER -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
                     <img src="{{ display_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--primary">
-                    {%- if hover_image != blank -%}
-                      <img src="{{ hover_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--secondary">
-                    {%- endif -%}
                   {%- else -%}
                     {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
+                  {%- endif -%}
+
+                  {%- if hover_image != blank -%}
+                    <img src="{{ hover_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--secondary">
                   {%- endif -%}
                 </div>
               </a>
@@ -85,7 +89,7 @@
                 </div>
               {%- endif -%}
 
-              <!-- TEXTOS (TÍTULO Y DESCRIPCIÓN AUTOMÁTICA) -->
+              <!-- TEXTOS -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
                 <div class="custom-subcat-card__content">
                   {%- if block.settings.tag != blank -%}
@@ -101,7 +105,7 @@
                 </div>
               </a>
 
-              <!-- BOTÓN DE COMPRA (SÓLO PARA PRODUCTOS) -->
+              <!-- BOTÓN DE COMPRA -->
               {%- if is_product -%}
                 <div class="custom-subcat-card__actions">
                   <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
