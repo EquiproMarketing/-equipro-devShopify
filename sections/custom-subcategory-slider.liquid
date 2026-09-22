@@ -28,7 +28,6 @@
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
             {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
             
-            {%- comment -%} Forzar captura de la segunda imagen del producto para el hover {%- endcomment -%}
             {%- assign hover_image = block.settings.hover_image -%}
             {%- if hover_image == blank and target_prod.media.size > 1 -%}
               {%- assign hover_image = target_prod.media[1].preview_image -%}
