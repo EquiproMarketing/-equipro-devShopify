@@ -12,17 +12,17 @@
           {%- assign target_col = block.settings.collection -%}
           {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) {%- endcomment -%}
+          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) - SÓLO 1 IMAGEN {%- endcomment -%}
           {%- if target_col != blank -%}
             {%- assign display_url = target_col.url -%}
             {%- assign display_title = block.settings.title | default: target_col.title -%}
             {%- assign display_image = block.settings.image | default: target_col.image -%}
-            {%- assign hover_image = blank -%}
+            {%- assign hover_image = blank -%}{%- comment -%} Las colecciones no llevan hover de segunda imagen {%- endcomment -%}
             {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 15 -%}
             {%- assign display_price = '' -%}
             {%- assign is_product = false -%}
 
-          {%- comment -%} 2. CASO PRODUCTO {%- endcomment -%}
+          {%- comment -%} 2. CASO PRODUCTO - SOPORTA HOVER DE SEGUNDA IMAGEN {%- endcomment -%}
           {%- elsif target_prod != blank -%}
             {%- assign display_url = target_prod.url -%}
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
@@ -60,7 +60,7 @@
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
-              <!-- IMAGEN PRINCIPAL Y HOVER -->
+              <!-- IMAGEN (CON HOVER CONDICIONAL SÓLO SI EXISTE SEGUNDA IMAGEN) -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
@@ -184,7 +184,7 @@
         {
           "type": "image_picker",
           "id": "hover_image",
-          "label": "Imagen al pasar el cursor (Hover)"
+          "label": "Imagen al pasar el cursor (Hover - Solo productos)"
         },
         {
           "type": "color",
