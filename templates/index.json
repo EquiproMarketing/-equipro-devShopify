@@ -543,7 +543,9 @@
           "settings": {
             "collection": "electric",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
+            "image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/electric",
             "tag": "Treatment Tables",
