@@ -490,8 +490,8 @@
           "settings": {
             "collection": "facial-units",
             "product": "",
-            "image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
-            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
+            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-workstation-duo-pil-wax-heater-hygiene-cabinet-aesthetician-suite-equi-fac-9000.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
             "tag": "Collection",
@@ -534,28 +534,28 @@
         "subcategory_card_kNMd6p": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "electric",
             "product": "",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/stools",
-            "tag": "Stools",
-            "title": "Ergonomic Technician Stools",
-            "subtitle": "High-density posture-support seating with smooth pneumatic lift for long clinical procedures.",
-            "price": "From CA$ 1,499",
-            "available_colors": "#ffffff, #111111, #808080"
+            "link": "shopify://collections/electric",
+            "tag": "Treatment Tables",
+            "title": "Electric Tables",
+            "subtitle": "Ultra-smooth, motorized treatment tables engineered for maximum client comfort, silent transitions, and optimal ergonomic positioning for the practitioner.",
+            "price": "",
+            "available_colors": ""
           }
         },
         "subcategory_card_ykJEhh": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "hydraulic-mechanical",
             "product": "",
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/facial-units",
-            "tag": "FACIAL UNITS",
-            "title": "EXPLORE OURS FACIAL UNITS",
-            "subtitle": "Elevate your clinical results with versatile, space-conscious equipment.",
-            "price": "From CA$ 590.00",
+            "link": "shopify://collections/hydraulic-mechanical",
+            "tag": "Treatment tables",
+            "title": "Hydraulic / Mechanical",
+            "subtitle": "Heavy-duty, fluid-operated treatment tables offering reliable elevation and manual position adjustments without the need for electrical outlets or cords.",
+            "price": "",
             "available_colors": ""
           }
         },
