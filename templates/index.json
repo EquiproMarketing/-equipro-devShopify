@@ -475,7 +475,8 @@
           "settings": {
             "collection": "skin-analyzer",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
             "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/skin-analyzer",
@@ -492,7 +493,7 @@
             "collection": "facial-units",
             "product": "",
             "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "hover_image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
             "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
@@ -508,7 +509,8 @@
           "settings": {
             "collection": "wax-heaters",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
             "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/wax-heaters",
