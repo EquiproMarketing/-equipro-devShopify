@@ -70,22 +70,24 @@
   max-width: 700px;
   color: #ffffff;
 }
+
+/* En escritorio, título y descripción van en blanco sobre la imagen */
 .collection-banner__title {
   font-size: 2.6rem;
   font-weight: 700;
   margin-bottom: 1rem;
-  color: #a22938; /* Color vino/rojo característico de la referencia */
+  color: #ffffff; 
   letter-spacing: -0.02em;
 }
 .collection-banner__desc {
   font-size: 1.05rem;
   line-height: 1.55;
-  color: #333333; /* Texto oscuro limpio sobre fondo claro en móvil o legible sobre overlay */
+  color: #ffffff; 
 }
-.collection-banner__desc p { margin: 0; }
+.collection-banner__desc p { margin: 0; color: inherit; }
 
 @media (max-width: 767px) {
-  /* En móvil quitamos la imagen de fondo y dejamos el diseño limpio tipo minimalista */
+  /* En móvil quitamos la imagen de fondo y dejamos el diseño minimalista limpio */
   .collection-banner__bg,
   .collection-banner__placeholder,
   .collection-banner__overlay {
@@ -106,15 +108,20 @@
     max-width: 100%;
   }
 
+  /* En móvil aplican los colores solicitados: título rojo y descripción oscura */
   .collection-banner__title {
     font-size: 2.2rem;
-    color: #a22938; /* Título en el tono rojo solicitado */
+    color: #a22938; 
     margin-bottom: 0.75rem;
   }
 
   .collection-banner__desc {
-    color: #555555; /* Descripción en tonos oscuros limpios */
+    color: #555555; 
     font-size: 1rem;
+  }
+
+  .collection-banner__desc p {
+    color: #555555 !important;
   }
 }
 </style>
@@ -144,7 +151,7 @@
       "type": "textarea",
       "id": "fallback_description",
       "label": "Fallback Description",
-      "default": "Discover our range of high-quality professional heat therapy equipment designed for estheticians, spas, and wellness clinics, featuring precise temperature controls.",
+      "default": "Discover our range of high-quality professional equipment designed for estheticians, spas, and wellness clinics.",
       "info": "Used only if both Custom Description and Collection Description are empty."
     },
     {
