@@ -572,12 +572,31 @@
             "available_colors": ""
           }
         },
+        "subcategory_card_gXdbUY": {
+          "type": "subcategory_card",
+          "settings": {
+            "collection": "portable",
+            "product": "",
+            "enable_hover": false,
+            "hover_image": "shopify://shop_images/equipro-portables-folding-aluminum-framed-professional-treatment-table-adjustable-face-cradle-spa-salon-studio-sku-not-provided.webp",
+            "image": "shopify://shop_images/equipro-portables-adjustable-folding-practitioner-treatment-table-aluminum-frame-black-vinyl-north-american-studio-spa-room-sku-not-provided.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Treatment tables",
+            "title": "Portable",
+            "subtitle": "Lightweight, ultra-stable, and easily foldable professional tables engineered for mobile therapists, pop-up clinics, and space-flexible treatment rooms.",
+            "price": "",
+            "available_colors": ""
+          }
+        },
         "subcategory_card_Xnfck8": {
           "type": "subcategory_card",
           "settings": {
             "collection": "stools",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-white-ergonomic-stools-padded-swivel-wheeled-hydraulic-style-height-adjustment-north-american-beauty-salon-studio-sku-not-provided.webp",
+            "image": "shopify://shop_images/equipro-adjustable-hydraulic-ergonomic-stools-rotatable-caster-base-professional-spa-salon-clinic-sku-not-provided.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/stools",
             "tag": "Collection",
@@ -610,6 +629,7 @@
         "subcategory_card_3PcLMF",
         "subcategory_card_kNMd6p",
         "subcategory_card_ykJEhh",
+        "subcategory_card_gXdbUY",
         "subcategory_card_Xnfck8",
         "subcategory_card_MWxmgz"
       ],
