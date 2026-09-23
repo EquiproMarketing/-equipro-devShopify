@@ -91,7 +91,7 @@
             "title_color": "#FFFFFF",
             "title_font_size": 28,
             "enable_text_shadow": true,
-            "shadow_color": "#FFFFFF",
+            "shadow_color": "#000000",
             "shadow_blur": 8,
             "shadow_offset_y": 4,
             "image_fit": "cover"
@@ -141,7 +141,7 @@
             "bg_color": "#e8e8ed",
             "title_color": "#FFFFFF",
             "title_font_size": 28,
-            "enable_text_shadow": false,
+            "enable_text_shadow": true,
             "shadow_color": "#000000",
             "shadow_blur": 8,
             "shadow_offset_y": 4,
