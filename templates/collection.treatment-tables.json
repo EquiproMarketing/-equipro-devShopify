@@ -18,6 +18,7 @@
     },
     "collection_banner_qtVMrG": {
       "type": "collection-banner",
+      "disabled": true,
       "name": "Collection Banner",
       "settings": {
         "custom_title": "",
@@ -37,7 +38,7 @@
             "link": "shopify://collections/electric",
             "image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-steel-scissor-lift-spa-wellness-studio-sku-not-provided.webp",
             "bg_color": "#e8e8ed",
-            "title_color": "#FFFFFF",
+            "title_color": "#ffffff",
             "title_font_size": 28,
             "enable_text_shadow": true,
             "shadow_color": "#000000",
@@ -53,7 +54,7 @@
             "link": "",
             "image": "shopify://shop_images/equipro-hydraulic-mechanical-adjustable-treatment-table-padded-segmented-upholstery-hydraulic-lift-columns-mobile-casters-spa-salon-wellness-studio-sku-not-provided.webp",
             "bg_color": "#e8e8ed",
-            "title_color": "#FFFFFF",
+            "title_color": "#ffffff",
             "title_font_size": 28,
             "enable_text_shadow": true,
             "shadow_color": "#000000",
@@ -67,10 +68,11 @@
           "settings": {
             "title": "Portable",
             "link": "",
+            "image": "shopify://shop_images/equipro-portables-folding-aluminum-framed-professional-treatment-table-adjustable-face-cradle-spa-salon-studio-sku-not-provided.webp",
             "bg_color": "#e8e8ed",
-            "title_color": "#000000",
+            "title_color": "#FFFFFF",
             "title_font_size": 28,
-            "enable_text_shadow": false,
+            "enable_text_shadow": true,
             "shadow_color": "#000000",
             "shadow_blur": 8,
             "shadow_offset_y": 4,
@@ -101,7 +103,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Discover our range of high-quality professional facial steamers designed for estheticians, spas, and skincare clinics. Featuring safe operation, durable heating elements, and optimal ozone vaporization for superior pore preparation and deep skin hydration.",
+        "text": "Discover our comprehensive range of professional treatment tables designed for facialists, massage therapists, medical aestheticians, and body care specialists. Engineered for silent operation, ultimate stability, and total ergonomics.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -131,29 +133,29 @@
         "feature_JGhd6H": {
           "type": "feature",
           "settings": {
-            "item_title": "Perfect Hydration",
-            "item_text": "Steady and consistent steam flow for optimal pore opening and skin softening."
+            "item_title": "Whisper-Quiet Operation",
+            "item_text": "Equipped with premium European electric actuators or smooth hydraulic cylinders for completely silent position adjustments."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
-            "item_title": "Ozone Technology",
-            "item_text": "Integrated UV/Ozone option for antibacterial skin purification and oxygenation."
+            "item_title": "Medical-Grade Comfort",
+            "item_text": "Multi-layered, high-density foam padding wrapped in ultra-resistant, easy-to-sanitize vinyl built for heavy daily clinical use."
           }
         },
         "feature_ppVAe7": {
           "type": "feature",
           "settings": {
-            "item_title": "Built to Last",
-            "item_text": "High-grade components, heavy-duty mobile stands, and advanced safety auto-shutoff features."
+            "item_title": "Ergonomic Positioning",
+            "item_text": "Multi-section articulation allows seamless transitions between flat massage positions, facial recline, and specialized leg setups."
           }
         },
         "feature_kaVhpH": {
           "type": "feature",
           "settings": {
-            "item_title": "Silent Operation",
-            "item_text": "Engineered to maintain a quiet, relaxing spa atmosphere during professional treatments."
+            "item_title": "Rock-Solid Stability",
+            "item_text": "Heavy-duty reinforced frames engineered with a low center of gravity to prevent swaying, squeaking, or tipping during treatments."
           }
         }
       },
