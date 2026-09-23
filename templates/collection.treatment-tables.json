@@ -209,22 +209,22 @@
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Do they have an automatic shutoff feature?",
-            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
+            "question": "Are the headrests and armrests adjustable or removable?",
+            "answer": "<p>Yes. Most models feature multi-positional, removable crescent headrests, adjustable neck bolsters, and ergonomic armrests that can be detached or flipped out of the way for easy client access.</p>"
           }
         },
         "faq_item_n68NQD": {
           "type": "faq_item",
           "settings": {
-            "question": "What type of water should I use?",
-            "answer": "<p>To maximize the lifespan of the heating element and prevent mineral buildup, we strictly recommend using distilled water.</p>"
+            "question": "How do I clean and disinfect the vinyl upholstery?",
+            "answer": "<p>The ultra-resistant vinyl coating is designed to withstand daily exposure to oils, moisture, and medical disinfectants. Simply wipe down the surface between clients using a soft cloth and a non-alcohol, hospital-grade equipment cleaner.</p>"
           }
         },
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty?",
-            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+            "question": "Are custom upholstery colors available?",
+            "answer": "<p>Yes. While ultra-white, navy blue, and black are standard across many lines, custom vinyl color choices are available upon request to match your studio's interior design.</p>"
           }
         }
       },
