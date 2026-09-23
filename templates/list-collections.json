@@ -85,7 +85,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/skincare-equipment",
-            "title": "Skincare Equipments"
+            "title": "Skincare Equipments",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_9cLwjq": {
@@ -93,7 +101,16 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/treatment-tables",
-            "title": "Treatment Tables"
+            "title": "Treatment Tables",
+            "image": "shopify://shop_images/equipro-treatment-tables-hydraulic-adjustable-padded-upholstery-ergonomic-professional-spa-studio-sku-not-provided.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_KY6i7D": {
@@ -101,7 +118,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/stools",
-            "title": "Stools"
+            "title": "Stools",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_PdKBfn": {
@@ -109,7 +134,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/trolleys",
-            "title": "Trolleys"
+            "title": "Trolleys",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_ED3Qgk": {
@@ -117,7 +150,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/mag-lamps",
-            "title": "Mag-lamps"
+            "title": "Mag-lamps",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         },
         "collection_item_nhq9hn": {
@@ -125,7 +166,15 @@
           "settings": {
             "collection": "",
             "custom_link": "shopify://collections/wellness-therapy",
-            "title": "Wellness therapy"
+            "title": "Wellness therapy",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         }
       },
