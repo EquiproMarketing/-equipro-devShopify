@@ -1,252 +1,189 @@
-{{ 'custom-subcategory-slider.css' | asset_url | stylesheet_tag }}
+{{ 'section-bento-grid-v2.css' | asset_url | stylesheet_tag }}
 
-<section class="custom-subcat-section" id="subcat-section-{{ section.id }}">
-  <div class="page-width">
-    {%- if section.settings.title != blank -%}
-      <h2 class="custom-subcat-section__title">{{ section.settings.title | escape }}</h2>
-    {%- endif -%}
+<div class="collections-bento-v2-wrapper page-width">
+  {%- if section.settings.title != blank -%}
+    <h2 class="collections-bento-v2__heading">{{ section.settings.title | escape }}</h2>
+  {%- endif -%}
 
-    <div class="swiper custom-subcat-swiper">
-      <div class="swiper-wrapper">
-        {%- for block in section.blocks -%}
-          {%- assign target_col = block.settings.collection -%}
-          {%- assign target_prod = block.settings.product -%}
-          
-          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) {%- endcomment -%}
-          {%- if target_col != blank -%}
-            {%- assign display_url = target_col.url -%}
-            {%- assign display_title = block.settings.title | default: target_col.title -%}
-            {%- assign display_image = block.settings.image | default: target_col.image -%}
-            {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 15 -%}
-            {%- assign display_price = '' -%}
-            {%- assign is_product = false -%}
+  <div class="collections-bento-v2__grid">
+    {%- for block in section.blocks -%}
+      {%- assign custom_url = block.settings.custom_link -%}
+      {%- assign target_url = custom_url | default: block.settings.collection.url | default: '#' -%}
+      {%- assign card_image = block.settings.image | default: block.settings.collection.featured_image -%}
 
-          {%- comment -%} 2. CASO PRODUCTO {%- endcomment -%}
-          {%- elsif target_prod != blank -%}
-            {%- assign display_url = target_prod.url -%}
-            {%- assign display_title = block.settings.title | default: target_prod.title -%}
-            {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
-            
-            {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
-            
-            {%- capture display_price -%}
-              {%- if block.settings.price != blank -%}
-                {{ block.settings.price }}
-              {%- elsif target_prod.price_varies -%}
-                {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
-              {%- else -%}
-                {{ target_prod.price | money }}
-              {%- endif -%}
-            {%- endcapture -%}
-            {%- assign is_product = true -%}
+      {%- assign img_fit = block.settings.image_fit | default: 'cover' -%}
+      {%- assign title_size = block.settings.title_font_size | default: 28 -%}
+      {%- assign title_color = block.settings.title_color | default: '#000000' -%}
+      {%- assign shadow_color = block.settings.shadow_color | default: 'rgba(0,0,0,0.3)' -%}
+      {%- assign shadow_blur = block.settings.shadow_blur | default: 8 -%}
+      {%- assign shadow_y = block.settings.shadow_offset_y | default: 4 -%}
 
-          {%- comment -%} 3. CASO MANUAL / VACÍO {%- endcomment -%}
+      <a 
+        href="{{ target_url }}" 
+        class="bento-v2-card bento-v2-card--fit-{{ img_fit }}" 
+        style="
+          --tile-bg: {{ block.settings.bg_color | default: '#e8e8ed' }};
+          --tile-title-size: {{ title_size }}px;
+          --tile-title-color: {{ title_color }};
+          --tile-shadow-color: {{ shadow_color }};
+          --tile-shadow-blur: {{ shadow_blur }}px;
+          --tile-shadow-y: {{ shadow_y }}px;
+        "
+        {{ block.shopify_attributes }}
+      >
+        <!-- Full Bleed Image Container -->
+        <div class="bento-v2-card__media">
+          {%- card_image != blank -%}
+          {%- if card_image != blank -%}
+            <img 
+              src="{{ card_image | image_url: width: 1000 }}" 
+              alt="{{ block.settings.title | default: card_image.alt | escape }}" 
+              class="bento-v2-card__image" 
+              loading="lazy" 
+              width="500" 
+              height="500"
+            >
           {%- else -%}
-            {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Selecciona una categoría o producto' -%}
-            {%- assign display_image = block.settings.image -%}
-            {%- assign display_subtitle = block.settings.subtitle -%}
-            {%- assign display_price = block.settings.price -%}
-            {%- assign is_product = false -%}
-          {%- endif -%}
-
-          {%- comment -%} RESOLUCIÓN DE IMAGEN DE HOVER (SÓLO SI ESTÁ ACTIVADO Y EXISTE) {%- endcomment -%}
-          {%- assign hover_image = blank -%}
-          {%- if block.settings.enable_hover -%}
-            {%- if block.settings.hover_image != blank -%}
-              {%- assign hover_image = block.settings.hover_image -%}
-            {%- elsif target_prod != blank and target_prod.media.size > 1 -%}
-              {%- assign hover_image = target_prod.media[1].preview_image -%}
-            {%- endif -%}
-          {%- endif -%}
-
-          <div class="swiper-slide" {{ block.shopify_attributes }}>
-            <div class="custom-subcat-card">
-              
-              <!-- IMAGEN PRINCIPAL Y HOVER OPCIONAL -->
-              <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
-                <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
-                  {%- if display_image != blank -%}
-                    <img src="{{ display_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--primary">
-                  {%- else -%}
-                    {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
-                  {%- endif -%}
-
-                  {%- if hover_image != blank -%}
-                    <img src="{{ hover_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--secondary">
-                  {%- endif -%}
-                </div>
-              </a>
-
-              <!-- SWATCHES DE COLOR -->
-              {%- if block.settings.available_colors != blank -%}
-                <div class="custom-subcat-card__swatches">
-                  {%- assign colors = block.settings.available_colors | split: ',' -%}
-                  {%- for color_code in colors -%}
-                    {%- assign clean_color = color_code | strip -%}
-                    {%- if clean_color != blank -%}
-                      <span class="custom-subcat-card__swatch-dot" style="background-color: {{ clean_color }};"></span>
-                    {%- endif -%}
-                  {%- endfor -%}
-                </div>
-              {%- endif -%}
-
-              <!-- TEXTOS -->
-              <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
-                <div class="custom-subcat-card__content">
-                  {%- if block.settings.tag != blank -%}
-                    <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
-                  {%- endif -%}
-                  <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
-                  {%- if display_subtitle != blank -%}
-                    <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
-                  {%- endif -%}
-                  {%- if display_price != blank -%}
-                    <p class="custom-subcat-card__price">{{ display_price }}</p>
-                  {%- endif -%}
-                </div>
-              </a>
-
-              <!-- BOTÓN DE COMPRA -->
-              {%- if is_product -%}
-                <div class="custom-subcat-card__actions">
-                  <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
-                </div>
-              {%- endif -%}
-
+            <div class="bento-v2-card__placeholder">
+              {{ 'product-1' | placeholder_svg_tag: 'bento-v2-card__svg' }}
             </div>
-          </div>
-        {%- endfor -%}
-      </div>
-    </div>
-  </div>
-</section>
+          {%- endif -%}
+        </div>
 
-<script>
-  document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('#subcat-section-{{ section.id }} .custom-subcat-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 32,
-      loop: true,
-      freeMode: true,
-      grabCursor: true,
-      speed: 6000,
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
-      },
-      breakpoints: {
-        750: { spaceBetween: 40 }
-      }
-    });
-  });
-</script>
+        <!-- Floating Title Overlay -->
+        <div class="bento-v2-card__header">
+          <h3 class="bento-v2-card__title {% if block.settings.enable_text_shadow %}bento-v2-card__title--shadow{% endif %}">
+            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
+          </h3>
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</div>
 
 {% schema %}
 {
-  "name": "Subcategory Slider",
+  "name": "Bento Grid V2",
   "tag": "section",
-  "class": "section-custom-subcategory-slider",
+  "class": "section-bento-grid-v2",
+  "enabled_on": {
+    "templates": ["*"]
+  },
   "settings": [
     {
       "type": "text",
       "id": "title",
-      "label": "Section Title",
-      "default": "Explore Subcategories"
+      "label": "Heading",
+      "default": "Products"
     }
   ],
   "blocks": [
     {
-      "type": "subcategory_card",
-      "name": "Item Card",
+      "type": "collection_item",
+      "name": "Category Card",
       "settings": [
-        {
-          "type": "header",
-          "content": "Origen Automático (Elige uno)"
-        },
         {
           "type": "collection",
           "id": "collection",
-          "label": "Seleccionar Colección (Extrae imagen y descripción)"
-        },
-        {
-          "type": "product",
-          "id": "product",
-          "label": "Seleccionar Producto (Extrae info, precio y botón)"
-        },
-        {
-          "type": "header",
-          "content": "Configuración de Imagen y Hover"
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_hover",
-          "label": "Activar imagen secundaria en Hover",
-          "default": false,
-          "info": "Actívalo solo en tarjetas de productos para mostrar la segunda foto de su galería al pasar el cursor."
-        },
-        {
-          "type": "image_picker",
-          "id": "hover_image",
-          "label": "Imagen de Hover Personalizada (Opcional)"
-        },
-        {
-          "type": "header",
-          "content": "Sobreescrituras Manuales (Opcional)"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Imagen principal personalizada"
-        },
-        {
-          "type": "color",
-          "id": "card_bg_color",
-          "label": "Color de fondo de la tarjeta",
-          "default": "#f5f5f7"
+          "label": "Collection"
         },
         {
           "type": "url",
-          "id": "link",
-          "label": "Enlace personalizado"
-        },
-        {
-          "type": "text",
-          "id": "tag",
-          "label": "Etiqueta / Badge"
+          "id": "custom_link",
+          "label": "Custom Link Override"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Título personalizado"
+          "label": "Custom Category Title"
         },
         {
-          "type": "text",
-          "id": "subtitle",
-          "label": "Descripción personalizada"
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom Card Image"
         },
         {
-          "type": "text",
-          "id": "price",
-          "label": "Precio personalizado"
+          "type": "color",
+          "id": "bg_color",
+          "label": "Tile Fallback Background",
+          "default": "#e8e8ed"
         },
         {
-          "type": "textarea",
-          "id": "available_colors",
-          "label": "Colores (HEX separados por comas)"
+          "type": "header",
+          "content": "Title Styling"
+        },
+        {
+          "type": "color",
+          "id": "title_color",
+          "label": "Title Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "title_font_size",
+          "min": 18,
+          "max": 42,
+          "step": 1,
+          "unit": "px",
+          "label": "Title Font Size",
+          "default": 28
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_text_shadow",
+          "label": "Enable Custom Text Shadow",
+          "default": false
+        },
+        {
+          "type": "color",
+          "id": "shadow_color",
+          "label": "Shadow Color",
+          "default": "#000000"
+        },
+        {
+          "type": "range",
+          "id": "shadow_blur",
+          "min": 0,
+          "max": 30,
+          "step": 1,
+          "unit": "px",
+          "label": "Shadow Blur / Softness",
+          "default": 8
+        },
+        {
+          "type": "range",
+          "id": "shadow_offset_y",
+          "min": -10,
+          "max": 20,
+          "step": 1,
+          "unit": "px",
+          "label": "Shadow Vertical Offset (Y)",
+          "default": 4
+        },
+        {
+          "type": "select",
+          "id": "image_fit",
+          "label": "Image Fit Mode",
+          "options": [
+            { "value": "cover", "label": "Full Bleed / Cover" },
+            { "value": "cover", "label": "Full Bleed / Cover" },
+            { "value": "contain", "label": "Fit Complete Image (Contain)" }
+          ],
+          "default": "cover"
         }
       ]
     }
   ],
   "presets": [
     {
-      "name": "Subcategory Slider",
+      "name": "Bento Grid V2",
       "blocks": [
-        { "type": "subcategory_card" },
-        { "type": "subcategory_card" },
-        { "type": "subcategory_card" },
-        { "type": "subcategory_card" }
+        { "type": "collection_item", "settings": { "title": "Skincare Equipments" } },
+        { "type": "collection_item", "settings": { "title": "Treatment Tables" } },
+        { "type": "collection_item", "settings": { "title": "Stools" } },
+        { "type": "collection_item", "settings": { "title": "Trolleys" } },
+        { "type": "collection_item", "settings": { "title": "Mag-lamps" } },
+        { "type": "collection_item", "settings": { "title": "Wellness therapy" } }
       ]
     }
   ]
