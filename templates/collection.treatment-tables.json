@@ -27,17 +27,74 @@
         "overlay_opacity": 40
       }
     },
-    "custom_product_treatment_TNRQeX": {
-      "type": "custom-product-treatment",
-      "name": "Custom Product Treatment",
+    "subcategories_grid_6Uez8Y": {
+      "type": "subcategories-grid",
+      "blocks": {
+        "subcategory_EyKBRG": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "shopify://collections/electric",
+            "image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-steel-scissor-lift-spa-wellness-studio-sku-not-provided.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_ENENRN": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Hydraulic / Mechanical",
+            "link": "",
+            "image": "shopify://shop_images/equipro-hydraulic-mechanical-adjustable-treatment-table-padded-segmented-upholstery-hydraulic-lift-columns-mobile-casters-spa-salon-wellness-studio-sku-not-provided.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_t3xKHe": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Portable",
+            "link": "",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        }
+      },
+      "block_order": [
+        "subcategory_EyKBRG",
+        "subcategory_ENENRN",
+        "subcategory_t3xKHe"
+      ],
+      "name": "Subcategories Bento Grid",
       "settings": {
-        "title": "",
-        "featured_collection": "skin-analyzer",
-        "products_to_show": 8,
-        "card_bg_color": "#f5f5f7",
-        "default_subtitle": "Professional Treatment Series",
-        "btn_primary_text": "Learn More",
-        "btn_cart_text": "Add to Cart"
+        "back_text": "Back",
+        "title": "Treatment Tables"
+      }
+    },
+    "category_subnav_U3RXMG": {
+      "type": "category-subnav",
+      "name": "Category Subnav Bar",
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
       }
     },
     "positive_impact": {
@@ -202,7 +259,8 @@
   "order": [
     "subnav",
     "collection_banner_qtVMrG",
-    "custom_product_treatment_TNRQeX",
+    "subcategories_grid_6Uez8Y",
+    "category_subnav_U3RXMG",
     "positive_impact",
     "why_category",
     "video",
