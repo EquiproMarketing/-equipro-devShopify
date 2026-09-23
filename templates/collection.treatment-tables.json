@@ -167,8 +167,8 @@
       ],
       "settings": {
         "title": "Why Our Trolleys",
-        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
-        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image_left": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
+        "image_right": "shopify://shop_images/equipro-hydraulic-mechanical-professional-treatment-table-ergonomic-beauty-spa-furniture-premium-adjustable-seating.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -195,15 +195,15 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between the Digipro and Classic models?",
-            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
+            "question": "Should I choose an Electric, Hydraulic, or Portable treatment table?",
+            "answer": "<p><strong>Electric tables</strong> offer effortless, motorized height and incline adjustments at the press of a pedal or remote, ideal for high-end medspas. <strong>Hydraulic tables</strong> provide fluid height adjustments without requiring power outlets, offering flexible cord-free room layouts. <strong>Portable tables</strong> are lightweight and foldable, perfect for mobile therapists or multi-use spaces.</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can I use essential oils with these steamers?",
-            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
+            "question": "What is the weight capacity of Equipro treatment tables?",
+            "answer": "<p>Equipro stationary tables are built on heavy-duty industrial frames capable of safely supporting active lifting loads up to 450 lbs (205 kg).</p>"
           }
         },
         "faq_item_kmRk4U": {
