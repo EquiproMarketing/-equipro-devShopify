@@ -575,29 +575,29 @@
         "subcategory_card_Xnfck8": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "stools",
             "product": "",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/towel-warmers",
-            "tag": "Towel Cabinets",
-            "title": "Towel Cabinets",
-            "subtitle": "Commercial-grade warming cabinets and precision temp wax heaters for seamless hygiene and prep.",
-            "price": "From CA$ 297.00",
+            "link": "shopify://collections/stools",
+            "tag": "Collection",
+            "title": "Stools",
+            "subtitle": "Ergonomically engineered rolling stools designed with pneumatic height adjustment and high-density cushioning to provide ultimate posture support and fluid mobility for beauty professionals.",
+            "price": "",
             "available_colors": ""
           }
         },
         "subcategory_card_MWxmgz": {
           "type": "subcategory_card",
           "settings": {
-            "collection": "",
+            "collection": "mag-lamps",
             "product": "",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/wellness-therapy",
-            "tag": "Wellness Therapy",
+            "link": "shopify://collections/mag-lamps",
+            "tag": "Mag-lamps",
             "title": "Thermal Spa Equipment",
-            "subtitle": "Specialized Vichy showers and body thermal systems designed for full-body wellness treatments.",
+            "subtitle": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
             "price": "From CA$ 105.00",
             "available_colors": ""
           }
