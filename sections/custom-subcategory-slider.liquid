@@ -33,7 +33,6 @@
       >
         <!-- Full Bleed Image Container -->
         <div class="bento-v2-card__media">
-          {%- card_image != blank -%}
           {%- if card_image != blank -%}
             <img 
               src="{{ card_image | image_url: width: 1000 }}" 
@@ -165,7 +164,6 @@
           "id": "image_fit",
           "label": "Image Fit Mode",
           "options": [
-            { "value": "cover", "label": "Full Bleed / Cover" },
             { "value": "cover", "label": "Full Bleed / Cover" },
             { "value": "contain", "label": "Fit Complete Image (Contain)" }
           ],
