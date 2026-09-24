@@ -4,20 +4,6 @@
 
 {%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
 
-  {%- comment -%}
-    ============================================================
-    CATEGORY SUBNAV
-    ============================================================
-    Improvements:
-    - Correct dropdown detection
-    - Better accessibility
-    - Improved mobile behavior
-    - Escape / click-outside support
-    - More reliable tab handling
-    - Better Shopify Theme Editor support
-    ============================================================
-  {%- endcomment -%}
-
   <style>
     {%- if section.settings.hide_on_mobile -%}
       @media screen and (max-width: 989px) {
@@ -102,45 +88,42 @@
 
           {%- comment -%}
             ----------------------------------------------------
-            DETERMINE IF THIS ITEM REALLY HAS A MEGAMENU
-            ----------------------------------------------------
-            For categories with children:
-              -> dropdown exists
-
-            For categories without children:
-              -> only show dropdown when at least one block
-                 actually matches this category
+            DETERMINE IF THIS ITEM REALLY HAS A VALID MEGAMENU WITH CONTENT
             ----------------------------------------------------
           {%- endcomment -%}
 
           {%- assign has_dropdown = false -%}
 
           {%- if link.links.size > 0 -%}
-
             {%- assign has_dropdown = true -%}
-
           {%- else -%}
-
             {%- for block in section.blocks -%}
-
               {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
               {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
+              {%- assign block_prod = block.settings.product -%}
 
               {%- if block_parent_handle == nav_parent_handle
                 or block_coll_handle == nav_parent_handle
                 or block_coll_handle == nav_parent_collection_handle -%}
-
-                {%- assign has_dropdown = true -%}
-                {%- break -%}
+                
+                {%- if block.type == 'auto_collection' -%}
+                  {%- assign target_coll = block.settings.collection | default: link.object -%}
+                  {%- if target_coll != blank and target_coll.products.size > 0 -%}
+                    {%- assign has_dropdown = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- elsif block.type == 'custom_card' -%}
+                  {%- if block_prod != blank or block.settings.collection != blank or block.settings.custom_title != blank -%}
+                    {%- assign has_dropdown = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endif -%}
 
               {%- endif -%}
-
             {%- endfor -%}
-
           {%- endif -%}
 
           {%- assign is_active = false -%}
-
           {%- if link.active or collection.url == link.url -%}
             {%- assign is_active = true -%}
           {%- endif -%}
@@ -198,13 +181,6 @@
               >
 
                 <div class="category-megamenu__container page-width">
-
-                  {%- comment -%}
-                    ==================================================
-                    CASE 1
-                    CATEGORY HAS SUBCATEGORIES
-                    ==================================================
-                  {%- endcomment -%}
 
                   {%- if link.links.size > 0 -%}
 
@@ -489,20 +465,7 @@
 
                     </div>
 
-
                   {%- else -%}
-
-                    {%- comment -%}
-                      ==================================================
-                      CASE 2
-                      CATEGORY WITHOUT SUBCATEGORIES
-                      ==================================================
-                      Examples:
-                      Stools
-                      Trolleys
-                      Mag-Lamps
-                      ==================================================
-                    {%- endcomment -%}
 
                     <div class="category-megamenu__content full-width-content">
 
