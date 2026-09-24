@@ -209,7 +209,6 @@
                             class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}"
                             data-target-tab="{{ panel_id }}"
                             role="presentation"
-                            {{ block.shopify_attributes }}
                           >
 
                             <a
@@ -667,7 +666,6 @@
 
     </div>
   </nav>
-
 
   <script>
     (() => {
@@ -1130,143 +1128,112 @@
     })();
   </script>
 
-
-  {% schema %}
-
-  {
-    "name": "Category Subnav Bar",
-    "tag": "section",
-    "class": "section-category-subnav",
-
-    "settings": [
-
-      {
-        "type": "link_list",
-        "id": "category_menu",
-        "label": "Select Navigation Menu"
-      },
-
-      {
-        "type": "checkbox",
-        "id": "hide_on_mobile",
-        "label": "Hide on Mobile & Tablet",
-        "default": true
-      }
-
-    ],
-
-    "blocks": [
-
-      {
-        "type": "auto_collection",
-        "name": "⚡ Auto-Show Collection",
-
-        "settings": [
-
-          {
-            "type": "text",
-            "id": "parent_category",
-            "label": "1. Parent Category Title",
-            "info": "Match main menu item (e.g., Stools, Trolleys, Skincare Equipment)"
-          },
-
-          {
-            "type": "text",
-            "id": "sub_category",
-            "label": "2. Subcategory Title",
-            "info": "Match sidebar item (e.g., Facial Units). Leave empty for single categories like Stools"
-          },
-
-          {
-            "type": "collection",
-            "id": "collection",
-            "label": "Select Collection to Display"
-          },
-
-          {
-            "type": "range",
-            "id": "products_to_show",
-            "min": 2,
-            "max": 16,
-            "step": 1,
-            "label": "Number of Products to Show",
-            "default": 6
-          }
-
-        ]
-      },
-
-
-      {
-        "type": "custom_card",
-        "name": "📌 Specific Product / Card",
-
-        "settings": [
-
-          {
-            "type": "text",
-            "id": "parent_category",
-            "label": "1. Parent Category Title",
-            "info": "Match main menu item (e.g., Stools, Trolleys)"
-          },
-
-          {
-            "type": "text",
-            "id": "sub_category",
-            "label": "2. Subcategory Title",
-            "info": "Match sidebar item if applicable"
-          },
-
-          {
-            "type": "product",
-            "id": "product",
-            "label": "Pick Product"
-          },
-
-          {
-            "type": "collection",
-            "id": "collection",
-            "label": "Or Pick Collection"
-          },
-
-          {
-            "type": "text",
-            "id": "custom_title",
-            "label": "Custom Title Override"
-          },
-
-          {
-            "type": "image_picker",
-            "id": "custom_image",
-            "label": "Custom Image Override"
-          },
-
-          {
-            "type": "text",
-            "id": "badge_text",
-            "label": "Badge (e.g. Best Seller, New)"
-          },
-
-          {
-            "type": "url",
-            "id": "custom_url",
-            "label": "Custom Link URL"
-          }
-
-        ]
-      }
-
-    ],
-
-    "presets": [
-
-      {
-        "name": "Category Subnav Bar"
-      }
-
-    ]
-  }
-
-  {% endschema %}
-
 {%- endif -%}
+
+{% schema %}
+{
+  "name": "Category Subnav Bar",
+  "tag": "section",
+  "class": "section-category-subnav",
+  "settings": [
+    {
+      "type": "link_list",
+      "id": "category_menu",
+      "label": "Select Navigation Menu"
+    },
+    {
+      "type": "checkbox",
+      "id": "hide_on_mobile",
+      "label": "Hide on Mobile & Tablet",
+      "default": true
+    }
+  ],
+  "blocks": [
+    {
+      "type": "auto_collection",
+      "name": "⚡ Auto-Show Collection",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_category",
+          "label": "1. Parent Category Title",
+          "info": "Match main menu item (e.g., Stools, Trolleys, Skincare Equipment)"
+        },
+        {
+          "type": "text",
+          "id": "sub_category",
+          "label": "2. Subcategory Title",
+          "info": "Match sidebar item (e.g., Facial Units). Leave empty for single categories like Stools"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection to Display"
+        },
+        {
+          "type": "range",
+          "id": "products_to_show",
+          "min": 2,
+          "max": 16,
+          "step": 1,
+          "label": "Number of Products to Show",
+          "default": 6
+        }
+      ]
+    },
+    {
+      "type": "custom_card",
+      "name": "📌 Specific Product / Card",
+      "settings": [
+        {
+          "type": "text",
+          "id": "parent_category",
+          "label": "1. Parent Category Title",
+          "info": "Match main menu item (e.g., Stools, Trolleys)"
+        },
+        {
+          "type": "text",
+          "id": "sub_category",
+          "label": "2. Subcategory Title",
+          "info": "Match sidebar item if applicable"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Pick Product"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Or Pick Collection"
+        },
+        {
+          "type": "text",
+          "id": "custom_title",
+          "label": "Custom Title Override"
+        },
+        {
+          "type": "image_picker",
+          "id": "custom_image",
+          "label": "Custom Image Override"
+        },
+        {
+          "type": "text",
+          "id": "badge_text",
+          "label": "Badge (e.g. Best Seller, New)"
+        },
+        {
+          "type": "url",
+          "id": "custom_url",
+          "label": "Custom Link URL"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Category Subnav Bar"
+    }
+  ]
+}
+{% endschema %}
