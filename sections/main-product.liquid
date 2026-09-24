@@ -117,19 +117,19 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA -->
+    <!-- COLUMNA DERECHA (GALERÍA EN ALTA RESOLUCIÓN) -->
     <div class="product-right-col product-mobile-order-gallery">
       <div class="product-gallery">
         
-        <!-- IMAGEN PRINCIPAL -->
+        <!-- IMAGEN PRINCIPAL (Ampliamos a 1600px para pantallas Retina/HiDPI) -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           {% if first_img_block.settings.image != blank %}
-            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1000 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1600 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
           {% elsif current_variant.image != blank %}
-            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1000 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
           {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1000 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
           {% else %}
             <div class="thumb-img-placeholder"></div>
           {% endif %}
@@ -142,9 +142,10 @@
             {% for block in img_blocks limit: 4 %}
               {% if block.settings.image != blank %}
                 <img 
-                  src="{{ block.settings.image | image_url: width: 250 }}" 
+                  src="{{ block.settings.image | image_url: width: 400 }}" 
                   class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.src)" 
+                  onclick="changeMainImg(this.dataset.highres)" 
+                  data-highres="{{ block.settings.image | image_url: width: 1600 }}"
                   {{ block.shopify_attributes }}
                 >
               {% endif %}
@@ -152,9 +153,10 @@
           {% elsif target_product.images.size > 0 %}
             {% for image in target_product.images limit: 4 %}
               <img 
-                src="{{ image | image_url: width: 250 }}" 
+                src="{{ image | image_url: width: 400 }}" 
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.src)" 
+                onclick="changeMainImg(this.dataset.highres)" 
+                data-highres="{{ image | image_url: width: 1600 }}"
               >
             {% endfor %}
           {% endif %}
@@ -176,7 +178,7 @@
   </div>
 </div>
 
-<!-- MAPA DE VARIANTES EN JSON PARA DINAMISMO -->
+<!-- MAPA DE VARIANTES EN JSON CON IMÁGENES EN ALTA CALIDAD (1600px) -->
 <script type="application/json" id="ProductVariantsJson-{{ target_product.id }}">
   [
     {% for variant in target_product.variants %}
@@ -190,7 +192,7 @@
           {{ variant.option2 | json }},
           {{ variant.option3 | json }}
         ],
-        "image": {% if variant.image != blank %}{{ variant.image | image_url: width: 1000 | json }}{% else %}null{% endif %}
+        "image": {% if variant.image != blank %}{{ variant.image | image_url: width: 1600 | json }}{% else %}null{% endif %}
       }{% unless forloop.last %},{% endunless %}
     {% endfor %}
   ]
@@ -207,21 +209,17 @@
     const selectors = document.querySelectorAll('.product-variant-selector');
     const selectedValues = Array.from(selectors).map(s => s.value);
 
-    // Encontrar la variante que coincida con las opciones seleccionadas
     const matchedVariant = productVariants.find(variant => {
       return selectedValues.every((val, index) => variant.options[index] === val);
     });
 
     if (matchedVariant) {
-      // Actualizar input ID oculto del formulario
       const variantIdInput = document.getElementById('ProductVariantIdInput');
       if (variantIdInput) variantIdInput.value = matchedVariant.id;
 
-      // Actualizar precio en pantalla
       const priceContainer = document.getElementById('ProductPriceContainer');
       if (priceContainer) priceContainer.textContent = matchedVariant.price;
 
-      // Actualizar estado del botón de compra
       const cartBtn = document.getElementById('AddToCartButton');
       if (cartBtn) {
         if (matchedVariant.available) {
@@ -233,7 +231,6 @@
         }
       }
 
-      // Actualizar imagen principal si la variante tiene una asociada
       if (matchedVariant.image) {
         const mainImg = document.getElementById('MainProductImg');
         if (mainImg) mainImg.src = matchedVariant.image;
@@ -243,7 +240,7 @@
 
   function changeMainImg(src) {
     const mainImg = document.getElementById('MainProductImg');
-    if (mainImg) mainImg.src = src;
+    if (mainImg && src) mainImg.src = src;
     document.querySelectorAll('#ProductMain-{{ section.id }} .thumb-img').forEach(el => el.classList.remove('is-active'));
     if (window.event && window.event.target) {
       window.event.target.classList.add('is-active');
