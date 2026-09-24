@@ -85,16 +85,20 @@
 
           {%- assign nav_parent_handle = link.title | handleize -%}
           {%- assign nav_parent_collection_handle = link.object.handle | default: '' -%}
+          {%- assign link_title_downcase = link.title | downcase -%}
 
           {%- comment -%}
             ----------------------------------------------------
             DETERMINE IF THIS ITEM REALLY HAS A VALID MEGAMENU WITH CONTENT
+            (Excluding global "All Collections" / "Tous les" links)
             ----------------------------------------------------
           {%- endcomment -%}
 
           {%- assign has_dropdown = false -%}
 
-          {%- if link.links.size > 0 -%}
+          {%- if link_title_downcase contains 'tous les' or link_title_downcase contains 'all collections' or link_title_downcase contains 'shop all' -%}
+            {%- assign has_dropdown = false -%}
+          {%- elsif link.links.size > 0 -%}
             {%- assign has_dropdown = true -%}
           {%- else -%}
             {%- for block in section.blocks -%}
