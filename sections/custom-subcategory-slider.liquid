@@ -1,189 +1,1309 @@
-{{ 'section-bento-grid-v2.css' | asset_url | stylesheet_tag }}
+{{ 'section-category-subnav.css' | asset_url | stylesheet_tag }}
 
-<div class="collections-bento-v2-wrapper page-width">
-  {%- if section.settings.title != blank -%}
-    <h2 class="collections-bento-v2__heading">{{ section.settings.title | escape }}</h2>
-  {%- endif -%}
+{%- assign subnav_menu = section.settings.category_menu -%}
 
-  <div class="collections-bento-v2__grid">
-    {%- for block in section.blocks -%}
-      {%- assign custom_url = block.settings.custom_link -%}
-      {%- assign target_url = custom_url | default: block.settings.collection.url | default: '#' -%}
-      {%- assign card_image = block.settings.image | default: block.settings.collection.featured_image -%}
+{%- if subnav_menu != blank and subnav_menu.links.size > 0 -%}
 
-      {%- assign img_fit = block.settings.image_fit | default: 'cover' -%}
-      {%- assign title_size = block.settings.title_font_size | default: 28 -%}
-      {%- assign title_color = block.settings.title_color | default: '#000000' -%}
-      {%- assign shadow_color = block.settings.shadow_color | default: 'rgba(0,0,0,0.3)' -%}
-      {%- assign shadow_blur = block.settings.shadow_blur | default: 8 -%}
-      {%- assign shadow_y = block.settings.shadow_offset_y | default: 4 -%}
+  {%- comment -%}
+    ============================================================
+    CATEGORY SUBNAV
+    ============================================================
+    Improvements:
+    - Correct dropdown detection
+    - Better accessibility
+    - Improved mobile behavior
+    - Escape / click-outside support
+    - More reliable tab handling
+    - Better Shopify Theme Editor support
+    ============================================================
+  {%- endcomment -%}
 
-      <a 
-        href="{{ target_url }}" 
-        class="bento-v2-card bento-v2-card--fit-{{ img_fit }}" 
-        style="
-          --tile-bg: {{ block.settings.bg_color | default: '#e8e8ed' }};
-          --tile-title-size: {{ title_size }}px;
-          --tile-title-color: {{ title_color }};
-          --tile-shadow-color: {{ shadow_color }};
-          --tile-shadow-blur: {{ shadow_blur }}px;
-          --tile-shadow-y: {{ shadow_y }}px;
-        "
-        {{ block.shopify_attributes }}
-      >
-        <!-- Full Bleed Image Container -->
-        <div class="bento-v2-card__media">
-          {%- if card_image != blank -%}
-            <img 
-              src="{{ card_image | image_url: width: 1000 }}" 
-              alt="{{ block.settings.title | default: card_image.alt | escape }}" 
-              class="bento-v2-card__image" 
-              loading="lazy" 
-              width="500" 
-              height="500"
-            >
-          {%- else -%}
-            <div class="bento-v2-card__placeholder">
-              {{ 'product-1' | placeholder_svg_tag: 'bento-v2-card__svg' }}
-            </div>
-          {%- endif -%}
-        </div>
-
-        <!-- Floating Title Overlay -->
-        <div class="bento-v2-card__header">
-          <h3 class="bento-v2-card__title {% if block.settings.enable_text_shadow %}bento-v2-card__title--shadow{% endif %}">
-            {{ block.settings.title | default: block.settings.collection.title | default: 'Category' }}
-          </h3>
-        </div>
-      </a>
-    {%- endfor -%}
-  </div>
-</div>
-
-{% schema %}
-{
-  "name": "Bento Grid V2",
-  "tag": "section",
-  "class": "section-bento-grid-v2",
-  "enabled_on": {
-    "templates": ["*"]
-  },
-  "settings": [
-    {
-      "type": "text",
-      "id": "title",
-      "label": "Heading",
-      "default": "Products"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "collection_item",
-      "name": "Category Card",
-      "settings": [
-        {
-          "type": "collection",
-          "id": "collection",
-          "label": "Collection"
-        },
-        {
-          "type": "url",
-          "id": "custom_link",
-          "label": "Custom Link Override"
-        },
-        {
-          "type": "text",
-          "id": "title",
-          "label": "Custom Category Title"
-        },
-        {
-          "type": "image_picker",
-          "id": "image",
-          "label": "Custom Card Image"
-        },
-        {
-          "type": "color",
-          "id": "bg_color",
-          "label": "Tile Fallback Background",
-          "default": "#e8e8ed"
-        },
-        {
-          "type": "header",
-          "content": "Title Styling"
-        },
-        {
-          "type": "color",
-          "id": "title_color",
-          "label": "Title Color",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "title_font_size",
-          "min": 18,
-          "max": 42,
-          "step": 1,
-          "unit": "px",
-          "label": "Title Font Size",
-          "default": 28
-        },
-        {
-          "type": "checkbox",
-          "id": "enable_text_shadow",
-          "label": "Enable Custom Text Shadow",
-          "default": false
-        },
-        {
-          "type": "color",
-          "id": "shadow_color",
-          "label": "Shadow Color",
-          "default": "#000000"
-        },
-        {
-          "type": "range",
-          "id": "shadow_blur",
-          "min": 0,
-          "max": 30,
-          "step": 1,
-          "unit": "px",
-          "label": "Shadow Blur / Softness",
-          "default": 8
-        },
-        {
-          "type": "range",
-          "id": "shadow_offset_y",
-          "min": -10,
-          "max": 20,
-          "step": 1,
-          "unit": "px",
-          "label": "Shadow Vertical Offset (Y)",
-          "default": 4
-        },
-        {
-          "type": "select",
-          "id": "image_fit",
-          "label": "Image Fit Mode",
-          "options": [
-            { "value": "cover", "label": "Full Bleed / Cover" },
-            { "value": "contain", "label": "Fit Complete Image (Contain)" }
-          ],
-          "default": "cover"
+  <style>
+    {%- if section.settings.hide_on_mobile -%}
+      @media screen and (max-width: 989px) {
+        #shopify-section-{{ section.id }},
+        .section-category-subnav,
+        .category-subnav {
+          display: none !important;
         }
-      ]
-    }
-  ],
-  "presets": [
-    {
-      "name": "Bento Grid V2",
-      "blocks": [
-        { "type": "collection_item", "settings": { "title": "Skincare Equipments" } },
-        { "type": "collection_item", "settings": { "title": "Treatment Tables" } },
-        { "type": "collection_item", "settings": { "title": "Stools" } },
-        { "type": "collection_item", "settings": { "title": "Trolleys" } },
-        { "type": "collection_item", "settings": { "title": "Mag-lamps" } },
-        { "type": "collection_item", "settings": { "title": "Wellness therapy" } }
-      ]
-    }
-  ]
-}
-{% endschema %}
+      }
+    {%- else -%}
+      @media screen and (max-width: 989px) {
+        .category-subnav__bar {
+          overflow-x: auto;
+          white-space: nowrap;
+          -webkit-overflow-scrolling: touch;
+          scrollbar-width: none;
+          padding-bottom: 5px;
+        }
+
+        .category-subnav__bar::-webkit-scrollbar {
+          display: none;
+        }
+
+        .category-megamenu {
+          position: fixed !important;
+          top: 0 !important;
+          left: 0 !important;
+          width: 100vw !important;
+          max-width: 100vw !important;
+          height: 100vh !important;
+          height: 100dvh !important;
+          background: #fff;
+          z-index: 9999;
+          overflow-y: auto;
+          padding: 2rem 1rem;
+          visibility: hidden;
+          opacity: 0;
+          pointer-events: none;
+          transform: translateY(10px);
+          transition:
+            opacity 0.2s ease,
+            transform 0.2s ease,
+            visibility 0.2s ease;
+        }
+
+        .has-megamenu.is-mobile-open > .category-megamenu {
+          visibility: visible;
+          opacity: 1;
+          pointer-events: auto;
+          transform: translateY(0);
+        }
+
+        .category-megamenu__container {
+          width: 100%;
+        }
+
+        .category-subnav__bar-link {
+          -webkit-tap-highlight-color: transparent;
+        }
+
+        body.category-megamenu-mobile-open {
+          overflow: hidden;
+        }
+      }
+    {%- endif -%}
+  </style>
+
+  <nav
+    class="category-subnav"
+    aria-label="Category Navigation"
+    data-category-subnav
+    data-section-id="{{ section.id }}"
+  >
+    <div class="page-width">
+
+      <ul class="category-subnav__bar" role="list">
+
+        {%- for link in subnav_menu.links -%}
+
+          {%- assign nav_parent_handle = link.title | handleize -%}
+          {%- assign nav_parent_collection_handle = link.object.handle | default: '' -%}
+
+          {%- comment -%}
+            ----------------------------------------------------
+            DETERMINE IF THIS ITEM REALLY HAS A MEGAMENU
+            ----------------------------------------------------
+            For categories with children:
+              -> dropdown exists
+
+            For categories without children:
+              -> only show dropdown when at least one block
+                 actually matches this category
+            ----------------------------------------------------
+          {%- endcomment -%}
+
+          {%- assign has_dropdown = false -%}
+
+          {%- if link.links.size > 0 -%}
+
+            {%- assign has_dropdown = true -%}
+
+          {%- else -%}
+
+            {%- for block in section.blocks -%}
+
+              {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
+              {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
+
+              {%- if block_parent_handle == nav_parent_handle
+                or block_coll_handle == nav_parent_handle
+                or block_coll_handle == nav_parent_collection_handle -%}
+
+                {%- assign has_dropdown = true -%}
+                {%- break -%}
+
+              {%- endif -%}
+
+            {%- endfor -%}
+
+          {%- endif -%}
+
+          {%- assign is_active = false -%}
+
+          {%- if link.active or collection.url == link.url -%}
+            {%- assign is_active = true -%}
+          {%- endif -%}
+
+          {%- assign mega_id = 'category-megamenu-' | append: section.id | append: '-' | append: forloop.index -%}
+
+          <li
+            class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}"
+            {% if has_dropdown %}
+              data-megamenu-item
+            {% endif %}
+          >
+
+            <a
+              href="{{ link.url }}"
+              class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
+              {% if has_dropdown %}
+                aria-haspopup="true"
+                aria-expanded="false"
+                aria-controls="{{ mega_id }}"
+                data-megamenu-trigger
+              {% endif %}
+            >
+              <span>{{ link.title }}</span>
+
+              {%- if has_dropdown -%}
+                <svg
+                  class="category-subnav__bar-chevron"
+                  width="8"
+                  height="5"
+                  viewBox="0 0 10 6"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="1.5"
+                  aria-hidden="true"
+                  focusable="false"
+                >
+                  <path
+                    d="M1 1L5 5L9 1"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                  />
+                </svg>
+              {%- endif -%}
+
+            </a>
+
+            {%- if has_dropdown -%}
+
+              <div
+                id="{{ mega_id }}"
+                class="category-megamenu"
+                aria-hidden="true"
+                data-megamenu
+              >
+
+                <div class="category-megamenu__container page-width">
+
+                  {%- comment -%}
+                    ==================================================
+                    CASE 1
+                    CATEGORY HAS SUBCATEGORIES
+                    ==================================================
+                  {%- endcomment -%}
+
+                  {%- if link.links.size > 0 -%}
+
+                    <div class="category-megamenu__sidebar">
+
+                      <ul
+                        class="category-megamenu__sidebar-list"
+                        role="tablist"
+                        aria-label="{{ link.title }}"
+                      >
+
+                        {%- for childlink in link.links -%}
+
+                          {%- assign child_handle = childlink.title | handleize -%}
+                          {%- assign child_coll_handle = childlink.object.handle | default: '' -%}
+
+                          {%- capture tab_id -%}
+                            {{ mega_id }}-tab-{{ forloop.index }}
+                          {%- endcapture -%}
+
+                          {%- capture panel_id -%}
+                            {{ mega_id }}-panel-{{ forloop.index }}
+                          {%- endcapture -%}
+
+                          <li
+                            class="category-megamenu__sidebar-item{% if forloop.first %} is-selected{% endif %}"
+                            data-target-tab="{{ panel_id }}"
+                            role="presentation"
+                            {{ block.shopify_attributes }}
+                          >
+
+                            <a
+                              href="{{ childlink.url }}"
+                              class="category-megamenu__sidebar-link"
+                              id="{{ tab_id }}"
+                              role="tab"
+                              aria-controls="{{ panel_id }}"
+                              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+                              tabindex="{% if forloop.first %}0{% else %}-1{% endif %}"
+                              data-megamenu-tab
+                            >
+                              <span>{{ childlink.title }}</span>
+
+                              <svg
+                                class="category-megamenu__sidebar-arrow"
+                                width="6"
+                                height="10"
+                                viewBox="0 0 6 10"
+                                fill="none"
+                                stroke="currentColor"
+                                stroke-width="1.5"
+                                aria-hidden="true"
+                                focusable="false"
+                              >
+                                <path
+                                  d="M1 1L5 5L1 9"
+                                  stroke-linecap="round"
+                                  stroke-linejoin="round"
+                                />
+                              </svg>
+
+                            </a>
+
+                          </li>
+
+                        {%- endfor -%}
+
+                      </ul>
+
+                    </div>
+
+                    <div
+                      class="category-megamenu__content"
+                      data-megamenu-content
+                    >
+
+                      {%- for childlink in link.links -%}
+
+                        {%- assign child_handle = childlink.title | handleize -%}
+                        {%- assign child_coll_handle = childlink.object.handle | default: '' -%}
+
+                        {%- capture tab_id -%}
+                          {{ mega_id }}-tab-{{ forloop.index }}
+                        {%- endcapture -%}
+
+                        {%- capture panel_id -%}
+                          {{ mega_id }}-panel-{{ forloop.index }}
+                        {%- endcapture -%}
+
+                        <div
+                          class="category-megamenu__tab-panel{% if forloop.first %} is-active{% endif %}"
+                          id="{{ panel_id }}"
+                          role="tabpanel"
+                          aria-labelledby="{{ tab_id }}"
+                          {% unless forloop.first %}
+                            hidden
+                          {% endunless %}
+                          data-megamenu-panel
+                        >
+
+                          <div class="category-megamenu__grid">
+
+                            {%- for block in section.blocks -%}
+
+                              {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
+                              {%- assign block_sub_handle = block.settings.sub_category | handleize -%}
+                              {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
+
+                              {%- assign is_parent_match = false -%}
+                              {%- assign is_sub_match = false -%}
+
+                              {%- if block_parent_handle == nav_parent_handle
+                                or block.settings.parent_category == blank -%}
+                                {%- assign is_parent_match = true -%}
+                              {%- endif -%}
+
+                              {%- if block_sub_handle == child_handle
+                                or block_coll_handle == child_handle
+                                or block_coll_handle == child_coll_handle
+                                or block.settings.sub_category == blank -%}
+                                {%- assign is_sub_match = true -%}
+                              {%- endif -%}
+
+                              {%- if is_parent_match and is_sub_match -%}
+
+                                {%- case block.type -%}
+
+                                  {%- when 'auto_collection' -%}
+
+                                    {%- assign target_coll = block.settings.collection | default: childlink.object -%}
+                                    {%- assign limit_count = block.settings.products_to_show | default: 6 -%}
+
+                                    <div
+                                      class="category-megamenu__block"
+                                      {{ block.shopify_attributes }}
+                                    >
+
+                                      {%- if target_coll != blank and target_coll.products.size > 0 -%}
+
+                                        {%- for prod in target_coll.products limit: limit_count -%}
+
+                                          <a
+                                            href="{{ prod.url }}"
+                                            class="category-megamenu__card"
+                                          >
+
+                                            <div class="category-megamenu__card-image">
+
+                                              {%- if prod.featured_image != blank -%}
+
+                                                <img
+                                                  src="{{ prod.featured_image | image_url: width: 400 }}"
+                                                  srcset="
+                                                    {{ prod.featured_image | image_url: width: 200 }} 200w,
+                                                    {{ prod.featured_image | image_url: width: 400 }} 400w,
+                                                    {{ prod.featured_image | image_url: width: 600 }} 600w
+                                                  "
+                                                  sizes="(min-width: 990px) 200px, 45vw"
+                                                  alt="{{ prod.featured_image.alt | default: prod.title | escape }}"
+                                                  loading="lazy"
+                                                  width="200"
+                                                  height="200"
+                                                >
+
+                                              {%- else -%}
+
+                                                <div
+                                                  class="category-megamenu__card-placeholder"
+                                                  aria-hidden="true"
+                                                ></div>
+
+                                              {%- endif -%}
+
+                                            </div>
+
+                                            <span class="category-megamenu__card-title">
+                                              {{ prod.title }}
+                                            </span>
+
+                                          </a>
+
+                                        {%- endfor -%}
+
+                                      {%- endif -%}
+
+                                    </div>
+
+
+                                  {%- when 'custom_card' -%}
+
+                                    {%- assign selected_product = block.settings.product -%}
+                                    {%- assign selected_collection = block.settings.collection -%}
+
+                                    {%- assign final_url =
+                                      selected_product.url
+                                      | default: selected_collection.url
+                                      | default: block.settings.custom_url
+                                    -%}
+
+                                    {%- assign final_title =
+                                      block.settings.custom_title
+                                      | default: selected_product.title
+                                      | default: selected_collection.title
+                                    -%}
+
+                                    {%- assign final_image =
+                                      block.settings.custom_image
+                                      | default: selected_product.featured_image
+                                      | default: selected_collection.featured_image
+                                    -%}
+
+                                    {%- if final_title != blank -%}
+
+                                      <div
+                                        class="category-megamenu__block"
+                                        {{ block.shopify_attributes }}
+                                      >
+
+                                        <a
+                                          href="{{ final_url | default: '#' }}"
+                                          class="category-megamenu__card custom-promo-card"
+                                        >
+
+                                          <div class="category-megamenu__card-image">
+
+                                            {%- if final_image != blank -%}
+
+                                              <img
+                                                src="{{ final_image | image_url: width: 400 }}"
+                                                srcset="
+                                                  {{ final_image | image_url: width: 200 }} 200w,
+                                                  {{ final_image | image_url: width: 400 }} 400w,
+                                                  {{ final_image | image_url: width: 600 }} 600w
+                                                "
+                                                sizes="(min-width: 990px) 200px, 45vw"
+                                                alt="{{ final_image.alt | default: final_title | escape }}"
+                                                loading="lazy"
+                                                width="200"
+                                                height="200"
+                                              >
+
+                                            {%- else -%}
+
+                                              <div
+                                                class="category-megamenu__card-placeholder"
+                                                aria-hidden="true"
+                                              ></div>
+
+                                            {%- endif -%}
+
+                                            {%- if block.settings.badge_text != blank -%}
+
+                                              <span class="custom-promo-badge">
+                                                {{ block.settings.badge_text }}
+                                              </span>
+
+                                            {%- endif -%}
+
+                                          </div>
+
+                                          <span class="category-megamenu__card-title">
+                                            {{ final_title }}
+                                          </span>
+
+                                        </a>
+
+                                      </div>
+
+                                    {%- endif -%}
+
+                                {%- endcase -%}
+
+                              {%- endif -%}
+
+                            {%- endfor -%}
+
+                          </div>
+
+                        </div>
+
+                      {%- endfor -%}
+
+                    </div>
+
+
+                  {%- else -%}
+
+                    {%- comment -%}
+                      ==================================================
+                      CASE 2
+                      CATEGORY WITHOUT SUBCATEGORIES
+                      ==================================================
+                      Examples:
+                      Stools
+                      Trolleys
+                      Mag-Lamps
+                      ==================================================
+                    {%- endcomment -%}
+
+                    <div class="category-megamenu__content full-width-content">
+
+                      <div
+                        class="category-megamenu__tab-panel is-active"
+                        role="tabpanel"
+                      >
+
+                        <div class="category-megamenu__grid">
+
+                          {%- for block in section.blocks -%}
+
+                            {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
+                            {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
+
+                            {%- assign is_match = false -%}
+
+                            {%- if block_parent_handle == nav_parent_handle
+                              or block_coll_handle == nav_parent_handle
+                              or block_coll_handle == nav_parent_collection_handle -%}
+
+                              {%- assign is_match = true -%}
+
+                            {%- endif -%}
+
+
+                            {%- if is_match -%}
+
+                              {%- case block.type -%}
+
+                                {%- when 'auto_collection' -%}
+
+                                  {%- assign target_coll = block.settings.collection | default: link.object -%}
+                                  {%- assign limit_count = block.settings.products_to_show | default: 6 -%}
+
+                                  <div
+                                    class="category-megamenu__block"
+                                    {{ block.shopify_attributes }}
+                                  >
+
+                                    {%- if target_coll != blank and target_coll.products.size > 0 -%}
+
+                                      {%- for prod in target_coll.products limit: limit_count -%}
+
+                                        <a
+                                          href="{{ prod.url }}"
+                                          class="category-megamenu__card"
+                                        >
+
+                                          <div class="category-megamenu__card-image">
+
+                                            {%- if prod.featured_image != blank -%}
+
+                                              <img
+                                                src="{{ prod.featured_image | image_url: width: 400 }}"
+                                                srcset="
+                                                  {{ prod.featured_image | image_url: width: 200 }} 200w,
+                                                  {{ prod.featured_image | image_url: width: 400 }} 400w,
+                                                  {{ prod.featured_image | image_url: width: 600 }} 600w
+                                                "
+                                                sizes="(min-width: 990px) 200px, 45vw"
+                                                alt="{{ prod.featured_image.alt | default: prod.title | escape }}"
+                                                loading="lazy"
+                                                width="200"
+                                                height="200"
+                                              >
+
+                                            {%- else -%}
+
+                                              <div
+                                                class="category-megamenu__card-placeholder"
+                                                aria-hidden="true"
+                                              ></div>
+
+                                            {%- endif -%}
+
+                                          </div>
+
+                                          <span class="category-megamenu__card-title">
+                                            {{ prod.title }}
+                                          </span>
+
+                                        </a>
+
+                                      {%- endfor -%}
+
+                                    {%- endif -%}
+
+                                  </div>
+
+
+                                {%- when 'custom_card' -%}
+
+                                  {%- assign selected_product = block.settings.product -%}
+                                  {%- assign selected_collection = block.settings.collection -%}
+
+                                  {%- assign final_url =
+                                    selected_product.url
+                                    | default: selected_collection.url
+                                    | default: block.settings.custom_url
+                                  -%}
+
+                                  {%- assign final_title =
+                                    block.settings.custom_title
+                                    | default: selected_product.title
+                                    | default: selected_collection.title
+                                  -%}
+
+                                  {%- assign final_image =
+                                    block.settings.custom_image
+                                    | default: selected_product.featured_image
+                                    | default: selected_collection.featured_image
+                                  -%}
+
+                                  {%- if final_title != blank -%}
+
+                                    <div
+                                      class="category-megamenu__block"
+                                      {{ block.shopify_attributes }}
+                                    >
+
+                                      <a
+                                        href="{{ final_url | default: '#' }}"
+                                        class="category-megamenu__card custom-promo-card"
+                                      >
+
+                                        <div class="category-megamenu__card-image">
+
+                                          {%- if final_image != blank -%}
+
+                                            <img
+                                              src="{{ final_image | image_url: width: 400 }}"
+                                              srcset="
+                                                {{ final_image | image_url: width: 200 }} 200w,
+                                                {{ final_image | image_url: width: 400 }} 400w,
+                                                {{ final_image | image_url: width: 600 }} 600w
+                                              "
+                                              sizes="(min-width: 990px) 200px, 45vw"
+                                              alt="{{ final_image.alt | default: final_title | escape }}"
+                                              loading="lazy"
+                                              width="200"
+                                              height="200"
+                                            >
+
+                                          {%- else -%}
+
+                                            <div
+                                              class="category-megamenu__card-placeholder"
+                                              aria-hidden="true"
+                                            ></div>
+
+                                          {%- endif -%}
+
+                                          {%- if block.settings.badge_text != blank -%}
+
+                                            <span class="custom-promo-badge">
+                                              {{ block.settings.badge_text }}
+                                            </span>
+
+                                          {%- endif -%}
+
+                                        </div>
+
+                                        <span class="category-megamenu__card-title">
+                                          {{ final_title }}
+                                        </span>
+
+                                      </a>
+
+                                    </div>
+
+                                  {%- endif -%}
+
+                              {%- endcase -%}
+
+                            {%- endif -%}
+
+                          {%- endfor -%}
+
+                        </div>
+
+                      </div>
+
+                    </div>
+
+                  {%- endif -%}
+
+                </div>
+
+              </div>
+
+            {%- endif -%}
+
+          </li>
+
+        {%- endfor -%}
+
+      </ul>
+
+    </div>
+  </nav>
+
+
+  <script>
+    (() => {
+
+      const initCategorySubnav = (root) => {
+
+        if (!root || root.dataset.initialized === 'true') {
+          return;
+        }
+
+        root.dataset.initialized = 'true';
+
+        const megamenuItems = root.querySelectorAll('[data-megamenu-item]');
+        const triggers = root.querySelectorAll('[data-megamenu-trigger]');
+        const sidebarTabs = root.querySelectorAll('[data-megamenu-tab]');
+
+        const isMobile = () => window.innerWidth <= 989;
+
+
+        /* ======================================================
+           CLOSE ALL MEGAMENUS
+           ====================================================== */
+
+        const closeAllMenus = (exceptItem = null) => {
+
+          megamenuItems.forEach((item) => {
+
+            if (exceptItem && item === exceptItem) {
+              return;
+            }
+
+            item.classList.remove('is-mobile-open');
+            item.classList.remove('is-open');
+
+            const trigger = item.querySelector('[data-megamenu-trigger]');
+            const menu = item.querySelector('[data-megamenu]');
+
+            if (trigger) {
+              trigger.setAttribute('aria-expanded', 'false');
+            }
+
+            if (menu) {
+              menu.setAttribute('aria-hidden', 'true');
+            }
+
+          });
+
+          if (isMobile()) {
+            document.body.classList.remove('category-megamenu-mobile-open');
+          }
+        };
+
+
+        /* ======================================================
+           OPEN MENU
+           ====================================================== */
+
+        const openMenu = (item) => {
+
+          if (!item) {
+            return;
+          }
+
+          closeAllMenus(item);
+
+          item.classList.add('is-open');
+
+          if (isMobile()) {
+            item.classList.add('is-mobile-open');
+            document.body.classList.add('category-megamenu-mobile-open');
+          }
+
+          const trigger = item.querySelector('[data-megamenu-trigger]');
+          const menu = item.querySelector('[data-megamenu]');
+
+          if (trigger) {
+            trigger.setAttribute('aria-expanded', 'true');
+          }
+
+          if (menu) {
+            menu.setAttribute('aria-hidden', 'false');
+          }
+        };
+
+
+        /* ======================================================
+           DESKTOP HOVER
+           ====================================================== */
+
+        megamenuItems.forEach((item) => {
+
+          item.addEventListener('mouseenter', () => {
+
+            if (!isMobile()) {
+              openMenu(item);
+            }
+
+          });
+
+          item.addEventListener('mouseleave', () => {
+
+            if (!isMobile()) {
+
+              item.classList.remove('is-open');
+
+              const trigger = item.querySelector('[data-megamenu-trigger]');
+              const menu = item.querySelector('[data-megamenu]');
+
+              if (trigger) {
+                trigger.setAttribute('aria-expanded', 'false');
+              }
+
+              if (menu) {
+                menu.setAttribute('aria-hidden', 'true');
+              }
+            }
+
+          });
+
+        });
+
+
+        /* ======================================================
+           KEYBOARD / FOCUS
+           ====================================================== */
+
+        megamenuItems.forEach((item) => {
+
+          item.addEventListener('focusin', () => {
+
+            if (!isMobile()) {
+              openMenu(item);
+            }
+
+          });
+
+          item.addEventListener('focusout', () => {
+
+            if (!isMobile()) {
+
+              window.setTimeout(() => {
+
+                if (!item.contains(document.activeElement)) {
+
+                  item.classList.remove('is-open');
+
+                  const trigger = item.querySelector('[data-megamenu-trigger]');
+                  const menu = item.querySelector('[data-megamenu]');
+
+                  if (trigger) {
+                    trigger.setAttribute('aria-expanded', 'false');
+                  }
+
+                  if (menu) {
+                    menu.setAttribute('aria-hidden', 'true');
+                  }
+
+                }
+
+              }, 0);
+
+            }
+
+          });
+
+        });
+
+
+        /* ======================================================
+           MOBILE TRIGGERS
+           ====================================================== */
+
+        triggers.forEach((trigger) => {
+
+          trigger.addEventListener('click', (event) => {
+
+            if (!isMobile()) {
+              return;
+            }
+
+            const parentItem = trigger.closest('[data-megamenu-item]');
+
+            if (!parentItem) {
+              return;
+            }
+
+            const isCurrentlyOpen =
+              parentItem.classList.contains('is-mobile-open');
+
+            if (!isCurrentlyOpen) {
+
+              event.preventDefault();
+              openMenu(parentItem);
+
+            } else {
+
+              closeAllMenus();
+
+            }
+
+          });
+
+        });
+
+
+        /* ======================================================
+           SIDEBAR TABS
+           ====================================================== */
+
+        sidebarTabs.forEach((tab) => {
+
+          const activateTab = () => {
+
+            const item = tab.closest('.category-megamenu__sidebar-item');
+            const sidebar = tab.closest('.category-megamenu__sidebar');
+            const megamenu = tab.closest('[data-megamenu]');
+
+            if (!item || !sidebar || !megamenu) {
+              return;
+            }
+
+            const content = megamenu.querySelector('[data-megamenu-content]');
+            const targetId = item.getAttribute('data-target-tab');
+
+            if (!content || !targetId) {
+              return;
+            }
+
+            const targetPanel = content.querySelector('#' + CSS.escape(targetId));
+
+            if (!targetPanel) {
+              return;
+            }
+
+
+            /* Remove active state */
+
+            sidebar
+              .querySelectorAll('.category-megamenu__sidebar-item')
+              .forEach((element) => {
+                element.classList.remove('is-selected');
+              });
+
+
+            /* Remove active panels */
+
+            content
+              .querySelectorAll('[data-megamenu-panel]')
+              .forEach((panel) => {
+
+                panel.classList.remove('is-active');
+                panel.hidden = true;
+
+              });
+
+
+            /* Reset all tabs */
+
+            sidebar
+              .querySelectorAll('[data-megamenu-tab]')
+              .forEach((element) => {
+
+                element.setAttribute('aria-selected', 'false');
+                element.setAttribute('tabindex', '-1');
+
+              });
+
+
+            /* Activate current */
+
+            item.classList.add('is-selected');
+
+            tab.setAttribute('aria-selected', 'true');
+            tab.setAttribute('tabindex', '0');
+
+            targetPanel.classList.add('is-active');
+            targetPanel.hidden = false;
+
+          };
+
+
+          tab.addEventListener('mouseenter', () => {
+            if (!isMobile()) {
+              activateTab();
+            }
+          });
+
+
+          tab.addEventListener('click', (event) => {
+
+            event.preventDefault();
+            activateTab();
+
+          });
+
+
+          tab.addEventListener('keydown', (event) => {
+
+            const key = event.key;
+
+            if (
+              key === 'Enter' ||
+              key === ' '
+            ) {
+
+              event.preventDefault();
+              activateTab();
+
+            }
+
+
+            /* Arrow navigation */
+
+            if (
+              key === 'ArrowDown' ||
+              key === 'ArrowRight'
+            ) {
+
+              event.preventDefault();
+
+              const tabs = Array.from(
+                root.querySelectorAll('[data-megamenu-tab]')
+              );
+
+              const currentIndex = tabs.indexOf(tab);
+              const nextTab = tabs[currentIndex + 1] || tabs[0];
+
+              nextTab.focus();
+              nextTab.click();
+
+            }
+
+
+            if (
+              key === 'ArrowUp' ||
+              key === 'ArrowLeft'
+            ) {
+
+              event.preventDefault();
+
+              const tabs = Array.from(
+                root.querySelectorAll('[data-megamenu-tab]')
+              );
+
+              const currentIndex = tabs.indexOf(tab);
+              const previousTab =
+                tabs[currentIndex - 1] ||
+                tabs[tabs.length - 1];
+
+              previousTab.focus();
+              previousTab.click();
+
+            }
+
+          });
+
+        });
+
+
+        /* ======================================================
+           ESCAPE
+           ====================================================== */
+
+        document.addEventListener('keydown', (event) => {
+
+          if (event.key !== 'Escape') {
+            return;
+          }
+
+          const openItem = root.querySelector(
+            '.has-megamenu.is-open, .has-megamenu.is-mobile-open'
+          );
+
+          if (!openItem) {
+            return;
+          }
+
+          closeAllMenus();
+
+          const trigger = openItem.querySelector(
+            '[data-megamenu-trigger]'
+          );
+
+          if (trigger) {
+            trigger.focus();
+          }
+
+        });
+
+
+        /* ======================================================
+           CLICK OUTSIDE
+           ====================================================== */
+
+        document.addEventListener('click', (event) => {
+
+          if (isMobile()) {
+
+            const clickedInside = root.contains(event.target);
+
+            if (!clickedInside) {
+              closeAllMenus();
+            }
+
+          }
+
+        });
+
+
+        /* ======================================================
+           RESIZE
+           ====================================================== */
+
+        let resizeTimer;
+
+        window.addEventListener('resize', () => {
+
+          window.clearTimeout(resizeTimer);
+
+          resizeTimer = window.setTimeout(() => {
+
+            closeAllMenus();
+
+          }, 150);
+
+        });
+
+      };
+
+
+      /* ========================================================
+         INITIALIZE CURRENT SECTION
+         ======================================================== */
+
+      const currentSection = document.querySelector(
+        '[data-section-id="{{ section.id }}"]'
+      );
+
+      initCategorySubnav(currentSection);
+
+
+      /* ========================================================
+         SHOPIFY THEME EDITOR SUPPORT
+         ======================================================== */
+
+      document.addEventListener('shopify:section:load', (event) => {
+
+        const section = event.target.querySelector
+          ? event.target.querySelector(
+              '[data-section-id="{{ section.id }}"]'
+            )
+          : null;
+
+        if (section) {
+          initCategorySubnav(section);
+        }
+
+      });
+
+    })();
+  </script>
+
+
+  {% schema %}
+
+  {
+    "name": "Category Subnav Bar",
+    "tag": "section",
+    "class": "section-category-subnav",
+
+    "settings": [
+
+      {
+        "type": "link_list",
+        "id": "category_menu",
+        "label": "Select Navigation Menu"
+      },
+
+      {
+        "type": "checkbox",
+        "id": "hide_on_mobile",
+        "label": "Hide on Mobile & Tablet",
+        "default": true
+      }
+
+    ],
+
+    "blocks": [
+
+      {
+        "type": "auto_collection",
+        "name": "⚡ Auto-Show Collection",
+
+        "settings": [
+
+          {
+            "type": "text",
+            "id": "parent_category",
+            "label": "1. Parent Category Title",
+            "info": "Match main menu item (e.g., Stools, Trolleys, Skincare Equipment)"
+          },
+
+          {
+            "type": "text",
+            "id": "sub_category",
+            "label": "2. Subcategory Title",
+            "info": "Match sidebar item (e.g., Facial Units). Leave empty for single categories like Stools"
+          },
+
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Select Collection to Display"
+          },
+
+          {
+            "type": "range",
+            "id": "products_to_show",
+            "min": 2,
+            "max": 16,
+            "step": 1,
+            "label": "Number of Products to Show",
+            "default": 6
+          }
+
+        ]
+      },
+
+
+      {
+        "type": "custom_card",
+        "name": "📌 Specific Product / Card",
+
+        "settings": [
+
+          {
+            "type": "text",
+            "id": "parent_category",
+            "label": "1. Parent Category Title",
+            "info": "Match main menu item (e.g., Stools, Trolleys)"
+          },
+
+          {
+            "type": "text",
+            "id": "sub_category",
+            "label": "2. Subcategory Title",
+            "info": "Match sidebar item if applicable"
+          },
+
+          {
+            "type": "product",
+            "id": "product",
+            "label": "Pick Product"
+          },
+
+          {
+            "type": "collection",
+            "id": "collection",
+            "label": "Or Pick Collection"
+          },
+
+          {
+            "type": "text",
+            "id": "custom_title",
+            "label": "Custom Title Override"
+          },
+
+          {
+            "type": "image_picker",
+            "id": "custom_image",
+            "label": "Custom Image Override"
+          },
+
+          {
+            "type": "text",
+            "id": "badge_text",
+            "label": "Badge (e.g. Best Seller, New)"
+          },
+
+          {
+            "type": "url",
+            "id": "custom_url",
+            "label": "Custom Link URL"
+          }
+
+        ]
+      }
+
+    ],
+
+    "presets": [
+
+      {
+        "name": "Category Subnav Bar"
+      }
+
+    ]
+  }
+
+  {% endschema %}
+
+{%- endif -%}
