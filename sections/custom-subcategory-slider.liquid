@@ -90,43 +90,43 @@
           {%- comment -%}
             ----------------------------------------------------
             DETERMINE IF THIS ITEM REALLY HAS A VALID MEGAMENU WITH CONTENT
-            (Strictly bypassing any links containing 'tous' or 'all')
             ----------------------------------------------------
           {%- endcomment -%}
 
           {%- assign has_dropdown = false -%}
 
+          {%- if link.links.size > 0 -%}
+            {%- assign has_dropdown = true -%}
+          {%- else -%}
+            {%- for block in section.blocks -%}
+              {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
+              {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
+              {%- assign block_prod = block.settings.product -%}
+
+              {%- if block_parent_handle == nav_parent_handle
+                or block_coll_handle == nav_parent_handle
+                or block_coll_handle == nav_parent_collection_handle -%}
+                
+                {%- if block.type == 'auto_collection' -%}
+                  {%- assign target_coll = block.settings.collection | default: link.object -%}
+                  {%- if target_coll != blank and target_coll.products.size > 0 -%}
+                    {%- assign has_dropdown = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- elsif block.type == 'custom_card' -%}
+                  {%- if block_prod != blank or block.settings.collection != blank or block.settings.custom_title != blank -%}
+                    {%- assign has_dropdown = true -%}
+                    {%- break -%}
+                  {%- endif -%}
+                {%- endif -%}
+
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          {%- comment -%} MASTER OVERRIDE: Force disable dropdown for Tous / All links {%- endcomment -%}
           {%- if link_title_downcase contains 'tous' or link_title_downcase contains 'all' -%}
             {%- assign has_dropdown = false -%}
-          {%- else -%}
-            {%- if link.links.size > 0 -%}
-              {%- assign has_dropdown = true -%}
-            {%- else -%}
-              {%- for block in section.blocks -%}
-                {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
-                {%- assign block_coll_handle = block.settings.collection.handle | default: '' -%}
-                {%- assign block_prod = block.settings.product -%}
-
-                {%- if block_parent_handle == nav_parent_handle
-                  or block_coll_handle == nav_parent_handle
-                  or block_coll_handle == nav_parent_collection_handle -%}
-                  
-                  {%- if block.type == 'auto_collection' -%}
-                    {%- assign target_coll = block.settings.collection | default: link.object -%}
-                    {%- if target_coll != blank and target_coll.products.size > 0 -%}
-                      {%- assign has_dropdown = true -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- elsif block.type == 'custom_card' -%}
-                    {%- if block_prod != blank or block.settings.collection != blank or block.settings.custom_title != blank -%}
-                      {%- assign has_dropdown = true -%}
-                      {%- break -%}
-                    {%- endif -%}
-                  {%- endif -%}
-
-                {%- endif -%}
-              {%- endfor -%}
-            {%- endif -%}
           {%- endif -%}
 
           {%- assign is_active = false -%}
@@ -137,8 +137,8 @@
           {%- assign mega_id = 'category-megamenu-' | append: section.id | append: '-' | append: forloop.index -%}
 
           <li
-            class="category-subnav__bar-item{% if has_dropdown and link_title_downcase contains 'tous' == false and link_title_downcase contains 'all' == false %} has-megamenu{% endif %}"
-            {% if has_dropdown and link_title_downcase contains 'tous' == false and link_title_downcase contains 'all' == false %}
+            class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}"
+            {% if has_dropdown %}
               data-megamenu-item
             {% endif %}
           >
@@ -146,7 +146,7 @@
             <a
               href="{{ link.url }}"
               class="category-subnav__bar-link{% if is_active %} is-active{% endif %}"
-              {% if has_dropdown and link_title_downcase contains 'tous' == false and link_title_downcase contains 'all' == false %}
+              {% if has_dropdown %}
                 aria-haspopup="true"
                 aria-expanded="false"
                 aria-controls="{{ mega_id }}"
@@ -155,7 +155,7 @@
             >
               <span>{{ link.title }}</span>
 
-              {%- if has_dropdown and link_title_downcase contains 'tous' == false and link_title_downcase contains 'all' == false -%}
+              {%- if has_dropdown -%}
                 <svg
                   class="category-subnav__bar-chevron"
                   width="8"
@@ -177,7 +177,7 @@
 
             </a>
 
-            {%- if has_dropdown and link_title_downcase contains 'tous' == false and link_title_downcase contains 'all' == false -%}
+            {%- if has_dropdown -%}
 
               <div
                 id="{{ mega_id }}"
@@ -1216,7 +1216,7 @@
         {
           "type": "text",
           "id": "custom_title",
-          "label": "Custom Title Override"
+          "label": "Custom Title Override}
         },
         {
           "type": "image_picker",
