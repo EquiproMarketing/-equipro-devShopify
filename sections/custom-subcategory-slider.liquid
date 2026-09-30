@@ -6,9 +6,9 @@
       <h2 class="custom-subcat-section__title">{{ section.settings.title | escape }}</h2>
     {%- endif -%}
 
-    <!-- INFINITE CSS MARQUEE CONTAINER -->
-    <div class="swiper custom-subcat-swiper">
-      <div class="swiper-wrapper">
+    <!-- INFINITE CSS MARQUEE CONTAINER WITH DRAG / TOUCH SUPPORT -->
+    <div class="custom-subcat-marquee-wrapper" data-marquee-container>
+      <div class="custom-subcat-track">
         
         {%- comment -%} FIRST SET OF BLOCKS {%- endcomment -%}
         {%- for block in section.blocks -%}
@@ -55,7 +55,7 @@
             {%- endif -%}
           {%- endif -%}
 
-          <div class="swiper-slide" {{ block.shopify_attributes }}>
+          <div class="custom-subcat-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
@@ -154,7 +154,7 @@
             {%- endif -%}
           {%- endif -%}
 
-          <div class="swiper-slide" aria-hidden="true" {{ block.shopify_attributes }}>
+          <div class="custom-subcat-slide" aria-hidden="true" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" tabindex="-1" style="width: 100%;">
@@ -214,26 +214,38 @@
 </section>
 
 <script>
+  // Simple grab-and-drag mouse/touch scrolling support for the marquee track
   document.addEventListener('DOMContentLoaded', function() {
-    new Swiper('#subcat-section-{{ section.id }} .custom-subcat-swiper', {
-      slidesPerView: 'auto',
-      spaceBetween: 32,
-      loop: true, // Habilita el bucle continuo
-      freeMode: {
-        enabled: true,
-        sticky: false,
-        momentum: false
-      },
-      grabCursor: true,
-      speed: 6000, // Velocidad del desplazamiento automático (puedes ajustarla)
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false, // Permite que siga moviéndose solo aunque el usuario lo toque o arrastre
-        pauseOnMouseEnter: true     // Se pausa suavemente cuando pones el mouse encima
-      },
-      breakpoints: {
-        750: { spaceBetween: 40 }
-      }
+    const slider = document.querySelector('#subcat-section-{{ section.id }} [data-marquee-container]');
+    if (!slider) return;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    slider.addEventListener('mousedown', (e) => {
+      isDown = true;
+      slider.classList.add('is-dragging');
+      startX = e.pageX - slider.offsetLeft;
+      scrollLeft = slider.scrollLeft;
+    });
+
+    slider.addEventListener('mouseleave', () => {
+      isDown = false;
+      slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('mouseup', () => {
+      isDown = false;
+      slider.classList.remove('is-dragging');
+    });
+
+    slider.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - slider.offsetLeft;
+      const walk = (x - startX) * 2; // Scroll speed multiplier
+      slider.scrollLeft = scrollLeft - walk;
     });
   });
 </script>
