@@ -15,20 +15,31 @@
   letter-spacing: -0.015em;
 }
 
-.custom-subcat-swiper {
-  overflow: hidden;
+/* MARQUEE WRAPPER & TRACK */
+.custom-subcat-marquee-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
   width: 100%;
   display: flex;
+  cursor: grab;
+  scrollbar-width: none; /* Firefox */
 }
 
-.custom-subcat-swiper .swiper-wrapper {
+.custom-subcat-marquee-wrapper::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Edge */
+}
+
+.custom-subcat-marquee-wrapper.is-dragging {
+  cursor: grabbing;
+}
+
+.custom-subcat-track {
   display: flex;
   width: max-content;
-  /* CONTROL DE VELOCIDAD: Cambia '35s' por un número menor (más rápido) o mayor (más lento) */
   animation: marqueeScroll 35s linear infinite;
 }
 
-/* ANIMACIÓN CONTINUA E INFINITA */
+/* ANIMATION SPEED & DIRECTION */
 @keyframes marqueeScroll {
   0% {
     transform: translateX(0);
@@ -38,19 +49,20 @@
   }
 }
 
-/* Pausar al pasar el mouse por encima */
-.custom-subcat-swiper:hover .swiper-wrapper {
+/* Pause animation on hover */
+.custom-subcat-marquee-wrapper:hover .custom-subcat-track {
   animation-play-state: paused;
 }
 
-.custom-subcat-swiper .swiper-slide {
+/* SLIDE SIZING FIX (CORREGIDO PARA QUE NO SE VEAN ENORMES) */
+.custom-subcat-slide {
   width: 260px !important;
   flex-shrink: 0;
   margin-right: 32px !important;
 }
 
 @media (min-width: 750px) {
-  .custom-subcat-swiper .swiper-slide {
+  .custom-subcat-slide {
     width: 280px !important;
     margin-right: 40px !important;
   }
@@ -69,6 +81,7 @@
   position: relative;
 }
 
+/* 4:5 ASPECT RATIO IMAGE CONTAINER */
 .custom-subcat-card__image-container {
   position: relative;
   width: 100%;
@@ -116,6 +129,7 @@
   fill: #86868b;
 }
 
+/* SWATCH DOTS */
 .custom-subcat-card__swatches {
   display: flex;
   align-items: center;
@@ -134,6 +148,7 @@
   display: inline-block;
 }
 
+/* CONTENT DETAILS */
 .custom-subcat-card__content {
   display: flex;
   flex-direction: column;
@@ -176,6 +191,7 @@
   margin: 0 0 12px 0;
 }
 
+/* BUTTON STYLING */
 .custom-subcat-card__actions {
   display: flex;
   width: 100%;
