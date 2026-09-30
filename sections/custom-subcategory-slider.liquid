@@ -127,18 +127,15 @@
     new Swiper('#subcat-section-{{ section.id }} .custom-subcat-swiper', {
       slidesPerView: 'auto',
       spaceBetween: 32,
-      loop: true,
-      loopedSlides: 8, // Añade esto para darle un búfer más amplio al bucle
       freeMode: {
         enabled: true,
-        momentum: false // Evita saltos bruscos por inercia
+        sticky: false,
+        momentumRatio: 0.5, // Controla la velocidad de inercia al arrastrar
+        momentumBounce: false
       },
       grabCursor: true,
-      speed: 8000, // Un poco más lento para que la transición sea totalmente imperceptible
-      autoplay: {
-        delay: 0,
-        disableOnInteraction: false,
-        pauseOnMouseEnter: true
+      mousewheel: {
+        forceToAxis: true
       },
       breakpoints: {
         750: { spaceBetween: 40 }
