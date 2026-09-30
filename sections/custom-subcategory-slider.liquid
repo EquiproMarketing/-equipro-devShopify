@@ -128,9 +128,13 @@
       slidesPerView: 'auto',
       spaceBetween: 32,
       loop: true,
-      freeMode: true,
+      loopedSlides: 8, // Añade esto para darle un búfer más amplio al bucle
+      freeMode: {
+        enabled: true,
+        momentum: false // Evita saltos bruscos por inercia
+      },
       grabCursor: true,
-      speed: 6000,
+      speed: 8000, // Un poco más lento para que la transición sea totalmente imperceptible
       autoplay: {
         delay: 0,
         disableOnInteraction: false,
