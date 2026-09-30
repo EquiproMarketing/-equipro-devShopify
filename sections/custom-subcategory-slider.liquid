@@ -12,7 +12,7 @@
           {%- assign target_col = block.settings.collection -%}
           {%- assign target_prod = block.settings.product -%}
           
-          {%- comment -%} 1. CASO COLECCIÓN (CATEGORÍA) {%- endcomment -%}
+          {%- comment -%} 1. COLLECTION CASE (CATEGORY) {%- endcomment -%}
           {%- if target_col != blank -%}
             {%- assign display_url = target_col.url -%}
             {%- assign display_title = block.settings.title | default: target_col.title -%}
@@ -21,7 +21,7 @@
             {%- assign display_price = '' -%}
             {%- assign is_product = false -%}
 
-          {%- comment -%} 2. CASO PRODUCTO {%- endcomment -%}
+          {%- comment -%} 2. PRODUCT CASE {%- endcomment -%}
           {%- elsif target_prod != blank -%}
             {%- assign display_url = target_prod.url -%}
             {%- assign display_title = block.settings.title | default: target_prod.title -%}
@@ -40,17 +40,17 @@
             {%- endcapture -%}
             {%- assign is_product = true -%}
 
-          {%- comment -%} 3. CASO MANUAL / VACÍO {%- endcomment -%}
+          {%- comment -%} 3. MANUAL / EMPTY CASE {%- endcomment -%}
           {%- else -%}
             {%- assign display_url = block.settings.link | default: '#' -%}
-            {%- assign display_title = block.settings.title | default: 'Selecciona una categoría o producto' -%}
+            {%- assign display_title = block.settings.title | default: 'Select a category or product' -%}
             {%- assign display_image = block.settings.image -%}
             {%- assign display_subtitle = block.settings.subtitle -%}
             {%- assign display_price = block.settings.price -%}
             {%- assign is_product = false -%}
           {%- endif -%}
 
-          {%- comment -%} RESOLUCIÓN DE IMAGEN DE HOVER (SÓLO SI ESTÁ ACTIVADO Y EXISTE) {%- endcomment -%}
+          {%- comment -%} RESOLVE HOVER IMAGE (ONLY IF ENABLED AND EXISTS) {%- endcomment -%}
           {%- assign hover_image = blank -%}
           {%- if block.settings.enable_hover -%}
             {%- if block.settings.hover_image != blank -%}
@@ -63,7 +63,7 @@
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="custom-subcat-card">
               
-              <!-- IMAGEN PRINCIPAL Y HOVER OPCIONAL -->
+              <!-- MAIN IMAGE AND OPTIONAL HOVER -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%;">
                 <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
                   {%- if display_image != blank -%}
@@ -78,7 +78,7 @@
                 </div>
               </a>
 
-              <!-- SWATCHES DE COLOR -->
+              <!-- COLOR SWATCHES -->
               {%- if block.settings.available_colors != blank -%}
                 <div class="custom-subcat-card__swatches">
                   {%- assign colors = block.settings.available_colors | split: ',' -%}
@@ -91,7 +91,7 @@
                 </div>
               {%- endif -%}
 
-              <!-- TEXTOS -->
+              <!-- TEXT CONTENT -->
               <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" style="width: 100%; text-decoration: none;">
                 <div class="custom-subcat-card__content">
                   {%- if block.settings.tag != blank -%}
@@ -107,7 +107,7 @@
                 </div>
               </a>
 
-              <!-- BOTÓN DE COMPRA -->
+              <!-- BUY BUTTON -->
               {%- if is_product -%}
                 <div class="custom-subcat-card__actions">
                   <a href="{{ display_url }}" class="custom-subcat-card__btn">Comprar</a>
@@ -130,7 +130,7 @@
       freeMode: {
         enabled: true,
         sticky: false,
-        momentumRatio: 0.5, // Controla la velocidad de inercia al arrastrar
+        momentumRatio: 0.5, // Controls drag inertia speed
         momentumBounce: false
       },
       grabCursor: true,
@@ -164,78 +164,78 @@
       "settings": [
         {
           "type": "header",
-          "content": "Origen Automático (Elige uno)"
+          "content": "Automatic Source (Choose one)"
         },
         {
           "type": "collection",
           "id": "collection",
-          "label": "Seleccionar Colección (Extrae imagen y descripción)"
+          "label": "Select Collection (Extracts image and description)"
         },
         {
           "type": "product",
           "id": "product",
-          "label": "Seleccionar Producto (Extrae info, precio y botón)"
+          "label": "Select Product (Extracts info, price and button)"
         },
         {
           "type": "header",
-          "content": "Configuración de Imagen y Hover"
+          "content": "Image & Hover Setup"
         },
         {
           "type": "checkbox",
           "id": "enable_hover",
-          "label": "Activar imagen secundaria en Hover",
+          "label": "Enable secondary image on hover",
           "default": false,
-          "info": "Actívalo solo en tarjetas de productos para mostrar la segunda foto de su galería al pasar el cursor."
+          "info": "Enable only on product cards to show the second gallery photo on hover."
         },
         {
           "type": "image_picker",
           "id": "hover_image",
-          "label": "Imagen de Hover Personalizada (Opcional)"
+          "label": "Custom Hover Image (Optional)"
         },
         {
           "type": "header",
-          "content": "Sobreescrituras Manuales (Opcional)"
+          "content": "Manual Overrides (Optional)"
         },
         {
           "type": "image_picker",
           "id": "image",
-          "label": "Imagen principal personalizada"
+          "label": "Custom primary image"
         },
         {
           "type": "color",
           "id": "card_bg_color",
-          "label": "Color de fondo de la tarjeta",
+          "label": "Card background color",
           "default": "#f5f5f7"
         },
         {
           "type": "url",
           "id": "link",
-          "label": "Enlace personalizado"
+          "label": "Custom link URL"
         },
         {
           "type": "text",
           "id": "tag",
-          "label": "Etiqueta / Badge"
+          "label": "Badge / Tag"
         },
         {
           "type": "text",
           "id": "title",
-          "label": "Título personalizado"
+          "label": "Custom title"
         },
         {
           "type": "text",
           "id": "subtitle",
-          "label": "Descripción personalizada"
+          "label": "Custom description"
         },
         {
           "type": "text",
           "id": "price",
-          "label": "Precio personalizado"
+          "label": "Custom price"
         },
         {
           "type": "textarea",
           "id": "available_colors",
-          "label": "Colores (HEX separados por comas)"
+          "label": "Colors (HEX separated by commas)"
         }
       ]
     }
