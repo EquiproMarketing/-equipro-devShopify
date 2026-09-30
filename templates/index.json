@@ -643,6 +643,21 @@
     "custom_subcategory_slider_HPxgWp": {
       "type": "custom-subcategory-slider",
       "blocks": {
+        "subcategory_card_MdbKx8": {
+          "type": "subcategory_card",
+          "settings": {
+            "collection": "",
+            "product": "maxi-comfort-360",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "shopify://products/ultra-comfort-20500",
+            "tag": "Hydraulic",
+            "title": "Maxi-Comfort 360º",
+            "subtitle": "Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists.",
+            "price": "From CA$2,200",
+            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
+          }
+        },
         "subcategory_card_nzbkKi": {
           "type": "subcategory_card",
           "settings": {
@@ -720,6 +735,7 @@
         }
       },
       "block_order": [
+        "subcategory_card_MdbKx8",
         "subcategory_card_nzbkKi",
         "subcategory_card_pRc6mk",
         "subcategory_card_8DCj8V",
