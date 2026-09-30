@@ -213,6 +213,31 @@
   </div>
 </section>
 
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    new Swiper('#subcat-section-{{ section.id }} .custom-subcat-swiper', {
+      slidesPerView: 'auto',
+      spaceBetween: 32,
+      loop: true, // Habilita el bucle continuo
+      freeMode: {
+        enabled: true,
+        sticky: false,
+        momentum: false
+      },
+      grabCursor: true,
+      speed: 6000, // Velocidad del desplazamiento automático (puedes ajustarla)
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false, // Permite que siga moviéndose solo aunque el usuario lo toque o arrastre
+        pauseOnMouseEnter: true     // Se pausa suavemente cuando pones el mouse encima
+      },
+      breakpoints: {
+        750: { spaceBetween: 40 }
+      }
+    });
+  });
+</script>
+
 {% schema %}
 {
   "name": "Subcategory Slider",
