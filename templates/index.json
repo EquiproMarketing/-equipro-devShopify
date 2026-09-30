@@ -643,6 +643,21 @@
     "custom_subcategory_slider_HPxgWp": {
       "type": "custom-subcategory-slider",
       "blocks": {
+        "subcategory_card_pRc6mk": {
+          "type": "subcategory_card",
+          "settings": {
+            "collection": "",
+            "product": "20200-multi-comfort",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "shopify://products/20200-multi-comfort",
+            "tag": "Hydraulic",
+            "title": "Multi-Comfort",
+            "subtitle": "The Multi-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors.",
+            "price": "from CA$1,895",
+            "available_colors": "#ffffff, #111111, #808080"
+          }
+        },
         "subcategory_card_8DCj8V": {
           "type": "subcategory_card",
           "settings": {
@@ -690,6 +705,7 @@
         }
       },
       "block_order": [
+        "subcategory_card_pRc6mk",
         "subcategory_card_8DCj8V",
         "subcategory_card_WfgYK8",
         "subcategory_card_7nCwtA"
