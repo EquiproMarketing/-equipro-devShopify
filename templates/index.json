@@ -831,7 +831,7 @@
             "bg_color": "#111111",
             "text_color": "#ffffff",
             "btn_1_text": "Découvrez les finitions",
-            "btn_1_link": "",
+            "btn_1_link": "shopify://pages/manuals",
             "btn_2_text": "Télécharger la fiche technique (PDF)",
             "btn_2_link": "",
             "btn_2_is_pdf": true
