@@ -643,33 +643,18 @@
     "custom_subcategory_slider_HPxgWp": {
       "type": "custom-subcategory-slider",
       "blocks": {
-        "subcategory_card_MpAxqM": {
+        "subcategory_card_8DCj8V": {
           "type": "subcategory_card",
           "settings": {
             "collection": "",
-            "product": "",
+            "product": "21100-hydro-comfort",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "",
+            "link": "shopify://products/21100-hydro-comfort",
             "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
-            "available_colors": "#ffffff, #111111, #808080"
-          }
-        },
-        "subcategory_card_ChAiXK": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "",
-            "product": "",
-            "enable_hover": false,
-            "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "title": "Hydro-Comfort",
+            "subtitle": "The Hydro-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Skincare Specialists.",
+            "price": "From CA$2,200",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
@@ -677,38 +662,37 @@
           "type": "subcategory_card",
           "settings": {
             "collection": "",
-            "product": "",
+            "product": "22100-poly-comfort",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "link": "shopify://products/22100-poly-comfort",
+            "tag": "Mechanical",
+            "title": "Poly-comfort",
+            "subtitle": "Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists.",
+            "price": "From CA$1,225",
             "available_colors": "#ffffff, #111111, #808080"
           }
         },
-        "subcategory_card_FGmzWP": {
+        "subcategory_card_7nCwtA": {
           "type": "subcategory_card",
           "settings": {
             "collection": "",
             "product": "21200-aero-comfort",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "tag": "Hydraulic",
-            "title": "Hydraulic Treatment Chairs",
-            "subtitle": "Smooth manual elevation for versatile clinic setups.",
-            "price": "From CA$ 1,499",
+            "link": "shopify://products/21200-aero-comfort",
+            "tag": "Mechanical",
+            "title": "Aero-Comfort",
+            "subtitle": "Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Aero-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client.",
+            "price": "From CA$1,395",
             "available_colors": "#ffffff, #111111, #808080"
           }
         }
       },
       "block_order": [
-        "subcategory_card_MpAxqM",
-        "subcategory_card_ChAiXK",
+        "subcategory_card_8DCj8V",
         "subcategory_card_WfgYK8",
-        "subcategory_card_FGmzWP"
+        "subcategory_card_7nCwtA"
       ],
       "name": "Subcategory Slider",
       "settings": {
