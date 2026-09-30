@@ -117,38 +117,56 @@
 </section>
 
 <script>
-  // Simple grab-and-drag mouse/touch scrolling support for the marquee track
   document.addEventListener('DOMContentLoaded', function() {
-    const slider = document.querySelector('#subcat-section-{{ section.id }} [data-marquee-container]');
-    if (!slider) return;
+    const wrapper = document.querySelector('#subcat-section-{{ section.id }} [data-marquee-container]');
+    const track = document.querySelector('#subcat-section-{{ section.id }} .custom-subcat-track');
+    if (!wrapper || !track) return;
+
+    // Duplicamos una vez más el contenido internamente por JS para asegurar margen de maniobra
+    track.innerHTML += track.innerHTML;
 
     let isDown = false;
     let startX;
     let scrollLeft;
 
-    slider.addEventListener('mousedown', (e) => {
+    // Infinite loop correction on manual scroll/drag
+    wrapper.addEventListener('scroll', function() {
+      const maxScrollLeft = track.scrollWidth / 2;
+      
+      // Si llega al final del segundo bloque, salta al inicio de forma invisible
+      if (wrapper.scrollLeft >= maxScrollLeft) {
+        wrapper.scrollLeft = wrapper.scrollLeft - maxScrollLeft;
+      } 
+      // Si llega demasiado a la izquierda, salta hacia adelante
+      else if (wrapper.scrollLeft <= 0) {
+        wrapper.scrollLeft = maxScrollLeft + wrapper.scrollLeft;
+      }
+    });
+
+    // Mouse drag support
+    wrapper.addEventListener('mousedown', (e) => {
       isDown = true;
-      slider.classList.add('is-dragging');
-      startX = e.pageX - slider.offsetLeft;
-      scrollLeft = slider.scrollLeft;
+      wrapper.classList.add('is-dragging');
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
     });
 
-    slider.addEventListener('mouseleave', () => {
+    wrapper.addEventListener('mouseleave', () => {
       isDown = false;
-      slider.classList.remove('is-dragging');
+      wrapper.classList.remove('is-dragging');
     });
 
-    slider.addEventListener('mouseup', () => {
+    wrapper.addEventListener('mouseup', () => {
       isDown = false;
-      slider.classList.remove('is-dragging');
+      wrapper.classList.remove('is-dragging');
     });
 
-    slider.addEventListener('mousemove', (e) => {
+    wrapper.addEventListener('mousemove', (e) => {
       if (!isDown) return;
       e.preventDefault();
-      const x = e.pageX - slider.offsetLeft;
+      const x = e.pageX - wrapper.offsetLeft;
       const walk = (x - startX) * 2;
-      slider.scrollLeft = scrollLeft - walk;
+      wrapper.scrollLeft = scrollLeft - walk;
     });
   });
 </script>
