@@ -33,22 +33,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical Aesthetician:",
-            "answer": "<p>Provides a stable, 360-degree swivel foundation essential for high-precision treatments, allowing seamless movement around the client without disrupting the workflow.</p>"
+            "question": "For the Clinical Aesthetician:",
+            "answer": "<p>The 31100 stool provides a stable, 360-degree swivel foundation essential for performing high-precision laser or injectable treatments. The ultra-quiet casters allow for seamless movement around the patient without disrupting the clinical workflow, while the air-lift mechanism ensures the practitioner remains at the optimal focal height to reduce neck and shoulder fatigue.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Skincare Specialist:",
-            "answer": "<p>Height adjustability from 20.5\" to 27.5\" allows smooth transitions between high-seated positions and lower extraction angles, reducing neck and shoulder fatigue.</p>"
+            "question": "For the Skincare Specialist:",
+            "answer": "<p>During intensive facial procedures, maintaining a neutral spinal position is critical. The 20.5\" to 27.5\" height adjustability allows the specialist to transition effortlessly between high-seated positions and lower extraction angles. This adaptability directly translates to increased focus on technique and improved client outcomes through steady, fatigue-free hand movements.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Massage & Body Therapist:",
-            "answer": "<p>Industrial-grade construction and silent casters withstand the demands of long-duration sessions while keeping the workspace ergonomic and hygienic.</p>"
+            "question": "For the Tattoo Artist or Body Tech:",
+            "answer": "<p>Engineered for longevity, the industrial-grade steel base and ultra-resistant leatherette withstand the demands of long-duration sessions. The stain-resistant finish ensures that the workspace remains hygienic and professional even in high-use environments, providing a reliable seating solution that supports the technician’s posture throughout eight-hour shifts.</p>"
           }
         }
       },
