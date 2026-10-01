@@ -69,8 +69,10 @@
                 {% assign option_name_downcase = option.name | downcase %}
                 
                 {% assign show_option = true %}
-                {% if option_name_downcase contains 'color' and section.settings.show_color_option == false %}
-                  {% assign show_option = false %}
+                {% if option_name_downcase contains 'color' or option_name_downcase contains 'couleur' %}
+                  {% if section.settings.show_color_option == false %}
+                    {% assign show_option = false %}
+                  {% endif %}
                 {% elsif option_name_downcase contains 'size' or option_name_downcase contains 'talla' %}
                   {% if section.settings.show_size_option == false %}
                     {% assign show_option = false %}
@@ -164,17 +166,17 @@
 
       </div>
 
-      <!-- RENDER COLOR SWATCHES FROM TEMPLATE BLOCKS -->
+      <!-- RENDER COLOR SWATCHES CONNECTED TO VARIANTS -->
       <div class="product-swatches-below-gallery">
         {% for block in section.blocks %}
           {% if block.type == "color_swatch_item" %}
-            {% assign swatch_name_lower = block.settings.color_name | downcase | strip %}
+            {% assign swatch_value = block.settings.color_name | strip | downcase %}
             {% for option in target_product.options_with_values %}
               {% assign option_name_downcase = option.name | downcase %}
-              {% if option_name_downcase contains 'color' %}
+              {% if option_name_downcase contains 'color' or option_name_downcase contains 'couleur' %}
                 {% for value in option.values %}
-                  {% assign value_lower = value | downcase | strip %}
-                  {% if value_lower == swatch_name_lower %}
+                  {% assign value_downcase = value | strip | downcase %}
+                  {% if value_downcase == swatch_value %}
                     <button 
                       type="button" 
                       class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
@@ -240,18 +242,21 @@
     const optionIndex = btn.dataset.optionIndex;
     const value = btn.dataset.value;
 
-    // Update active visual state for swatches
-    const container = btn.closest('.product-right-col');
-    if (container) {
-      container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
-    }
+    // 1. Update active visual state for swatches
+    const container = btn.closest('.product-right-col') || document;
+    container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
     btn.classList.add('is-active');
 
-    // Synchronize directly with the main dropdown select
-    const select = document.getElementById(`Option-{{ section.id }}-${optionIndex}`);
-    if (select) {
-      select.value = value;
-      select.dispatchEvent(new Event('change'));
+    // 2. Synchronize directly with the main dropdown select using optionIndex
+    let targetSelect = document.querySelector(`.product-variant-selector[data-option-index="${optionIndex}"]`);
+    if (!targetSelect) {
+      const selectors = document.querySelectorAll('.product-variant-selector');
+      targetSelect = selectors[optionIndex] || selectors[0];
+    }
+
+    if (targetSelect) {
+      targetSelect.value = value;
+      targetSelect.dispatchEvent(new Event('change', { bubbles: true }));
     }
   }
 

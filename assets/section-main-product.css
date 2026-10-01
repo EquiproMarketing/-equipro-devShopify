@@ -1,5 +1,5 @@
 /* ==========================================================================
-   1. MAIN PRODUCT TOP SECTION - DESKTOP ( >= 768px )
+   1. MAIN PRODUCT LAYOUT & CONTAINERS (DESKTOP >= 768px)
    ========================================================================== */
    .product-page {
     padding-top: 24px;
@@ -34,6 +34,15 @@
     gap: 18px;
   }
   
+  .product-right-col {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  /* ==========================================================================
+     2. PRODUCT TYPOGRAPHY & HEADINGS
+     ========================================================================== */
   .product-info__title {
     font-size: 2.2rem;
     font-weight: 700;
@@ -41,6 +50,14 @@
     margin: 0;
     line-height: 1.15;
     letter-spacing: -0.015em;
+  }
+  
+  .product-info__subtitle {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ab273b;
+    margin: 12px 0 0 0;
+    line-height: 1.25;
   }
   
   .product-info__intro-highlight {
@@ -64,14 +81,9 @@
     line-height: 1.6;
   }
   
-  .product-info__subtitle {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: #ab273b;
-    margin: 12px 0 0 0;
-    line-height: 1.25;
-  }
-  
+  /* ==========================================================================
+     3. BUY BOX, OPTIONS & CONTROLS
+     ========================================================================== */
   .product-buy-box {
     display: flex;
     flex-direction: column;
@@ -172,13 +184,9 @@
     cursor: pointer;
   }
   
-  /* GALERÍA EN ESCRITORIO (MINIATURAS A LA DERECHA) */
-  .product-right-col {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-  }
-  
+  /* ==========================================================================
+     4. GALLERY & MEDIA COMPONENTS
+     ========================================================================== */
   .product-gallery {
     display: flex;
     gap: 16px;
@@ -212,7 +220,8 @@
     width: 76px;
   }
   
-  .thumb-img, .thumb-img-placeholder {
+  .thumb-img, 
+  .thumb-img-placeholder {
     width: 76px;
     height: 76px;
     border-radius: 12px;
@@ -252,7 +261,51 @@
   }
   
   /* ==========================================================================
-     2. CARACTERÍSTICAS, TABLAS Y BLOQUE SHIPPING
+     5. COLOR SWATCHES & SELECTORS
+     ========================================================================== */
+  .product-swatches-below-gallery {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+    margin-top: 16px;
+    margin-bottom: 12px;
+    align-items: center;
+  }
+  
+  .product-swatch-btn {
+    width: 40px !important;
+    height: 40px !important;
+    border-radius: 50% !important;
+    border: 2px solid #d2d2d7 !important;
+    padding: 0 !important;
+    cursor: pointer !important;
+    position: relative !important;
+    display: inline-block !important;
+    font-size: 0 !important;
+    color: transparent !important;
+    text-indent: -9999px !important;
+    overflow: hidden !important;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
+    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+  }
+  
+  .product-swatch-btn * {
+    display: none !important;
+  }
+  
+  .product-swatch-btn:hover {
+    transform: scale(1.1);
+    border-color: #1d1d1f !important;
+  }
+  
+  .product-swatch-btn.is-active {
+    border-color: #ab273b !important;
+    transform: scale(1.12);
+    box-shadow: 0 0 0 3px rgba(171, 39, 59, 0.2);
+  }
+  
+  /* ==========================================================================
+     6. ACCORDIONS, SHIPPING & TECHNICAL TABLES
      ========================================================================== */
   .product-characteristics-grid {
     margin-top: 40px;
@@ -306,7 +359,6 @@
     line-height: 1.5;
   }
   
-  /* BLOQUE SHIPPING */
   .product-shipping-block {
     margin-top: auto;
     background: #f5f5f7;
@@ -332,7 +384,6 @@
     margin: 0;
   }
   
-  /* TABLAS TÉCNICAS */
   .equipro-specs-container,
   .tech-table-container {
     width: 100%;
@@ -383,7 +434,7 @@
   }
   
   /* ==========================================================================
-     3. REORDENAMIENTO Y GALERÍA EN MÓVIL ( <= 767px )
+     7. MOBILE RESPONSIVE LAYOUT ( <= 767px )
      ========================================================================== */
   @media screen and (max-width: 767px) {
     .product-master-grid {
@@ -414,54 +465,37 @@
       height: 76px;
     }
   
-    .product-mobile-order-gallery { order: 1; width: 100%; }
-    .product-mobile-order-title { order: 2; width: 100%; margin-top: 0.5rem; margin-bottom: 0.25rem; }
-    .product-mobile-order-buybox { order: 3; width: 100%; }
-    .product-mobile-order-descriptions { order: 4; width: 100%; margin-top: 0.5rem; }
-    .product-mobile-order-compare { order: 5; width: 100%; margin-top: 1.5rem; padding-right: 0; }
+    .product-mobile-order-gallery { 
+      order: 1; 
+      width: 100%; 
+    }
+    
+    .product-mobile-order-title { 
+      order: 2; 
+      width: 100%; 
+      margin-top: 0.5rem; 
+      margin-bottom: 0.25rem; 
+    }
+    
+    .product-mobile-order-buybox { 
+      order: 3; 
+      width: 100%; 
+    }
+    
+    .product-mobile-order-descriptions { 
+      order: 4; 
+      width: 100%; 
+      margin-top: 0.5rem; 
+    }
+    
+    .product-mobile-order-compare { 
+      order: 5; 
+      width: 100%; 
+      margin-top: 1.5rem; 
+      padding-right: 0; 
+    }
   
     .product-shipping-block {
       margin-top: 24px;
     }
-  }
-
-/* ==========================================================================
-   CUSTOM COLOR SWATCHES STYLING (CORRECTO Y DEFINITIVO)
-   ========================================================================== */
-   .product-swatches-below-gallery {
-    display: flex;
-    gap: 12px;
-    flex-wrap: wrap;
-    margin-top: 16px;
-    margin-bottom: 12px;
-    align-items: center;
-    width: 100%;
-  }
-  
-  .product-swatch-btn {
-    width: 38px !important;
-    height: 38px !important;
-    border-radius: 50% !important;
-    border: 2px solid #d2d2d7 !important;
-    padding: 0 !important;
-    cursor: pointer !important;
-    position: relative !important;
-    display: inline-block !important;
-    transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.08);
-  }
-  
-  .product-swatch-btn:hover {
-    transform: scale(1.1);
-    border-color: #1d1d1f !important;
-  }
-  
-  .product-swatch-btn.is-active {
-    border-color: #ab273b !important;
-    transform: scale(1.12);
-    box-shadow: 0 0 0 3px rgba(171, 39, 59, 0.2);
-  }
-  
-  .product-swatch-btn span:not(.visually-hidden) {
-    display: none !important;
   }
