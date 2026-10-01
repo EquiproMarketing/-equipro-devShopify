@@ -164,16 +164,17 @@
 
       </div>
 
-      <!-- RENDER COLOR SWATCHES FROM TEMPLATE BLOCKS (BELOW GALLERY) -->
+      <!-- RENDER COLOR SWATCHES FROM TEMPLATE BLOCKS -->
       <div class="product-swatches-below-gallery">
         {% for block in section.blocks %}
           {% if block.type == "color_swatch_item" %}
-            {% assign swatch_value = block.settings.color_name | strip %}
+            {% assign swatch_name_lower = block.settings.color_name | downcase | strip %}
             {% for option in target_product.options_with_values %}
               {% assign option_name_downcase = option.name | downcase %}
               {% if option_name_downcase contains 'color' %}
                 {% for value in option.values %}
-                  {% if value == swatch_value %}
+                  {% assign value_lower = value | downcase | strip %}
+                  {% if value_lower == swatch_name_lower %}
                     <button 
                       type="button" 
                       class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
