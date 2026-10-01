@@ -1,258 +1,267 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "settings": {
-          "back_text": "Back",
-          "custom_title": "Air-Lift Round Stool - 31100",
-          "intro_highlight": "Crafted for professional aesthetic environments, the Air-Lift Round Stool 31100 provides reliable comfort and mobility, prioritizing practitioner ergonomics and uncompromising stability. Designed for intensive daily use, this round stool without a backrest allows professionals to maintain an optimal working posture and seamless mobility across treatment rooms.",
-          "custom_description": "<p>The Air-Lift Round Stool 31100 is purpose-built for licensed professionals, including Estheticians, Clinical Spa Technicians, and Massage Therapists. Its pneumatic height adjustment ranges smoothly from 20.5\" to 27.5\", adapting effortlessly to all workstations and treatment tables. Featuring an ultra-resistant leatherette and ultra-quiet casters, it ensures secure stability and frictionless 360-degree mobility throughout demanding schedules.</p>",
-          "subtitle": "Pneumatic Air-Lift Height & 360° Mobility",
-          "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The heavy-duty stain-resistant base and premium vinyl upholstery ensure an as-new professional appearance across years of heavy usage.</p>",
-          "show_variant_selectors": true,
-          "show_color_option": true,
-          "show_size_option": false,
-          "featured_product": "air-lift-round-stool-31100",
-          "btn_label": "ADD TO CART",
-          "show_compare_btn": true,
-          "compare_btn_label": "Compare with other models"
-        }
-      },
-      "main_product_characteristics_Hp7Baq": {
-        "type": "main-product-characteristics",
-        "blocks": {
-          "faq_item_mcpNpt": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Clinical Aesthetician:",
-              "answer": "<p>Provides a stable, 360-degree swivel foundation essential for high-precision treatments, allowing seamless movement around the client without disrupting the workflow.</p>"
-            }
-          },
-          "faq_item_74hYTC": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Skincare Specialist:",
-              "answer": "<p>Height adjustability from 20.5\" to 27.5\" allows smooth transitions between high-seated positions and lower extraction angles, reducing neck and shoulder fatigue.</p>"
-            }
-          },
-          "faq_item_bhzmwM": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Massage & Body Therapist:",
-              "answer": "<p>Industrial-grade construction and silent casters withstand the demands of long-duration sessions while keeping the workspace ergonomic and hygienic.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_mcpNpt",
-          "faq_item_74hYTC",
-          "faq_item_bhzmwM"
-        ],
-        "name": "Product Characteristics",
-        "settings": {
-          "accordion_heading": "Professional Applications",
-          "show_shipping": true,
-          "shipping_title": "Shipping",
-          "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
-          "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>31100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, stain-resistant black base with 5 legs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (Height Range)</td>\n        <td>Minimum Height: 20.5\" (52 cm) - Maximum Height: 27.5\" (70 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>19 lb / 8.5 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height adjustment from 20.5\" to 27.5\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>Stain-resistant black 5-leg base with silent casters for smooth mobility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Premium ultra-resistant vinyl, stain and oil resistant; available in multiple colors</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>One-touch pneumatic height adjustment lever</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved components where applicable</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Full Manufacturer Warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
-          "table_col1_header": "TECHNICAL ASPECT",
-          "table_col2_header": "SPECIFICATION DETAILS"
-        }
-      },
-      "banner_features": {
-        "type": "product-key-features-banner",
-        "blocks": {
-          "feature_item_8YjzYH": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Pneumatic Height Control:",
-              "text": "Equipped with a smooth-glide air-lift mechanism allowing effortless height adjustment from 20.5\" to 27.5\"."
-            }
-          },
-          "feature_item_F4iL9F": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Stain-Resistant 5-Star Base:",
-              "text": "Heavy-duty 5-leg black base paired with ultra-quiet casters to ensure secure stability and effortless mobility."
-            }
-          },
-          "feature_item_RXpARk": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Professional Upholstery:",
-              "text": "Ultra-resistant leatherette designed to resist stains, oils, and rigorous daily use in commercial aesthetic environments."
-            }
-          }
-        },
-        "block_order": [
-          "feature_item_8YjzYH",
-          "feature_item_F4iL9F",
-          "feature_item_RXpARk"
-        ],
-        "settings": {
-          "heading": "Key Features for the Professional Station",
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "right",
-          "bg_color": "#a22938",
-          "text_color": "#ffffff",
-          "padding_top": 60,
-          "padding_bottom": 60,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "how_to": {
-        "type": "product-how-to",
-        "blocks": {
-          "section_header_XjqiGV": {
-            "type": "section_header",
-            "settings": {
-              "title": "How to Use"
-            }
-          },
-          "instruction_item_fd7CbG": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Height Adjustment:",
-              "text": "Engage the under-seat lever to activate the pneumatic lift for effortless height modification."
-            }
-          },
-          "instruction_item_8VfGh8": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Postural Alignment:",
-              "text": "Position the stool to ensure a comfortable 90-degree angle at the knees for optimal lower back support."
-            }
-          },
-          "instruction_item_z9KEfh": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "360° Mobility:",
-              "text": "Utilize the five-star base and silent casters for smooth, uninterrupted movement around workstations."
-            }
-          },
-          "section_header_dGJcmr": {
-            "type": "section_header",
-            "settings": {
-              "title": "Safety & Disclaimers"
-            }
-          },
-          "instruction_item_CRmBXw": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Surface Check:",
-              "text": "Ensure all five casters are in full contact with a level floor surface before sitting."
-            }
-          },
-          "instruction_item_QqEHKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Maintenance:",
-              "text": "Wipe down the leatherette regularly with non-abrasive professional cleaners to preserve finish quality."
-            }
-          }
-        },
-        "block_order": [
-          "section_header_XjqiGV",
-          "instruction_item_fd7CbG",
-          "instruction_item_8VfGh8",
-          "instruction_item_z9KEfh",
-          "section_header_dGJcmr",
-          "instruction_item_CRmBXw",
-          "instruction_item_QqEHKc"
-        ],
-        "settings": {
-          "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
-          "image_position": "left",
-          "image_aspect_ratio": "adapt",
-          "title_color": "#a22938",
-          "text_color": "#444444",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "faq": {
-        "type": "category-faq",
-        "blocks": {
-          "faq_item_JkpEmj": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the height range of the 31100 stool?",
-              "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
-            }
-          },
-          "faq_item_r7tr7G": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the weight capacity of this stool?",
-              "answer": "<p>It is engineered to support professional daily use with high-performance industrial-grade durability.</p>"
-            }
-          },
-          "faq_item_dd9n3Q": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Are the casters suitable for hardwood floors?",
-              "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
-            }
-          },
-          "faq_item_8YiyhY": {
-            "type": "faq_item",
-            "settings": {
-              "question": "How should I clean the upholstery?",
-              "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
-            }
-          },
-          "faq_item_GkbCk6": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Is assembly required upon delivery?",
-              "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_JkpEmj",
-          "faq_item_r7tr7G",
-          "faq_item_dd9n3Q",
-          "faq_item_8YiyhY",
-          "faq_item_GkbCk6"
-        ],
-        "settings": {
-          "heading": "Your Questions, Answered",
-          "subheading": "Find answers to frequently asked technical and equipment questions.",
-          "layout": "grid",
-          "header_position": "left",
-          "open_first_item": true,
-          "title_color": "#a22938",
-          "question_color": "#111111",
-          "answer_color": "#555555",
-          "toggle_color": "#a22938",
-          "border_color": "#1a1a1a",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "compare_modal": {
-        "type": "product-compare-modal",
-        "settings": {
-          "modal_title": "Select Products to Compare",
-          "compare_collection": "stools"
-        }
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Air-Lift Round Stool - 31100",
+        "intro_highlight": "Crafted for professional aesthetic environments, the Air-Lift Round Stool 31100 provides reliable comfort and mobility, prioritizing practitioner ergonomics and uncompromising stability. Designed for intensive daily use, this round stool without a backrest allows professionals to maintain an optimal working posture and seamless mobility across treatment rooms.",
+        "custom_description": "<p>The Air-Lift Round Stool 31100 is purpose-built for licensed professionals, including Estheticians, Clinical Spa Technicians, and Massage Therapists. Its pneumatic height adjustment ranges smoothly from 20.5\" to 27.5\", adapting effortlessly to all workstations and treatment tables. Featuring an ultra-resistant leatherette and ultra-quiet casters, it ensures secure stability and frictionless 360-degree mobility throughout demanding schedules.</p>",
+        "subtitle": "Pneumatic Air-Lift Height & 360° Mobility",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the 31100 Air-Lift Stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The heavy-duty stain-resistant base and premium vinyl upholstery ensure an as-new professional appearance across years of heavy usage.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": false,
+        "featured_product": "air-lift-round-stool-31100",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
       }
     },
-    "order": [
-      "main",
-      "main_product_characteristics_Hp7Baq",
-      "banner_features",
-      "how_to",
-      "faq",
-      "compare_modal"
-    ]
-  }
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Aesthetician:",
+            "answer": "<p>Provides a stable, 360-degree swivel foundation essential for high-precision treatments, allowing seamless movement around the client without disrupting the workflow.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Skincare Specialist:",
+            "answer": "<p>Height adjustability from 20.5\" to 27.5\" allows smooth transitions between high-seated positions and lower extraction angles, reducing neck and shoulder fatigue.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Massage & Body Therapist:",
+            "answer": "<p>Industrial-grade construction and silent casters withstand the demands of long-duration sessions while keeping the workspace ergonomic and hygienic.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>31100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-white ultra-resistant vinyl upholstery, stain-resistant black base with 5 legs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>Minimum Height: 20.5\" (52 cm) - Maximum Height: 27.5\" (70 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>19 lb / 8.5 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height adjustment from 20.5\" to 27.5\"</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>Stain-resistant black 5-leg base with silent casters for smooth mobility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Premium ultra-resistant vinyl, stain and oil resistant; available in multiple colors</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>One-touch pneumatic height adjustment lever</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Height-adjustable professional operator stool</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable 5-leg base design, silent casters for secure movement</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components where applicable</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Assembly</td>\n        <td>Partial assembly required</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional spa and aesthetic treatment rooms for technicians and estheticians</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8YjzYH": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Pneumatic Height Control:",
+            "text": "Equipped with a smooth-glide air-lift mechanism allowing effortless height adjustment from 20.5\" to 27.5\"."
+          }
+        },
+        "feature_item_F4iL9F": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Stain-Resistant 5-Star Base:",
+            "text": "Heavy-duty 5-leg black base paired with ultra-quiet casters to ensure secure stability and effortless mobility."
+          }
+        },
+        "feature_item_RXpARk": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Professional Upholstery:",
+            "text": "Ultra-resistant leatherette designed to resist stains, oils, and rigorous daily use in commercial aesthetic environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8YjzYH",
+        "feature_item_F4iL9F",
+        "feature_item_RXpARk"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height Adjustment:",
+            "text": "Engage the under-seat lever to activate the pneumatic lift for effortless height modification."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Postural Alignment:",
+            "text": "Position the stool to ensure a comfortable 90-degree angle at the knees for optimal lower back support."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "360° Mobility:",
+            "text": "Utilize the five-star base and silent casters for smooth, uninterrupted movement around workstations."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Surface Check:",
+            "text": "Ensure all five casters are in full contact with a level floor surface before sitting."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maintenance:",
+            "text": "Wipe down the leatherette regularly with non-abrasive professional cleaners to preserve finish quality."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the height range of the 31100 stool?",
+            "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity of this stool?",
+            "answer": "<p>It is engineered to support professional daily use with high-performance industrial-grade durability.</p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the casters suitable for hardwood floors?",
+            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I clean the upholstery?",
+            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required upon delivery?",
+            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Products to Compare",
+        "compare_collection": "stools"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
