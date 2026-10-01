@@ -15,15 +15,15 @@
         "color_swatch_item_QayHJU": {
           "type": "color_swatch_item",
           "settings": {
-            "color_name": "",
-            "color_hex": "#111111"
+            "color_name": "White",
+            "color_hex": "#FFFFFF"
           }
         },
         "color_swatch_item_MBAxdd": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#1B2A4A"
+            "color_hex": "#1b2a4a"
           }
         },
         "color_swatch_item_XB8bJq": {
@@ -32,12 +32,28 @@
             "color_name": "Black",
             "color_hex": "#111111"
           }
+        },
+        "color_swatch_item_CWtNcj": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Charcoal",
+            "color_hex": "#4C4C4C"
+          }
+        },
+        "color_swatch_item_3bTPNQ": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Dove",
+            "color_hex": "#919291"
+          }
         }
       },
       "block_order": [
         "color_swatch_item_QayHJU",
         "color_swatch_item_MBAxdd",
-        "color_swatch_item_XB8bJq"
+        "color_swatch_item_XB8bJq",
+        "color_swatch_item_CWtNcj",
+        "color_swatch_item_3bTPNQ"
       ],
       "settings": {
         "back_text": "Back",
