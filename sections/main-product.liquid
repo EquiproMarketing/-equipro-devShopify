@@ -79,18 +79,52 @@
 
                 {% if show_option %}
                   <div class="product-option">
-                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
-                    <select 
-                      id="Option-{{ section.id }}-{{ forloop.index0 }}" 
-                      class="product-select product-variant-selector"
-                      data-option-index="{{ forloop.index0 }}"
-                    >
-                      {% for value in option.values %}
-                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                          {{ value }}
-                        </option>
-                      {% endfor %}
-                    </select>
+                    <label>{{ option.name }}: <span id="SelectedValue-{{ forloop.index0 }}">{{ option.selected_value }}</span></label>
+                    
+                    {%- comment -%} SI ES COLOR, MOSTRAMOS CÍRCULOS (SWATCHES) {%- endcomment -%}
+                    {% if option_name_downcase contains 'color' %}
+                      <div class="product-swatches-grid">
+                        {% for value in option.values %}
+                          {%- assign color_handle = value | handle -%}
+                          <button 
+                            type="button" 
+                            class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
+                            data-option-index="{{ forloop.parentloop.index0 }}"
+                            data-value="{{ value | escape }}"
+                            title="{{ value }}"
+                            style="background-color: {{ color_handle }};"
+                            onclick="selectSwatch(this)"
+                          >
+                            <span class="visually-hidden">{{ value }}</span>
+                          </button>
+                        {% endfor %}
+                      </div>
+                      <select 
+                        id="Option-{{ section.id }}-{{ forloop.index0 }}" 
+                        class="product-select product-variant-selector visually-hidden"
+                        data-option-index="{{ forloop.index0 }}"
+                      >
+                        {% for value in option.values %}
+                          <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                            {{ value }}
+                          </option>
+                        {% endfor %}
+                      </select>
+
+                    {%- comment -%} PARA OTRAS OPCIONES (EJ. TALLA), MANTENEMOS EL SELECT TRADICIONAL {%- endcomment -%}
+                    {% else %}
+                      <select 
+                        id="Option-{{ section.id }}-{{ forloop.index0 }}" 
+                        class="product-select product-variant-selector"
+                        data-option-index="{{ forloop.index0 }}"
+                      >
+                        {% for value in option.values %}
+                          <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                            {{ value }}
+                          </option>
+                        {% endfor %}
+                      </select>
+                    {% endif %}
                   </div>
                 {% endif %}
               {% endfor %}
@@ -121,7 +155,7 @@
     <div class="product-right-col product-mobile-order-gallery">
       <div class="product-gallery">
         
-        <!-- IMAGEN PRINCIPAL (Ampliamos a 1600px para pantallas Retina/HiDPI) -->
+        <!-- IMAGEN PRINCIPAL -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           {% if first_img_block.settings.image != blank %}
@@ -178,7 +212,7 @@
   </div>
 </div>
 
-<!-- MAPA DE VARIANTES EN JSON CON IMÁGENES EN ALTA CALIDAD (1600px) -->
+<!-- MAPA DE VARIANTES EN JSON -->
 <script type="application/json" id="ProductVariantsJson-{{ target_product.id }}">
   [
     {% for variant in target_product.variants %}
@@ -204,6 +238,27 @@
   document.querySelectorAll('.product-variant-selector').forEach(select => {
     select.addEventListener('change', updateSelectedVariant);
   });
+
+  function selectSwatch(btn) {
+    const optionIndex = btn.dataset.optionIndex;
+    const value = btn.dataset.value;
+
+    // Actualizar botones visuales activos
+    const container = btn.closest('.product-option');
+    container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+
+    // Actualizar etiqueta de texto del color seleccionado
+    const labelSpan = container.querySelector('span[id^="SelectedValue-"]');
+    if (labelSpan) labelSpan.textContent = value;
+
+    // Sincronizar con el select oculto y disparar evento change
+    const select = document.getElementById(`Option-{{ section.id }}-${optionIndex}`);
+    if (select) {
+      select.value = value;
+      select.dispatchEvent(new Event('change'));
+    }
+  }
 
   function updateSelectedVariant() {
     const selectors = document.querySelectorAll('.product-variant-selector');
