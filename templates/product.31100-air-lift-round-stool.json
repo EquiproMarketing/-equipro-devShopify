@@ -12,6 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "color_swatch_item_TD6ELf": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "black",
+            "color_hex": "#111111"
+          }
+        },
         "color_swatch_item_NmVrAX": {
           "type": "color_swatch_item",
           "settings": {
@@ -28,6 +35,7 @@
         }
       },
       "block_order": [
+        "color_swatch_item_TD6ELf",
         "color_swatch_item_NmVrAX",
         "color_swatch_item_raYmLL"
       ],
