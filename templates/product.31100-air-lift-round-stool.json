@@ -12,6 +12,20 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "color_swatch_item_QayHJU": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "",
+            "color_hex": "#111111"
+          }
+        },
+        "color_swatch_item_MBAxdd": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Navy",
+            "color_hex": "#1B2A4A"
+          }
+        },
         "color_swatch_item_XB8bJq": {
           "type": "color_swatch_item",
           "settings": {
@@ -21,6 +35,8 @@
         }
       },
       "block_order": [
+        "color_swatch_item_QayHJU",
+        "color_swatch_item_MBAxdd",
         "color_swatch_item_XB8bJq"
       ],
       "settings": {
