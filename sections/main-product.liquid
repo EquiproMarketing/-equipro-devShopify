@@ -77,54 +77,25 @@
                   {% endif %}
                 {% endif %}
 
+                {% comment %} Si es color y ya lo mostramos abajo de la foto, lo omitimos aquí para que no se duplique {% endcomment %}
+                {% if option_name_downcase contains 'color' %}
+                  {% assign show_option = false %}
+                {% endif %}
+
                 {% if show_option %}
                   <div class="product-option">
-                    <label>{{ option.name }}: <span id="SelectedValue-{{ forloop.index0 }}">{{ option.selected_value }}</span></label>
-                    
-                    {%- comment -%} SI ES COLOR, MOSTRAMOS CÍRCULOS (SWATCHES) {%- endcomment -%}
-                    {% if option_name_downcase contains 'color' %}
-                      <div class="product-swatches-grid">
-                        {% for value in option.values %}
-                          {%- assign color_handle = value | handle -%}
-                          <button 
-                            type="button" 
-                            class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
-                            data-option-index="{{ forloop.parentloop.index0 }}"
-                            data-value="{{ value | escape }}"
-                            title="{{ value }}"
-                            style="background-color: {{ color_handle }};"
-                            onclick="selectSwatch(this)"
-                          >
-                            <span class="visually-hidden">{{ value }}</span>
-                          </button>
-                        {% endfor %}
-                      </div>
-                      <select 
-                        id="Option-{{ section.id }}-{{ forloop.index0 }}" 
-                        class="product-select product-variant-selector visually-hidden"
-                        data-option-index="{{ forloop.index0 }}"
-                      >
-                        {% for value in option.values %}
-                          <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                            {{ value }}
-                          </option>
-                        {% endfor %}
-                      </select>
-
-                    {%- comment -%} PARA OTRAS OPCIONES (EJ. TALLA), MANTENEMOS EL SELECT TRADICIONAL {%- endcomment -%}
-                    {% else %}
-                      <select 
-                        id="Option-{{ section.id }}-{{ forloop.index0 }}" 
-                        class="product-select product-variant-selector"
-                        data-option-index="{{ forloop.index0 }}"
-                      >
-                        {% for value in option.values %}
-                          <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                            {{ value }}
-                          </option>
-                        {% endfor %}
-                      </select>
-                    {% endif %}
+                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                    <select 
+                      id="Option-{{ section.id }}-{{ forloop.index0 }}" 
+                      class="product-select product-variant-selector"
+                      data-option-index="{{ forloop.index0 }}"
+                    >
+                      {% for value in option.values %}
+                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                          {{ value }}
+                        </option>
+                      {% endfor %}
+                    </select>
                   </div>
                 {% endif %}
               {% endfor %}
@@ -151,7 +122,7 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA (GALERÍA EN ALTA RESOLUCIÓN) -->
+    <!-- COLUMNA DERECHA (GALERÍA Y SWATCHES DE COLOR) -->
     <div class="product-right-col product-mobile-order-gallery">
       <div class="product-gallery">
         
@@ -197,6 +168,46 @@
         </div>
 
       </div>
+
+      <!-- SELECTOR DE COLOR EN CÍRCULOS (UBICADO EXACTAMENTE EN LA ZONA DE LOS PUNTOS AZULES) -->
+      {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
+        <div class="product-swatches-below-gallery">
+          {% for option in target_product.options_with_values %}
+            {% assign option_name_downcase = option.name | downcase %}
+            {% if option_name_downcase contains 'color' and section.settings.show_color_option %}
+              <div class="product-swatches-grid">
+                {% for value in option.values %}
+                  {%- assign color_handle = value | handle -%}
+                  <button 
+                    type="button" 
+                    class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
+                    data-option-index="{{ forloop.parentloop.index0 }}"
+                    data-value="{{ value | escape }}"
+                    title="{{ value }}"
+                    style="background-color: {{ color_handle }};"
+                    onclick="selectSwatch(this)"
+                  >
+                    <span class="visually-hidden">{{ value }}</span>
+                  </button>
+                {% endfor %}
+              </div>
+              
+              {% comment %} Select oculto para mantener sincronizada la lógica del formulario de compra {% endcomment %}
+              <select 
+                id="Option-{{ section.id }}-{{ forloop.index0 }}" 
+                class="product-select product-variant-selector visually-hidden"
+                data-option-index="{{ forloop.index0 }}"
+              >
+                {% for value in option.values %}
+                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
+                    {{ value }}
+                  </option>
+                {% endfor %}
+              </select>
+            {% endif %}
+          {% endfor %}
+        </div>
+      {% endif %}
 
       <!-- BOTÓN COMPARAR -->
       {% if section.settings.show_compare_btn %}
@@ -244,13 +255,11 @@
     const value = btn.dataset.value;
 
     // Actualizar botones visuales activos
-    const container = btn.closest('.product-option');
-    container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
+    const container = btn.closest('.product-right-col');
+    if (container) {
+      container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
+    }
     btn.classList.add('is-active');
-
-    // Actualizar etiqueta de texto del color seleccionado
-    const labelSpan = container.querySelector('span[id^="SelectedValue-"]');
-    if (labelSpan) labelSpan.textContent = value;
 
     // Sincronizar con el select oculto y disparar evento change
     const select = document.getElementById(`Option-{{ section.id }}-${optionIndex}`);
