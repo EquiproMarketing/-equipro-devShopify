@@ -41,9 +41,26 @@
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
           {%- assign nav_parent_handle = link.title | handleize -%}
-          {%- assign has_dropdown = false -%}
+          {%- assign link_coll_handle = link.object.handle -%}
           
-          {%- if link.links.size > 0 or section.blocks.size > 0 -%}
+          {%- comment -%} VERIFICACIÓN REAL DE CONTENIDO (BLOQUES O SUBCATEGORÍAS) {%- endcomment -%}
+          {%- assign has_valid_content = false -%}
+
+          {%- if link.links.size > 0 -%}
+            {%- assign has_valid_content = true -%}
+          {%- else -%}
+            {%- for block in section.blocks -%}
+              {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
+              {%- assign block_coll_handle = block.settings.collection.handle -%}
+              {%- if block_parent_handle == nav_parent_handle or block_coll_handle == nav_parent_handle or block_coll_handle == link_coll_handle -%}
+                {%- assign has_valid_content = true -%}
+                {%- break -%}
+              {%- endif -%}
+            {%- endfor -%}
+          {%- endif -%}
+
+          {%- assign has_dropdown = false -%}
+          {%- if has_valid_content -%}
             {%- assign has_dropdown = true -%}
           {%- endif -%}
 
@@ -166,14 +183,13 @@
                     </div>
 
                   {%- else -%}
-                    {%- comment -%} CASO 2: NO TIENE SUBCATEGORÍAS (EJ. STOOLS, TROLLEYS, MAG-LAMPS) {%- endcomment -%}
+                    {%- comment -%} CASO 2: NO TIENE SUBCATEGORÍAS {%- endcomment -%}
                     <div class="category-megamenu__content full-width-content">
                       <div class="category-megamenu__tab-panel is-active">
                         <div class="category-megamenu__grid">
                           {%- for block in section.blocks -%}
                             {%- assign block_parent_handle = block.settings.parent_category | handleize -%}
                             {%- assign block_coll_handle = block.settings.collection.handle -%}
-                            {%- assign link_coll_handle = link.object.handle -%}
 
                             {%- assign is_match = false -%}
                             {%- if block_parent_handle == nav_parent_handle 
@@ -246,7 +262,6 @@
 
 <script>
   document.addEventListener('DOMContentLoaded', () => {
-    // Manejo de pestañas en el sidebar del megamenú (Soporte tanto hover como click táctil)
     const sidebarItems = document.querySelectorAll('.category-megamenu__sidebar-item');
 
     sidebarItems.forEach(item => {
@@ -271,7 +286,6 @@
       });
     });
 
-    // Soporte para despliegue táctil en móviles si no está oculto
     const megamenuTriggers = document.querySelectorAll('.category-subnav__bar-item.has-megamenu > a');
     megamenuTriggers.forEach(trigger => {
       trigger.addEventListener('click', (e) => {
