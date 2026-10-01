@@ -187,6 +187,13 @@
     "faq": {
       "type": "category-faq",
       "blocks": {
+        "faq_item_gaEA6M": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the casters suitable for hardwood floors?",
+            "answer": "<p><strong>Equipped with ultra-quiet casters.</strong> Provides smooth mobility across all professional salon flooring without surface damage.</p>"
+          }
+        },
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
@@ -224,6 +231,7 @@
         }
       },
       "block_order": [
+        "faq_item_gaEA6M",
         "faq_item_JkpEmj",
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
