@@ -174,7 +174,7 @@
         <div class="product-swatches-below-gallery">
           {% for option in target_product.options_with_values %}
             {% assign option_name_downcase = option.name | downcase %}
-            {% if option_name_downcase contains 'color' and section.settings.show_color_option and option.values.size > 1 %}
+            {% if section.settings.show_color_option and option.values.size > 1 %}
               <div class="product-swatches-grid">
                 {% for value in option.values %}
                   {%- assign color_handle = value | handle -%}
