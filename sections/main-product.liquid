@@ -77,11 +77,6 @@
                   {% endif %}
                 {% endif %}
 
-                {% comment %} If it's color and rendered below gallery, omit it here to avoid duplication {% endcomment %}
-                {% if option_name_downcase contains 'color' and option.values.size > 1 %}
-                  {% assign show_option = false %}
-                {% endif %}
-
                 {% if show_option %}
                   <div class="product-option">
                     <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
@@ -169,64 +164,35 @@
 
       </div>
 
-      <!-- CONDITIONAL COLOR SWATCHES BELOW GALLERY -->
-      {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
-        <div class="product-swatches-below-gallery">
-          {% for option in target_product.options_with_values %}
-            {% assign option_name_downcase = option.name | downcase %}
-            {% if section.settings.show_color_option and option.values.size > 1 %}
-              <div class="product-swatches-grid">
+      <!-- RENDER COLOR SWATCHES FROM TEMPLATE BLOCKS -->
+      <div class="product-swatches-below-gallery">
+        {% for block in section.blocks %}
+          {% if block.type == "color_swatch_item" %}
+            {% assign swatch_value = block.settings.color_name | strip %}
+            {% for option in target_product.options_with_values %}
+              {% assign option_name_downcase = option.name | downcase %}
+              {% if option_name_downcase contains 'color' %}
                 {% for value in option.values %}
-                  {%- assign color_handle = value | handle -%}
-                  
-                  {%- comment -%} Professional color mapping dictionary for Equipro {%- endcomment -%}
-                  {%- assign bg_color = '#e5e5ea' -%}
-                  {% if color_handle contains 'white' or color_handle contains 'blanc' %}
-                    {%- assign bg_color = '#ffffff' -%}
-                  {% elsif color_handle contains 'black' or color_handle contains 'noir' %}
-                    {%- assign bg_color = '#111111' -%}
-                  {% elsif color_handle contains 'navy' or color_handle contains 'bleu' %}
-                    {%- assign bg_color = '#1b2a4a' -%}
-                  {% elsif color_handle contains 'dove' or color_handle contains 'gris' or color_handle contains 'grey' %}
-                    {%- assign bg_color = '#8e8e93' -%}
-                  {% elsif color_handle contains 'burgundy' or color_handle contains 'wine' or color_handle contains 'vin' %}
-                    {%- assign bg_color = '#6b1d2f' -%}
-                  {% elsif color_handle contains 'beige' or color_handle contains 'sable' %}
-                    {%- assign bg_color = '#d4bc9f' -%}
-                  {% elsif color_handle contains 'brown' or color_handle contains 'chocolate' %}
-                    {%- assign bg_color = '#4a3525' -%}
+                  {% if value == swatch_value %}
+                    <button 
+                      type="button" 
+                      class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
+                      data-option-index="{{ forloop.parentloop.parentloop.index0 }}"
+                      data-value="{{ value | escape }}"
+                      title="{{ value }}"
+                      style="background-color: {{ block.settings.color_hex }};"
+                      onclick="selectSwatch(this)"
+                      {{ block.shopify_attributes }}
+                    >
+                      <span class="visually-hidden">{{ value }}</span>
+                    </button>
                   {% endif %}
-
-                  <button 
-                    type="button" 
-                    class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
-                    data-option-index="{{ forloop.parentloop.index0 }}"
-                    data-value="{{ value | escape }}"
-                    title="{{ value }}"
-                    style="background-color: {{ bg_color }};"
-                    onclick="selectSwatch(this)"
-                  >
-                    <span class="visually-hidden">{{ value }}</span>
-                  </button>
                 {% endfor %}
-              </div>
-              
-              <!-- Hidden select to keep form logic synchronized -->
-              <select 
-                id="Option-{{ section.id }}-{{ forloop.index0 }}" 
-                class="product-select product-variant-selector visually-hidden"
-                data-option-index="{{ forloop.index0 }}"
-              >
-                {% for value in option.values %}
-                  <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                    {{ value }}
-                  </option>
-                {% endfor %}
-              </select>
-            {% endif %}
-          {% endfor %}
-        </div>
-      {% endif %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
 
       <!-- COMPARE BUTTON -->
       {% if section.settings.show_compare_btn %}
@@ -280,7 +246,7 @@
     }
     btn.classList.add('is-active');
 
-    // Synchronize with hidden select and trigger change event
+    // Synchronize directly with the main dropdown select
     const select = document.getElementById(`Option-{{ section.id }}-${optionIndex}`);
     if (select) {
       select.value = value;
@@ -437,6 +403,24 @@
           "type": "image_picker",
           "id": "image",
           "label": "Select Image"
+        }
+      ]
+    },
+    {
+      "type": "color_swatch_item",
+      "name": "Color Swatch",
+      "settings": [
+        {
+          "type": "text",
+          "id": "color_name",
+          "label": "Color Name (e.g. White, Navy)",
+          "info": "Must match the exact variant color name in Shopify."
+        },
+        {
+          "type": "color",
+          "id": "color_hex",
+          "label": "Swatch Color",
+          "default": "#111111"
         }
       ]
     }
