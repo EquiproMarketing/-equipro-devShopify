@@ -13,18 +13,18 @@
     </a>
   </div>
 
-  <!-- PARTE 1: GRID PRINCIPAL (TOP) -->
+  <!-- PART 1: MAIN GRID (TOP) -->
   <div class="product-master-grid">
     
-    <!-- COLUMNA IZQUIERDA -->
+    <!-- LEFT COLUMN -->
     <div class="product-left-col">
 
-      <!-- TÍTULO DEL PRODUCTO -->
+      <!-- PRODUCT TITLE -->
       <h1 class="product-info__title product-mobile-order-title">
         {{ section.settings.custom_title | default: target_product.title }}
       </h1>
 
-      <!-- DESCRIPCIONES E HIGHLIGHTS -->
+      <!-- DESCRIPTIONS AND HIGHLIGHTS -->
       <div class="product-mobile-order-descriptions">
         {% assign intro_text = section.settings.intro_highlight %}
         {% if intro_text != blank %}
@@ -52,9 +52,9 @@
         {% endif %}
       </div>
 
-      <!-- CAJA DE COMPRA -->
+      <!-- BUY BOX -->
       <div class="product-buy-box product-mobile-order-buybox">
-        <!-- PRECIO DINÁMICO -->
+        <!-- DYNAMIC PRICE -->
         <div class="product-price" id="ProductPriceContainer">
           {% assign current_variant = target_product.selected_or_first_available_variant %}
           {{ current_variant.price | money }}
@@ -77,8 +77,8 @@
                   {% endif %}
                 {% endif %}
 
-                {% comment %} Si es color y ya lo mostramos abajo de la foto, lo omitimos aquí para que no se duplique {% endcomment %}
-                {% if option_name_downcase contains 'color' %}
+                {% comment %} If it's color and rendered below gallery, omit it here to avoid duplication {% endcomment %}
+                {% if option_name_downcase contains 'color' and option.values.size > 1 %}
                   {% assign show_option = false %}
                 {% endif %}
 
@@ -122,11 +122,11 @@
 
     </div>
 
-    <!-- COLUMNA DERECHA (GALERÍA Y SWATCHES DE COLOR) -->
+    <!-- RIGHT COLUMN (GALLERY AND COLOR SWATCHES) -->
     <div class="product-right-col product-mobile-order-gallery">
       <div class="product-gallery">
         
-        <!-- IMAGEN PRINCIPAL -->
+        <!-- MAIN IMAGE -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
           {% if first_img_block.settings.image != blank %}
@@ -140,7 +140,7 @@
           {% endif %}
         </div>
 
-        <!-- MINIATURAS -->
+        <!-- THUMBNAILS -->
         <div class="product-gallery__thumbs">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
           {% if img_blocks.size > 0 %}
@@ -169,22 +169,41 @@
 
       </div>
 
-      <!-- SELECTOR DE COLOR EN CÍRCULOS (UBICADO EXACTAMENTE EN LA ZONA DE LOS PUNTOS AZULES) -->
+      <!-- CONDITIONAL COLOR SWATCHES BELOW GALLERY -->
       {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
         <div class="product-swatches-below-gallery">
           {% for option in target_product.options_with_values %}
             {% assign option_name_downcase = option.name | downcase %}
-            {% if option_name_downcase contains 'color' and section.settings.show_color_option %}
+            {% if option_name_downcase contains 'color' and section.settings.show_color_option and option.values.size > 1 %}
               <div class="product-swatches-grid">
                 {% for value in option.values %}
                   {%- assign color_handle = value | handle -%}
+                  
+                  {%- comment -%} Professional color mapping dictionary for Equipro {%- endcomment -%}
+                  {%- assign bg_color = '#e5e5ea' -%}
+                  {% if color_handle contains 'white' or color_handle contains 'blanc' %}
+                    {%- assign bg_color = '#ffffff' -%}
+                  {% elsif color_handle contains 'black' or color_handle contains 'noir' %}
+                    {%- assign bg_color = '#111111' -%}
+                  {% elsif color_handle contains 'navy' or color_handle contains 'bleu' %}
+                    {%- assign bg_color = '#1b2a4a' -%}
+                  {% elsif color_handle contains 'dove' or color_handle contains 'gris' or color_handle contains 'grey' %}
+                    {%- assign bg_color = '#8e8e93' -%}
+                  {% elsif color_handle contains 'burgundy' or color_handle contains 'wine' or color_handle contains 'vin' %}
+                    {%- assign bg_color = '#6b1d2f' -%}
+                  {% elsif color_handle contains 'beige' or color_handle contains 'sable' %}
+                    {%- assign bg_color = '#d4bc9f' -%}
+                  {% elsif color_handle contains 'brown' or color_handle contains 'chocolate' %}
+                    {%- assign bg_color = '#4a3525' -%}
+                  {% endif %}
+
                   <button 
                     type="button" 
                     class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
                     data-option-index="{{ forloop.parentloop.index0 }}"
                     data-value="{{ value | escape }}"
                     title="{{ value }}"
-                    style="background-color: {{ color_handle }};"
+                    style="background-color: {{ bg_color }};"
                     onclick="selectSwatch(this)"
                   >
                     <span class="visually-hidden">{{ value }}</span>
@@ -192,7 +211,7 @@
                 {% endfor %}
               </div>
               
-              {% comment %} Select oculto para mantener sincronizada la lógica del formulario de compra {% endcomment %}
+              <!-- Hidden select to keep form logic synchronized -->
               <select 
                 id="Option-{{ section.id }}-{{ forloop.index0 }}" 
                 class="product-select product-variant-selector visually-hidden"
@@ -209,7 +228,7 @@
         </div>
       {% endif %}
 
-      <!-- BOTÓN COMPARAR -->
+      <!-- COMPARE BUTTON -->
       {% if section.settings.show_compare_btn %}
         <div class="product-compare-wrapper product-mobile-order-compare">
           <button class="product-compare-trigger-btn" id="OpenCompareModal">
@@ -223,7 +242,7 @@
   </div>
 </div>
 
-<!-- MAPA DE VARIANTES EN JSON -->
+<!-- VARIANTS JSON MAP -->
 <script type="application/json" id="ProductVariantsJson-{{ target_product.id }}">
   [
     {% for variant in target_product.variants %}
@@ -254,14 +273,14 @@
     const optionIndex = btn.dataset.optionIndex;
     const value = btn.dataset.value;
 
-    // Actualizar botones visuales activos
+    // Update active visual state for swatches
     const container = btn.closest('.product-right-col');
     if (container) {
       container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
     }
     btn.classList.add('is-active');
 
-    // Sincronizar con el select oculto y disparar evento change
+    // Synchronize with hidden select and trigger change event
     const select = document.getElementById(`Option-{{ section.id }}-${optionIndex}`);
     if (select) {
       select.value = value;
