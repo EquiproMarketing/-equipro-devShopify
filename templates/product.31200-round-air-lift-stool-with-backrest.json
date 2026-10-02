@@ -12,6 +12,13 @@
     "main": {
       "type": "main-product",
       "blocks": {
+        "color_swatch_item_87c3f7": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "",
+            "color_hex": "#111111"
+          }
+        },
         "color_swatch_item_YfnVmH": {
           "type": "color_swatch_item",
           "settings": {
@@ -21,6 +28,7 @@
         }
       },
       "block_order": [
+        "color_swatch_item_87c3f7",
         "color_swatch_item_YfnVmH"
       ],
       "settings": {
