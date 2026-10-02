@@ -183,12 +183,11 @@
                       data-option-index="{{ forloop.parentloop.parentloop.index0 }}"
                       data-value="{{ value | escape }}"
                       title="{{ value }}"
+                      aria-label="{{ value | escape }}"
                       style="background-color: {{ block.settings.color_hex }};"
                       onclick="selectSwatch(this)"
                       {{ block.shopify_attributes }}
-                    >
-                      <span class="visually-hidden">{{ value }}</span>
-                    </button>
+                    ></button>
                   {% endif %}
                 {% endfor %}
               {% endif %}
