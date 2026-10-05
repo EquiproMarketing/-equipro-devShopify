@@ -97,6 +97,13 @@
             "answer": "<p>Provides the stable, mobile base required for detailed facial analysis and micro-treatments, allowing practitioners to maintain an optimal 90-degree leg angle while the backrest provides critical lumbar support during 60+ minute sessions.</p>"
           }
         },
+        "faq_item_34RdkN": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetics & Skincare:",
+            "answer": "<p>Provides the stable, mobile base required for detailed facial analysis and micro-treatments, allowing practitioners to maintain an optimal 90-degree leg angle while the backrest provides critical lumbar support during 60+ minute sessions.</p>"
+          }
+        },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
@@ -114,6 +121,7 @@
       },
       "block_order": [
         "faq_item_mcpNpt",
+        "faq_item_34RdkN",
         "faq_item_74hYTC",
         "faq_item_bhzmwM"
       ],

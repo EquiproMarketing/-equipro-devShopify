@@ -93,28 +93,36 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical Aesthetician:",
-            "answer": "<p>The circulation-optimizing cushion shape and adjustable backrest reduce fatigue during high-precision treatments, allowing seamless 360-degree movement around the client without disrupting workflow.</p>"
+            "question": "Esthetician:",
+            "answer": "<p>For Estheticians performing facial treatments, the 31300 Ergonomic Stool with Backrest provides adjustable lumbar support resulting in reduced spinal fatigue during extended sessions.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Skincare Specialist:",
-            "answer": "<p>Height adjustability from 20.5\" to 27.5\" combined with targeted lumbar support allows smooth posture transitions between high-seated positions and lower extraction angles.</p>"
+            "question": "Tattoo Artists:",
+            "answer": "<p>For Tattoo Artists performing detailed ink work, the 31300 Ergonomic Stool with Backrest provides 360-degree rotation and silent casters resulting in precise positioning without noise disruption.</p>"
+          }
+        },
+        "faq_item_X4UbRt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Electrologists:",
+            "answer": "<p>For Electrologists performing precision hair removal, the 31300 Ergonomic Stool with Backrest provides a contoured seat resulting in improved thigh circulation and comfort.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Massage & Body Therapist:",
-            "answer": "<p>Industrial-grade construction, five-leg stain-resistant base, and silent casters withstand long-duration sessions while keeping the workspace ergonomic and hygienic.</p>"
+            "question": "Massage Therapists:",
+            "answer": "<p>For Massage Therapists performing seated modality work, the 31300 Ergonomic Stool with Backrest provides pneumatic height adjustment resulting in optimal ergonomic alignment with the treatment table.</p>"
           }
         }
       },
       "block_order": [
         "faq_item_mcpNpt",
         "faq_item_74hYTC",
+        "faq_item_X4UbRt",
         "faq_item_bhzmwM"
       ],
       "name": "Product Characteristics",
@@ -124,7 +132,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>31300</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, stain-resistant black base with 5 legs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (Height Range)</td>\n        <td>Minimum Height: 20.5\" (52 cm) - Maximum Height: 27.5\" (70 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>26 lb / 12 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height control &amp; adjustable ergonomic backrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>Stain-resistant black 5-leg base with silent casters for smooth mobility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Premium ultra-resistant vinyl, stain and oil resistant; available in multiple colors</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>One-touch pneumatic height adjustment lever &amp; backrest angle control</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved components where applicable</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Full Manufacturer Warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>31300</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-white ultra-resistant vinyl upholstery, stain-resistant black 5-leg base</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>Minimum Height: 20.5\" (52 cm) - Maximum Height: 27.5\" (70 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>26 lb / 12 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height adjustment from 20.5\" to 27.5\"; adjustable ergonomic backrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>Stain-resistant black 5-leg base with silent casters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Premium ultra-resistant vinyl, stain and oil resistant; available in multiple colors</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Seat Design</td>\n        <td>Ergonomic seat with adjustable backrest for superior comfort and support</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>One-touch pneumatic height adjustment lever</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Height-adjustable professional operator stool with ergonomic backrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable 5-leg base design, silent casters for secure mobility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components where applicable</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Assembly</td>\n        <td>Partial assembly required</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional spa and aesthetic treatment rooms for technicians and estheticians</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -135,22 +143,22 @@
         "feature_item_8YjzYH": {
           "type": "feature_item",
           "settings": {
-            "title": "Circulation-Optimized Seat:",
-            "text": "Specially contoured cushion shape designed to improve blood circulation at the thigh level during long sitting sessions."
+            "title": "Unrivaled Durability",
+            "text": "Contoured Cushion: Designed to optimize comfort during care by promoting better blood circulation in the thighs."
           }
         },
         "feature_item_F4iL9F": {
           "type": "feature_item",
           "settings": {
-            "title": "Adjustable Ergonomic Backrest:",
-            "text": "Provides custom lumbar support to reduce lower back fatigue and maintain healthy posture throughout the workday."
+            "title": "Targeted Support",
+            "text": "Adjustable Ergonomic Backrest: Fully adjustable component designed to effectively support the back for aestheticians and technicians, enabling an ideal working posture."
           }
         },
         "feature_item_RXpARk": {
           "type": "feature_item",
           "settings": {
-            "title": "Stain-Resistant 5-Star Base:",
-            "text": "Heavy-duty 5-leg black base paired with ultra-quiet casters for secure stability and effortless mobility."
+            "title": "Silent Operation",
+            "text": "Stain-Resistant Mobility: Black five-star base with ultra-quiet casters provides stable mobility in any treatment room environment."
           }
         }
       },
@@ -183,8 +191,8 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Adjustment:",
-            "text": "Engage the under-seat lever to activate the pneumatic lift for smooth height modification."
+            "bold_prefix": "Adjust",
+            "text": "the seat height between 20.5 and 27.5 inches using the pneumatic lever to match your working surface."
           }
         },
         "instruction_item_8VfGh8": {
