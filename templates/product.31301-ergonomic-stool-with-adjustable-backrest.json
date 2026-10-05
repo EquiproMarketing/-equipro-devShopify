@@ -11,6 +11,66 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "color_swatch_item_LUm8tq": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "White",
+            "color_hex": "#FFFFFF"
+          }
+        },
+        "color_swatch_item_iccnpJ": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Navy",
+            "color_hex": "#1B1E2E"
+          }
+        },
+        "color_swatch_item_xBpKaL": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Black",
+            "color_hex": "#111111"
+          }
+        },
+        "color_swatch_item_KKneRj": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Dove",
+            "color_hex": "#919291"
+          }
+        },
+        "color_swatch_item_eHCFrA": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Charcoal",
+            "color_hex": "#4C4C4C"
+          }
+        },
+        "color_swatch_item_UMD4ik": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Sand",
+            "color_hex": "#CCA88D"
+          }
+        },
+        "color_swatch_item_wWHG9J": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Oyster",
+            "color_hex": "#D8D4C7"
+          }
+        }
+      },
+      "block_order": [
+        "color_swatch_item_LUm8tq",
+        "color_swatch_item_iccnpJ",
+        "color_swatch_item_xBpKaL",
+        "color_swatch_item_KKneRj",
+        "color_swatch_item_eHCFrA",
+        "color_swatch_item_UMD4ik",
+        "color_swatch_item_wWHG9J"
+      ],
       "settings": {
         "back_text": "Back",
         "custom_title": "Ergonomic Stool with Adjustable Backrest",
