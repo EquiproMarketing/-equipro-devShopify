@@ -143,22 +143,22 @@
         "feature_item_8YjzYH": {
           "type": "feature_item",
           "settings": {
-            "title": "Adjustable Ergonomic Backrest:",
-            "text": "Designed to support the lower spine and adapt to various practitioner postures during long treatment procedures."
+            "title": "Unrivaled Durability",
+            "text": "Heavy-duty star base: Construction with stain-resistant metal to maintain flawless appearance in high-traffic spas."
           }
         },
         "feature_item_F4iL9F": {
           "type": "feature_item",
           "settings": {
-            "title": "Pneumatic Height Control:",
-            "text": "Smooth air-lift mechanism allowing effortless height adjustment to match any professional treatment table."
+            "title": "Thigh Circulation Cushion:",
+            "text": "Contoured seating surface designed to eliminate pressure points for practicing aestheticians, promoting healthy blood flow during back-to-back appointments."
           }
         },
         "feature_item_RXpARk": {
           "type": "feature_item",
           "settings": {
-            "title": "Stain-Resistant 5-Star Base:",
-            "text": "Heavy-duty 5-leg black base equipped with ultra-quiet casters for secure stability and smooth mobility."
+            "title": "Adjustable Tilting Backrest:",
+            "text": "Multi-position lumbar support system that stabilizes lower-back alignment across full 8-hour shifts."
           }
         }
       },
@@ -191,7 +191,7 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Adjustment:",
+            "bold_prefix": "Set Initial Working Height",
             "text": "Engage the under-seat lever to activate the pneumatic lift for effortless height modification."
           }
         },
