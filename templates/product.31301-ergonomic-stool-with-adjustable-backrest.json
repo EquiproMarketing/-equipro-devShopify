@@ -191,22 +191,29 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Set Initial Working Height",
-            "text": "Engage the under-seat lever to activate the pneumatic lift for effortless height modification."
+            "bold_prefix": "Set Initial Working Height:",
+            "text": "Pull the pneumatic air-lift lever beneath the seat to adjust the height between 20.5″ and 27.5″ until your thighs sit parallel to the floor."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Backrest Positioning:",
-            "text": "Adjust the ergonomic backrest to support your lumbar curve, ensuring optimal lower back alignment."
+            "bold_prefix": "Engage Backrest Tilt:",
+            "text": "Adjust the tilting backrest mechanism to provide direct lumbar contact while seated in your active working posture."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "360° Mobility:",
-            "text": "Utilize the five-star base and silent casters for smooth, uninterrupted movement around workstations."
+            "bold_prefix": "Align to Client Station:",
+            "text": "Position the stool close to the head of the treatment bed or procedure table to reduce forward reach."
+          }
+        },
+        "instruction_item_ktPkyT": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maintain Fluid Mobility:",
+            "text": "Leverage the smooth-rolling 5-star caster base to glide between your product tray and the client station without standing up."
           }
         },
         "section_header_dGJcmr": {
@@ -218,15 +225,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Surface Check:",
-            "text": "Ensure all five casters are in full contact with a level floor surface before sitting."
+            "bold_prefix": "Weight & Surface Protocol:",
+            "text": "Ensure all five casters remain in full contact with a flat, level floor before applying full weight."
+          }
+        },
+        "instruction_item_xVK37J": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Adjustment Safety:",
+            "text": "Do not operate the pneumatic height lever while standing or leaning excessively off-center."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Maintenance:",
-            "text": "Wipe down the leatherette regularly with non-abrasive professional cleaners to preserve finish quality."
+            "bold_prefix": "Disinfection Routine:",
+            "text": "Avoid using solvent-based cleaners or alcohol concentrations above recommended spa standards on the ultra-resistant leatherette to prevent premature drying."
           }
         }
       },
@@ -235,8 +249,10 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_ktPkyT",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
+        "instruction_item_xVK37J",
         "instruction_item_QqEHKc"
       ],
       "settings": {
@@ -258,36 +274,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range of the 31301 stool?",
-            "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
+            "question": "What is the weight capacity of this ergonomic stool?",
+            "answer": "<p><strong>Industrial casters and steel bases support standard professional loads up to 100 lbs.</strong> Designed for practitioner stability during use.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the backrest fully adjustable?",
-            "answer": "<p>Yes, it features an adjustable ergonomic backrest to provide custom lumbar support during long working shifts.</p>"
+            "question": "What is the height range of the 31301 model?",
+            "answer": "<p><strong>The stool features a motorized-style air-lift adjustment from 20.5\" to 27.5\" high.</strong> This allows for precision alignment with various table heights.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the casters suitable for hardwood floors?",
-            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
+            "question": "How should I maintain the upholstery?",
+            "answer": "<p><strong>Clean the ultra-resistant leatherette daily with mild, non-abrasive clinical grade cleansers.</strong> This ensures longevity and prevents staining or cracking.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "How should I clean the upholstery?",
-            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+            "question": "Does the stool require assembly upon delivery?",
+            "answer": "<p><strong>Partial assembly is required for this SKU to ensure secure component fitment.</strong> Instructions are provided for quick professional setup.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Is assembly required upon delivery?",
-            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
+            "question": "What kind of warranty is included with the 31301?",
+            "answer": "<p><strong>A 2-year limited professional warranty covers all manufacturing defects and parts.</strong> This excludes damage from misuse or shipping costs.</p>"
+          }
+        },
+        "faq_item_66GmJe": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Where is Equipro equipment manufactured?",
+            "answer": "<p><strong>All Equipro products are engineered and manufactured in North America (Montreal / Vermont).</strong> We adhere to strict international quality and safety standards.</p>"
           }
         }
       },
@@ -296,7 +319,8 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_66GmJe"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
