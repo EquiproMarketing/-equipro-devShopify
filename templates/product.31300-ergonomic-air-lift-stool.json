@@ -274,36 +274,50 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range of the 31300 stool?",
-            "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
+            "question": "What is the height range of the stool?",
+            "answer": "<p>The height is adjustable from 20.5 to 27.5 inches. This broad range allows for an ideal working posture for various treatments.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "How does the cushion design improve comfort?",
-            "answer": "<p>The seat is specially cushion-shaped to help improve blood circulation at the thigh level during prolonged professional use.</p>"
+            "question": "Is the backrest adjustable?",
+            "answer": "<p>Yes, the ergonomic backrest is fully adjustable. It is specifically designed to effectively support the back during long sessions.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the casters suitable for hardwood floors?",
-            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
+            "question": "What material is the seat made of?",
+            "answer": "<p>It features an ultra-white, ultra-durable leatherette. This material ensures long-lasting hygiene and resilience in a clinical setting.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "How should I clean the upholstery?",
-            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+            "question": "Does the stool require assembly?",
+            "answer": "<p>Partial assembly is required upon delivery. The process is straightforward to ensure maximum structural integrity.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Is assembly required upon delivery?",
-            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
+            "question": "Does the seat design help with leg fatigue?",
+            "answer": "<p>Yes, the contoured cushion promotes better blood circulation in the thighs. This significantly optimizes comfort during prolonged care.</p>"
+          }
+        },
+        "faq_item_eUiqjC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the total weight of the stool?",
+            "answer": "<p>The stool weighs 25 lb, or 12 kg. This substantial build ensures professional stability during daily operations.</p>"
+          }
+        },
+        "faq_item_k3xgE8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the wheels noisy on hard floors?",
+            "answer": "<p>No, it is equipped with ultra-quiet casters. This helps maintain a peaceful, relaxing atmosphere in the spa.</p>"
           }
         }
       },
@@ -312,7 +326,9 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_eUiqjC",
+        "faq_item_k3xgE8"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
