@@ -274,36 +274,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range of the 31200 stool?",
-            "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
+            "question": "What is the height adjustment range of the Round Air-Lift Stool?",
+            "answer": "<p><strong>It adjusts smoothly from 20.5 inches to 27.5 inches.</strong> This accommodates standard facial tables and low workstation setups.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the backrest adjustable?",
-            "answer": "<p>Yes, it features an ergonomic adjustable backrest designed to provide customized lumbar support during long shifts.</p>"
+            "question": "Does the stool come with a backrest?",
+            "answer": "<p><strong>Both backless and backrest models are available.</strong> Model 31100/EI-311 is backless, while 31200/EI-312 includes an adjustable backrest.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the casters suitable for hardwood floors?",
-            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
+            "question": "What type of warranty covers this equipment?",
+            "answer": "<p><strong>It is backed by a 2-year manufacturer warranty.</strong> This covers mechanical and manufacturing defects on professional models.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "How should I clean the upholstery?",
-            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+            "question": "Are custom upholstery colors available?",
+            "answer": "<p><strong>Yes, choose from standard white or custom color charts.</strong> Select from Equipro’s specialized color palettes to match your decor.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
             "question": "Is assembly required upon delivery?",
-            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
+            "answer": "<p><strong>Minimal assembly is required upon receipt.</strong> Simply seat the pneumatic cylinder into the base and attach the cushion.</p>"
+          }
+        },
+        "faq_item_CmzCH9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the casters safe for hard clinic flooring?",
+            "answer": "<p><strong>Yes, ultra-quiet casters are engineered for smooth glide.</strong> They protect floor coatings while ensuring silent studio movement.</p>"
           }
         }
       },
@@ -312,7 +319,8 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_CmzCH9"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
