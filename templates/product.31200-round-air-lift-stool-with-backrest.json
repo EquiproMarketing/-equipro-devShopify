@@ -15,6 +15,13 @@
         "color_swatch_item_87c3f7": {
           "type": "color_swatch_item",
           "settings": {
+            "color_name": "White",
+            "color_hex": "#FFFFFF"
+          }
+        },
+        "color_swatch_item_g9tbJe": {
+          "type": "color_swatch_item",
+          "settings": {
             "color_name": "Oyster",
             "color_hex": "#D8D4C7"
           }
@@ -50,6 +57,7 @@
       },
       "block_order": [
         "color_swatch_item_87c3f7",
+        "color_swatch_item_g9tbJe",
         "color_swatch_item_kemerM",
         "color_swatch_item_ycJXj8",
         "color_swatch_item_kiEqQz",
