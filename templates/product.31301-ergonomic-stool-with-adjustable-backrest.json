@@ -16,14 +16,14 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "White",
-            "color_hex": "#FFFFFF"
+            "color_hex": "#ffffff"
           }
         },
         "color_swatch_item_iccnpJ": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#1B1E2E"
+            "color_hex": "#1b1e2e"
           }
         },
         "color_swatch_item_xBpKaL": {
@@ -44,21 +44,21 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Charcoal",
-            "color_hex": "#4C4C4C"
+            "color_hex": "#4c4c4c"
           }
         },
         "color_swatch_item_UMD4ik": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Sand",
-            "color_hex": "#CCA88D"
+            "color_hex": "#cca88d"
           }
         },
         "color_swatch_item_wWHG9J": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Oyster",
-            "color_hex": "#D8D4C7"
+            "color_hex": "#d8d4c7"
           }
         }
       },
@@ -169,7 +169,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/equipro-ergonomic-air-lift-stool-with-adjustable-backrest-hydraulic-pneumatic-beauty-clinic-professional-spa-sku-31301.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -256,7 +256,7 @@
         "instruction_item_QqEHKc"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/equipro-ergonomic-air-lift-stool-adjustable-backrest-beauty-clinic-practitioner-stool-sku-31301.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
