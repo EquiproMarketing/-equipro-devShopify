@@ -11,6 +11,18 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "color_swatch_item_rCqjG3": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Black",
+            "color_hex": "#111111"
+          }
+        }
+      },
+      "block_order": [
+        "color_swatch_item_rCqjG3"
+      ],
       "settings": {
         "back_text": "Back",
         "custom_title": "EI-311 Round Air-Lift Stool",
