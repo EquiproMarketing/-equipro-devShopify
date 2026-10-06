@@ -12,16 +12,40 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "color_swatch_item_rCqjG3": {
+        "color_swatch_item_BANJHJ": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Black",
             "color_hex": "#111111"
           }
+        },
+        "color_swatch_item_PVaL8z": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Sand",
+            "color_hex": "#CCA88D"
+          }
+        },
+        "color_swatch_item_rCqjG3": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "White",
+            "color_hex": "#FFFFFF"
+          }
+        },
+        "color_swatch_item_gkUTAj": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Navy",
+            "color_hex": "#1B1E2E"
+          }
         }
       },
       "block_order": [
-        "color_swatch_item_rCqjG3"
+        "color_swatch_item_BANJHJ",
+        "color_swatch_item_PVaL8z",
+        "color_swatch_item_rCqjG3",
+        "color_swatch_item_gkUTAj"
       ],
       "settings": {
         "back_text": "Back",
