@@ -206,36 +206,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "Does this stool include a backrest?",
-            "answer": "<p>No, the EI-311 features a compact round design without a backrest for maximum mobility and easy storage under treatment tables.</p>"
+            "question": "What is the adjustment range of this stool?",
+            "answer": "<p><strong>The stool height adjusts smoothly from 20.5\" to 28\" to fit diverse salon desks.</strong> This range supports standard facial beds, lash stations, and manicure tables.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the weight capacity of this stool?",
-            "answer": "<p>It is engineered to support professional daily use with high-performance industrial-grade durability.</p>"
+            "question": "What colors can I choose for the upholstery?",
+            "answer": "<p><strong>It is available in the selection of colors listed in Color Chart B.</strong> These include classic commercial options such as White, Black, and Navy.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the casters suitable for hardwood floors?",
-            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
+            "question": "Does this stool require manual assembly?",
+            "answer": "<p><strong>Yes, simple partial assembly is required to mount the cushion, base, and casters.</strong> No specialized heavy tools are needed to complete the quick structural setup.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "How should I clean the upholstery?",
-            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+            "question": "Does the EI-311 include a manufacturer warranty?",
+            "answer": "<p><strong>Yes, the EI-311 model is backed by a robust 1-year warranty.</strong> This covers parts and labor directly handled by certified technicians at our Canadian facility.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "Is assembly required upon delivery?",
-            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
+            "question": "Are the rolling casters safe for clinical hardwood floors?",
+            "answer": "<p><strong>Yes, the ultra-quiet casters are engineered to roll smoothly without marking floors.</strong> They glide easily over commercial tiles, laminate, and low-profile rugs.</p>"
+          }
+        },
+        "faq_item_tgGUx8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I purchase a shorter piston if needed?",
+            "answer": "<p><strong>Yes, compatible short, very short, and ultra-short pistons are sold separately by Equipro.</strong> These can easily adapt your workstation to pedicure or low-desk setups.</p>"
           }
         }
       },
@@ -244,7 +251,8 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_tgGUx8"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
