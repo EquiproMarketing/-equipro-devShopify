@@ -1,0 +1,290 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Calypso Portable Table",
+        "intro_highlight": "Crafted for versatile aesthetic environments, the Calypso EI-23402 represents the standard in North American manufacturing, prioritizing practitioner ergonomics and lightweight mobility. By integrating a secure aluminum frame, this portable system allows professionals to maintain a seamless workflow and optimal stability during intensive on-the-go services.",
+        "custom_description": "<p>The Calypso table is a versatile portable solution for massage, facials, waxing, and various body treatments. Very easy to fold and unfold, it offers adjustable height and a liftable backrest for optimal positioning. Its secure leg assembly system with locks, reinforced corners, and aluminum frame and legs ensure safe stability. Its stretchable, oil- and stain-resistant leatherette makes it easy to maintain. Available in 28-inch width, with carrying bag. Available in black only.</p>",
+        "subtitle": "Lightweight Precision for Mobile Professionals",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optimal performance and structural integrity of the Calypso EI-23402, sanitize with aesthetic-grade solvent formulated for synthetic leather daily. The stretchable oil-resistant leatherette resists liquid permeation, ensuring a pristine professional appearance across years of heavy usage. Consistent care extends upholstery lifespan and maintains a sanitary surface.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": false,
+        "featured_product": "calypso-ei-23402",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_app1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>For professionals executing high-volume mobile facials, the Calypso's fully adjustable liftable backrest ensures clients remain at their exact optimal angle. This instant-response positioning eliminates the need to constantly readjust pillows, significantly reducing postural strain and lower-back tension while enhancing overall service consistency during extended on-site sessions.</p>"
+          }
+        },
+        "faq_item_app2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Lash Technician:",
+            "answer": "<p>Precision lash extension work requires immaculate stability. The robust aluminum frame and locking leg assembly allow lash technicians to maintain a rock-solid workstation. This structural integrity prevents micro-movements and ensures flawless application, delivering enhanced client comfort and repeatable results even when setting up in varying environmental conditions.</p>"
+          }
+        },
+        "faq_item_app3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Bodywork Specialist:",
+            "answer": "<p>When alternating between different body services and waxing protocols, flexibility is crucial. The lightweight, easily foldable design accommodates rapid setup in back-to-back appointments, allowing mobile practitioners to efficiently transport the 50-pound bed without workflow delays, directly enhancing operational efficiency and reducing downtime.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_app1",
+        "faq_item_app2",
+        "faq_item_app3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead><tr><th>TECHNICAL ASPECT</th><th>SPECIFICATION DETAILS</th></tr></thead>\n    <tbody>\n      <tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr>\n      <tr><td class=\"feature-label\">Model SKU</td><td>EI-23402 Calypso</td></tr>\n      <tr><td class=\"feature-label\">Primary Materials</td><td>Aluminum frame and legs, oil- and stain-resistant stretchable leatherette upholstery</td></tr>\n      <tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>72\" L x 28\" W x 24\"/34.5\" H (adjusted)</td></tr>\n      <tr><td class=\"feature-label\">Weight</td><td>50 lb / 23 kg</td></tr>\n      <tr><td class=\"feature-label\">Adjustability</td><td>Height adjustable from 24\" to 34.5\", liftable backrest for optimal positioning</td></tr>\n      <tr><td class=\"feature-label\">Foldability</td><td>Highly portable: quick fold/unfold design with carrying bag included</td></tr>\n      <tr><td class=\"feature-label\">Upholstery</td><td>Ultra-durable, oil-resistant stretchable leatherette (black only)</td></tr>\n      <tr><td class=\"feature-label\">Stability Features</td><td>Secure leg assembly system with locks, reinforced corners, aluminum construction</td></tr>\n      <tr><td class=\"feature-label\">Intended Use</td><td>Portable solution for massage, facials, waxing, and body treatments</td></tr>\n      <tr><td class=\"feature-label\">Accessories Included</td><td>Carrying bag for transport and storage</td></tr>\n      <tr><td class=\"feature-label\">Safety Features</td><td>Reinforced corners and secure locking leg system for stability during use</td></tr>\n      <tr><td class=\"feature-label\">Certifications</td><td>Professional-grade construction meeting international standards</td></tr>\n      <tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr>\n      <tr><td class=\"feature-label\">Country of Origin</td><td>Designed and manufactured to Equipro Beauty's international quality standards</td></tr>\n    </tbody>\n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability:",
+            "text": "Secure leg assembly constructed with locking aluminum legs and reinforced corners to guarantee safe stability in dynamic aesthetic environments."
+          }
+        },
+        "feature_item_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Liftable Backrest:",
+            "text": "Ergonomic adjustable backrest designed to optimize working height for estheticians and ensure precise positioning, maximizing client relaxation."
+          }
+        },
+        "feature_item_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Oil-Resistant Upholstery:",
+            "text": "Stretchable black leatherette that resists stains and aesthetic oils, ensuring seamless integration into high-end mobile spa setups."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_1",
+        "feature_item_2",
+        "feature_item_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_how": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Remove the table:",
+            "text": "Remove the Calypso table from its included carrying bag."
+          }
+        },
+        "instruction_item_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Unfold:",
+            "text": "Unfold the table, ensuring the secure leg assembly system fully extends and the locks engage."
+          }
+        },
+        "instruction_item_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Adjust height:",
+            "text": "Adjust the aluminum legs to your optimal ergonomic working height, adjustable between 24 and 34.5 inches."
+          }
+        },
+        "instruction_item_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position backrest:",
+            "text": "Lift the adjustable backrest to the desired angle for the specific aesthetic service."
+          }
+        },
+        "instruction_item_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Clean and store:",
+            "text": "Wipe down the oil-resistant stretchable leatherette after use before folding and storing."
+          }
+        },
+        "section_header_safety": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Leg locks:",
+            "text": "Always verify that all leg locks are fully engaged before allowing a client to mount the table."
+          }
+        },
+        "instruction_item_safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight limit:",
+            "text": "Do not exceed the standard weight limits recommended for aluminum portable tables."
+          }
+        },
+        "instruction_item_safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Upholstery:",
+            "text": "Keep sharp tools away from the stretchable leatherette surface to prevent punctures or tears."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_how",
+        "instruction_item_1",
+        "instruction_item_2",
+        "instruction_item_3",
+        "instruction_item_4",
+        "instruction_item_5",
+        "section_header_safety",
+        "instruction_item_safety_1",
+        "instruction_item_safety_2",
+        "instruction_item_safety_3"
+      ],
+      "settings": {
+        "image": "",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is a carrying bag included with the Calypso table?",
+            "answer": "<p>Yes, the carrying bag is included. It is designed for easy and efficient transport.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the width of the Calypso table?",
+            "answer": "<p>The table is exactly 28 inches wide. This provides ample space for client comfort.</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What colors are available for the upholstery?",
+            "answer": "<p>The Calypso is available in black only. It features a stretchable, oil-resistant leatherette finish.</p>"
+          }
+        },
+        "faq_item_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the height of the table adjustable?",
+            "answer": "<p>Yes, the height adjusts from 24 to 34.5 inches. This accommodates various practitioner heights.</p>"
+          }
+        },
+        "faq_item_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How heavy is the Calypso portable table?",
+            "answer": "<p>It weighs exactly 50 pounds (23 kg). This lightweight profile is due to its aluminum frame.</p>"
+          }
+        },
+        "faq_item_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the table have an adjustable backrest?",
+            "answer": "<p>Yes, it features a liftable backrest. This allows for optimal positioning during facial services.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3",
+        "faq_item_4",
+        "faq_item_5",
+        "faq_item_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Products to Compare",
+        "compare_collection": "portable-tables"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

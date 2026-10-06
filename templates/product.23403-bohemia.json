@@ -1,0 +1,290 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Bohemia Seated Massage Chair",
+        "intro_highlight": "Engineered to meet rigorous North American manufacturing standards, this portable workstation transforms confined spaces into premium aesthetic environments. The intuitive folding mechanism and ultra-lightweight frame preserve practitioner ergonomics while ensuring rapid, seamless setup for mobile or on-location professional services.",
+        "custom_description": "<p>The Bohemia chair is a practical and lightweight solution for seated massage, perfect for travel and confined spaces. Very easy to fold and unfold, it offers quick setup and a comfortable experience for the client. Comes with a carrying bag for easy and efficient transport. Available in several colors according to the B. color chart.</p>",
+        "subtitle": "The Perfect Mobility Solution for Modern Professionals",
+        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the structural integrity and pristine finish of the Bohémia, sanitize the upholstery with professional-grade, non-abrasive cleaners formulated for spa environments daily. The premium stretchable vinyl features advanced stain resistance, ensuring an immaculate presentation across years of intensive use. Consistent care maintains the luxurious feel and extends the functional lifespan of your investment.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": false,
+        "featured_product": "bohemia-ei-23403",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_app1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Licensed professional:",
+            "answer": "<p>For the licensed professional, specifically the Mobile Esthetician, the Bohémia serves as the ultimate on-the-go workspace. Its heavy-duty, ultra-lightweight frame directly addresses the physical strain of transporting equipment between locations. By eliminating postural strain during setup and breakdown, the practitioner can maintain peak energy levels throughout full 8-hour shifts, translating directly into operational efficiency and a premium client experience during express spa rituals. This professional station ensures seamless workflow integration via its intuitive one-hand control.</p>"
+          }
+        },
+        "faq_item_app2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Certified technician:",
+            "answer": "<p>The certified technician, such as a Lash Technician, benefits immensely from the chair’s fully adjustable positioning capabilities. When performing detailed services, the design mitigates wrist discomfort and shoulder fatigue often experienced during back-to-back appointments. This allows for sustained technical precision, ensuring repeatable results and superior service execution for every brow sculpting session. The precision tool acts as a highly adaptable workstation, integrating smoothly into confined rooms by offering an optimal working height through tool-less repositioning.</p>"
+          }
+        },
+        "faq_item_app3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Spa Therapist:",
+            "answer": "<p>For practicing aestheticians, such as a Spa Therapist, maintaining proper posture is crucial for service longevity and practitioner safety. The Bohémia acts as an ergonomic workstation that prevents lower-back tension during extended treatment sessions. The focus remains strictly on treatment execution, delivering enhanced client comfort during targeted back treatments. The workstation addresses modality-specific positioning requirements effortlessly with its friction-free adjustment mechanisms.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_app1",
+        "faq_item_app2",
+        "faq_item_app3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Professional Applications",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead><tr><th>TECHNICAL ASPECT</th><th>SPECIFICATION DETAILS</th></tr></thead>\n    <tbody>\n      <tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr>\n      <tr><td class=\"feature-label\">Model SKU</td><td>EI-23403 Bohemia</td></tr>\n      <tr><td class=\"feature-label\">Primary Materials</td><td>Aluminum frame and legs with stretchable, oil- and stain-resistant leatherette upholstery</td></tr>\n      <tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>28\" x 72\" x 24\"/34\" H (adjustable height)</td></tr>\n      <tr><td class=\"feature-label\">Weight</td><td>26 lb / 12 kg</td></tr>\n      <tr><td class=\"feature-label\">Adjustability</td><td>Height adjustable from 24\" to 34\", liftable backrest for optimal positioning</td></tr>\n      <tr><td class=\"feature-label\">Maximum Load Capacity</td><td>Up to 300 lb (professional portable rating)</td></tr>\n      <tr><td class=\"feature-label\">Control Type</td><td>Manual folding mechanism with secure leg locks</td></tr>\n      <tr><td class=\"feature-label\">Portability Features</td><td>Lightweight aluminum construction, quick fold/unfold design, includes carrying bag</td></tr>\n      <tr><td class=\"feature-label\">Upholstery</td><td>Stretchable leatherette resistant to oils and stains, easy to clean</td></tr>\n      <tr><td class=\"feature-label\">Safety Features</td><td>Secure leg assembly system with locks, reinforced corners for stability</td></tr>\n      <tr><td class=\"feature-label\">Intended Use</td><td>Seated massage, facials, waxing, and various body treatments in professional settings</td></tr>\n      <tr><td class=\"feature-label\">Color Options</td><td>Multiple colors available (Color Chart B)</td></tr>\n      <tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr>\n      <tr><td class=\"feature-label\">Certifications</td><td>CSA & UL approved components where applicable</td></tr>\n      <tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr>\n    </tbody>\n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability:",
+            "text": "The robust aluminum frame is engineered with reinforced joints to deliver uncompromising stability in dynamic spa contexts."
+          }
+        },
+        "feature_item_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Effortless Portability:",
+            "text": "A lightweight 26-pound design coupled with a customized transport bag ensures rapid mobility for practitioners and mobile aesthetic teams, maximizing daily service capacity."
+          }
+        },
+        "feature_item_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Client-Centric Comfort:",
+            "text": "High-density padding specifically contoured for seated treatments optimizes physical support for the user, ensuring deep relaxation."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_1",
+        "feature_item_2",
+        "feature_item_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_how": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Transport:",
+            "text": "Unzip the included transport bag and carefully lift the folded chair by its central aluminum frame."
+          }
+        },
+        "instruction_item_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Unfold:",
+            "text": "Release the primary locking mechanism and unfold the base legs until they click securely into the fully extended position."
+          }
+        },
+        "instruction_item_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Adjust supports:",
+            "text": "Adjust the client chest pad and face cradle using the intuitive friction-free levers to accommodate the individual's height."
+          }
+        },
+        "instruction_item_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Verify locks:",
+            "text": "Verify all structural locks and joints are firmly engaged before seating the client."
+          }
+        },
+        "instruction_item_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Fold for storage:",
+            "text": "After the treatment, compress the adjustment levers to fold the chair back into its compact, flat configuration for storage."
+          }
+        },
+        "section_header_safety": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Surface:",
+            "text": "Always place the chair on a flat, stable, and dry surface to prevent tipping or shifting during treatments."
+          }
+        },
+        "instruction_item_safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Locks and hinges:",
+            "text": "Inspect all locking mechanisms and hinges for secure engagement prior to each client session."
+          }
+        },
+        "instruction_item_safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight capacity:",
+            "text": "Do not exceed the recommended weight capacity, and ensure weight is distributed evenly across the seat and supports."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_how",
+        "instruction_item_1",
+        "instruction_item_2",
+        "instruction_item_3",
+        "instruction_item_4",
+        "instruction_item_5",
+        "section_header_safety",
+        "instruction_item_safety_1",
+        "instruction_item_safety_2",
+        "instruction_item_safety_3"
+      ],
+      "settings": {
+        "image": "",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the carrying bag included with the chair?",
+            "answer": "<p>Yes, a durable transport cover is included. It protects the chair during mobile transport.</p>"
+          }
+        },
+        "faq_item_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How much does the Bohémia chair weigh?",
+            "answer": "<p>It weighs exactly 26 lbs (12 kg). The lightweight aluminum frame ensures effortless portability.</p>"
+          }
+        },
+        "faq_item_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the chair accommodate different client heights?",
+            "answer": "<p>Yes, the ergonomic components are fully adjustable. This ensures customized support and maximum comfort.</p>"
+          }
+        },
+        "faq_item_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the upholstery easy to clean?",
+            "answer": "<p>Yes, it features stain-resistant, stretchable vinyl. It is specifically designed for quick sanitization.</p>"
+          }
+        },
+        "faq_item_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it require assembly upon delivery?",
+            "answer": "<p>No, it arrives fully assembled. Simply unfold the frame and it is ready.</p>"
+          }
+        },
+        "faq_item_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty on this product?",
+            "answer": "<p>It includes a standard 1-year warranty. This covers manufacturing defects under professional use.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_1",
+        "faq_item_2",
+        "faq_item_3",
+        "faq_item_4",
+        "faq_item_5",
+        "faq_item_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "modal_title": "Select Products to Compare",
+        "compare_collection": "portable-chairs"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
