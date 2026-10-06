@@ -50,10 +50,11 @@
         },
         "auto_collection_ePz7tm": {
           "type": "auto_collection",
+          "disabled": true,
           "settings": {
             "parent_category": "",
-            "sub_category": "Stools",
-            "collection": "stools",
+            "sub_category": "",
+            "collection": "",
             "products_to_show": 6
           }
         },
