@@ -103,22 +103,22 @@
         "feature_item_8YjzYH": {
           "type": "feature_item",
           "settings": {
-            "title": "Ergonomic Backrest:",
-            "text": "Features a fully adjustable backrest designed to support the lower spine and reduce fatigue during long treatment sessions."
+            "title": "Unrivaled Durability:",
+            "text": "High-Grade Construction with industrial steel and premium upholstery to ensure performance outcome in high-traffic salon environments."
           }
         },
         "feature_item_F4iL9F": {
           "type": "feature_item",
           "settings": {
-            "title": "Pneumatic Height Control:",
-            "text": "Equipped with a smooth-glide air-lift mechanism allowing effortless height modification for any workstation."
+            "title": "Ergonomic Integration:",
+            "text": "An adjustable backrest designed to provide lumbar support for Estheticians and Specialists, reducing long-term physical fatigue."
           }
         },
         "feature_item_RXpARk": {
           "type": "feature_item",
           "settings": {
-            "title": "Stain-Resistant 5-Star Base:",
-            "text": "Heavy-duty 5-leg base paired with ultra-quiet casters to ensure secure stability and effortless mobility."
+            "title": "Fluid Mobility:",
+            "text": "A stain-resistant five-star base that maintains compatibility with most professional flooring types while ensuring silent movement."
           }
         }
       },
@@ -129,7 +129,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/ei-312-round-air-lift-stool-practitioner-seating.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -151,22 +151,29 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height Adjustment:",
-            "text": "Engage the under-seat lever to activate the pneumatic lift for effortless height modification."
+            "bold_prefix": "Height Calibration:",
+            "text": "Use the under-seat lever to engage the air-lift piston, adjusting the height between 20.5\" and 28\" for your specific workstation."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Backrest Positioning:",
-            "text": "Adjust the ergonomic backrest to support your lumbar curve, ensuring optimal lower back alignment."
+            "text": "Adjust the ergonomic backrest to align with your lumbar spine to ensure proper spinal stacking."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "360° Mobility:",
-            "text": "Utilize the five-star base and silent casters for smooth, uninterrupted movement around workstations."
+            "bold_prefix": "Footrest Utilization:",
+            "text": "Position feet on the integrated circular footrest to take pressure off the lower back during elevated tasks."
+          }
+        },
+        "instruction_item_qwJcVN": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Caster Engagement:",
+            "text": "Use your core to glide the five-star base across the floor for seamless transition between treatment areas."
           }
         },
         "section_header_dGJcmr": {
@@ -178,15 +185,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Surface Check:",
-            "text": "Ensure all five casters are in full contact with a level floor surface before sitting."
+            "bold_prefix": "Weight Capacity:",
+            "text": "Do not exceed the maximum load rating to maintain the integrity of the air-lift piston."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Maintenance:",
-            "text": "Wipe down the leatherette regularly with non-abrasive professional cleaners to preserve finish quality."
+            "bold_prefix": "Surface Stability:",
+            "text": "Ensure all five casters are in contact with a level, hard surface before applying full body weight."
+          }
+        },
+        "instruction_item_xVky4W": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maintenance Protocol:",
+            "text": "Regularly inspect the base and casters for debris to prevent fluid movement obstruction."
           }
         }
       },
@@ -195,12 +209,14 @@
         "instruction_item_fd7CbG",
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
+        "instruction_item_qwJcVN",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
-        "instruction_item_QqEHKc"
+        "instruction_item_QqEHKc",
+        "instruction_item_xVky4W"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/ei-312-round-air-lift-professional-practitioner-stool-backrest.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
