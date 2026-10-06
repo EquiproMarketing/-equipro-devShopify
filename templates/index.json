@@ -15,14 +15,14 @@
         "slide_MnxhKP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/epure-ergonomic-air-lift-stool-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
+            "image": "shopify://shop_images/epure-ergonomic-air-lift-stools-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
             "image_position": "bottom",
             "overlay_opacity": 15,
-            "subheading": "DIVINE EI-504",
-            "heading": "Multi-Treatment Electric Table",
-            "text": "Quiet, versatile, and built to last.",
-            "button_label": "Shop Now",
-            "button_link": "",
+            "subheading": "31300 ERGONOMIC AIR-LIFT STOOL",
+            "heading": "Close-up of the smooth air-lift mechanism",
+            "text": "Protect your spine and maintain precision. Engineered for heavy-duty daily performance in high-end spas and clinics.",
+            "button_label": "Shop the 31300 Stool",
+            "button_link": "shopify://products/ergonomic-stool-with-backrest",
             "subheading_color": "#ffffff",
             "heading_color": "#ffffff",
             "text_color": "#f5f5f7",
@@ -136,7 +136,6 @@
         "category_item_ACVzqh": {
           "type": "category_item",
           "settings": {
-            "image": "shopify://shop_images/equipro-31300_ergonomic-air-lift-stool-white.webp",
             "title": "Stools",
             "link": "shopify://collections/stools"
           }
