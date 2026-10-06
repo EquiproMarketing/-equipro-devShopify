@@ -15,15 +15,15 @@
         "color_swatch_item_QayHJU": {
           "type": "color_swatch_item",
           "settings": {
-            "color_name": "White",
-            "color_hex": "#FFFFFF"
+            "color_name": "",
+            "color_hex": "#111111"
           }
         },
         "color_swatch_item_MBAxdd": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#1B1E2E"
+            "color_hex": "#1B2A4A"
           }
         },
         "color_swatch_item_XB8bJq": {
@@ -32,44 +32,12 @@
             "color_name": "Black",
             "color_hex": "#111111"
           }
-        },
-        "color_swatch_item_CWtNcj": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Charcoal",
-            "color_hex": "#4C4C4C"
-          }
-        },
-        "color_swatch_item_3bTPNQ": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Dove",
-            "color_hex": "#919291"
-          }
-        },
-        "color_swatch_item_3pVRHY": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Oyster",
-            "color_hex": "#D8D4C7"
-          }
-        },
-        "color_swatch_item_xyaiN7": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Sand",
-            "color_hex": "#CCA88D"
-          }
         }
       },
       "block_order": [
         "color_swatch_item_QayHJU",
         "color_swatch_item_MBAxdd",
-        "color_swatch_item_XB8bJq",
-        "color_swatch_item_CWtNcj",
-        "color_swatch_item_3bTPNQ",
-        "color_swatch_item_3pVRHY",
-        "color_swatch_item_xyaiN7"
+        "color_swatch_item_XB8bJq"
       ],
       "settings": {
         "back_text": "Back",
@@ -250,36 +218,43 @@
         "faq_item_gaEA6M": {
           "type": "faq_item",
           "settings": {
-            "question": "What are the main benefits of a saddle stool compared to a round stool?",
-            "answer": "<p>The saddle-style seat naturally forces your pelvis into an upright posture, keeping your spine aligned in a neutral position. This opens up the hip angle, reduces tension in the lower back, and improves blood circulation during long hours of continuous seating.</p>"
+            "question": "Are the casters suitable for hardwood floors?",
+            "answer": "<p><strong>Equipped with ultra-quiet casters.</strong> Provides smooth mobility across all professional salon flooring without surface damage.</p>"
           }
         },
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "Can the backrest height and tilt angle be adjusted independently?",
-            "answer": "<p>Yes. On our stools equipped with backrests, you can fully adjust both the height and the tilt tension to match your body frame, providing targeted lumbar support exactly where you need it most.</p>"
+            "question": "What is the height range of the 31100 stool?",
+            "answer": "<p>The height is adjustable from 20.5 inches to 27.5 inches, ensuring compatibility with all standard-height aesthetic treatment tables.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the caster wheels safe for hardwood floors?",
-            "answer": "<p>Absolutely. Our rolling bases feature high-grade, smooth-rolling casters that are specifically designed to glide flawlessly across hard studio flooring, commercial tiles, and thin laminate without leaving marks or scuffs.</p>"
+            "question": "What is the weight capacity of this stool?",
+            "answer": "<p>It is engineered to support professional daily use with high-performance industrial-grade durability.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the maximum height range and weight capacity?",
-            "answer": "<p>Equipro professional stools support up to 300 lbs (136 kg) with exceptional structural integrity. Height adjustment ranges vary by model but are engineered to perfectly fit standard treatment tables and low-profile setups alike.</p>"
+            "question": "Are the casters suitable for hardwood floors?",
+            "answer": "<p>Yes, the ultra-quiet casters provide smooth, secure mobility across all professional salon flooring types without surface damage.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "How do I clean and care for the stool's upholstery?",
-            "answer": "<p>The premium vinyl covering is non-porous and incredibly durable. For daily cleaning, simply wipe it down with a damp cloth and mild antibacterial, non-alcohol soap solution or professional salon-grade disinfectant wipes between client shifts.</p>"
+            "question": "How should I clean the upholstery?",
+            "answer": "<p>Use non-abrasive professional cleaners and wipe down regularly to preserve the stain and oil-resistant properties of the vinyl.</p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required upon delivery?",
+            "answer": "<p>Partial assembly is required, designed for fast and straightforward setup in professional treatment rooms.</p>"
           }
         }
       },
@@ -288,7 +263,8 @@
         "faq_item_JkpEmj",
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
-        "faq_item_8YiyhY"
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

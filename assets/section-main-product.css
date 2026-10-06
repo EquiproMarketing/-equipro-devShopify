@@ -267,13 +267,9 @@
     display: flex;
     gap: 12px;
     flex-wrap: wrap;
-    justify-content: center; /* Centra los círculos horizontalmente */
-    align-items: center;
     margin-top: 16px;
     margin-bottom: 12px;
-    margin-left: auto;       /* Garantiza el centrado del bloque */
-    margin-right: auto;
-    width: 100%;
+    align-items: center;
   }
   
   .product-swatch-btn {

@@ -21,10 +21,10 @@
       "name": "Collection Banner",
       "settings": {
         "custom_title": "",
-        "custom_description": "<p>Ergonomically engineered rolling stools designed with pneumatic height adjustment and high-density cushioning to provide ultimate posture support and fluid mobility for beauty&nbsp;</p>",
+        "custom_description": "",
         "fallback_description": "Professional facial steamers with precise steam control and integrated ozone technology for deep cleansing and skincare treatments.",
-        "custom_image": "shopify://shop_images/equipro-hydraulic-adjustable-stools-ergonomic-professional-beauty-clinic-equipment.webp",
-        "overlay_opacity": 10
+        "custom_image": "shopify://shop_images/professional-high-output-facial-steamer-salon-equipment-streamers-x2.webp",
+        "overlay_opacity": 40
       }
     },
     "custom_product_treatment_TNRQeX": {
@@ -32,7 +32,7 @@
       "name": "Custom Product Treatment",
       "settings": {
         "title": "",
-        "featured_collection": "stools",
+        "featured_collection": "skin-analyzer",
         "products_to_show": 8,
         "card_bg_color": "#f5f5f7",
         "default_subtitle": "Professional Treatment Series",
@@ -44,7 +44,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Protect your posture and enhance your daily workflow. Our professional aesthetic stools are crafted with Clinical-grade materials, offering smooth gliding performance and adjustable lumbar dynamics tailored for long hours of precise facial and body treatments.",
+        "text": "Discover our range of high-quality professional facial steamers designed for estheticians, spas, and skincare clinics. Featuring safe operation, durable heating elements, and optimal ozone vaporization for superior pore preparation and deep skin hydration.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -74,29 +74,29 @@
         "feature_JGhd6H": {
           "type": "feature",
           "settings": {
-            "item_title": "Anatomical Posture Support",
-            "item_text": "Designed to distribute body weight evenly, reducing pressure on the lower spine, hips, and thighs during extended treatments."
+            "item_title": "Perfect Hydration",
+            "item_text": "Steady and consistent steam flow for optimal pore opening and skin softening."
           }
         },
         "feature_CFhXYt": {
           "type": "feature",
           "settings": {
-            "item_title": "Ultra-Smooth Caster Wheels",
-            "item_text": "Features heavy-duty, hair-resistant polyurethane wheels that glide silently across any spa or salon flooring without scratching."
+            "item_title": "Ozone Technology",
+            "item_text": "Integrated UV/Ozone option for antibacterial skin purification and oxygenation."
           }
         },
         "feature_ppVAe7": {
           "type": "feature",
           "settings": {
-            "item_title": "Heavy-Duty Gas Lift",
-            "item_text": "Equipped with premium pneumatic cylinders for instant, effortless height modification that remains entirely stable under load."
+            "item_title": "Built to Last",
+            "item_text": "High-grade components, heavy-duty mobile stands, and advanced safety auto-shutoff features."
           }
         },
         "feature_kaVhpH": {
           "type": "feature",
           "settings": {
-            "item_title": "Seamless Clinical Vinyl",
-            "item_text": "Upholstered in premium, easy-to-sanitize material that is highly resistant to oils, water, and disinfectants for ultimate workspace hygiene."
+            "item_title": "Silent Operation",
+            "item_text": "Engineered to maintain a quiet, relaxing spa atmosphere during professional treatments."
           }
         }
       },
@@ -107,9 +107,9 @@
         "feature_kaVhpH"
       ],
       "settings": {
-        "title": "Why Our Stools",
-        "image_left": "shopify://shop_images/equipro-ergonomic-air-lift-stool-adjustable-backrest-beauty-clinic-practitioner-stool-sku-31301.webp",
-        "image_right": "shopify://shop_images/equipro-white-ergonomic-stools-padded-swivel-wheeled-hydraulic-style-height-adjustment-north-american-beauty-salon-studio-sku-not-provided.webp",
+        "title": "Why Our Trolleys",
+        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
+        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -136,22 +136,22 @@
         "faq_item_VhNPjK": {
           "type": "faq_item",
           "settings": {
-            "question": "What are the main benefits of a saddle stool compared to a round stool?",
-            "answer": "<p>The saddle-style seat naturally forces your pelvis into an upright posture, keeping your spine aligned in a neutral position. This opens up the hip angle, reduces tension in the lower back, and improves blood circulation during long hours of continuous seating.</p>"
+            "question": "What is the difference between the Digipro and Classic models?",
+            "answer": "<p>The Digipro Steamer features advanced digital timers, touch controls, and precise settings for automated sessions. The Classic Steamer offers robust, intuitive manual controls with the same premium-quality steam delivery and durability</p>"
           }
         },
         "faq_item_Gn3pgW": {
           "type": "faq_item",
           "settings": {
-            "question": "Can the backrest height and tilt angle be adjusted independently?",
-            "answer": "<p>Yes. On our stools equipped with backrests, you can fully adjust both the height and the tilt tension to match your body frame, providing targeted lumbar support exactly where you need it most.</p>"
+            "question": "Can I use essential oils with these steamers?",
+            "answer": "<p>Yes, depending on the specific configuration, our steamers include a specialized felt/aromatherapy compartment at the nozzle tip to allow for safe essential oil dispersion without damaging the water tank.</p>"
           }
         },
         "faq_item_kmRk4U": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the caster wheels safe for hardwood floors?",
-            "answer": "<p>Absolutely. Our rolling bases feature high-grade, smooth-rolling casters that are specifically designed to glide flawlessly across hard studio flooring, commercial tiles, and thin laminate without leaving marks or scuffs.</p>"
+            "question": "Do they have an automatic shutoff feature?",
+            "answer": "<p>Yes. Both models are equipped with a safety low-water sensor that automatically cuts off the heating element to prevent overheating and ensure professional safety.</p>"
           }
         },
         "faq_item_n68NQD": {
@@ -164,8 +164,8 @@
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "How do I clean and care for the stool's upholstery?",
-            "answer": "<p>The premium vinyl covering is non-porous and incredibly durable. For daily cleaning, simply wipe it down with a damp cloth and mild antibacterial, non-alcohol soap solution or professional salon-grade disinfectant wipes between client shifts.</p>"
+            "question": "What is the warranty?",
+            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
           }
         }
       },

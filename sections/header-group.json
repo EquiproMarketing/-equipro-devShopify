@@ -45,16 +45,15 @@
             "parent_category": "",
             "sub_category": "Trolleys",
             "collection": "trolleys",
-            "products_to_show": 16
+            "products_to_show": 6
           }
         },
         "auto_collection_ePz7tm": {
           "type": "auto_collection",
-          "disabled": true,
           "settings": {
             "parent_category": "",
-            "sub_category": "",
-            "collection": "",
+            "sub_category": "Stools",
+            "collection": "stools",
             "products_to_show": 6
           }
         },
