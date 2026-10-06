@@ -108,8 +108,8 @@
       ],
       "settings": {
         "title": "Why Our Stools",
-        "image_left": "shopify://shop_images/digipro-11100-professional-facial-steamer-aesthetician-spa-equipment.webp",
-        "image_right": "shopify://shop_images/equipro-ei-111-classic-professional-facial-steamer.webp",
+        "image_left": "shopify://shop_images/equipro-ergonomic-air-lift-stool-adjustable-backrest-beauty-clinic-practitioner-stool-sku-31301.webp",
+        "image_right": "shopify://shop_images/equipro-white-ergonomic-stools-padded-swivel-wheeled-hydraulic-style-height-adjustment-north-american-beauty-salon-studio-sku-not-provided.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -164,8 +164,8 @@
         "faq_item_ENr78Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the warranty?",
-            "answer": "<p>All Equipro professional steamers come with a comprehensive manufacturer’s warranty. Detailed coverage can be found on each specific product page.</p>"
+            "question": "How do I clean and care for the stool's upholstery?",
+            "answer": "<p>The premium vinyl covering is non-porous and incredibly durable. For daily cleaning, simply wipe it down with a damp cloth and mild antibacterial, non-alcohol soap solution or professional salon-grade disinfectant wipes between client shifts.</p>"
           }
         }
       },
