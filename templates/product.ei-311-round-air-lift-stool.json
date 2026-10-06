@@ -16,7 +16,7 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "White",
-            "color_hex": "#FFFFFF"
+            "color_hex": "#ffffff"
           }
         },
         "color_swatch_item_BANJHJ": {
@@ -30,14 +30,14 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#1B1E2E"
+            "color_hex": "#1b1e2e"
           }
         },
         "color_swatch_item_PVaL8z": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Sand",
-            "color_hex": "#CCA88D"
+            "color_hex": "#cca88d"
           }
         }
       },
@@ -137,7 +137,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/ei-311-navy-round-air-lift-stool-chrome-base.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -224,7 +224,7 @@
         "instruction_item_WNk8B8"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-solo-pil-portable-professional-wax-heater-compact-paraffin-warmer-esthetician-salon-sku-solo-pil.webp",
+        "image": "shopify://shop_images/ei-311-round-air-lift-stool-practitioner-seating-ergonomic-workspace.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
