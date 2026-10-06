@@ -42,10 +42,10 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "EI-312 Round Air-Lift Stool with Backrest",
-        "intro_highlight": "Crafted for professional aesthetic environments, the EI-312 Round Air-Lift Stool features an adjustable ergonomic backrest that provides enhanced lumbar support and reliable mobility, prioritizing practitioner ergonomics and uncompromising stability during intensive daily use.",
-        "custom_description": "<p>The EI-312 Round Air-Lift Stool is purpose-built for licensed professionals, including Estheticians, Clinical Spa Technicians, and Makeup Artists. Its smooth pneumatic height adjustment adapts effortlessly to all workstations and treatment tables. Featuring an adjustable backrest, ultra-resistant vinyl upholstery, and ultra-quiet casters, it ensures secure stability, proper spinal alignment, and frictionless mobility throughout demanding schedules.</p>",
-        "subtitle": "Ergonomic Backrest & Pneumatic Height Control",
-        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the aesthetic quality and structural integrity of the EI-312 stool, perform regular sanitation with non-abrasive products formulated for professional environments weekly. The heavy-duty stain-resistant base and premium leatherette ensure an as-new professional appearance across years of heavy usage.</p>",
+        "intro_highlight": "The EI-312 Round Air Lift Stool is engineered to bridge the gap between practitioner comfort and the rigorous demands of North American professional environments. By integrating a circular footrest with a high-precision air-lift mechanism, this station essential provides the structural stability required for intricate aesthetic procedures while maintaining the ergonomic integrity necessary for long-duration clinical use.",
+        "custom_description": "<p></p><p>The EI-312 Round Air Lift Stool is purpose-built for licensed professionals, including Estheticians, Electrologists, and Massage Therapists. Its ergonomic design targets postural tension during sessions prolongadas, enabling sharper focus on technique and results consistentes. Whether you are performing facials, electrolysis, or body treatments, this equipo adjusts to your modality específica with adjustment without friction and intuitive control.</p>",
+        "subtitle": "Precision-Engineered Support with Integrated Circular Footrest",
+        "secondary_description": "<p></p><p>While standard boutique seating often utilizes generic foams and thin-gauge metals, the Equipro EI-312 is built with industrial-grade materials designed for a 15-20 year life expectancy. The \"Equipro Difference\" lies in our ultra-resistant leatherette, which is formulated to withstand clinical-grade disinfectants without cracking, and our reinforced air-lift pistons that maintain smooth calibration even after years of daily professional adjustments.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -61,22 +61,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Clinical Aesthetician:",
-            "answer": "<p>Provides superior lumbar support and a stable 360-degree swivel foundation essential for high-precision treatments, allowing seamless movement around the client without disrupting workflow.</p>"
+            "question": "Clinical Spa Technician",
+            "answer": "<p>For the <strong>Medical Spa Technician</strong>, the EI-312 offers a range of motion that is critical during high-precision laser or injectable treatments. The silent air-lift mechanism allows for immediate height adjustments without disrupting the clinical workflow, ensuring the practitioner remains at the optimal focal length for the treatment area.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Skincare Specialist:",
-            "answer": "<p>Height adjustability combined with an ergonomic backrest allows smooth posture transitions between seated positions and lower treatment angles, reducing back, neck, and shoulder fatigue.</p>"
+            "question": "Licensed Esthetician:",
+            "answer": "<p>The <strong>Licensed Esthetician</strong> will benefit from the adjustable ergonomic backrest, which is specifically designed to mitigate postural tension during intensive facial sessions. By providing consistent lumbar support, the stool reduces the physical fatigue associated with repetitive leaning movements, allowing for sustained focus on client technique.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Makeup & Salon Artist:",
-            "answer": "<p>Industrial-grade construction and silent casters withstand the demands of long-duration sessions while keeping the workspace flexible, supported, and hygienic.</p>"
+            "question": "Tattooist or Permanent Makeup Specialist:",
+            "answer": "<p>For the <strong>Tattooist or Permanent Makeup Specialist</strong>, the robust five-star base and ultra-quiet casters provide the fluid mobility needed to navigate around the client station. The integrated circular footrest ensures that even at maximum height, the practitioner maintains a stable, balanced center of gravity, which is essential for steady-hand precision.</p>"
           }
         }
       },
@@ -92,7 +92,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5-7 business days</strong>, while expedited shipping takes <strong>2-3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-312</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, stain-resistant base with 5 legs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height control &amp; adjustable ergonomic backrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>Stain-resistant 5-leg base with silent casters for smooth mobility</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Premium ultra-resistant vinyl, stain and oil resistant; available in multiple colors</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>One-touch pneumatic height adjustment lever &amp; backrest angle control</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA and UL approved components where applicable</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Full Manufacturer Warranty</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-312</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, stain-resistant black metal base, pneumatic cylinder</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (Height)</td>\n        <td>Minimum 20.5\" to Maximum 28\" (52 cm to 71 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>16 lb (7.5 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Pneumatic air-lift height adjustment; ergonomic backrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Base</td>\n        <td>5-leg stain-resistant black base with casters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Ultra-durable vinyl available in black, sand, and white</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Mobility</td>\n        <td>Casters for smooth movement</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Assembly</td>\n        <td>Partial assembly required</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable 5-star base, secure height lock mechanism</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional round air-lift stool for aestheticians and therapists</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
