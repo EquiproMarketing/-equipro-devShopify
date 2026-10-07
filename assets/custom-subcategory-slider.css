@@ -81,11 +81,11 @@
   position: relative;
 }
 
-/* 4:5 ASPECT RATIO IMAGE CONTAINER */
+/* 2:3 ASPECT RATIO IMAGE CONTAINER */
 .custom-subcat-card__image-container {
   position: relative;
   width: 100%;
-  aspect-ratio: 4 / 5;
+  aspect-ratio: 2 / 3;
   border-radius: 20px;
   display: flex;
   align-items: center;
