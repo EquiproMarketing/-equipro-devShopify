@@ -93,22 +93,22 @@
         "faq_item_mcpNpt": {
           "type": "faq_item",
           "settings": {
-            "question": "Licensed Esthetician & Facial Specialist:",
-            "answer": "<p>The Poly-Comfort table provides unhindered facial and neck access through its precision-engineered contour and adjustable headrest. Practitioners can easily perform intricate treatments, waxing, and electrolysis without physical strain, while the steady fixed height allows seamless positioning relative to ambient lighting and equipment carts.</p>"
+            "question": "Practicing Esthetician:",
+            "answer": "<p>For the practicing Esthetician conducting multi-step facials, maintaining comfortable posture while reaching the face and décolleté is essential during extended treatment sessions. The integrated 15° seat tilt system rotates the base back, bringing the client’s facial features closer to the operator. This structural adjustment stabilizes practitioner mechanics, keeping hands precise during delicate extraction or chemical peel procedures.</p>"
           }
         },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
-            "question": "Spa & Salon Professional:",
-            "answer": "<p>Optimized for general body care and multi-purpose spa treatments, the independent manual section adjustments and stable heavy-duty base allow clinicians to position clients precisely. The durable, chemical-resistant vinyl withstands frequent sanitization protocols required in professional spa settings.</p>"
+            "question": "Lash Technicians and Microblading Specialists:",
+            "answer": "<p>For certified Lash Technicians and Microblading Specialists, client head stability during 2-to-3-hour appointments directly impacts line precision and service efficiency. The Poly-Comfort features an adjustable, contoured headrest combined with manual reclining levers, allowing the practitioner to establish fixed focal lengths and eliminate neck strain. The static, non-swivel 29.5\" height structure prevents unwanted shift, ensuring a controlled environment for intricate facial work.</p>"
           }
         },
         "faq_item_bhzmwM": {
           "type": "faq_item",
           "settings": {
-            "question": "Spa Director & Clinic Manager:",
-            "answer": "<p>Investing in Equipro equipment guarantees long-term reliability and minimal downtime. The robust mechanical adjustment systems and steel chassis are backed by a 2-year manufacturer warranty, ensuring continuous, heavy-duty operation across high-turnover treatment rooms.</p>"
+            "question": "Clinical Spa Therapists:",
+            "answer": "<p>For Clinical Spa Therapists carrying out post-procedure recovery protocols or body waxing, quick turnaround and equipment adaptability are crucial for clinic workflow. The high-durability, ultra-resistant leatherette surface cleans rapidly between sessions without deteriorating, while the fixed 29.5\" elevation provides a standardized, ergonomic height for standard practitioner stools.</p>"
           }
         }
       },
@@ -124,7 +124,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard freight delivery typically takes <strong>7–10 business days</strong></p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>21200</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty structural steel frame with ultra-resistant medical-grade vinyl upholstery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>71\" L x 24\" W x 28\" H (180 cm x 61 cm x 71 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>108 lbs (49 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Facial treatments, epilation, multi-purpose spa services, and general esthetics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Height Configuration</td>\n        <td>Stable fixed operational working height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Positioning Controls</td>\n        <td>Manual adjustable backrest, independent section inclinations, and adjustable headrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Adjustable headrest and optional removable armrests</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved structural and mechanical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty (parts and labor covered)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>22100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, reinforced steel frame</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>70\" L x 24\" W x 29.5\" H</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>111 lb (51 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Fully adjustable positioning with 15° tilt system; manual backrest and legrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Height</td>\n        <td>Fixed height of 29.5\" (75 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Seating Width</td>\n        <td>24 inches (61 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Headrest</td>\n        <td>Adjustable headrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Armrests</td>\n        <td>Optional removable ergonomic armrests</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Design Features</td>\n        <td>Rounded corners to facilitate facial massage</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable base, reinforced construction</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Ultra-white ultra-durable vinyl, colors available on special order (Chart A)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -135,21 +135,21 @@
         "feature_item_8hwhpX": {
           "type": "feature_item",
           "settings": {
-            "title": "Robust Steel Architecture",
-            "text": "Heavy-duty steel chassis engineered for structural longevity, supporting high-volume clinical and spa environments without flex."
+            "title": "Unrivaled Durability",
+            "text": "Industrial-Grade Fixed Framework: Engineered with heavy-duty steel and North American manufacturing standards to guarantee zero wobble and max static support at a working height of 29.5 inches."
           }
         },
         "feature_item_7BxRnE": {
           "type": "feature_item",
           "settings": {
-            "title": "Multi-Section Articulation",
-            "text": "Independent manual adjustment mechanisms allowing custom backrest and section angles for diverse esthetic procedures."
+            "title": "Manual Articulation Dynamics",
+            "text": "Independent backrest and leg rest manual levers designed to optimize working angles for Estheticians and Lash Technicians, enhancing client comfort without electronic reliance."
           }
         },
         "feature_item_V4efCz": {
           "type": "feature_item",
           "settings": {
-            "title": "Ultra-Resistant Upholstery",
+            "title": "Versatile Aesthetic Compatibility",
             "text": "High-grade medical vinyl designed to resist staining, tearing, and aggressive clinical disinfecting agents for long-term aesthetic integrity."
           }
         }
@@ -182,29 +182,36 @@
         "instruction_item_fd7CbG": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Positioning Setup:",
-            "text": "Position the table on a flat, stable surface within your treatment room to ensure secure client transfers."
+            "bold_prefix": "Adjust the headrest",
+            "text": "elevation and extension to align with your client's cervical spine before beginning treatments."
           }
         },
         "instruction_item_8VfGh8": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Backrest Articulation:",
-            "text": "Release the manual adjustment bracket to raise or recline the backrest smoothly to the desired treatment angle."
+            "bold_prefix": "Engage the backrest",
+            "text": "and leg rest manual levers to smoothly transition the client from an upright position to full recumbency."
           }
         },
         "instruction_item_z9KEfh": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Section Adjustment:",
-            "text": "Articulate individual middle and lower sections manually to transition between flat bed and seated configurations."
+            "bold_prefix": "Activate the 15°",
+            "text": "seat tilt mechanism to incline the base, optimizing practitioner proximity to the client's face and neck."
           }
         },
         "instruction_item_rRgyKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest Customization:",
-            "text": "Adjust or remove the headrest element to accommodate specialized facial or prone body treatments."
+            "bold_prefix": "Attach optional removable armrests",
+            "text": "(24110 / 24140) if your procedure requires supplemental client arm support."
+          }
+        },
+        "instruction_item_RjgtTq": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Reset the backrest",
+            "text": "and leg rest post-treatment to ensure safe, comfortable client entry and egress."
           }
         },
         "section_header_dGJcmr": {
@@ -241,6 +248,7 @@
         "instruction_item_8VfGh8",
         "instruction_item_z9KEfh",
         "instruction_item_rRgyKc",
+        "instruction_item_RjgtTq",
         "section_header_dGJcmr",
         "instruction_item_CRmBXw",
         "instruction_item_QqEHKc",
