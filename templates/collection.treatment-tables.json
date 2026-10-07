@@ -51,7 +51,7 @@
           "type": "subcategory",
           "settings": {
             "title": "Hydraulic / Mechanical",
-            "link": "",
+            "link": "shopify://collections/hydraulic-mechanical",
             "image": "shopify://shop_images/equipro-hydraulic-mechanical-adjustable-treatment-table-padded-segmented-upholstery-hydraulic-lift-columns-mobile-casters-spa-salon-wellness-studio-sku-not-provided.webp",
             "bg_color": "#e8e8ed",
             "title_color": "#ffffff",
@@ -67,10 +67,10 @@
           "type": "subcategory",
           "settings": {
             "title": "Portable",
-            "link": "",
+            "link": "shopify://collections/portable",
             "image": "shopify://shop_images/equipro-portables-folding-aluminum-framed-professional-treatment-table-adjustable-face-cradle-spa-salon-studio-sku-not-provided.webp",
             "bg_color": "#e8e8ed",
-            "title_color": "#FFFFFF",
+            "title_color": "#ffffff",
             "title_font_size": 28,
             "enable_text_shadow": true,
             "shadow_color": "#000000",
