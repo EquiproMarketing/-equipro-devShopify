@@ -16,15 +16,119 @@
         "hide_on_mobile": true
       }
     },
-    "collection_banner_qtVMrG": {
-      "type": "collection-banner",
-      "name": "Collection Banner",
+    "section_bento_grid_v2_hWaeBi": {
+      "type": "section-bento-grid-v2",
+      "blocks": {
+        "collection_item_YFR73e": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/streamers",
+            "title": "Streamers",
+            "image": "shopify://shop_images/equipro-professional-skincare-steamers-ozone-function-spa-wellness-facility-high-durability-equipment.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#919291",
+            "shadow_blur": 9,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "collection_item_Y8JPid": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "shopify://collections/facial-units",
+            "title": "Facial Units",
+            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "collection_item_cm938Y": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Stools",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "collection_item_NPkmEU": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Trolleys",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "collection_item_qBe44a": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Mag-lamps",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "collection_item_KJcyHy": {
+          "type": "collection_item",
+          "settings": {
+            "collection": "",
+            "custom_link": "",
+            "title": "Wellness therapy",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        }
+      },
+      "block_order": [
+        "collection_item_YFR73e",
+        "collection_item_Y8JPid",
+        "collection_item_cm938Y",
+        "collection_item_NPkmEU",
+        "collection_item_qBe44a",
+        "collection_item_KJcyHy"
+      ],
+      "name": "Bento Grid V2",
       "settings": {
-        "custom_title": "",
-        "custom_description": "",
-        "fallback_description": "Professional facial steamers with precise steam control and integrated ozone technology for deep cleansing and skincare treatments.",
-        "custom_image": "shopify://shop_images/professional-high-output-facial-steamer-salon-equipment-streamers-x2.webp",
-        "overlay_opacity": 40
+        "title": "SkincareEquipment"
       }
     },
     "custom_product_treatment_TNRQeX": {
@@ -201,7 +305,7 @@
   },
   "order": [
     "subnav",
-    "collection_banner_qtVMrG",
+    "section_bento_grid_v2_hWaeBi",
     "custom_product_treatment_TNRQeX",
     "positive_impact",
     "why_category",

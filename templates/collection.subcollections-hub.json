@@ -16,37 +16,110 @@
         "subcategory_8gX69M": {
           "type": "subcategory",
           "settings": {
-            "title": "Electric",
-            "link": "",
-            "bg_color": "#e8e8ed"
+            "title": "Streamers",
+            "link": "shopify://collections/streamers",
+            "image": "shopify://shop_images/equipro-professional-skincare-steamers-ozone-function-spa-wellness-facility-high-durability-equipment.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#B9B9B9",
+            "shadow_blur": 2,
+            "shadow_offset_y": 0,
+            "image_fit": "cover"
           }
         },
         "subcategory_eFQJiK": {
           "type": "subcategory",
           "settings": {
-            "title": "Electric",
-            "link": "",
-            "bg_color": "#e8e8ed"
+            "title": "Facial Units",
+            "link": "shopify://collections/facial-units",
+            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#B9B9B9",
+            "shadow_blur": 10,
+            "shadow_offset_y": 0,
+            "image_fit": "cover"
           }
         },
         "subcategory_XNDR7a": {
           "type": "subcategory",
           "settings": {
+            "title": "Multi-Function Columns",
+            "link": "shopify://collections/columns",
+            "image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": true,
+            "shadow_color": "#B9B9B9",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_hTqY8Q": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Wax-heaters",
+            "link": "shopify://collections/wax-heaters",
+            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "bg_color": "#e8e8ed",
+            "title_color": "#FFFFFF",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#B9B9B9",
+            "shadow_blur": 6,
+            "shadow_offset_y": 0,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_Ym7GXe": {
+          "type": "subcategory",
+          "settings": {
             "title": "Electric",
             "link": "",
-            "bg_color": "#e8e8ed"
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
+          }
+        },
+        "subcategory_padN7A": {
+          "type": "subcategory",
+          "settings": {
+            "title": "Electric",
+            "link": "",
+            "bg_color": "#e8e8ed",
+            "title_color": "#000000",
+            "title_font_size": 28,
+            "enable_text_shadow": false,
+            "shadow_color": "#000000",
+            "shadow_blur": 8,
+            "shadow_offset_y": 4,
+            "image_fit": "cover"
           }
         }
       },
       "block_order": [
         "subcategory_8gX69M",
         "subcategory_eFQJiK",
-        "subcategory_XNDR7a"
+        "subcategory_XNDR7a",
+        "subcategory_hTqY8Q",
+        "subcategory_Ym7GXe",
+        "subcategory_padN7A"
       ],
       "name": "Subcategories Grid",
       "settings": {
         "back_text": "Back",
-        "title": "Treatment Tables"
+        "title": ""
       }
     }
   },
