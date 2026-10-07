@@ -41,7 +41,7 @@
         "title": "Our Positive Impact",
         "text": "Experience unparalleled reliability and temperature stability in your waxing cabin. Our professional warmers are designed to maintain the perfect wax consistency throughout the day, ensuring a smooth application and maximum client comfort.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
-        "btn_url": "",
+        "btn_url": "shopify://pages/contact-us",
         "btn_bg_color": "#a22938",
         "btn_text_color": "#ffffff",
         "btn_bg_hover_color": "#8b2029",
