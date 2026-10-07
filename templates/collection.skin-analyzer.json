@@ -46,7 +46,7 @@
         "title": "Our Positive Impact",
         "text": "Transform your consultation process and build unwavering client trust. Our professional skin analyzers allow you to look beneath the surface, providing visual evidence of sun damage, dehydration, and clogged pores to back up your treatment and product recommendations.",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
-        "btn_url": "",
+        "btn_url": "shopify://pages/contact-us",
         "btn_bg_color": "#a22938",
         "btn_text_color": "#ffffff",
         "btn_bg_hover_color": "#8b2029",
