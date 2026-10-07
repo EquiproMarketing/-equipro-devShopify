@@ -209,7 +209,7 @@
   </div>
 </section>
 
-<!-- AJAX ADD TO CART SCRIPT -->
+<!-- ROBUST AJAX ADD TO CART SCRIPT -->
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const sectionContainer = document.getElementById('treatment-section-{{ section.id }}');
@@ -231,6 +231,7 @@
         textSpan.style.display = 'none';
         spinnerSpan.style.display = 'inline-block';
 
+        // Solicitud AJAX robusta obteniendo el estado completo del carrito
         fetch(window.Shopify.routes.root + 'cart/add.js', {
           method: 'POST',
           headers: {
@@ -238,32 +239,47 @@
             'Accept': 'application/json'
           },
           body: JSON.stringify({
-            items: [{
-              id: variantId,
-              quantity: 1
-            }]
+            id: variantId,
+            quantity: 1
           })
         })
-        .then(response => response.json())
+        .then(response => {
+          return response.json();
+        })
         .then(data => {
           textSpan.textContent = 'Added! ✓';
           textSpan.style.display = 'inline-block';
           spinnerSpan.style.display = 'none';
           this.classList.add('is-added');
 
-          if (document.querySelector('cart-notification')) {
-            document.querySelector('cart-notification').renderContents(data);
-          } else if (document.querySelector('cart-drawer')) {
-            fetch(`${window.Shopify.routes.root}?sections=cart-drawer`)
-              .then(res => res.json())
-              .then(sections => {
-                const drawer = document.querySelector('cart-drawer');
-                if (drawer) {
-                  drawer.renderContents(data);
-                  drawer.open();
-                }
-              });
-          }
+          // Forzar la actualización de los elementos de carrito del tema (Drawer o burbuja de conteo)
+          fetch(window.Shopify.routes.root + 'cart.js')
+            .then(res => res.json())
+            const cartUpdateEvent = new CustomEvent('cart:updated', { detail: data });
+            document.dispatchEvent(cartUpdateEvent);
+
+            // Actualizar contadores globales si existen en el tema
+            document.querySelectorAll('.cart-count-bubble').forEach(badge => {
+              // Opcional: refrescar mediante fetch de secciones de header/drawer si aplica
+            });
+
+            // Si el tema usa cart-drawer nativo de Dawn
+            const cartDrawer = document.querySelector('cart-drawer');
+            if (cartDrawer && typeof cartDrawer.open === 'function' && typeof cartDrawer.setActiveElement === 'function') {
+              fetch(`${window.Shopify.routes.root}?sections=cart-drawer,cart-icon-bubble`)
+                .then(res => res.json())
+                .then(parsedState => {
+                  if (parsedState['cart-drawer']) {
+                    const tempDiv = document.createElement('div');
+                    tempDiv.innerHTML = parsedState['cart-drawer'];
+                    const newDrawer = tempDiv.querySelector('cart-drawer');
+                    if (newDrawer) {
+                      cartDrawer.innerHTML = newDrawer.innerHTML;
+                    }
+                  }
+                  cartDrawer.open();
+                });
+            }
 
           setTimeout(() => {
             textSpan.textContent = originalText;
