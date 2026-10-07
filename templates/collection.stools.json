@@ -17,7 +17,7 @@
         "custom_description": "",
         "fallback_description": "Ergonomically engineered rolling stools designed with pneumatic height adjustment and high-density cushioning to provide ultimate posture support and fluid mobility for beauty professionals.",
         "custom_image": "shopify://shop_images/equipro-hydraulic-adjustable-stools-ergonomic-professional-beauty-clinic-equipment.webp",
-        "overlay_opacity": 40
+        "overlay_opacity": 10
       }
     },
     "custom_product_treatment_LfqALg": {
@@ -37,7 +37,7 @@
       "type": "positive-impact",
       "settings": {
         "title": "Our Positive Impact",
-        "text": "Keep your essential tools and devices organized and within arm's reach. Our professional spa trolleys combine silent, effortless mobility with rigid structural stability, elevating the speed, flow, and cleanliness of every treatment protocol.",
+        "text": "Protect your posture and enhance your daily workflow. Our professional aesthetic stools are crafted with Clinical-grade materials, offering smooth gliding performance and adjustable lumbar dynamics tailored for long hours of precise facial and body treatments",
         "btn_label": "CONTACT US FOR RECOMMENDATIONS",
         "btn_url": "",
         "btn_bg_color": "#a22938",
@@ -63,8 +63,46 @@
     },
     "why_category": {
       "type": "why-our-category",
+      "blocks": {
+        "feature_mQcgR4": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Seamless Clinical Vinyl",
+            "item_text": "Upholstered in premium, easy-to-sanitize material that is highly resistant to oils, water, and disinfectants for ultimate workspace hygiene."
+          }
+        },
+        "feature_UN6EMU": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Heavy-Duty Gas Lift",
+            "item_text": "Equipped with premium pneumatic cylinders for instant, effortless height modification that remains entirely stable under load."
+          }
+        },
+        "feature_yzgwKH": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Ultra-Smooth Caster Wheels",
+            "item_text": "Features heavy-duty, hair-resistant polyurethane wheels that glide silently across any spa or salon flooring without scratching."
+          }
+        },
+        "feature_wLCbER": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Anatomical Posture Support",
+            "item_text": "Designed to distribute body weight evenly, reducing pressure on the lower spine, hips, and thighs during extended treatments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_mQcgR4",
+        "feature_UN6EMU",
+        "feature_yzgwKH",
+        "feature_wLCbER"
+      ],
       "settings": {
         "title": "Why Our Trolleys",
+        "image_left": "shopify://shop_images/equipro-ergonomic-air-lift-stool-with-adjustable-backrest-hydraulic-pneumatic-beauty-clinic-professional-spa-sku-31301.webp",
+        "image_right": "shopify://shop_images/equipro-white-ergonomic-stools-padded-swivel-wheeled-hydraulic-style-height-adjustment-north-american-beauty-salon-studio-sku-not-provided.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
@@ -82,13 +120,58 @@
     },
     "video": {
       "type": "category-video",
+      "disabled": true,
       "settings": {}
     },
     "faq": {
       "type": "category-faq",
+      "blocks": {
+        "faq_item_8gidaT": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the main benefits of a saddle stool compared to a round stool?",
+            "answer": "<p>The saddle-style seat naturally forces your pelvis into an upright posture, keeping your spine aligned in a neutral position. This opens up the hip angle, reduces tension in the lower back, and improves blood circulation during long hours of continuous seating.</p>"
+          }
+        },
+        "faq_item_BTHBYn": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the backrest height and tilt angle be adjusted independently?",
+            "answer": "<p>Yes. On our stools equipped with backrests, you can fully adjust both the height and the tilt tension to match your body frame, providing targeted lumbar support exactly where you need it most.</p>"
+          }
+        },
+        "faq_item_4CyrF6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Do your trolleys feature built-in holders for magnifying lamps?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        },
+        "faq_item_zAtCwA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the maximum height range and weight capacity?",
+            "answer": "<p>Equipro professional stools support up to 300 lbs (136 kg) with exceptional structural integrity. Height adjustment ranges vary by model but are engineered to perfectly fit standard treatment tables and low-profile setups alike.</p>"
+          }
+        },
+        "faq_item_YwA7q9": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the main benefits of a saddle stool compared to a round stool?",
+            "answer": "<p>Yes! Most Equipro trolleys come pre-fitted with integrated universal receptacle holes on both sides, allowing you to mount any of our professional magnifying lamps directly onto the trolley.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_8gidaT",
+        "faq_item_BTHBYn",
+        "faq_item_4CyrF6",
+        "faq_item_zAtCwA",
+        "faq_item_YwA7q9"
+      ],
       "settings": {
-        "heading": "Stools: Frequently Asked Questions",
-        "subheading": "Find technical answers regarding ergonomic design, height adjustments, and upholstery durability for Equipro professional stools.",
+        "heading": "Are the caster wheels safe for hardwood floors?",
+        "subheading": "Absolutely. Our rolling bases feature high-grade, smooth-rolling casters that are specifically designed to glide flawlessly across hard studio flooring, commercial tiles, and thin laminate without leaving marks or scuffs.",
         "layout": "grid",
         "header_position": "left",
         "open_first_item": true,
