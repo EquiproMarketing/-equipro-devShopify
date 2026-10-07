@@ -501,27 +501,10 @@
             "available_colors": ""
           }
         },
-        "card_item_MFdkRU": {
-          "type": "card_item",
-          "settings": {
-            "collection": "",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-professional-skincare-steamers-ozone-function-spa-wellness-facility-high-durability-equipment.webp",
-            "image": "shopify://shop_images/equipro-professional-skincare-steamers-ozone-function-spa-wellness-facility-high-durability-equipment.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/columns",
-            "tag": "Skincare Equipment",
-            "title": "Multi-Function Columns",
-            "subtitle": "Streamlined, space-saving workstation systems combining advanced skincare technologies into a single, high-performance professional column.",
-            "price": "",
-            "available_colors": ""
-          }
-        },
         "card_item_pedPxK": {
           "type": "card_item",
           "settings": {
-            "collection": "",
+            "collection": "wax-heaters",
             "product": "",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
@@ -536,7 +519,7 @@
         "card_item_R3EzWy": {
           "type": "card_item",
           "settings": {
-            "collection": "",
+            "collection": "columns",
             "product": "",
             "enable_hover": false,
             "card_bg_color": "#f5f5f7",
@@ -567,7 +550,6 @@
       "block_order": [
         "card_item_VwpWdj",
         "card_item_rfPjQJ",
-        "card_item_MFdkRU",
         "card_item_pedPxK",
         "card_item_R3EzWy",
         "card_item_btifdD"
