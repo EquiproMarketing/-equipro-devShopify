@@ -469,6 +469,40 @@
     "custom_subcategory_slider_YFNFXr": {
       "type": "custom-subcategory-slider",
       "blocks": {
+        "card_item_LTEcX7": {
+          "type": "card_item",
+          "settings": {
+            "collection": "wellness-therapy",
+            "product": "",
+            "enable_hover": false,
+            "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Wellness therapy",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_KiXDHW": {
+          "type": "card_item",
+          "settings": {
+            "collection": "mag-lamps",
+            "product": "",
+            "enable_hover": false,
+            "hover_image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
+            "image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Mag-Lamps",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
         "card_item_VwpWdj": {
           "type": "card_item",
           "settings": {
@@ -556,6 +590,8 @@
         }
       },
       "block_order": [
+        "card_item_LTEcX7",
+        "card_item_KiXDHW",
         "card_item_VwpWdj",
         "card_item_rfPjQJ",
         "card_item_pedPxK",
