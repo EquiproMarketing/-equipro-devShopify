@@ -506,7 +506,9 @@
           "settings": {
             "collection": "wax-heaters",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "SkincareEquipment",
@@ -521,7 +523,9 @@
           "settings": {
             "collection": "columns",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+            "image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "SkincareEquipment",
