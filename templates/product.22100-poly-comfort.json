@@ -1,0 +1,271 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "22100 - Poly-Comfort Treatment Table",
+        "intro_highlight": "The Poly-Comfort is a professional multi-functional mechanical and pneumatic treatment table engineered for versatile spa services, facials, epilation, and aesthetic care. Featuring a durable heavy-duty steel structure and independent manual adjustments, this Canadian-made table delivers exceptional client positioning and ergonomic practitioner access.",
+        "custom_description": "<p>Designed specifically for licensed estheticians and spa professionals, the Poly-Comfort table combines rugged structural engineering with intuitive mechanical controls. Its independent adjustable sections and adaptable configuration provide absolute versatility across diverse treatment workflows. The ultra-resistant, easy-to-sanitize vinyl upholstery ensures long-term durability in high-volume clinical and spa environments.</p>",
+        "subtitle": "Versatile Mechanical Positioning & Ergonomic Spa Architecture",
+        "secondary_description": "<p>Built to endure decades of demanding daily use, the Poly-Comfort requires minimal maintenance while maintaining pristine operational fluidity. Regular surface cleaning with mild clinical disinfectants protects the ultra-resistant medical-grade vinyl. Backed by Equipro's rigorous quality assurance standards and robust 2-year warranty, this table represents a permanent investment in salon efficiency and client comfort.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "featured_product": "poly-comfort",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Licensed Esthetician & Facial Specialist:",
+            "answer": "<p>The Poly-Comfort table provides unhindered facial and neck access through its precision-engineered contour and adjustable headrest. Practitioners can easily perform intricate treatments, waxing, and electrolysis without physical strain, while the steady fixed height allows seamless positioning relative to ambient lighting and equipment carts.</p>"
+          }
+        },
+        "faq_item_74hYTC": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Spa & Salon Professional:",
+            "answer": "<p>Optimized for general body care and multi-purpose spa treatments, the independent manual section adjustments and stable heavy-duty base allow clinicians to position clients precisely. The durable, chemical-resistant vinyl withstands frequent sanitization protocols required in professional spa settings.</p>"
+          }
+        },
+        "faq_item_bhzmwM": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Spa Director & Clinic Manager:",
+            "answer": "<p>Investing in Equipro equipment guarantees long-term reliability and minimal downtime. The robust mechanical adjustment systems and steel chassis are backed by a 2-year manufacturer warranty, ensuring continuous, heavy-duty operation across high-turnover treatment rooms.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_mcpNpt",
+        "faq_item_74hYTC",
+        "faq_item_bhzmwM"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard freight delivery typically takes <strong>7–10 business days</strong></p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>21200</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty structural steel frame with ultra-resistant medical-grade vinyl upholstery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>71\" L x 24\" W x 28\" H (180 cm x 61 cm x 71 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>108 lbs (49 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Facial treatments, epilation, multi-purpose spa services, and general esthetics</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Height Configuration</td>\n        <td>Stable fixed operational working height</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Positioning Controls</td>\n        <td>Manual adjustable backrest, independent section inclinations, and adjustable headrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>Adjustable headrest and optional removable armrests</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved structural and mechanical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty (parts and labor covered)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_item_8hwhpX": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Robust Steel Architecture",
+            "text": "Heavy-duty steel chassis engineered for structural longevity, supporting high-volume clinical and spa environments without flex."
+          }
+        },
+        "feature_item_7BxRnE": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Multi-Section Articulation",
+            "text": "Independent manual adjustment mechanisms allowing custom backrest and section angles for diverse esthetic procedures."
+          }
+        },
+        "feature_item_V4efCz": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Ultra-Resistant Upholstery",
+            "text": "High-grade medical vinyl designed to resist staining, tearing, and aggressive clinical disinfecting agents for long-term aesthetic integrity."
+          }
+        }
+      },
+      "block_order": [
+        "feature_item_8hwhpX",
+        "feature_item_7BxRnE",
+        "feature_item_V4efCz"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-poly-comfort-treatment-table.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "section_header_XjqiGV": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "instruction_item_fd7CbG": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Positioning Setup:",
+            "text": "Position the table on a flat, stable surface within your treatment room to ensure secure client transfers."
+          }
+        },
+        "instruction_item_8VfGh8": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Backrest Articulation:",
+            "text": "Release the manual adjustment bracket to raise or recline the backrest smoothly to the desired treatment angle."
+          }
+        },
+        "instruction_item_z9KEfh": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Section Adjustment:",
+            "text": "Articulate individual middle and lower sections manually to transition between flat bed and seated configurations."
+          }
+        },
+        "instruction_item_rRgyKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Headrest Customization:",
+            "text": "Adjust or remove the headrest element to accommodate specialized facial or prone body treatments."
+          }
+        },
+        "section_header_dGJcmr": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "instruction_item_CRmBXw": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Distribution:",
+            "text": "Ensure client weight is balanced evenly across the center of the cushion sections during manual adjustments."
+          }
+        },
+        "instruction_item_QqEHKc": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Sanitation Protocol:",
+            "text": "Clean vinyl surfaces after each client shift using approved non-abrasive hospital-grade disinfectants to preserve material longevity."
+          }
+        },
+        "instruction_item_P8t7dx": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maintenance Service:",
+            "text": "Internal mechanical inspections and major structural repairs must be performed by authorized Equipro certified technicians only."
+          }
+        }
+      },
+      "block_order": [
+        "section_header_XjqiGV",
+        "instruction_item_fd7CbG",
+        "instruction_item_8VfGh8",
+        "instruction_item_z9KEfh",
+        "instruction_item_rRgyKc",
+        "section_header_dGJcmr",
+        "instruction_item_CRmBXw",
+        "instruction_item_QqEHKc",
+        "instruction_item_P8t7dx"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-poly-comfort-detail.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_item_JkpEmj": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What standard accessories are included with the Poly-Comfort table?",
+            "answer": "<p><strong>The unit comes equipped with an adjustable headrest and support mounts for optional removable armrests.</strong></p>"
+          }
+        },
+        "faq_item_r7tr7G": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the total weight and footprint of the table?",
+            "answer": "<p><strong>The table has a net operational weight of 108 lbs (49 kg) and measures 71 inches long by 24 inches wide.</strong></p>"
+          }
+        },
+        "faq_item_dd9n3Q": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the fixed operational height of this model?",
+            "answer": "<p><strong>The table is engineered at a stable working height of 28 inches.</strong></p>"
+          }
+        },
+        "faq_item_8YiyhY": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the backrest and sections adjustable?",
+            "answer": "<p><strong>Yes, the table features manual adjustment brackets to configure multiple inclinations and client positions easily.</strong></p>"
+          }
+        },
+        "faq_item_GkbCk6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty coverage does Equipro provide for this treatment table?",
+            "answer": "<p><strong>Equipro protects the Poly-Comfort with a comprehensive 2-Year Manufacturer’s Warranty covering parts and labor.</strong></p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_JkpEmj",
+        "faq_item_r7tr7G",
+        "faq_item_dd9n3Q",
+        "faq_item_8YiyhY",
+        "faq_item_GkbCk6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {}
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
