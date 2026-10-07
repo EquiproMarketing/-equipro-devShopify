@@ -16,7 +16,7 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "White",
-            "color_hex": "#FFFFFF"
+            "color_hex": "#ffffff"
           }
         },
         "color_swatch_item_Yx9MJ4": {
@@ -30,7 +30,7 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#1B1E2E"
+            "color_hex": "#1b1e2e"
           }
         },
         "color_swatch_item_TN7LQk": {
@@ -44,21 +44,21 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Charcoal",
-            "color_hex": "#4C4C4C"
+            "color_hex": "#4c4c4c"
           }
         },
         "color_swatch_item_ErBjkh": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Oyster",
-            "color_hex": "#D8D4C7"
+            "color_hex": "#d8d4c7"
           }
         },
         "color_swatch_item_tbHyGD": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Sand",
-            "color_hex": "#CCA88D"
+            "color_hex": "#cca88d"
           }
         }
       },
@@ -161,7 +161,8 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image_position": "right",
+        "image": "shopify://shop_images/equipro-poly-comfort-hydraulic-facial-massage-depilation-bed-air-lift-system-22100.webp",
+        "image_position": "left",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
         "padding_top": 60,
@@ -255,6 +256,7 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
+        "image": "shopify://shop_images/equipro-poly-comfort-hydraulic-air-lift-treatment-bed-facial-massage-depilation-sku-22100.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
