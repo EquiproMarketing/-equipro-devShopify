@@ -610,8 +610,8 @@
           "type": "card_item",
           "settings": {
             "collection": "",
-            "product": "",
-            "enable_hover": false,
+            "product": "22100-poly-comfort",
+            "enable_hover": true,
             "card_bg_color": "#f5f5f7",
             "link": "",
             "tag": "",
