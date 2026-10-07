@@ -11,23 +11,115 @@
   "sections": {
     "subnav": {
       "type": "category-subnav",
-      "settings": {}
+      "settings": {
+        "category_menu": "",
+        "hide_on_mobile": true
+      }
     },
     "banner": {
       "type": "collection-banner",
-      "settings": {}
+      "settings": {
+        "custom_title": "",
+        "custom_description": "",
+        "fallback_description": "Heavy-duty, fluid-operated treatment tables offering reliable elevation and manual position adjustments without the need for electrical outlets or cords.",
+        "overlay_opacity": 10
+      }
     },
-    "product_grid": {
-      "type": "main-collection-product-grid",
-      "settings": {}
+    "custom_product_treatment_r4GNny": {
+      "type": "custom-product-treatment",
+      "name": "Custom Product Treatment",
+      "settings": {
+        "title": "",
+        "featured_collection": "hydraulic-mechanical",
+        "products_to_show": 8,
+        "card_bg_color": "#f5f5f7",
+        "default_subtitle": "Professional Treatment Series",
+        "btn_primary_text": "Learn More",
+        "btn_cart_text": "Add to Cart"
+      }
     },
     "positive_impact": {
       "type": "positive-impact",
-      "settings": {}
+      "settings": {
+        "title": "Our Positive Impact",
+        "text": "Enjoy complete cord-free freedom in your treatment room setup. Our professional hydraulic tables combine heavy-duty stability with effortless foot-pump lift systems, making them the ultimate versatile option for any spa layout or clinical environment.",
+        "btn_label": "CONTACT US FOR RECOMMENDATIONS",
+        "btn_url": "",
+        "btn_bg_color": "#a22938",
+        "btn_text_color": "#ffffff",
+        "btn_bg_hover_color": "#8b2029",
+        "btn_text_hover_color": "#ffffff",
+        "btn_font_size": 14,
+        "btn_border_radius": 12,
+        "btn_padding_v": 14,
+        "btn_padding_h": 32,
+        "title_color": "#1a1a1a",
+        "title_size": 32,
+        "text_color": "#a22938",
+        "text_size": 20,
+        "text_max_width": 850,
+        "show_top_divider": true,
+        "show_bottom_divider": true,
+        "divider_color": "#a22938",
+        "divider_opacity": 30,
+        "padding_top": 40,
+        "padding_bottom": 40
+      }
     },
     "why_category": {
       "type": "why-our-category",
-      "settings": {}
+      "blocks": {
+        "feature_dymNax": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Cord-Free Versatility",
+            "item_text": "Operates entirely via internal fluid dynamics and manual levers, allowing you to position the table anywhere in the room without worrying about floor outlets or tripping hazards."
+          }
+        },
+        "feature_WjhrJK": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Smooth Foot-Pump Lift",
+            "item_text": "High-grade hydraulic cylinders deliver effortless height adjustments with a simple tap of your foot, remaining steady and smooth under full weight load."
+          }
+        },
+        "feature_Az3DGf": {
+          "type": "feature",
+          "settings": {
+            "item_title": "360° Rotation Mobility",
+            "item_text": "Designed to rotate completely or lock firmly into place, giving you total freedom of movement around your client during precise clinical steps."
+          }
+        },
+        "feature_iJfkw6": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Clinical-Grade Cushioning",
+            "item_text": "Multi-layered, high-density foam padding wrapped in ultra-durable, easy-to-sanitize vinyl upholstery resistant to oils, water, and clinic disinfectants."
+          }
+        }
+      },
+      "block_order": [
+        "feature_dymNax",
+        "feature_WjhrJK",
+        "feature_Az3DGf",
+        "feature_iJfkw6"
+      ],
+      "settings": {
+        "title": "Why Our  Hydraulique / Mechanical Tables",
+        "image_border_radius": 12,
+        "bg_color": "#a22938",
+        "title_color": "#ffffff",
+        "item_title_color": "#ffffff",
+        "text_color": "#ffffff",
+        "divider_color": "#ffffff33",
+        "title_size": 28,
+        "item_title_size": 16,
+        "item_text_size": 14,
+        "padding_top": 64,
+        "padding_bottom": 64,
+        "margin_top": 48,
+        "margin_bottom": 48
+      }
     },
     "video": {
       "type": "category-video",
@@ -35,7 +127,67 @@
     },
     "faq": {
       "type": "category-faq",
-      "settings": {}
+      "blocks": {
+        "faq_item_e4HGL6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the headrest and armrests be adjusted or removed?",
+            "answer": "<p>Absolutely. The ergonomic armrests adjust automatically with the inclination of the backrest or can be flipped back/removed entirely. The headrest can be extended or detached, and features an integrated breathing hole for face-down protocols.</p>"
+          }
+        },
+        "faq_item_dhmM8a": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the table lock completely to prevent spinning during a treatment?",
+            "answer": "<p>Yes. The 360-degree rotation feature can be locked firmly into any position simply by lifting the foot pedal upwards, ensuring the table remains completely rock-solid during precise procedures.</p>"
+          }
+        },
+        "faq_item_BNDV4c": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the lifting weight capacity of these units?",
+            "answer": "<p>Equipro hydraulic tables are engineered with heavily reinforced steel frames and industrial fluid-pumps. They support a working lift capacity of up to 450 lbs (205 kg) with unmatched structural stability.</p>"
+          }
+        },
+        "faq_item_XKhxGA": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the benefit of choosing a hydraulic table over an electric one?",
+            "answer": "<p>Hydraulic tables offer absolute placement flexibility. Because they require no electricity, they eliminate cords across your floor, reduce energy consumption, can be rotated 360 degrees freely, and require virtually zero electrical maintenance over time.</p>"
+          }
+        },
+        "faq_item_QcR8BL": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do the height and angle adjustments work on a hydraulic-mechanical table?",
+            "answer": "<p>The table height is adjusted smoothly using a heavy-duty hydraulic foot pump built into the base. The backrest, seat tilt, and leg sections are controlled manually using gas-spring assisted or locking mechanical levers, allowing for quick and silent transitions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_item_e4HGL6",
+        "faq_item_dhmM8a",
+        "faq_item_BNDV4c",
+        "faq_item_XKhxGA",
+        "faq_item_QcR8BL"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
     },
     "reviews": {
       "type": "customer-reviews",
@@ -45,7 +197,7 @@
   "order": [
     "subnav",
     "banner",
-    "product_grid",
+    "custom_product_treatment_r4GNny",
     "positive_impact",
     "why_category",
     "video",
