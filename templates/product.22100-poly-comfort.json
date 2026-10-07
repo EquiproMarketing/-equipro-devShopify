@@ -1,20 +1,41 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "color_swatch_item_67VUnp": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Black",
+            "color_hex": "#111111"
+          }
+        }
+      },
+      "block_order": [
+        "color_swatch_item_67VUnp"
+      ],
       "settings": {
         "back_text": "Back",
         "custom_title": "22100 - Poly-Comfort Treatment Table",
-        "intro_highlight": "The Poly-Comfort is a professional multi-functional mechanical and pneumatic treatment table engineered for versatile spa services, facials, epilation, and aesthetic care. Featuring a durable heavy-duty steel structure and independent manual adjustments, this Canadian-made table delivers exceptional client positioning and ergonomic practitioner access.",
-        "custom_description": "<p>Designed specifically for licensed estheticians and spa professionals, the Poly-Comfort table combines rugged structural engineering with intuitive mechanical controls. Its independent adjustable sections and adaptable configuration provide absolute versatility across diverse treatment workflows. The ultra-resistant, easy-to-sanitize vinyl upholstery ensures long-term durability in high-volume clinical and spa environments.</p>",
-        "subtitle": "Versatile Mechanical Positioning & Ergonomic Spa Architecture",
-        "secondary_description": "<p>Built to endure decades of demanding daily use, the Poly-Comfort requires minimal maintenance while maintaining pristine operational fluidity. Regular surface cleaning with mild clinical disinfectants protects the ultra-resistant medical-grade vinyl. Backed by Equipro's rigorous quality assurance standards and robust 2-year warranty, this table represents a permanent investment in salon efficiency and client comfort.</p>",
+        "intro_highlight": "Engineered in North America to meet the rigorous demands of high-volume aesthetic clinics, the Poly-Comfort treatment chair combines absolute frame stability with targeted manual positioning. By offering a rock-solid, fixed-height foundation paired with manual articulation, this professional station provides continuous daily reliability without electronic complexity.",
+        "custom_description": "<p>Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists. Its heavy-duty framework targets lower-back tension and shoulder strain during back-to-back appointments, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your workflow needs with manual backrest-and-legrest levers and an intuitive 15° seat tilt system.</p><p></p>",
+        "subtitle": "Ergonomic Manual Positioning with Integrated 15° Tilt Dynamics",
+        "secondary_description": "<p></p><p>Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Poly-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client. The ultra-resistant leatherette surface resists oil build-up and staining, ensuring pristine visual presentation across years of intensive clinic operations. Consistent care preserves material flexibility, prevents surface cracking, and upholds hygienic presentation.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "poly-comfort",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": false,
+        "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
       }
     },
@@ -92,7 +113,6 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-poly-comfort-treatment-table.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -179,7 +199,6 @@
         "instruction_item_P8t7dx"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-poly-comfort-detail.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
@@ -257,7 +276,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "modal_title": "Select Models to Compare",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
