@@ -489,13 +489,14 @@
           "settings": {
             "collection": "facial-units",
             "product": "",
-            "enable_hover": false,
+            "enable_hover": true,
             "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
-            "tag": "Facial Units",
-            "title": "",
-            "subtitle": "",
+            "tag": "Skincare Equipment",
+            "title": "Facial Units",
+            "subtitle": "Unités faciales multifonctions professionnelles dotées de technologies de soins de la peau avancées pour offrir des traitements esthétiques complets et performants ainsi que des solutions polyvalentes pour les salons de beauté.",
             "price": "",
             "available_colors": ""
           }
