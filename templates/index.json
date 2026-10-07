@@ -15,14 +15,14 @@
         "slide_MnxhKP": {
           "type": "slide",
           "settings": {
-            "image": "shopify://shop_images/epure-ergonomic-air-lift-stool-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
+            "image": "shopify://shop_images/epure-ergonomic-air-lift-stools-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
             "image_position": "bottom",
             "overlay_opacity": 15,
-            "subheading": "DIVINE EI-504",
-            "heading": "Multi-Treatment Electric Table",
-            "text": "Quiet, versatile, and built to last.",
-            "button_label": "Shop Now",
-            "button_link": "",
+            "subheading": "31300 ERGONOMIC AIR-LIFT STOOL",
+            "heading": "Close-up of the smooth air-lift mechanism",
+            "text": "Protect your spine and maintain precision. Engineered for heavy-duty daily performance in high-end spas and clinics.",
+            "button_label": "Shop the 31300 Stool",
+            "button_link": "shopify://products/ergonomic-stool-with-backrest",
             "subheading_color": "#ffffff",
             "heading_color": "#ffffff",
             "text_color": "#f5f5f7",
@@ -136,7 +136,6 @@
         "category_item_ACVzqh": {
           "type": "category_item",
           "settings": {
-            "image": "shopify://shop_images/equipro-31300_ergonomic-air-lift-stool-white.webp",
             "title": "Stools",
             "link": "shopify://collections/stools"
           }
@@ -470,170 +469,73 @@
     "custom_subcategory_slider_YFNFXr": {
       "type": "custom-subcategory-slider",
       "blocks": {
-        "subcategory_card_76RyFT": {
-          "type": "subcategory_card",
+        "card_item_VwpWdj": {
+          "type": "card_item",
           "settings": {
-            "collection": "skin-analyzer",
+            "collection": "",
             "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
-            "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/skin-analyzer",
-            "tag": "Collection",
-            "title": "Skin Analyzers",
-            "subtitle": "Advanced skin scanning equipment using specialized illumination technology to reveal underlying skin conditions, pigmentations, and hydration levels for precise professional consultations.",
-            "price": "From CA$ 380.00",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
             "available_colors": ""
           }
         },
-        "subcategory_card_RFztfx": {
-          "type": "subcategory_card",
+        "card_item_rfPjQJ": {
+          "type": "card_item",
           "settings": {
             "collection": "facial-units",
             "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
-            "image": "shopify://shop_images/equipro-facial-units-professional-skin-care-station-uv-style-sanitation-cabinet-dual-well-warmer-multifunction-console-marble-countertop-aesthetic-studio-sku-not-provided.webp",
+            "enable_hover": false,
+            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
-            "tag": "Collection",
-            "title": "Facial Units",
-            "subtitle": "Discover our professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic",
+            "tag": "Facial Units",
+            "title": "",
+            "subtitle": "",
             "price": "",
             "available_colors": ""
           }
         },
-        "subcategory_card_Eh8Frm": {
-          "type": "subcategory_card",
+        "card_item_MFdkRU": {
+          "type": "card_item",
           "settings": {
-            "collection": "wax-heaters",
+            "collection": "",
             "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
-            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/wax-heaters",
-            "tag": "Collection",
-            "title": "Wax-Heaters",
-            "subtitle": "Professional wax warmers engineered with precise temperature control and rapid, uniform heating for flawless and comfortable hair removal treatments.",
-            "price": "",
-            "available_colors": ""
-          }
-        },
-        "subcategory_card_3PcLMF": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "towel-warmers",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
-            "image": "shopify://shop_images/equipro-professional-towel-warmers-uv-sanitization-cabinet-spa-salon-skincare-equipment.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/towel-warmers",
-            "tag": "Collection",
-            "title": "Towel Warmers",
-            "subtitle": "Professional hot towel cabinets designed to keep your linens perfectly warm, moist, and sanitized for an elevated client experience.",
-            "price": "",
-            "available_colors": ""
-          }
-        },
-        "subcategory_card_kNMd6p": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "electric",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
-            "image": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/electric",
-            "tag": "Treatment Tables",
-            "title": "Electric Tables",
-            "subtitle": "Ultra-smooth, motorized treatment tables engineered for maximum client comfort, silent transitions, and optimal ergonomic positioning for the practitioner.",
-            "price": "",
-            "available_colors": ""
-          }
-        },
-        "subcategory_card_ykJEhh": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "hydraulic-mechanical",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-hydraulic-mechanical-professional-treatment-table-ergonomic-beauty-spa-furniture-premium-adjustable-seating.webp",
-            "image": "shopify://shop_images/equipro-hydraulic-mechanical-adjustable-treatment-table-padded-segmented-upholstery-hydraulic-lift-columns-mobile-casters-spa-salon-wellness-studio-sku-not-provided.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/hydraulic-mechanical",
-            "tag": "Treatment tables",
-            "title": "Hydraulic / Mechanical",
-            "subtitle": "Heavy-duty, fluid-operated treatment tables offering reliable elevation and manual position adjustments without the need for electrical outlets or cords.",
-            "price": "",
-            "available_colors": ""
-          }
-        },
-        "subcategory_card_gXdbUY": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "portable",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-portables-folding-aluminum-framed-professional-treatment-table-adjustable-face-cradle-spa-salon-studio-sku-not-provided.webp",
-            "image": "shopify://shop_images/equipro-portables-adjustable-folding-practitioner-treatment-table-aluminum-frame-black-vinyl-north-american-studio-spa-room-sku-not-provided.webp",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Treatment tables",
-            "title": "Portable",
-            "subtitle": "Lightweight, ultra-stable, and easily foldable professional tables engineered for mobile therapists, pop-up clinics, and space-flexible treatment rooms.",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
             "price": "",
             "available_colors": ""
           }
         },
-        "subcategory_card_Xnfck8": {
-          "type": "subcategory_card",
+        "card_item_pedPxK": {
+          "type": "card_item",
           "settings": {
-            "collection": "stools",
+            "collection": "",
             "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-white-ergonomic-stools-padded-swivel-wheeled-hydraulic-style-height-adjustment-north-american-beauty-salon-studio-sku-not-provided.webp",
-            "image": "shopify://shop_images/equipro-adjustable-hydraulic-ergonomic-stools-rotatable-caster-base-professional-spa-salon-clinic-sku-not-provided.webp",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/stools",
-            "tag": "Collection",
-            "title": "Stools",
-            "subtitle": "Ergonomically engineered rolling stools designed with pneumatic height adjustment and high-density cushioning to provide ultimate posture support and fluid mobility for beauty professionals.",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
             "price": "",
-            "available_colors": ""
-          }
-        },
-        "subcategory_card_MWxmgz": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "mag-lamps",
-            "product": "",
-            "enable_hover": true,
-            "hover_image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
-            "image": "shopify://shop_images/equipro-mag-lamps-dual-articulated-led-magnifier-arms-white-finish-salon-studio-sku-unspecified.webp",
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://collections/mag-lamps",
-            "tag": "Collection",
-            "title": "Mag-lamps",
-            "subtitle": "Professional magnifying lamps with powerful LED lighting for beauty treatments and esthetics.",
-            "price": "From CA$ 105.00",
             "available_colors": ""
           }
         }
       },
       "block_order": [
-        "subcategory_card_76RyFT",
-        "subcategory_card_RFztfx",
-        "subcategory_card_Eh8Frm",
-        "subcategory_card_3PcLMF",
-        "subcategory_card_kNMd6p",
-        "subcategory_card_ykJEhh",
-        "subcategory_card_gXdbUY",
-        "subcategory_card_Xnfck8",
-        "subcategory_card_MWxmgz"
+        "card_item_VwpWdj",
+        "card_item_rfPjQJ",
+        "card_item_MFdkRU",
+        "card_item_pedPxK"
       ],
       "name": "Subcategory Slider",
       "settings": {
@@ -643,104 +545,56 @@
     "custom_subcategory_slider_HPxgWp": {
       "type": "custom-subcategory-slider",
       "blocks": {
-        "subcategory_card_MdbKx8": {
-          "type": "subcategory_card",
+        "card_item_jEnJxY": {
+          "type": "card_item",
           "settings": {
             "collection": "",
-            "product": "maxi-comfort-360",
-            "enable_hover": true,
+            "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/ultra-comfort-20500",
-            "tag": "Hydraulic",
-            "title": "Maxi-Comfort 360º",
-            "subtitle": "Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists.",
-            "price": "From CA$2,200",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
           }
         },
-        "subcategory_card_nzbkKi": {
-          "type": "subcategory_card",
+        "card_item_irUNJG": {
+          "type": "card_item",
           "settings": {
             "collection": "",
-            "product": "maxi-confort-pedicure-360",
-            "enable_hover": true,
+            "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/ultra-comfortprofessional-treatment-pedicure-chair-20500",
-            "tag": "Hydraulic",
-            "title": "Maxi-Confort Pedicure 360º",
-            "subtitle": "Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists.",
-            "price": "From CA$2,200",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
           }
         },
-        "subcategory_card_pRc6mk": {
-          "type": "subcategory_card",
+        "card_item_z8RxwB": {
+          "type": "card_item",
           "settings": {
             "collection": "",
-            "product": "20200-multi-comfort",
-            "enable_hover": true,
+            "product": "",
+            "enable_hover": false,
             "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/20200-multi-comfort",
-            "tag": "Hydraulic",
-            "title": "Multi-Comfort",
-            "subtitle": "The Multi-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors.",
-            "price": "from CA$1,895",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
-          }
-        },
-        "subcategory_card_8DCj8V": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "",
-            "product": "21100-hydro-comfort",
-            "enable_hover": true,
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/21100-hydro-comfort",
-            "tag": "Hydraulic",
-            "title": "Hydro-Comfort",
-            "subtitle": "The Hydro-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Skincare Specialists.",
-            "price": "From CA$2,200",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
-          }
-        },
-        "subcategory_card_WfgYK8": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "",
-            "product": "22100-poly-comfort",
-            "enable_hover": true,
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/22100-poly-comfort",
-            "tag": "Mechanical",
-            "title": "Poly-comfort",
-            "subtitle": "Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists.",
-            "price": "From CA$1,225",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
-          }
-        },
-        "subcategory_card_7nCwtA": {
-          "type": "subcategory_card",
-          "settings": {
-            "collection": "",
-            "product": "21200-aero-comfort",
-            "enable_hover": true,
-            "card_bg_color": "#f5f5f7",
-            "link": "shopify://products/21200-aero-comfort",
-            "tag": "Mechanical",
-            "title": "Aero-Comfort",
-            "subtitle": "Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Aero-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client.",
-            "price": "From CA$1,395",
-            "available_colors": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d"
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
           }
         }
       },
       "block_order": [
-        "subcategory_card_MdbKx8",
-        "subcategory_card_nzbkKi",
-        "subcategory_card_pRc6mk",
-        "subcategory_card_8DCj8V",
-        "subcategory_card_WfgYK8",
-        "subcategory_card_7nCwtA"
+        "card_item_jEnJxY",
+        "card_item_irUNJG",
+        "card_item_z8RxwB"
       ],
       "name": "Subcategory Slider",
       "settings": {
