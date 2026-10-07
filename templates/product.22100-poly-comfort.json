@@ -272,36 +272,43 @@
         "faq_item_JkpEmj": {
           "type": "faq_item",
           "settings": {
-            "question": "What standard accessories are included with the Poly-Comfort table?",
-            "answer": "<p><strong>The unit comes equipped with an adjustable headrest and support mounts for optional removable armrests.</strong></p>"
+            "question": "What is the height of the Poly-Comfort treatment chair?",
+            "answer": "<p>The Poly-Comfort features a standard fixed working height of 29.5 inches. Fits standard practitioner working elevations.</p>"
           }
         },
         "faq_item_r7tr7G": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the total weight and footprint of the table?",
-            "answer": "<p><strong>The table has a net operational weight of 108 lbs (49 kg) and measures 71 inches long by 24 inches wide.</strong></p>"
+            "question": "Does the seat feature a tilt system?",
+            "answer": "<p>Yes, it includes a built-in 15° seat tilt mechanism for improved practitioner access. Enhances facial ergonomics.</p>"
           }
         },
         "faq_item_dd9n3Q": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the fixed operational height of this model?",
-            "answer": "<p><strong>The table is engineered at a stable working height of 28 inches.</strong></p>"
+            "question": "What are the overall dimensions of the chair?",
+            "answer": "<p>The chair measures 24 inches wide by 70 inches long with a 29.5-inch fixed height. Fits standard treatment rooms.</p>"
           }
         },
         "faq_item_8YiyhY": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the backrest and sections adjustable?",
-            "answer": "<p><strong>Yes, the table features manual adjustment brackets to configure multiple inclinations and client positions easily.</strong></p>"
+            "question": "Are armrests included with the base unit?",
+            "answer": "<p>Armrests are optional removable accessories (such as model 24110 or 24140). Configurable per clinic setup.</p>"
           }
         },
         "faq_item_GkbCk6": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty coverage does Equipro provide for this treatment table?",
-            "answer": "<p><strong>Equipro protects the Poly-Comfort with a comprehensive 2-Year Manufacturer’s Warranty covering parts and labor.</strong></p>"
+            "question": "What type of upholstery is used on the Poly-Comfort?",
+            "answer": "<p>It is upholstered in high-durability, ultra-white, ultra-resistant professional-grade leatherette. Designed for easy cleaning.</p>"
+          }
+        },
+        "faq_item_YrfCh4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Where is the Poly-Comfort manufactured?",
+            "answer": "<p>All Equipro treatment equipment is engineered and manufactured in North America. Built to strict quality standards.</p>"
           }
         }
       },
@@ -310,7 +317,8 @@
         "faq_item_r7tr7G",
         "faq_item_dd9n3Q",
         "faq_item_8YiyhY",
-        "faq_item_GkbCk6"
+        "faq_item_GkbCk6",
+        "faq_item_YrfCh4"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
