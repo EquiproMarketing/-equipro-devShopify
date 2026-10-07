@@ -223,22 +223,22 @@
         "instruction_item_CRmBXw": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Weight Distribution:",
-            "text": "Ensure client weight is balanced evenly across the center of the cushion sections during manual adjustments."
+            "bold_prefix": "Ensure all manual",
+            "text": "locking pins and adjustment levers are fully engaged before applying weight to the leg or backrest sections."
           }
         },
         "instruction_item_QqEHKc": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Sanitation Protocol:",
-            "text": "Clean vinyl surfaces after each client shift using approved non-abrasive hospital-grade disinfectants to preserve material longevity."
+            "bold_prefix": "Do not exceed",
+            "text": "the maximum static weight capacity of the station during treatment sessions."
           }
         },
         "instruction_item_P8t7dx": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Maintenance Service:",
-            "text": "Internal mechanical inspections and major structural repairs must be performed by authorized Equipro certified technicians only."
+            "bold_prefix": "Clean all leatherette",
+            "text": "surfaces strictly with mild, non-alcohol-based disinfectants to prevent material breakdown."
           }
         }
       },
