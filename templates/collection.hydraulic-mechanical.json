@@ -125,6 +125,7 @@
     },
     "video": {
       "type": "category-video",
+      "disabled": true,
       "settings": {}
     },
     "faq": {
