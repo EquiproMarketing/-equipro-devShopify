@@ -10,7 +10,7 @@
     {%- assign collection_handle = section.settings.compare_collection -%}
     {%- assign compare_coll = collections[collection_handle] -%}
 
-    {%- comment -%} FALLBACK AUTOMÁTICO SI LA COLECCIÓN CONFIGURADA NO TIENE PRODUCTOS {%- endcomment -%}
+    {%- comment -%} FALLBACK SI NO HAY COLECCIÓN SELECCIONADA {%- endcomment -%}
     {%- if compare_coll == blank or compare_coll.products.size == 0 -%}
       {%- assign compare_coll = product.collections.first -%}
     {%- endif -%}
@@ -38,62 +38,76 @@
               </tr>
             </thead>
             <tbody>
-              <!-- CARACTERÍSTICA 1: TIPO DE ELEVACIÓN / SISTEMA -->
+              <!-- 1. CATEGORÍA / TIPO DE PRODUCTO DINÁMICO -->
+              <tr>
+                <td class="feature-label">Category / Type</td>
+                {%- for prod in compare_coll.products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.type | default: prod.metafields.custom.category | default: "Equipment" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
+
+              <!-- 2. MODEL SKU DINÁMICO -->
+              <tr>
+                <td class="feature-label">Model SKU</td>
+                {%- for prod in compare_coll.products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.selected_or_first_available_variant.sku | default: prod.variants.first.sku | default: "N/A" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
+
+              <!-- 3. SISTEMA / ELEVACIÓN DINÁMICO -->
               <tr>
                 <td class="feature-label">System / Elevation</td>
                 {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.system_type | default: "Hydraulic System" }}
+                    {%- assign sys = prod.metafields.custom.system_type | default: prod.metafields.custom.elevation -%}
+                    {%- if sys != blank -%}
+                      {{ sys }}
+                    {%- else -%}
+                      {%- if prod.tags contains 'electric' -%}Electric Motor{%- elsif prod.tags contains 'hydraulic' -%}Hydraulic Pump{%- else -%}Standard Manual{%- endif -%}
+                    {%- endif -%}
                   </td>
                 {%- endfor -%}
               </tr>
 
-              <!-- CARACTERÍSTICA 2: ROTACIÓN / ARTICULACIÓN -->
+              <!-- 4. ROTACIÓN DINÁMICA -->
               <tr>
-                <td class="feature-label">Rotation & Articulation</td>
+                <td class="feature-label">Rotation</td>
                 {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.rotation | default: "360º Swivel with Lock" }}
+                    {%- assign rot = prod.metafields.custom.rotation -%}
+                    {%- if rot != blank -%}
+                      {{ rot }}
+                    {%- else -%}
+                      {%- if prod.title contains '360' or prod.description contains '360' -%}360º Swivel Rotation{%- else -%}Fixed / Non-Swivel{%- endif -%}
+                    {%- endif -%}
                   </td>
                 {%- endfor -%}
               </tr>
 
-              <!-- CARACTERÍSTICA 3: RECTIFICACIÓN Y REPOSAPIÉS -->
-              <tr>
-                <td class="feature-label">Backrest & Legrest</td>
-                {%- for prod in compare_coll.products limit: 4 -%}
-                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.adjustments | default: "Manual Independent Adjustment" }}
-                  </td>
-                {%- endfor -%}
-              </tr>
-
-              <!-- CARACTERÍSTICA 4: CAPACIDAD DE PESO -->
-              <tr>
-                <td class="feature-label">Weight Capacity</td>
-                {%- for prod in compare_coll.products limit: 4 -%}
-                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.weight_capacity | default: "450 lbs / 204 kg" }}
-                  </td>
-                {%- endfor -%}
-              </tr>
-
-              <!-- CARACTERÍSTICA 5: APLICACIONES PRINCIPALES -->
-              <tr>
-                <td class="feature-label">Recommended For</td>
-                {%- for prod in compare_coll.products limit: 4 -%}
-                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.applications | default: "Facials, Pedicure, Body Treatments" }}
-                  </td>
-                {%- endfor -%}
-              </tr>
-
-              <!-- CARACTERÍSTICA 6: GARANTÍA -->
+              <!-- 5. GARANTÍA DINÁMICA -->
               <tr>
                 <td class="feature-label">Warranty & Safety</td>
                 {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
-                    {{ prod.metafields.custom.warranty | default: "2 Years Full Warranty | CSA & UL" }}
+                    {{ prod.metafields.custom.warranty | default: "2 Years Full Manufacturer Warranty" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
+
+              <!-- 6. DISPONIBILIDAD DINÁMICA -->
+              <tr>
+                <td class="feature-label">Availability</td>
+                {%- for prod in compare_coll.products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {%- if prod.available -%}
+                      <span style="color: #16a34a; font-weight: 600;">In Stock</span>
+                    {%- else -%}
+                      <span style="color: #dc2626; font-weight: 600;">Out of Stock</span>
+                    {%- endif -%}
                   </td>
                 {%- endfor -%}
               </tr>
