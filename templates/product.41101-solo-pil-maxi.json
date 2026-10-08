@@ -37,25 +37,25 @@
             "answer": "<p>High-volume Waxing Specialists managing packed daily schedules rely on the rapid heating profile of the Solo-Pil US to eliminate client transition delays. By maintaining a highly stable, uniform thermal profile across extended treatment shifts, the chassis prevents standard hard waxes from crystalizing or scorching, ensuring a smooth, predictable glide during delicate facial sculpting and full-body depilation.</p>"
           }
         },
-        "faq_item_mcpNpt": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Estheticians:",
-            "answer": "<p>Experienced Estheticians managing back-to-back appointments rely on the rapid heating element of the Solo-Pil Standard to eliminate client wait times. By maintaining a constant, predictable temperature profile throughout full 8-hour shifts, the system prevents the wax from thickening or overheating, allowing for seamless, fluid application during delicate facial hair removal and brow sculpting.</p>"
-          }
-        },
         "faq_item_74hYTC": {
           "type": "faq_item",
           "settings": {
             "question": "Clinical Spa Technicians:",
-            "answer": "<p>For Clinical Spa Technicians integrating depilatory services into broader aesthetic treatment plans, space-saving ergonomics are paramount. The compact footprint ($8.25\" \\times 7\" \\times 5\"H$) fits seamlessly onto auxiliary treatment trolleys without disrupting clean field protocols. The stable, insulated chassis ensures safe operation even when positioned in close proximity to advanced laser systems and facial treatment towers.</p>"
+            "answer": "<p>For Clinical Spa Technicians incorporating depilatory prep into multi-modality body treatments, spatial optimization is critical. The compact, insulated footprint ($8.25\" \\times 7\" \\times 5\"H$) mounts securely onto mobile auxiliary carts without crowding sterilized field instrumentation. Its heavy-duty external casing remains cool to the touch, ensuring complete operator safety during tight maneuverability around primary aesthetic towers.</p>"
+          }
+        },
+        "faq_item_mcpNpt": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Estheticians:",
+            "answer": "<p>Busy Salon Entrepreneurs benefit directly from the dedicated 4-inch American chamber format. This specialized heating well allows staff to rapidly drop in standard US-sized depilatory containers without rigging aftermarket bridging rings, drastically reducing room turnover times between clients while maintaining strict compliance with state board sanitation mandates.</p>"
           }
         }
       },
       "block_order": [
         "faq_item_bhzmwM",
-        "faq_item_mcpNpt",
-        "faq_item_74hYTC"
+        "faq_item_74hYTC",
+        "faq_item_mcpNpt"
       ],
       "name": "Product Characteristics",
       "settings": {
