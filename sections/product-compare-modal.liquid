@@ -7,15 +7,22 @@
       <p>Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
     </div>
 
+    {%- assign collection_handle = section.settings.compare_collection -%}
+    {%- assign compare_coll = collections[collection_handle] -%}
+
+    {%- comment -%} FALLBACK AUTOMÁTICO SI LA COLECCIÓN CONFIGURADA NO TIENE PRODUCTOS {%- endcomment -%}
+    {%- if compare_coll == blank or compare_coll.products.size == 0 -%}
+      {%- assign compare_coll = product.collections.first -%}
+    {%- endif -%}
+
     <div class="custom-compare-modal-body">
-      {%- assign collection_handle = section.settings.compare_collection -%}
-      {%- if collection_handle != blank and collections[collection_handle].products.size > 0 -%}
+      {%- if compare_coll != blank and compare_coll.products.size > 0 -%}
         <div class="compare-table-wrapper">
           <table class="compare-table">
             <thead>
               <tr>
                 <th class="feature-label">Specifications</th>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <th class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {%- if prod.handle == product.handle -%}
                       <span class="this-model-badge">This Model</span>
@@ -34,7 +41,7 @@
               <!-- CARACTERÍSTICA 1: TIPO DE ELEVACIÓN / SISTEMA -->
               <tr>
                 <td class="feature-label">System / Elevation</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.system_type | default: "Hydraulic System" }}
                   </td>
@@ -44,17 +51,17 @@
               <!-- CARACTERÍSTICA 2: ROTACIÓN / ARTICULACIÓN -->
               <tr>
                 <td class="feature-label">Rotation & Articulation</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.rotation | default: "360º Swivel with Lock" }}
                   </td>
                 {%- endfor -%}
               </tr>
 
-              <!-- CARACTERÍSTICA 3: RECTIFICACIÓN Y REPOSAPIÉS / INCLINACIÓN -->
+              <!-- CARACTERÍSTICA 3: RECTIFICACIÓN Y REPOSAPIÉS -->
               <tr>
                 <td class="feature-label">Backrest & Legrest</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.adjustments | default: "Manual Independent Adjustment" }}
                   </td>
@@ -64,7 +71,7 @@
               <!-- CARACTERÍSTICA 4: CAPACIDAD DE PESO -->
               <tr>
                 <td class="feature-label">Weight Capacity</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.weight_capacity | default: "450 lbs / 204 kg" }}
                   </td>
@@ -74,7 +81,7 @@
               <!-- CARACTERÍSTICA 5: APLICACIONES PRINCIPALES -->
               <tr>
                 <td class="feature-label">Recommended For</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.applications | default: "Facials, Pedicure, Body Treatments" }}
                   </td>
@@ -83,8 +90,8 @@
 
               <!-- CARACTERÍSTICA 6: GARANTÍA -->
               <tr>
-                <td class="feature-label">Warranty & Certification</td>
-                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                <td class="feature-label">Warranty & Safety</td>
+                {%- for prod in compare_coll.products limit: 4 -%}
                   <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
                     {{ prod.metafields.custom.warranty | default: "2 Years Full Warranty | CSA & UL" }}
                   </td>
@@ -94,7 +101,7 @@
           </table>
         </div>
       {%- else -%}
-        <p class="compare-empty-notice">Please select a valid comparison collection in the section settings.</p>
+        <p class="compare-empty-notice">No related products found in this category to compare.</p>
       {%- endif -%}
 
       <div class="compare-modal-footer">
@@ -144,6 +151,9 @@
     font-size: 20px;
     cursor: pointer;
     color: #333;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
   .custom-compare-modal-header h2 {
