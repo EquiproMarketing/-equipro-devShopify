@@ -1,378 +1,313 @@
-{% comment %}
-  Detección de colección/tipo para la comparativa
-{% endcomment %}
-{% assign target_collection = section.settings.compare_collection | default: product.collections.first %}
-{% if target_collection == blank %}
-  {% assign target_collection = collections['all'] %}
-{% endif %}
-
-{% assign current_sku = product.variants.first.sku | default: '' %}
-{% assign current_type_raw = product.type | downcase %}
-{% assign product_url_raw = product.url | downcase %}
-{% assign product_title_down = product.title | downcase %}
-
-<!-- Detección de Categoría Dominante -->
-{% assign category_key = 'generic' %}
-{% if current_type_raw contains 'mag' or product_url_raw contains 'mag' or product_title_down contains 'magnifier' or product_title_down contains 'lamp' or product_title_down contains 'circus' or product_title_down contains 'kfm' or product_title_down contains 'lfm' or product_title_down contains 'dainolite' %}
-  {% assign category_key = 'mag_lamps' %}
-{% elsif current_type_raw contains 'towel' or product_url_raw contains 'towel' or product_title_down contains 'cabi' %}
-  {% assign category_key = 'towel_warmers' %}
-{% elsif current_type_raw contains 'wax' or product_url_raw contains 'wax' or product_title_down contains 'pil' %}
-  {% assign category_key = 'wax_heaters' %}
-{% elsif current_type_raw contains 'steamer' or product_url_raw contains 'steamers' or product_title_down contains 'steamer' %}
-  {% assign category_key = 'steamers' %}
-{% endif %}
-
-<!-- STEP 1: SELECT PRODUCTS MODAL -->
-<div class="compare-modal-overlay" id="CompareModalStep1">
-  <div class="compare-modal">
-    <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">{{ section.settings.modal_title | default: "Select Models to Compare" }}</h2>
-    <p class="compare-modal__sub">Choose up to 5 alternative models to compare against {{ product.title }}:</p>
-
-    <div class="compare-select-list">
-      <!-- Este Modelo -->
-      <label class="compare-select-item is-selected">
-        <input type="checkbox" checked disabled class="compare-checkbox" data-product-id="{{ product.id }}">
-        <span>{{ product.title }}</span>
-        <span class="this-model-tag">This Model</span>
-      </label>
-
-      <!-- Filtrado estricto por ID, Handle y SKU para cero duplicados -->
-      {% assign items_count = 0 %}
-      {% for item in target_collection.products %}
-        {% assign item_sku = item.variants.first.sku | default: '' %}
-        {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-          {% assign items_count = items_count | plus: 1 %}
-          <label class="compare-select-item is-selected">
-            <input type="checkbox" checked class="compare-checkbox" data-product-id="{{ item.id }}">
-            <span>{{ item.title }}</span>
-          </label>
-        {% endif %}
-      {% endfor %}
+<div id="CustomCompareModal" class="custom-compare-modal-overlay" style="display: none;">
+  <div class="custom-compare-modal-content">
+    <button type="button" class="custom-compare-modal-close" id="CloseCompareModal">&times;</button>
+    
+    <div class="custom-compare-modal-header">
+      <h2>{{ section.settings.heading | default: "Technical Model Comparison" }}</h2>
+      <p>Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
     </div>
 
-    <button class="compare-modal__submit-btn" onclick="goToStep2()">View Comparison</button>
-  </div>
-</div>
-
-<!-- STEP 2: TECHNICAL COMPARISON TABLE MODAL -->
-<div class="compare-modal-overlay" id="CompareModalStep2">
-  <div class="compare-modal compare-modal--wide">
-    <button class="compare-modal__close" onclick="closeCompareModal()">&times;</button>
-    <h2 class="compare-modal__title">
-      {% if category_key == 'mag_lamps' %}Technical Magnifying Lamp Comparison
-      {% elsif category_key == 'towel_warmers' %}Technical Towel Warmer Comparison
-      {% elsif category_key == 'steamers' %}Technical Steamer Comparison
-      {% else %}Technical Model Comparison{% endif %}
-    </h2>
-    <p class="compare-modal__sub">Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
-
-    <div class="compare-table-scroll">
-      <table class="compare-table">
-        <thead>
-          <tr>
-            <th class="sticky-col">Key Features</th>
-            
-            <!-- COLUMNA MODELO ACTUAL -->
-            <th class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              <span class="this-model-badge">This Model</span>
-              <div class="compare-product-img">
-                {% if product.featured_image != blank %}
-                  <img src="{{ product.featured_image | image_url: width: 140 }}" alt="{{ product.title | escape }}">
-                {% else %}
-                  <div class="placeholder-img"></div>
-                {% endif %}
-              </div>
-              <strong>{{ product.title }}</strong>
-              <div class="compare-product-price">
-                {% if product.price_varies %}From {% endif %}{{ product.price | money }}
-              </div>
-              <a href="{{ product.url }}" class="compare-product-btn">View Details</a>
-            </th>
-
-            <!-- COLUMNAS OTROS MODELOS -->
-            {% assign items_count = 0 %}
-            {% for item in target_collection.products %}
-              {% assign item_sku = item.variants.first.sku | default: '' %}
-              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                {% assign items_count = items_count | plus: 1 %}
-                <th class="compare-col" data-product-id="{{ item.id }}">
-                  <div class="compare-product-img">
-                    {% if item.featured_image != blank %}
-                      <img src="{{ item.featured_image | image_url: width: 140 }}" alt="{{ item.title | escape }}">
-                    {% else %}
-                      <div class="placeholder-img"></div>
-                    {% endif %}
-                  </div>
-                  <strong>{{ item.title }}</strong>
-                  <div class="compare-product-price">
-                    {% if item.price_varies %}From {% endif %}{{ item.price | money }}
-                  </div>
-                  <a href="{{ item.url }}" class="compare-product-btn">View Details</a>
-                </th>
-              {% endif %}
-            {% endfor %}
-          </tr>
-        </thead>
-        <tbody>
-          <!-- 1. MODEL SKU -->
-          <tr>
-            <td class="sticky-col">Model SKU</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              <strong>{{ product.variants.first.sku | default: product.id }}</strong>
-            </td>
-            {% assign items_count = 0 %}
-            {% for item in target_collection.products %}
-              {% assign item_sku = item.variants.first.sku | default: '' %}
-              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                {% assign items_count = items_count | plus: 1 %}
-                <td class="compare-col" data-product-id="{{ item.id }}">
-                  <strong>{{ item.variants.first.sku | default: item.id }}</strong>
-                </td>
-              {% endif %}
-            {% endfor %}
-          </tr>
-
-          {% case category_key %}
-            {% when 'mag_lamps' %}
-              <!-- ================= MAG LAMPS SPECIFICATIONS ================= -->
+    <div class="custom-compare-modal-body">
+      {%- assign collection_handle = section.settings.compare_collection -%}
+      {%- if collection_handle != blank and collections[collection_handle].products.size > 0 -%}
+        <div class="compare-table-wrapper">
+          <table class="compare-table">
+            <thead>
               <tr>
-                <td class="sticky-col">Diopter Options & Glass</td>
-                <!-- Columna principal -->
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  Available in 3D (Standard Precision) & 5D (High Magnification)
-                </td>
-                <!-- Columnas de los demás productos de la comparativa -->
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      Available in 3D (Standard Precision) & 5D (High Magnification)
-                    </td>
-                  {% endif %}
-                {% endfor %}
+                <th class="feature-label">Specifications</th>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <th class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {%- if prod.handle == product.handle -%}
+                      <span class="this-model-badge">This Model</span>
+                    {%- endif -%}
+                    {%- if prod.featured_media != blank -%}
+                      <img src="{{ prod.featured_media | image_url: width: 200 }}" alt="{{ prod.title | escape }}" class="compare-product-img" loading="lazy">
+                    {%- endif -%}
+                    <h3 class="compare-product-title">{{ prod.title }}</h3>
+                    <p class="compare-product-price">{{ prod.price | money }}</p>
+                    <a href="{{ prod.url }}" class="compare-view-btn">View Details</a>
+                  </th>
+                {%- endfor -%}
               </tr>
+            </thead>
+            <tbody>
+              <!-- CARACTERÍSTICA 1: TIPO DE ELEVACIÓN / SISTEMA -->
               <tr>
-                <td class="sticky-col">Weight</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'circus' or t_down contains '63603' %}10 lbs (5 kg)
-                  {% elsif t_down contains 'kfm' or t_down contains '63104' %}9 lbs (4 kg)
-                  {% else %}7 lbs (3.2 kg){% endif %}
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'circus' or it_down contains '63603' %}10 lbs (5 kg)
-                      {% elsif it_down contains 'kfm' or it_down contains '63104' %}9 lbs (4 kg)
-                      {% else %}7 lbs (3.2 kg){% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
-              </tr>
-              <tr>
-                <td class="sticky-col">Arm Reach & Technology</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  47" Spring-Balanced Enclosed Steel Arm
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      47" Spring-Balanced Enclosed Steel Arm
-                    </td>
-                  {% endif %}
-                {% endfor %}
+                <td class="feature-label">System / Elevation</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.system_type | default: "Hydraulic System" }}
+                  </td>
+                {%- endfor -%}
               </tr>
 
-            {% when 'towel_warmers' %}
-              <!-- ================= TOWEL WARMERS SPECIFICATIONS ================= -->
+              <!-- CARACTERÍSTICA 2: ROTACIÓN / ARTICULACIÓN -->
               <tr>
-                <td class="sticky-col">Towel Capacity (13" x 24")</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% assign t_down = product.title | downcase %}
-                  {% if t_down contains 'mini' or t_down contains '61100' %}6 Facial Towels
-                  {% elsif t_down contains 'spa' or t_down contains '61102' %}24 Facial Towels
-                  {% else %}12 Facial Towels{% endif %}
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% assign it_down = item.title | downcase %}
-                      {% if it_down contains 'mini' or it_down contains '61100' %}6 Facial Towels
-                      {% elsif it_down contains 'spa' or it_down contains '61102' %}24 Facial Towels
-                      {% else %}12 Facial Towels{% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
+                <td class="feature-label">Rotation & Articulation</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.rotation | default: "360º Swivel with Lock" }}
+                  </td>
+                {%- endfor -%}
               </tr>
 
-            {% else %}
-              <!-- ================= FALLBACK ================= -->
+              <!-- CARACTERÍSTICA 3: RECTIFICACIÓN Y REPOSAPIÉS / INCLINACIÓN -->
               <tr>
-                <td class="sticky-col">Product Status</td>
-                <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-                  {% if product.available %}In Stock{% else %}Out of Stock{% endif %}
-                </td>
-                {% assign items_count = 0 %}
-                {% for item in target_collection.products %}
-                  {% assign item_sku = item.variants.first.sku | default: '' %}
-                  {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                    {% assign items_count = items_count | plus: 1 %}
-                    <td class="compare-col" data-product-id="{{ item.id }}">
-                      {% if item.available %}In Stock{% else %}Out of Stock{% endif %}
-                    </td>
-                  {% endif %}
-                {% endfor %}
+                <td class="feature-label">Backrest & Legrest</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.adjustments | default: "Manual Independent Adjustment" }}
+                  </td>
+                {%- endfor -%}
               </tr>
-          {% endcase %}
 
-          <!-- WARRANTY & SAFETY -->
-          <tr>
-            <td class="sticky-col">Warranty & Safety</td>
-            <td class="this-model-col compare-col" data-product-id="{{ product.id }}">
-              1 Year Warranty | CSA & UL Approved
-            </td>
-            {% assign items_count = 0 %}
-            {% for item in target_collection.products %}
-              {% assign item_sku = item.variants.first.sku | default: '' %}
-              {% if item.id != product.id and item.handle != product.handle and item_sku != current_sku and items_count < 5 %}
-                {% assign items_count = items_count | plus: 1 %}
-                <td class="compare-col" data-product-id="{{ item.id }}">
-                  1 Year Warranty | CSA & UL Approved
-                </td>
-              {% endif %}
-            {% endfor %}
-          </tr>
-        </tbody>
-      </table>
-    </div>
+              <!-- CARACTERÍSTICA 4: CAPACIDAD DE PESO -->
+              <tr>
+                <td class="feature-label">Weight Capacity</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.weight_capacity | default: "450 lbs / 204 kg" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
 
-    <div class="compare-modal__footer">
-      <button class="compare-btn-sec" onclick="goToStep1()">Go Back</button>
-      <button class="compare-btn-sec" onclick="closeCompareModal()">Close</button>
+              <!-- CARACTERÍSTICA 5: APLICACIONES PRINCIPALES -->
+              <tr>
+                <td class="feature-label">Recommended For</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.applications | default: "Facials, Pedicure, Body Treatments" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
+
+              <!-- CARACTERÍSTICA 6: GARANTÍA -->
+              <tr>
+                <td class="feature-label">Warranty & Certification</td>
+                {%- for prod in collections[collection_handle].products limit: 4 -%}
+                  <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">
+                    {{ prod.metafields.custom.warranty | default: "2 Years Full Warranty | CSA & UL" }}
+                  </td>
+                {%- endfor -%}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      {%- else -%}
+        <p class="compare-empty-notice">Please select a valid comparison collection in the section settings.</p>
+      {%- endif -%}
+
+      <div class="compare-modal-footer">
+        <button type="button" class="compare-footer-btn" id="CloseCompareModalFooter">Close</button>
+      </div>
     </div>
   </div>
 </div>
 
 <style>
-.compare-modal-overlay {
-  position: fixed; inset: 0; background: rgba(0,0,0,0.6); z-index: 2000;
-  display: flex; align-items: center; justify-content: center; opacity: 0; visibility: hidden; transition: all 0.3s ease;
-}
-.compare-modal-overlay.is-open { opacity: 1; visibility: visible; }
-.compare-modal {
-  background: #fff; border-radius: 24px; padding: 2.5rem; width: 90%; max-width: 550px; position: relative; max-height: 90vh; overflow-y: auto;
-}
-.compare-modal--wide { max-width: 1100px; }
-.compare-modal__close { position: absolute; top: 1.5rem; right: 1.5rem; background: #eee; border: none; width: 32px; height: 32px; border-radius: 50%; font-size: 1.2rem; cursor: pointer; }
-.compare-modal__title { font-size: 2rem; font-weight: 700; color: #a22938; margin-bottom: 0.5rem; }
-.compare-modal__sub { font-size: 0.9rem; color: #666; margin-bottom: 1.5rem; }
-.compare-select-list { display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
-.compare-select-item { display: flex; align-items: center; gap: 0.75rem; padding: 1rem; border-radius: 12px; border: 1px solid #eee; cursor: pointer; font-size: 0.9rem; }
-.compare-select-item.is-selected { border-color: #a22938; background: #fdf5f6; }
-.this-model-tag { margin-left: auto; background: #a22938; color: #fff; font-size: 0.75rem; padding: 0.2rem 0.6rem; border-radius: 12px; font-weight: 600; }
-.compare-modal__submit-btn { width: 100%; background: #a22938; color: #fff; padding: 1rem; border-radius: 25px; border: none; font-weight: 700; cursor: pointer; transition: background 0.2s ease; }
-.compare-modal__submit-btn:hover { background: #8c1e2e; }
+  .custom-compare-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.65);
+    backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+  }
 
-/* TABLE COMPARISON */
-.compare-table-scroll { overflow-x: auto; margin-bottom: 1.5rem; }
-.compare-table { width: 100%; border-collapse: collapse; min-width: 750px; }
-.compare-table th, .compare-table td { padding: 1rem; border: 1px solid #eee; text-align: center; font-size: 0.85rem; line-height: 1.4; }
-.sticky-col { text-align: left !important; font-weight: 700; background: #fafafa; color: #111; width: 180px; }
-.this-model-col { border: 2px solid #a22938 !important; background: #fdf5f6; }
-.this-model-badge { background: #a22938; color: #fff; font-size: 0.7rem; padding: 0.2rem 0.5rem; border-radius: 10px; display: inline-block; margin-bottom: 6px; }
-.compare-product-img { width: 80px; height: 80px; margin: 0.5rem auto; display: flex; align-items: center; justify-content: center; }
-.compare-product-img img { max-width: 100%; max-height: 100%; object-fit: contain; }
-.placeholder-img { width: 100%; height: 100%; background: #eee; border-radius: 8px; }
-.compare-product-price { font-weight: 700; color: #a22938; margin: 0.3rem 0; font-size: 1rem; }
-.compare-product-btn { display: inline-block; background: #a22938; color: #fff; padding: 0.5rem 1rem; border-radius: 12px; text-decoration: none; font-size: 0.75rem; font-weight: 600; margin-top: 0.4rem; }
-.compare-modal__footer { display: flex; justify-content: center; gap: 1rem; }
-.compare-btn-sec { padding: 0.75rem 2rem; border-radius: 20px; border: 1px solid #ccc; background: #fff; cursor: pointer; font-weight: 600; }
+  .custom-compare-modal-content {
+    background: #ffffff;
+    width: 100%;
+    max-width: 1100px;
+    border-radius: 16px;
+    padding: 35px 30px;
+    position: relative;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    max-height: 88vh;
+    overflow-y: auto;
+  }
 
-.compare-col.is-hidden { display: none !important; }
+  .custom-compare-modal-close {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: #f4f4f5;
+    border: none;
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    font-size: 20px;
+    cursor: pointer;
+    color: #333;
+  }
+
+  .custom-compare-modal-header h2 {
+    font-size: 26px;
+    font-weight: 700;
+    color: #a22938;
+    margin: 0 0 6px 0;
+  }
+
+  .custom-compare-modal-header p {
+    font-size: 14px;
+    color: #666;
+    margin: 0 0 25px 0;
+  }
+
+  .compare-table-wrapper {
+    overflow-x: auto;
+    margin-bottom: 25px;
+  }
+
+  .compare-table {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: center;
+    font-size: 13px;
+  }
+
+  .compare-table th, 
+  .compare-table td {
+    padding: 14px 12px;
+    border-bottom: 1px solid #e2e8f0;
+    vertical-align: middle;
+  }
+
+  .compare-table th.feature-label,
+  .compare-table td.feature-label {
+    text-align: left;
+    font-weight: 700;
+    color: #1e293b;
+    background: #f8fafc;
+    width: 170px;
+    min-width: 150px;
+    border-right: 1px solid #e2e8f0;
+  }
+
+  .compare-table th.highlight-col,
+  .compare-table td.highlight-col {
+    background: #fff5f5;
+    border-left: 2px solid #a22938;
+    border-right: 2px solid #a22938;
+  }
+
+  .this-model-badge {
+    display: inline-block;
+    background: #a22938;
+    color: #ffffff;
+    font-size: 11px;
+    font-weight: 600;
+    padding: 3px 10px;
+    border-radius: 12px;
+    margin-bottom: 8px;
+    text-transform: uppercase;
+  }
+
+  .compare-product-img {
+    max-width: 90px;
+    height: 90px;
+    object-fit: contain;
+    margin: 0 auto 10px auto;
+    display: block;
+  }
+
+  .compare-product-title {
+    font-size: 13px;
+    font-weight: 700;
+    color: #0f172a;
+    line-height: 1.3;
+    margin: 0 0 6px 0;
+  }
+
+  .compare-product-price {
+    font-size: 14px;
+    font-weight: 700;
+    color: #a22938;
+    margin: 0 0 10px 0;
+  }
+
+  .compare-view-btn {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #a22938;
+    color: #ffffff;
+    border-radius: 20px;
+    text-decoration: none;
+    font-size: 12px;
+    font-weight: 600;
+  }
+
+  .compare-modal-footer {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+  }
+
+  .compare-footer-btn {
+    padding: 10px 24px;
+    border-radius: 25px;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #334155;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+  }
 </style>
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {
-    const triggerBtn = document.getElementById('OpenCompareModal');
-    if (triggerBtn) {
-      triggerBtn.addEventListener('click', function() {
-        document.getElementById('CompareModalStep1').classList.add('is-open');
+    const openBtn = document.getElementById('OpenCompareModal');
+    const modal = document.getElementById('CustomCompareModal');
+    const closeBtn = document.getElementById('CloseCompareModal');
+    const closeFooter = document.getElementById('CloseCompareModalFooter');
+
+    if (openBtn && modal) {
+      openBtn.addEventListener('click', function(e) {
+        e.preventDefault();
+        modal.style.display = 'flex';
       });
     }
 
-    const checkboxes = document.querySelectorAll('.compare-checkbox');
-    checkboxes.forEach(chk => {
-      chk.addEventListener('change', function() {
-        const parentLabel = this.closest('.compare-select-item');
-        if (this.checked) {
-          parentLabel.classList.add('is-selected');
-        } else {
-          parentLabel.classList.remove('is-selected');
-        }
+    const closeModal = () => { if (modal) modal.style.display = 'none'; };
+
+    if (closeBtn) closeBtn.addEventListener('click', closeModal);
+    if (closeFooter) closeFooter.addEventListener('click', closeModal);
+
+    if (modal) {
+      modal.addEventListener('click', function(e) {
+        if (e.target === modal) closeModal();
       });
-    });
+    }
   });
-
-  function closeCompareModal() {
-    document.getElementById('CompareModalStep1').classList.remove('is-open');
-    document.getElementById('CompareModalStep2').classList.remove('is-open');
-  }
-
-  function goToStep2() {
-    const checkboxes = document.querySelectorAll('.compare-checkbox');
-    checkboxes.forEach(chk => {
-      const prodId = chk.getAttribute('data-product-id');
-      const cols = document.querySelectorAll(`.compare-col[data-product-id="${prodId}"]`);
-      
-      cols.forEach(col => {
-        if (chk.checked) {
-          col.classList.remove('is-hidden');
-        } else {
-          col.classList.add('is-hidden');
-        }
-      });
-    });
-
-    document.getElementById('CompareModalStep1').classList.remove('is-open');
-    document.getElementById('CompareModalStep2').classList.add('is-open');
-  }
-
-  function goToStep1() {
-    document.getElementById('CompareModalStep2').classList.remove('is-open');
-    document.getElementById('CompareModalStep1').classList.add('is-open');
-  }
 </script>
 
 {% schema %}
 {
   "name": "Product Compare Modal",
+  "tag": "section",
   "settings": [
     {
       "type": "text",
-      "id": "modal_title",
-      "label": "Modal Step 1 Title",
-      "default": "Select Models to Compare"
+      "id": "heading",
+      "label": "Modal Heading",
+      "default": "Technical Model Comparison"
     },
     {
       "type": "collection",
       "id": "compare_collection",
-      "label": "Override Collection to Compare"
+      "label": "Collection to Compare"
     }
   ],
-  "presets": [{ "name": "Product Compare Modal" }]
+  "presets": [
+    {
+      "name": "Product Compare Modal"
+    }
+  ]
 }
 {% endschema %}
