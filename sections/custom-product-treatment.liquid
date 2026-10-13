@@ -2,6 +2,24 @@
 
 <section class="custom-treatment-section" id="treatment-section-{{ section.id }}">
   <div class="page-width">
+    
+    {%- comment -%} BOTÓN "BACK" CONFIGURABLE {%- endcomment -%}
+    {%- if section.settings.show_back_button -%}
+      <div class="custom-treatment-back-wrapper" style="margin-bottom: 20px;">
+        <a 
+          href="{{ section.settings.back_button_url | default: 'javascript:history.back()' }}" 
+          class="custom-treatment-back-btn"
+          style="display: inline-flex; align-items: center; gap: 8px; text-decoration: none; color: #333; font-weight: 600; font-size: 14px;"
+        >
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <line x1="19" y1="12" x2="5" y2="12"></line>
+            <polyline points="12 19 5 12 12 5"></polyline>
+          </svg>
+          <span>{{ section.settings.back_button_label | default: "Back" }}</span>
+        </a>
+      </div>
+    {%- endif -%}
+
     {%- if section.settings.title != blank -%}
       <h2 class="custom-treatment-section__title">{{ section.settings.title | escape }}</h2>
     {%- endif -%}
@@ -231,7 +249,6 @@
         textSpan.style.display = 'none';
         spinnerSpan.style.display = 'inline-block';
 
-        // Solicitud AJAX robusta obteniendo el estado completo del carrito
         fetch(window.Shopify.routes.root + 'cart/add.js', {
           method: 'POST',
           headers: {
@@ -243,43 +260,29 @@
             quantity: 1
           })
         })
-        .then(response => {
-          return response.json();
-        })
+        .then(response => response.json())
         .then(data => {
           textSpan.textContent = 'Added! ✓';
           textSpan.style.display = 'inline-block';
           spinnerSpan.style.display = 'none';
           this.classList.add('is-added');
 
-          // Forzar la actualización de los elementos de carrito del tema (Drawer o burbuja de conteo)
-          fetch(window.Shopify.routes.root + 'cart.js')
-            .then(res => res.json())
-            const cartUpdateEvent = new CustomEvent('cart:updated', { detail: data });
-            document.dispatchEvent(cartUpdateEvent);
-
-            // Actualizar contadores globales si existen en el tema
-            document.querySelectorAll('.cart-count-bubble').forEach(badge => {
-              // Opcional: refrescar mediante fetch de secciones de header/drawer si aplica
-            });
-
-            // Si el tema usa cart-drawer nativo de Dawn
-            const cartDrawer = document.querySelector('cart-drawer');
-            if (cartDrawer && typeof cartDrawer.open === 'function' && typeof cartDrawer.setActiveElement === 'function') {
-              fetch(`${window.Shopify.routes.root}?sections=cart-drawer,cart-icon-bubble`)
-                .then(res => res.json())
-                .then(parsedState => {
-                  if (parsedState['cart-drawer']) {
-                    const tempDiv = document.createElement('div');
-                    tempDiv.innerHTML = parsedState['cart-drawer'];
-                    const newDrawer = tempDiv.querySelector('cart-drawer');
-                    if (newDrawer) {
-                      cartDrawer.innerHTML = newDrawer.innerHTML;
-                    }
+          const cartDrawer = document.querySelector('cart-drawer');
+          if (cartDrawer && typeof cartDrawer.open === 'function') {
+            fetch(`${window.Shopify.routes.root}?sections=cart-drawer,cart-icon-bubble`)
+              .then(res => res.json())
+              .then(parsedState => {
+                if (parsedState['cart-drawer']) {
+                  const tempDiv = document.createElement('div');
+                  tempDiv.innerHTML = parsedState['cart-drawer'];
+                  const newDrawer = tempDiv.querySelector('cart-drawer');
+                  if (newDrawer) {
+                    cartDrawer.innerHTML = newDrawer.innerHTML;
                   }
-                  cartDrawer.open();
-                });
-            }
+                }
+                cartDrawer.open();
+              });
+          }
 
           setTimeout(() => {
             textSpan.textContent = originalText;
@@ -305,6 +308,32 @@
   "tag": "section",
   "class": "section-custom-product-treatment",
   "settings": [
+    {
+      "type": "header",
+      "content": "Back Button Settings"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_back_button",
+      "label": "Show Back Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "back_button_label",
+      "label": "Back Button Label",
+      "default": "Back"
+    },
+    {
+      "type": "url",
+      "id": "back_button_url",
+      "label": "Custom Back URL (Optional)",
+      "info": "Leave empty to automatically go back to the previous browser page."
+    },
+    {
+      "type": "header",
+      "content": "Section Content"
+    },
     {
       "type": "text",
       "id": "title",
