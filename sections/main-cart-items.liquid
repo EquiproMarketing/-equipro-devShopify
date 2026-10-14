@@ -3,7 +3,7 @@
 <div class="page-width product-page" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
   <h1 style="font-size: 2.2rem; font-weight: 700; color: #1d1d1f; margin-bottom: 30px;">Shopping Cart</h1>
 
-  <div id="main-cart-container">
+  <div id="main-cart-container" data-section-id="{{ section.id }}">
     {% if cart.item_count > 0 %}
       <form action="{{ routes.cart_url }}" method="post" id="main-cart-form">
         <div style="display: flex; flex-direction: column; gap: 20px;">
@@ -13,7 +13,7 @@
               <!-- IMAGEN -->
               <div style="width: 100px; height: 100px; border-radius: 12px; overflow: hidden; background: #f5f5f7; flex-shrink: 0; border: 1px solid #e5e5e7;">
                 {% if item.image %}
-                  <img src="{{ item.image | image_url: width: 300 }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
+                  <img src="{{ item.image | image_url: width: 300 }}" width="300" height="{{ 300 | divided_by: item.image.aspect_ratio | round }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
                 {% endif %}
               </div>
 
@@ -39,7 +39,7 @@
               <!-- CANTIDAD -->
               <div style="display: flex; align-items: center; border: 1px solid #d2d2d7; border-radius: 6px; overflow: hidden; height: 36px; background: #ffffff;">
                 <button type="button" class="js-qty-change" data-key="{{ item.key }}" data-action="minus" style="background: none; border: none; padding: 0 12px; cursor: pointer; color: #1d1d1f; font-size: 1rem; height: 100%; display: flex; align-items: center;">−</button>
-                <input type="number" value="{{ item.quantity }}" readonly style="width: 36px; border: none; text-align: center; font-size: 0.9rem; font-weight: 600; color: #1d1d1f; -moz-appearance: textfield; padding: 0;">
+                <input type="number" class="js-qty-input" data-key="{{ item.key }}" aria-label="Quantity" min="0" step="1" name="updates[]" value="{{ item.quantity }}" style="width: 36px; border: none; text-align: center; font-size: 0.9rem; font-weight: 600; color: #1d1d1f; -moz-appearance: textfield; padding: 0;">
                 <button type="button" class="js-qty-change" data-key="{{ item.key }}" data-action="plus" style="background: none; border: none; padding: 0 12px; cursor: pointer; color: #1d1d1f; font-size: 1rem; height: 100%; display: flex; align-items: center;">+</button>
               </div>
 
@@ -66,7 +66,7 @@
     {% else %}
       <div style="text-align: center; padding: 60px 0;">
         <p style="font-size: 1.1rem; color: #6e6e73;">Your cart is currently empty.</p>
-        <a href="/collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">Continue Shopping</a>
+        <a href="{{ routes.all_products_collection_url }}" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">Continue Shopping</a>
       </div>
     {% endif %}
   </div>
@@ -81,54 +81,7 @@
   input[type="number"] { -moz-appearance: textfield; }
 </style>
 
-<script>
-  document.addEventListener('DOMContentLoaded', () => {
-    // Función para actualizar ítem vía AJAX
-    function updateCartItem(idKey, newQty) {
-      fetch(window.Shopify.routes.root + 'cart/change.js', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ id: idKey, quantity: newQty })
-      })
-      .then(res => res.json())
-      .then(cart => {
-        // Recargar suavemente para sincronizar subtotales y estado
-        window.location.reload();
-      })
-      .catch(err => console.error('Error updating cart:', err));
-    }
 
-    // Interceptar botones de eliminación
-    document.querySelectorAll('.js-remove-cart-item').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        e.stopPropagation(); // Detener cualquier evento que intente abrir el drawer
-
-        const key = btn.getAttribute('data-key');
-        const itemRow = btn.closest('.cart-page-item');
-        if (itemRow) itemRow.style.opacity = '0.3'; // Feedback visual inmediato
-
-        updateCartItem(key, 0);
-      });
-    });
-
-    // Interceptar botones + y -
-    document.querySelectorAll('.js-qty-change').forEach(btn => {
-      btn.addEventListener('click', (e) => {
-        e.preventDefault();
-        const key = btn.getAttribute('data-key');
-        const action = btn.getAttribute('data-action');
-        const input = btn.parentElement.querySelector('input');
-        let currentVal = parseInt(input.value) || 0;
-        
-        let newQty = action === 'plus' ? currentVal + 1 : currentVal - 1;
-        if (newQty < 0) newQty = 0;
-
-        updateCartItem(key, newQty);
-      });
-    });
-  });
-</script>
 
 {% schema %}
 {

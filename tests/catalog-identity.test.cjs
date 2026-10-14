@@ -110,3 +110,24 @@ test('product detail blocks are isolated to their configured product', async () 
  assert.match(await render(product(1)), /Royal question/);
  assert.doesNotMatch(await render(product(2)), /Royal question|Royal answer|Royal details/);
 });
+
+test('Royal separates the source section hierarchy and retains seven product-specific FAQs', () => {
+ const pilot = JSON.parse(fs.readFileSync('templates/product.royal-pilot.json', 'utf8'));
+ assert.deepEqual(pilot.order, ['main', 'overview', 'features', 'instructions', 'safety', 'faq']);
+ assert.equal(pilot.sections.overview.settings.layout, 'overview');
+ assert.equal(pilot.sections.overview.blocks.item_10.settings.group, 'use');
+ assert.equal(pilot.sections.instructions.settings.layout, 'steps');
+ assert.equal(pilot.sections.faq.block_order.length, 7);
+ for (const [id, section] of Object.entries(pilot.sections)) if (id !== 'main') assert.equal(section.settings.applies_to_product, 'ei-501-royal');
+});
+test('overview renders uses as accordions and specifications as a semantic table', async () => {
+ const section = { id: 'overview', settings: { heading: 'Specs and uses', secondary_heading: 'Professional uses', layout: 'overview', applies_to_product: product(1) }, blocks: [
+  { settings: { title: 'Model', text: '<p>Royal EI-501</p>', group: 'specification' } },
+  { settings: { title: 'Massage', text: '<p>Body treatment positioning</p>', group: 'use' } }
+ ] };
+ const html = await engine.parseAndRender(source('sections/product-details.liquid'), { product: product(1), section });
+ assert.match(html, /<summary>Massage<\/summary>/);
+ assert.match(html, /<th scope="row">Model<\/th>/);
+ assert.match(html, /<caption/);
+ assert.doesNotMatch(html, /<th scope="row">Massage/);
+});

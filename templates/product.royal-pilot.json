@@ -4,72 +4,130 @@
       "type": "main-product",
       "settings": {
         "featured_product": "ei-501-royal",
-        "custom_title": "Royal EI-501 Electric Treatment Chair",
-        "custom_description": "<p>An electric treatment chair for facials, massage, waxing and body treatments, with adjustable positioning to suit your professional workspace.</p>",
+        "custom_title": "Royal Professional Electric Multi-Treatment Chair",
+        "custom_description": "<p>Royal EI-501 combines electric positioning with four cushions, headrests and armrests to support a range of treatment setups.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "show_compare_btn": false,
         "show_currency": true,
         "btn_label": "ADD TO CART",
-        "purchase_note": "<p>Choose an available configuration below. For black or navy upholstery, <a href=\"/pages/contact-us\">contact Equipro</a>.</p>"
+        "purchase_note": "<p>Upholstery colors: white, black and navy. <a href=\"/pages/contact-us\">Contact Equipro for configuration advice.</a></p>",
+        "reference_layout": true,
+        "intro_highlight": "Electric positioning for professional facials, massage, waxing and body treatments."
       }
     },
-    "specifications": {
+    "overview": {
       "type": "product-details",
       "settings": {
-        "heading": "Technical specifications",
-        "layout": "specifications",
-        "applies_to_product": "ei-501-royal"
+        "heading": "Product specifications and professional uses",
+        "layout": "overview",
+        "applies_to_product": "ei-501-royal",
+        "secondary_heading": "Professional uses"
       },
       "blocks": {
         "item_0": {
           "type": "item",
           "settings": {
             "title": "Model",
-            "text": "<p>Royal EI-501</p>"
+            "text": "<p>Royal EI-501</p>",
+            "group": "specification"
           }
         },
         "item_1": {
           "type": "item",
           "settings": {
-            "title": "Positioning",
-            "text": "<p>Electric adjustment with remote control and a dedicated height pedal.</p>"
+            "title": "Manufacturer",
+            "text": "<p>Equipro Beauty</p>",
+            "group": "specification"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
-            "title": "Height range",
-            "text": "<p>17\u201339 in. (43\u201399 cm).</p>"
+            "title": "Positioning",
+            "text": "<p>Electric adjustment with remote control and a dedicated height pedal.</p>",
+            "group": "specification"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
-            "title": "Cushion layout",
-            "text": "<p>Four cushions.</p>"
+            "title": "Height range",
+            "text": "<p>17–39 in. (43–99 cm).</p>",
+            "group": "specification"
           }
         },
         "item_4": {
           "type": "item",
           "settings": {
-            "title": "Headrests",
-            "text": "<p>Adjustable crescent headrest and regular headrest.</p>"
+            "title": "Cushions",
+            "text": "<p>Four cushions.</p>",
+            "group": "specification"
           }
         },
         "item_5": {
           "type": "item",
           "settings": {
-            "title": "Armrests",
-            "text": "<p>Included armrests.</p>"
+            "title": "Headrests",
+            "text": "<p>Adjustable crescent headrest and regular headrest.</p>",
+            "group": "specification"
           }
         },
         "item_6": {
           "type": "item",
           "settings": {
+            "title": "Armrests",
+            "text": "<p>Included armrests.</p>",
+            "group": "specification"
+          }
+        },
+        "item_7": {
+          "type": "item",
+          "settings": {
             "title": "Upholstery colors",
-            "text": "<p>White, black and navy. Online ordering is limited to configured Shopify variants.</p>"
+            "text": "<p>White, black and navy.</p>",
+            "group": "specification"
+          }
+        },
+        "item_8": {
+          "type": "item",
+          "settings": {
+            "title": "Dimensions and weight",
+            "text": "<p>Contact Equipro for confirmed dimensional and weight specifications.</p>",
+            "group": "specification"
+          }
+        },
+        "item_9": {
+          "type": "item",
+          "settings": {
+            "title": "Electrical requirements and warranty",
+            "text": "<p>Confirm the electrical connection and warranty terms with Equipro before ordering.</p>",
+            "group": "specification"
+          }
+        },
+        "item_10": {
+          "type": "item",
+          "settings": {
+            "title": "Facials and skin-care treatments",
+            "text": "<p>Position the chair for professional facial and skin-care services.</p>",
+            "group": "use"
+          }
+        },
+        "item_11": {
+          "type": "item",
+          "settings": {
+            "title": "Body treatments and massage",
+            "text": "<p>Adjust the treatment position to suit body-treatment and massage appointments.</p>",
+            "group": "use"
+          }
+        },
+        "item_12": {
+          "type": "item",
+          "settings": {
+            "title": "Waxing and multi-treatment services",
+            "text": "<p>Reposition the chair for waxing and other aesthetic services.</p>",
+            "group": "use"
           }
         }
       },
@@ -80,45 +138,97 @@
         "item_3",
         "item_4",
         "item_5",
-        "item_6"
+        "item_6",
+        "item_7",
+        "item_8",
+        "item_9",
+        "item_10",
+        "item_11",
+        "item_12"
       ]
     },
-    "uses": {
+    "features": {
       "type": "product-details",
       "settings": {
-        "heading": "Professional uses and key features",
+        "heading": "Key features for the professional station",
         "layout": "list",
+        "applies_to_product": "ei-501-royal",
+        "feature_band": true,
         "show_image_slot": true,
-        "image_slot_label": "Royal positioning detail image",
-        "applies_to_product": "ei-501-royal"
+        "image_slot_label": "Royal positioning detail image"
       },
       "blocks": {
         "item_0": {
           "type": "item",
           "settings": {
-            "title": "Facials and aesthetic treatments",
-            "text": "<p>Adjust the treatment position for facial services and waxing.</p>"
+            "title": "Electric positioning",
+            "text": "<p>Remote-controlled positioning and a dedicated height pedal.</p>",
+            "group": "specification"
           }
         },
         "item_1": {
           "type": "item",
           "settings": {
-            "title": "Massage and body treatments",
-            "text": "<p>Reposition the chair for body treatments and massage.</p>"
+            "title": "Four-cushion design",
+            "text": "<p>A four-part cushion layout for treatment positioning.</p>",
+            "group": "specification"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
-            "title": "Electric positioning",
-            "text": "<p>Use the remote control to adjust the treatment position. The dedicated pedal controls height.</p>"
+            "title": "Adjustable headrest",
+            "text": "<p>Crescent and regular headrests support different treatment setups.</p>",
+            "group": "specification"
+          }
+        }
+      },
+      "block_order": [
+        "item_0",
+        "item_1",
+        "item_2"
+      ]
+    },
+    "instructions": {
+      "type": "product-details",
+      "settings": {
+        "heading": "How to use Royal",
+        "layout": "steps",
+        "applies_to_product": "ei-501-royal",
+        "show_image_slot": true,
+        "image_slot_label": "Royal control and positioning image"
+      },
+      "blocks": {
+        "item_0": {
+          "type": "item",
+          "settings": {
+            "title": "Prepare the chair",
+            "text": "<p>Follow the Royal operating manual for installation and electrical connection. Check that the controls are connected as directed.</p>",
+            "group": "specification"
+          }
+        },
+        "item_1": {
+          "type": "item",
+          "settings": {
+            "title": "Set the treatment height",
+            "text": "<p>Use the dedicated height pedal or the controls specified in the manual to set the chair for access and treatment.</p>",
+            "group": "specification"
+          }
+        },
+        "item_2": {
+          "type": "item",
+          "settings": {
+            "title": "Position the client supports",
+            "text": "<p>Adjust the headrest and armrests for the treatment setup, following the operating manual.</p>",
+            "group": "specification"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
-            "title": "Client support",
-            "text": "<p>Four cushions, headrests and armrests support the treatment setup.</p>"
+            "title": "Adjust the treatment position",
+            "text": "<p>Use the remote controls to position the chair. Check clearances before moving any powered section.</p>",
+            "group": "specification"
           }
         }
       },
@@ -129,36 +239,37 @@
         "item_3"
       ]
     },
-    "instructions": {
+    "safety": {
       "type": "product-details",
       "settings": {
-        "heading": "Instructions and safety",
+        "heading": "Safety information",
         "layout": "list",
-        "introduction": "<p>These reminders do not replace the product operating manual.</p>",
-        "show_image_slot": true,
-        "image_slot_label": "Royal controls and clearance image",
-        "applies_to_product": "ei-501-royal"
+        "applies_to_product": "ei-501-royal",
+        "introduction": "<p>These reminders do not replace the Royal operating manual.</p>"
       },
       "blocks": {
         "item_0": {
           "type": "item",
           "settings": {
-            "title": "Before use",
-            "text": "<p>Refer to the Royal operating manual for installation, electrical connection and operating limits.</p>"
+            "title": "Operating limits",
+            "text": "<p>Confirm the manufacturer’s load limits, electrical requirements and installation instructions before use.</p>",
+            "group": "specification"
           }
         },
         "item_1": {
           "type": "item",
           "settings": {
-            "title": "Positioning",
-            "text": "<p>Keep the area around moving joints clear before making electric adjustments.</p>"
+            "title": "Moving parts",
+            "text": "<p>Keep hands, cables and objects clear of the base and moving joints before operating the controls.</p>",
+            "group": "specification"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
             "title": "Maintenance",
-            "text": "<p>Disconnect the power supply before maintenance or servicing. Follow the manufacturer\u2019s cleaning instructions.</p>"
+            "text": "<p>Disconnect the power supply before maintenance or servicing. Follow the manufacturer’s cleaning instructions.</p>",
+            "group": "specification"
           }
         }
       },
@@ -179,36 +290,57 @@
         "item_0": {
           "type": "item",
           "settings": {
-            "title": "What treatments is Royal designed for?",
-            "text": "<p>Facials, body treatments, massage and waxing.</p>"
+            "title": "What is Royal’s height adjustment range?",
+            "text": "<p>The listed height adjustment range is 17–39 in. (43–99 cm). Confirm the specification for your configuration with Equipro.</p>",
+            "group": "specification"
           }
         },
         "item_1": {
           "type": "item",
           "settings": {
-            "title": "How is the chair adjusted?",
-            "text": "<p>Electric positioning is controlled by a remote, with a dedicated height pedal.</p>"
+            "title": "What electrical connection is required?",
+            "text": "<p>Confirm the voltage, grounding and installation requirements from the Royal operating manual before connection.</p>",
+            "group": "specification"
           }
         },
         "item_2": {
           "type": "item",
           "settings": {
-            "title": "Which upholstery colors are available?",
-            "text": "<p>White, black and navy. Contact Equipro for colors not yet selectable online.</p>"
+            "title": "Can Royal be used for facials and massage?",
+            "text": "<p>Royal is described for facials, body treatments, massage and waxing. Select the treatment position using the chair controls.</p>",
+            "group": "specification"
           }
         },
         "item_3": {
           "type": "item",
           "settings": {
-            "title": "Where can I confirm installation and operating limits?",
-            "text": "<p>Request the Royal operating manual from Equipro before installation or use.</p>"
+            "title": "Which upholstery colors are offered?",
+            "text": "<p>White, black and navy. Contact Equipro to confirm the configuration you need.</p>",
+            "group": "specification"
           }
         },
         "item_4": {
           "type": "item",
           "settings": {
-            "title": "How do I confirm warranty and delivery?",
-            "text": "<p>Contact Equipro for the warranty terms and delivery estimate applicable to your order.</p>"
+            "title": "What controls are supplied?",
+            "text": "<p>The current product description lists a remote control and dedicated height pedal. Confirm included accessories when ordering.</p>",
+            "group": "specification"
+          }
+        },
+        "item_5": {
+          "type": "item",
+          "settings": {
+            "title": "What warranty applies?",
+            "text": "<p>Contact Equipro for the warranty applicable to your Royal chair and order.</p>",
+            "group": "specification"
+          }
+        },
+        "item_6": {
+          "type": "item",
+          "settings": {
+            "title": "How should the armrests and headrests be adjusted?",
+            "text": "<p>Follow the Royal operating manual for adjustment and removal procedures; confirm optional accessories with Equipro.</p>",
+            "group": "specification"
           }
         }
       },
@@ -217,15 +349,18 @@
         "item_1",
         "item_2",
         "item_3",
-        "item_4"
+        "item_4",
+        "item_5",
+        "item_6"
       ]
     }
   },
   "order": [
     "main",
-    "specifications",
-    "uses",
+    "overview",
+    "features",
     "instructions",
+    "safety",
     "faq"
   ]
 }

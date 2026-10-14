@@ -1,0 +1,1026 @@
+{
+  "date": "2026-10-14",
+  "stage": "Royal structure review; catalog rollout not started",
+  "completedPages": 0,
+  "awaitingApproval": [
+    "ei-501-royal"
+  ],
+  "deferred": [
+    "Purchase controls and cart testing until stock exists",
+    "Catalog-filter implementation until product-page work is complete"
+  ],
+  "products": [
+    {
+      "product": "Ergonomic Stool with Backrest",
+      "handle": "ergonomic-stool-with-backrest",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/skincare-equipment/stools/ergonomic-stool-with-backrest-31300",
+      "sourceMatch": "Candidate source; verify model",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "EI-502 Infinity",
+      "handle": "ei-502-infinity",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ei-504-divine",
+      "sourceMatch": "Candidate source; verify model",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11300 - Infraderm",
+      "handle": "infraderm",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.11300-infraderm.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/infraderm",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11500 Rotoderm",
+      "handle": "rotoderm",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.11500-rotoderm.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/rotoderm",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11600  - Aeroderm",
+      "handle": "aeroderm",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.11600-aeroderm.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/aeroderm",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "41100-solo-pil-standard",
+      "handle": "solo-pil-standard",
+      "category": "/produits/skincare-equipment/wax-heaters",
+      "assignedTemplate": "templates/product.41100-solo-pil-standard.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/solo-pil-standard",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51101 - TM-3 Standard \u2013 TM-3 Standard Service Table",
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/trolleys/tm-3-professional-service-table",
+      "sourceMatch": "Editorial source match",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11100 - Digipro steamer",
+      "handle": "digipro-steamer",
+      "category": "/produits/skincare-equipment/steamers",
+      "assignedTemplate": "templates/product.11100-vapoderm-digipro.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/skincare-equipment/steamers/vapoderm-digipro",
+      "sourceMatch": "Editorial source match",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "EI-111-vapoderm-classic",
+      "handle": "classic-steamer",
+      "category": "/produits/skincare-equipment/steamers",
+      "assignedTemplate": "templates/product.ei-111-classic-steamer.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/skincare-equipment/steamers/vapoderm-classic",
+      "sourceMatch": "Editorial source match",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11400 ioniderm-galvanic",
+      "handle": "ioniderm",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.11400-ioniderm-galvanic.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ioniderm",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11650 Diamonderm",
+      "handle": "diamonderm",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.11650-diamonderm.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/diamonderm",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11800 - Multiderm (5 in 1)",
+      "handle": "multiderm-5-en-1",
+      "category": "/produits/skincare-equipment/facial-units",
+      "assignedTemplate": "templates/product.multiderm-5-in-1.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/multiderm-5-en-1",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Ergonomic Stool with Backrest - 31300",
+      "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.31300-ergonomic-air-lift-stool.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/skincare-equipment/stools/ergonomic-stool-with-backrest-31300",
+      "sourceMatch": "Candidate source; verify model",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "61102S Spa Cabi",
+      "handle": "spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.61102-spa-cabi.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11906 - Deluxe-column",
+      "handle": "deluxe-column-11906",
+      "category": "/produits/skincare-equipment/columns",
+      "assignedTemplate": "templates/product.11906-deluxe-column.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/deluxe-column-11906",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "11902 - modular-column",
+      "handle": "modular-column-11902",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.11902-modular-column.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/modular-column-11902",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "41101-solo-pil-maxi",
+      "handle": "solo-pil-standard-ym74h",
+      "category": "/produits/skincare-equipment/wax-heaters",
+      "assignedTemplate": "templates/product.41101-solo-pil-maxi.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/solo-pil-standard-ym74h",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "41200 Duo-pil maxi",
+      "handle": "duo-pil-maxi",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.41200-duo-pil-maxi.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/duo-pil-maxi",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "41201-duo-pil-standard",
+      "handle": "duo-pil-standard-41201",
+      "category": "/produits/skincare-equipment/wax-heaters",
+      "assignedTemplate": "templates/product.41201-duo-pil-standard.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/duo-pil-standard-41201",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "41202 Duo-pil precision",
+      "handle": "duo-pil-precision",
+      "category": "/produits/skincare-equipment/wax-heaters",
+      "assignedTemplate": "templates/product.41202-duo-pil-precision.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/duo-pil-precision",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "ultra-comfort-20500",
+      "handle": "ultra-comfort-20500",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ultra-comfort-20500",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Infinity EI-502",
+      "handle": "ultra-comfort-20500-gm25t",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/electrics/infinity-ei-502",
+      "sourceMatch": "Candidate: title is Infinity; handle is Ultra-comfort",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "spa-comfort-20300",
+      "handle": "spa-comfort-20300",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/spa-comfort-20300",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "ei-500-murano",
+      "handle": "ei-500-murano",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-ei-500",
+      "sourceMatch": "Editorial source match",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "ei-501-royal",
+      "handle": "ei-501-royal",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/electrics/royal-ei-501",
+      "sourceMatch": "Editorial source match",
+      "status": "awaiting_structure_approval",
+      "completed": false,
+      "unresolved": [
+        "Canada PDF V1.2 prices/specifications",
+        "Royal operating manual",
+        "Replacement detail images"
+      ],
+      "sourceReadStatus": "Reference read in browser"
+    },
+    {
+      "product": "Divine EI-504",
+      "handle": "ei-504-divine",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ei-504-divine",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Multi-comfort-20210",
+      "handle": "multi-comfort-electric-height-20210",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/multi-comfort-electric-height-20210",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "ultra-comfort-Pedicure-20502",
+      "handle": "ultra-comfortprofessional-treatment-pedicure-chair-20500",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ultra-comfortprofessional-treatment-pedicure-chair-20500",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "elite-spa-ei-508",
+      "handle": "elite-spa-ei-508",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/elite-spa-ei-508",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Natura Spa EI-509",
+      "handle": "natura-spa-ei-509",
+      "category": "/produits/treatment-tables/electrics",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/natura-spa-ei-509",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "61100M Mini Cabi",
+      "handle": "mini-cabi-ei-61100m",
+      "category": "/produits/skincare-equipment/towel-warmer",
+      "assignedTemplate": "templates/product.61100-mini-cabi.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/mini-cabi-ei-61100m",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "61101H Hot Cabi",
+      "handle": "hot-cabi-61101h",
+      "category": "/produits/skincare-equipment/towel-warmer",
+      "assignedTemplate": "templates/product.61101-hot-cabi.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/hot-cabi-61101h",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Maxi-comfort 360\u00ba - 20100",
+      "handle": "maxi-comfort-360",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.SKU00001-maxi-comfort-360.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/maxi-comfort-360",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Assigned template absent locally; generic fallback needs checking",
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "61402 Visiderm",
+      "handle": "visiderm-61402",
+      "category": "/produits/skincare-equipment/skin-analyzers",
+      "assignedTemplate": "templates/product.61402-visiderm.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/visiderm-61402",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Maxi-Comfort Pedicure 360\u00ba",
+      "handle": "maxi-confort-pedicure-360",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.20101-maxi-comfort-360.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/maxi-confort-pedicure-360",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Bohemia- EI-23403",
+      "handle": "bohemia-ei-23403",
+      "category": "/produits/treatment-tables/portables",
+      "assignedTemplate": "templates/product.23403-bohemia.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/bohemia-ei-23403",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Primary PDF and product-specific claim validation"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "calypso-ei-23402",
+      "handle": "calypso-ei-23402",
+      "category": "/produits/treatment-tables/portables",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/calypso-ei-23402",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Round air-lift stool with backrest - 31200",
+      "handle": "round-air-lift-stool-with-backrest-31200",
+      "category": "/produits/stools",
+      "assignedTemplate": "templates/product.31200-round-air-lift-stool-with-backrest.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/round-air-lift-stool-with-backrest-31200",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Assigned template absent locally; generic fallback needs checking",
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Air-Lift Round Stool - 31100",
+      "handle": "31100-air-lift-round-stool",
+      "category": "/produits/stools",
+      "assignedTemplate": "templates/product.31100-air-lift-round-stool.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/31100-air-lift-round-stool",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "Ergonomic Stool with Adjustable Backrest-31301",
+      "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+      "category": "/produits/stools",
+      "assignedTemplate": "templates/product.31301-ergonomic-stool-with-adjustable-backrest.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ergonomic-stool-with-adjustable-backrest-31301",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Round air-lift stool-EI-311",
+      "handle": "round-air-lift-stool-ei-311",
+      "category": "/produits/stools",
+      "assignedTemplate": "templates/product.ei-311-round-air-lift-stool.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/round-air-lift-stool-ei-311",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "EI-312 Round Air Lift Stool",
+      "handle": "ei-312-round-air-lift-stool",
+      "category": "/produits/stools",
+      "assignedTemplate": "templates/product.ei-312-round-air-lift-stool.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ei-312-round-air-lift-stool",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51104 TM-3A",
+      "handle": "51104-tm-3a",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51104-tm-3a",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "51103 TM-3 mini",
+      "handle": "51103-tm-3-mini",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51103-tm-3-mini",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "51100 TS-3 deluxe",
+      "handle": "ts-3-deluxe",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/ts-3-deluxe",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51201 TS-2 with drawer",
+      "handle": "51201-ts-2-with-drawer",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51201-ts-2-with-drawer",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "51300 TA-2 standard",
+      "handle": "51300-ta-2-standard",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51300-ta-2-standard",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "51200 TS-2 basic",
+      "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51400 Manicure table",
+      "handle": "51400-manicure-table",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51400-manicure-table",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51000 TS-4",
+      "handle": "51000-ts-4",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51000-ts-4",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "51401 Manicure table deluxe",
+      "handle": "51401-manicure-table-deluxe",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51401-manicure-table-deluxe",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "51500 Make-up table",
+      "handle": "51500-make-up-table",
+      "category": "/produits/trolleys",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/51500-make-up-table",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "63603 Circus magnifier LED (3D or 5D)",
+      "handle": "63603-circus-magnifier-led-3d-or-5d",
+      "category": "/produits/mag-lamps",
+      "assignedTemplate": "templates/product.63603-circus-magnifier-led.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/63603-circus-magnifier-led-3d-or-5d",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "63104 KFM magnifier LED (3D or 5D)",
+      "handle": "63104-kfm-magnifier-led-3d-or-5d",
+      "category": "/produits/mag-lamps",
+      "assignedTemplate": "templates/product.63104-kfm-magnifier-led.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/63104-kfm-magnifier-led-3d-or-5d",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "63203 LFM magnifier LED (3D OR 5D)",
+      "handle": "63203-lfm-magnifier-led-3d-or-5d",
+      "category": "/produits/mag-lamps",
+      "assignedTemplate": "templates/product.63203-lfm-magnifier-led.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/63203-lfm-magnifier-led-3d-or-5d",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "65100 Therabath tub II",
+      "handle": "65100-therabath-tub-ii",
+      "category": "/produits/wellness-therapy",
+      "assignedTemplate": "templates/product.65100-therabath-tub-ii.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/65100-therabath-tub-ii",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "66007 Spaslim heating blanket",
+      "handle": "66007-spaslim-heating-blanket",
+      "category": "/produits/wellness-therapy",
+      "assignedTemplate": "templates/product.66007-spaslim-heating-blanket.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/66007-spaslim-heating-blanket",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "66001 Heat pad",
+      "handle": "66001-heat-pad",
+      "category": "/produits/wellness-therapy",
+      "assignedTemplate": "templates/product.66001-heat-pad.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/66001-heat-pad",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "64401 Wood lamp",
+      "handle": "64401-wood-lamp",
+      "category": "/produits/skincare-equipment/skin-analyzers",
+      "assignedTemplate": "templates/product.64401-wood-lamp.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/64401-wood-lamp",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed",
+        "Unrelated Solo-Pil section image"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "20200 Multi-comfort",
+      "handle": "20200-multi-comfort",
+      "category": "/produits/treatment-tables/hydraulic-mechanical",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/20200-multi-comfort",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "21100 Hydro-comfort",
+      "handle": "21100-hydro-comfort",
+      "category": "/produits/treatment-tables/hydraulic-mechanical",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/21100-hydro-comfort",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "21200 Aero-comfort",
+      "handle": "21200-aero-comfort",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.21200-aero-comfort.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/21200-aero-comfort",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "22100 Poly-comfort",
+      "handle": "22100-poly-comfort",
+      "category": "/produits/treatment-tables/hydraulic-mechanical",
+      "assignedTemplate": "templates/product.22100-poly-comfort.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/22100-poly-comfort",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Opening description present in source; full claims/PDF unverified"
+    },
+    {
+      "product": "63303 Dainolite magnifier LED (3D or 5D)",
+      "handle": "63303-dainolite-magnifier-led-3d-or-5d",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.63303-dainolite-magnifier-led.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/boutique/p/63303-dainolite-magnifier-led-3d-or-5d",
+      "sourceMatch": "Exact source slug",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Featured product handle differs; editorial overrides are suppressed"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    },
+    {
+      "product": "Heating Boots",
+      "handle": "heating-boots",
+      "category": "Unclassified",
+      "assignedTemplate": "templates/product.json",
+      "source": "https://seahorse-llama-gkdh.squarespace.com/wellness-therapy/786005-heating-boots",
+      "sourceMatch": "Candidate source; verify model",
+      "status": "not_reviewed",
+      "completed": false,
+      "unresolved": [
+        "Product-specific specifications",
+        "Professional uses/features",
+        "Instructions and safety",
+        "FAQs",
+        "Product description"
+      ],
+      "sourceReadStatus": "Source unavailable: HTTPError"
+    }
+  ]
+}

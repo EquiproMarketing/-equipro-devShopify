@@ -1,0 +1,17 @@
+
+.product-page--reference .product-master-grid { align-items: start; gap: 48px; }
+.product-page--reference .product-info__title { color: #ab273b; line-height: 1.16; }
+.product-page--reference .product-info__description { max-width: 60ch; line-height: 1.6; }
+.product-page--reference .product-gallery__main img { object-fit: contain; }
+.product-page--reference .product-purchase-note { font-size: .9rem; line-height: 1.5; margin: 12px 0; }
+.product-page--reference .thumb-img:focus-visible { outline: 2px solid #ab273b; outline-offset: 3px; }
+@media (max-width: 767px) {
+  .product-page--reference .product-master-grid { gap: 20px; }
+  .product-page--reference .product-mobile-order-title { order: 0; margin: 0; font-size: 1.85rem; }
+  .product-page--reference .product-gallery { order: 1; }
+  .product-page--reference .product-mobile-order-buybox { order: 2; }
+  .product-page--reference .product-mobile-order-descriptions { order: 3; }
+  .product-page--reference .product-swatches-below-gallery { order: 4; }
+  .product-page--reference .product-gallery__main { min-height: 0; }
+  .product-page--reference .product-gallery__main img { max-height: 320px; }
+}

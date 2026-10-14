@@ -1,6 +1,7 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{% if section.settings.reference_layout %}{{ 'product-reference-layout.css' | asset_url | stylesheet_tag }}{% endif %}
 
-<div class="product-page page-width" id="ProductMain-{{ section.id }}">
+<div class="product-page page-width{% if section.settings.reference_layout %} product-page--reference{% endif %}" id="ProductMain-{{ section.id }}">
   {% assign target_product = product | default: section.settings.featured_product %}
   {% assign use_product_overrides = true %}
   {% if product != blank and section.settings.featured_product != blank and section.settings.featured_product.id != product.id %}
@@ -159,7 +160,8 @@
                 <img 
                   src="{{ block.settings.image | image_url: width: 400 }}" 
                   class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.dataset.highres)" 
+                  onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
                   data-highres="{{ block.settings.image | image_url: width: 1600 }}"
                   {{ block.shopify_attributes }}
                 >
@@ -171,7 +173,8 @@
                 src="{{ image | image_url: width: 400 }}"
                 alt="{{ image.alt | default: target_product.title | escape }}"
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.dataset.highres)" 
+                onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
                 data-highres="{{ image | image_url: width: 1600 }}"
               >
             {% endfor %}
@@ -339,6 +342,7 @@
   "tag": "section",
   "class": "section-main-product",
   "settings": [
+    {"type":"checkbox","id":"reference_layout","label":"Reference product layout","default":false},
     {
       "type": "text",
       "id": "back_text",

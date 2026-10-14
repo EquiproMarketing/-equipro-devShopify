@@ -1,8 +1,6 @@
-{{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
-
 <div class="cart-drawer-overlay" id="CartDrawerOverlay"></div>
 
-<div class="cart-drawer" id="CartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+<div class="cart-drawer" id="CartDrawer" aria-hidden="true" tabindex="-1" role="dialog" aria-modal="true" aria-label="Shopping Cart">
   
   <!-- CABECERA DEL DRAWER -->
   <div class="cart-drawer__header">
@@ -27,7 +25,7 @@
             
             <div class="cart-drawer-item__media">
               {% if item.image %}
-                <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}" loading="lazy">
+                <img src="{{ item.image | image_url: width: 200 }}" alt="{{ item.title | escape }}" width="200" height="{{ 200 | divided_by: item.image.aspect_ratio | round }}" loading="lazy">
               {% else %}
                 <div class="cart-drawer-item__placeholder"></div>
               {% endif %}
@@ -47,7 +45,7 @@
               <div class="cart-drawer-item__actions">
                 <div class="cart-drawer-quantity">
                   <button type="button" class="js-qty-btn" data-action="minus" data-key="{{ item.key }}">−</button>
-                  <input type="number" value="{{ item.quantity }}" min="0" data-key="{{ item.key }}" class="js-qty-input">
+                  <input aria-label="Quantity" step="1" type="number" value="{{ item.quantity }}" min="0" data-key="{{ item.key }}" class="js-qty-input">
                   <button type="button" class="js-qty-btn" data-action="plus" data-key="{{ item.key }}">+</button>
                 </div>
 
@@ -71,8 +69,9 @@
   </div>
 
   <!-- PIE DEL DRAWER (SUBTOTAL Y CHECKOUT) -->
+  <div id="CartDrawerFooter">
   {% if cart.item_count > 0 %}
-    <div class="cart-drawer__footer" id="CartDrawerFooter">
+    <div class="cart-drawer__footer">
       <div class="cart-drawer__subtotal-row">
         <span>Subtotal</span>
         <span class="cart-drawer__subtotal-price" id="CartDrawerSubtotal">{{ cart.total_price | money }}</span>
@@ -81,12 +80,11 @@
       <p class="cart-drawer__tax-note">Taxes and shipping calculated at checkout.</p>
 
     <div class="cart-drawer__buttons">
-        <a href="/cart" class="cart-drawer-btn cart-drawer-btn--secondary">VIEW CART</a>
+        <a href="{{ routes.cart_url }}" class="cart-drawer-btn cart-drawer-btn--secondary">VIEW CART</a>
         <a href="/checkout" class="cart-drawer-btn cart-drawer-btn--primary">CHECKOUT</a>
       </div>
     </div>
   {% endif %}
+  </div>
 
 </div>
-
-<script src="{{ 'cart-drawer.js' | asset_url }}" defer></script>

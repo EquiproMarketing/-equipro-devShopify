@@ -1,21 +1,43 @@
 {% if section.settings.applies_to_product == blank or section.settings.applies_to_product.id == product.id %}
-<section class="product-details page-width" id="ProductDetails-{{ section.id }}">
+<section class="product-details page-width{% if section.settings.feature_band %} product-details--feature-band{% endif %}" id="ProductDetails-{{ section.id }}">
   <div class="product-details__content">
     <h2>{{ section.settings.heading | escape }}</h2>
     {% if section.settings.introduction != blank %}<div>{{ section.settings.introduction }}</div>{% endif %}
-    {% if section.settings.layout == 'specifications' %}
+    {% if section.settings.layout == 'overview' %}
+      <div class="product-details__overview">
+        <div class="product-details__uses">
+          <h3>{{ section.settings.secondary_heading | escape }}</h3>
+          {% for block in section.blocks %}
+            {% if block.settings.group == 'use' %}
+              <details class="product-details__faq" {{ block.shopify_attributes }}><summary>{{ block.settings.title | escape }}</summary><div>{{ block.settings.text }}</div></details>
+            {% endif %}
+          {% endfor %}
+        </div>
+        <div class="product-details__specifications">
+          <table class="product-details__table">
+            <caption class="product-details__caption">{{ section.settings.heading | escape }}</caption>
+            <thead><tr><th scope="col">Technical aspect</th><th scope="col">Specification details</th></tr></thead>
+            <tbody>
+              {% for block in section.blocks %}
+                {% unless block.settings.group == 'use' %}<tr {{ block.shopify_attributes }}><th scope="row">{{ block.settings.title | escape }}</th><td>{{ block.settings.text }}</td></tr>{% endunless %}
+              {% endfor %}
+            </tbody>
+          </table>
+        </div>
+      </div>
+    {% elsif section.settings.layout == 'specifications' %}
       <table class="product-details__table">
         <caption class="product-details__caption">{{ section.settings.heading | escape }}</caption>
         <tbody>
-          {% for block in section.blocks %}
-            <tr {{ block.shopify_attributes }}><th scope="row">{{ block.settings.title | escape }}</th><td>{{ block.settings.text }}</td></tr>
-          {% endfor %}
+          {% for block in section.blocks %}<tr {{ block.shopify_attributes }}><th scope="row">{{ block.settings.title | escape }}</th><td>{{ block.settings.text }}</td></tr>{% endfor %}
         </tbody>
       </table>
     {% elsif section.settings.layout == 'faq' %}
-      {% for block in section.blocks %}
-        <details class="product-details__faq" {{ block.shopify_attributes }}><summary>{{ block.settings.title | escape }}</summary><div>{{ block.settings.text }}</div></details>
-      {% endfor %}
+      {% for block in section.blocks %}<details class="product-details__faq" {{ block.shopify_attributes }}><summary>{{ block.settings.title | escape }}</summary><div>{{ block.settings.text }}</div></details>{% endfor %}
+    {% elsif section.settings.layout == 'steps' %}
+      <ol class="product-details__list">
+        {% for block in section.blocks %}<li {{ block.shopify_attributes }}><h3>{{ block.settings.title | escape }}</h3><div>{{ block.settings.text }}</div></li>{% endfor %}
+      </ol>
     {% else %}
       <ul class="product-details__list">
         {% for block in section.blocks %}<li {{ block.shopify_attributes }}><h3>{{ block.settings.title | escape }}</h3><div>{{ block.settings.text }}</div></li>{% endfor %}
@@ -34,13 +56,20 @@
 </section>
 {% endif %}
 {% stylesheet %}
-.product-details { padding: 32px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; max-width: 1200px; margin: auto; }
+.product-details { padding: 48px 20px; display: grid; grid-template-columns: minmax(0, 1fr); gap: 32px; max-width: 1200px; margin: auto; }
 .product-details:has(.product-details__media) { grid-template-columns: minmax(0, 2fr) minmax(0, 1fr); }
 .product-details h2 { color: #ab273b; font-size: 1.6rem; margin-bottom: 20px; }
 .product-details h3 { font-size: 1rem; margin-bottom: 8px; }
+.product-details__overview { display: grid; grid-template-columns: minmax(0, .85fr) minmax(0, 1.15fr); gap: 48px; align-items: start; }
+.product-details__uses h3 { font-size: 1.25rem; color: #ab273b; }
+.product-details__table p { margin: 0; }
+.product-details__table thead th { background: #ab273b; color: #fff; font-size: .85rem; }
+.product-details--feature-band { background: #ab273b; color: #fff; border-radius: 16px; padding: 40px; margin-top: 32px; margin-bottom: 32px; }
+.product-details--feature-band h2, .product-details--feature-band h3 { color: #fff; }
+.product-details--feature-band .product-details__image-slot { border-color: #fff; color: #fff; }
 .product-details__table { width: 100%; border-collapse: collapse; }
 .product-details__table th, .product-details__table td { padding: 14px 12px; border-bottom: 1px solid #e5e5e7; text-align: left; vertical-align: top; }
-.product-details__table th { width: 35%; }
+.product-details__table tbody th { width: 35%; color: #ab273b; }
 .product-details__caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
 .product-details__list { padding-left: 20px; }
 .product-details__list li { margin-bottom: 20px; }
@@ -51,7 +80,13 @@
 .product-details__media { margin: 0; }
 .product-details__media img { width: 100%; height: auto; border-radius: 12px; }
 .product-details__image-slot { min-height: 260px; display: grid; place-items: center; border: 1px dashed #86868b; border-radius: 12px; color: #6e6e73; padding: 24px; text-align: center; }
-@media (max-width: 767px) { .product-details:has(.product-details__media) { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 767px) {
+  .product-details { padding: 28px 20px; gap: 24px; }
+  .product-details:has(.product-details__media), .product-details__overview { grid-template-columns: minmax(0, 1fr); gap: 24px; }
+  .product-details__specifications { order: -1; }
+  .product-details__table th, .product-details__table td { padding: 12px 8px; overflow-wrap: anywhere; font-size: .9rem; }
+  .product-details--feature-band { border-radius: 12px; }
+}
 {% endstylesheet %}
 {% schema %}
 {
@@ -60,12 +95,14 @@
     {"type":"product","id":"applies_to_product","label":"Only show on this product (optional)"},
     {"type":"text","id":"heading","label":"Heading","default":"Product details"},
     {"type":"richtext","id":"introduction","label":"Introduction"},
-    {"type":"select","id":"layout","label":"Layout","default":"list","options":[{"value":"list","label":"Features or instructions"},{"value":"specifications","label":"Specifications"},{"value":"faq","label":"FAQs"}]},
+    {"type":"text","id":"secondary_heading","label":"Professional uses heading"},
+    {"type":"checkbox","id":"feature_band","label":"Burgundy feature band","default":false},
+    {"type":"select","id":"layout","label":"Layout","default":"list","options":[{"value":"overview","label":"Professional uses and specifications"},{"value":"steps","label":"Numbered instructions"},{"value":"list","label":"Features or instructions"},{"value":"specifications","label":"Specifications"},{"value":"faq","label":"FAQs"}]},
     {"type":"checkbox","id":"show_image_slot","label":"Show image area","default":false},
     {"type":"image_picker","id":"image","label":"Image"},
     {"type":"text","id":"image_slot_label","label":"Missing image label","default":"Product detail image"}
   ],
-  "blocks":[{"type":"item","name":"Item","settings":[{"type":"text","id":"title","label":"Title"},{"type":"richtext","id":"text","label":"Content"}]}],
+  "blocks":[{"type":"item","name":"Item","settings":[{"type":"select","id":"group","label":"Overview column","default":"specification","options":[{"value":"specification","label":"Specification"},{"value":"use","label":"Professional use"}]},{"type":"text","id":"title","label":"Title"},{"type":"richtext","id":"text","label":"Content"}]}],
   "presets":[{"name":"Product details"}]
 }
 {% endschema %}
