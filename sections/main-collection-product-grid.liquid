@@ -10,6 +10,7 @@
     </a>
   </div>
 
+  {% paginate collection.products by 24 %}
   <div class="collection-products__grid">
     {% for product in collection.products %}
       <div class="custom-treatment-card">
@@ -56,9 +57,6 @@
                 title="{{ value | escape }}"
               ></span>
             {% endfor %}
-          {% else %}
-            <span class="custom-treatment-card__swatch-dot" style="background-color: #ffffff;"></span>
-            <span class="custom-treatment-card__swatch-dot" style="background-color: #111111;"></span>
           {% endif %}
         </div>
 
@@ -86,41 +84,25 @@
               {{ section.settings.btn_primary_text | default: "En savoir plus" }}
             </a>
 
-            <a href="{{ product.url }}" class="custom-treatment-btn custom-treatment-btn--link">
-              {{ section.settings.btn_secondary_text | default: "Acheter >" }}
-            </a>
+            {% if section.settings.btn_secondary_text != blank %}
+              <a href="{{ product.url }}" class="custom-treatment-btn custom-treatment-btn--link">
+                {{ section.settings.btn_secondary_text }}
+              </a>
+            {% endif %}
           </div>
         </div>
 
       </div>
     {% else %}
-      {% comment %} FALLBACK DUMMY CARDS FOR THEME EDITOR PREVIEW {% endcomment %}
-      {% for i in (1..4) %}
-        <div class="custom-treatment-card">
-          <div class="custom-treatment-card__image-container">
-            <div class="custom-treatment-card__placeholder"></div>
-          </div>
-
-          <div class="custom-treatment-card__swatches">
-            <span class="custom-treatment-card__swatch-dot" style="background-color: #ffffff;"></span>
-            <span class="custom-treatment-card__swatch-dot" style="background-color: #111111;"></span>
-            <span class="custom-treatment-card__swatch-dot" style="background-color: #808080;"></span>
-          </div>
-
-          <div class="custom-treatment-card__content">
-            <h3 class="custom-treatment-card__title">TM-3 Standard</h3>
-            <p class="custom-treatment-card__subtitle">Trolleys & Carts</p>
-            <p class="custom-treatment-card__price">From CA$375.00</p>
-
-            <div class="custom-treatment-card__actions">
-              <a href="#" class="custom-treatment-btn custom-treatment-btn--primary">En savoir plus</a>
-              <a href="#" class="custom-treatment-btn custom-treatment-btn--link">Acheter &gt;</a>
-            </div>
-          </div>
-        </div>
-      {% endfor %}
+      <p class="collection-products__empty">{{ 'collections.no_products' | t }}</p>
     {% endfor %}
   </div>
+  {% if paginate.pages > 1 %}
+    <nav class="collection-products__pagination" aria-label="{{ 'collections.pagination' | t }}">
+      {{ paginate | default_pagination }}
+    </nav>
+  {% endif %}
+  {% endpaginate %}
 </section>
 
 {% schema %}

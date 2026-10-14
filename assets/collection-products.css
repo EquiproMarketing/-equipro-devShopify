@@ -211,3 +211,7 @@
       text-align: center;
     }
   }
+.collection-products__empty { grid-column: 1 / -1; padding: 2rem 0; }
+.collection-products__pagination { display: flex; justify-content: center; gap: 1rem; margin-top: 2rem; }
+.collection-products__pagination a, .collection-products__pagination .current { display: inline-block; padding: .65rem; }
+.collection-products__pagination .current { font-weight: 700; }
