@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Manicure Table",
+        "intro_highlight": "Designed to serve as the functional foundation of a high-volume nail studio, the 51400 Manicure Table balances sleek North American craftsmanship with the rigorous ergonomic demands of full-day technician workflows.",
+        "custom_description": "<p>The 51400 Manicure Table is purpose-built for licensed professionals, including Nail Technicians, Estheticians, and Salon Professionals. Its ergonomic, precision-engineered layout targets shoulder fatigue and back tension during extended treatment sessions, enabling sharper focus on technical precision and service consistency. Whether you are performing gel manicures, acrylic sculpting, or detailed nail art, this professional station adjusts to your workflow need with intuitive tool placement and friction-free drawer access.</p>",
+        "subtitle": "High-Stability Double Tier System",
+        "secondary_description": "<p>Industrial durability is central to the Equipro approach. To preserve the high-gloss finish and structural integrity of the 51400 Manicure Table, wipe surfaces with a non-abrasive cleanser formulated for salon environments daily. The chemical-resistant surface prevents staining from acetone and monomers, ensuring a pristine condition across years of service. Consistent care maintains professional appearance and protects your equipment investment.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51400-manicure-table",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Nail Technicians:",
+            "answer": "<p>The expansive workspace and integrated storage allow for a seamless workflow during intricate gel applications or acrylic overlays, ensuring all necessary polymers and solvents are within reach.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Salon Owners:",
+            "answer": "<p>Investing in this station provides a long-term solution to equipment turnover, as the industrial-grade materials withstand the daily wear of high-traffic environments without losing structural or aesthetic appeal.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Estheticians:",
+            "answer": "<p>For multi-disciplinary clinics, this table serves as a robust secondary station for hand treatments and paraffin services, offering a stable, professional-grade platform that complements high-end clinic decor.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51400</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Melamine finish top, durable wood and metal construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>33.5&quot; L x 14&quot; W x 25&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>36 lb (16 kg)</td></tr><tr><td class=\"feature-label\">Storage</td><td>Compartment for bottles on left side; large drawer for accessories</td></tr><tr><td class=\"feature-label\">Work Surface</td><td>Melamine finish top for durability and easy cleaning</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional manicure table for nail technicians and beauty therapists</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Reinforced Steel Support: Constructed with industrial-grade materials to ensure zero-wobble performance in high-volume salon contexts."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Storage",
+            "text": "Storage Drawer designed to optimize organization for nail technicians and salon staff, enhancing efficiency."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Refined Aesthetic",
+            "text": "Minimalist Profile that seamlessly integrates into modern professional spa and salon environment types."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-51400-mobile-manicure-table-pro-salon-workstation.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position the table",
+            "text": "on a level surface to ensure stability during precision nail work."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Organize the drawer",
+            "text": "and bottle compartment by frequency of use."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Use the melamine",
+            "text": "work surface for your manicure setup and clean it between clients."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Clean the work",
+            "text": "surface between every client to maintain hygiene and surface luster."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Load:",
+            "text": "Ensure heavy equipment is centered on the table to maintain balance."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chemical Exposure:",
+            "text": "While resistant, do not leave high-concentration acetone pools on the surface for extended periods."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Leveling:",
+            "text": "Regularly check that the floor contact points remain secure to prevent vibration during electric filing."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/51400-equipro-mobile-manicure-trolley-salon-workstation.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity?",
+            "answer": "<p>The table supports up to 100 lbs of distributed equipment. It is designed for heavy professional use.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the overall dimensions of the table?",
+            "answer": "<p>33.5\" L x 14\" W x 25\" H</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I maintain the surfaces?",
+            "answer": "<p>Clean with a damp cloth and mild salon-grade detergent daily. Avoid abrasive pads to prevent scratching.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit require assembly?",
+            "answer": "<p>Minor assembly of the storage components is required upon delivery. Instructions and hardware are included.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage?",
+            "answer": "<p>Equipro provides a 2-year limited warranty on structural components. This covers manufacturing defects.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the surface resistant to nail polish remover?",
+            "answer": "<p>Yes, the top is finished with an acetone-resistant industrial laminate. It prevents typical salon chemical damage.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

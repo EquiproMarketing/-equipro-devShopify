@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Deluxe Manicure Table",
+        "intro_highlight": "The Deluxe Manicure Table is meticulously engineered to bridge the gap between high-volume salon efficiency and the refined ergonomics required by specialized nail practitioners. Proudly manufactured in North America, this professional station prioritizes structural integrity and workflow organization to meet the rigorous demands of modern aesthetic environments.",
+        "custom_description": "<p>The Deluxe Manicure Table is purpose-built for skincare specialists, including nail technicians, aesthetic clinic directors, and salon entrepreneurs. Its ergonomic, precision-engineered design targets postural strain during high-volume clinic days, enabling sharper focus on treatment execution and service consistency. Whether you are performing intricate nail art, deep-pore hand treatments, or post-procedure recovery services, this professional station adjusts to your workflow need with intuitive movement and specialized storage.</p>",
+        "subtitle": "Precision-Engineered Professional Nail Station",
+        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the aesthetic quality and functional integrity of the Deluxe Manicure Table, regular cleaning with non-abrasive products formulated for professional environments is recommended. The high-resistance melamine surface ensures a pristine condition outcome across a 15 to 20-year lifespan. Consistent care ensures operational efficiency and reduced downtime.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51401-manicure-table-deluxe",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Nail Technicians:",
+            "answer": "<p>The integrated dual-drawer system allows for seamless organization of high-frequency tools, reducing reach-related fatigue during intricate nail art and detailed cuticle work. Its smooth-rolling, ultra-quiet casters ensure the technician can reposition the station effortlessly to maintain optimal posture during back-to-back appointments.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Salon Entrepreneurs:",
+            "answer": "<p>Designed as a durable investment, the premium melamine top provides a high-resistance surface against standard salon chemicals and spills, ensuring a long-lasting \"like new\" appearance. The inclusion of a dedicated client armrest enhances the service experience, directly contributing to repeatable results and client retention.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Spa Managers:",
+            "answer": "<p>The modular design, featuring a hollow compartment for bulkier bottle storage, maximizes limited floor space while maintaining a clean, professional aesthetic. Certified components and a robust 2-year warranty provide operational peace of mind in high-traffic clinical settings.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51401</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Durable wood and metal construction with quality finish</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>31&quot; L x 16&quot; W x 32&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>59 lb (28 kg)</td></tr><tr><td class=\"feature-label\">Storage</td><td>2 practical drawers; 1 compartment for bottles</td></tr><tr><td class=\"feature-label\">Client Comfort</td><td>Armrest cushion for customer</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>Lamp not included</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Deluxe professional manicure table for nail technicians and beauty therapists</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Industrial-grade construction with premium materials to ensure high-performance outcome in high-volume salon environments."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Optimized Storage",
+            "text": "Dual-drawer system and hollow bottle compartment designed to deliver organization for technicians and entrepreneurs, enhancing workflow efficiency."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Silent Mobility",
+            "text": "Ultra-quiet casters provide functional quality that ensures seamless compatibility with serene spa environment types."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/51401-manicure-table-deluxe-professional-nail-station-white.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Station Positioning:",
+            "text": "Utilize the silent casters to position the table at a comfortable distance from the practitioner's stool."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Organization:",
+            "text": "Store primary liquids and frequently used bottles in the dedicated hollow compartment for instant access."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Client Setup:",
+            "text": "Position the integrated armrest to support the client's forearm, ensuring a stable working surface for technical precision."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Tool Management:",
+            "text": "Allocate the two drawers for specialized implements and accessories to maintain a clutter-free melamine workspace."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Limits:",
+            "text": "Do not exceed the maximum load capacity for the drawers or the primary table surface to prevent structural damage."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chemical Care:",
+            "text": "Avoid the use of highly corrosive industrial solvents that may degrade the melamine finish or internal drawer components."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Movement Protocol:",
+            "text": "Always ensure the path is clear before moving the table on its casters to prevent tipping or client obstruction."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/51401-manicure-table-deluxe-professional-salon-workstation.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity of this station?",
+            "answer": "<p>The ultra-quiet casters are engineered to support professional salon equipment loads. The station is designed for standard manicure operations.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the dimensions of the table?",
+            "answer": "<p>The table measures 31 inches in length and 32 inches in height. It features a 16-inch width for a compact footprint.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I maintain the melamine surface?",
+            "answer": "<p>Wipe with a soft cloth and professional-grade non-abrasive cleaners. Avoid saturated soaking to preserve the material's integrity.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required for this model?",
+            "answer": "<p>This specific model typically requires partial assembly upon delivery. All necessary hardware and instructions are included.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty period for the Deluxe table?",
+            "answer": "<p>Equipro provides a comprehensive 2-year warranty on this product. This covers both parts and necessary labor.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What storage features are included?",
+            "answer": "<p>The station includes two drawers and a hollow bottle compartment. It is also equipped with a client armrest.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

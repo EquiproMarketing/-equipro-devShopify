@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TS-2 basic",
+        "intro_highlight": "The TS-2 Basic is a fundamental asset for the organized practitioner, blending high-stability North American steel construction with a space-efficient footprint. Designed to meet the rigorous demands of busy Canadian and US clinics, this auxiliary table provides a reliable, silent-gliding foundation for essential skincare tools and specialized equipment.",
+        "custom_description": "<p>The TS-2 is purpose-built for licensed professionals, including estheticians, clinical spa techs, and specialized practitioners. Its robust design targets postural tension and workflow inefficiency during intensive sessions, enabling sharper focus on technique and consistent results. Whether you are performing advanced facials, skin analysis, or specialized treatments, this station adjusts to your optimal position with ultra-quiet mobility and immediate response.</p>",
+        "subtitle": "Robust Dual-Shelf Organization for Specialized Skincare",
+        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the aesthetic finish and mechanical integrity of the TS-2 Basic, wipe surfaces with a non-corrosive disinfectant formulated for professional environments weekly. The powder-coated finish provides high resistance to oxidation, ensuring pristine condition across years of service. Consistent care maintains smooth caster movement and optimal structural stability.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>For the Esthetician: The TS-2 Basic serves as the primary hub for facial protocols. By utilizing the 14\" x 23\" shelves, practitioners can organize serums, cleansers, and steamers within arm's reach, reducing unnecessary movement and maintaining a seamless workflow during complex skincare treatments.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Techs:",
+            "answer": "<p>For the Clinical Spa Technician: In a high-volume environment, the silent casters allow for discreet movement between treatment rooms without disrupting the clinic's atmosphere. Its chemical-resistant surfaces are designed for frequent sanitation, meeting the strict hygiene standards required for advanced dermal procedures.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Tattoo Artist:",
+            "answer": "<p>For the Tattoo Artist: Precision requires a rock-steady surface. The TS-2's industrial-grade construction ensures that ink palettes and specialized needles remain secure. The integrated magnifier holder allows for the immediate attachment of lighting or magnification, essential for detailed linework and long-duration sessions.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51200</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves, durable construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>18&quot; L x 14&quot; W x 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>25 lb (12 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>2 metal shelves (each 14&quot; x 23&quot;)</td></tr><tr><td class=\"feature-label\">Shelf Spacing</td><td>12&quot; between top and middle shelf</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Ultra silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>1 magnifier holder</td></tr><tr><td class=\"feature-label\">Assembly</td><td>Partial assembly required</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional auxiliary trolley for spa and aesthetic workstations</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Reinforced Dual Shelves: Constructed with heavy-duty materials to support heavy professional units in high-traffic salon contexts."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Versatility",
+            "text": "Built-in Magnifier Holder: A precision-drilled lamp support designed to provide immediate lighting access for practitioners and technicians, increasing visual accuracy."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Professional Mobility",
+            "text": "Silent Caster System: A functional quality that ensures compatibility with quiet, high-end spa environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/51200+TS-2+basic+2-tier+rolling+utility+cart+for+professional+spa+and+skincare+storage+organization.",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Assembly:",
+            "text": "Attach the silent casters to the base frame and secure the two 14\" x 23\" shelves using the provided heavy-duty hardware."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Lamp Integration:",
+            "text": "Insert your magnifying lamp into the dedicated holder located on the side of the top frame."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Loading:",
+            "text": "Place heavier equipment on the bottom shelf to maintain a low center of gravity."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Positioning:",
+            "text": "Use the side handles to guide the trolley into position next to the treatment table."
+          }
+        },
+        "use_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Sanitization:",
+            "text": "Between clients, wipe all surfaces with a hospital-grade disinfectant."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Limit:",
+            "text": "Do not exceed the maximum load capacity of 100 lbs across the shelves."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Environment:",
+            "text": "Equipment must be kept in a dry environment at all times to prevent corrosion."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Maintenance:",
+            "text": "Only use authorized technicians for any structural repairs to avoid voiding the 2-year warranty."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "use_5",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ts-2-basic-professional-esthetician-salon-trolley-cart.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity of the TS-2?",
+            "answer": "<p>The unit supports up to 100 lbs. This ensures stability for heavy aesthetic devices and supplies.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the distance between the shelves?",
+            "answer": "<p>There is a 12\" clearance between tiers. This provides ample space for taller professional product bottles.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I maintain the metal shelves?",
+            "answer": "<p>Wipe with a damp cloth and mild soap. Avoid abrasive pads to preserve the professional finish.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required for this trolley?",
+            "answer": "<p>Partial assembly is required upon delivery. This typically involves attaching the casters and frame components.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it come with a warranty?",
+            "answer": "<p>Yes, it includes a 2-year warranty. This covers parts and labor for manufacturing defects.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

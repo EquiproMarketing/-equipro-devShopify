@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TM-3A",
+        "intro_highlight": "The TM-3A represents the standard in workstation organization, merging industrial-grade North American manufacturing with specialized practitioner ergonomics to support high-traffic professional environments.",
+        "custom_description": "<p>TM-3A is purpose-built for licensed professionals, including estheticians, clinical spa technicians, and electrologists. Its robust design targets postural tension during intensive workdays, enabling sharper focus on precision and consistent results. Whether you are performing skincare treatments, advanced facial protocols, or precise electrolysis, this station adjusts to your workflow with intuitive control and immediate response.</p>",
+        "subtitle": "Robust Metal Storage for Precision Workflows",
+        "secondary_description": "<p>Industrial-grade durability is central to the Equipro approach. To preserve surface integrity and mechanical fluidity, the TM-3A should be sanitized daily with disinfectant cleaners formulated for professional salon environments. Its metal surface offers high chemical resistance, ensuring a pristine condition across an extended professional lifespan. Consistent care prolongs equipment life and maintains clinical hygiene standards.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51104-tm-3a",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>The integrated ergonomic drawer and three spacious 14\" \\ 23\" shelves provide a centralized station for serums, cleansers, and specialized tools, allowing for uninterrupted focus during complex facial protocols.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Tech:",
+            "answer": "<p>Engineered with a heavy-duty metal frame and built-in 6-outlet power strip, the TM-3A securely supports and powers advanced diagnostic or treatment devices while maintaining a sterile, organized footprint.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Electrologist:",
+            "answer": "<p>Featuring dual magnifying glass holders on either side, the trolley adapts to lateral movement requirements, ensuring precision optics are always positioned optimally for high-accuracy treatments.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51104</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves, durable construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>25&quot; L x 14&quot; W x 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>38 lb (17 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>3 metal shelves (each approximately 14&quot; x 23&quot;)</td></tr><tr><td class=\"feature-label\">Drawer</td><td>Integrated pull-out drawer for additional storage</td></tr><tr><td class=\"feature-label\">Shelf Spacing</td><td>11.75&quot; between top and middle; 11.75&quot; between middle and lower; 4.5&quot; from lower shelf to floor</td></tr><tr><td class=\"feature-label\">Power Supply</td><td>Integrated 6-outlet electric power strip</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>Magnifier holders on each side</td></tr><tr><td class=\"feature-label\">Assembly</td><td>Shipped fully assembled</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved electrical components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Industrial-Grade Steel Construction: Engineered with heavy-gauge metal to support up to 100 lbs in high-volume clinical settings."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Power Management",
+            "text": "Internalized 6-outlet power strip designed to streamline cable management for practitioners and technicians, minimizing workplace hazards."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Professional Aesthetics",
+            "text": "Stain-resistant white finish that blends seamlessly into any clinical spa or salon environment."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/tm-3a-professional-utility-trolley-3-shelf-storage-cart.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Power Setup:",
+            "text": "Connect the integrated power strip to a grounded wall outlet to activate the 6-outlet station."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Accessory Integration:",
+            "text": "Insert magnifying lamp stems into the pre-configured holders on either the left or right side of the trolley."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Storage Allocation:",
+            "text": "Utilize the 14\" X 23\" shelves for larger equipment and the ergonomic drawer for sensitive, smaller tools."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Positioning:",
+            "text": "Use the top handle and silent casters to glide the station into the optimal ergonomic position relative to the treatment chair."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Distribution:",
+            "text": "Ensure heavy devices are centered on the shelves; do not exceed the recommended load capacity."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Electrical Safety:",
+            "text": "Do not expose the integrated power bar to liquids; ensure all treatment devices are UL/CSA approved."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Caster Care:",
+            "text": "Keep casters free of hair and debris to maintain smooth, silent mobility and prevent floor marking."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/tm-3a-professional-3-tier-utility-trolley-salon-organizer.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the total weight capacity for the TM-3A?",
+            "answer": "<p>The trolley supports up to 100 lbs. This ensures stability for heavy clinical or aesthetic devices.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the dimensions of the shelves?",
+            "answer": "<p>The shelves measure 14\" x 23\". Providing ample surface area for professional equipment and organizers.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit come with a warranty?",
+            "answer": "<p>A 2-year professional warranty is included. It covers defects in material and workmanship under normal use.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How do I clean the metal surfaces?",
+            "answer": "<p>Use non-abrasive professional disinfectants. This maintains the white finish and ensures proper clinical hygiene.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it include a magnifying glass holder?",
+            "answer": "<p>Yes, it features a holder on each side. This allows for flexible positioning of optics during treatments.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required for this model?",
+            "answer": "<p>Shipped fully assembled</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

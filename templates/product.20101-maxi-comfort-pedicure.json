@@ -13,11 +13,11 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "Maxi-Comfort Pedicure 360º Chair",
-        "intro_highlight": "Professional grade equipment designed for high-volume aesthetic and clinical environments.",
-        "custom_description": "<p>Maxi-Comfort Pedicure 360º Chair is purpose-built for licensed professionals, ensuring maximum efficiency and client comfort.</p>",
-        "subtitle": "Professional Hydraulic Elevation & 360° Articulation",
-        "secondary_description": "<p>Heavy-duty metallic chassis and medical-grade vinyl designed for intensive daily use.</p>",
+        "custom_title": "Maxi-Comfort Pedicure 360º",
+        "intro_highlight": "Designed to elevate practitioner ergonomics, this professional workstation integrates a seamless 360° hydraulic swivel with robust North American manufacturing standards, ensuring unparalleled access and stability during intricate aesthetic services.",
+        "custom_description": "<p>Maxi-Comfort Pedicure 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists. Its fully adjustable design targets postural strain during high-volume clinic days, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, brow sculpting, or specialized skincare protocols, this professional station adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
+        "subtitle": "The Ultimate Multi-Disciplinary Workhorse",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the ultra-white finish and structural integrity of the Maxi-Comfort Pedicure 360º, wipe down the surface with gentle professional cleansers formulated for spa environments daily. The premium leatherette provides heavy-duty resistance, ensuring pristine condition across full 8-hour shifts. Consistent care prevents wear, guaranteeing reliable hygiene.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -29,37 +29,254 @@
     },
     "main_product_characteristics_Hp7Baq": {
       "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Professional Esthetician:",
+            "answer": "<p>For the professional Esthetician, the 15º tilt system dramatically improves access to the client's face and neck during prolonged deep-pore cleansing and extensive skincare routines. This targeted angulation reduces the practitioner's postural strain and lower-back tension, translating to enhanced service consistency and a more relaxing experience for the client.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Technician:",
+            "answer": "<p>A Lash Technician requires absolute stability and precise focal distance. The adjustable headrest and manually adjustable backrest of this professional station provide optimal positioning, minimizing visual fatigue and wrist discomfort. The friction-free adjustment enables micro-movements without disturbing the client's position, ensuring technical precision during back-to-back appointments.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Cosmetic Tattoo:",
+            "answer": "<p>During intricate cosmetic procedures, the Cosmetic Tattoo Artist benefits directly from the heavy-duty 360° hydraulic swivel. This feature allows the practitioner to navigate smoothly around the treatment station without breaking their ergonomic posture. The ultra-resistant leatherette ensures the workstation withstands rigorous cleaning protocols, maintaining a pristine clinical environment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
       "settings": {
-        "accordion_heading": "Professional Applications",
+        "accordion_heading": "Key Features for the Professional Station",
         "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>TECHNICAL ASPECT</th><th>SPECIFICATION DETAILS</th></tr></thead><tbody><tr><td class=\"feature-label\">Model SKU</td><td>20102</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 Years Full Manufacturer Warranty</td></tr></tbody></table></div>"
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>20101</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-resistant vinyl upholstery, powder-coated steel frame, premium hydraulic components</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>71&quot; L x 24&quot; W x 26.5&quot; / 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>165 lb (75 kg)</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>360° hydraulic swivel base, manual backrest &amp; legrest adjustment, 15° tilt system</td></tr><tr><td class=\"feature-label\">Height Range</td><td>26.5&quot; to 33.5&quot; (67 cm to 85 cm)</td></tr><tr><td class=\"feature-label\">Seating Width</td><td>24&quot; (61 cm)</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Fully adjustable headrest</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white ultra-durable vinyl, stain-resistant, multiple colors available (Chart A)</td></tr><tr><td class=\"feature-label\">Control Type</td><td>Hydraulic foot-operated swivel and positioning system</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Reinforced frame, stable base, CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA and UL approved</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years full warranty</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
       }
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "360° Hydraulic Swivel",
+            "text": "Friction-free adjustment with heavy-duty components to ensure seamless practitioner mobility in high-volume clinics."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "15º Tilt Mechanism",
+            "text": "Precision-engineered reclining system designed to improve neck area access for Estheticians and Lash Technicians, reducing lower-back tension."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Ultra-Resistant Upholstery",
+            "text": "Ultra-white durable leatherette that guarantees pristine hygiene in professional spa environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
+        "image_position": "right",
         "bg_color": "#a22938",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "how_to": {
       "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Engage the hydraulic",
+            "text": "foot pump to smoothly raise the chair height to the desired working height."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Utilize the 360°",
+            "text": "swivel mechanism to rotate the client to the optimal working angle, then lock in place."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Manually adjust the",
+            "text": "backrest and leg rest to achieve the precise contour required for the specific service."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position the adjustable",
+            "text": "headrest to support the client's neck, utilizing the 15º tilt system for enhanced facial access."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Ensure the hydraulic",
+            "text": "lock is fully engaged before beginning any precision cosmetic procedure."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Do not exceed",
+            "text": "the designated weight capacity limits of the hydraulic pump system."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Always return the",
+            "text": "chair to its lowest position before the client mounts or dismounts to prevent tipping."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
       "settings": {
-        "title_color": "#a22938"
+        "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "faq": {
       "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the height range of the hydraulic system?",
+            "answer": "<p>The chair offers hydraulic height adjustment. Refer to the model specifications and operating manual for the height range applicable to your configuration.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the chair recline completely flat?",
+            "answer": "<p>Yes, the backrest and leg rest manually adjust to a flat position. This flexibility accommodates a wide range of aesthetic services.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the armrests removable?",
+            "answer": "<p>Yes, removable armrests are available as an option. This allows closer practitioner access when required during specialized treatments.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What material is used for the upholstery?",
+            "answer": "<p>It features ultra-white, ultra-resistant leatherette. This material is specifically engineered for durability and ease of cleaning in professional settings.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How much does the chair weigh?",
+            "answer": "<p>The specifications table lists a chair weight of 165 lb (75 kg).</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the benefit of the 15º tilt system?",
+            "answer": "<p>It improves practitioner access to the face and neck. This feature significantly enhances client comfort and reduces practitioner postural strain.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
       "settings": {
-        "heading": "Your Questions, Answered"
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "compare_collection": "hydraulic-mechanical"
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
       }
     }
   },

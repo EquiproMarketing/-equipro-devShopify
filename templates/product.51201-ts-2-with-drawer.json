@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TS-2 with drawer",
+        "intro_highlight": "The TS-2 workstation bridges the gap between high-frequency equipment access and organized storage, handcrafted in North America to meet the rigorous stability demands of modern clinical environments.",
+        "custom_description": "<p>TS-2 with Drawer is purpose-built for licensed professionals, including Estheticians, Tattooists, and Clinical Spa Technicians. Its robust design targets postural tension and fatigue during intensive sessions, enabling sharper focus on technique and client results. Whether you are performing advanced facials, precision PMU, or chemical peels, this workstation adjusts to your workflow need with a sliding storage drawer and effortless mobility.</p>",
+        "subtitle": "Engineered for Professional Station Efficiency",
+        "secondary_description": "<p>While standard imported carts often utilize thin-gauge aluminum or plastic connectors that wobble under load, the Equipro TS-2 is engineered with heavy-duty industrial steel and baked epoxy finishes. Our standard includes high-density silent casters that glide over flooring joints, whereas standard carts typically use friction-heavy plastic wheels that collect debris and lock over time.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51201-ts-2-with-drawer",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>Estheticians will find the integrated drawer essential for securing delicate hand tools and sterile supplies away from ambient dust between facial protocols. The expansive top surface provides a stable platform for high-end multi-function machines, ensuring equipment remains at an ergonomic height to prevent reaching fatigue.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technicianst:",
+            "answer": "<p>In a Clinical Spa Technicians can utilize the dual-shelf configuration to separate clean consumables from active-use devices. The robust weight capacity ensures that heavy laser or cavitation units are supported without structural flex, maintaining the professional integrity of the treatment room.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Tattooists and Permanent Makeup Artists:",
+            "answer": "<p>Tattooists and Permanent Makeup Artists benefit from the industrial-grade steel construction which withstands frequent disinfection with harsh chemicals. The silent-roll casters allow for micro-adjustments in positioning during high-precision ink work without disrupting the creative flow or client comfort.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51201</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves, durable construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>25&quot; L x 14&quot; W x 34&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>55 lb (25 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>2 metal shelves (each 14&quot; x 23&quot;)</td></tr><tr><td class=\"feature-label\">Drawer</td><td>Integrated pull-out drawer with 6&quot; inside clearance</td></tr><tr><td class=\"feature-label\">Shelf Spacing</td><td>14.25&quot; between lower part of drawer and lower shelf; 6.5&quot; from lower shelf to floor</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>1 magnifier holder</td></tr><tr><td class=\"feature-label\">Assembly</td><td>Partial assembly required</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional auxiliary trolley with drawer for spa and aesthetic workstations</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Industrial Steel Frame: Constructed with reinforced steel to provide a vibration-free platform in high-traffic treatment rooms."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Security",
+            "text": "Smooth-Glide Storage: A ball-bearing drawer designed to protect sensitive tools for practitioners and specialists, improving organization."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Studio Cohesion",
+            "text": "Versatile Aesthetic: A clean, professional finish that ensures seamless integration into any high-end spa or clinical environment."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/51201-ts-2-professional-spa-utility-cart-drawer.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Unpack and Inspect:",
+            "text": "Ensure all structural components are present before assembly."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Caster Installation:",
+            "text": "Secure the silent-roll casters into the base frame until a click is felt."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Surface Leveling:",
+            "text": "Place the workstation on a flat surface to verify the horizontal alignment of the drawer."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Load Management:",
+            "text": "Distribute heavier devices on the bottom shelf to maintain a low center of gravity during transit."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Distribution:",
+            "text": "Do not exceed the maximum load capacity to prevent tipping during movement."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Surface Cleaning:",
+            "text": "Avoid abrasive scouring pads that may compromise the baked epoxy protective layer."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Mobility Protocol:",
+            "text": "Ensure casters are free of hair and debris to maintain silent, fluid motion."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/ts-2-mobile-utility-cart-drawer-51201.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity of the 51201 TS-2?",
+            "answer": "<p>It supports up to 100 lbs of total weight. This ensures stability for heavy aesthetic and medical machines.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the total height of this trolley?",
+            "answer": "<p>The unit stands at 34 inches high. This provides an ergonomic workspace for seated or standing practitioners.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I clean the metal surfaces?",
+            "answer": "<p>Wipe with a soft cloth and pH-neutral disinfectant. This preserves the integrity of the professional epoxy coating.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is assembly required for this model?",
+            "answer": "<p>Partial assembly is required for this model. The unit is designed for easy setup with standard tools.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the dimensions of the internal drawer?",
+            "answer": "<p>The drawer features an interior height of 6 inches. This provides ample space for organizing specialized handheld tools.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the professional warranty?",
+            "answer": "<p>2-year coverage included. Equipro provides a comprehensive limited warranty for professional use.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
