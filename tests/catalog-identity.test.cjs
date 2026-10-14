@@ -8,6 +8,7 @@ engine.registerFilter('asset_url', x => x);
 engine.registerFilter('stylesheet_tag', x => `<link href="${x}">`);
 engine.registerFilter('image_url', x => x?.src || '');
 engine.registerFilter('money', x => `$${(Number(x) / 100).toFixed(2)}`);
+engine.registerFilter('money_with_currency', x => `$${(Number(x) / 100).toFixed(2)} USD`);
 engine.registerFilter('json', x => JSON.stringify(x ?? null));
 engine.registerFilter('t', x => ({ 'collections.no_products': 'No products in this collection.', 'collections.pagination': 'Collection pages' }[x] || x));
 engine.registerFilter('default_pagination', x => x.pages > 1 ? `<a href="?page=${Math.min(x.pages, x.current_page + 1)}">Next page</a>` : '');
@@ -31,7 +32,7 @@ engine.registerTag('paginate', {
   }
 });
 function source(file) {
-  return fs.readFileSync(file, 'utf8').replace(/{% schema %}[\s\S]*?{% endschema %}/g, '')
+  return fs.readFileSync(file, 'utf8').replace(/{% schema %}[\s\S]*?{% endschema %}/g, '').replace(/{% stylesheet %}[\s\S]*?{% endstylesheet %}/g, '')
     .replace(/{% form 'product', target_product %}/g, '<form data-product-id="{{ target_product.id }}">').replace(/{% endform %}/g, '</form>');
 }
 function product(id, available = true) {
@@ -94,4 +95,18 @@ test('a 49-product visited collection has three distinct pages and neutral links
     assert.match(html, new RegExp(`href="/products/product-${first}"`)); assert.match(html, new RegExp(`href="/products/product-${last}"`));
     assert.match(html, /Collection pages/); assert.match(html, /Ver producto/); assert.doesNotMatch(html, /Product 999|Acheter/);
   }
+});
+
+test('Royal-style purchase area shows explicit currency and preserves existing image alt', async () => {
+  const p = product(1); p.featured_image.alt = 'Original Royal image alt';
+  const html = await renderProduct(p, p, { show_currency: true, purchase_note: '<p>Contact us for other upholstery colors.</p>' });
+  assert.match(html, /\$1.00 USD/); assert.match(html, /Original Royal image alt/);
+  assert.match(html, /Contact us for other upholstery colors/); assert.match(html, /id="AddToCartButton"/);
+});
+
+test('product detail blocks are isolated to their configured product', async () => {
+ const section = { id: 'pilot', settings: { applies_to_product: product(1), heading: 'Royal details', layout: 'faq' }, blocks: [{ settings: { title: 'Royal question', text: '<p>Royal answer</p>' } }] };
+ const render = p => engine.parseAndRender(source('sections/product-details.liquid'), { product: p, section });
+ assert.match(await render(product(1)), /Royal question/);
+ assert.doesNotMatch(await render(product(2)), /Royal question|Royal answer|Royal details/);
 });

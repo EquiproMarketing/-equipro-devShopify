@@ -13,7 +13,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "back_text": "Back",
-        "btn_primary_text": "Ver producto",
+        "btn_primary_text": "View product",
         "btn_secondary_text": ""
       }
     }

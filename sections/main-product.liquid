@@ -67,9 +67,10 @@
         <!-- DYNAMIC PRICE -->
         <div class="product-price" id="ProductPriceContainer">
           {% assign current_variant = target_product.selected_or_first_available_variant %}
-          {{ current_variant.price | money }}
+          {% if section.settings.show_currency %}{{ current_variant.price | money_with_currency }}{% else %}{{ current_variant.price | money }}{% endif %}
         </div>
 
+        {% if use_product_overrides and section.settings.purchase_note != blank %}<div class="product-purchase-note">{{ section.settings.purchase_note }}</div>{% endif %}
         {% unless portable_product %}
         {% form 'product', target_product %}
           <input type="hidden" name="id" id="ProductVariantIdInput" value="{{ current_variant.id }}">
@@ -141,9 +142,9 @@
           {% if use_product_overrides and first_img_block.settings.image != blank %}
             <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1600 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
           {% elsif current_variant.image != blank %}
-            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ current_variant.image.alt | default: target_product.title | escape }}">
           {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.featured_image.alt | default: target_product.title | escape }}">
           {% else %}
             <div class="thumb-img-placeholder"></div>
           {% endif %}
@@ -167,7 +168,8 @@
           {% elsif target_product.images.size > 0 %}
             {% for image in target_product.images limit: 4 %}
               <img 
-                src="{{ image | image_url: width: 400 }}" 
+                src="{{ image | image_url: width: 400 }}"
+                alt="{{ image.alt | default: target_product.title | escape }}"
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
                 onclick="changeMainImg(this.dataset.highres)" 
                 data-highres="{{ image | image_url: width: 1600 }}"
@@ -229,7 +231,7 @@
       {
         "id": {{ variant.id }},
         "title": {{ variant.title | json }},
-        "price": {{ variant.price | money | json }},
+        "price": {% if section.settings.show_currency %}{{ variant.price | money_with_currency | json }}{% else %}{{ variant.price | money | json }}{% endif %},
         "available": {{ variant.available | json }},
         "options": [
           {{ variant.option1 | json }},
@@ -399,6 +401,8 @@
       "id": "featured_product",
       "label": "Link Specific Product"
     },
+    {"type":"checkbox","id":"show_currency","label":"Show price currency","default":false},
+    {"type":"richtext","id":"purchase_note","label":"Purchase or option note"},
     {
       "type": "text",
       "id": "btn_label",
