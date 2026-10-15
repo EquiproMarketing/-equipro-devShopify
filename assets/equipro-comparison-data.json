@@ -183,7 +183,7 @@
       "family": "trolleys",
       "sourcePage": 22,
       "specs": {
-        "dimensions": "14 × 25 × 33.5 in",
+        "dimensions": "25 × 14 × 33.5 in",
         "shelves": "3",
         "shelf_dimensions": "14 × 23 in",
         "spacing": "Top–middle: 9.75 in; middle–bottom: 10 in",
@@ -201,7 +201,7 @@
       "family": "trolleys",
       "sourcePage": 22,
       "specs": {
-        "dimensions": "14 × 18 × 33.5 in",
+        "dimensions": "18 × 14 × 33.5 in",
         "shelves": "3",
         "shelf_dimensions": "13 × 16 in",
         "spacing": "11.75 in between shelves",
@@ -291,7 +291,7 @@
       "family": "trolleys",
       "sourcePage": 21,
       "specs": {
-        "dimensions": "15 × 25.5 × 54.5 in",
+        "dimensions": "25.5 × 15 × 54.5 in",
         "shelves": "4",
         "shelf_dimensions": "14 × 23 in",
         "spacing": "First–second: 11.75 in; second–third: 13 in; third–cabinet: 9 in",
