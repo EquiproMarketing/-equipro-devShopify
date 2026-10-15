@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51401</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Durable wood and metal construction with quality finish</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>31&quot; L x 16&quot; W x 32&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>59 lb (28 kg)</td></tr><tr><td class=\"feature-label\">Storage</td><td>2 practical drawers; 1 compartment for bottles</td></tr><tr><td class=\"feature-label\">Client Comfort</td><td>Armrest cushion for customer</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>Lamp not included</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Deluxe professional manicure table for nail technicians and beauty therapists</td></tr></tbody></table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\">\n<thead><tr>\n<th>Technical Aspect</th>\n<th>Specification Details</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"feature-label\">Manufacturer</td>\n<td>Equipro Beauty</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Model SKU</td>\n<td>51401</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Primary Materials</td>\n<td>Durable wood and metal construction with quality finish</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Dimensions (L x W x H)</td>\n<td>31\" L x 16\" W x 32\" H</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Weight</td>\n<td>59 lb (28 kg)</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Storage</td>\n<td>2 practical drawers; 1 compartment for bottles</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Client Comfort</td>\n<td>Armrest cushion for customer</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Mobility</td>\n<td>Silent casters for smooth and quiet movement</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Accessories</td>\n<td>Lamp not included</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Safety Features</td>\n<td>Sturdy construction, stable base with casters</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Certifications</td>\n<td>CSA &amp; UL approved components</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Warranty</td>\n<td>2 years</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Country of Origin</td>\n<td>Canada</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Intended Use</td>\n<td>Deluxe professional manicure table for nail technicians and beauty therapists</td>\n</tr>\n</tbody>\n</table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -101,7 +101,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/51401-manicure-table-deluxe-professional-nail-station-white.webp",
+        "image": "shopify://shop_images/equipro-manicure-table-deluxe-mobile-professional-nail-station-with-integrated-bowl-sku-51401_1.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -188,7 +188,7 @@
         "safety_3"
       ],
       "settings": {
-        "image": "shopify://shop_images/51401-manicure-table-deluxe-professional-salon-workstation.webp",
+        "image": "shopify://shop_images/equipro-manicure-table-deluxe-mobile-workstation-high-durability-professional-nail-salon-sku-51401.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
@@ -275,8 +275,8 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "compare_collection": "",
-        "heading": "Select Models to Compare"
+        "heading": "Select Models to Compare",
+        "compare_collection": ""
       }
     }
   },
