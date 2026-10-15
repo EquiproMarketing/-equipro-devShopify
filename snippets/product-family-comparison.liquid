@@ -5,7 +5,7 @@
 {% enddoc %}
 {{ 'equipro-comparison.css' | asset_url | stylesheet_tag }}
 <script src="{{ 'equipro-comparison.js' | asset_url }}" defer></script>
-<equipro-comparison data-family="{{ comparison_family }}" data-current="{{ target_product.id }}" data-source="{{ 'equipro-comparison-data.json' | asset_url }}">
+<equipro-comparison data-family="{{ comparison_family | strip }}" data-current="{{ target_product.id }}" data-source="{{ 'equipro-comparison-data.json' | asset_url }}">
   <button type="button" class="product-compare-trigger-btn" data-open aria-haspopup="dialog">{{ 'comparison.open' | t }}</button>
   <dialog aria-labelledby="ComparisonTitle-{{ target_product.id }}" aria-describedby="ComparisonHelp-{{ target_product.id }}">
     <div class="ec-header"><h2 id="ComparisonTitle-{{ target_product.id }}">{{ 'comparison.title' | t }}</h2><button type="button" data-close autofocus>{{ 'comparison.close' | t }}</button></div>
