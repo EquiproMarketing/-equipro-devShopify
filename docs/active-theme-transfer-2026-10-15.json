@@ -1,0 +1,933 @@
+{
+  "store": "equipro-dev.myshopify.com",
+  "activeThemeId": 157851386029,
+  "developmentThemeId": 157680631981,
+  "backup": "/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/equipro-active-157851386029-before-2026-10-15.zip",
+  "backupSha256": "d33bf4c9a3cc58f7192ee2eea8b0e176cd52178df7d863fe3a87b473a00c2b4d",
+  "uploadedFiles": [
+    "templates/product.20100-maxi-comfort-360.json",
+    "templates/product.20101-maxi-comfort-pedicure.json",
+    "templates/product.20200-multi-comfort.json",
+    "templates/product.21100-hydro-comfort.json",
+    "templates/product.21200-aero-comfort.json",
+    "templates/product.22100-poly-comfort.json",
+    "templates/product.51000-ts-4.json",
+    "templates/product.51100-ts-3-deluxe.json",
+    "templates/product.51101-tm-3-standard.json",
+    "templates/product.51103-tm-3-mini.json",
+    "templates/product.51104-tm-3a.json",
+    "templates/product.51200-ts-2-basic.json",
+    "templates/product.51201-ts-2-with-drawer.json",
+    "templates/product.51300-ta-2-standard.json",
+    "templates/product.51400-manicure-table.json",
+    "templates/product.51401-manicure-table-deluxe.json",
+    "templates/product.51500-make-up-table.json",
+    "templates/product.ei-501-royal.json"
+  ],
+  "browserChecks": [
+    {
+      "suffix": "20100-maxi-comfort-360",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "20101-maxi-comfort-pedicure",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "20200-multi-comfort",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "21100-hydro-comfort",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "21200-aero-comfort",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "22100-poly-comfort",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51000-ts-4",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51100-ts-3-deluxe",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51101-tm-3-standard",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51103-tm-3-mini",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51104-tm-3a",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51200-ts-2-basic",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51201-ts-2-with-drawer",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51300-ta-2-standard",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51400-manicure-table",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51401-manicure-table-deluxe",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "51500-make-up-table",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    },
+    {
+      "suffix": "ei-501-royal",
+      "hasSpecs": true,
+      "hasHowTo": true,
+      "hasFaq": true,
+      "hasLiquidError": false
+    }
+  ],
+  "assignments": {
+    "before": [
+      {
+        "id": "gid://shopify/Product/8734928863405",
+        "title": "EI-502 Infinity",
+        "handle": "ei-502-infinity",
+        "templateSuffix": ""
+      },
+      {
+        "id": "gid://shopify/Product/8744550105261",
+        "title": "11300 - Infraderm",
+        "handle": "infraderm",
+        "templateSuffix": "11300-infraderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550203565",
+        "title": "11500 Rotoderm",
+        "handle": "rotoderm",
+        "templateSuffix": "11500-rotoderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550334637",
+        "title": "11600  - Aeroderm",
+        "handle": "aeroderm",
+        "templateSuffix": "11600-aeroderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550367405",
+        "title": "41100-solo-pil-standard",
+        "handle": "solo-pil-standard",
+        "templateSuffix": "41100-solo-pil-standard"
+      },
+      {
+        "id": "gid://shopify/Product/8744550465709",
+        "title": "51101 - TM-3 Standard – TM-3 Standard Service Table",
+        "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744550531245",
+        "title": "11100 - Digipro steamer",
+        "handle": "digipro-steamer",
+        "templateSuffix": "11100-vapoderm-digipro"
+      },
+      {
+        "id": "gid://shopify/Product/8744550564013",
+        "title": "EI-111-vapoderm-classic",
+        "handle": "classic-steamer",
+        "templateSuffix": "ei-111-classic-steamer"
+      },
+      {
+        "id": "gid://shopify/Product/8744550629549",
+        "title": "11400 ioniderm-galvanic",
+        "handle": "ioniderm",
+        "templateSuffix": "11400-ioniderm-galvanic"
+      },
+      {
+        "id": "gid://shopify/Product/8744550695085",
+        "title": "11650 Diamonderm",
+        "handle": "diamonderm",
+        "templateSuffix": "11650-diamonderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550760621",
+        "title": "11800 - Multiderm (5 in 1)",
+        "handle": "multiderm-5-en-1",
+        "templateSuffix": "multiderm-5-in-1"
+      },
+      {
+        "id": "gid://shopify/Product/8744550826157",
+        "title": "Ergonomic Stool with Backrest - 31300",
+        "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+        "templateSuffix": "31300-ergonomic-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744550858925",
+        "title": "61102S Spa Cabi",
+        "handle": "spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+        "templateSuffix": "61102-spa-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744550924461",
+        "title": "11906 - Deluxe-column",
+        "handle": "deluxe-column-11906",
+        "templateSuffix": "11906-deluxe-column"
+      },
+      {
+        "id": "gid://shopify/Product/8744550989997",
+        "title": "11902 - modular-column",
+        "handle": "modular-column-11902",
+        "templateSuffix": "11902-modular-column"
+      },
+      {
+        "id": "gid://shopify/Product/8744551055533",
+        "title": "41101-solo-pil-maxi",
+        "handle": "solo-pil-standard-ym74h",
+        "templateSuffix": "41101-solo-pil-maxi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551121069",
+        "title": "41200 Duo-pil maxi",
+        "handle": "duo-pil-maxi",
+        "templateSuffix": "41200-duo-pil-maxi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551153837",
+        "title": "41201-duo-pil-standard",
+        "handle": "duo-pil-standard-41201",
+        "templateSuffix": "41201-duo-pil-standard"
+      },
+      {
+        "id": "gid://shopify/Product/8744551219373",
+        "title": "41202 Duo-pil precision",
+        "handle": "duo-pil-precision",
+        "templateSuffix": "41202-duo-pil-precision"
+      },
+      {
+        "id": "gid://shopify/Product/8744551284909",
+        "title": "ultra-comfort-20500",
+        "handle": "ultra-comfort-20500",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551350445",
+        "title": "Infinity EI-502",
+        "handle": "ultra-comfort-20500-gm25t",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551415981",
+        "title": "spa-comfort-20300",
+        "handle": "spa-comfort-20300",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551448749",
+        "title": "ei-500-murano",
+        "handle": "ei-500-murano",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551514285",
+        "title": "ei-501-royal",
+        "handle": "ei-501-royal",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551579821",
+        "title": "Divine EI-504",
+        "handle": "ei-504-divine",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551645357",
+        "title": "Multi-comfort-20210",
+        "handle": "multi-comfort-electric-height-20210",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551710893",
+        "title": "ultra-comfort-Pedicure-20502",
+        "handle": "ultra-comfortprofessional-treatment-pedicure-chair-20500",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551743661",
+        "title": "elite-spa-ei-508",
+        "handle": "elite-spa-ei-508",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551809197",
+        "title": "Natura Spa EI-509",
+        "handle": "natura-spa-ei-509",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551874733",
+        "title": "61100M Mini Cabi",
+        "handle": "mini-cabi-ei-61100m",
+        "templateSuffix": "61100-mini-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551940269",
+        "title": "61101H Hot Cabi",
+        "handle": "hot-cabi-61101h",
+        "templateSuffix": "61101-hot-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744552005805",
+        "title": "Maxi-comfort 360º - 20100",
+        "handle": "maxi-comfort-360",
+        "templateSuffix": "SKU00001-maxi-comfort-360"
+      },
+      {
+        "id": "gid://shopify/Product/8744552071341",
+        "title": "61402 Visiderm",
+        "handle": "visiderm-61402",
+        "templateSuffix": "61402-visiderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744552104109",
+        "title": "Maxi-Comfort Pedicure 360º",
+        "handle": "maxi-confort-pedicure-360",
+        "templateSuffix": "20101-maxi-comfort-360"
+      },
+      {
+        "id": "gid://shopify/Product/8744552169645",
+        "title": "Bohemia- EI-23403",
+        "handle": "bohemia-ei-23403",
+        "templateSuffix": "23403-bohemia"
+      },
+      {
+        "id": "gid://shopify/Product/8744552235181",
+        "title": "calypso-ei-23402",
+        "handle": "calypso-ei-23402",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552267949",
+        "title": "Round air-lift stool with backrest - 31200",
+        "handle": "round-air-lift-stool-with-backrest-31200",
+        "templateSuffix": "31200-round-air-lift-stool-with-backrest"
+      },
+      {
+        "id": "gid://shopify/Product/8744552333485",
+        "title": "Air-Lift Round Stool - 31100",
+        "handle": "31100-air-lift-round-stool",
+        "templateSuffix": "31100-air-lift-round-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552366253",
+        "title": "Ergonomic Stool with Adjustable Backrest-31301",
+        "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+        "templateSuffix": "31301-ergonomic-stool-with-adjustable-backrest"
+      },
+      {
+        "id": "gid://shopify/Product/8744552464557",
+        "title": "Round air-lift stool-EI-311",
+        "handle": "round-air-lift-stool-ei-311",
+        "templateSuffix": "ei-311-round-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552530093",
+        "title": "EI-312 Round Air Lift Stool",
+        "handle": "ei-312-round-air-lift-stool",
+        "templateSuffix": "ei-312-round-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552595629",
+        "title": "51104 TM-3A",
+        "handle": "51104-tm-3a",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552661165",
+        "title": "51103 TM-3 mini",
+        "handle": "51103-tm-3-mini",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552726701",
+        "title": "51100 TS-3 deluxe",
+        "handle": "ts-3-deluxe",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552792237",
+        "title": "51201 TS-2 with drawer",
+        "handle": "51201-ts-2-with-drawer",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552890541",
+        "title": "51300 TA-2 standard",
+        "handle": "51300-ta-2-standard",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552956077",
+        "title": "51200 TS-2 basic",
+        "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553021613",
+        "title": "51400 Manicure table",
+        "handle": "51400-manicure-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553119917",
+        "title": "51000 TS-4",
+        "handle": "51000-ts-4",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553218221",
+        "title": "51401 Manicure table deluxe",
+        "handle": "51401-manicure-table-deluxe",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553283757",
+        "title": "51500 Make-up table",
+        "handle": "51500-make-up-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553349293",
+        "title": "63603 Circus magnifier LED (3D or 5D)",
+        "handle": "63603-circus-magnifier-led-3d-or-5d",
+        "templateSuffix": "63603-circus-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553414829",
+        "title": "63104 KFM magnifier LED (3D or 5D)",
+        "handle": "63104-kfm-magnifier-led-3d-or-5d",
+        "templateSuffix": "63104-kfm-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553480365",
+        "title": "63203 LFM magnifier LED (3D OR 5D)",
+        "handle": "63203-lfm-magnifier-led-3d-or-5d",
+        "templateSuffix": "63203-lfm-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553545901",
+        "title": "65100 Therabath tub II",
+        "handle": "65100-therabath-tub-ii",
+        "templateSuffix": "65100-therabath-tub-ii"
+      },
+      {
+        "id": "gid://shopify/Product/8744553578669",
+        "title": "66007 Spaslim heating blanket",
+        "handle": "66007-spaslim-heating-blanket",
+        "templateSuffix": "66007-spaslim-heating-blanket"
+      },
+      {
+        "id": "gid://shopify/Product/8744553644205",
+        "title": "66001 Heat pad",
+        "handle": "66001-heat-pad",
+        "templateSuffix": "66001-heat-pad"
+      },
+      {
+        "id": "gid://shopify/Product/8744553709741",
+        "title": "64401 Wood lamp",
+        "handle": "64401-wood-lamp",
+        "templateSuffix": "64401-wood-lamp"
+      },
+      {
+        "id": "gid://shopify/Product/8744553775277",
+        "title": "20200 Multi-comfort",
+        "handle": "20200-multi-comfort",
+        "templateSuffix": "20200-multi-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553840813",
+        "title": "21100 Hydro-comfort",
+        "handle": "21100-hydro-comfort",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553873581",
+        "title": "21200 Aero-comfort",
+        "handle": "21200-aero-comfort",
+        "templateSuffix": "21200-aero-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553906349",
+        "title": "22100 Poly-comfort",
+        "handle": "22100-poly-comfort",
+        "templateSuffix": "22100-poly-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553939117",
+        "title": "63303 Dainolite magnifier LED (3D or 5D)",
+        "handle": "63303-dainolite-magnifier-led-3d-or-5d",
+        "templateSuffix": "63303-dainolite-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8755827507373",
+        "title": "Heating Boots",
+        "handle": "heating-boots",
+        "templateSuffix": ""
+      }
+    ],
+    "after": [
+      {
+        "id": "gid://shopify/Product/8734928863405",
+        "title": "EI-502 Infinity",
+        "handle": "ei-502-infinity",
+        "templateSuffix": ""
+      },
+      {
+        "id": "gid://shopify/Product/8744550105261",
+        "title": "11300 - Infraderm",
+        "handle": "infraderm",
+        "templateSuffix": "11300-infraderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550203565",
+        "title": "11500 Rotoderm",
+        "handle": "rotoderm",
+        "templateSuffix": "11500-rotoderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550334637",
+        "title": "11600  - Aeroderm",
+        "handle": "aeroderm",
+        "templateSuffix": "11600-aeroderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550367405",
+        "title": "41100-solo-pil-standard",
+        "handle": "solo-pil-standard",
+        "templateSuffix": "41100-solo-pil-standard"
+      },
+      {
+        "id": "gid://shopify/Product/8744550465709",
+        "title": "51101 - TM-3 Standard – TM-3 Standard Service Table",
+        "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744550531245",
+        "title": "11100 - Digipro steamer",
+        "handle": "digipro-steamer",
+        "templateSuffix": "11100-vapoderm-digipro"
+      },
+      {
+        "id": "gid://shopify/Product/8744550564013",
+        "title": "EI-111-vapoderm-classic",
+        "handle": "classic-steamer",
+        "templateSuffix": "ei-111-classic-steamer"
+      },
+      {
+        "id": "gid://shopify/Product/8744550629549",
+        "title": "11400 ioniderm-galvanic",
+        "handle": "ioniderm",
+        "templateSuffix": "11400-ioniderm-galvanic"
+      },
+      {
+        "id": "gid://shopify/Product/8744550695085",
+        "title": "11650 Diamonderm",
+        "handle": "diamonderm",
+        "templateSuffix": "11650-diamonderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744550760621",
+        "title": "11800 - Multiderm (5 in 1)",
+        "handle": "multiderm-5-en-1",
+        "templateSuffix": "multiderm-5-in-1"
+      },
+      {
+        "id": "gid://shopify/Product/8744550826157",
+        "title": "Ergonomic Stool with Backrest - 31300",
+        "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+        "templateSuffix": "31300-ergonomic-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744550858925",
+        "title": "61102S Spa Cabi",
+        "handle": "spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+        "templateSuffix": "61102-spa-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744550924461",
+        "title": "11906 - Deluxe-column",
+        "handle": "deluxe-column-11906",
+        "templateSuffix": "11906-deluxe-column"
+      },
+      {
+        "id": "gid://shopify/Product/8744550989997",
+        "title": "11902 - modular-column",
+        "handle": "modular-column-11902",
+        "templateSuffix": "11902-modular-column"
+      },
+      {
+        "id": "gid://shopify/Product/8744551055533",
+        "title": "41101-solo-pil-maxi",
+        "handle": "solo-pil-standard-ym74h",
+        "templateSuffix": "41101-solo-pil-maxi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551121069",
+        "title": "41200 Duo-pil maxi",
+        "handle": "duo-pil-maxi",
+        "templateSuffix": "41200-duo-pil-maxi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551153837",
+        "title": "41201-duo-pil-standard",
+        "handle": "duo-pil-standard-41201",
+        "templateSuffix": "41201-duo-pil-standard"
+      },
+      {
+        "id": "gid://shopify/Product/8744551219373",
+        "title": "41202 Duo-pil precision",
+        "handle": "duo-pil-precision",
+        "templateSuffix": "41202-duo-pil-precision"
+      },
+      {
+        "id": "gid://shopify/Product/8744551284909",
+        "title": "ultra-comfort-20500",
+        "handle": "ultra-comfort-20500",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551350445",
+        "title": "Infinity EI-502",
+        "handle": "ultra-comfort-20500-gm25t",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551415981",
+        "title": "spa-comfort-20300",
+        "handle": "spa-comfort-20300",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551448749",
+        "title": "ei-500-murano",
+        "handle": "ei-500-murano",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551514285",
+        "title": "ei-501-royal",
+        "handle": "ei-501-royal",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551579821",
+        "title": "Divine EI-504",
+        "handle": "ei-504-divine",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551645357",
+        "title": "Multi-comfort-20210",
+        "handle": "multi-comfort-electric-height-20210",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551710893",
+        "title": "ultra-comfort-Pedicure-20502",
+        "handle": "ultra-comfortprofessional-treatment-pedicure-chair-20500",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551743661",
+        "title": "elite-spa-ei-508",
+        "handle": "elite-spa-ei-508",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551809197",
+        "title": "Natura Spa EI-509",
+        "handle": "natura-spa-ei-509",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744551874733",
+        "title": "61100M Mini Cabi",
+        "handle": "mini-cabi-ei-61100m",
+        "templateSuffix": "61100-mini-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744551940269",
+        "title": "61101H Hot Cabi",
+        "handle": "hot-cabi-61101h",
+        "templateSuffix": "61101-hot-cabi"
+      },
+      {
+        "id": "gid://shopify/Product/8744552005805",
+        "title": "Maxi-comfort 360º - 20100",
+        "handle": "maxi-comfort-360",
+        "templateSuffix": "SKU00001-maxi-comfort-360"
+      },
+      {
+        "id": "gid://shopify/Product/8744552071341",
+        "title": "61402 Visiderm",
+        "handle": "visiderm-61402",
+        "templateSuffix": "61402-visiderm"
+      },
+      {
+        "id": "gid://shopify/Product/8744552104109",
+        "title": "Maxi-Comfort Pedicure 360º",
+        "handle": "maxi-confort-pedicure-360",
+        "templateSuffix": "20101-maxi-comfort-360"
+      },
+      {
+        "id": "gid://shopify/Product/8744552169645",
+        "title": "Bohemia- EI-23403",
+        "handle": "bohemia-ei-23403",
+        "templateSuffix": "23403-bohemia"
+      },
+      {
+        "id": "gid://shopify/Product/8744552235181",
+        "title": "calypso-ei-23402",
+        "handle": "calypso-ei-23402",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552267949",
+        "title": "Round air-lift stool with backrest - 31200",
+        "handle": "round-air-lift-stool-with-backrest-31200",
+        "templateSuffix": "31200-round-air-lift-stool-with-backrest"
+      },
+      {
+        "id": "gid://shopify/Product/8744552333485",
+        "title": "Air-Lift Round Stool - 31100",
+        "handle": "31100-air-lift-round-stool",
+        "templateSuffix": "31100-air-lift-round-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552366253",
+        "title": "Ergonomic Stool with Adjustable Backrest-31301",
+        "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+        "templateSuffix": "31301-ergonomic-stool-with-adjustable-backrest"
+      },
+      {
+        "id": "gid://shopify/Product/8744552464557",
+        "title": "Round air-lift stool-EI-311",
+        "handle": "round-air-lift-stool-ei-311",
+        "templateSuffix": "ei-311-round-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552530093",
+        "title": "EI-312 Round Air Lift Stool",
+        "handle": "ei-312-round-air-lift-stool",
+        "templateSuffix": "ei-312-round-air-lift-stool"
+      },
+      {
+        "id": "gid://shopify/Product/8744552595629",
+        "title": "51104 TM-3A",
+        "handle": "51104-tm-3a",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552661165",
+        "title": "51103 TM-3 mini",
+        "handle": "51103-tm-3-mini",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552726701",
+        "title": "51100 TS-3 deluxe",
+        "handle": "ts-3-deluxe",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552792237",
+        "title": "51201 TS-2 with drawer",
+        "handle": "51201-ts-2-with-drawer",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552890541",
+        "title": "51300 TA-2 standard",
+        "handle": "51300-ta-2-standard",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744552956077",
+        "title": "51200 TS-2 basic",
+        "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553021613",
+        "title": "51400 Manicure table",
+        "handle": "51400-manicure-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553119917",
+        "title": "51000 TS-4",
+        "handle": "51000-ts-4",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553218221",
+        "title": "51401 Manicure table deluxe",
+        "handle": "51401-manicure-table-deluxe",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553283757",
+        "title": "51500 Make-up table",
+        "handle": "51500-make-up-table",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553349293",
+        "title": "63603 Circus magnifier LED (3D or 5D)",
+        "handle": "63603-circus-magnifier-led-3d-or-5d",
+        "templateSuffix": "63603-circus-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553414829",
+        "title": "63104 KFM magnifier LED (3D or 5D)",
+        "handle": "63104-kfm-magnifier-led-3d-or-5d",
+        "templateSuffix": "63104-kfm-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553480365",
+        "title": "63203 LFM magnifier LED (3D OR 5D)",
+        "handle": "63203-lfm-magnifier-led-3d-or-5d",
+        "templateSuffix": "63203-lfm-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8744553545901",
+        "title": "65100 Therabath tub II",
+        "handle": "65100-therabath-tub-ii",
+        "templateSuffix": "65100-therabath-tub-ii"
+      },
+      {
+        "id": "gid://shopify/Product/8744553578669",
+        "title": "66007 Spaslim heating blanket",
+        "handle": "66007-spaslim-heating-blanket",
+        "templateSuffix": "66007-spaslim-heating-blanket"
+      },
+      {
+        "id": "gid://shopify/Product/8744553644205",
+        "title": "66001 Heat pad",
+        "handle": "66001-heat-pad",
+        "templateSuffix": "66001-heat-pad"
+      },
+      {
+        "id": "gid://shopify/Product/8744553709741",
+        "title": "64401 Wood lamp",
+        "handle": "64401-wood-lamp",
+        "templateSuffix": "64401-wood-lamp"
+      },
+      {
+        "id": "gid://shopify/Product/8744553775277",
+        "title": "20200 Multi-comfort",
+        "handle": "20200-multi-comfort",
+        "templateSuffix": "20200-multi-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553840813",
+        "title": "21100 Hydro-comfort",
+        "handle": "21100-hydro-comfort",
+        "templateSuffix": null
+      },
+      {
+        "id": "gid://shopify/Product/8744553873581",
+        "title": "21200 Aero-comfort",
+        "handle": "21200-aero-comfort",
+        "templateSuffix": "21200-aero-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553906349",
+        "title": "22100 Poly-comfort",
+        "handle": "22100-poly-comfort",
+        "templateSuffix": "22100-poly-comfort"
+      },
+      {
+        "id": "gid://shopify/Product/8744553939117",
+        "title": "63303 Dainolite magnifier LED (3D or 5D)",
+        "handle": "63303-dainolite-magnifier-led-3d-or-5d",
+        "templateSuffix": "63303-dainolite-magnifier-led"
+      },
+      {
+        "id": "gid://shopify/Product/8755827507373",
+        "title": "Heating Boots",
+        "handle": "heating-boots",
+        "templateSuffix": ""
+      }
+    ]
+  },
+  "unchangedOtherFiles": 183,
+  "themeCheckBeforeIssues": 59,
+  "themeCheckAfterIssues": 59,
+  "themeCheckNewIssues": 0
+}

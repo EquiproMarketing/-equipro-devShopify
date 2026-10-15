@@ -21,7 +21,7 @@
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
-        "featured_product": "poly-comfort",
+        "featured_product": "22100-poly-comfort",
         "btn_label": "ADD TO CART",
         "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
@@ -102,7 +102,7 @@
       "settings": {
         "heading": "Key Features for the Professional Station",
         "image": "shopify://shop_images/equipro-poly-comfort-hydraulic-facial-massage-depilation-bed-air-lift-system-22100.webp",
-        "image_position": "right",
+        "image_position": "left",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
         "padding_top": 60,

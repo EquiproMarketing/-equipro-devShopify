@@ -1,0 +1,883 @@
+{
+  "checkedAt": "2026-10-15",
+  "store": "equipro-dev.myshopify.com",
+  "rows": [
+    {
+      "file": "templates/product.20100-maxi-comfort-360.json",
+      "proposed": "20100-maxi-comfort-360",
+      "templateConfiguredHandle": "maxi-comfort-360",
+      "id": "gid://shopify/Product/8744552005805",
+      "title": "Maxi-comfort 360º - 20100",
+      "skus": [
+        "20100W"
+      ],
+      "handle": "maxi-comfort-360",
+      "current": "SKU00001-maxi-comfort-360",
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/maxi-comfort-360?preview_theme_id=157680631981&view=20100-maxi-comfort-360",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": true,
+          "sameAsDevelopment": false
+        }
+      ],
+      "publishedEffect": "Yes: assigning this suffix changes the published product to the published theme’s older template, not the reviewed development version."
+    },
+    {
+      "file": "templates/product.20101-maxi-comfort-pedicure.json",
+      "proposed": "20101-maxi-comfort-pedicure",
+      "templateConfiguredHandle": "maxi-comfort-pedicure",
+      "id": "gid://shopify/Product/8744552104109",
+      "title": "Maxi-Comfort Pedicure 360º",
+      "skus": [
+        "20101W"
+      ],
+      "handle": "maxi-confort-pedicure-360",
+      "current": "20101-maxi-comfort-360",
+      "assignmentChangeNeeded": true,
+      "match": "Unique model/SKU candidate; review required",
+      "flags": [
+        "Template featured_product handle is stale: maxi-comfort-pedicure"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/maxi-confort-pedicure-360?preview_theme_id=157680631981&view=20101-maxi-comfort-pedicure",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": true,
+          "sameAsDevelopment": false
+        }
+      ],
+      "publishedEffect": "Yes: assigning this suffix changes the published product to the published theme’s older template, not the reviewed development version."
+    },
+    {
+      "file": "templates/product.20200-multi-comfort.json",
+      "proposed": "20200-multi-comfort",
+      "templateConfiguredHandle": "multi-comfort",
+      "id": "gid://shopify/Product/8744553775277",
+      "title": "20200 Multi-comfort",
+      "skus": [
+        "20200-24W",
+        "20200-24B",
+        "20200-24N",
+        "20200-24D",
+        "20200-24C",
+        "20200-24S",
+        "20200-24O"
+      ],
+      "handle": "20200-multi-comfort",
+      "current": "20200-multi-comfort",
+      "assignmentChangeNeeded": false,
+      "match": "Unique model/SKU candidate; review required",
+      "flags": [
+        "Template featured_product handle is stale: multi-comfort",
+        "One or more variants have no SKU"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/20200-multi-comfort?preview_theme_id=157680631981&view=20200-multi-comfort",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": true,
+          "sameAsDevelopment": false
+        }
+      ],
+      "publishedEffect": "No assignment change proposed; published theme already uses this suffix and contains an older version."
+    },
+    {
+      "file": "templates/product.21100-hydro-comfort.json",
+      "proposed": "21100-hydro-comfort",
+      "templateConfiguredHandle": "hydro-comfort",
+      "id": "gid://shopify/Product/8744553840813",
+      "title": "21100 Hydro-comfort",
+      "skus": [
+        "21100W"
+      ],
+      "handle": "21100-hydro-comfort",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Unique model/SKU candidate; review required",
+      "flags": [
+        "Template featured_product handle is stale: hydro-comfort"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/21100-hydro-comfort?preview_theme_id=157680631981&view=21100-hydro-comfort",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.21200-aero-comfort.json",
+      "proposed": "21200-aero-comfort",
+      "templateConfiguredHandle": "aero-comfort",
+      "id": "gid://shopify/Product/8744553873581",
+      "title": "21200 Aero-comfort",
+      "skus": [
+        "21200W"
+      ],
+      "handle": "21200-aero-comfort",
+      "current": "21200-aero-comfort",
+      "assignmentChangeNeeded": false,
+      "match": "Unique model/SKU candidate; review required",
+      "flags": [
+        "Template featured_product handle is stale: aero-comfort",
+        "One or more variants have no SKU"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/21200-aero-comfort?preview_theme_id=157680631981&view=21200-aero-comfort",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": true,
+          "sameAsDevelopment": false
+        }
+      ],
+      "publishedEffect": "No assignment change proposed; published theme already uses this suffix and contains an older version."
+    },
+    {
+      "file": "templates/product.22100-poly-comfort.json",
+      "proposed": "22100-poly-comfort",
+      "templateConfiguredHandle": "poly-comfort",
+      "id": "gid://shopify/Product/8744553906349",
+      "title": "22100 Poly-comfort",
+      "skus": [
+        "22100W"
+      ],
+      "handle": "22100-poly-comfort",
+      "current": "22100-poly-comfort",
+      "assignmentChangeNeeded": false,
+      "match": "Unique model/SKU candidate; review required",
+      "flags": [
+        "Template featured_product handle is stale: poly-comfort",
+        "One or more variants have no SKU"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/22100-poly-comfort?preview_theme_id=157680631981&view=22100-poly-comfort",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": true,
+          "sameAsDevelopment": false
+        }
+      ],
+      "publishedEffect": "No assignment change proposed; published theme already uses this suffix and contains an older version."
+    },
+    {
+      "file": "templates/product.51000-ts-4.json",
+      "proposed": "51000-ts-4",
+      "templateConfiguredHandle": "51000-ts-4",
+      "id": "gid://shopify/Product/8744553119917",
+      "title": "51000 TS-4",
+      "skus": [
+        "51000"
+      ],
+      "handle": "51000-ts-4",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51000-ts-4?preview_theme_id=157680631981&view=51000-ts-4",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51100-ts-3-deluxe.json",
+      "proposed": "51100-ts-3-deluxe",
+      "templateConfiguredHandle": "ts-3-deluxe",
+      "id": "gid://shopify/Product/8744552726701",
+      "title": "51100 TS-3 deluxe",
+      "skus": [
+        "TS-3 deluxe"
+      ],
+      "handle": "ts-3-deluxe",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [
+        "Actual SKU is textual (TS-3 deluxe); model 51100 matched from title"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/ts-3-deluxe?preview_theme_id=157680631981&view=51100-ts-3-deluxe",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51101-tm-3-standard.json",
+      "proposed": "51101-tm-3-standard",
+      "templateConfiguredHandle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "id": "gid://shopify/Product/8744550465709",
+      "title": "51101 - TM-3 Standard – TM-3 Standard Service Table",
+      "skus": [
+        "51101"
+      ],
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/home-skincare-equipment-accessories-tm-3-professional-service-table?preview_theme_id=157680631981&view=51101-tm-3-standard",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51103-tm-3-mini.json",
+      "proposed": "51103-tm-3-mini",
+      "templateConfiguredHandle": "51103-tm-3-mini",
+      "id": "gid://shopify/Product/8744552661165",
+      "title": "51103 TM-3 mini",
+      "skus": [
+        "51103"
+      ],
+      "handle": "51103-tm-3-mini",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51103-tm-3-mini?preview_theme_id=157680631981&view=51103-tm-3-mini",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51104-tm-3a.json",
+      "proposed": "51104-tm-3a",
+      "templateConfiguredHandle": "51104-tm-3a",
+      "id": "gid://shopify/Product/8744552595629",
+      "title": "51104 TM-3A",
+      "skus": [
+        "51104"
+      ],
+      "handle": "51104-tm-3a",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51104-tm-3a?preview_theme_id=157680631981&view=51104-tm-3a",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51200-ts-2-basic.json",
+      "proposed": "51200-ts-2-basic",
+      "templateConfiguredHandle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "id": "gid://shopify/Product/8744552956077",
+      "title": "51200 TS-2 basic",
+      "skus": [
+        "51200"
+      ],
+      "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [
+        "Opaque existing handle retained; matched by SKU 51200"
+      ],
+      "preview": "https://equipro-dev.myshopify.com/products/uphusvw9gfbqf087wzw6s53rzz7zn5?preview_theme_id=157680631981&view=51200-ts-2-basic",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51201-ts-2-with-drawer.json",
+      "proposed": "51201-ts-2-with-drawer",
+      "templateConfiguredHandle": "51201-ts-2-with-drawer",
+      "id": "gid://shopify/Product/8744552792237",
+      "title": "51201 TS-2 with drawer",
+      "skus": [
+        "51201"
+      ],
+      "handle": "51201-ts-2-with-drawer",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51201-ts-2-with-drawer?preview_theme_id=157680631981&view=51201-ts-2-with-drawer",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51300-ta-2-standard.json",
+      "proposed": "51300-ta-2-standard",
+      "templateConfiguredHandle": "51300-ta-2-standard",
+      "id": "gid://shopify/Product/8744552890541",
+      "title": "51300 TA-2 standard",
+      "skus": [
+        "51300"
+      ],
+      "handle": "51300-ta-2-standard",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51300-ta-2-standard?preview_theme_id=157680631981&view=51300-ta-2-standard",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51400-manicure-table.json",
+      "proposed": "51400-manicure-table",
+      "templateConfiguredHandle": "51400-manicure-table",
+      "id": "gid://shopify/Product/8744553021613",
+      "title": "51400 Manicure table",
+      "skus": [
+        "51400"
+      ],
+      "handle": "51400-manicure-table",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51400-manicure-table?preview_theme_id=157680631981&view=51400-manicure-table",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51401-manicure-table-deluxe.json",
+      "proposed": "51401-manicure-table-deluxe",
+      "templateConfiguredHandle": "51401-manicure-table-deluxe",
+      "id": "gid://shopify/Product/8744553218221",
+      "title": "51401 Manicure table deluxe",
+      "skus": [
+        "51401"
+      ],
+      "handle": "51401-manicure-table-deluxe",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51401-manicure-table-deluxe?preview_theme_id=157680631981&view=51401-manicure-table-deluxe",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.51500-make-up-table.json",
+      "proposed": "51500-make-up-table",
+      "templateConfiguredHandle": "51500-make-up-table",
+      "id": "gid://shopify/Product/8744553283757",
+      "title": "51500 Make-up table",
+      "skus": [
+        "51500"
+      ],
+      "handle": "51500-make-up-table",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/51500-make-up-table?preview_theme_id=157680631981&view=51500-make-up-table",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    },
+    {
+      "file": "templates/product.ei-501-royal.json",
+      "proposed": "ei-501-royal",
+      "templateConfiguredHandle": "ei-501-royal",
+      "id": "gid://shopify/Product/8744551514285",
+      "title": "ei-501-royal",
+      "skus": [
+        "EI-501W"
+      ],
+      "handle": "ei-501-royal",
+      "current": null,
+      "assignmentChangeNeeded": true,
+      "match": "Exact configured handle",
+      "flags": [],
+      "preview": "https://equipro-dev.myshopify.com/products/ei-501-royal?preview_theme_id=157680631981&view=ei-501-royal",
+      "themes": [
+        {
+          "id": "157680533677",
+          "name": "Horizon",
+          "role": "UNPUBLISHED",
+          "present": false,
+          "sameAsDevelopment": null
+        },
+        {
+          "id": "157680631981",
+          "name": "Development (cad855-iMac-de-Marketing)",
+          "role": "DEVELOPMENT",
+          "present": true,
+          "sameAsDevelopment": true
+        },
+        {
+          "id": "157851386029",
+          "name": "-equipro-devShopify/main",
+          "role": "MAIN",
+          "present": false,
+          "sameAsDevelopment": null
+        }
+      ],
+      "publishedEffect": "Store-wide assignment: proposed template is absent from published theme; published storefront falls back to default. The reviewed layout will not appear live."
+    }
+  ],
+  "themes": [
+    {
+      "id": "gid://shopify/OnlineStoreTheme/157680533677",
+      "name": "Horizon",
+      "role": "UNPUBLISHED",
+      "files": {
+        "nodes": [],
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "InRlbXBsYXRlc1wvcHJvZHVjdC5laS01MDEtcm95YWwuanNvbiI="
+        }
+      }
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/157680631981",
+      "name": "Development (cad855-iMac-de-Marketing)",
+      "role": "DEVELOPMENT",
+      "files": {
+        "nodes": [
+          {
+            "filename": "templates/product.20100-maxi-comfort-360.json",
+            "checksumMd5": "85b132fdda179efe4d72451ea249f12a"
+          },
+          {
+            "filename": "templates/product.20101-maxi-comfort-pedicure.json",
+            "checksumMd5": "091b2ee64f1373b1465f5e8143da84ab"
+          },
+          {
+            "filename": "templates/product.20200-multi-comfort.json",
+            "checksumMd5": "8630f6a631eddb2afb967d2bf062cbbd"
+          },
+          {
+            "filename": "templates/product.21100-hydro-comfort.json",
+            "checksumMd5": "518cbf3546c737741966d136861cf047"
+          },
+          {
+            "filename": "templates/product.21200-aero-comfort.json",
+            "checksumMd5": "cf5ac28bc614e9b9c2f5597ca442b303"
+          },
+          {
+            "filename": "templates/product.22100-poly-comfort.json",
+            "checksumMd5": "b315521f8b738b3b833915d65df7b4e7"
+          },
+          {
+            "filename": "templates/product.51000-ts-4.json",
+            "checksumMd5": "e67639f2ffa3f767fcee07137f1e9003"
+          },
+          {
+            "filename": "templates/product.51100-ts-3-deluxe.json",
+            "checksumMd5": "df9706817bd05d21e6c1d46b2c8f2411"
+          },
+          {
+            "filename": "templates/product.51101-tm-3-standard.json",
+            "checksumMd5": "1586619550419c259c29d04d2027a82e"
+          },
+          {
+            "filename": "templates/product.51103-tm-3-mini.json",
+            "checksumMd5": "dee6f34c8abc2165a9555e8aa100f764"
+          },
+          {
+            "filename": "templates/product.51104-tm-3a.json",
+            "checksumMd5": "9e2158ffbba236d123080b9d59dd3469"
+          },
+          {
+            "filename": "templates/product.51200-ts-2-basic.json",
+            "checksumMd5": "9068f0c0070a5b70cda83a628371700e"
+          },
+          {
+            "filename": "templates/product.51201-ts-2-with-drawer.json",
+            "checksumMd5": "b064da03b100d5efc9bde1e3aa045666"
+          },
+          {
+            "filename": "templates/product.51300-ta-2-standard.json",
+            "checksumMd5": "152033d922d24183811b0ab3bca9d96d"
+          },
+          {
+            "filename": "templates/product.51400-manicure-table.json",
+            "checksumMd5": "47ea06298768b8a5204da3212a6e3d90"
+          },
+          {
+            "filename": "templates/product.51401-manicure-table-deluxe.json",
+            "checksumMd5": "3c9671d89741088eeec3eb96030ea1ef"
+          },
+          {
+            "filename": "templates/product.51500-make-up-table.json",
+            "checksumMd5": "6b52a26cea39e96ce71a5f3c36837a44"
+          },
+          {
+            "filename": "templates/product.ei-501-royal.json",
+            "checksumMd5": "982e6f3fd756cd10c31b2112b21c0985"
+          }
+        ],
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "InRlbXBsYXRlc1wvcHJvZHVjdC5laS01MDEtcm95YWwuanNvbiI="
+        }
+      }
+    },
+    {
+      "id": "gid://shopify/OnlineStoreTheme/157851386029",
+      "name": "-equipro-devShopify/main",
+      "role": "MAIN",
+      "files": {
+        "nodes": [
+          {
+            "filename": "templates/product.20100-maxi-comfort-360.json",
+            "checksumMd5": "a79e10e5f4ef7f99cb0f9a2d2888886f"
+          },
+          {
+            "filename": "templates/product.20101-maxi-comfort-pedicure.json",
+            "checksumMd5": "4e2c00ca828565eba22685bdd650e81a"
+          },
+          {
+            "filename": "templates/product.20200-multi-comfort.json",
+            "checksumMd5": "f0adbcb00f6a90fd6f417cdb6788765e"
+          },
+          {
+            "filename": "templates/product.21200-aero-comfort.json",
+            "checksumMd5": "4762156eaf498d47f5178fa0c58f0524"
+          },
+          {
+            "filename": "templates/product.22100-poly-comfort.json",
+            "checksumMd5": "324a2f07038797e1ad8457914bfec9cd"
+          }
+        ],
+        "pageInfo": {
+          "hasNextPage": false,
+          "endCursor": "InRlbXBsYXRlc1wvcHJvZHVjdC5laS01MDEtcm95YWwuanNvbiI="
+        }
+      }
+    }
+  ],
+  "source": "Shopify Admin API live read of all 64 products and all 3 themes; product variants fully paginated.",
+  "documentation": "https://help.shopify.com/en/manual/online-store/themes/theme-structure/templates"
+}
