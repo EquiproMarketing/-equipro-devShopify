@@ -82,14 +82,14 @@
         "feature_item_F4iL9F": {
           "type": "feature_item",
           "settings": {
-            "title": "M1 Safety Accreditation:",
+            "title": "M1 Safety Accreditation",
             "text": "Design approach implementing fully insulated internal thermal protectors engineered to deliver flawless overheat protection for practitioners and clients."
           }
         },
         "feature_item_RXpARk": {
           "type": "feature_item",
           "settings": {
-            "title": "Precision Control Interface:",
+            "title": "Precision Control Interface",
             "text": "Functional quality featuring an integrated timer and a highly accurate 30°C to 60°C adjustable temperature spectrum across 3 independent zones."
           }
         }
