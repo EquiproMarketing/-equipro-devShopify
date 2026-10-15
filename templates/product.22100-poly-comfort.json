@@ -11,77 +11,17 @@
   "sections": {
     "main": {
       "type": "main-product",
-      "blocks": {
-        "color_swatch_item_67VUnp": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "White",
-            "color_hex": "#ffffff"
-          }
-        },
-        "color_swatch_item_Yx9MJ4": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Black",
-            "color_hex": "#111111"
-          }
-        },
-        "color_swatch_item_JWHDmh": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Navy",
-            "color_hex": "#1b1e2e"
-          }
-        },
-        "color_swatch_item_TN7LQk": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Dove",
-            "color_hex": "#919291"
-          }
-        },
-        "color_swatch_item_RFrf6p": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Charcoal",
-            "color_hex": "#4c4c4c"
-          }
-        },
-        "color_swatch_item_ErBjkh": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Oyster",
-            "color_hex": "#d8d4c7"
-          }
-        },
-        "color_swatch_item_tbHyGD": {
-          "type": "color_swatch_item",
-          "settings": {
-            "color_name": "Sand",
-            "color_hex": "#cca88d"
-          }
-        }
-      },
-      "block_order": [
-        "color_swatch_item_67VUnp",
-        "color_swatch_item_Yx9MJ4",
-        "color_swatch_item_JWHDmh",
-        "color_swatch_item_TN7LQk",
-        "color_swatch_item_RFrf6p",
-        "color_swatch_item_ErBjkh",
-        "color_swatch_item_tbHyGD"
-      ],
       "settings": {
         "back_text": "Back",
-        "custom_title": "22100 - Poly-Comfort Treatment Table",
+        "custom_title": "Poly-Comfort Treatment Chair",
         "intro_highlight": "Engineered in North America to meet the rigorous demands of high-volume aesthetic clinics, the Poly-Comfort treatment chair combines absolute frame stability with targeted manual positioning. By offering a rock-solid, fixed-height foundation paired with manual articulation, this professional station provides continuous daily reliability without electronic complexity.",
-        "custom_description": "<p>Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists. Its heavy-duty framework targets lower-back tension and shoulder strain during back-to-back appointments, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your workflow needs with manual backrest-and-legrest levers and an intuitive 15° seat tilt system.</p><p></p>",
+        "custom_description": "<p>Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists. Its heavy-duty framework targets lower-back tension and shoulder strain during back-to-back appointments, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your workflow needs with manual backrest-and-legrest levers and an intuitive 15° seat tilt system.</p>",
         "subtitle": "Ergonomic Manual Positioning with Integrated 15° Tilt Dynamics",
-        "secondary_description": "<p></p><p>Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Poly-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client. The ultra-resistant leatherette surface resists oil build-up and staining, ensuring pristine visual presentation across years of intensive clinic operations. Consistent care preserves material flexibility, prevents surface cracking, and upholds hygienic presentation.</p>",
+        "secondary_description": "<p>Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Poly-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client. The ultra-resistant leatherette surface resists oil build-up and staining, ensuring pristine visual presentation across years of intensive clinic operations. Consistent care preserves material flexibility, prevents surface cracking, and upholds hygienic presentation.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
-        "show_size_option": true,
-        "featured_product": "poly-comfort",
+        "show_size_option": false,
+        "featured_product": "22100-poly-comfort",
         "btn_label": "ADD TO CART",
         "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
@@ -90,21 +30,21 @@
     "main_product_characteristics_Hp7Baq": {
       "type": "main-product-characteristics",
       "blocks": {
-        "faq_item_mcpNpt": {
+        "application_1": {
           "type": "faq_item",
           "settings": {
             "question": "Practicing Esthetician:",
             "answer": "<p>For the practicing Esthetician conducting multi-step facials, maintaining comfortable posture while reaching the face and décolleté is essential during extended treatment sessions. The integrated 15° seat tilt system rotates the base back, bringing the client’s facial features closer to the operator. This structural adjustment stabilizes practitioner mechanics, keeping hands precise during delicate extraction or chemical peel procedures.</p>"
           }
         },
-        "faq_item_74hYTC": {
+        "application_2": {
           "type": "faq_item",
           "settings": {
             "question": "Lash Technicians and Microblading Specialists:",
             "answer": "<p>For certified Lash Technicians and Microblading Specialists, client head stability during 2-to-3-hour appointments directly impacts line precision and service efficiency. The Poly-Comfort features an adjustable, contoured headrest combined with manual reclining levers, allowing the practitioner to establish fixed focal lengths and eliminate neck strain. The static, non-swivel 29.5\" height structure prevents unwanted shift, ensuring a controlled environment for intricate facial work.</p>"
           }
         },
-        "faq_item_bhzmwM": {
+        "application_3": {
           "type": "faq_item",
           "settings": {
             "question": "Clinical Spa Therapists:",
@@ -113,18 +53,18 @@
         }
       },
       "block_order": [
-        "faq_item_mcpNpt",
-        "faq_item_74hYTC",
-        "faq_item_bhzmwM"
+        "application_1",
+        "application_2",
+        "application_3"
       ],
       "name": "Product Characteristics",
       "settings": {
         "accordion_heading": "Key Features for the Professional Station",
         "show_shipping": true,
         "shipping_title": "Shipping",
-        "shipping_text": "<p>Standard freight delivery typically takes <strong>7–10 business days</strong></p>",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>22100</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Ultra-resistant vinyl upholstery, reinforced steel frame</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>70\" L x 24\" W x 29.5\" H</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>111 lb (51 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Fully adjustable positioning with 15° tilt system; manual backrest and legrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Height</td>\n        <td>Fixed height of 29.5\" (75 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Seating Width</td>\n        <td>24 inches (61 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Headrest</td>\n        <td>Adjustable headrest</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Armrests</td>\n        <td>Optional removable ergonomic armrests</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Design Features</td>\n        <td>Rounded corners to facilitate facial massage</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable base, reinforced construction</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Upholstery</td>\n        <td>Ultra-white ultra-durable vinyl, colors available on special order (Chart A)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>22100</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-resistant vinyl upholstery, reinforced steel frame</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>70&quot; L x 24&quot; W x 29.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>111 lb (51 kg)</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>Fully adjustable positioning with 15° tilt system; manual backrest and legrest</td></tr><tr><td class=\"feature-label\">Height</td><td>Fixed height of 29.5&quot; (75 cm)</td></tr><tr><td class=\"feature-label\">Seating Width</td><td>24 inches (61 cm)</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable headrest</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Design Features</td><td>Rounded corners to facilitate facial massage</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Stable base, reinforced construction</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white ultra-durable vinyl, colors available on special order (Chart A)</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr></tbody></table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -132,32 +72,32 @@
     "banner_features": {
       "type": "product-key-features-banner",
       "blocks": {
-        "feature_item_8hwhpX": {
+        "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Unrivaled Durability",
-            "text": "Industrial-Grade Fixed Framework: Engineered with heavy-duty steel and North American manufacturing standards to guarantee zero wobble and max static support at a working height of 29.5 inches."
+            "title": "Industrial-Grade Fixed Framework",
+            "text": "Engineered with heavy-duty steel and North American manufacturing standards to guarantee zero wobble and max static support at a working height of 29.5 inches."
           }
         },
-        "feature_item_7BxRnE": {
+        "feature_2": {
           "type": "feature_item",
           "settings": {
             "title": "Manual Articulation Dynamics",
             "text": "Independent backrest and leg rest manual levers designed to optimize working angles for Estheticians and Lash Technicians, enhancing client comfort without electronic reliance."
           }
         },
-        "feature_item_V4efCz": {
+        "feature_3": {
           "type": "feature_item",
           "settings": {
             "title": "Versatile Aesthetic Compatibility",
-            "text": "High-grade medical vinyl designed to resist staining, tearing, and aggressive clinical disinfecting agents for long-term aesthetic integrity."
+            "text": "Sleek profile with customizable upholstery finishes from Color Chart A that seamlessly integrates into any modern treatment room environment."
           }
         }
       },
       "block_order": [
-        "feature_item_8hwhpX",
-        "feature_item_7BxRnE",
-        "feature_item_V4efCz"
+        "feature_1",
+        "feature_2",
+        "feature_3"
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
@@ -174,68 +114,68 @@
     "how_to": {
       "type": "product-how-to",
       "blocks": {
-        "section_header_XjqiGV": {
+        "use_header": {
           "type": "section_header",
           "settings": {
             "title": "How to Use"
           }
         },
-        "instruction_item_fd7CbG": {
+        "use_1": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Adjust the headrest",
             "text": "elevation and extension to align with your client's cervical spine before beginning treatments."
           }
         },
-        "instruction_item_8VfGh8": {
+        "use_2": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Engage the backrest",
             "text": "and leg rest manual levers to smoothly transition the client from an upright position to full recumbency."
           }
         },
-        "instruction_item_z9KEfh": {
+        "use_3": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Activate the 15°",
             "text": "seat tilt mechanism to incline the base, optimizing practitioner proximity to the client's face and neck."
           }
         },
-        "instruction_item_rRgyKc": {
+        "use_4": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Attach optional removable armrests",
-            "text": "(24110 / 24140) if your procedure requires supplemental client arm support."
+            "bold_prefix": "Attach optional removable",
+            "text": "armrests (24110 / 24140) if your procedure requires supplemental client arm support."
           }
         },
-        "instruction_item_RjgtTq": {
+        "use_5": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Reset the backrest",
             "text": "and leg rest post-treatment to ensure safe, comfortable client entry and egress."
           }
         },
-        "section_header_dGJcmr": {
+        "safety_header": {
           "type": "section_header",
           "settings": {
             "title": "Safety & Disclaimers"
           }
         },
-        "instruction_item_CRmBXw": {
+        "safety_1": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Ensure all manual",
             "text": "locking pins and adjustment levers are fully engaged before applying weight to the leg or backrest sections."
           }
         },
-        "instruction_item_QqEHKc": {
+        "safety_2": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Do not exceed",
             "text": "the maximum static weight capacity of the station during treatment sessions."
           }
         },
-        "instruction_item_P8t7dx": {
+        "safety_3": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Clean all leatherette",
@@ -244,16 +184,16 @@
         }
       },
       "block_order": [
-        "section_header_XjqiGV",
-        "instruction_item_fd7CbG",
-        "instruction_item_8VfGh8",
-        "instruction_item_z9KEfh",
-        "instruction_item_rRgyKc",
-        "instruction_item_RjgtTq",
-        "section_header_dGJcmr",
-        "instruction_item_CRmBXw",
-        "instruction_item_QqEHKc",
-        "instruction_item_P8t7dx"
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "use_5",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-poly-comfort-hydraulic-air-lift-treatment-bed-facial-massage-depilation-sku-22100.webp",
@@ -271,56 +211,64 @@
     "faq": {
       "type": "category-faq",
       "blocks": {
-        "faq_item_JkpEmj": {
+        "faq_1": {
           "type": "faq_item",
           "settings": {
             "question": "What is the height of the Poly-Comfort treatment chair?",
             "answer": "<p>The Poly-Comfort features a standard fixed working height of 29.5 inches. Fits standard practitioner working elevations.</p>"
           }
         },
-        "faq_item_r7tr7G": {
+        "faq_2": {
           "type": "faq_item",
           "settings": {
             "question": "Does the seat feature a tilt system?",
             "answer": "<p>Yes, it includes a built-in 15° seat tilt mechanism for improved practitioner access. Enhances facial ergonomics.</p>"
           }
         },
-        "faq_item_dd9n3Q": {
+        "faq_3": {
           "type": "faq_item",
           "settings": {
             "question": "What are the overall dimensions of the chair?",
             "answer": "<p>The chair measures 24 inches wide by 70 inches long with a 29.5-inch fixed height. Fits standard treatment rooms.</p>"
           }
         },
-        "faq_item_8YiyhY": {
+        "faq_4": {
           "type": "faq_item",
           "settings": {
             "question": "Are armrests included with the base unit?",
             "answer": "<p>Armrests are optional removable accessories (such as model 24110 or 24140). Configurable per clinic setup.</p>"
           }
         },
-        "faq_item_GkbCk6": {
+        "faq_5": {
           "type": "faq_item",
           "settings": {
             "question": "What type of upholstery is used on the Poly-Comfort?",
             "answer": "<p>It is upholstered in high-durability, ultra-white, ultra-resistant professional-grade leatherette. Designed for easy cleaning.</p>"
           }
         },
-        "faq_item_YrfCh4": {
+        "faq_6": {
           "type": "faq_item",
           "settings": {
             "question": "Where is the Poly-Comfort manufactured?",
             "answer": "<p>All Equipro treatment equipment is engineered and manufactured in North America. Built to strict quality standards.</p>"
           }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty coverage is included with the SKU 22100?",
+            "answer": "<p>The Poly-Comfort comes standard with a full 2-year manufacturer warranty. Covers parts and labor.</p>"
+          }
         }
       },
       "block_order": [
-        "faq_item_JkpEmj",
-        "faq_item_r7tr7G",
-        "faq_item_dd9n3Q",
-        "faq_item_8YiyhY",
-        "faq_item_GkbCk6",
-        "faq_item_YrfCh4"
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
@@ -343,8 +291,8 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "modal_title": "Select Models to Compare",
-        "compare_collection": ""
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
       }
     }
   },

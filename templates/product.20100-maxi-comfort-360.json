@@ -8,273 +8,284 @@
  * ------------------------------------------------------------
  */
 {
-    "sections": {
-      "main": {
-        "type": "main-product",
-        "settings": {
-          "back_text": "Back",
-          "custom_title": "SKU00001 - Maxi Comfort 360° Hydraulic Massage Table",
-          "intro_highlight": "The Maxi Comfort 360° is a premier hydraulic facial bed and massage table engineered for exceptional client comfort and effortless practitioner mobility. Featuring a full 360-degree rotational swivel base and multi-position reclining adjustments, this professional unit delivers top-tier performance for advanced esthetics, medical spa procedures, and specialized treatments.",
-          "custom_description": "<p>Designed specifically for licensed estheticians, medical spa professionals, and clinical massage therapists, the Maxi Comfort 360° bridges the gap between ergonomic support and absolute versatility. Its heavy-duty hydraulic foot pump enables smooth height adjustments, while the mechanical backrest and leg rest transition seamlessly into a comfortable “La-z-boy” reclining position (up to 15°). The 360-degree rotation allows practitioners to pivot the table effortlessly around the treatment room, reducing physical strain, optimizing workflow efficiency, and ensuring superior client positioning during complex procedures.</p>",
-          "subtitle": "Ergonomic 360° Swivel & Hydraulic Elevation",
-          "secondary_description": "<p>Built to withstand the rigorous demands of high-volume aesthetic clinics and day spas, the Maxi Comfort 360° features high-density cushion padding wrapped in tough, premium-grade vinyl upholstery designed for effortless daily sanitation and chemical resistance. To preserve the pristine finish and structural mechanism across its extended operational lifespan, regular surface cleaning with recommended clinical disinfectants and periodic lubrication of moving hydraulic pivot points is advised. Consistent maintenance guarantees long-term stability, protects upholstery integrity, and maximizes return on salon investment.</p>",
-          "show_variant_selectors": true,
-          "show_color_option": true,
-          "show_size_option": true,
-          "featured_product": "maxi-comfort-360",
-          "btn_label": "ADD TO CART",
-          "show_compare_btn": true,
-          "compare_btn_label": "Compare with other models"
-        }
-      },
-      "main_product_characteristics_Hp7Baq": {
-        "type": "main-product-characteristics",
-        "blocks": {
-          "faq_item_mcpNpt": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Licensed Esthetician & Facial Specialist:",
-              "answer": "<p>The Maxi Comfort 360° provides an ideal operating platform for multi-modality facial treatments, microdermabrasion, and chemical peels. The removable armrests and adjustable headrest enable close, unobstructed access to the facial and neck zones, protecting the practitioner from awkward posture and reducing lower-back fatigue during prolonged client sessions.</p>"
-            }
-          },
-          "faq_item_74hYTC": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Medical Spa & Clinical Technician:",
-              "answer": "<p>In fast-paced clinical environments where equipment agility is paramount, the full 360-degree rotation mechanism allows technicians to pivot the entire bed smoothly to accommodate specialized laser devices, lighting rigs, or procedural carts without repositioning the client.</p>"
-            }
-          },
-          "faq_item_bhzmwM": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Advanced Body Massage Therapist:",
-              "answer": "<p>Engineered to support comprehensive bodywork, electrolysis, and depilation, the table includes two specialized massage therapy bolsters and supports flat horizontal positioning or an inclined reclining lounge posture, adapting instantly to diverse service menus.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_mcpNpt",
-          "faq_item_74hYTC",
-          "faq_item_bhzmwM"
-        ],
-        "name": "Product Characteristics",
-        "settings": {
-          "accordion_heading": "Key Features for the Professional Station",
-          "show_shipping": true,
-          "shipping_title": "Shipping",
-          "shipping_text": "<p>Standard freight delivery typically takes <strong>7–10 business days</strong> with white-glove options available.</p>",
-          "show_tech_table": true,
-          "custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>SKU00001</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-gauge steel frame with premium, high-density foam padding and heavy-duty vinyl upholstery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Height Range</td>\n        <td>Adjustable from 26.5\" to 33.5\" (67 cm to 85 cm) via hydraulic foot pump</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (W x L)</td>\n        <td>24\" Width x 71\" Length (61 cm x 180 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>152 lb (69 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Rotation Mechanism</td>\n        <td>360-degree effortless manual swivel base with locking rotational brake</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Recline Positions</td>\n        <td>Manual mechanical backrest and leg rest with 'La-z-boy' reclining position (up to 15°)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Included Accessories</td>\n        <td>Removable armrests, adjustable headrest, and 2 professional massage therapy bolsters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty (hydraulic pump and structural frame covered)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
-          "table_col1_header": "TECHNICAL ASPECT",
-          "table_col2_header": "SPECIFICATION DETAILS"
-        }
-      },
-      "banner_features": {
-        "type": "product-key-features-banner",
-        "blocks": {
-          "feature_item_8hwhpX": {
-            "type": "feature_item",
-            "settings": {
-              "title": "360° Rotational Agility",
-              "text": "Effortless Swivel Base: Engineered to rotate a full 360 degrees, granting practitioners unobstructed access around the treatment room without moving the client base."
-            }
-          },
-          "feature_item_7BxRnE": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Hydraulic Elevation System",
-              "text": "Foot-Activated Height Control: Heavy-duty hydraulic pump mechanism allows smooth, electricity-free vertical adjustment from 26.5\" to 33.5\"."
-            }
-          },
-          "feature_item_V4efCz": {
-            "type": "feature_item",
-            "settings": {
-              "title": "Ergonomic Versatility",
-              "text": "Multi-Position Recline: Transitions smoothly into a specialized 'La-z-boy' lounge position (15°) with removable armrests and matching therapy bolsters."
-            }
-          }
-        },
-        "block_order": [
-          "feature_item_8hwhpX",
-          "feature_item_7BxRnE",
-          "feature_item_V4efCz"
-        ],
-        "settings": {
-          "heading": "Key Features for the Professional Station",
-          "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-massage-table-facial-bed.webp",
-          "image_position": "right",
-          "bg_color": "#a22938",
-          "text_color": "#ffffff",
-          "padding_top": 60,
-          "padding_bottom": 60,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "how_to": {
-        "type": "product-how-to",
-        "blocks": {
-          "section_header_XjqiGV": {
-            "type": "section_header",
-            "settings": {
-              "title": "How to Use"
-            }
-          },
-          "instruction_item_fd7CbG": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Positioning & Placement:",
-              "text": "Position the heavy-duty base on a completely flat, level salon floor with adequate clearance around the perimeter to permit full 360-degree rotation."
-            }
-          },
-          "instruction_item_8VfGh8": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Height Adjustment:",
-              "text": "Depress the hydraulic foot pump repeatedly to raise the bed to the desired treatment height, or apply downward body weight while releasing the valve to lower it."
-            }
-          },
-          "instruction_item_z9KEfh": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Backrest & Leg Articulation:",
-              "text": "Engage the mechanical release levers to adjust the backrest and leg sections into your desired incline or flat treatment configuration."
-            }
-          },
-          "instruction_item_rRgyKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Swivel Maneuvering:",
-              "text": "Unlock the rotation brake mechanism when you need to pivot the table smoothly during multi-stage treatments, locking it back in place before client boarding."
-            }
-          },
-          "section_header_dGJcmr": {
-            "type": "section_header",
-            "settings": {
-              "title": "Safety & Disclaimers"
-            }
-          },
-          "instruction_item_CRmBXw": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Weight Distribution:",
-              "text": "Ensure clients are seated centrally on the cushion platform and avoid standing or applying concentrated point-loads on the extreme edges of the footrest."
-            }
-          },
-          "instruction_item_QqEHKc": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Maintenance Inspections:",
-              "text": "Periodically inspect the mechanical levers and hydraulic cylinder mountings, deferring any internal hydraulic repairs exclusively to certified Equipro technicians."
-            }
-          },
-          "instruction_item_P8t7dx": {
-            "type": "instruction_item",
-            "settings": {
-              "bold_prefix": "Upholstery Protection:",
-              "text": "Clean vinyl surfaces immediately following treatments using approved non-abrasive hospital-grade disinfectants to prevent chemical degradation."
-            }
-          }
-        },
-        "block_order": [
-          "section_header_XjqiGV",
-          "instruction_item_fd7CbG",
-          "instruction_item_8VfGh8",
-          "instruction_item_z9KEfh",
-          "instruction_item_rRgyKc",
-          "section_header_dGJcmr",
-          "instruction_item_CRmBXw",
-          "instruction_item_QqEHKc",
-          "instruction_item_P8t7dx"
-        ],
-        "settings": {
-          "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-bed-setup.webp",
-          "image_position": "left",
-          "image_aspect_ratio": "adapt",
-          "title_color": "#a22938",
-          "text_color": "#444444",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "faq": {
-        "type": "category-faq",
-        "blocks": {
-          "faq_item_JkpEmj": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What accessories come standard with the Maxi Comfort 360°?",
-              "answer": "<p><strong>The table includes removable armrests, an adjustable headrest, and 2 custom massage therapy bolsters.</strong> This complete set equips your treatment room for immediate versatile service delivery.</p>"
-            }
-          },
-          "faq_item_r7tr7G": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the net weight and overall structural footprint of the bed?",
-              "answer": "<p><strong>The unit weighs 152 lbs and measures 24 inches wide by 71 inches long.</strong> Its compact footprint is optimized for smaller treatment rooms while providing robust client stability.</p>"
-            }
-          },
-          "faq_item_dd9n3Q": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What is the adjustable height range for this hydraulic model?",
-              "answer": "<p><strong>The table height adjusts smoothly from 26.5 inches to 33.5 inches.</strong> This range accommodates diverse esthetician heights and specialized procedural requirements.</p>"
-            }
-          },
-          "faq_item_8YiyhY": {
-            "type": "faq_item",
-            "settings": {
-              "question": "Does the table require an electrical power outlet to operate?",
-              "answer": "<p><strong>No electrical connection is needed.</strong> The height is controlled via a hydraulic foot pump, and recline adjustments are handled mechanically, maximizing placement freedom in any treatment room.</p>"
-            }
-          },
-          "faq_item_GkbCk6": {
-            "type": "faq_item",
-            "settings": {
-              "question": "What manufacturer warranty protects this professional equipment?",
-              "answer": "<p><strong>Equipro covers the Maxi Comfort 360° with a comprehensive 2-Year Limited Warranty.</strong> This warranty covers the heavy-duty hydraulic pump mechanism and structural steel frame.</p>"
-            }
-          }
-        },
-        "block_order": [
-          "faq_item_JkpEmj",
-          "faq_item_r7tr7G",
-          "faq_item_dd9n3Q",
-          "faq_item_8YiyhY",
-          "faq_item_GkbCk6"
-        ],
-        "settings": {
-          "heading": "Your Questions, Answered",
-          "subheading": "Find answers to frequently asked technical and equipment questions.",
-          "layout": "grid",
-          "header_position": "left",
-          "open_first_item": true,
-          "title_color": "#a22938",
-          "question_color": "#111111",
-          "answer_color": "#555555",
-          "toggle_color": "#a22938",
-          "border_color": "#1a1a1a",
-          "bg_color": "#ffffff",
-          "padding_top": 40,
-          "padding_bottom": 40,
-          "margin_top": 40,
-          "margin_bottom": 40
-        }
-      },
-      "compare_modal": {
-        "type": "product-compare-modal",
-        "settings": {}
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "Maxi-Comfort 360º Professional Treatment Chair",
+        "intro_highlight": "Designed to elevate practitioner ergonomics, this professional workstation integrates a seamless 360° hydraulic swivel with robust North American manufacturing standards, ensuring unparalleled access and stability during intricate aesthetic services.",
+        "custom_description": "<p>Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists. Its fully adjustable design targets postural strain during high-volume clinic days, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, brow sculpting, or specialized skincare protocols, this professional station adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
+        "subtitle": "The Gold Standard in Versatile Esthetic Ergonomics",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the ultra-white finish and structural integrity of the Maxi-Comfort 360º, wipe down the surface with gentle professional cleansers formulated for spa environments daily. The premium leatherette provides heavy-duty resistance, ensuring pristine condition across full 8-hour shifts. Consistent care prevents wear, guaranteeing reliable hygiene.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": false,
+        "featured_product": "maxi-comfort-360",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
       }
     },
-    "order": [
-      "main",
-      "main_product_characteristics_Hp7Baq",
-      "banner_features",
-      "how_to",
-      "faq",
-      "compare_modal"
-    ]
-  }
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Professional Esthetician:",
+            "answer": "<p>For the professional Esthetician, the 15º tilt system dramatically improves access to the client's face and neck during prolonged deep-pore cleansing and extensive skincare routines. This targeted angulation reduces the practitioner's postural strain and lower-back tension, translating to enhanced service consistency and a more relaxing experience for the client.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Lash Technician:",
+            "answer": "<p>A Lash Technician requires absolute stability and precise focal distance. The adjustable headrest and manually adjustable backrest of this professional station provide optimal positioning, minimizing visual fatigue and wrist discomfort. The friction-free adjustment enables micro-movements without disturbing the client's position, ensuring technical precision during back-to-back appointments.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Cosmetic Tattoo:",
+            "answer": "<p>During intricate cosmetic procedures, the Cosmetic Tattoo Artist benefits directly from the heavy-duty 360° hydraulic swivel. This feature allows the practitioner to navigate smoothly around the treatment station without breaking their ergonomic posture. The ultra-resistant leatherette ensures the workstation withstands rigorous cleaning protocols, maintaining a pristine clinical environment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>20100</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-white ultra-resistant vinyl upholstery, heavy-duty steel frame, hydraulic components</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>71&quot; L x 24&quot; W x 26.5&quot; / 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>152 lb / 69 kg</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>Hydraulic height adjustment 27&quot; to 34&quot;; 360° swivel base; manual adjustable backrest and legrest; 15° tilt system; adjustable headrest</td></tr><tr><td class=\"feature-label\">Swivel System</td><td>Effortless 360° hydraulic swivel</td></tr><tr><td class=\"feature-label\">Positioning</td><td>15° Lay-Z-Boy tilt position for optimal face and neck access</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Premium ultra-resistant vinyl, stain and oil resistant; multiple colors available (Color Chart A)</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Removable ergonomic armrests (optional)</td></tr><tr><td class=\"feature-label\">Number of Functions</td><td>Multi-position hydraulic treatment chair for facials and depilation</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Stable hydraulic system, reinforced construction, CSA &amp; UL approved electrical components where applicable</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components; designed to international standards</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years warranty</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional facial treatments, depilation, waxing, and aesthetic procedures</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "360° Hydraulic Swivel",
+            "text": "Friction-free adjustment with heavy-duty components to ensure seamless practitioner mobility in high-volume clinics."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "15º Tilt Mechanism",
+            "text": "Precision-engineered reclining system designed to improve neck area access for Estheticians and Lash Technicians, reducing lower-back tension."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Ultra-Resistant Upholstery",
+            "text": "Ultra-white durable leatherette that guarantees pristine hygiene in professional spa environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-massage-table-facial-bed.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Engage the hydraulic",
+            "text": "foot pump to smoothly raise the chair height to the desired working height."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Utilize the 360°",
+            "text": "swivel mechanism to rotate the client to the optimal working angle, then lock in place."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Manually adjust the",
+            "text": "backrest and leg rest to achieve the precise contour required for the specific service."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position the adjustable",
+            "text": "headrest to support the client's neck, utilizing the 15º tilt system for enhanced facial access."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Ensure the hydraulic",
+            "text": "lock is fully engaged before beginning any precision cosmetic procedure."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Do not exceed",
+            "text": "the designated weight capacity limits of the hydraulic pump system."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Always return the",
+            "text": "chair to its lowest position before the client mounts or dismounts to prevent tipping."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-bed-setup.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the height range of the hydraulic system?",
+            "answer": "<p>The chair offers hydraulic height adjustment. Refer to the model specifications and operating manual for the height range applicable to your configuration.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the chair recline completely flat?",
+            "answer": "<p>Yes, the backrest and leg rest manually adjust to a flat position. This flexibility accommodates a wide range of aesthetic services.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the armrests removable?",
+            "answer": "<p>Yes, removable armrests are available as an option. This allows closer practitioner access when required during specialized treatments.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What material is used for the upholstery?",
+            "answer": "<p>It features ultra-white, ultra-resistant leatherette. This material is specifically engineered for durability and ease of cleaning in professional settings.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How much does the chair weigh?",
+            "answer": "<p>The total weight of the unit is 152 lbs (69 kg). The heavy-duty construction ensures maximum stability during all procedures.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the benefit of the 15º tilt system?",
+            "answer": "<p>It improves practitioner access to the face and neck. This feature significantly enhances client comfort and reduces practitioner postural strain.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

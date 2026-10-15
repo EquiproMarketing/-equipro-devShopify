@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TA-2 standard",
+        "intro_highlight": "Engineered in North America to bridge the gap between seamless practitioner movement and rock-solid workstation support, the TA-2 Standard workstation embodies superior structural integrity.",
+        "custom_description": "<p>The TA-2 is purpose-built for licensed professionals, including estheticians, medical spa techs, and specialized practitioners. Its robust design targets postural tension and workflow inefficiency during intensive sessions, enabling sharper focus on technique and consistent results. Whether you are performing advanced facials, skin analysis, or specialized treatments, this station adjusts to your optimal position with ultra-quiet mobility and immediate response.</p>",
+        "subtitle": "High-Stability Double Tier System",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the quality and clinical finish of the TA-2, regular cleaning with non-abrasive agents formulated for salon environments is recommended. The industrial-grade surface provides high resistance to chemical stains, ensuring a like-new condition across its 15-20 year lifespan. Consistent care results in reliable performance and long-term professional presentation.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51300-ta-2-standard",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Esthetician:",
+            "answer": "<p>The 11 1/4\" clearance between the two spacious shelves allows for the seamless integration of professional vaporizers or multi-function units. This height is specifically calibrated to keep active controls within a comfortable reach while the practitioner is seated on a professional stool.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Techs:",
+            "answer": "<p>Integrated safety edges on both 13\" x 22\" shelves prevent the accidental displacement of glass electrodes or clinical solutions. This \"zero-fall\" design approach is critical in fast-paced environments where precision and hygiene cannot be compromised.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinic Owners:",
+            "answer": "<p>Longevity is a core financial metric. With a 2-year warranty and a life expectancy of 15 to 20 years, the TA-2 provides a significantly higher return on investment compared to disposable salon furniture.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51300</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves with safety rims</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>25&quot; L x 14&quot; W x 34&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>38 lb (17.5 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>2 metal shelves with safety rims (each 13&quot; x 22&quot;)</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>1 magnifier holder</td></tr><tr><td class=\"feature-label\">Assembly</td><td>Partial assembly required</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Safety rims on shelves, sturdy construction, stable base</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional auxiliary trolley for spa and aesthetic workstations</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Industrial-grade metal construction with premium finish to withstand rigorous use in high-traffic clinics."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Safety-First Design",
+            "text": "Integrated safety edges on both shelves designed to protect expensive devices for estheticians and technicians."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Silent Mobility",
+            "text": "Five ultra-quiet casters that maximize compatibility with clinical environments."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/ta2-51300-professional-utility-cart-rolling-spa-organizer.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Assembly:",
+            "text": "Secure the two 13\" x 22\" shelves to the vertical frame using the provided industrial bolts."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Caster Installation:",
+            "text": "Insert the ultra-quiet casters into the base until they click into place."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Accessory Setup:",
+            "text": "Utilize the integrated magnifying glass holder to mount your diagnostic lamp."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Loading:",
+            "text": "Place heavier multi-function units on the bottom shelf to maintain a low center of gravity."
+          }
+        },
+        "use_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Sanitization:",
+            "text": "Wipe surfaces daily with a disinfectant approved for medical-grade aesthetic equipment."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Ensure all bolts",
+            "text": "are tightened before placing equipment on shelves to prevent structural failure."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Do not exceed",
+            "text": "the weight capacity of the ultra-quiet casters during movement."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Only use the",
+            "text": "integrated holder for compatible magnifying lamps; improper mounting may cause tipping."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "use_5",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-ta-2-standard-professional-two-tier-utility-trolley-spa-salon-sku-51300.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the weight capacity?",
+            "answer": "<p>The ultra-quiet casters are engineered to support up to 100 lbs. This ensures stability for heavy units.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the height of the unit?",
+            "answer": "<p>The TA-2 stands at a fixed professional height of 34 inches. Ideal for seated or standing workflows.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I maintain the surfaces?",
+            "answer": "<p>Wipe with a soft cloth and non-corrosive disinfectant daily. This prevents residue buildup from salon products.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the unit require assembly?",
+            "answer": "<p>Partial assembly is required for the shelves and casters. All necessary hardware is included in the box.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage?",
+            "answer": "<p>The TA-2 includes a 2-year limited warranty on parts and labor. Shipping costs are not covered under warranty.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

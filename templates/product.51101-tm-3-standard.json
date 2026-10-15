@@ -1,0 +1,291 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TM-3 Professional Service Table",
+        "intro_highlight": "The TM-3 Standard brings high-efficiency utility to busy treatment rooms through solid North American engineering and localized workstation integration. Designed to support heavy daily operational demand, this all-metal service station resolves space constraints while keeping critical aesthetic tools organized and directly accessible to the practitioner.",
+        "custom_description": "<p>TM-3 Standard is purpose-built for skincare specialists, including Aestheticians, Clinical Spa Technicians, and Lash Technicians. Its heavy-duty steel structure targets workstation clutter and motion inefficiency during high-volume clinic days, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, microdermabrasion, or lash extensions, this professional station adjusts to your seamless workflow integration with silent casters and an integrated power system.</p>",
+        "subtitle": "Industrial-Grade Professional Organization",
+        "secondary_description": "<p>Durable powder-coated steel construction is central to the Equipro approach. To preserve the clean aesthetic and smooth surface finish of TM-3 Standard, clean daily with non-abrasive surface disinfectants formulated for clinical environments. The stain-resistant metal surfaces resist chemical exposure and daily wear, ensuring optimal condition across decades of heavy use. Consistent care maintains smooth mobility and prevents surface corrosion.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Aestheticians:",
+            "answer": "<p>For clinical aestheticians running back-to-back facial protocols, the TM-3 Standard provides three wide 14\" x 23\" shelves, giving immediate access to high-frequency units, skin analyzers, and steamers. By keeping all vital devices within arm's reach and powered through a single 6-outlet power bar, technicians maintain continuous focus on precise skin extractions and client comfort.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Lash & Brow Specialists:",
+            "answer": "<p>Lash artists and brow technicians require absolute station stability and rapid access to intricate micro-tools during extended, fine-detail appointments. The TM-3 Standard's rigid metallic construction eliminates wobble when reaching for tools, while integrated magnifying lamp holders allow optimal lighting positioning directly over the client area. This tool-less integration reduces visual fatigue and neck tension, speeding up procedure times while ensuring consistent, high-precision results.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Tattoo Artists & Cosmetic Injectors:",
+            "answer": "<p>For tattoo practitioners and cosmetic injectors needing an easily sanitized, ultra-mobile workstation, the TM-3 Standard delivers effortless room navigation via non-marking, ultra-quiet casters. The non-porous metal surfaces allow for rapid, hospital-grade disinfection between clients, eliminating cross-contamination risks. Having a stable, mobile base ensures that sterile supplies, pigment trays, and topical solutions remain completely secure throughout delicate procedures.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51101</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves, durable construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>25&quot; L x 14&quot; W x 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>36 lb (16 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>3 metal shelves (each 14&quot; x 23&quot;)</td></tr><tr><td class=\"feature-label\">Shelf Spacing</td><td>11.75&quot; between top and middle; 11.75&quot; between middle and lower; 4.5&quot; from lower shelf to floor</td></tr><tr><td class=\"feature-label\">Power Supply</td><td>Integrated 6-outlet electric power strip</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>Magnifier holders on each side (bowls and double bowl holder not included)</td></tr><tr><td class=\"feature-label\">Assembly</td><td>Shipped fully assembled</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved electrical components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional auxiliary trolley for spa and aesthetic workstations</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "All-Metal Construction: Built with heavy-duty powder-coated steel to maintain structural stability in demanding spa settings."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Integrated Power Core",
+            "text": "Built-In 6-Outlet Power Bar: Offers centralized electrical connections designed to eliminate cable drag for estheticians and clinical technicians, maximizing safety and room organization."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Modular Compatibility",
+            "text": "Dual Magnifying Lamp Holders: Built-in side mounts that fit standard magnifying lamps effortlessly in any treatment setup."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/51101-tm3-three-tier-salon-utility-cart.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Unbox the fully",
+            "text": "assembled TM-3 Standard service table and inspect the pre-installed 6-outlet power strip and side magnifying glass mounts."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Position the trolley",
+            "text": "adjacent to your main treatment table, using the ultra-quiet casters to align it with your dominant working hand."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Plug the main",
+            "text": "power cord into a grounded wall outlet, then connect your facial devices directly into the integrated 6-outlet power bar."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Arrange heavy equipment",
+            "text": "on the lower shelves and frequently used consumables on the top shelf for optimal ergonomic reach."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Ensure total connected",
+            "text": "electrical wattage on the integrated power strip does not exceed standard circuit breaker capacities."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Always lock casters",
+            "text": "or position the table on level flooring before operating heavy tabletop machinery."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Clean all metal",
+            "text": "surfaces with non-corrosive, spa-grade disinfectants to protect the powder-coated finish."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/equipro-tm3-standard-three-tier-professional-rolling-trolley-welded-steel-spa-salon-sku-51101.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the TM-3 Standard require assembly upon arrival?",
+            "answer": "<p>No, it ships completely fully assembled. You can immediately roll it into your treatment room for immediate use.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the overall dimensions of the TM-3 Standard?",
+            "answer": "<p>The unit measures 25 inches wide, 14 inches deep, and 33.5 inches high. It fits comfortably in compact treatment rooms.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the spacing distance between the shelves?",
+            "answer": "<p>11.75\" between top and middle; 11.75\" between middle and lower; 4.5\" from lower shelf to floor</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it come equipped with a power outlet system?",
+            "answer": "<p>Yes, it includes a built-in 6-outlet power bar. It eliminates messy cord clutter on your clinic floor</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can I mount a magnifying lamp onto this trolley?",
+            "answer": "<p>Yes, it features dedicated magnifying glass holders on both sides. This allows universal setup flexibility.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty coverage is provided with the TM-3 Standard?",
+            "answer": "<p>Equipro provides a full 2-year warranty on this model. It covers structural manufacturing and component defects.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

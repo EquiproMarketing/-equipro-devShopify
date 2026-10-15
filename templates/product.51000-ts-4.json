@@ -1,0 +1,307 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "custom_title": "TS-4 Multipurpose Treatment Table",
+        "intro_highlight": "The TS-4 Serving Table represents a specialized fusion of high-capacity organization and silent mobility, handcrafted in North America to meet the rigorous demands of high-traffic professional environments. Designed with a focus on practitioner reach-ranges and structural integrity, this workstation eliminates environmental clutter while ensuring essential tools remain within a seamless ergonomic radius.",
+        "custom_description": "<p>The TS-4 Serving Table is purpose-built for licensed professionals, including Estheticians, Clinical Spa Therapists, and Cosmetic Injectors. Its precision-engineered frame targets postural strain during extended treatment sessions, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, microdermabrasion, or brow sculpting, this professional workstation adjusts to your workflow need with friction-free adjustment and instant-response mobility.</p>",
+        "subtitle": "TS-4 Multipurpose Treatment Table",
+        "secondary_description": "<p>Structural resilience is central to the Equipro approach. To preserve the industrial finish and hygienic surfaces of the TS-4 Serving Table, wipe down surfaces with non-corrosive disinfectants formulated for clinical environments daily. The steel components feature impact resistance, ensuring pristine condition across years of high-volume use. Consistent care prolongs caster smoothness, and prevents finish degradation.</p>",
+        "show_variant_selectors": true,
+        "show_color_option": false,
+        "show_size_option": false,
+        "featured_product": "51000-ts-4",
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "application_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Estheticians:",
+            "answer": "<p>The Esthetician benefits from the tiered four-shelf system, which allows for the logical separation of clean linens, active modalities, and topical products. The 51-inch height of the top shelf ensures that frequently adjusted equipment, like vaporizers or magnifying lamps, sits at an ideal ergonomic level to prevent repetitive reaching strain during long facial protocols.</p>"
+          }
+        },
+        "application_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Tattoo Artists and Cosmetic Injectors:",
+            "answer": "<p>The Tattoo Artist or Cosmetic Injector utilizes the ultra-quiet casters to reposition the entire station mid-procedure without disrupting the client or the precision of the work. The heavy-duty shelf capacity (up to 100 lbs) easily supports specialized equipment, ensuring the workstation remains stable and vibration-free throughout back-to-back appointments.</p>"
+          }
+        },
+        "application_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Clinical Spa Technicians:",
+            "answer": "<p>For the Clinical Spa Technician, the integrated two-door cabinet provides a secure, discreet environment for sensitive supplies or high-value inventory. Having a 13\" x 21½\" x 11\" H interior storage space means that larger chemical containers or bulky clinical tools can be tucked away, maintaining a sterile and professional aesthetic during client consultations.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "application_1",
+        "application_2",
+        "application_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Advanced Stability for High-Precision Workflows",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>51000</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Powder-coated metal frame and shelves, durable construction</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>25&quot; L x 15&quot; W x 64&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>70 lb (32 kg)</td></tr><tr><td class=\"feature-label\">Shelves</td><td>4 metal shelves (each 14&quot; x 23&quot;); top shelf at 51&quot; height</td></tr><tr><td class=\"feature-label\">Cabinet</td><td>2-door cabinet (interior: 13&quot; x 21.5&quot; x 11&quot; H)</td></tr><tr><td class=\"feature-label\">Mobility</td><td>Silent casters for smooth and quiet movement</td></tr><tr><td class=\"feature-label\">Accessories</td><td>Magnifier holders available</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Sturdy construction, stable base with casters, enclosed cabinet</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Premium tall auxiliary trolley for professional spa and aesthetic workstations</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Unrivaled Durability",
+            "text": "Reinforced Steel Construction: Action-oriented design with industrial-grade materials to ensure zero-flex performance in high-volume clinics."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Intelligent Tiering",
+            "text": "Quad-Shelf System: Multi-level approach designed to optimize reach-zones for practitioners and technicians, increasing operational efficiency."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Discreet Management",
+            "text": "Integrated Storage Cabinet: A functional quality that ensures compatibility with high-end spa environments by hiding clutter and securing supplies."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/51000-ts-4-professional-spa-storage-cart-salon-utility-organizer.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "use_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "use_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Assembly:",
+            "text": "Following the provided schematic, secure the ultra-quiet casters to the base frame before attaching the cabinet unit."
+          }
+        },
+        "use_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Weight Distribution:",
+            "text": "Place heavier modalities on the lower shelves or inside the cabinet to maintain a low center of gravity."
+          }
+        },
+        "use_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Positioning:",
+            "text": "Utilize the top 14\" x 23\" shelf for items requiring immediate accessibility during the active phase of treatment."
+          }
+        },
+        "use_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Mobility:",
+            "text": "Use the side handles to guide the cart; the casters are designed for smooth transitions across both hard floors and low-pile clinical carpeting."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Load Limits:",
+            "text": "Do not exceed the maximum weight capacity of 100 lbs to ensure the structural integrity of the casters."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Surface Stability:",
+            "text": "Always ensure the table is on a level surface before placing glass-bottled topicals or electronic devices on the top tier."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Chemical Safety:",
+            "text": "Avoid using abrasive scouring pads on the finish; use only soft cloths to prevent micro-scratches where bacteria can harbor."
+          }
+        }
+      },
+      "block_order": [
+        "use_header",
+        "use_1",
+        "use_2",
+        "use_3",
+        "use_4",
+        "safety_header",
+        "safety_1",
+        "safety_2",
+        "safety_3"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/51000-ts-4-rolling-spa-trolley-professional-salon-organizer-cabinet.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the maximum weight capacity of the TS-4?",
+            "answer": "<p>The unit supports up to 100 lbs total. This high capacity allows for multiple heavy professional devices to be stored safely.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How high is the top shelf of the table?",
+            "answer": "<p>The top shelf sits at 51 inches high. This height is optimized for standing or high-stool work during aesthetic procedures.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What are the dimensions of the interior cabinet?",
+            "answer": "<p>The cabinet measures 13“ x 21½” x 11“ H. It provides ample room for tall bottles, clinical supplies, or personal items.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the TS-4 require assembly?",
+            "answer": "<p>Partial assembly is required for this model. The process is straightforward and designed for quick professional implementation.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are the wheels suitable for quiet spa environments?",
+            "answer": "<p>Yes, the table features ultra-quiet casters. These are engineered to move silently without disturbing the client’s relaxation.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the distance between the shelves?",
+            "answer": "<p>Distances vary from 9\" to 13\" between tiers. This tiered spacing accommodates products and machines of various heights.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "How should I clean the surfaces?",
+            "answer": "<p>Use a soft cloth and professional-grade disinfectant. Avoid harsh abrasives to maintain the protective industrial coating.</p>"
+          }
+        },
+        "faq_8": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this product covered by a warranty?",
+            "answer": "<p>Yes, Equipro offers a professional manufacturer's warranty. This covers structural defects and workmanship for peace of mind.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7",
+        "faq_8"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "compare_collection": "",
+        "heading": "Select Models to Compare"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
