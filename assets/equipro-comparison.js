@@ -27,6 +27,13 @@
       this.opener.addEventListener('click', () => this.open());
       this.querySelector('[data-close]').addEventListener('click', () => this.dialog.close());
       this.dialog.addEventListener('click', event => { if (event.target === this.dialog) { const rect = this.dialog.getBoundingClientRect(); if (event.clientX < rect.left || event.clientX > rect.right || event.clientY < rect.top || event.clientY > rect.bottom) this.dialog.close(); } });
+      this.dialog.addEventListener('keydown', event => {
+        if (event.key !== 'Tab') return;
+        const controls = Array.from(this.dialog.querySelectorAll('button:not(:disabled), select:not(:disabled), input:not(:disabled), a[href], [tabindex="0"]')).filter(node => node.getClientRects().length);
+        const first = controls[0], last = controls[controls.length - 1];
+        if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last.focus(); }
+        else if (!event.shiftKey && document.activeElement === last) { event.preventDefault(); first.focus(); }
+      });
       this.dialog.addEventListener('close', () => { document.documentElement.style.overflow = this.oldOverflow; this.opener.focus(); });
       this.querySelector('[data-differences]').addEventListener('change', () => this.render());
     }
