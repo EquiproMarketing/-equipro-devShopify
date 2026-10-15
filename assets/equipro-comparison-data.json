@@ -1,0 +1,307 @@
+{
+  "version": "2026-10-15",
+  "source": "Canada PRO V1.2",
+  "schemas": {
+    "stools": [
+      [
+        "fit_and_adjustment",
+        [
+          "height",
+          "mechanism",
+          "seat",
+          "seat_dimensions",
+          "backrest"
+        ]
+      ],
+      [
+        "construction",
+        [
+          "base",
+          "casters",
+          "upholstery"
+        ]
+      ],
+      [
+        "coverage",
+        [
+          "warranty"
+        ]
+      ]
+    ],
+    "trolleys": [
+      [
+        "size_and_storage",
+        [
+          "dimensions",
+          "shelves",
+          "shelf_dimensions",
+          "spacing",
+          "drawers",
+          "cabinet"
+        ]
+      ],
+      [
+        "fittings_and_mobility",
+        [
+          "holders",
+          "outlets",
+          "casters"
+        ]
+      ],
+      [
+        "coverage",
+        [
+          "warranty"
+        ]
+      ]
+    ]
+  },
+  "products": {
+    "8744552333485": {
+      "handle": "31100-air-lift-round-stool",
+      "model": "31100",
+      "family": "stools",
+      "sourcePage": 16,
+      "specs": {
+        "height": "20.5–27.5 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Without backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      }
+    },
+    "8744552267949": {
+      "handle": "round-air-lift-stool-with-backrest-31200",
+      "model": "31200",
+      "family": "stools",
+      "sourcePage": 16,
+      "specs": {
+        "height": "20.5–27.5 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Adjustable ergonomic backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      }
+    },
+    "8744550826157": {
+      "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "model": "31300",
+      "family": "stools",
+      "sourcePage": 17,
+      "specs": {
+        "height": "20.5–27.5 in",
+        "mechanism": null,
+        "seat": "Contoured",
+        "seat_dimensions": null,
+        "backrest": "Adjustable ergonomic backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      }
+    },
+    "8744552366253": {
+      "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+      "model": "31301",
+      "family": "stools",
+      "sourcePage": 17,
+      "specs": {
+        "height": "20.5–27.5 in",
+        "mechanism": null,
+        "seat": "Contoured",
+        "seat_dimensions": null,
+        "backrest": "Tilting, reclining, adjustable backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      }
+    },
+    "8744552464557": {
+      "handle": "round-air-lift-stool-ei-311",
+      "model": "EI-311",
+      "family": "stools",
+      "sourcePage": 17,
+      "specs": {
+        "height": "20.5–28 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Without backrest",
+        "base": "Circular footrest; base material not confirmed",
+        "casters": null,
+        "upholstery": "Color Chart B",
+        "warranty": "1 year"
+      }
+    },
+    "8744552530093": {
+      "handle": "ei-312-round-air-lift-stool",
+      "model": "EI-312",
+      "family": "stools",
+      "sourcePage": 18,
+      "specs": {
+        "height": "20.5–28 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Ergonomic backrest",
+        "base": "Circular footrest; base material not confirmed",
+        "casters": null,
+        "upholstery": "Color Chart B",
+        "warranty": "1 year"
+      }
+    },
+    "8744550465709": {
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "model": "51101",
+      "family": "trolleys",
+      "sourcePage": 22,
+      "specs": {
+        "dimensions": "25 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Top–middle: 14 in; middle–bottom: 9 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552595629": {
+      "handle": "51104-tm-3a",
+      "model": "51104",
+      "family": "trolleys",
+      "sourcePage": 22,
+      "specs": {
+        "dimensions": "25 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Top–middle: 9.75 in; middle–bottom: 10 in",
+        "drawers": "1 ergonomic drawer",
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552661165": {
+      "handle": "51103-tm-3-mini",
+      "model": "51103-M",
+      "family": "trolleys",
+      "sourcePage": 22,
+      "specs": {
+        "dimensions": "18 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "13 × 16 in",
+        "spacing": "11.75 in between shelves",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552726701": {
+      "handle": "ts-3-deluxe",
+      "model": "51100",
+      "family": "trolleys",
+      "sourcePage": 22,
+      "specs": {
+        "dimensions": "22 × 14 × 35 in",
+        "shelves": "3",
+        "shelf_dimensions": "Top: 13.5 × 20 in; others: 12 × 20 in",
+        "spacing": "Top–middle: 10.25 in; middle–bottom: 10.5 in",
+        "drawers": "1 ergonomic drawer",
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552792237": {
+      "handle": "51201-ts-2-with-drawer",
+      "model": "51201",
+      "family": "trolleys",
+      "sourcePage": 23,
+      "specs": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Drawer underside–bottom shelf: 14.25 in",
+        "drawers": "1 ergonomic drawer; interior height: 6 in",
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552890541": {
+      "handle": "51300-ta-2-standard",
+      "model": "51300",
+      "family": "trolleys",
+      "sourcePage": 23,
+      "specs": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "13 × 22 in; safety edges",
+        "spacing": "11.5 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744552956077": {
+      "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "model": "51200",
+      "family": "trolleys",
+      "sourcePage": 23,
+      "specs": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "12 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    },
+    "8744553119917": {
+      "handle": "51000-ts-4",
+      "model": "51000",
+      "family": "trolleys",
+      "sourcePage": 21,
+      "specs": {
+        "dimensions": "25.5 × 15 × 54.5 in",
+        "shelves": "4",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "First–second: 11.75 in; second–third: 13 in; third–cabinet: 9 in",
+        "drawers": null,
+        "cabinet": "2 doors; interior: 13 × 21.5 × 11 in high",
+        "holders": null,
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      }
+    }
+  }
+}

@@ -1,0 +1,33 @@
+equipro-comparison { display: block; }
+equipro-comparison dialog { color: #1d1d1f; background: #fff; border: 0; border-radius: 18px; padding: 28px; width: min(1180px, calc(100vw - 32px)); max-width: none; max-height: calc(100dvh - 32px); overflow: auto; box-sizing: border-box; box-shadow: 0 24px 80px #0004; }
+equipro-comparison dialog::backdrop { background: #0008; }
+equipro-comparison .ec-header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+equipro-comparison h2 { margin: 0; font-size: clamp(22px, 3vw, 32px); }
+equipro-comparison button, equipro-comparison select { font: inherit; min-height: 44px; }
+equipro-comparison dialog button { border: 1px solid #a22938; border-radius: 8px; padding: 8px 14px; color: #a22938; background: #fff; cursor: pointer; }
+equipro-comparison dialog button:disabled { opacity: .45; cursor: default; }
+equipro-comparison :focus-visible { outline: 3px solid #a22938; outline-offset: 3px; }
+.ec-selectors { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; margin: 24px 0; }
+.ec-slot { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 8px; }
+.ec-slot label { grid-column: 1 / -1; font-weight: 600; }
+.ec-slot select { width: 100%; border: 1px solid #aaa; border-radius: 8px; padding: 8px; background: white; color: inherit; }
+.ec-differences { display: flex; align-items: center; gap: 10px; min-height: 44px; cursor: pointer; }
+.ec-differences input { width: 20px; height: 20px; accent-color: #a22938; }
+.ec-scroll { overflow: auto; max-width: 100%; border: 1px solid #ddd; border-radius: 10px; }
+.ec-scroll table { border-collapse: separate; border-spacing: 0; width: 100%; table-layout: fixed; min-width: 560px; }
+.ec-scroll th, .ec-scroll td { text-align: left; vertical-align: top; padding: 16px; border-bottom: 1px solid #e4e4e4; overflow-wrap: anywhere; }
+.ec-scroll tr > :first-child { position: sticky; left: 0; background: #f7f5f5; width: 170px; z-index: 1; }
+.ec-scroll thead th { background: white; }
+.ec-scroll img { display: block; width: 100%; max-width: 160px; height: 130px; object-fit: contain; margin-bottom: 12px; }
+.ec-scroll h3 { font-size: 16px; margin: 8px 0; }
+.ec-scroll a { color: #a22938; text-decoration: underline; }
+.ec-model { font-size: 13px; font-weight: 500; }
+.ec-scroll .ec-group th { background: #a22938; color: white; padding: 10px 16px; }
+.ec-note { font-size: 13px; line-height: 1.6; color: #555; }
+.ec-visually-hidden { position: absolute; width: 1px; height: 1px; padding: 0; overflow: hidden; clip-path: inset(50%); white-space: nowrap; }
+@media (max-width: 700px) {
+  equipro-comparison dialog { padding: 16px; width: calc(100vw - 16px); max-height: calc(100dvh - 16px); border-radius: 12px; }
+  .ec-selectors { grid-template-columns: 1fr; gap: 12px; }
+  .ec-scroll tr > :first-child { width: 135px; font-size: 14px; }
+  .ec-scroll th, .ec-scroll td { padding: 12px; }
+}

@@ -1,0 +1,12 @@
+{% doc %}
+  Returns true for excluded or unresolved comparison identities.
+  @param {product} target_product - Product to inspect.
+{% enddoc %}
+{%- assign excluded_handles = 'heating-boots|ei-502-infinity|ultra-comfort-20500-gm25t|51400-manicure-table|51401-manicure-table-deluxe|51500-make-up-table' | split: '|' -%}
+{%- assign excluded_collections = 'multi-function-columns|multi-functions-columns|columns|skin-analyzer|skin-analyzers|wellness-therapy|wellness-terapy|facial-units' | split: '|' -%}
+{%- assign excluded = false -%}
+{%- if excluded_handles contains target_product.handle -%}{%- assign excluded = true -%}{%- endif -%}
+{%- for group in target_product.collections -%}
+  {%- if excluded_collections contains group.handle -%}{%- assign excluded = true -%}{%- endif -%}
+{%- endfor -%}
+{%- if excluded -%}true{%- endif -%}

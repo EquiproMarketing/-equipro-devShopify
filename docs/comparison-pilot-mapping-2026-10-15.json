@@ -1,0 +1,1071 @@
+{
+  "date": "2026-10-15",
+  "activeThemeId": "157851386029",
+  "developmentThemeId": "157680631981",
+  "assignmentsChanged": false,
+  "publishedOrSwitched": false,
+  "primarySource": {
+    "file": "compress-Liste de prix-Canada-PRO_V1.2.pdf",
+    "pages": [
+      3,
+      16,
+      17,
+      18,
+      21,
+      22,
+      23
+    ]
+  },
+  "pilots": [
+    {
+      "productId": "8744552333485",
+      "title": "Air-Lift Round Stool - 31100",
+      "model": "31100",
+      "family": "stools",
+      "handle": "31100-air-lift-round-stool",
+      "skus": [
+        "31100W",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "31100-air-lift-round-stool",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/31100-air-lift-round-stool",
+      "heading": "Air-Lift Round Stool - 31100",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/professional-luxury-air-lift-stool-ergonomic-swivel-practitioner-seat-high-durability-base-sku-31100.webp?v=1791304625",
+      "pdfPage": 16,
+      "specifications": {
+        "height": "20.5–27.5 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Without backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "seat_dimensions"
+      ]
+    },
+    {
+      "productId": "8744552267949",
+      "title": "Round air-lift stool with backrest - 31200",
+      "model": "31200",
+      "family": "stools",
+      "handle": "round-air-lift-stool-with-backrest-31200",
+      "skus": [
+        "31200W",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "31200-round-air-lift-stool-with-backrest",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/round-air-lift-stool-with-backrest-31200",
+      "heading": "Round air-lift stool with backrest - 31200",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-round-air-lift-stool-white-leatherette-adjustable-height-practitioner-furniture-sku-31200.webp?v=1791215874",
+      "pdfPage": 16,
+      "specifications": {
+        "height": "20.5–27.5 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Adjustable ergonomic backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "seat_dimensions"
+      ]
+    },
+    {
+      "productId": "8744550826157",
+      "title": "Ergonomic Stool with Backrest - 31300",
+      "model": "31300",
+      "family": "stools",
+      "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "skus": [
+        "31300W",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "31300-ergonomic-air-lift-stool",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "heading": "Ergonomic Air-Lift Stool - 31300",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ergonomic-air-lift-stool-height-adjustable-practitioner-seat-31300-white.webp?v=1791225905",
+      "pdfPage": 17,
+      "specifications": {
+        "height": "20.5–27.5 in",
+        "mechanism": null,
+        "seat": "Contoured",
+        "seat_dimensions": null,
+        "backrest": "Adjustable ergonomic backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "mechanism",
+        "seat_dimensions"
+      ]
+    },
+    {
+      "productId": "8744552366253",
+      "title": "Ergonomic Stool with Adjustable Backrest-31301",
+      "model": "31301",
+      "family": "stools",
+      "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+      "skus": [
+        "31301W",
+        null,
+        null,
+        null,
+        null,
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "31301-ergonomic-stool-with-adjustable-backrest",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ergonomic-stool-with-adjustable-backrest-31301",
+      "heading": "Ergonomic Stool with Adjustable Backrest - 31301",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ergonomic-air-lift-stool-adjustable-backrest-height-adjustable-practitioner-seat-sku-31301.webp?v=1791230828",
+      "pdfPage": 17,
+      "specifications": {
+        "height": "20.5–27.5 in",
+        "mechanism": null,
+        "seat": "Contoured",
+        "seat_dimensions": null,
+        "backrest": "Tilting, reclining, adjustable backrest",
+        "base": "Black, stain-resistant, five-star",
+        "casters": "Ultra-quiet",
+        "upholstery": "Ultra-white leatherette; Color Chart A",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "mechanism",
+        "seat_dimensions"
+      ]
+    },
+    {
+      "productId": "8744552464557",
+      "title": "Round air-lift stool-EI-311",
+      "model": "EI-311",
+      "family": "stools",
+      "handle": "round-air-lift-stool-ei-311",
+      "skus": [
+        "SQ4433677",
+        null,
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "ei-311-round-air-lift-stool",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/round-air-lift-stool-ei-311",
+      "heading": "EI-311 Round Air-Lift Stool",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/ei-311-professional-air-lift-stool-white-chrome-casters.webp?v=1791299005",
+      "pdfPage": 17,
+      "specifications": {
+        "height": "20.5–28 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Without backrest",
+        "base": "Circular footrest; base material not confirmed",
+        "casters": null,
+        "upholstery": "Color Chart B",
+        "warranty": "1 year"
+      },
+      "unconfirmedFields": [
+        "seat_dimensions",
+        "casters"
+      ]
+    },
+    {
+      "productId": "8744552530093",
+      "title": "EI-312 Round Air Lift Stool",
+      "model": "EI-312",
+      "family": "stools",
+      "handle": "ei-312-round-air-lift-stool",
+      "skus": [
+        "Ei-312W",
+        null,
+        null
+      ],
+      "currentTemplateSuffix": "ei-312-round-air-lift-stool",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ei-312-round-air-lift-stool",
+      "heading": "EI-312 Round Air-Lift Stool with Backrest",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/ei-312-round-air-lift-practitioner-stool-white-chrome-base.webp?v=1791301787",
+      "pdfPage": 18,
+      "specifications": {
+        "height": "20.5–28 in",
+        "mechanism": "Air lift",
+        "seat": "Round",
+        "seat_dimensions": null,
+        "backrest": "Ergonomic backrest",
+        "base": "Circular footrest; base material not confirmed",
+        "casters": null,
+        "upholstery": "Color Chart B",
+        "warranty": "1 year"
+      },
+      "unconfirmedFields": [
+        "seat_dimensions",
+        "casters"
+      ]
+    },
+    {
+      "productId": "8744550465709",
+      "title": "51101 - TM-3 Standard",
+      "model": "51101",
+      "family": "trolleys",
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "skus": [
+        "51101"
+      ],
+      "currentTemplateSuffix": "51101-tm-3-standard",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "heading": "TM-3 Professional Service Table",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-tm3-professional-service-table.webp?v=1788277538",
+      "pdfPage": 22,
+      "specifications": {
+        "dimensions": "25 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Top–middle: 14 in; middle–bottom: 9 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "drawers",
+        "cabinet"
+      ]
+    },
+    {
+      "productId": "8744552595629",
+      "title": "51104 TM-3A",
+      "model": "51104",
+      "family": "trolleys",
+      "handle": "51104-tm-3a",
+      "skus": [
+        "51104"
+      ],
+      "currentTemplateSuffix": "51104-tm-3a",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51104-tm-3a",
+      "heading": "TM-3A",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-tm-3a-professional-trolley-three-shelf-utility-cart-51104.webp?v=1788277599",
+      "pdfPage": 22,
+      "specifications": {
+        "dimensions": "25 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Top–middle: 9.75 in; middle–bottom: 10 in",
+        "drawers": "1 ergonomic drawer",
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "cabinet"
+      ]
+    },
+    {
+      "productId": "8744552661165",
+      "title": "51103 TM-3 mini",
+      "model": "51103-M",
+      "family": "trolleys",
+      "handle": "51103-tm-3-mini",
+      "skus": [
+        "51103"
+      ],
+      "currentTemplateSuffix": "51103-tm-3-mini",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51103-tm-3-mini",
+      "heading": "TM-3 Mini",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/51103-tm3-mini-professional-equipment-trolley.webp?v=1788277601",
+      "pdfPage": 22,
+      "specifications": {
+        "dimensions": "18 × 14 × 33.5 in",
+        "shelves": "3",
+        "shelf_dimensions": "13 × 16 in",
+        "spacing": "11.75 in between shelves",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "drawers",
+        "cabinet"
+      ]
+    },
+    {
+      "productId": "8744552726701",
+      "title": "51100 TS-3 deluxe",
+      "model": "51100",
+      "family": "trolleys",
+      "handle": "ts-3-deluxe",
+      "skus": [
+        "TS-3 deluxe"
+      ],
+      "currentTemplateSuffix": "51100-ts-3-deluxe",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ts-3-deluxe",
+      "heading": "TS-3 deluxe",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/51100-ts-3-deluxe-professional-three-tier-equipment-cart.webp?v=1788277602",
+      "pdfPage": 22,
+      "specifications": {
+        "dimensions": "22 × 14 × 35 in",
+        "shelves": "3",
+        "shelf_dimensions": "Top: 13.5 × 20 in; others: 12 × 20 in",
+        "spacing": "Top–middle: 10.25 in; middle–bottom: 10.5 in",
+        "drawers": "1 ergonomic drawer",
+        "cabinet": null,
+        "holders": "One on each side",
+        "outlets": "6-outlet power strip",
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "cabinet"
+      ]
+    },
+    {
+      "productId": "8744552792237",
+      "title": "51201 TS-2 with drawer",
+      "model": "51201",
+      "family": "trolleys",
+      "handle": "51201-ts-2-with-drawer",
+      "skus": [
+        "51201"
+      ],
+      "currentTemplateSuffix": null,
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51201-ts-2-with-drawer",
+      "heading": "51201 TS-2 with drawer",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/ts-2-professional-utility-trolley-drawer-51201.webp?v=1788277604",
+      "pdfPage": 23,
+      "specifications": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "Drawer underside–bottom shelf: 14.25 in",
+        "drawers": "1 ergonomic drawer; interior height: 6 in",
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "cabinet",
+        "outlets"
+      ]
+    },
+    {
+      "productId": "8744552890541",
+      "title": "51300 TA-2 standard",
+      "model": "51300",
+      "family": "trolleys",
+      "handle": "51300-ta-2-standard",
+      "skus": [
+        "51300"
+      ],
+      "currentTemplateSuffix": null,
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51300-ta-2-standard",
+      "heading": "51300 TA-2 standard",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ta-2-standard-two-tier-rolling-trolley-powder-coated-steel-spa-salon-sku-51300.webp?v=1788277605",
+      "pdfPage": 23,
+      "specifications": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "13 × 22 in; safety edges",
+        "spacing": "11.5 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "drawers",
+        "cabinet",
+        "outlets"
+      ]
+    },
+    {
+      "productId": "8744552956077",
+      "title": "51200 TS-2 basic",
+      "model": "51200",
+      "family": "trolleys",
+      "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "skus": [
+        "51200"
+      ],
+      "currentTemplateSuffix": "51200-ts-2-basic",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "heading": "TS-2 basic",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ts-2-basic-two-tier-mobile-utility-cart-powder-coated-steel-spa-salon-sku-51200.webp?v=1792082803",
+      "pdfPage": 23,
+      "specifications": {
+        "dimensions": "25 × 14 × 34 in",
+        "shelves": "2",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "12 in",
+        "drawers": null,
+        "cabinet": null,
+        "holders": "1",
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "drawers",
+        "cabinet",
+        "outlets"
+      ]
+    },
+    {
+      "productId": "8744553119917",
+      "title": "51000 TS-4",
+      "model": "51000",
+      "family": "trolleys",
+      "handle": "51000-ts-4",
+      "skus": [
+        "51000"
+      ],
+      "currentTemplateSuffix": "51000-ts-4",
+      "assignmentAction": "unchanged",
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51000-ts-4",
+      "heading": "TS-4 Multipurpose Treatment Table",
+      "imageMatchesShopifyFeaturedImage": true,
+      "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ts-4-professional-esthetician-rolling-trolley-with-storage-cabinet-steel-frame-sku-51000.webp?v=1788277610",
+      "pdfPage": 21,
+      "specifications": {
+        "dimensions": "25.5 × 15 × 54.5 in",
+        "shelves": "4",
+        "shelf_dimensions": "14 × 23 in",
+        "spacing": "First–second: 11.75 in; second–third: 13 in; third–cabinet: 9 in",
+        "drawers": null,
+        "cabinet": "2 doors; interior: 13 × 21.5 × 11 in high",
+        "holders": null,
+        "outlets": null,
+        "casters": "Ultra-quiet",
+        "warranty": "2 years"
+      },
+      "unconfirmedFields": [
+        "drawers",
+        "holders",
+        "outlets"
+      ]
+    }
+  ],
+  "identityAudit": [
+    {
+      "title": "EI-502 Infinity",
+      "handle": "ei-502-infinity",
+      "templateSuffix": "",
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "EI-502 Infinity",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ei-502-infinity",
+      "comparisonFamily": null,
+      "remainingIssue": "Infinity identity/description conflict; comparison blocked"
+    },
+    {
+      "title": "ultra-comfort-20500",
+      "handle": "ultra-comfort-20500",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "ultra-comfort-20500",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ultra-comfort-20500",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Infinity EI-502",
+      "handle": "ultra-comfort-20500-gm25t",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Infinity EI-502",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ultra-comfort-20500-gm25t",
+      "comparisonFamily": null,
+      "remainingIssue": "Infinity identity/description conflict; comparison blocked"
+    },
+    {
+      "title": "spa-comfort-20300",
+      "handle": "spa-comfort-20300",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "spa-comfort-20300",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/spa-comfort-20300",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "ei-500-murano",
+      "handle": "ei-500-murano",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "ei-500-murano",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ei-500-murano",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "ei-501-royal",
+      "handle": "ei-501-royal",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "ei-501-royal",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ei-501-royal",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Divine EI-504",
+      "handle": "ei-504-divine",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Divine EI-504",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ei-504-divine",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Multi-comfort-20210",
+      "handle": "multi-comfort-electric-height-20210",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Multi-comfort-20210",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/multi-comfort-electric-height-20210",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "ultra-comfort-Pedicure-20502",
+      "handle": "ultra-comfortprofessional-treatment-pedicure-chair-20500",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "ultra-comfort-Pedicure-20502",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/ultra-comfortprofessional-treatment-pedicure-chair-20500",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "elite-spa-ei-508",
+      "handle": "elite-spa-ei-508",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "elite-spa-ei-508",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/elite-spa-ei-508",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Natura Spa EI-509",
+      "handle": "natura-spa-ei-509",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Natura Spa EI-509",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/natura-spa-ei-509",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Maxi-comfort 360º - 20100",
+      "handle": "maxi-comfort-360",
+      "templateSuffix": "SKU00001-maxi-comfort-360",
+      "cause": "Missing assigned template fell back to stale default",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Maxi-comfort 360º - 20100",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/maxi-comfort-360",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "calypso-ei-23402",
+      "handle": "calypso-ei-23402",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "calypso-ei-23402",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/calypso-ei-23402",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Round air-lift stool with backrest - 31200",
+      "handle": "round-air-lift-stool-with-backrest-31200",
+      "templateSuffix": "31200-round-air-lift-stool-with-backrest",
+      "cause": "Missing assigned template fell back to stale default",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Round air-lift stool with backrest - 31200",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/round-air-lift-stool-with-backrest-31200",
+      "comparisonFamily": "stools",
+      "remainingIssue": null
+    },
+    {
+      "title": "51201 TS-2 with drawer",
+      "handle": "51201-ts-2-with-drawer",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "51201 TS-2 with drawer",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51201-ts-2-with-drawer",
+      "comparisonFamily": "trolleys",
+      "remainingIssue": null
+    },
+    {
+      "title": "51300 TA-2 standard",
+      "handle": "51300-ta-2-standard",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "51300 TA-2 standard",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51300-ta-2-standard",
+      "comparisonFamily": "trolleys",
+      "remainingIssue": null
+    },
+    {
+      "title": "51400 Manicure table",
+      "handle": "51400-manicure-table",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "51400 Manicure table",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51400-manicure-table",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "51401 Manicure table deluxe",
+      "handle": "51401-manicure-table-deluxe",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "51401 Manicure table deluxe",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/51401-manicure-table-deluxe",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "21100 Hydro-comfort",
+      "handle": "21100-hydro-comfort",
+      "templateSuffix": null,
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "21100 Hydro-comfort",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": true,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/21100-hydro-comfort",
+      "comparisonFamily": null,
+      "remainingIssue": null
+    },
+    {
+      "title": "Heating Boots",
+      "handle": "heating-boots",
+      "templateSuffix": "",
+      "cause": "Default template contained fixed Ioniderm identity and unrelated editorial content",
+      "previousHeading": "11400 Ioniderm Galvanic",
+      "currentHeading": "Heating Boots",
+      "headingMatchesCatalog": true,
+      "productVariantMapMatchesIdentity": true,
+      "imagePresent": false,
+      "reviewUrl": "https://equipro-dev.myshopify.com/products/heating-boots",
+      "comparisonFamily": null,
+      "remainingIssue": "Image missing in Shopify; wellness comparison excluded"
+    }
+  ],
+  "variantValidation": [
+    {
+      "handle": "ei-502-infinity",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 0,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 375,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 385,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ultra-comfort-20500",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White",
+        "24\""
+      ],
+      "visiblePrice": 4350,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ultra-comfort-20500-gm25t",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 3200,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "spa-comfort-20300",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "28\"",
+        "White"
+      ],
+      "visiblePrice": 3700,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ei-500-murano",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 3995,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ei-501-royal",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 2990,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ei-504-divine",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 2250,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "multi-comfort-electric-height-20210",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "24\"",
+        "White"
+      ],
+      "visiblePrice": 2445,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ultra-comfortprofessional-treatment-pedicure-chair-20500",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White",
+        "24\""
+      ],
+      "visiblePrice": 4350,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "elite-spa-ei-508",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 3350,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "natura-spa-ei-509",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 3600,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "maxi-comfort-360",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 2200,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "calypso-ei-23402",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 750,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "round-air-lift-stool-with-backrest-31200",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 355,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "31100-air-lift-round-stool",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 235,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 425,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "round-air-lift-stool-ei-311",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 175,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ei-312-round-air-lift-stool",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 235,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51104-tm-3a",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 415,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51103-tm-3-mini",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 375,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "ts-3-deluxe",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 399,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51201-ts-2-with-drawer",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 415,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51300-ta-2-standard",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 320,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "uphusvw9gfbqf087wzw6s53rzz7zn5",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 290,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51400-manicure-table",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 345,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51000-ts-4",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 555,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "51401-manicure-table-deluxe",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 505,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "21100-hydro-comfort",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [
+        "White"
+      ],
+      "visiblePrice": 1595,
+      "priceMatchesCatalog": true
+    },
+    {
+      "handle": "heating-boots",
+      "priceMatchesVisibleConfiguration": true,
+      "variantMapMatchesCatalog": true,
+      "visibleOptions": [],
+      "visiblePrice": 520,
+      "priceMatchesCatalog": true
+    }
+  ]
+}

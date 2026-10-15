@@ -50,5 +50,52 @@
     "submit": "Search",
     "no_results_html": "No results found for {{ terms }}",
     "results_for_html": "{{ count }} results found for {{ terms }}"
+  },
+  "comparison": {
+    "open": "Compare models",
+    "title": "Compare models",
+    "close": "Close comparison",
+    "choose": "Choose up to three products in this family.",
+    "slot": "Product",
+    "empty": "Choose a product",
+    "remove": "Remove",
+    "differences": "Show differences only",
+    "page": "View product",
+    "model": "Model",
+    "specifications": "Specifications",
+    "unknown": "Not confirmed",
+    "na": "Not applicable",
+    "empty_state": "Choose a product above to start comparing.",
+    "same": "No confirmed differences in the selected specifications.",
+    "note": "Dimensions are in inches. Not confirmed means the source does not establish the detail; it does not mean No. Options may vary by configuration.",
+    "source": "Technical reference: Canada PRO V1.2. Warranty is subject to its terms and exclusions.",
+    "count": "products selected",
+    "load_error": "Comparison could not load. Please close and try again.",
+    "groups": {
+      "fit_and_adjustment": "Fit and adjustment",
+      "construction": "Construction",
+      "coverage": "Coverage",
+      "size_and_storage": "Size and storage",
+      "fittings_and_mobility": "Fittings and mobility"
+    },
+    "labels": {
+      "height": "Height range",
+      "mechanism": "Adjustment mechanism",
+      "seat": "Seat shape",
+      "seat_dimensions": "Seat dimensions",
+      "backrest": "Backrest",
+      "base": "Base / footrest",
+      "casters": "Casters",
+      "upholstery": "Upholstery options",
+      "warranty": "Warranty",
+      "dimensions": "Overall size (long side × short side × height)",
+      "shelves": "Shelf count",
+      "shelf_dimensions": "Shelf dimensions",
+      "spacing": "Shelf spacing",
+      "drawers": "Drawers",
+      "cabinet": "Cabinet",
+      "holders": "Magnifying lamp holders",
+      "outlets": "Electrical outlets"
+    }
   }
 }

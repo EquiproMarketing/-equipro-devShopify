@@ -3,7 +3,8 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const { Liquid } = require('liquidjs');
-const engine = new Liquid();
+const engine = new Liquid({ root: 'snippets', extname: '.liquid' });
+engine.registerTag('doc', { parse(token, tokens) { while (tokens.length && !tokens.shift().content?.includes('enddoc')) {} }, render() { return ''; } });
 engine.registerFilter('asset_url', x => x);
 engine.registerFilter('stylesheet_tag', x => `<link href="${x}">`);
 engine.registerFilter('image_url', x => x?.src || '');
@@ -130,4 +131,24 @@ test('overview renders uses as accordions and specifications as a semantic table
  assert.match(html, /<th scope="row">Model<\/th>/);
  assert.match(html, /<caption/);
  assert.doesNotMatch(html, /<th scope="row">Massage/);
+});
+
+test('pilot product renders only its reviewed family with live product links and identities', async () => {
+ const data = require('../assets/equipro-comparison-data.json');
+ const entries = Object.entries(data.products);
+ const all = Object.fromEntries(entries.map(([id, p]) => [p.handle, { ...product(Number(id)), handle:p.handle, url:`/products/${p.handle}` }]));
+ const current = all['51300-ta-2-standard'];
+ engine.options.globals.all_products = all;
+ const html = await engine.parseAndRender(source('sections/main-product.liquid'), { product:current, all_products:all, section:{id:'pilot',settings:{show_compare_btn:false},blocks:[]} });
+ assert.match(html, /<equipro-comparison data-family="trolleys"/);
+ const items=JSON.parse(html.match(/data-products>([\s\S]*?)<\/script>/)[1]);
+ assert.equal(items.length,8); assert.ok(items.some(p=>p.id===String(current.id)));
+ assert.ok(items.every(p=>data.products[p.id].family==='trolleys'));
+ assert.doesNotMatch(html, /id="OpenCompareModal"/);
+});
+test('Heating Boots and excluded collections cannot expose a legacy compare trigger', async () => {
+ for(const [handle,collections] of [['heating-boots',[]],['other',[{handle:'wellness-therapy'}]],['other',[{handle:'columns'}]],['other',[{handle:'facial-units'}]],['other',[{handle:'skin-analyzer'}]]]) {
+  const html=await renderProduct({...product(1),handle,collections},'',{show_compare_btn:true});
+  assert.doesNotMatch(html,/id="OpenCompareModal"|<equipro-comparison/);
+ }
 });
