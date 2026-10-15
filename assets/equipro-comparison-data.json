@@ -4,7 +4,7 @@
   "schemas": {
     "stools": [
       [
-        "Fit and adjustment",
+        "fit_and_adjustment",
         [
           "height",
           "mechanism",
@@ -14,7 +14,7 @@
         ]
       ],
       [
-        "Construction",
+        "construction",
         [
           "base",
           "casters",
@@ -22,7 +22,7 @@
         ]
       ],
       [
-        "Coverage",
+        "coverage",
         [
           "warranty"
         ]
@@ -30,7 +30,7 @@
     ],
     "trolleys": [
       [
-        "Size and storage",
+        "size_and_storage",
         [
           "dimensions",
           "shelves",
@@ -41,7 +41,7 @@
         ]
       ],
       [
-        "Fittings and mobility",
+        "fittings_and_mobility",
         [
           "holders",
           "outlets",
@@ -49,7 +49,7 @@
         ]
       ],
       [
-        "Coverage",
+        "coverage",
         [
           "warranty"
         ]
