@@ -1,0 +1,8 @@
+{% doc %}
+  Returns the reviewed comparison family for a product; excluded products return blank.
+  @param {product} target_product - Product whose comparison family is requested.
+{% enddoc %}
+{%- case target_product.id -%}
+{%- when 8744552333485, 8744552267949, 8744550826157, 8744552366253, 8744552464557, 8744552530093 -%}stools
+{%- when 8744550465709, 8744552595629, 8744552661165, 8744552726701, 8744552792237, 8744552890541, 8744552956077, 8744553119917 -%}trolleys
+{%- endcase -%}

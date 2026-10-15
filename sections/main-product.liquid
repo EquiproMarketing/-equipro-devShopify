@@ -1,7 +1,11 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
 <div class="product-page page-width" id="ProductMain-{{ section.id }}">
-  {% assign target_product = section.settings.featured_product | default: product %}
+  {% assign target_product = product | default: section.settings.featured_product %}
+  {% assign use_product_overrides = true %}
+  {% if product != blank and section.settings.featured_product != blank and section.settings.featured_product.id != product.id %}
+    {% assign use_product_overrides = false %}
+  {% endif %}
 
   <!-- 1. BACK LINK -->
   <div class="product-page__back product-mobile-order-back">
@@ -21,31 +25,31 @@
 
       <!-- PRODUCT TITLE -->
       <h1 class="product-info__title product-mobile-order-title">
-        {{ section.settings.custom_title | default: target_product.title }}
+        {% if use_product_overrides %}{{ section.settings.custom_title | default: target_product.title | escape }}{% else %}{{ target_product.title | escape }}{% endif %}
       </h1>
 
       <!-- DESCRIPTIONS AND HIGHLIGHTS -->
       <div class="product-mobile-order-descriptions">
         {% assign intro_text = section.settings.intro_highlight %}
-        {% if intro_text != blank %}
+        {% if use_product_overrides and intro_text != blank %}
           <div class="product-info__intro-highlight">
             <p>{{ intro_text }}</p>
           </div>
         {% endif %}
 
         <div class="product-info__description">
-          {% if section.settings.custom_description != blank %}
+          {% if use_product_overrides and section.settings.custom_description != blank %}
             {{ section.settings.custom_description }}
           {% else %}
             {{ target_product.description }}
           {% endif %}
         </div>
 
-        {% if section.settings.subtitle != blank %}
+        {% if use_product_overrides and section.settings.subtitle != blank %}
           <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
         {% endif %}
 
-        {% if section.settings.secondary_description != blank %}
+        {% if use_product_overrides and section.settings.secondary_description != blank %}
           <div class="product-info__description">
             {{ section.settings.secondary_description }}
           </div>
@@ -106,8 +110,8 @@
               <button type="button" onclick="adjustQty(1)">+</button>
             </div>
 
-            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% unless target_product.available %}disabled{% endunless %}>
-              {% if target_product.available %}
+            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% unless current_variant.available %}disabled{% endunless %}>
+              {% if current_variant.available %}
                 {{ section.settings.btn_label | default: "ADD TO CART" }}
               {% else %}
                 OUT OF STOCK
@@ -126,7 +130,7 @@
         <!-- MAIN IMAGE -->
         <div class="product-gallery__main">
           {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
-          {% if first_img_block.settings.image != blank %}
+          {% if use_product_overrides and first_img_block.settings.image != blank %}
             <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1600 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
           {% elsif current_variant.image != blank %}
             <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
@@ -140,7 +144,7 @@
         <!-- THUMBNAILS -->
         <div class="product-gallery__thumbs">
           {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
-          {% if img_blocks.size > 0 %}
+          {% if use_product_overrides and img_blocks.size > 0 %}
             {% for block in img_blocks limit: 4 %}
               {% if block.settings.image != blank %}
                 <img 
@@ -197,7 +201,11 @@
       </div>
 
       <!-- COMPARE BUTTON -->
-      {% if section.settings.show_compare_btn %}
+      {% capture comparison_family %}{% render 'comparison-family', target_product: target_product %}{% endcapture %}
+      {% capture comparison_excluded %}{% render 'comparison-excluded', target_product: target_product %}{% endcapture %}
+      {% if comparison_family != blank and comparison_excluded == blank %}
+        <div class="product-compare-wrapper product-mobile-order-compare">{% render 'product-family-comparison', target_product: target_product, comparison_family: comparison_family %}</div>
+      {% elsif section.settings.show_compare_btn and comparison_excluded == blank %}
         <div class="product-compare-wrapper product-mobile-order-compare">
           <button class="product-compare-trigger-btn" id="OpenCompareModal">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
@@ -261,12 +269,20 @@
 
   function updateSelectedVariant() {
     const selectors = document.querySelectorAll('.product-variant-selector');
-    const selectedValues = Array.from(selectors).map(s => s.value);
+    const selectedValues = {{ current_variant.options | json }} || [];
+    selectors.forEach(select => { selectedValues[Number(select.dataset.optionIndex)] = select.value; });
 
     const matchedVariant = productVariants.find(variant => {
       return selectedValues.every((val, index) => variant.options[index] === val);
     });
 
+    if (!matchedVariant) {
+      const variantIdInput = document.getElementById('ProductVariantIdInput');
+      if (variantIdInput) variantIdInput.value = '';
+      const cartBtn = document.getElementById('AddToCartButton');
+      if (cartBtn) { cartBtn.disabled = true; cartBtn.textContent = 'UNAVAILABLE'; }
+      return;
+    }
     if (matchedVariant) {
       const variantIdInput = document.getElementById('ProductVariantIdInput');
       if (variantIdInput) variantIdInput.value = matchedVariant.id;
@@ -278,7 +294,7 @@
       if (cartBtn) {
         if (matchedVariant.available) {
           cartBtn.disabled = false;
-          cartBtn.textContent = "{{ section.settings.btn_label | default: 'ADD TO CART' }}";
+          cartBtn.textContent = {{ section.settings.btn_label | default: 'ADD TO CART' | json }};
         } else {
           cartBtn.disabled = true;
           cartBtn.textContent = "OUT OF STOCK";
