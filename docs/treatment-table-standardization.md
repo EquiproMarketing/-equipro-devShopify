@@ -133,35 +133,41 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
 ## Other treatment-table/chair inventory
 
 
-- [ ] **Spa-Comfort 20300** — `spa-comfort-20300`
+- [x] **Spa-Comfort 20300** — `spa-comfort-20300`
   - Product ID: `8744551415981`; SKU(s): `20300-28W`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-20300).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Additional inconsistent page inventoried; not implemented. Intended review template: `product.20300-spa-comfort.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: PDF p. 9 covers 20300/20301 with widths 28/30 in; preserve exact model/variant.
-  - Review URL: [spa-comfort-20300](https://equipro-dev.myshopify.com/products/spa-comfort-20300).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-20300); primary technical entry: Canada PRO V1.2 p. 9.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.20300-spa-comfort.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF p. 9 describes manual articulation, while Squarespace specifies electric handset control of height/backrest/legrest/tilt. Control mechanism remains Not confirmed; no electric-backrest claim copied. Applicability: All reference sections apply.
+  - Review URL: [spa-comfort-20300](https://equipro-dev.myshopify.com/products/spa-comfort-20300?preview_theme_id=157851386029&view=20300-spa-comfort).
 
-- [ ] **Elite Spa EI-508** — `elite-spa-ei-508`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/spa-comfort-20300-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/spa-comfort-20300-standardized-mobile.png).
+
+- [x] **Elite Spa EI-508** — `elite-spa-ei-508`
   - Product ID: `8744551743661`; SKU(s): `EI-508`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/elite-spa).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Additional inconsistent page inventoried; not implemented. Intended review template: `product.ei-508-elite-spa.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: PDF p. 11 description says height 22–39 in; Dimensions prints 31 × 76 × 16.5 × 40 in. Do not resolve by guessing.
-  - Review URL: [elite-spa-ei-508](https://equipro-dev.myshopify.com/products/elite-spa-ei-508).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/elite-spa); primary technical entry: Canada PRO V1.2 p. 11.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.ei-508-elite-spa.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF p. 11 description says height 22–39 in; its Dimensions field is 31 × 76 × 16.5 × 40 in (four values, no inferred axis). Squarespace explicitly calls height 16.5–40 in. PDF fields retained as labeled; exact physical range remains a catalog discrepancy, not resolved by rearranging numbers. Applicability: All reference sections apply.
+  - Review URL: [elite-spa-ei-508](https://equipro-dev.myshopify.com/products/elite-spa-ei-508?preview_theme_id=157851386029&view=ei-508-elite-spa).
 
-- [ ] **Natura Spa EI-509** — `natura-spa-ei-509`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/elite-spa-ei-508-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/elite-spa-ei-508-standardized-mobile.png).
+
+- [x] **Natura Spa EI-509** — `natura-spa-ei-509`
   - Product ID: `8744551809197`; SKU(s): `Ei-509`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/natura-spa).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Additional inconsistent page inventoried; not implemented. Intended review template: `product.ei-509-natura-spa.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Confirm exact model-specific content using PDF p. 11 and matching source.
-  - Review URL: [natura-spa-ei-509](https://equipro-dev.myshopify.com/products/natura-spa-ei-509).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/natura-spa); primary technical entry: Canada PRO V1.2 p. 11.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.ei-509-natura-spa.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Squarespace gives height 23.5–33 in and dimensions 72 × 28 × 23.5/33 H, while PDF p. 11 gives 22–39 in and Dimensions 28 × 72 × 22/39 H. PDF retained. Exact motor/remote configuration is not in the PDF and is not transferred from other models. Applicability: All reference sections apply.
+  - Review URL: [natura-spa-ei-509](https://equipro-dev.myshopify.com/products/natura-spa-ei-509?preview_theme_id=157851386029&view=ei-509-natura-spa).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/natura-spa-ei-509-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/natura-spa-ei-509-standardized-mobile.png).
 
 - [ ] **Bohemia EI-23403** — `bohemia-ei-23403`
   - Product ID: `8744552169645`; SKU(s): `EI-23403W`.
@@ -183,15 +189,17 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Unresolved questions: Portable table: do not assume treatment-chair instructions or specifications; legacy source URL from prior catalog inventory not revalidated in this pass.
   - Review URL: [calypso-ei-23402](https://equipro-dev.myshopify.com/products/calypso-ei-23402).
 
-- [ ] **Maxi-Comfort 360º 20100** — `maxi-comfort-360`
+- [x] **Maxi-Comfort 360º 20100** — `maxi-comfort-360`
   - Product ID: `8744552005805`; SKU(s): `20100W`.
   - Assigned template: `product.SKU00001-maxi-comfort-360.json` (missing); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-360).
-  - Structural gaps: Assigned file is absent; storefront falls back to default. The dedicated correct-model template is available separately.
-  - Implementation status: Missing assigned template inventoried; correct 20100 preview already prepared in previous work. Intended review template: `product.20100-maxi-comfort-360.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Assigned SKU00001 suffix absent; product.20100-maxi-comfort-360.json exists and its previous PDF-supported corrections must remain. Assignment approval still required.
-  - Review URL: [maxi-comfort-360](https://equipro-dev.myshopify.com/products/maxi-comfort-360).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-360); primary technical entry: Canada PRO V1.2 p. 8.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.20100-maxi-comfort-360.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Previous corrected Dimensions label/order and 27–34 in description value are preserved. Missing assigned SKU00001-maxi-comfort-360 file is not created; reviewed template still requires assignment approval. Applicability: All reference sections apply.
+  - Review URL: [maxi-comfort-360](https://equipro-dev.myshopify.com/products/maxi-comfort-360?preview_theme_id=157851386029&view=20100-maxi-comfort-360).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-comfort-360-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-comfort-360-standardized-mobile.png).
 
 - [ ] **Maxi-Comfort Pedicure 360º 20101** — `maxi-confort-pedicure-360`
   - Product ID: `8744552104109`; SKU(s): `20101W`.
@@ -268,3 +276,5 @@ Review captures (actual browser screenshots):
 Fresh complete active-theme backup before these batches: `equipro-before-approved-treatment-batches-157851386029.zip` (SHA-256 `63bbb4522be75b0664873caab122b650d84b3580305d647ae387be5435f3bd61`). No theme switch, publication, assignment or catalog-record mutation was performed.
 
 - Batch 1: Multi-Comfort Electric Height 20210, Murano EI-500, Royal EI-501, Divine EI-504. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
+
+- Batch 2: Spa-Comfort 20300, Elite Spa EI-508, Natura Spa EI-509, Maxi-Comfort 360º 20100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
