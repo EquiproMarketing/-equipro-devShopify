@@ -1,0 +1,250 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "custom_title": "Natura Spa EI-509",
+        "featured_product": "natura-spa-ei-509",
+        "intro_highlight": "The single-cushion surface supports facial, body, massage and waxing treatments.",
+        "custom_description": "<p>Natura Spa EI-509 is designed for facials, body treatments, massage and waxing. Its listed adjustable height is 22 to 39 inches, with a single cushion for client support.</p>",
+        "subtitle": "Positioning and features for Natura Spa EI-509",
+        "secondary_description": "<p>An adjustable crescent headrest is optional. The Canada catalog lists Natura Spa in White only; only the live Shopify variant is offered in the selector.</p>"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Single cushion",
+            "answer": "<p>The single-cushion surface supports facial, body, massage and waxing treatments.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Adjustable height",
+            "answer": "<p>Canada PRO V1.2 lists a 22–39 in height range.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Optional crescent headrest",
+            "answer": "<p>Add the optional adjustable crescent headrest when appropriate for the treatment.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>EI-509</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>Ei-509</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>28&quot; × 72&quot; × 22&quot;/39&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>185 lb / 85 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>22–39 in</td></tr><tr><td class=\"feature-label\">Cushion</td><td>Single cushion</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Optional adjustable crescent headrest</td></tr><tr><td class=\"feature-label\">Color</td><td>White only</td></tr><tr><td class=\"feature-label\">Control mechanism</td><td>Not confirmed</td></tr><tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Single cushion",
+            "text": "The single-cushion surface supports facial, body, massage and waxing treatments."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Adjustable height",
+            "text": "Canada PRO V1.2 lists a 22–39 in height range."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Optional crescent headrest",
+            "text": "Add the optional adjustable crescent headrest when appropriate for the treatment."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/natura-spa-professional-equipro-beauty-contour-electric-treatment-table-wood-base-professional-spa_undefinedxundefined.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "how_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "how_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height positioning:",
+            "text": "Set the table elevation for the treatment, following the supplied EI-509 operating instructions."
+          }
+        },
+        "how_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Headrest setup:",
+            "text": "If fitted, adjust the optional crescent headrest before beginning the service."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Setup and adjustments:",
+            "text": "Follow the supplied operating instructions for EI-509 before positioning the client or using its adjustment mechanisms."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Care and service:",
+            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+          }
+        }
+      },
+      "block_order": [
+        "how_header",
+        "how_1",
+        "how_2",
+        "safety_header",
+        "safety_1",
+        "safety_2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/natura-spa-professional.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the height range?",
+            "answer": "<p>Canada PRO V1.2 lists 22–39 inches.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is a crescent headrest included?",
+            "answer": "<p>An adjustable crescent headrest is optional.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which color is listed?",
+            "answer": "<p>White only.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty is listed?",
+            "answer": "<p>The PDF lists a one-year warranty for Natura Spa EI-509.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}

@@ -13,49 +13,48 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "Maxi-Comfort 360º Professional Treatment Chair",
-        "intro_highlight": "Designed to elevate practitioner ergonomics, this professional workstation integrates a seamless 360° hydraulic swivel with robust North American manufacturing standards, ensuring unparalleled access and stability during intricate aesthetic services.",
-        "custom_description": "<p>Maxi-Comfort 360º is purpose-built for licensed professionals, including Estheticians, Lash Technicians, and Cosmetic Tattoo Artists. Its fully adjustable design targets postural strain during high-volume clinic days, enabling sharper focus on technical precision and enhanced client comfort. Whether you are performing deep-pore cleansing, brow sculpting, or specialized skincare protocols, this professional station adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
-        "subtitle": "The Gold Standard in Versatile Esthetic Ergonomics",
-        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the ultra-white finish and structural integrity of the Maxi-Comfort 360º, wipe down the surface with gentle professional cleansers formulated for spa environments daily. The premium leatherette provides heavy-duty resistance, ensuring pristine condition across full 8-hour shifts. Consistent care prevents wear, guaranteeing reliable hygiene.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
-        "show_size_option": false,
-        "featured_product": "maxi-comfort-360",
+        "show_size_option": true,
         "btn_label": "ADD TO CART",
-        "show_compare_btn": true,
-        "compare_btn_label": "Compare with other models"
+        "show_compare_btn": false,
+        "custom_title": "Maxi-Comfort 360º 20100",
+        "featured_product": "maxi-comfort-360",
+        "intro_highlight": "Rotate the chair to improve treatment access.",
+        "custom_description": "<p>Maxi-Comfort 360º 20100 supports facials and hair removal with a hydraulic 360° swivel system, adjustable headrest and manually adjustable backrest and legrest.</p>",
+        "subtitle": "Positioning and features for Maxi-Comfort 360º 20100",
+        "secondary_description": "<p>A 15° tilt supports facial and neck access. Ultra-white, resistant leatherette is listed with Color Chart A options, a 24-inch width and optional removable armrests.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
       "type": "main-product-characteristics",
       "blocks": {
-        "application_1": {
+        "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Professional Esthetician:",
-            "answer": "<p>For the professional Esthetician, the 15º tilt system dramatically improves access to the client's face and neck during prolonged deep-pore cleansing and extensive skincare routines. This targeted angulation reduces the practitioner's postural strain and lower-back tension, translating to enhanced service consistency and a more relaxing experience for the client.</p>"
+            "question": "Hydraulic 360° swivel",
+            "answer": "<p>Rotate the chair to improve treatment access.</p>"
           }
         },
-        "application_2": {
+        "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Lash Technician:",
-            "answer": "<p>A Lash Technician requires absolute stability and precise focal distance. The adjustable headrest and manually adjustable backrest of this professional station provide optimal positioning, minimizing visual fatigue and wrist discomfort. The friction-free adjustment enables micro-movements without disturbing the client's position, ensuring technical precision during back-to-back appointments.</p>"
+            "question": "15° tilt",
+            "answer": "<p>Tilt supports facial and neck positioning.</p>"
           }
         },
-        "application_3": {
+        "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Cosmetic Tattoo:",
-            "answer": "<p>During intricate cosmetic procedures, the Cosmetic Tattoo Artist benefits directly from the heavy-duty 360° hydraulic swivel. This feature allows the practitioner to navigate smoothly around the treatment station without breaking their ergonomic posture. The ultra-resistant leatherette ensures the workstation withstands rigorous cleaning protocols, maintaining a pristine clinical environment.</p>"
+            "question": "Manual articulation",
+            "answer": "<p>Adjust the backrest, legrest and headrest for facial and depilation treatments.</p>"
           }
         }
       },
       "block_order": [
-        "application_1",
-        "application_2",
-        "application_3"
+        "faq_1",
+        "faq_2",
+        "faq_3"
       ],
       "name": "Product Characteristics",
       "settings": {
@@ -64,7 +63,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>20100</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-white ultra-resistant vinyl upholstery, heavy-duty steel frame, hydraulic components</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>24&quot; x 71&quot; x 26.5&quot; / 33.5&quot;</td></tr><tr><td class=\"feature-label\">Weight</td><td>152 lb / 69 kg</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>Hydraulic height adjustment 27&quot; to 34&quot;; 360° swivel base; manual adjustable backrest and legrest; 15° tilt system; adjustable headrest</td></tr><tr><td class=\"feature-label\">Swivel System</td><td>Effortless 360° hydraulic swivel</td></tr><tr><td class=\"feature-label\">Positioning</td><td>15° Lay-Z-Boy tilt position for optimal face and neck access</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Premium ultra-resistant vinyl, stain and oil resistant; multiple colors available (Color Chart A)</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Removable ergonomic armrests (optional)</td></tr><tr><td class=\"feature-label\">Number of Functions</td><td>Multi-position hydraulic treatment chair for facials and depilation</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Stable hydraulic system, reinforced construction, CSA &amp; UL approved electrical components where applicable</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components; designed to international standards</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years warranty</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr><tr><td class=\"feature-label\">Intended Use</td><td>Professional facial treatments, depilation, waxing, and aesthetic procedures</td></tr></tbody></table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20100</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>20100W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>24&quot; × 71&quot; × 26.5&quot;/33.5&quot;</td></tr><tr><td class=\"feature-label\">Weight</td><td>152 lb / 69 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>27–34 in</td></tr><tr><td class=\"feature-label\">Swivel</td><td>360° hydraulic swivel system</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Width</td><td>24 in</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable armrests</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -75,22 +74,22 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "360° Hydraulic Swivel",
-            "text": "Friction-free adjustment with heavy-duty components to ensure seamless practitioner mobility in high-volume clinics."
+            "title": "Hydraulic 360° swivel",
+            "text": "Rotate the chair to improve treatment access."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "15º Tilt Mechanism",
-            "text": "Precision-engineered reclining system designed to improve neck area access for Estheticians and Lash Technicians, reducing lower-back tension."
+            "title": "15° tilt",
+            "text": "Tilt supports facial and neck positioning."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Ultra-Resistant Upholstery",
-            "text": "Ultra-white durable leatherette that guarantees pristine hygiene in professional spa environments."
+            "title": "Manual articulation",
+            "text": "Adjust the backrest, legrest and headrest for facial and depilation treatments."
           }
         }
       },
@@ -101,7 +100,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-massage-table-facial-bed.webp",
+        "image": "shopify://shop_images/pro-esthetic-hydraulic-facial-depilation-chair-adjustable-ergonomic-salon-equipment-sku-pe-8800.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -114,38 +113,31 @@
     "how_to": {
       "type": "product-how-to",
       "blocks": {
-        "use_header": {
+        "how_header": {
           "type": "section_header",
           "settings": {
             "title": "How to Use"
           }
         },
-        "use_1": {
+        "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Engage the hydraulic",
-            "text": "foot pump to smoothly raise the chair height to the desired working height."
+            "bold_prefix": "Swivel positioning:",
+            "text": "Use the hydraulic 360° swivel system according to the supplied operating instructions."
           }
         },
-        "use_2": {
+        "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Utilize the 360°",
-            "text": "swivel mechanism to rotate the client to the optimal working angle, then lock in place."
+            "bold_prefix": "Client positioning:",
+            "text": "Set the headrest and adjust the backrest and legrest manually."
           }
         },
-        "use_3": {
+        "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Manually adjust the",
-            "text": "backrest and leg rest to achieve the precise contour required for the specific service."
-          }
-        },
-        "use_4": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Position the adjustable",
-            "text": "headrest to support the client's neck, utilizing the 15º tilt system for enhanced facial access."
+            "bold_prefix": "Tilt:",
+            "text": "Use the 15° tilt as appropriate for face and neck access."
           }
         },
         "safety_header": {
@@ -157,38 +149,29 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Ensure the hydraulic",
-            "text": "lock is fully engaged before beginning any precision cosmetic procedure."
+            "bold_prefix": "Setup and adjustments:",
+            "text": "Follow the supplied operating instructions for 20100 before positioning the client or using its adjustment mechanisms."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Do not exceed",
-            "text": "the designated weight capacity limits of the hydraulic pump system."
-          }
-        },
-        "safety_3": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Always return the",
-            "text": "chair to its lowest position before the client mounts or dismounts to prevent tipping."
+            "bold_prefix": "Care and service:",
+            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
           }
         }
       },
       "block_order": [
-        "use_header",
-        "use_1",
-        "use_2",
-        "use_3",
-        "use_4",
+        "how_header",
+        "how_1",
+        "how_2",
+        "how_3",
         "safety_header",
         "safety_1",
-        "safety_2",
-        "safety_3"
+        "safety_2"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-maxi-comfort-360-hydraulic-bed-setup.webp",
+        "image": "shopify://shop_images/facial-depilation-professional-hydraulic-salon-chair-black-adjustable-steel-frame-sku-blk-882.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
@@ -206,43 +189,29 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range of the hydraulic system?",
-            "answer": "<p>The chair offers hydraulic height adjustment. Refer to the model specifications and operating manual for the height range applicable to your configuration.</p>"
+            "question": "Does the chair swivel?",
+            "answer": "<p>Yes. The PDF lists a 360° hydraulic swivel system.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the chair recline completely flat?",
-            "answer": "<p>Yes, the backrest and leg rest manually adjust to a flat position. This flexibility accommodates a wide range of aesthetic services.</p>"
+            "question": "What height does the description list?",
+            "answer": "<p>The PDF description lists adjustable height from 27 to 34 inches.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the armrests removable?",
-            "answer": "<p>Yes, removable armrests are available as an option. This allows closer practitioner access when required during specialized treatments.</p>"
+            "question": "Are armrests included?",
+            "answer": "<p>Removable armrests are optional.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What material is used for the upholstery?",
-            "answer": "<p>It features ultra-white, ultra-resistant leatherette. This material is specifically engineered for durability and ease of cleaning in professional settings.</p>"
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "question": "How much does the chair weigh?",
-            "answer": "<p>The total weight of the unit is 152 lbs (69 kg). The heavy-duty construction ensures maximum stability during all procedures.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is the benefit of the 15º tilt system?",
-            "answer": "<p>It improves practitioner access to the face and neck. This feature significantly enhances client comfort and reduces practitioner postural strain.</p>"
+            "question": "What warranty is listed?",
+            "answer": "<p>Canada PRO V1.2 lists a two-year warranty for model 20100.</p>"
           }
         }
       },
@@ -250,9 +219,7 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6"
+        "faq_4"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
@@ -275,8 +242,8 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "compare_collection": "",
-        "heading": "Select Models to Compare"
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
       }
     }
   },
