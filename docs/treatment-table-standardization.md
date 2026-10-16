@@ -201,45 +201,53 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
 
   - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-comfort-360-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-comfort-360-standardized-mobile.png).
 
-- [ ] **Maxi-Comfort Pedicure 360º 20101** — `maxi-confort-pedicure-360`
+- [x] **Maxi-Comfort Pedicure 360º 20101** — `maxi-confort-pedicure-360`
   - Product ID: `8744552104109`; SKU(s): `20101W`.
   - Assigned template: `product.20101-maxi-comfort-360.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-pedicure).
-  - Structural gaps: Six-section order exists, but template refers to the wrong 20100 product; source/model content must be corrected before use.
-  - Implementation status: Existing structure inventoried; wrong-model template content flagged. Intended review template: `product.20101-maxi-comfort-pedicure.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Assigned product.20101-maxi-comfort-360.json exists but features maxi-comfort-360 and has 20100-oriented title/content. Exact product.20101-maxi-comfort-pedicure.json also exists; review before any assignment change.
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-pedicure); primary technical entry: Canada PRO V1.2 p. 8.
+  - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
+  - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.20101-maxi-comfort-360.json`. **Visible at normal URL**; assignment unchanged.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Existing assigned product.20101-maxi-comfort-360.json incorrectly featured 20100. Correct that file in place to 20101; no assignment change. Squarespace height 26.5–33.5 in differs from PDF description 27–34 in; PDF description and separately labeled Dimensions retained. Applicability: All reference sections apply.
   - Review URL: [maxi-confort-pedicure-360](https://equipro-dev.myshopify.com/products/maxi-confort-pedicure-360).
 
-- [ ] **Multi-Comfort Hydraulic 20200** — `20200-multi-comfort`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-confort-pedicure-360-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/maxi-confort-pedicure-360-standardized-mobile.png).
+
+- [x] **Multi-Comfort Hydraulic 20200** — `20200-multi-comfort`
   - Product ID: `8744553775277`; SKU(s): `20200-24W plus other colors; 14 variants`.
   - Assigned template: `product.20200-multi-comfort.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/multi-comfort).
-  - Structural gaps: Reference section order already exists. Product-specific applicability, data and media need a later audit; no structural replacement now.
-  - Implementation status: Existing six-section reference structure inventoried; no edit.
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Content/source and all variants require later audit; do not copy electric 20210 control claims.
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/multi-comfort); primary technical entry: Canada PRO V1.2 p. 8.
+  - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
+  - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.20200-multi-comfort.json`. **Visible at normal URL**; assignment unchanged.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Squarespace table gives height 22.5–34.5 in; PDF p. 8 description gives 27–34 in. Preserve PDF labels/order and all 14 Shopify variants. Seven 28-inch variants have blank SKUs and are priced USD 1895; no catalog pricing/variant mutation. Applicability: All reference sections apply.
   - Review URL: [20200-multi-comfort](https://equipro-dev.myshopify.com/products/20200-multi-comfort).
 
-- [ ] **Hydro-Comfort 21100** — `21100-hydro-comfort`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/20200-multi-comfort-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/20200-multi-comfort-standardized-mobile.png).
+
+- [x] **Hydro-Comfort 21100** — `21100-hydro-comfort`
   - Product ID: `8744553840813`; SKU(s): `21100W`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/hydro-comfort).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Additional inconsistent default page inventoried; no edit. Intended review template: `product.21100-hydro-comfort.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: A dedicated product.21100-hydro-comfort.json exists, but is not assigned.
-  - Review URL: [21100-hydro-comfort](https://equipro-dev.myshopify.com/products/21100-hydro-comfort).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/hydro-comfort); primary technical entry: Canada PRO V1.2 p. 9.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.21100-hydro-comfort.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Squarespace table gives 28.5–33.5 in, which matches Aero’s range, and calls the system hydraulic plus air-lift. PDF p. 9 gives 22.5–34.5 in and does not identify the control hardware; mechanism remains Not confirmed. Applicability: All reference sections apply.
+  - Review URL: [21100-hydro-comfort](https://equipro-dev.myshopify.com/products/21100-hydro-comfort?preview_theme_id=157851386029&view=21100-hydro-comfort).
 
-- [ ] **Poly-Comfort 22100** — `22100-poly-comfort`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/21100-hydro-comfort-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/21100-hydro-comfort-standardized-mobile.png).
+
+- [x] **Poly-Comfort 22100** — `22100-poly-comfort`
   - Product ID: `8744553906349`; SKU(s): `22100W; other colors have missing SKUs`.
   - Assigned template: `product.22100-poly-comfort.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/poly-comfort).
-  - Structural gaps: Reference section order already exists. Product-specific applicability, data and media need a later audit; no structural replacement now.
-  - Implementation status: Existing six-section reference structure inventoried; no edit.
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Fixed height 29.5 in in PDF p. 10; do not copy adjustable-height claims. Missing variant SKUs remain an inventory question.
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/poly-comfort); primary technical entry: Canada PRO V1.2 p. 10.
+  - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
+  - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.22100-poly-comfort.json`. **Visible at normal URL**; assignment unchanged.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Dimensions kept in PDF order 24 × 70 × 29.5 H; do not transfer hydraulic/air-lift height claims from filenames or other models. Six non-White color variants have blank SKUs; no variant changes. Applicability: All reference sections apply.
   - Review URL: [22100-poly-comfort](https://equipro-dev.myshopify.com/products/22100-poly-comfort).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/22100-poly-comfort-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/22100-poly-comfort-standardized-mobile.png).
 
 ## Delivery verification and review materials
 
@@ -278,3 +286,5 @@ Fresh complete active-theme backup before these batches: `equipro-before-approve
 - Batch 1: Multi-Comfort Electric Height 20210, Murano EI-500, Royal EI-501, Divine EI-504. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
 
 - Batch 2: Spa-Comfort 20300, Elite Spa EI-508, Natura Spa EI-509, Maxi-Comfort 360º 20100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
+
+- Batch 3: Maxi-Comfort Pedicure 360º 20101, Multi-Comfort Hydraulic 20200, Hydro-Comfort 21100, Poly-Comfort 22100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
