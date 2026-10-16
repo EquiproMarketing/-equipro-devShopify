@@ -133,18 +133,16 @@ test('overview renders uses as accordions and specifications as a semantic table
  assert.doesNotMatch(html, /<th scope="row">Massage/);
 });
 
-test('pilot product renders only its reviewed family with live product links and identities', async () => {
+test('pilot product uses the restored comparison button', async () => {
  const data = require('../assets/equipro-comparison-data.json');
  const entries = Object.entries(data.products);
  const all = Object.fromEntries(entries.map(([id, p]) => [p.handle, { ...product(Number(id)), handle:p.handle, url:`/products/${p.handle}` }]));
  const current = all['51300-ta-2-standard'];
  engine.options.globals.all_products = all;
  const html = await engine.parseAndRender(source('sections/main-product.liquid'), { product:current, all_products:all, section:{id:'pilot',settings:{show_compare_btn:false},blocks:[]} });
- assert.match(html, /<equipro-comparison data-family="trolleys"/);
- const items=JSON.parse(html.match(/data-products>([\s\S]*?)<\/script>/)[1]);
- assert.equal(items.length,8); assert.ok(items.some(p=>p.id===String(current.id)));
- assert.ok(items.every(p=>data.products[p.id].family==='trolleys'));
- assert.doesNotMatch(html, /id="OpenCompareModal"/);
+ assert.match(html, /id="OpenCompareModal"/);
+ assert.match(html, /Compare with other models/);
+ assert.doesNotMatch(html, /<equipro-comparison/);
 });
 test('Heating Boots and excluded collections cannot expose a legacy compare trigger', async () => {
  for(const [handle,collections] of [['heating-boots',[]],['other',[{handle:'wellness-therapy'}]],['other',[{handle:'columns'}]],['other',[{handle:'facial-units'}]],['other',[{handle:'skin-analyzer'}]]]) {

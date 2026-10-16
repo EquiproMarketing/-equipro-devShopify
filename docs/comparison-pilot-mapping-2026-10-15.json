@@ -89,7 +89,8 @@
       },
       "unconfirmedFields": [
         "seat_dimensions"
-      ]
+      ],
+      "templateStatus": "Completed missing assigned template file; assignment unchanged"
     },
     {
       "productId": "8744550826157",
@@ -256,7 +257,7 @@
         "dimensions": "25 × 14 × 33.5 in",
         "shelves": "3",
         "shelf_dimensions": "14 × 23 in",
-        "spacing": "Top–middle: 14 in; middle–bottom: 9 in",
+        "spacing": "First–second shelf: 14 in; second–third shelf: 9 in",
         "drawers": null,
         "cabinet": null,
         "holders": "One on each side",
@@ -286,10 +287,10 @@
       "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-tm-3a-professional-trolley-three-shelf-utility-cart-51104.webp?v=1788277599",
       "pdfPage": 22,
       "specifications": {
-        "dimensions": "25 × 14 × 33.5 in",
+        "dimensions": "14 × 25 × 33.5 in",
         "shelves": "3",
         "shelf_dimensions": "14 × 23 in",
-        "spacing": "Top–middle: 9.75 in; middle–bottom: 10 in",
+        "spacing": "First–second shelf: 9.75 in; second–third shelf: 10 in",
         "drawers": "1 ergonomic drawer",
         "cabinet": null,
         "holders": "One on each side",
@@ -304,7 +305,7 @@
     {
       "productId": "8744552661165",
       "title": "51103 TM-3 mini",
-      "model": "51103-M",
+      "model": "51103",
       "family": "trolleys",
       "handle": "51103-tm-3-mini",
       "skus": [
@@ -318,21 +319,30 @@
       "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/51103-tm3-mini-professional-equipment-trolley.webp?v=1788277601",
       "pdfPage": 22,
       "specifications": {
-        "dimensions": "18 × 14 × 33.5 in",
-        "shelves": "3",
-        "shelf_dimensions": "13 × 16 in",
-        "spacing": "11.75 in between shelves",
+        "dimensions": null,
+        "shelves": null,
+        "shelf_dimensions": null,
+        "spacing": null,
         "drawers": null,
         "cabinet": null,
-        "holders": "One on each side",
-        "outlets": "6-outlet power strip",
-        "casters": "Ultra-quiet",
-        "warranty": "2 years"
+        "holders": null,
+        "outlets": null,
+        "casters": null,
+        "warranty": null
       },
       "unconfirmedFields": [
+        "dimensions",
+        "shelves",
+        "shelf_dimensions",
+        "spacing",
         "drawers",
-        "cabinet"
-      ]
+        "cabinet",
+        "holders",
+        "outlets",
+        "casters",
+        "warranty"
+      ],
+      "identityQuestion": "Shopify model/SKU 51103 versus Canada PRO V1.2 51103-M. Technical values must not be attributed to 51103 until version identity is verified."
     },
     {
       "productId": "8744552726701",
@@ -354,7 +364,7 @@
         "dimensions": "22 × 14 × 35 in",
         "shelves": "3",
         "shelf_dimensions": "Top: 13.5 × 20 in; others: 12 × 20 in",
-        "spacing": "Top–middle: 10.25 in; middle–bottom: 10.5 in",
+        "spacing": "First–second shelf: 10.25 in; second–third shelf: 10.5 in",
         "drawers": "1 ergonomic drawer",
         "cabinet": null,
         "holders": "One on each side",
@@ -386,7 +396,7 @@
         "dimensions": "25 × 14 × 34 in",
         "shelves": "2",
         "shelf_dimensions": "14 × 23 in",
-        "spacing": "Drawer underside–bottom shelf: 14.25 in",
+        "spacing": "Drawer underside–lower shelf: 14.25 in",
         "drawers": "1 ergonomic drawer; interior height: 6 in",
         "cabinet": null,
         "holders": "1",
@@ -419,7 +429,7 @@
         "dimensions": "25 × 14 × 34 in",
         "shelves": "2",
         "shelf_dimensions": "13 × 22 in; safety edges",
-        "spacing": "11.5 in",
+        "spacing": "Between the two shelves: 11.5 in",
         "drawers": null,
         "cabinet": null,
         "holders": "1",
@@ -453,7 +463,7 @@
         "dimensions": "25 × 14 × 34 in",
         "shelves": "2",
         "shelf_dimensions": "14 × 23 in",
-        "spacing": "12 in",
+        "spacing": "Between the two shelves: 12 in",
         "drawers": null,
         "cabinet": null,
         "holders": "1",
@@ -484,10 +494,10 @@
       "image": "https://cdn.shopify.com/s/files/1/0785/1992/6957/files/equipro-ts-4-professional-esthetician-rolling-trolley-with-storage-cabinet-steel-frame-sku-51000.webp?v=1788277610",
       "pdfPage": 21,
       "specifications": {
-        "dimensions": "25.5 × 15 × 54.5 in",
+        "dimensions": "15 × 25.5 × 54.5 in",
         "shelves": "4",
         "shelf_dimensions": "14 × 23 in",
-        "spacing": "First–second: 11.75 in; second–third: 13 in; third–cabinet: 9 in",
+        "spacing": "First–second shelf: 11.75 in; second–third shelf: 13 in; third shelf–cabinet: 9 in",
         "drawers": null,
         "cabinet": "2 doors; interior: 13 × 21.5 × 11 in high",
         "holders": null,
@@ -1067,5 +1077,7 @@
       "visiblePrice": 520,
       "priceMatchesCatalog": true
     }
-  ]
+  ],
+  "interface": "Restored original Compare button and modal; pilot families change table rows only.",
+  "sourcePolicy": "Canada PRO V1.2 values retain the PDF dimension label and printed measurement order. Missing values display Not confirmed. Website conflicts are recorded in comparison-pilots-review.md."
 }

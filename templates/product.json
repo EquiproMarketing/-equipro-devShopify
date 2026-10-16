@@ -10,9 +10,17 @@
         "btn_label": "ADD TO CART",
         "show_compare_btn": false
       }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "compare_modal"
   ]
 }

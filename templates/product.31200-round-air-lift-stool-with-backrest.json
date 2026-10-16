@@ -1,0 +1,27 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": true,
+        "compare_btn_label": "Compare with other models"
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": "stools"
+      }
+    }
+  },
+  "order": [
+    "main",
+    "compare_modal"
+  ]
+}

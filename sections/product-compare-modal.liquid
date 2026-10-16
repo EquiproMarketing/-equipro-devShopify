@@ -1,6 +1,5 @@
-{% capture comparison_family %}{% render 'comparison-family', target_product: product %}{% endcapture %}
-{% capture comparison_excluded %}{% render 'comparison-excluded', target_product: product %}{% endcapture %}
-{% if comparison_family == blank and comparison_excluded == blank %}
+{%- capture comparison_excluded -%}{%- render 'comparison-excluded', target_product: product -%}{%- endcapture -%}
+{%- if comparison_excluded == blank -%}
 <div id="CustomCompareModal" class="custom-compare-modal-overlay" style="display: none;">
   <div class="custom-compare-modal-content">
     <button type="button" class="custom-compare-modal-close" id="CloseCompareModal">&times;</button>
@@ -10,7 +9,10 @@
       <p>Compare key performance specs side by side to choose the best equipment for your treatment room.</p>
     </div>
 
+    {%- capture comparison_family -%}{%- render 'comparison-family', target_product: product -%}{%- endcapture -%}
+    {%- assign comparison_family = comparison_family | strip -%}
     {%- assign collection_handle = section.settings.compare_collection -%}
+    {%- if comparison_family != blank -%}{%- assign collection_handle = comparison_family -%}{%- endif -%}
     {%- assign compare_coll = collections[collection_handle] -%}
 
     {%- comment -%} FALLBACK SI NO HAY COLECCIÓN SELECCIONADA {%- endcomment -%}
@@ -41,6 +43,21 @@
               </tr>
             </thead>
             <tbody>
+              {%- if comparison_family != blank -%}
+                {%- if comparison_family == 'stools' -%}
+                  {%- assign pilot_keys = 'height|mechanism|seat|seat_dimensions|backrest|base|casters|upholstery|warranty' | split: '|' -%}
+                {%- else -%}
+                  {%- assign pilot_keys = 'dimensions|shelves|shelf_dimensions|spacing|drawers|cabinet|holders|outlets|casters|warranty' | split: '|' -%}
+                {%- endif -%}
+                {%- for pilot_key in pilot_keys -%}
+                  <tr>
+                    <td class="feature-label">{%- render 'comparison-pilot-spec-label', spec_key: pilot_key -%}</td>
+                    {%- for prod in compare_coll.products limit: 4 -%}
+                      <td class="{% if prod.handle == product.handle %}highlight-col{% endif %}">{%- render 'comparison-pilot-spec-value', compared_product: prod, spec_key: pilot_key -%}</td>
+                    {%- endfor -%}
+                  </tr>
+                {%- endfor -%}
+              {%- else -%}
               <!-- 1. CATEGORÍA / TIPO DE PRODUCTO DINÁMICO -->
               <tr>
                 <td class="feature-label">Category / Type</td>
@@ -114,6 +131,7 @@
                   </td>
                 {%- endfor -%}
               </tr>
+              {%- endif -%}
             </tbody>
           </table>
         </div>
@@ -314,7 +332,7 @@
   });
 </script>
 
-{% endif %}
+{%- endif -%}
 {% schema %}
 {
   "name": "Product Compare Modal",
