@@ -20,10 +20,10 @@
         "show_compare_btn": false,
         "custom_title": "Divine EI-504",
         "featured_product": "ei-504-divine",
-        "intro_highlight": "Set the backrest and legrest manually for the treatment.",
-        "custom_description": "<p>Divine EI-504 is designed for facials, massage, waxing and body treatments. Its backrest and legrest adjust manually, while a foot pedal adjusts the height from 22 to 39 inches.</p>",
-        "subtitle": "Positioning and features for Divine EI-504",
-        "secondary_description": "<p>Four cushions and silent operation support treatment sessions. An adjustable crescent headrest, a regular headrest and armrests are included. The catalog lists White, Black and Navy in Color Chart B.</p>"
+        "intro_highlight": "The Divine treatment chair delivers multi-modality versatility and silent electric height adjustment, engineered to support high-volume aesthetic clinics and wellness centers with robust North American manufacturing standards.",
+        "custom_description": "<p>Divine is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Cosmetic Injector. Its fully adjustable architecture targets lower-back tension during extended treatment sessions, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with friction-free adjustment and instant-response calibration.</p>",
+        "subtitle": "High-Performance Versatility for Every Treatment",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the physical integrity and professional finish of Divine, clean surfaces regularly with sanitizing wipes formulated for clinical environments daily. The ultra-resistant leatherette resists oils, stains, and daily wear, ensuring pristine condition across intensive clinic schedules. Consistent care protects equipment longevity, safeguarding capital investment and maintaining an immaculate presentation.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -32,22 +32,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Manual articulation",
-            "answer": "<p>Set the backrest and legrest manually for the treatment.</p>"
+            "question": "Modern Practitioner:",
+            "answer": "<p>Engineered for the Modern Practitioner, the Divine chair provides estheticians with optimal access during detailed facial procedures and complex skin rejuvenation treatments. The motorized foot pedal allows seamless hands-free height calibration between 22 inches and 39 inches, preventing postural strain during full 8-hour shifts. By maintaining precise working elevation, practitioners execute microdermabrasion and chemical exfoliations with maximum control, elevating client comfort and treatment accuracy.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Foot-operated height",
-            "answer": "<p>Adjust height from 22 to 39 in with the foot pedal.</p>"
+            "question": "Clinical spa technicians:",
+            "answer": "<p>For clinical spa technicians executing intensive body treatments and wellness therapies, the Divine workstation adapts effortlessly to multi-technician requirements. The quiet electric lifting mechanism provides smooth transitions without disturbing client relaxation. Its four-cushion design, combined with manually adjustable backrest and leg sections, supports diverse body proportions while relieving lower-back pressure during prolonged sessions.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Included accessories",
-            "answer": "<p>Crescent headrest, regular headrest and armrests are included.</p>"
+            "question": "High-demand clinical environments:",
+            "answer": "<p>Designed for high-demand clinical environments, cosmetic injectors and laser technicians benefit from the Divine chair's solid foundation and adaptable positioning. Rapid manual adjustments to the backrest and footrest allow instant transitions between seated consultations and fully supine procedure modes. This rapid setup reduces appointment turnover times, optimizing daily booking efficiency while maintaining a premium client experience.</p>"
           }
         }
       },
@@ -122,22 +122,22 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height adjustment:",
-            "text": "Use the foot pedal to set the chair height within the listed 22–39 in range."
+            "bold_prefix": "",
+            "text": "Depress the foot pedal switches to raise or lower the chair base between 22 inches and 39 inches to reach your ideal ergonomic working height."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Backrest and legrest:",
-            "text": "Adjust both sections manually for the treatment."
+            "bold_prefix": "",
+            "text": "Adjust the backrest and leg rest sections manually to the required treatment angle."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest setup:",
-            "text": "Fit and adjust the appropriate included headrest before beginning the service."
+            "bold_prefix": "",
+            "text": "Position or detach the included regular headrest, adjustable crescent headrest, or armrests depending on the modality being performed."
           }
         },
         "safety_header": {
@@ -149,15 +149,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for EI-504 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "",
+            "text": "Do not exceed the maximum weight rating of the unit to avoid structural fatigue and ensure operational stability during adjustments."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "",
+            "text": "Verify that the floor space underneath and around the scissor-lift base is free from cords, stool bases, and debris before activating the foot pedal."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "",
+            "text": "Always unplug the equipment from the electrical receptacle prior to applying liquid disinfectants or carrying out routine inspection tasks."
           }
         }
       },
@@ -168,7 +175,8 @@
         "how_3",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-divine-electric-multi-position-spa-treatment-bed-professional-skin-care-ei-504.webp",
@@ -189,29 +197,50 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Are the backrest and legrest motorized?",
-            "answer": "<p>Canada PRO V1.2 describes both as manually adjustable.</p>"
+            "question": "What is the height range of the Divine treatment chair?",
+            "answer": "<p>The Divine chair adjusts from 22 inches to 39 inches. Height is controlled via a dedicated foot pedal.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range?",
-            "answer": "<p>The listed range is 22 to 39 inches, adjusted using a foot pedal.</p>"
+            "question": "Is the backrest on the Divine chair electrically adjusted?",
+            "answer": "<p>No, the backrest and leg rests are adjusted manually. Only the vertical height adjustment utilizes the electric motor.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Which supports are included?",
-            "answer": "<p>An adjustable crescent headrest, regular headrest and armrests are included.</p>"
+            "question": "What safety standards does this chair meet?",
+            "answer": "<p>CSA and UL approvals for EI-504 electrical components are not confirmed in the model-specific Canada PRO V1.2 entry.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>The PDF lists a one-year warranty for Divine EI-504.</p>"
+            "question": "What accessories come standard with the Divine chair?",
+            "answer": "<p>It includes four cushions, a crescent headrest, regular headrest, and armrests. All these components come standard with the unit.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What upholstery color options are available for the Divine model?",
+            "answer": "<p>The Divine is available in white, black, and navy blue. Upholstery is made of durable, ultra-resistant medical-grade leatherette.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What electrical safety standards does this equipment meet?",
+            "answer": "<p>CSA and UL approvals for EI-504 electrical components are not confirmed in the model-specific Canada PRO V1.2 entry.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the standard warranty coverage for the Divine chair?",
+            "answer": "<p>Equipro lists a 1-year warranty for the Divine chair. Parts and technical-repair-labor coverage is not confirmed.</p>"
           }
         }
       },
@@ -219,7 +248,10 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

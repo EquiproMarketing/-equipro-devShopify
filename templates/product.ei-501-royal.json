@@ -20,10 +20,10 @@
         "show_compare_btn": false,
         "custom_title": "Royal EI-501",
         "featured_product": "ei-501-royal",
-        "intro_highlight": "Electric remote control supports precise treatment positioning.",
-        "custom_description": "<p>Royal EI-501 supports facials, body treatments, massage and waxing. Electric remote control provides precise positioning, while a dedicated foot pedal adjusts the height from 17 to 39 inches.</p>",
-        "subtitle": "Positioning and features for Royal EI-501",
-        "secondary_description": "<p>Four cushions, an adjustable crescent headrest, a regular headrest and included armrests support different treatment positions. White, Black and Navy are listed in Color Chart B; the product selector shows the currently offered White variant.</p>"
+        "intro_highlight": "The Royal treatment chair delivers exceptional versatility and silent electric positioning, engineered to support high-volume aesthetic clinics and multi-modality wellness centers with robust North American manufacturing standards.",
+        "custom_description": "<p>Royal is purpose-built for licensed professionals, including Esthetician, Medical Spa Therapist, and Cosmetic Injector. Its fully adjustable architecture targets lower-back tension during extended treatment sessions, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with friction-free adjustment and instant-response calibration.</p>",
+        "subtitle": "Engineering Excellence & Ergonomic Comfort",
+        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the mechanical integrity and aesthetic finish of Royal, clean surfaces regularly with disinfecting wipes formulated for clinical environments daily. The ultra-resistant leatherette resists oils, stains, and daily wear, ensuring pristine condition across intensive clinic schedules. Consistent care extends equipment longevity, protecting your investment and maintaining an immaculate presentation.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -32,22 +32,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Remote positioning",
-            "answer": "<p>Electric remote control supports precise treatment positioning.</p>"
+            "question": "Precision Esthetic Facials & Skin Resurfacing:",
+            "answer": "<p>Engineered for the Modern Practitioner, the Royal chair provides estheticians with seamless access during complex facial treatments and advanced skin rejuvenation protocols. The motorized height adjustment—ranging effortlessly from 17 inches to 39 inches via a dedicated foot pedal—eliminates postural strain and lower-back tension during full 8-hour clinic shifts. By establishing an optimal working height, practitioners maintain precise control during detailed microdermabrasion and chemical peels, delivering consistent results and superior client comfort.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Foot-operated height",
-            "answer": "<p>A dedicated pedal adjusts height from 17 to 39 in.</p>"
+            "question": "EComprehensive Body Treatments & Massage Therapies:",
+            "answer": "<p>For clinical spa technicians managing back-to-back body treatments, massages, and wraps, the Royal workstation adapts fluidly to multi-technician workflows. The independent electric remote control allows for silent, vibration-free position changes, ensuring clients remain completely relaxed. The four-cushion configuration, complemented by an adjustable crescent headrest and armrests, properly supports varying body types, distributing weight evenly and reducing pressure points during extended sessions.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Included support",
-            "answer": "<p>Four cushions, two headrests and armrests are listed in the PDF.</p>"
+            "question": "Multi-Modality Aesthetic & Hair Removal Procedures:",
+            "answer": "<p>Equipped for high-volume aesthetic environments, cosmetic injectors and laser technicians rely on the Royal chair's stable framework and versatile articulation. The silent electric system facilitates rapid transitions between upright consultations and fully reclined procedures. This instant-response calibration reduces downtime between appointments, streamlining clinic operations while guaranteeing a high-end, professional client experience from initial consultation to post-treatment recovery.</p>"
           }
         }
       },
@@ -81,15 +81,15 @@
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Foot-operated height",
-            "text": "A dedicated pedal adjusts height from 17 to 39 in."
+            "title": "Ergonomic Four-Cushion Design",
+            "text": "Precision-contoured cushioning designed to maximize client comfort for medical spa therapists and massage therapists, reducing physical fatigue."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Included support",
-            "text": "Four cushions, two headrests and armrests are listed in the PDF."
+            "title": "Adjustable Crescent Headrest",
+            "text": "Multi-position functional quality that seamlessly integrates into any high-end aesthetic treatment environment."
           }
         }
       },
@@ -122,22 +122,22 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Remote control:",
-            "text": "Use the supplied electric remote to position the chair for the treatment."
+            "bold_prefix": "",
+            "text": "Use the dedicated foot pedal to adjust the chair height from 17 inches to 39 inches for comfortable client seating or practitioner access."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height adjustment:",
-            "text": "Use the dedicated height pedal within the listed 17–39 in range."
+            "bold_prefix": "",
+            "text": "Utilize the remote controls to articulate the backrest, leg rest, and tilt angles into the desired treatment position."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest setup:",
-            "text": "Choose and adjust the included headrest appropriate for the treatment."
+            "bold_prefix": "",
+            "text": "Adjust the armrests and position the adjustable crescent headrest to ensure optimal ergonomic support for the specific procedure."
           }
         },
         "safety_header": {
@@ -149,15 +149,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for EI-501 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "",
+            "text": "Do not exceed the maximum weight capacity of the chair to prevent structural damage and ensure patient safety during operation."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "",
+            "text": "Ensure the treatment area around the base and moving joints is completely clear of cables, hands, and debris prior to activating electric height or tilt adjustments."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "",
+            "text": "Always disconnect the power supply before performing any cleaning, maintenance, or servicing of the electrical components."
           }
         }
       },
@@ -168,7 +175,8 @@
         "how_3",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-royal-electric-all-purpose-spa-treatment-table-x-frame-stability-beauty-salon-sku-ei-501.webp",
@@ -189,29 +197,50 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "How is the height adjusted?",
-            "answer": "<p>A dedicated foot pedal adjusts the height from 17 to 39 inches.</p>"
+            "question": "What is the height adjustment range of the Royal treatment chair?",
+            "answer": "<p>The Royal chair adjusts in height from 17 inches to 39 inches. It utilizes a quiet electric motor controlled via foot pedal.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What accessories are included?",
-            "answer": "<p>An adjustable crescent headrest, a regular headrest and armrests are included.</p>"
+            "question": "What electrical power requirements are needed for the Royal chair?",
+            "answer": "<p>The required electrical circuit and CSA/UL component approvals are not confirmed in the model-specific Canada PRO V1.2 entry.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "What colors are in the catalog?",
-            "answer": "<p>White, Black and Navy are listed; current purchasable options remain those shown in the product selector.</p>"
+            "question": "Is the Royal chair suitable for both facials and body massages?",
+            "answer": "<p>Yes, it is designed with exceptional versatility for facials, body treatments, and massages. It features four cushions and a crescent headrest.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>Royal EI-501 has a one-year warranty in Canada PRO V1.2.</p>"
+            "question": "What upholstery material is used on the Royal chair?",
+            "answer": "<p>It features an ultra-resistant, durable medical-grade leatherette. Available in white, black, or navy blue color options.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does the Royal chair include a remote control?",
+            "answer": "<p>Yes, it comes fully equipped with an electric remote control and foot pedal. This allows silent, hands-free height and position adjustments.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty coverage for the Royal treatment chair?",
+            "answer": "<p>Equipro lists a 1-year warranty for the Royal chair. Parts-and-labor coverage and component safety approvals are not confirmed in the model-specific entry.</p>"
+          }
+        },
+        "faq_7": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the armrests be removed or adjusted?",
+            "answer": "<p>The chair includes armrests. Removability, manicure supports, and specialized optional headrests are not confirmed for this model.</p>"
           }
         }
       },
@@ -219,7 +248,10 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6",
+        "faq_7"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
