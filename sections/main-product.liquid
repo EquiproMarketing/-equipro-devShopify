@@ -203,9 +203,9 @@
       <!-- COMPARE BUTTON -->
       {% capture comparison_family %}{% render 'comparison-family', target_product: target_product %}{% endcapture %}
       {% capture comparison_excluded %}{% render 'comparison-excluded', target_product: target_product %}{% endcapture %}
-      {% if comparison_family != blank and comparison_excluded == blank %}
-        <div class="product-compare-wrapper product-mobile-order-compare">{% render 'product-family-comparison', target_product: target_product, comparison_family: comparison_family %}</div>
-      {% elsif section.settings.show_compare_btn and comparison_excluded == blank %}
+      {% assign compare_enabled = section.settings.show_compare_btn %}
+      {% if comparison_family != blank %}{% assign compare_enabled = true %}{% endif %}
+      {% if compare_enabled and comparison_excluded == blank %}
         <div class="product-compare-wrapper product-mobile-order-compare">
           <button class="product-compare-trigger-btn" id="OpenCompareModal">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>

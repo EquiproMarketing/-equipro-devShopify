@@ -1,0 +1,150 @@
+{% doc %}
+  Returns the verified pilot value or Not confirmed for a product and row.
+  @param {product} compared_product - Product in the original comparison table.
+  @param {string} spec_key - Specification key.
+{% enddoc %}
+{%- assign pilot_value = blank -%}
+{%- case compared_product.id -%}
+{%- when 8744552333485 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–27.5 in" -%}
+{%- when 'mechanism' -%}{%- assign pilot_value = "Air lift" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Round" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Without backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Black, stain-resistant, five-star" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Ultra-white leatherette; Color Chart A" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552267949 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–27.5 in" -%}
+{%- when 'mechanism' -%}{%- assign pilot_value = "Air lift" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Round" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Adjustable ergonomic backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Black, stain-resistant, five-star" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Ultra-white leatherette; Color Chart A" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744550826157 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–27.5 in" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Contoured" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Adjustable ergonomic backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Black, stain-resistant, five-star" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Ultra-white leatherette; Color Chart A" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552366253 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–27.5 in" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Contoured" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Tilting, reclining, adjustable backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Black, stain-resistant, five-star" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Ultra-white leatherette; Color Chart A" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552464557 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–28 in" -%}
+{%- when 'mechanism' -%}{%- assign pilot_value = "Air lift" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Round" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Without backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Circular footrest; base material not confirmed" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Color Chart B" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "1 year" -%}
+{%- endcase -%}
+{%- when 8744552530093 -%}
+{%- case spec_key -%}
+{%- when 'height' -%}{%- assign pilot_value = "20.5–28 in" -%}
+{%- when 'mechanism' -%}{%- assign pilot_value = "Air lift" -%}
+{%- when 'seat' -%}{%- assign pilot_value = "Round" -%}
+{%- when 'backrest' -%}{%- assign pilot_value = "Ergonomic backrest" -%}
+{%- when 'base' -%}{%- assign pilot_value = "Circular footrest; base material not confirmed" -%}
+{%- when 'upholstery' -%}{%- assign pilot_value = "Color Chart B" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "1 year" -%}
+{%- endcase -%}
+{%- when 8744550465709 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "25 × 14 × 33.5 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "3" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "14 × 23 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "First–second shelf: 14 in; second–third shelf: 9 in" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "One on each side" -%}
+{%- when 'outlets' -%}{%- assign pilot_value = "6-outlet power strip" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552595629 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "14 × 25 × 33.5 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "3" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "14 × 23 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "First–second shelf: 9.75 in; second–third shelf: 10 in" -%}
+{%- when 'drawers' -%}{%- assign pilot_value = "1 ergonomic drawer" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "One on each side" -%}
+{%- when 'outlets' -%}{%- assign pilot_value = "6-outlet power strip" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552661165 -%}
+{%- case spec_key -%}
+{%- endcase -%}
+{%- when 8744552726701 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "22 × 14 × 35 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "3" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "Top: 13.5 × 20 in; others: 12 × 20 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "First–second shelf: 10.25 in; second–third shelf: 10.5 in" -%}
+{%- when 'drawers' -%}{%- assign pilot_value = "1 ergonomic drawer" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "One on each side" -%}
+{%- when 'outlets' -%}{%- assign pilot_value = "6-outlet power strip" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552792237 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "25 × 14 × 34 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "2" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "14 × 23 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "Drawer underside–lower shelf: 14.25 in" -%}
+{%- when 'drawers' -%}{%- assign pilot_value = "1 ergonomic drawer; interior height: 6 in" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "1" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552890541 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "25 × 14 × 34 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "2" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "13 × 22 in; safety edges" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "Between the two shelves: 11.5 in" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "1" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744552956077 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "25 × 14 × 34 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "2" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "14 × 23 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "Between the two shelves: 12 in" -%}
+{%- when 'holders' -%}{%- assign pilot_value = "1" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- when 8744553119917 -%}
+{%- case spec_key -%}
+{%- when 'dimensions' -%}{%- assign pilot_value = "15 × 25.5 × 54.5 in" -%}
+{%- when 'shelves' -%}{%- assign pilot_value = "4" -%}
+{%- when 'shelf_dimensions' -%}{%- assign pilot_value = "14 × 23 in" -%}
+{%- when 'spacing' -%}{%- assign pilot_value = "First–second shelf: 11.75 in; second–third shelf: 13 in; third shelf–cabinet: 9 in" -%}
+{%- when 'cabinet' -%}{%- assign pilot_value = "2 doors; interior: 13 × 21.5 × 11 in high" -%}
+{%- when 'casters' -%}{%- assign pilot_value = "Ultra-quiet" -%}
+{%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
+{%- endcase -%}
+{%- endcase -%}
+{%- assign pilot_display = pilot_value | default: 'Not confirmed' -%}{{ pilot_display | escape }}

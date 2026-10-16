@@ -1,0 +1,23 @@
+{% doc %}
+  Returns the category-specific comparison row label.
+  @param {string} spec_key - Specification key.
+{% enddoc %}
+{%- case spec_key -%}
+{%- when 'height' -%}Height range
+{%- when 'mechanism' -%}Adjustment mechanism
+{%- when 'seat' -%}Seat shape
+{%- when 'seat_dimensions' -%}Seat dimensions
+{%- when 'backrest' -%}Backrest
+{%- when 'base' -%}Base / footrest
+{%- when 'casters' -%}Casters
+{%- when 'upholstery' -%}Upholstery options
+{%- when 'warranty' -%}Warranty
+{%- when 'dimensions' -%}Dimensions
+{%- when 'shelves' -%}Shelf count
+{%- when 'shelf_dimensions' -%}Shelf dimensions
+{%- when 'spacing' -%}Shelf spacing
+{%- when 'drawers' -%}Drawers
+{%- when 'cabinet' -%}Cabinet
+{%- when 'holders' -%}Magnifying lamp holders
+{%- when 'outlets' -%}Electrical outlets
+{%- endcase -%}
