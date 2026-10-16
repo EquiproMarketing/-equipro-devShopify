@@ -130,7 +130,7 @@
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "",
-            "text": "Utilize the remote controls to articulate the backrest, leg rest, and tilt angles into the desired treatment position."
+            "text": "Utilize the remote controls to articulate the backrest and leg-rest angles into the desired treatment position."
           }
         },
         "how_3": {
@@ -157,7 +157,7 @@
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "",
-            "text": "Ensure the treatment area around the base and moving joints is completely clear of cables, hands, and debris prior to activating electric height or tilt adjustments."
+            "text": "Ensure the treatment area around the base and moving joints is completely clear of cables, hands, and debris prior to activating electric height adjustments."
           }
         },
         "safety_3": {
