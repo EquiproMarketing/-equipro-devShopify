@@ -17,7 +17,7 @@
         "intro_highlight": "The PDF description lists an adjustable range of 27–34 in.",
         "custom_description": "<p>Multi-Comfort Hydraulic 20200 supports facials and hair removal with adjustable positioning, a hydraulic height system and a 15° tilt.</p>",
         "subtitle": "Positioning and features for Multi-Comfort Hydraulic 20200",
-        "secondary_description": "<p>The adjustable headrest, backrest and legrest help position the client. The catalog lists 24-inch and 28-inch widths, ultra-white ultra-resistant leatherette, optional removable armrests and Color Chart A options. The existing Shopify variant selectors are preserved.</p>",
+        "secondary_description": "<p>The adjustable headrest, backrest and legrest help position the client. The catalog lists 24-inch and 28-inch widths, ultra-white ultra-resistant leatherette, optional removable armrests and Color Chart A options. Available widths and colors appear in the product selectors.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -205,7 +205,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Which widths are listed?",
-            "answer": "<p>24 inches and 28 inches. The current Shopify selectors retain all existing variants.</p>"
+            "answer": "<p>24 inches and 28 inches. Choose from the available widths and colors in the product selectors.</p>"
           }
         },
         "faq_4": {
