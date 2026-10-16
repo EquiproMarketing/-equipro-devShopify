@@ -1,0 +1,258 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "main": {
+      "type": "main-product",
+      "settings": {
+        "back_text": "Back",
+        "show_variant_selectors": true,
+        "show_color_option": true,
+        "show_size_option": true,
+        "btn_label": "ADD TO CART",
+        "show_compare_btn": false,
+        "custom_title": "Multi-Comfort Electric Height 20210",
+        "featured_product": "multi-comfort-electric-height-20210",
+        "intro_highlight": "Adjustable height of 27–34 in for treatment positioning.",
+        "custom_description": "<p>Multi-Comfort 20210 combines motorized height adjustment with an adjustable headrest and manually adjustable backrest and legrest for facials and hair removal. Its 15° tilt helps provide access to the face and neck areas.</p>",
+        "subtitle": "Positioning and features for Multi-Comfort Electric Height 20210",
+        "secondary_description": "<p>Ultra-white, ultra-resistant leatherette is offered in Color Chart A. The catalog lists 24-inch and 28-inch widths with optional removable armrests; this product’s selectors show the currently offered 24-inch White variant.</p>"
+      }
+    },
+    "main_product_characteristics_Hp7Baq": {
+      "type": "main-product-characteristics",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Motorized height",
+            "answer": "<p>Adjustable height of 27–34 in for treatment positioning.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Manual positioning",
+            "answer": "<p>An adjustable headrest, backrest and legrest support facial and depilation work.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "15° tilt",
+            "answer": "<p>The tilt system helps improve face and neck access.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "name": "Product Characteristics",
+      "settings": {
+        "accordion_heading": "Key Features for the Professional Station",
+        "show_shipping": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
+        "show_tech_table": true,
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20210</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>20210-24W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>L × 71&quot; × 26.5&quot;/33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>120 lb / 55 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>27–34 in</td></tr><tr><td class=\"feature-label\">Height adjustment</td><td>Motorized</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, ultra-resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable armrests</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
+      }
+    },
+    "banner_features": {
+      "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Motorized height",
+            "text": "Adjustable height of 27–34 in for treatment positioning."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Manual positioning",
+            "text": "An adjustable headrest, backrest and legrest support facial and depilation work."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "15° tilt",
+            "text": "The tilt system helps improve face and neck access."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
+      "settings": {
+        "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/Multi-Comfort-_20210-electric-treatment-table-clinical-exam-chair-white-professional.webp",
+        "image_position": "right",
+        "bg_color": "#a22938",
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "how_to": {
+      "type": "product-how-to",
+      "blocks": {
+        "how_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "how_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Height positioning:",
+            "text": "Use the motorized height adjustment within the listed 27–34 in range."
+          }
+        },
+        "how_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Backrest and legrest:",
+            "text": "Adjust these sections manually for the treatment."
+          }
+        },
+        "how_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Headrest and tilt:",
+            "text": "Position the headrest and use the 15° tilt as appropriate for facial and neck access."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Setup and adjustments:",
+            "text": "Follow the supplied operating instructions for 20210 before positioning the client or using its adjustment mechanisms."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Care and service:",
+            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+          }
+        }
+      },
+      "block_order": [
+        "how_header",
+        "how_1",
+        "how_2",
+        "how_3",
+        "safety_header",
+        "safety_1",
+        "safety_2"
+      ],
+      "settings": {
+        "image": "shopify://shop_images/Multi-Comfort-_20210-electric-treatment-table-clinical-exam-chair-white-professional.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "faq": {
+      "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What height range is listed for model 20210?",
+            "answer": "<p>The PDF description lists motorized height adjustment from 27 to 34 inches.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Which width is offered on this page?",
+            "answer": "<p>The current Shopify variant is 24-inch White. The PDF also lists a 28-inch catalog option.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are armrests included?",
+            "answer": "<p>Removable armrests are optional.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the backrest electric?",
+            "answer": "<p>Canada PRO V1.2 describes the backrest and legrest as manually adjustable.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
+      "settings": {
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
+      }
+    },
+    "compare_modal": {
+      "type": "product-compare-modal",
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
+    }
+  },
+  "order": [
+    "main",
+    "main_product_characteristics_Hp7Baq",
+    "banner_features",
+    "how_to",
+    "faq",
+    "compare_modal"
+  ]
+}
