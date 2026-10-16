@@ -75,21 +75,21 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Fixed-Height Framework:",
+            "title": "Fixed-Height Framework",
             "text": "The fixed working height of 29.5 inches provides a consistent treatment position."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Manual Articulation Dynamics:",
+            "title": "Manual Articulation Dynamics",
             "text": "Backrest and leg rest manual adjustments optimize working angles for Estheticians and Lash Technicians, enhancing client comfort."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Versatile Aesthetic Compatibility:",
+            "title": "Versatile Aesthetic Compatibility",
             "text": "A sleek profile with upholstery finishes from Color Chart A integrates into different treatment rooms."
           }
         }

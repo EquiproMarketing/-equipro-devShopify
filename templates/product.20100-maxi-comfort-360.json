@@ -74,21 +74,21 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Unrivaled Durability: 360° Hydraulic Swivel:",
+            "title": "Unrivaled Durability: 360° Hydraulic Swivel",
             "text": "Friction-free adjustment to ensure seamless practitioner mobility in high-volume clinics."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "15º Tilt Mechanism:",
+            "title": "15º Tilt Mechanism",
             "text": "Precision-engineered reclining system designed to improve neck area access for Estheticians and Lash Technicians, reducing lower-back tension."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Ultra-Resistant Upholstery:",
+            "title": "Ultra-Resistant Upholstery",
             "text": "Ultra-white durable leatherette that guarantees pristine hygiene in professional spa environments."
           }
         }
