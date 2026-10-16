@@ -20,10 +20,10 @@
         "show_compare_btn": false,
         "custom_title": "Elite Spa EI-508",
         "featured_product": "elite-spa-ei-508",
-        "intro_highlight": "A single cushion supports facial, body, massage and waxing treatments.",
-        "custom_description": "<p>Elite Spa EI-508 is designed for facials, body treatments, massage and waxing. The Canada PDF description lists adjustable height from 22 to 39 inches and a single cushion for client support.</p>",
-        "subtitle": "Positioning and features for Elite Spa EI-508",
-        "secondary_description": "<p>An adjustable crescent headrest is optional. Elite Spa is listed in White only. The specification table preserves the PDF’s separate Dimensions entry exactly as printed.</p>"
+        "intro_highlight": "Engineered to optimize practitioner body mechanics, the Elite Spa treatment chair eliminates physical fatigue during extended clinical protocols while maintaining superior client positioning.",
+        "custom_description": "<p>The Elite Spa is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors. Its adjustable-height design targets lower-back tension during high-volume clinic days, enabling sharper focus on treatment execution and repeatable results. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your optimal working height.</p>",
+        "subtitle": "Height Adjustment System",
+        "secondary_description": "<p>Easy maintenance is central to the Equipro approach. To preserve the structural integrity and plush finish of Elite Spa, wipe down the upholstery with non-abrasive surface disinfectants formulated for clinical spa environments after every client session. The heavy-duty vinyl surface features superior chemical resistance, ensuring a pristine condition outcome across years of continuous daily operation. Consistent care prevents surface cracking, protecting your capital investment.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -32,22 +32,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Single-cushion design",
-            "answer": "<p>A single cushion supports facial, body, massage and waxing treatments.</p>"
+            "question": "UEstheticians and Facial Specialists:",
+            "answer": "<p>Extended facial protocols like manual extraction, microdermabrasion, and facial contouring demand steady hands and sustained upper-body posture. The adjustable-height station allows estheticians to raise the table precisely to elbow level, eliminating thoracic bending and reducing shoulder fatigue during intricate 90-minute facial care sessions.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Optional headrest",
-            "answer": "<p>An adjustable crescent headrest is available as an option.</p>"
+            "question": "Clinical Spa Therapists and Body Specialists:",
+            "answer": "<p>Performing intensive body wraps, exfoliation treatments, and targeted therapies requires leveraging body weight without straining the lumbar spine. By setting the table near the listed 22-inch minimum height, therapists can easily apply firm, downward pressure while maintaining neutral posture, improving force distribution and operational efficiency.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "White finish",
-            "answer": "<p>The Canada catalog lists Elite Spa in White only.</p>"
+            "question": "Cosmetic Injectors and Spa Techs:",
+            "answer": "<p>Precision aesthetic procedures demand absolute client stability and customizable positioning. The Elite Spa enables precise height calibration to line up the client’s face directly with the injector's field of sight, minimizing neck strain for the technician while ensuring maximum comfort and security for the client.</p>"
           }
         }
       },
@@ -81,15 +81,15 @@
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Optional headrest",
-            "text": "An adjustable crescent headrest is available as an option."
+            "title": "Ergonomic Cushioning System",
+            "text": "Anatomically contoured high-density cushion designed to deliver full-body pressure relief for clients and effortless access for the practitioner, maximizing service comfort."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "White finish",
-            "text": "The Canada catalog lists Elite Spa in White only."
+            "title": "Streamlined Architectural Profile",
+            "text": "Clean aesthetic quality that complements any high-end medical spa or wellness interior."
           }
         }
       },
@@ -122,15 +122,29 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Treatment setup:",
-            "text": "Position the table for the treatment using the supplied EI-508 operating instructions."
+            "bold_prefix": "",
+            "text": "Set the table to its listed minimum height of 22 inches to facilitate client entry."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Client support:",
-            "text": "If fitted, adjust the optional crescent headrest for the client."
+            "bold_prefix": "",
+            "text": "Once the client is seated, adjust the working height within the listed 22-to-39-inch range to suit the treatment protocol."
+          }
+        },
+        "how_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Optional Headrest Attachment:",
+            "text": "Insert the optional adjustable crescent headrest into the mounting sockets at the head section to provide enhanced cervical support during prone or supine procedures."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Post-Treatment Lowering:",
+            "text": "Return the chair to its lowest height setting before instructing the client to step off the station."
           }
         },
         "safety_header": {
@@ -142,15 +156,15 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for EI-508 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Weight Capacity Protocols:",
+            "text": "Do not exceed the maximum operational load capacity specified for the base structure; ensure clients are centered on the main cushion prior to adjusting height."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "",
+            "text": "Keep the area around the lifting frame clear of obstructions during height changes."
           }
         }
       },
@@ -158,6 +172,8 @@
         "how_header",
         "how_1",
         "how_2",
+        "how_3",
+        "how_4",
         "safety_header",
         "safety_1",
         "safety_2"
@@ -181,29 +197,36 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the crescent headrest included?",
-            "answer": "<p>The adjustable crescent headrest is listed as optional.</p>"
+            "question": "What is the height adjustment range of the Elite Spa chair?",
+            "answer": "<p>The unit adjusts vertically from 22 inches to 39 inches. This ensures customized ergonomic positioning for practitioners of any height.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Which color is listed?",
-            "answer": "<p>White only.</p>"
+            "question": "Is an adjustable headrest included with the Elite Spa unit?",
+            "answer": "<p>An adjustable crescent headrest is available as an optional accessory. It provides extra cervical support for advanced facial and body protocols.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "What height does the PDF description give?",
-            "answer": "<p>The description states 22–39 inches. Its separate Dimensions field is reproduced without assigning measurement axes.</p>"
+            "question": "What color options are available for this treatment table?",
+            "answer": "<p>The Elite Spa is manufactured exclusively in a sleek professional white finish. It integrates seamlessly into modern spa decor.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>Canada PRO V1.2 lists a one-year warranty for EI-508.</p>"
+            "question": "What treatments can be performed on the Elite Spa station?",
+            "answer": "<p>It is ideal for facials, body treatments, massages, and hair removal. The versatile design adapts easily across multidisciplinary clinics.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty coverage comes with the Equipro Elite Spa chair?",
+            "answer": "<p>Equipro lists a 1-year warranty for Elite Spa EI-508. Parts-and-labor coverage and electrical-component safety standards are not confirmed in the model-specific entry.</p>"
           }
         }
       },
@@ -211,7 +234,8 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

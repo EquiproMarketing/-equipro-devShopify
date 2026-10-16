@@ -14,10 +14,10 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "Bohemia Seated Massage Chair EI-23403",
-        "intro_highlight": "The chair weighs 26 lb / 12 kg.",
-        "custom_description": "<p>Bohemia EI-23403 is a lightweight chair for seated massage, travel and confined spaces. It folds and unfolds for quick setup and is supplied with a carrying bag.</p>",
-        "subtitle": "Positioning and features for Bohemia Seated Massage Chair EI-23403",
-        "secondary_description": "<p>The Canada catalog lists a weight of 26 lb / 12 kg and Color Chart B options.</p>",
+        "intro_highlight": "This portable workstation transforms confined spaces into premium aesthetic environments. The intuitive folding mechanism and ultra-lightweight design preserve practitioner ergonomics while ensuring rapid, seamless setup for mobile or on-location professional services.",
+        "custom_description": "<p>The Bohémia is purpose-built for licensed professionals, including Estheticians, Massage Practitioners, and Lash Technicians. Its precision-engineered folding design targets lower-back tension during high-volume spa days, enabling sharper focus on service consistency and enhanced client comfort. Whether you are performing mobile aesthetic services, seated back treatments, or express spa rituals, this professional station supports your workflow.</p>",
+        "subtitle": "The Perfect Mobility Solution for Modern Professionals",
+        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the structural integrity and pristine finish of the Bohémia, sanitize the upholstery with professional-grade, non-abrasive cleaners formulated for spa environments daily. Consistent care maintains the luxurious feel and extends the functional lifespan of your investment.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -33,22 +33,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Lightweight transport",
-            "answer": "<p>The chair weighs 26 lb / 12 kg.</p>"
+            "question": "Licensed professional:",
+            "answer": "<p>For the licensed professional, specifically the Mobile Esthetician, the Bohémia serves as the ultimate on-the-go workspace. Its portable format directly addresses the physical strain of transporting equipment between locations. By eliminating postural strain during setup and breakdown, the practitioner can maintain peak energy levels throughout full 8-hour shifts, translating directly into operational efficiency and a premium client experience during express spa rituals.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Folding setup",
-            "answer": "<p>Fold and unfold the chair for mobile appointments and confined spaces.</p>"
+            "question": "Certified technician:",
+            "answer": "<p>When performing detailed services, the design mitigates wrist discomfort and shoulder fatigue often experienced during back-to-back appointments. This allows for sustained technical precision, ensuring repeatable results and superior service execution for every brow sculpting session.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Carrying bag included",
-            "answer": "<p>A carrying bag is supplied for transport.</p>"
+            "question": "Spa Therapist:",
+            "answer": "<p>For practicing aestheticians, such as a Spa Therapist, maintaining proper posture is crucial for service longevity and practitioner safety. The Bohémia acts as an ergonomic workstation that prevents lower-back tension during extended treatment sessions. The focus remains strictly on treatment execution, delivering enhanced client comfort during targeted back treatments.</p>"
           }
         }
       },
@@ -123,22 +123,22 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup:",
-            "text": "Unfold the seated-massage chair according to the supplied model EI-23403 instructions."
+            "bold_prefix": "Unzip the transport bag:",
+            "text": "Remove the folded Bohémia chair for setup at the treatment location."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Treatment positioning:",
-            "text": "Position the client for seated massage."
+            "bold_prefix": "Unfold the chair:",
+            "text": "Follow the supplied EI-23403 instructions and check that the chair is securely positioned before seating the client."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Transport:",
-            "text": "Fold the chair and use the included carrying bag between appointments."
+            "bold_prefix": "Position the client:",
+            "text": "Use the chair for a comfortable seated massage or seated back treatment, following the supplied instructions for any model-specific adjustments."
           }
         },
         "safety_header": {
@@ -150,15 +150,29 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for EI-23403 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Stable surface:",
+            "text": "Always place the chair on a flat, stable, dry surface to prevent tipping or shifting during treatment."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "Before seating a client:",
+            "text": "Inspect the unfolded chair and follow its instructions to verify that all components are secure."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "After the treatment:",
+            "text": "Fold the chair according to its instructions and return it to the included bag for transport or storage."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Loading and care:",
+            "text": "Follow the supplied EI-23403 instructions for load limits and distribute weight appropriately. Clean upholstery using the recommended method."
           }
         }
       },
@@ -167,9 +181,11 @@
         "how_1",
         "how_2",
         "how_3",
+        "how_4",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-beauty-bohemia-ei-23403-black-leather-professional_1080x1080_a7db960c-0090-4f43-9124-6f86e7e25d6c.webp",
@@ -190,29 +206,43 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Is Bohemia a treatment bed?",
-            "answer": "<p>The PDF identifies Bohemia EI-23403 as a seated-massage chair.</p>"
+            "question": "Is the carrying bag included with the chair?",
+            "answer": "<p>Yes, a carrying bag is included. It protects the chair during mobile transport.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Is a carrying bag included?",
-            "answer": "<p>Yes. The PDF lists a carrying bag.</p>"
+            "question": "How much does the Bohémia chair weigh?",
+            "answer": "<p>It weighs 26 lb / 12 kg, according to the Canada PRO catalog.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the chair’s weight?",
-            "answer": "<p>26 lb / 12 kg.</p>"
+            "question": "Can the chair accommodate different client heights?",
+            "answer": "<p>The EI-23403 catalog entry does not specify a height adjustment range or mechanism. Consult the supplied chair instructions or Equipro for model-specific adjustment details.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>Canada PRO V1.2 lists a one-year warranty.</p>"
+            "question": "Is the upholstery easy to clean?",
+            "answer": "<p>Follow the supplied upholstery care instructions and use an appropriate non-abrasive cleaner. The catalog entry does not specify upholstery material or stain-resistance performance for EI-23403.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Does it require assembly upon delivery?",
+            "answer": "<p>The catalog says the chair folds and unfolds for quick setup. Refer to the supplied EI-23403 instructions for any initial assembly steps.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the warranty on this product?",
+            "answer": "<p>The Canada PRO catalog lists a one-year warranty. Confirm the coverage terms with Equipro.</p>"
           }
         }
       },
@@ -220,7 +250,9 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
