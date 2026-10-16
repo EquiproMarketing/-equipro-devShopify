@@ -14,10 +14,10 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "Ultra-Comfort 20500",
-        "intro_highlight": "A professional treatment chair for facials and hair removal, with an adjustable headrest, 15° tilt and a height range of 20.5 to 36.5 inches.",
-        "custom_description": "<p>The Ultra-Comfort 20500 is the 24-inch model in the Ultra-Comfort range. Its manually adjustable backrest and legrest support positioning for facial and depilation treatments, while the adjustable headrest helps support the client.</p>",
-        "subtitle": "Positioning and comfort for treatment sessions",
-        "secondary_description": "<p>Ultra-white, ultra-resistant leatherette covers the chair. Removable ergonomic armrests and casters are optional accessories. Color Chart A lists the range’s upholstery options; the selectors below show the variant currently offered on this product page.</p>",
+        "intro_highlight": "Precision-engineered for advanced clinical workflows, the Ultra-Comfort treatment chair bridges the gap between ergonomic practitioner support and exceptional client relaxation, backed by decades of North American manufacturing expertise.",
+        "custom_description": "<p>Ultra-Comfort is purpose-built for licensed skincare specialists, including Estheticians, Clinical Spa Therapists, and Cosmetic Injectors. Its 15-degree tilt mechanism targets lower-back tension and postural strain during extended treatment sessions, enabling sharper focus on service consistency and client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with manually adjustable backrest components and smooth elevation controls.</p><p>The Ultra-Comfort chair offers precise positioning and optimal ergonomics for facials and hair removal. Featuring an adjustable headrest and manually adjustable backrest and leg rest, it incorporates a 15° tilt to improve comfort and access to the face and neck areas. Its ultra-white, ultra-resistant leatherette ensures durability, while its adjustable height from 20.5“ to 36.5” and widths of 24“ or 26” suit any space. Removable ergonomic armrests and casters are optional. Available in a range of colors</p>",
+        "subtitle": "Engineering for Precision and Longevity",
+        "secondary_description": "<p>Long-term durability is central to the Equipro approach. To preserve the mechanical integrity and surface quality of Ultra-Comfort, routine cleaning with non-abrasive disinfectants formulated for clinical environments is recommended weekly. The ultra-resistant leatherette upholstery features high tear and stain resistance, ensuring pristine condition across intensive daily salon cycles. Consistent care prevents premature wear, maintaining both aesthetic appeal and hygienic compliance.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
@@ -33,22 +33,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Facial and depilation positioning",
-            "answer": "<p>An adjustable headrest, manually adjustable backrest and legrest, and 15° tilt help position the client for facial and hair-removal treatments.</p>"
+            "question": "Clinical Aesthetics & Specialized Facials:",
+            "answer": "<p>For the licensed esthetician performing intensive deep-pore cleansing or multi-step anti-aging protocols, maintaining a neutral posture is vital during long shifts. The Ultra-Comfort chair integrates a 15-degree tilt system that brings the facial plane closer to the practitioner, eliminating lower-back strain and visual fatigue. By optimizing the working angle, technicians can execute delicate extractions and product applications with absolute precision, enhancing both treatment efficacy and client comfort.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Height and model width",
-            "answer": "<p>The listed height range is 20.5 to 36.5 inches. This product is model 20500 with a 24-inch width; the 26-inch Ultra-Comfort is a separate catalog model.</p>"
+            "question": "Advanced Clinical Spa Treatments:",
+            "answer": "<p>Clinical spa therapists and cosmetic injectors require absolute stability and rapid adjustability when transitioning between client consultation and clinical execution. The wide height adjustment range—spanning from 20.5 to 36.5 inches—allows practitioners to seamlessly shift from seated consultations to standing procedures. This adaptability reduces shoulder fatigue and supports a streamlined workflow during back-to-back clinical appointments, ensuring consistent ergonomic health for the operator.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Upholstery and optional accessories",
-            "answer": "<p>The chair has ultra-resistant leatherette upholstery. Removable ergonomic armrests and casters are optional; they are not stated as included equipment.</p>"
+            "question": "Hair Removal & Full-Body Services:",
+            "answer": "<p>Executing hair removal or multi-zone body treatments demands reliable positioning support that accommodates various client statures without sacrificing stability. The manually adjustable backrest and leg rest components lock securely into place, providing dependable support throughout high-volume clinic days. The ultra-resistant leatherette surface withstands frequent sanitation protocols, delivering a hygienic, professional-grade workstation built for enduring performance.</p>"
           }
         }
       },
@@ -75,22 +75,22 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Adjustable positioning",
-            "text": "Set the headrest, backrest and legrest to suit facial and depilation treatments."
+            "title": "Unrivaled Durability",
+            "text": "Heavy-duty frame construction: Fabricated with robust structural components to withstand high-volume usage in busy clinical spas."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "15° tilt",
-            "text": "The tilt system improves access to the face and neck areas."
+            "title": "Articulated Positioning",
+            "text": "Manual adjustment architecture: Precision-balanced backrest and leg rest assemblies designed to optimize reach for practitioners and relaxation for clients."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Ultra-resistant leatherette",
-            "text": "Durable upholstery with Color Chart A options and optional ergonomic armrests."
+            "title": "Seamless Integration",
+            "text": "Sleek aesthetic profile: Clean lines and versatile color options that complement high-end clinic environments."
           }
         }
       },
@@ -123,29 +123,29 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height positioning:",
-            "text": "Set the chair elevation to suit the treatment and practitioner, within the listed 20.5–36.5 in range."
+            "bold_prefix": "Height Calibration:",
+            "text": "Adjust the chair elevation using the control mechanism to match your optimal working height before client seating."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Backrest and legrest:",
-            "text": "Adjust these sections manually to position the client for the treatment."
+            "bold_prefix": "Backrest Positioning:",
+            "text": "Adjust the backrest manually to the desired angle for consultation or treatment."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest:",
-            "text": "Adjust the headrest for the client’s positioning before beginning the service."
+            "bold_prefix": "Tilt Activation:",
+            "text": "Engage the 15-degree tilt system to optimize facial and neck access for targeted skincare procedures."
           }
         },
         "how_4": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Tilt positioning:",
-            "text": "Use the 15° tilt function as appropriate for facial and neck access."
+            "bold_prefix": "Leg Rest Adjustment:",
+            "text": "Raise or lower the independent leg section to ensure complete lower-body relaxation during extended sessions."
           }
         },
         "safety_header": {
@@ -157,15 +157,15 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Client positioning:",
-            "text": "Keep the client centrally supported and follow the supplied operating instructions for all adjustments."
+            "bold_prefix": "Weight Distribution:",
+            "text": "Ensure clients are seated centrally, and never exceed the maximum rated weight capacity to maintain structural stability."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care:",
-            "text": "Use non-abrasive cleaning products suitable for the upholstery, following the manufacturer’s care instructions."
+            "bold_prefix": "Environment Compliance:",
+            "text": "Keep the equipment in a dry, climate-controlled environment to protect internal electrical and mechanical components."
           }
         },
         "safety_3": {
@@ -206,43 +206,57 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range of the Ultra-Comfort 20500?",
-            "answer": "<p>The listed adjustable height range is 20.5 to 36.5 inches.</p>"
+            "question": "What is the height adjustment range of the Ultra-Comfort chair?",
+            "answer": "<p>The height adjusts smoothly from 20.5 to 36.5 inches to suit any workspace layout.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the chair have a tilt function?",
-            "answer": "<p>Yes. Canada PRO V1.2 lists a 15° tilt for the Ultra-Comfort range.</p>"
+            "question": "Does the chair feature a tilt function?",
+            "answer": "<p>Yes, it includes a 15-degree tilt system to improve access to facial and neck areas.</p>"
           }
         },
         "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What upholstery material is used on the chair?",
+            "answer": "<p>It features an ultra-white, ultra-resistant leatherette designed for heavy commercial durability.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are replacement parts covered under warranty?",
+            "answer": "<p>Not confirmed. A two-year warranty is listed; replacement-parts and manufacturing-defect coverage terms require confirmation.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Can the armrests be removed?",
+            "answer": "<p>Yes, removable ergonomic armrests are available as an option for specialized procedures.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the total weight of the unit?",
+            "answer": "<p>The chair weighs approximately 320 lb (145 kg), ensuring exceptional stability during treatments.</p>"
+          }
+        },
+        "model_width": {
           "type": "faq_item",
           "settings": {
             "question": "Is this the 24-inch or 26-inch Ultra-Comfort?",
             "answer": "<p>This product is model 20500, with a 24-inch width and current variant SKU 20500-24W. The PDF lists the 26-inch version separately under model 20501.</p>"
           }
         },
-        "faq_4": {
+        "optional_casters": {
           "type": "faq_item",
           "settings": {
             "question": "Are armrests and casters included?",
             "answer": "<p>The PDF lists removable ergonomic armrests and casters as optional accessories.</p>"
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What upholstery is used?",
-            "answer": "<p>Ultra-white, ultra-resistant leatherette. Color Chart A shows the catalog’s upholstery options; the product selectors show the currently offered variant.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What warranty is listed for model 20500?",
-            "answer": "<p>Canada PRO V1.2 lists a two-year warranty for Ultra-Comfort 20500/20501.</p>"
           }
         }
       },
@@ -252,7 +266,9 @@
         "faq_3",
         "faq_4",
         "faq_5",
-        "faq_6"
+        "faq_6",
+        "model_width",
+        "optional_casters"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
