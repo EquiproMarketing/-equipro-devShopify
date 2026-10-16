@@ -13,7 +13,7 @@ Single progress checklist for this workstream. Updated 2026-10-16. Active theme 
 - [x] Complete desktop (1280 px) and mobile (390 px) review captures and content/identity checks; no horizontal overflow.
 - [x] Pilot structure and visual layout approved by the user; identity, control and currency questions remain open.
 - [ ] Obtain explicit approval before any product-template assignment change.
-- [ ] After pilot approval: batch 20210, Murano, Royal and Divine; then other clearly mapped chairs. Keep Pedicure and Infinity blocked on the identity questions below. Routine edits inside approved batches do not require individual approval.
+- [x] Complete 14 confirmed-model pages in four small batches after pilot approval. Three ambiguous catalog records remain held; no specifications transferred between them.
 
 Comparison expansion, filters and cart testing are deferred. The restored comparison interface/four-product selection, all existing purchase/quote rules, prior specification corrections and unrelated work are preserved. No records will be merged/deleted.
 
@@ -57,7 +57,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-comfort-pedicure-20502).
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Inventoried; implementation deferred until pilot approval and identity confirmation.
+  - Implementation status: Inventoried; implementation held for identity confirmation; visual structure is approved.
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
   - Unresolved questions: Handle says 20500; catalog title and SKU say 20502. PDF p. 9 covers 20500/20501, not 20502. Squarespace category alt text says 20501 despite URL 20502. Do not transfer the 20500 specifications.
   - Review URL: [ultra-comfortprofessional-treatment-pedicure-chair-20500](https://equipro-dev.myshopify.com/products/ultra-comfortprofessional-treatment-pedicure-chair-20500).
@@ -169,25 +169,29 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
 
   - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/natura-spa-ei-509-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/natura-spa-ei-509-standardized-mobile.png).
 
-- [ ] **Bohemia EI-23403** — `bohemia-ei-23403`
+- [x] **Bohemia EI-23403** — `bohemia-ei-23403`
   - Product ID: `8744552169645`; SKU(s): `EI-23403W`.
   - Assigned template: `product.23403-bohemia.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/boutique/p/bohemia-ei-23403).
-  - Structural gaps: Reference section order already exists. Product-specific applicability, data and media need a later audit; no structural replacement now.
-  - Implementation status: Existing six-section structure inventoried; portable family kept separate.
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Portable seated-massage chair: applicable content must be audited separately; legacy source URL from prior catalog inventory not revalidated in this pass.
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/portables/bohemia); primary technical entry: Canada PRO V1.2 p. 12.
+  - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
+  - Implementation status: Batch 4 complete and deployed to active theme 157851386029; template `product.23403-bohemia.json`. **Visible at normal URL**; assignment unchanged.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF p. 12 and Squarespace print 28 × 72 × 24/34 H under Dimensions, despite the seated-chair identity. Preserve the literal Dimensions entry; do not infer a 24–34 seat-height range or Calypso-style adjustable backrest. Squarespace adds aluminum, locks and 300 lb load capacity unsupported by this PDF entry; omitted/Not confirmed. Applicability: Portable seated massage: chair-specific folding/setup content applies; bed-style backrest, electric height, 15° tilt and full-body treatment instructions do not apply and are omitted.
   - Review URL: [bohemia-ei-23403](https://equipro-dev.myshopify.com/products/bohemia-ei-23403).
 
-- [ ] **Calypso EI-23402** — `calypso-ei-23402`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/bohemia-ei-23403-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/bohemia-ei-23403-standardized-mobile.png).
+
+- [x] **Calypso EI-23402** — `calypso-ei-23402`
   - Product ID: `8744552235181`; SKU(s): `EI-23402`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/boutique/p/calypso-ei-23402).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Additional inconsistent page inventoried; portable family kept separate. Intended review template: `product.23402-calypso.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Portable table: do not assume treatment-chair instructions or specifications; legacy source URL from prior catalog inventory not revalidated in this pass.
-  - Review URL: [calypso-ei-23402](https://equipro-dev.myshopify.com/products/calypso-ei-23402).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/portables/calypso); primary technical entry: Canada PRO V1.2 p. 12.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 4 complete and deployed to active theme 157851386029; template `product.23402-calypso.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF Dimensions order 28 × 72 × 24/34.5 H is retained; Squarespace reorders 72/28 and adds L/W labels. No motorized-chair instructions or comparisons are added. Applicability: Portable table: folding/locking and manual positioning content applies; motorized controls and chair-swivel sections do not apply and are omitted.
+  - Review URL: [calypso-ei-23402](https://equipro-dev.myshopify.com/products/calypso-ei-23402?preview_theme_id=157851386029&view=23402-calypso).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/calypso-ei-23402-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/calypso-ei-23402-standardized-mobile.png).
 
 - [x] **Maxi-Comfort 360º 20100** — `maxi-comfort-360`
   - Product ID: `8744552005805`; SKU(s): `20100W`.
@@ -249,7 +253,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
 
   - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/22100-poly-comfort-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/22100-poly-comfort-standardized-mobile.png).
 
-## Delivery verification and review materials
+## Original pilot verification and review materials (historical)
 
 - JSON parsed successfully; all section/block types and block setting IDs match the existing section schemas.
 - Theme Check on the fresh active-theme stage: 24 existing errors elsewhere; zero findings in `product.20500-ultra-comfort.json`. No shared theme code changed.
@@ -258,7 +262,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
 - All six section types appear in reference order. No Aero/21200 or other model identity appears in the visible pilot copy. Desktop and 390 px mobile page widths equal the viewport (no horizontal overflow); mobile table width is 338 px and labels remain visible.
 - Keyboard Enter opens/closes the native characteristics and FAQ accordions; answer visibility verified. The existing first-open FAQ behavior remains.
 - No cart actions/tests, filters or comparison expansion were performed. Shared comparison, cart, purchase/quote and prior corrected template files are untouched.
-- Deployment is preview-only: the product still uses the default template. Visual approval and any assignment change remain separate pending decisions.
+- Deployment is preview-only: the product still uses the default template. Visual structure is now approved; template assignment remains pending.
 
 Review captures (actual browser screenshots):
 
@@ -270,14 +274,56 @@ Review captures (actual browser screenshots):
 - [Mobile specification table](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-20500-mobile-table.png)
 - [Mobile keyboard-open FAQ](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-20500-mobile-faq.png)
 
-## Decisions awaiting review
+## Unresolved decisions — exact questions and source evidence
 
-1. Approve the 20500 pilot’s desktop/mobile design before any batch implementation.
-2. Decide whether/when to assign its new template; this changes the live page and requires explicit approval.
-3. Confirm canonical Infinity identities and intended catalog treatment of both records; neither is included in comparison or merged/deleted.
-4. Confirm 20502 Pedicure’s exact model/version against the Squarespace 20501/20502 conflicts; the PDF’s 20500/20501 specifications are not automatically applicable.
-5. Confirm exact 20500 height-control/motor configuration and whether catalog CAD versus current store USD pricing is intentional. These do not block structural pilot review.
+Source hierarchy is settled: Canada PRO V1.2 governs technical values. These questions do not request approval to follow that hierarchy. Unsupported hardware remains **Not confirmed**. Source dimensions retain their printed labels and order.
 
+1. **Which exact model/version is the Pedicure record intended to represent?** Shopify handle ends `20500`, title says `20502`, SKU is `20502-24W` (24 in). [Squarespace Pedicure](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-comfort-pedicure-20502) has a 20502 URL but technical table “Model SKU 20500 (Ultra-Comfort Pedicure)”, width 26 in, height 21–35 in and lowering to 19 in; category image alt text says 20501. PDF p. 9 covers 20500/20501, without a 20502 entry. Record held unchanged.
+2. **Are the two Infinity records distinct products or duplicates, and which is canonical?** `ultra-comfort-20500-gm25t` has title Infinity EI-502, SKU `Ei-502W`, USD 3,200, but Ultra-Comfort description (20.5–36.5 in; 24/26 in). `ei-502-infinity` has no SKU, USD 0, and Infinity description (21–39 in). PDF p. 11 and [Squarespace Infinity](https://seahorse-llama-gkdh.squarespace.com/electrics/infinity-ei-502) identify EI-502 as 21–39 in, Dimensions 28 × 69 × 21/39 H; PDF price CAD 3,200. Both records remain unchanged and excluded from comparison. No purchase eligibility inferred from zero price.
+3. **What controller and functions are verified for 20500 specifically?** PDF p. 9: manually adjustable backrest/legrest, height 20.5–36.5 in. [Squarespace Ultra-Comfort](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-confort) table identifies 20501/26 in and claims electric height/backrest/legrest/tilt, proximity-sensor pedal and lowering to 19 in. Exact 20500 height controller/motor count remain Not confirmed.
+4. **Is EI-500 supplied with a control lever or electric remote, and which movements does it operate?** PDF p. 10 says control lever. [Squarespace EI-500](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-ei-500) claims remote electric height/backrest/legrest/tilt. PDF wording retained; exact hardware Not confirmed.
+5. **Which movements are motorized on Spa-Comfort 20300?** PDF p. 9 describes motorized height and manual articulation/legrest (French lists manual backrest/legrest). [Squarespace 20300](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-20300) claims electric handset control of height/backrest/legrest/15° tilt. Exact controller and additional motorization remain Not confirmed.
+6. **What exact height mechanism is fitted to Hydro-Comfort 21100?** PDF p. 9 gives 22.5–34.5 in without control hardware. [Squarespace Hydro](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/hydro-comfort) claims hydraulic foot pump plus air-lift and 28.5–33.5 in, which matches Aero’s range. PDF height retained; mechanism Not confirmed.
+7. **Can the manufacturer confirm the controllers and conflicting operating ranges for EI-508/EI-509?** PDF p. 11 EI-508 description: 22–39 in; separate Dimensions: 31 × 76 × 16.5 × 40 (four measurements, no guessed axes). [Squarespace Elite](https://seahorse-llama-gkdh.squarespace.com/electrics/elite-spa) claims electric height 16.5–40 in. EI-509 PDF: 22–39 in and Dimensions 28 × 72 × 22/39 H; [Squarespace Natura](https://seahorse-llama-gkdh.squarespace.com/electrics/natura-spa) claims remote electric height/backrest/legrest and 23.5–33 in. PDF values retained by label; exact controls Not confirmed.
+8. **Are the printed 28 × 72 × 24/34 H dimensions intended for seated chair EI-23403?** PDF p. 12 and [Squarespace Bohemia](https://seahorse-llama-gkdh.squarespace.com/portables/bohemia) print those Dimensions, while identifying a seated massage chair weighing 26 lb / 12 kg. Literal PDF Dimensions retained; no seat-height interpretation. Source-only backrest/frame/300 lb claims are not transferred from Calypso-like text.
+9. **Should current USD pricing remain, or should an approved CAD pricing/conversion policy replace it?** All current store prices are USD; Canada PRO prices are CAD. Examples: 20500 USD 4,350 vs PDF p. 9 CAD 4,350; 20101 USD 2,200 vs PDF p. 8 CAD 2,300; 20200 28 in USD 1,895 vs PDF p. 8 CAD 1,995 (24 in CAD 1,895). All live prices unchanged.
+10. **What SKUs belong to the variants without SKUs?** Multi-Comfort 20200 has seven 28-inch color variants without SKUs (White, Black, Navy, Dove, Charcoal, Sand, Oyster), currently USD 1,895 each. Poly-Comfort 22100 has six non-White variants without SKUs; White is `22100W`. PDF pp. 8/10 names models and Color Chart A, without per-color SKU mapping. Variants unchanged.
+11. **Which completed templates should be assigned, and when?** The 10 new pages below plus the approved 20500 pilot await assignment approval. Maxi-Comfort 20100 still points to missing `SKU00001-maxi-comfort-360`; the completed correct template is `20100-maxi-comfort-360`. No missing-suffix workaround or assignment mutation performed.
+
+Outstanding catalog items outside this rollout remain unchanged: TM-3 Mini 51103 versus 51103-M unresolved; Heating Boots missing image; Infinity conflicting identities; Duo-Pil Precision exclusion pending business rule. Manicure/make-up families remain separate.
+
+## Current delivery verification
+
+- 14 newly standardized confirmed-model pages, plus the previously approved 20500 pilot: 15 completed entries; three identity-held records. Aero remains the unchanged reference.
+- All 14 templates parse and match active section/block schemas. Final Theme Check: 24 existing errors elsewhere, zero findings in these 14 templates.
+- All deployed template JSON read back from active theme 157851386029 matches repository content. Only targeted product JSON templates uploaded; no shared Liquid/CSS/assets, default template, cart or comparison code changed.
+- All 14 desktop 1280 px and mobile 390 px pages verified: expected heading/model/Dimensions, six sections in approved order, displayed images loaded, no horizontal overflow. Existing main image, prices, variant options/selections, disabled purchase state and Compare visibility matched the pre-change pages.
+- Native characteristics/FAQ keyboard Enter behavior verified on Bohemia; existing pilot keyboard checks retained. No cart actions/testing, filter changes or comparison expansion.
+- Shopify removed Bohemia’s unused legacy `modal_title` setting, absent from its schema/Liquid. Effective comparison configuration, opening behavior and visible interface remain unchanged.
+- All assignments, product records, images, variants and prices unchanged. No switch or publication of a different theme.
+
+## Completed pages — assignment visibility
+
+Visible at normal URLs (existing assigned templates updated in place):
+
+- [Maxi-Comfort Pedicure 360º 20101](https://equipro-dev.myshopify.com/products/maxi-confort-pedicure-360) — `20101-maxi-comfort-360`.
+- [Multi-Comfort Hydraulic 20200](https://equipro-dev.myshopify.com/products/20200-multi-comfort) — `20200-multi-comfort`.
+- [Poly-Comfort 22100](https://equipro-dev.myshopify.com/products/22100-poly-comfort) — `22100-poly-comfort`.
+- [Bohemia Seated Massage Chair EI-23403](https://equipro-dev.myshopify.com/products/bohemia-ei-23403) — `23403-bohemia`.
+
+Completed templates requiring assignment approval; these links explicitly use `view` on the active theme:
+
+- [Multi-Comfort Electric Height 20210](https://equipro-dev.myshopify.com/products/multi-comfort-electric-height-20210?preview_theme_id=157851386029&view=20210-multi-comfort-electric-height) — `20210-multi-comfort-electric-height`; current `product.json`.
+- [Murano EI-500](https://equipro-dev.myshopify.com/products/ei-500-murano?preview_theme_id=157851386029&view=ei-500-murano) — `ei-500-murano`; current `product.json`.
+- [Royal EI-501](https://equipro-dev.myshopify.com/products/ei-501-royal?preview_theme_id=157851386029&view=ei-501-royal) — `ei-501-royal`; current `product.json`.
+- [Divine EI-504](https://equipro-dev.myshopify.com/products/ei-504-divine?preview_theme_id=157851386029&view=ei-504-divine) — `ei-504-divine`; current `product.json`.
+- [Spa-Comfort 20300](https://equipro-dev.myshopify.com/products/spa-comfort-20300?preview_theme_id=157851386029&view=20300-spa-comfort) — `20300-spa-comfort`; current `product.json`.
+- [Elite Spa EI-508](https://equipro-dev.myshopify.com/products/elite-spa-ei-508?preview_theme_id=157851386029&view=ei-508-elite-spa) — `ei-508-elite-spa`; current `product.json`.
+- [Natura Spa EI-509](https://equipro-dev.myshopify.com/products/natura-spa-ei-509?preview_theme_id=157851386029&view=ei-509-natura-spa) — `ei-509-natura-spa`; current `product.json`.
+- [Maxi-Comfort 360º 20100](https://equipro-dev.myshopify.com/products/maxi-comfort-360?preview_theme_id=157851386029&view=20100-maxi-comfort-360) — `20100-maxi-comfort-360`; current `product.SKU00001-maxi-comfort-360.json`.
+- [Hydro-Comfort 21100](https://equipro-dev.myshopify.com/products/21100-hydro-comfort?preview_theme_id=157851386029&view=21100-hydro-comfort) — `21100-hydro-comfort`; current `product.json`.
+- [Calypso Portable Table EI-23402](https://equipro-dev.myshopify.com/products/calypso-ei-23402?preview_theme_id=157851386029&view=23402-calypso) — `23402-calypso`; current `product.json`.
+- [Approved Ultra-Comfort 20500 pilot](https://equipro-dev.myshopify.com/products/ultra-comfort-20500?preview_theme_id=157851386029&view=20500-ultra-comfort) — `20500-ultra-comfort`; current default.
 
 ## Approved batch deployment log
 
@@ -288,3 +334,5 @@ Fresh complete active-theme backup before these batches: `equipro-before-approve
 - Batch 2: Spa-Comfort 20300, Elite Spa EI-508, Natura Spa EI-509, Maxi-Comfort 360º 20100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
 
 - Batch 3: Maxi-Comfort Pedicure 360º 20101, Multi-Comfort Hydraulic 20200, Hydro-Comfort 21100, Poly-Comfort 22100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
+
+- Batch 4: Bohemia Seated Massage Chair EI-23403, Calypso Portable Table EI-23402. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
