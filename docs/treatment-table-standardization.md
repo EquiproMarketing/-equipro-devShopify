@@ -11,7 +11,7 @@ Single progress checklist for this workstream. Updated 2026-10-16. Active theme 
 - [x] Prepare Ultra-Comfort 20500 using the existing shared sections; no shared Liquid, CSS, cart or comparison changes.
 - [x] Deploy only the pilot JSON template to active theme 157851386029 and verify read-back; parsed JSON content matches exactly.
 - [x] Complete desktop (1280 px) and mobile (390 px) review captures and content/identity checks; no horizontal overflow.
-- [ ] Obtain the user’s visual pilot approval before implementing the remaining products.
+- [x] Pilot structure and visual layout approved by the user; identity, control and currency questions remain open.
 - [ ] Obtain explicit approval before any product-template assignment change.
 - [ ] After pilot approval: batch 20210, Murano, Royal and Divine; then other clearly mapped chairs. Keep Pedicure and Infinity blocked on the identity questions below. Routine edits inside approved batches do not require individual approval.
 
@@ -47,7 +47,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-confort).
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Pilot template deployed for review; desktop/mobile verification complete; awaiting visual approval. Intended review template: `product.20500-ultra-comfort.json` (not an approved assignment).
+  - Implementation status: Pilot template deployed for review; desktop/mobile verification complete; visually approved; assignment remains unchanged. Intended review template: `product.20500-ultra-comfort.json` (not an approved assignment).
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Pilot source, desktop/mobile, image and keyboard checks passed below.
   - Unresolved questions: Exact 20500/24-inch identity; source control details conflict with PDF. Store USD vs Canada catalog CAD.
   - Review URL: [ultra-comfort-20500](https://equipro-dev.myshopify.com/products/ultra-comfort-20500?preview_theme_id=157851386029&view=20500-ultra-comfort).
@@ -62,35 +62,41 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Unresolved questions: Handle says 20500; catalog title and SKU say 20502. PDF p. 9 covers 20500/20501, not 20502. Squarespace category alt text says 20501 despite URL 20502. Do not transfer the 20500 specifications.
   - Review URL: [ultra-comfortprofessional-treatment-pedicure-chair-20500](https://equipro-dev.myshopify.com/products/ultra-comfortprofessional-treatment-pedicure-chair-20500).
 
-- [ ] **Multi-Comfort 20210** — `multi-comfort-electric-height-20210`
+- [x] **Multi-Comfort 20210** — `multi-comfort-electric-height-20210`
   - Product ID: `8744551645357`; SKU(s): `20210-24W`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/multi-comfort-electrique).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Inventoried; queued after pilot approval. Intended review template: `product.20210-multi-comfort-electric-height.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: PDF p. 9 description height 27–34 in versus Dimensions 26.5/33.5 in H; retain each source label. Only 24-inch/White variant currently offered.
-  - Review URL: [multi-comfort-electric-height-20210](https://equipro-dev.myshopify.com/products/multi-comfort-electric-height-20210).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/multi-comfort-electrique); primary technical entry: Canada PRO V1.2 p. 9.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.20210-multi-comfort-electric-height.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: Squarespace table says height 22.5–34.5 in and weight 130 lb/60 kg; PDF p. 9 says height 27–34 in and weight 120 lb/55 kg. Dimensions is retained separately, in PDF order; no inferred axis or control hardware. Applicability: All reference sections apply.
+  - Review URL: [multi-comfort-electric-height-20210](https://equipro-dev.myshopify.com/products/multi-comfort-electric-height-20210?preview_theme_id=157851386029&view=20210-multi-comfort-electric-height).
 
-- [ ] **Murano EI-500** — `ei-500-murano`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/multi-comfort-electric-height-20210-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/multi-comfort-electric-height-20210-standardized-mobile.png).
+
+- [x] **Murano EI-500** — `ei-500-murano`
   - Product ID: `8744551448749`; SKU(s): `Ei-500`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-ei-500).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Inventoried; queued after pilot approval. Intended review template: `product.ei-500-murano.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Use PDF p. 10 EI-500; control-lever terminology must not be replaced by unsupported motor counts.
-  - Review URL: [ei-500-murano](https://equipro-dev.myshopify.com/products/ei-500-murano).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-ei-500); primary technical entry: Canada PRO V1.2 p. 10.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-500-murano.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF p. 10 calls the adjustment unit a control lever; Squarespace calls it an electric remote and lists full electric functions. Exact control hardware remains Not confirmed; no motor count or extra neck bolster is assumed. Applicability: All reference sections apply.
+  - Review URL: [ei-500-murano](https://equipro-dev.myshopify.com/products/ei-500-murano?preview_theme_id=157851386029&view=ei-500-murano).
 
-- [ ] **Royal EI-501** — `ei-501-royal`
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-500-murano-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-500-murano-standardized-mobile.png).
+
+- [x] **Royal EI-501** — `ei-501-royal`
   - Product ID: `8744551514285`; SKU(s): `EI-501W`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/royal-ei-501).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Inventoried; existing product.ei-501-royal.json available but not assigned; queued for audit after approval. Intended review template: `product.ei-501-royal.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Keep direct-purchase rule; do not add catalog Black/Navy variants without a separate decision.
-  - Review URL: [ei-501-royal](https://equipro-dev.myshopify.com/products/ei-501-royal).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/royal-ei-501); primary technical entry: Canada PRO V1.2 p. 10.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-501-royal.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: PDF dimensions order is 28 × 72 × 17/39 H; the legacy table reverses the first two values and adds inferred L/W labels. PDF order retained. Existing direct-purchase configuration is preserved; no variants added. Applicability: All reference sections apply.
+  - Review URL: [ei-501-royal](https://equipro-dev.myshopify.com/products/ei-501-royal?preview_theme_id=157851386029&view=ei-501-royal).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-501-royal-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-501-royal-standardized-mobile.png).
 
 - [ ] **Infinity EI-502 (misleading Ultra-comfort handle)** — `ultra-comfort-20500-gm25t`
   - Product ID: `8744551350445`; SKU(s): `Ei-502W`.
@@ -112,15 +118,17 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Unresolved questions: Separate record from ultra-comfort-20500-gm25t; list description identifies Infinity and 21–39 in, but SKU missing and live price USD 0.00. Do not infer purchase eligibility from price/inventory.
   - Review URL: [ei-502-infinity](https://equipro-dev.myshopify.com/products/ei-502-infinity).
 
-- [ ] **Divine EI-504** — `ei-504-divine`
+- [x] **Divine EI-504** — `ei-504-divine`
   - Product ID: `8744551579821`; SKU(s): `Ei-504W`.
   - Assigned template: `product.json` (present); assignment unchanged.
-  - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/divine-ei-504).
-  - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
-  - Implementation status: Inventoried; queued after pilot approval. Intended review template: `product.ei-504-divine.json` (not an approved assignment).
-  - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
-  - Unresolved questions: Current product body incorrectly describes Ultra-Comfort. PDF p. 11: Divine 28 × 72 × 22/39 in H, 1-year warranty. Fix model-specific content in the later batch, not with 20500 data.
-  - Review URL: [ei-504-divine](https://equipro-dev.myshopify.com/products/ei-504-divine).
+  - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/divine-ei-504); primary technical entry: Canada PRO V1.2 p. 11.
+  - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
+  - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-504-divine.json`. **Assignment still required**; current assignment preserved.
+  - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
+  - Unresolved questions / recorded differences: The catalog product body is an incorrect Ultra-Comfort copy. The dedicated Divine template corrects rendered content using EI-504 data only; the underlying product body/normal default URL is not changed by this template-only deployment. Applicability: All reference sections apply.
+  - Review URL: [ei-504-divine](https://equipro-dev.myshopify.com/products/ei-504-divine?preview_theme_id=157851386029&view=ei-504-divine).
+
+  - Review captures: [desktop](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-504-divine-standardized-desktop.png) · [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ei-504-divine-standardized-mobile.png).
 
 ## Other treatment-table/chair inventory
 
@@ -253,3 +261,10 @@ Review captures (actual browser screenshots):
 3. Confirm canonical Infinity identities and intended catalog treatment of both records; neither is included in comparison or merged/deleted.
 4. Confirm 20502 Pedicure’s exact model/version against the Squarespace 20501/20502 conflicts; the PDF’s 20500/20501 specifications are not automatically applicable.
 5. Confirm exact 20500 height-control/motor configuration and whether catalog CAD versus current store USD pricing is intentional. These do not block structural pilot review.
+
+
+## Approved batch deployment log
+
+Fresh complete active-theme backup before these batches: `equipro-before-approved-treatment-batches-157851386029.zip` (SHA-256 `63bbb4522be75b0664873caab122b650d84b3580305d647ae387be5435f3bd61`). No theme switch, publication, assignment or catalog-record mutation was performed.
+
+- Batch 1: Multi-Comfort Electric Height 20210, Murano EI-500, Royal EI-501, Divine EI-504. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
