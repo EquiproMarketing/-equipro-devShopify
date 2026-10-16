@@ -22,8 +22,8 @@
         "featured_product": "21100-hydro-comfort",
         "intro_highlight": "The PDF lists a 22.5–34.5 in range.",
         "custom_description": "<p>Hydro-Comfort 21100 supports facials and waxing with an adjustable headrest and backrest, manually adjustable legrest and a 15° tilt system.</p>",
-        "subtitle": "Positioning and features for Hydro-Comfort 21100",
-        "secondary_description": "<p>The Canada PDF lists a 24-inch width, adjustable height from 22.5 to 34.5 inches and ultra-white ultra-resistant leatherette. Removable armrests are optional; upholstery options are listed in Color Chart A.</p>"
+        "subtitle": "Precision Ergonomics for High-Performance Salons",
+        "secondary_description": "<p>Ultra-resistant leatherette upholstery is central to the Equipro approach. To preserve the surface integrity and hygienic finish of the Hydro-Comfort chair, clean routinely with surface disinfectants formulated for professional spa environments after every client session. The non-porous exterior offers superior stain and oil resistance, ensuring pristine clinical conditions across years of daily use. Consistent care prevents premature surface wear and preserves cushion firmness.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -32,22 +32,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Adjustable height",
-            "answer": "<p>The PDF lists a 22.5–34.5 in range.</p>"
+            "question": "Licensed esthetician:",
+            "answer": "<p>For the licensed esthetician executing delicate facial extractions or chemical peels, maintaining proper neck and lumbar alignment is critical during extended care sessions. The Hydro-Comfort chair features a 15° seat tilt and an adjustable headrest that allow the practitioner to bring the client's facial plane closer without hunching. This posture-centric adjustment reduces shoulder fatigue and wrist strain, allowing for steady hands and seamless movements across back-to-back treatment slots.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Treatment positioning",
-            "answer": "<p>An adjustable headrest/backrest and manual legrest support facial and waxing services.</p>"
+            "question": "Clinical skincare specialists and spa therapists :",
+            "answer": "<p>For Clinical spa therapists and skincare specialists, precision working angles are essential for accurate protocol execution. The chair provides vertical positioning from 22.5 inches up to 34.5 inches. Practitioners can adjust the client to the working height needed for optimal sightlines, minimizing visual fatigue and improving service consistency.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "15° tilt",
-            "answer": "<p>Tilt helps improve access to the face and neck.</p>"
+            "question": "Hair removal specialists and body treatment technicians,:",
+            "answer": "<p>For hair removal specialists and body treatment technicians, client transition speed and position security govern overall daily efficiency. Manual adjustment of the backrest and leg rest allows changes from an upright consultation angle to a reclined treatment position. Supported by ultra-durable, easy-to-sanitize upholstery, the workstation maintains hygiene standards across demanding clinic schedules.</p>"
           }
         }
       },
@@ -122,22 +122,36 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Positioning:",
-            "text": "Set the chair height using the supplied model 21100 operating instructions."
+            "bold_prefix": "Client position:",
+            "text": "Position the client centrally on the chair while keeping the backrest in an upright position."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Client support:",
-            "text": "Adjust the headrest and backrest; set the legrest manually."
+            "bold_prefix": "Working height:",
+            "text": "Adjust the vertical height between 22.5 inches and 34.5 inches using the supplied model 21100 operating instructions."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
+            "bold_prefix": "Backrest and legrest:",
+            "text": "Adjust the backrest and leg rest sections manually to the desired angle."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
             "bold_prefix": "Tilt:",
-            "text": "Use the 15° tilt as appropriate for facial and neck access."
+            "text": "Engage the 15° tilt mechanism when closer access to the head, neck, and facial contours is required."
+          }
+        },
+        "how_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Before treatment:",
+            "text": "Ensure all adjustments are secure before starting clinical protocols."
           }
         },
         "safety_header": {
@@ -149,15 +163,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for 21100 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Rated capacity:",
+            "text": "Do not exceed the maximum operational weight capacity during height or angle adjustments; confirm the rated value with Equipro."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "Secure adjustments:",
+            "text": "Ensure all manual adjustments are fully engaged before applying downward force on the headrest or leg section."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Upholstery care:",
+            "text": "Clean all leatherette surfaces with non-abrasive, alcohol-free disinfectants to prevent drying and cracking over time."
           }
         }
       },
@@ -166,9 +187,12 @@
         "how_1",
         "how_2",
         "how_3",
+        "how_4",
+        "how_5",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-hydro-comfort-hydraulic-facial-massage-depilation-table-professional-spa-beauty-clinic-21100.webp",
@@ -189,29 +213,29 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What height range is listed?",
-            "answer": "<p>Canada PRO V1.2 lists 22.5–34.5 inches for Hydro-Comfort 21100.</p>"
+            "question": "What are the seat dimensions of the Hydro-Comfort chair?",
+            "answer": "<p>The chair features a standard cushion width of 24 inches. It provides support for various client profiles.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the listed width?",
-            "answer": "<p>24 inches.</p>"
+            "question": "Are armrests included with the base Hydro-Comfort model?",
+            "answer": "<p>Armrests are optional removable accessories designed to fit the chair frame.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Are armrests included?",
-            "answer": "<p>Removable armrests are optional.</p>"
+            "question": "Does the chair include a tilt function?",
+            "answer": "<p>Yes, it features a 15° seat tilt system for improved facial access.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>The PDF lists a two-year warranty for model 21100.</p>"
+            "question": "What warranty coverage is included with the Hydro-Comfort chair?",
+            "answer": "<p>The Canada catalog lists a two-year manufacturer warranty from Equipro; confirm coverage terms with the manufacturer.</p>"
           }
         }
       },
