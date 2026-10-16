@@ -13,11 +13,11 @@
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "Multi-Comfort Hydraulic Treatment Chair",
-        "intro_highlight": "Engineered with a high-strength base and precision positioning controls, the Multi-Comfort treatment chair bridges the gap between practitioner posture and long-term client support. Manufactured in North America to rigorous durability standards, this unit eliminates operational strain during repetitive facial and body protocols without sacrificing stability.",
-        "custom_description": "<p>The Multi-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors. Its fully adjustable backrest, leg rest, and headrest target postural strain and lower-back tension during high-volume clinic days, enabling sharp focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, microdermabrasion, or precise hair removal procedures, this treatment chair adjusts to your workflow need with a smooth 15° tilt mechanism and your choice of a heavy-duty hydraulic pump or an electric motor.</p>",
-        "subtitle": "Ergonomic Excellence for High-Performance Salons",
-        "secondary_description": "<p>Ultra-resistant leatherette upholstery is central to the Equipro approach. To preserve the material integrity and hygienic finish of the Multi-Comfort chair, clean routinely with surface disinfectants formulated for professional spa environments after every client session. The non-porous exterior offers superior stain and oil resistance, ensuring a pristine clinical condition across years of daily use. Consistent care prevents premature surface wear and preserves cushion firmness.</p>",
+        "custom_title": "Multi-Comfort Hydraulic 20200",
+        "intro_highlight": "The PDF description lists an adjustable range of 27–34 in.",
+        "custom_description": "<p>Multi-Comfort Hydraulic 20200 supports facials and hair removal with adjustable positioning, a hydraulic height system and a 15° tilt.</p>",
+        "subtitle": "Positioning and features for Multi-Comfort Hydraulic 20200",
+        "secondary_description": "<p>The adjustable headrest, backrest and legrest help position the client. The catalog lists 24-inch and 28-inch widths, ultra-white ultra-resistant leatherette, optional removable armrests and Color Chart A options. The existing Shopify variant selectors are preserved.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -30,32 +30,32 @@
     "main_product_characteristics_Hp7Baq": {
       "type": "main-product-characteristics",
       "blocks": {
-        "application_1": {
+        "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Licensed esthetician:",
-            "answer": "<p>For the licensed esthetician executing intricate facial extractions or microdermabrasion, maintaining proper neck and lumbar alignment is critical during extended care sessions. The Multi-Comfort chair features a manual 15° seat tilt and an adjustable headrest that allow the practitioner to bring the client's facial plane closer without hunching. This posture-centric adjustment reduces shoulder fatigue and wrist strain, allowing for steady hands and seamless movements across back-to-back treatment slots.</p>"
+            "question": "Hydraulic height",
+            "answer": "<p>The PDF description lists an adjustable range of 27–34 in.</p>"
           }
         },
-        "application_2": {
+        "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Cosmetic injectors :",
-            "answer": "<p>For cosmetic injectors and Clinical spa therapists performing delicate procedures, sub-millimeter stability is non-negotiable. The option between a high-capacity hydraulic foot pump (Model 20200) and a smooth motorized lift system (Model 20210) enables precise vertical positioning to the desired working height. Practitioners can elevate or lower the client to the exact working height needed for symmetrical sightlines, minimizing visual fatigue and improving treatment consistency.</p>"
+            "question": "Manual positioning",
+            "answer": "<p>Position the headrest, backrest and legrest for facial and depilation work.</p>"
           }
         },
-        "application_3": {
+        "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Hair removal specialists and Body treatment technicians:",
-            "answer": "<p>For hair removal specialists and body treatment technicians, client transition speed and position security govern overall daily efficiency. The independent, manual adjustment levers for the backrest and leg rest allow quick transformations from an upright consultation angle to a completely flat position. Supported by ultra-durable, easy-to-sanitize upholstery, the workstation maintains structural stability and strict hygiene standards across demanding clinic schedules.</p>"
+            "question": "15° tilt",
+            "answer": "<p>Tilt helps provide face and neck access.</p>"
           }
         }
       },
       "block_order": [
-        "application_1",
-        "application_2",
-        "application_3"
+        "faq_1",
+        "faq_2",
+        "faq_3"
       ],
       "name": "Product Characteristics",
       "settings": {
@@ -64,7 +64,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>20200</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-resistant vinyl upholstery, reinforced steel frame, hydraulic system</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>71&quot; L x 24&quot; W x 22.5&quot; / 34.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>120 lb (55 kg)</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>Hydraulic height adjustment; manual backrest and legrest; 15° tilt system</td></tr><tr><td class=\"feature-label\">Height Range</td><td>22.5&quot; to 34.5&quot; (57 cm to 88 cm)</td></tr><tr><td class=\"feature-label\">Seating Width</td><td>24 inches (61 cm); also available in 28&quot; on special order</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable and removable headrest</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Control Type</td><td>Hydraulic foot pump for height; manual levers for positioning</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Stable base, low-access height for accessibility, reinforced construction</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white ultra-durable vinyl, colors available on special order (Chart A)</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr></tbody></table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20200</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>L × 71&quot; × 26.5&quot;/33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>120 lb / 55 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>27–34 in</td></tr><tr><td class=\"feature-label\">Height system</td><td>Hydraulic</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Catalog widths</td><td>24 in and 28 in</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, ultra-resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable armrests</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -75,22 +75,22 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Reinforced All-Steel Frame engineered with heavy-gauge North American metal components to maintain rigid structural stability under continuous daily usage.",
-            "text": "Unrivaled Durability: Reinforced All-Steel Frame engineered with heavy-gauge North American metal components to maintain rigid structural stability under continuous daily usage."
+            "title": "Hydraulic height",
+            "text": "The PDF description lists an adjustable range of 27–34 in."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Versatile Height Adjustment System",
-            "text": "Dual Drive Options available in either a precision hydraulic lift mechanism or a whisper-quiet electric motor designed to provide effortless elevation for diverse treatment protocols and operator heights."
+            "title": "Manual positioning",
+            "text": "Position the headrest, backrest and legrest for facial and depilation work."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Integrated Adaptability",
-            "text": "Universal Accessory Compatibility that effortlessly accommodates optional removable armrests, leg extensions, or paper holders across any clinical setup."
+            "title": "15° tilt",
+            "text": "Tilt helps provide face and neck access."
           }
         }
       },
@@ -114,45 +114,31 @@
     "how_to": {
       "type": "product-how-to",
       "blocks": {
-        "use_header": {
+        "how_header": {
           "type": "section_header",
           "settings": {
             "title": "How to Use"
           }
         },
-        "use_1": {
+        "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Position the client",
-            "text": "centrally on the chair while keeping the backrest in a neutral upright position."
+            "bold_prefix": "Height positioning:",
+            "text": "Set the hydraulic height system for the practitioner and treatment."
           }
         },
-        "use_2": {
+        "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Engage the foot",
-            "text": "pedal or hand control to adjust the vertical height to the desired working height to match your posture."
+            "bold_prefix": "Client support:",
+            "text": "Adjust the headrest, backrest and legrest for the client."
           }
         },
-        "use_3": {
+        "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Release the manual",
-            "text": "side levers to adjust the backrest and leg rest sections independently to the desired angle."
-          }
-        },
-        "use_4": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Engage the 15°",
-            "text": "tilt system when enhanced access to the neck and facial contours is required."
-          }
-        },
-        "use_5": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Lock all adjustment",
-            "text": "mechanisms in place before commencing clinical treatments."
+            "bold_prefix": "Tilt:",
+            "text": "Use the 15° tilt as appropriate for face and neck access."
           }
         },
         "safety_header": {
@@ -164,39 +150,29 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Do not exceed",
-            "text": "the maximum operational weight capacity during height or tilt adjustments."
+            "bold_prefix": "Setup and adjustments:",
+            "text": "Follow the supplied operating instructions for 20200 before positioning the client or using its adjustment mechanisms."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Ensure all adjustment",
-            "text": "locking pins and levers are fully engaged before applying downward pressure on the headrest or leg extension."
-          }
-        },
-        "safety_3": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Wipe down all",
-            "text": "leatherette surfaces using non-abrasive, alcohol-free disinfectants to prevent material drying and cracking over time."
+            "bold_prefix": "Care and service:",
+            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
           }
         }
       },
       "block_order": [
-        "use_header",
-        "use_1",
-        "use_2",
-        "use_3",
-        "use_4",
-        "use_5",
+        "how_header",
+        "how_1",
+        "how_2",
+        "how_3",
         "safety_header",
         "safety_1",
-        "safety_2",
-        "safety_3"
+        "safety_2"
       ],
       "settings": {
-        "image": "shopify://shop_images/equipro-multi-comfort-hydraulic-height-adjustable-facial-massage-depilation-bed-spa-salon-sku-20200.webp",
+        "image": "shopify://shop_images/equipro-multi-comfort-hydraulic-adjustable-treatment-table-spa-wellness-clinic-20200.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
@@ -214,43 +190,29 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the difference between model 20200 and model 20210?",
-            "answer": "<p>Model 20200 uses a manual hydraulic system, whereas Model 20210 features a motorized electric height adjustment.</p>"
+            "question": "Is this the electric-height 20210?",
+            "answer": "<p>No. This product is model 20200 with the hydraulic height system listed in Canada PRO V1.2.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What width options are available for the Multi-Comfort chair?",
-            "answer": "<p>The unit is available in both 24-inch and 28-inch cushion width configurations.</p>"
+            "question": "What height does the PDF description list?",
+            "answer": "<p>27–34 inches.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Does the chair lie completely flat for body treatments?",
-            "answer": "<p>Yes, the manual backrest and leg rest adjust flat for versatile treatment positioning.</p>"
+            "question": "Which widths are listed?",
+            "answer": "<p>24 inches and 28 inches. The current Shopify selectors retain all existing variants.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "Are armrests included with the base chair?",
-            "answer": "<p>Armrests are optional removable accessories designed to fit the chair frame seamlessly.</p>"
-          }
-        },
-        "faq_5": {
-          "type": "faq_item",
-          "settings": {
-            "question": "What is the height adjustment range of the unit?",
-            "answer": "<p>The chair offers hydraulic height adjustment. Refer to the model specifications and operating manual for the height range applicable to your configuration.</p>"
-          }
-        },
-        "faq_6": {
-          "type": "faq_item",
-          "settings": {
-            "question": "Is the upholstery resistant to oils and clinical products?",
-            "answer": "<p>The chair features ultra-resistant leatherette designed specifically for professional salon and spa environments.</p>"
+            "question": "Are armrests included?",
+            "answer": "<p>Removable armrests are optional.</p>"
           }
         }
       },
@@ -258,9 +220,7 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4",
-        "faq_5",
-        "faq_6"
+        "faq_4"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

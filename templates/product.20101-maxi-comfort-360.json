@@ -1,18 +1,27 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
 {
   "sections": {
     "main": {
       "type": "main-product",
       "settings": {
         "back_text": "Back",
-        "custom_title": "Maxi-Comfort 360\u00ba Hydraulic Chair",
-        "intro_highlight": "Professional grade equipment designed for high-volume aesthetic and clinical environments.",
-        "custom_description": "<p>Maxi-Comfort 360\u00ba Hydraulic Chair is purpose-built for licensed professionals, ensuring maximum efficiency and client comfort.</p>",
-        "subtitle": "Professional Hydraulic Elevation & 360\u00b0 Articulation",
-        "secondary_description": "<p>Heavy-duty metallic chassis and medical-grade vinyl designed for intensive daily use.</p>",
+        "custom_title": "Maxi-Comfort Pedicure 360º 20101",
+        "intro_highlight": "Model 20101 supports facials, waxing and pedicure treatments.",
+        "custom_description": "<p>Maxi-Comfort Pedicure 360º 20101 is designed for facials, waxing and pedicure positioning. Its hydraulic 360° swivel system is paired with an adjustable headrest and manually adjustable backrest and legrests.</p>",
+        "subtitle": "Positioning and features for Maxi-Comfort Pedicure 360º 20101",
+        "secondary_description": "<p>A 15° tilt improves treatment access. The PDF lists a 24-inch width, ultra-white resistant leatherette, Color Chart A options and optional removable ergonomic armrests.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
-        "featured_product": "maxi-comfort-360",
+        "featured_product": "maxi-confort-pedicure-360",
         "btn_label": "ADD TO CART",
         "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
@@ -20,32 +29,215 @@
     },
     "main_product_characteristics_Hp7Baq": {
       "type": "main-product-characteristics",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Pedicure positioning",
+            "answer": "<p>Model 20101 supports facials, waxing and pedicure treatments.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "360° swivel",
+            "answer": "<p>The hydraulic swivel system provides treatment access around the chair.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "15° tilt",
+            "answer": "<p>The tilt system helps improve client positioning and treatment access.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3"
+      ],
+      "name": "Product Characteristics",
       "settings": {
-        "accordion_heading": "Professional Applications",
+        "accordion_heading": "Key Features for the Professional Station",
         "show_shipping": true,
-        "show_tech_type": true,
+        "shipping_title": "Shipping",
+        "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>TECHNICAL ASPECT</th><th>SPECIFICATION DETAILS</th></tr></thead><tbody><tr><td class=\"feature-label\">Model SKU</td><td>20101</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 Years Full Manufacturer Warranty</td></tr></tbody></table></div>"
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20101</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>20101W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>24&quot; × 71&quot; × 26.5&quot;/33.5&quot;</td></tr><tr><td class=\"feature-label\">Weight</td><td>165 lb / 75 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>27–34 in</td></tr><tr><td class=\"feature-label\">Swivel</td><td>360° hydraulic swivel system</td></tr><tr><td class=\"feature-label\">Backrest and legrests</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Width</td><td>24 in</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
+        "table_col1_header": "TECHNICAL ASPECT",
+        "table_col2_header": "SPECIFICATION DETAILS"
       }
     },
     "banner_features": {
       "type": "product-key-features-banner",
+      "blocks": {
+        "feature_1": {
+          "type": "feature_item",
+          "settings": {
+            "title": "Pedicure positioning",
+            "text": "Model 20101 supports facials, waxing and pedicure treatments."
+          }
+        },
+        "feature_2": {
+          "type": "feature_item",
+          "settings": {
+            "title": "360° swivel",
+            "text": "The hydraulic swivel system provides treatment access around the chair."
+          }
+        },
+        "feature_3": {
+          "type": "feature_item",
+          "settings": {
+            "title": "15° tilt",
+            "text": "The tilt system helps improve client positioning and treatment access."
+          }
+        }
+      },
+      "block_order": [
+        "feature_1",
+        "feature_2",
+        "feature_3"
+      ],
       "settings": {
         "heading": "Key Features for the Professional Station",
+        "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
+        "image_position": "right",
         "bg_color": "#a22938",
-        "text_color": "#ffffff"
+        "text_color": "#ffffff",
+        "padding_top": 60,
+        "padding_bottom": 60,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "how_to": {
       "type": "product-how-to",
+      "blocks": {
+        "how_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "How to Use"
+          }
+        },
+        "how_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Swivel positioning:",
+            "text": "Position the hydraulic 360° swivel system using the supplied model 20101 instructions."
+          }
+        },
+        "how_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Legrest positioning:",
+            "text": "Adjust the legrests manually for the treatment."
+          }
+        },
+        "how_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Headrest and backrest:",
+            "text": "Position the adjustable headrest and backrest before beginning the service."
+          }
+        },
+        "safety_header": {
+          "type": "section_header",
+          "settings": {
+            "title": "Safety & Disclaimers"
+          }
+        },
+        "safety_1": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Setup and adjustments:",
+            "text": "Follow the supplied operating instructions for 20101 before positioning the client or using its adjustment mechanisms."
+          }
+        },
+        "safety_2": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Care and service:",
+            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+          }
+        }
+      },
+      "block_order": [
+        "how_header",
+        "how_1",
+        "how_2",
+        "how_3",
+        "safety_header",
+        "safety_1",
+        "safety_2"
+      ],
       "settings": {
-        "title_color": "#a22938"
+        "image": "shopify://shop_images/maxi-comfort-pedicure-360-professional-hydraulic-salon-chair-split-leg-navy-20101.webp",
+        "image_position": "left",
+        "image_aspect_ratio": "adapt",
+        "title_color": "#a22938",
+        "text_color": "#444444",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "faq": {
       "type": "category-faq",
+      "blocks": {
+        "faq_1": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is this model 20100 or 20101?",
+            "answer": "<p>This is the Maxi-Comfort Pedicure 20101, with current SKU 20101W.</p>"
+          }
+        },
+        "faq_2": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the listed height range?",
+            "answer": "<p>The PDF description lists 27–34 inches; the separate Dimensions field is retained in its printed order.</p>"
+          }
+        },
+        "faq_3": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Are armrests included?",
+            "answer": "<p>Removable ergonomic armrests are optional.</p>"
+          }
+        },
+        "faq_4": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty is listed?",
+            "answer": "<p>The PDF lists a two-year warranty for model 20101.</p>"
+          }
+        }
+      },
+      "block_order": [
+        "faq_1",
+        "faq_2",
+        "faq_3",
+        "faq_4"
+      ],
       "settings": {
-        "heading": "Your Questions, Answered"
+        "heading": "Your Questions, Answered",
+        "subheading": "Find answers to frequently asked technical and equipment questions.",
+        "layout": "grid",
+        "header_position": "left",
+        "open_first_item": true,
+        "title_color": "#a22938",
+        "question_color": "#111111",
+        "answer_color": "#555555",
+        "toggle_color": "#a22938",
+        "border_color": "#1a1a1a",
+        "bg_color": "#ffffff",
+        "padding_top": 40,
+        "padding_bottom": 40,
+        "margin_top": 40,
+        "margin_bottom": 40
       }
     },
     "compare_modal": {
