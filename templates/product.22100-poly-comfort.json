@@ -5,10 +5,10 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "Poly-Comfort 22100",
-        "intro_highlight": "The listed height is 29.5 in.",
-        "custom_description": "<p>Poly-Comfort 22100 is a fixed-height treatment chair for facials and hair removal. Its 29.5-inch height and 24-inch width are paired with an adjustable headrest, manually adjustable backrest and legrest, and a 15° tilt.</p>",
-        "subtitle": "Positioning and features for Poly-Comfort 22100",
-        "secondary_description": "<p>Ultra-white, ultra-resistant leatherette is listed with Color Chart A options. Removable armrests are optional. Choose from the available colors in the product selector.</p>",
+        "intro_highlight": "The Poly-Comfort treatment chair combines frame stability with targeted manual positioning. By offering a fixed-height foundation paired with manual articulation, this professional station provides continuous daily reliability without electronic complexity.",
+        "custom_description": "<p>Poly-Comfort is purpose-built for licensed professionals, including Esthetician practitioners, Lash Technicians, and Skincare Specialists. Its framework targets lower-back tension and shoulder strain during back-to-back appointments, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your workflow needs with manual backrest-and-legrest positioning and a 15° seat tilt system.</p>",
+        "subtitle": "Ergonomic Manual Positioning with Integrated 15° Tilt Dynamics",
+        "secondary_description": "<p>Durable construction is central to the Equipro approach. To preserve the ultra-clean finish and surface integrity of Poly-Comfort, perform routine wiping down with non-abrasive sanitizers formulated for professional spa environments between each client. The ultra-resistant leatherette surface resists oil build-up and staining, ensuring pristine visual presentation across years of intensive clinic operations. Consistent care preserves material flexibility, prevents surface cracking, and upholds hygienic presentation.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -24,22 +24,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Fixed-height design",
-            "answer": "<p>The listed height is 29.5 in.</p>"
+            "question": "Practicing Esthetician:",
+            "answer": "<p>For the practicing Esthetician conducting multi-step facials, maintaining comfortable posture while reaching the face and décolleté is essential during extended treatment sessions. The integrated 15° seat tilt system brings the client’s facial features closer to the operator. This adjustment stabilizes practitioner mechanics, keeping hands precise during delicate extraction or chemical peel procedures.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Manual articulation",
-            "answer": "<p>Adjust the headrest, backrest and legrest for client positioning.</p>"
+            "question": "Lash Technicians and Microblading Specialists:",
+            "answer": "<p>For certified Lash Technicians and Microblading Specialists, client head stability during extended appointments directly impacts line precision and service efficiency. The Poly-Comfort features an adjustable headrest combined with manual reclining, allowing the practitioner to establish fixed focal lengths and reduce neck strain. The fixed 29.5-inch height provides a consistent environment for intricate facial work.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "15° tilt",
-            "answer": "<p>The tilt system supports face and neck access.</p>"
+            "question": "Clinical Spa Therapists:",
+            "answer": "<p>For Clinical Spa Therapists carrying out post-procedure recovery protocols or body waxing, quick turnaround and equipment adaptability are crucial for clinic workflow. The high-durability, ultra-resistant leatherette surface cleans rapidly between sessions, while the fixed 29.5-inch elevation provides a standardized working height.</p>"
           }
         }
       },
@@ -66,22 +66,22 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Fixed-height design",
-            "text": "The listed height is 29.5 in."
+            "title": "Fixed-Height Framework",
+            "text": "The fixed working height of 29.5 inches provides a consistent treatment position."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Manual articulation",
-            "text": "Adjust the headrest, backrest and legrest for client positioning."
+            "title": "Manual Articulation Dynamics",
+            "text": "Backrest and leg rest manual adjustments optimize working angles for Estheticians and Lash Technicians, enhancing client comfort."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "15° tilt",
-            "text": "The tilt system supports face and neck access."
+            "title": "Versatile Aesthetic Compatibility",
+            "text": "A sleek profile with upholstery finishes from Color Chart A integrates into different treatment rooms."
           }
         }
       },
@@ -114,22 +114,36 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Client positioning:",
-            "text": "Set the adjustable headrest before the treatment."
+            "bold_prefix": "Headrest:",
+            "text": "Adjust the headrest to support your client's neck before beginning treatments."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Backrest and legrest:",
-            "text": "Adjust these sections manually for client support."
+            "text": "Adjust the backrest and leg rest manually to move the client from an upright position toward a reclined position."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Tilt:",
-            "text": "Use the 15° tilt as appropriate; the chair height remains fixed."
+            "text": "Activate the 15° seat tilt mechanism to optimize practitioner proximity to the client's face and neck."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Optional armrests:",
+            "text": "Attach optional removable armrests if the procedure requires supplemental client arm support; confirm the compatible accessory model with Equipro."
+          }
+        },
+        "how_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "After treatment:",
+            "text": "Reset the backrest and leg rest to ensure safe, comfortable client entry and egress."
           }
         },
         "safety_header": {
@@ -141,15 +155,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for 22100 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Secure adjustments:",
+            "text": "Ensure all manual adjustments are fully engaged before applying weight to the leg or backrest sections."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "Rated capacity:",
+            "text": "Do not exceed the maximum static weight capacity of the station during treatment sessions; confirm the rated value with Equipro."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Upholstery care:",
+            "text": "Clean all leatherette surfaces with mild, non-alcohol-based disinfectants to prevent material breakdown."
           }
         }
       },
@@ -158,9 +179,12 @@
         "how_1",
         "how_2",
         "how_3",
+        "how_4",
+        "how_5",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-poly-comfort-premium-leather-headrest-practitioner-seat-sku-22100.webp",
@@ -181,29 +205,43 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the height adjustable?",
-            "answer": "<p>The PDF lists a fixed height of 29.5 inches.</p>"
+            "question": "What is the height of the Poly-Comfort treatment chair?",
+            "answer": "<p>The Poly-Comfort features a standard fixed working height of 29.5 inches. Fits standard practitioner working elevations.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Which sections are adjustable?",
-            "answer": "<p>The headrest, backrest and legrest provide positioning adjustments; the chair includes a 15° tilt.</p>"
+            "question": "Does the seat feature a tilt system?",
+            "answer": "<p>Yes, it includes a built-in 15° seat tilt mechanism for improved practitioner access. Enhances facial ergonomics.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Are armrests included?",
-            "answer": "<p>Removable armrests are optional.</p>"
+            "question": "What are the overall dimensions of the chair?",
+            "answer": "<p>The Canada catalog Dimensions field lists 24 inches × 70 inches × 29.5 inches H, preserving its printed order.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>Canada PRO V1.2 lists a two-year warranty for Poly-Comfort 22100.</p>"
+            "question": "Are armrests included with the base unit?",
+            "answer": "<p>Armrests are optional removable accessories. Confirm compatible accessory models with Equipro.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What type of upholstery is used on the Poly-Comfort?",
+            "answer": "<p>It is upholstered in high-durability, ultra-white, ultra-resistant professional-grade leatherette. Designed for easy cleaning.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What warranty coverage is included with the SKU 22100?",
+            "answer": "<p>The Poly-Comfort comes standard with a 2-year manufacturer warranty. Confirm parts and labor coverage with Equipro.</p>"
           }
         }
       },
@@ -211,7 +249,9 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

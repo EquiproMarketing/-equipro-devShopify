@@ -11,10 +11,10 @@
         "show_compare_btn": false,
         "custom_title": "Natura Spa EI-509",
         "featured_product": "natura-spa-ei-509",
-        "intro_highlight": "The single-cushion surface supports facial, body, massage and waxing treatments.",
-        "custom_description": "<p>Natura Spa EI-509 is designed for facials, body treatments, massage and waxing. Its listed adjustable height is 22 to 39 inches, with a single cushion for client support.</p>",
-        "subtitle": "Positioning and features for Natura Spa EI-509",
-        "secondary_description": "<p>An adjustable crescent headrest is optional. The Canada catalog lists Natura Spa in White only; available options appear in the product selector.</p>"
+        "intro_highlight": "The Natura Spa is a premier professional treatment chair engineered for versatility and precision, offering a height range of 22\" to 39\" to ensure optimal ergonomics for both the practitioner and the client.",
+        "custom_description": "<p>The EI-509 Natura Spa is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors. Its adjustable height targets postural strain during full 8-hour shifts, enabling sharper focus on treatment execution and overall service consistency. Whether you are performing deep-pore cleansing, body wraps, or post-procedure recovery, this clinical device adjusts to your multi-technician adaptability.</p>",
+        "subtitle": "Precision Engineering for Professional Excellence",
+        "secondary_description": "<p>Structural integrity is central to the Equipro approach. To preserve the supple texture and clean appearance of the EI-509 Natura Spa, perform daily wipe-downs with non-abrasive surface cleansers formulated for professional spa environments. The commercial-grade upholstery exhibits high chemical and tear resistance, ensuring pristine condition across extended operating years. Consistent care prevents surface degradation and extends equipment operational lifespan.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -23,22 +23,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Single cushion",
-            "answer": "<p>The single-cushion surface supports facial, body, massage and waxing treatments.</p>"
+            "question": "Practicing aestheticians:",
+            "answer": "<p>For practicing aestheticians conducting detailed facial regimens, precise positioning is critical to reducing physical neck strain. The height adjusts from 22” to 39”, allowing the clinician to maintain an ideal posture while keeping hands free during active facial protocols.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Adjustable height",
-            "answer": "<p>Canada PRO V1.2 lists a 22–39 in height range.</p>"
+            "question": "Clinical Spa Technicians & Spa Therapists:",
+            "answer": "<p>For clinical spa technicians executing high-volume body services, stability under weight changes is necessary for uninterrupted workflow. Weighing 185 lbs, the station supports stable positioning throughout full-body treatments, minimizing frame movement when clients recline or shift position.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Optional crescent headrest",
-            "answer": "<p>Add the optional adjustable crescent headrest when appropriate for the treatment.</p>"
+            "question": "Cosmetic injectors performing precise aesthetic procedures:",
+            "answer": "<p>For cosmetic injectors performing precise aesthetic procedures, repeatable working angles prevent shoulder fatigue over long clinic days. The adjustable-height design supports repeatable positioning, ensuring accurate alignment with ambient lighting and task-specific equipment without disturbing client relaxation.</p>"
           }
         }
       },
@@ -72,15 +72,15 @@
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Adjustable height",
-            "text": "Canada PRO V1.2 lists a 22–39 in height range."
+            "title": "Ergonomic Cushioning System",
+            "text": "Single-cushion design engineered to maximize lumbar support for client comfort during prolonged body treatments."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "Optional crescent headrest",
-            "text": "Add the optional adjustable crescent headrest when appropriate for the treatment."
+            "title": "Clean Clinical Aesthetic",
+            "text": "Ultra-white seamless upholstery finish that provides versatile design compatibility with modern medi-spa environments."
           }
         }
       },
@@ -113,15 +113,29 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height positioning:",
-            "text": "Set the table elevation for the treatment, following the supplied EI-509 operating instructions."
+            "bold_prefix": "",
+            "text": "Adjust the table height within its listed 22-to-39-inch range for the treatment."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest setup:",
-            "text": "If fitted, adjust the optional crescent headrest before beginning the service."
+            "bold_prefix": "",
+            "text": "If using the optional crescent headrest, secure and adjust it for the treatment."
+          }
+        },
+        "how_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Client Positioning:",
+            "text": "Guide the client onto the center of the continuous cushion, ensuring balanced weight distribution before adjusting the table."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "",
+            "text": "Return the table to its lowest position for client egress before sanitization."
           }
         },
         "safety_header": {
@@ -133,15 +147,15 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for EI-509 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Weight Capacity Limitations:",
+            "text": "Ensure all client load weights remain well within approved structural capacities to prevent structural strain."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "Clearance Zone Management:",
+            "text": "Keep the floor area around the base frame clear of stools, power leads, and debris during elevation sequences."
           }
         }
       },
@@ -149,6 +163,8 @@
         "how_header",
         "how_1",
         "how_2",
+        "how_3",
+        "how_4",
         "safety_header",
         "safety_1",
         "safety_2"
@@ -172,29 +188,43 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What is the height range?",
-            "answer": "<p>Canada PRO V1.2 lists 22–39 inches.</p>"
+            "question": "What is the height adjustment range on the Natura Spa?",
+            "answer": "<p>The height adjusts from 22 inches to 39 inches. The exact controller and motorization are not confirmed for this model.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Is a crescent headrest included?",
-            "answer": "<p>An adjustable crescent headrest is optional.</p>"
+            "question": "Is an optional headrest available for this unit?",
+            "answer": "<p>Yes, an adjustable crescent headrest can be added as an option. It provides specialized neck and facial support during prone treatments.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Which color is listed?",
-            "answer": "<p>White only.</p>"
+            "question": "What color options are available for the EI-509 model?",
+            "answer": "<p>The EI-509 Natura Spa is available exclusively in standard white. Its neutral finish suits modern clinical aesthetic environments.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "What warranty is listed?",
-            "answer": "<p>The PDF lists a one-year warranty for Natura Spa EI-509.</p>"
+            "question": "Where is the Equipro Natura Spa manufactured?",
+            "answer": "<p>The source describes North American manufacturing, but country of origin for this exact model is not confirmed in Canada PRO V1.2.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What electrical setup is required to operate the lift motor?",
+            "answer": "<p>The exact power supply, controller and lift-motor setup are not confirmed for EI-509 in Canada PRO V1.2.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the structural weight of the full treatment chair assembly?",
+            "answer": "<p>The total unit weight is approximately 185 lb (85 kg). The source describes a steel frame; its material is not confirmed in Canada PRO V1.2.</p>"
           }
         }
       },
@@ -202,7 +232,9 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

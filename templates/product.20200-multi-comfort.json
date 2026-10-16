@@ -5,10 +5,10 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "Multi-Comfort Hydraulic 20200",
-        "intro_highlight": "The PDF description lists an adjustable range of 27–34 in.",
-        "custom_description": "<p>Multi-Comfort Hydraulic 20200 supports facials and hair removal with adjustable positioning, a hydraulic height system and a 15° tilt.</p>",
-        "subtitle": "Positioning and features for Multi-Comfort Hydraulic 20200",
-        "secondary_description": "<p>The adjustable headrest, backrest and legrest help position the client. The catalog lists 24-inch and 28-inch widths, ultra-white ultra-resistant leatherette, optional removable armrests and Color Chart A options. Available widths and colors appear in the product selectors.</p>",
+        "intro_highlight": "The Multi-Comfort treatment chair bridges the gap between practitioner posture and long-term client support. This unit reduces operational strain during repetitive facial and body protocols without sacrificing stability.",
+        "custom_description": "<p>The Multi-Comfort treatment chair is purpose-built for licensed professionals, including Estheticians, Medical Spa Therapists, and Cosmetic Injectors. Its fully adjustable backrest, leg rest, and headrest target postural strain and lower-back tension during high-volume clinic days, enabling sharp focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, microdermabrasion, or precise hair removal procedures, this treatment chair adjusts to your workflow need with a smooth 15° tilt mechanism and a hydraulic height system for model 20200.</p>",
+        "subtitle": "Ergonomic Excellence for High-Performance Salons",
+        "secondary_description": "<p>Ultra-resistant leatherette upholstery is central to the Equipro approach. To preserve the material integrity and hygienic finish of the Multi-Comfort chair, clean routinely with surface disinfectants formulated for professional spa environments after every client session. The non-porous exterior offers superior stain and oil resistance, ensuring a pristine clinical condition across years of daily use. Consistent care prevents premature surface wear and preserves cushion firmness.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": false,
@@ -24,22 +24,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Hydraulic height",
-            "answer": "<p>The PDF description lists an adjustable range of 27–34 in.</p>"
+            "question": "Licensed esthetician:",
+            "answer": "<p>For the licensed esthetician executing intricate facial extractions or microdermabrasion, maintaining proper neck and lumbar alignment is critical during extended care sessions. The Multi-Comfort chair features a 15° seat tilt and an adjustable headrest that allow the practitioner to bring the client’s facial plane closer without hunching. This posture-centric adjustment reduces shoulder fatigue and wrist strain, allowing for steady hands and seamless movements across back-to-back treatment slots.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Manual positioning",
-            "answer": "<p>Position the headrest, backrest and legrest for facial and depilation work.</p>"
+            "question": "Cosmetic injectors :",
+            "answer": "<p>For cosmetic injectors and Clinical spa therapists performing delicate procedures, sub-millimeter stability is non-negotiable. Model 20200 provides adjustable height from 27 inches to 34 inches. Practitioners can elevate or lower the client to the working height needed for symmetrical sightlines, minimizing visual fatigue and improving treatment consistency.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "15° tilt",
-            "answer": "<p>Tilt helps provide face and neck access.</p>"
+            "question": "Hair removal specialists and Body treatment technicians:",
+            "answer": "<p>For hair removal specialists and body treatment technicians, client transition speed and position security govern overall daily efficiency. Manual adjustment of the backrest and leg rest allows transformations from an upright consultation angle to a reclined treatment position. Supported by ultra-durable, easy-to-sanitize upholstery, the workstation maintains stability and hygiene across demanding clinic schedules.</p>"
           }
         }
       },
@@ -114,22 +114,36 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height positioning:",
-            "text": "Set the hydraulic height system for the practitioner and treatment."
+            "bold_prefix": "Client position:",
+            "text": "Position the client centrally on the chair while keeping the backrest in a neutral upright position."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Client support:",
-            "text": "Adjust the headrest, backrest and legrest for the client."
+            "bold_prefix": "Working height:",
+            "text": "Adjust the vertical height between 27 inches and 34 inches to match your posture, following the supplied hydraulic-height instructions for model 20200."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
+            "bold_prefix": "Backrest and legrest:",
+            "text": "Adjust the backrest and leg rest sections manually to the desired angle."
+          }
+        },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
             "bold_prefix": "Tilt:",
-            "text": "Use the 15° tilt as appropriate for face and neck access."
+            "text": "Engage the 15° tilt system when enhanced access to the neck and facial contours is required."
+          }
+        },
+        "how_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Before treatment:",
+            "text": "Secure all adjustment mechanisms before commencing clinical treatments."
           }
         },
         "safety_header": {
@@ -141,15 +155,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for 20200 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "Rated capacity:",
+            "text": "Do not exceed the maximum operational weight capacity during height or tilt adjustments; confirm the rated value with Equipro."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "Secure adjustments:",
+            "text": "Ensure all adjustment points are fully engaged before applying downward pressure on the headrest or leg extension."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Upholstery care:",
+            "text": "Wipe down all leatherette surfaces using non-abrasive, alcohol-free disinfectants to prevent material drying and cracking over time."
           }
         }
       },
@@ -158,9 +179,12 @@
         "how_1",
         "how_2",
         "how_3",
+        "how_4",
+        "how_5",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/equipro-multi-comfort-hydraulic-adjustable-treatment-table-spa-wellness-clinic-20200.webp",
@@ -181,29 +205,36 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Is this the electric-height 20210?",
-            "answer": "<p>No. This product is model 20200 with the hydraulic height system listed in Canada PRO V1.2.</p>"
+            "question": "What is the difference between model 20200 and model 20210?",
+            "answer": "<p>Model 20200 uses a manual hydraulic system, whereas Model 20210 features a motorized electric height adjustment.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "What height does the PDF description list?",
-            "answer": "<p>27–34 inches.</p>"
+            "question": "What width options are available for the Multi-Comfort chair?",
+            "answer": "<p>The unit is available in both 24-inch and 28-inch cushion width configurations.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Which widths are listed?",
-            "answer": "<p>24 inches and 28 inches. Choose from the available widths and colors in the product selectors.</p>"
+            "question": "Are armrests included with the base chair?",
+            "answer": "<p>Armrests are optional removable accessories designed to fit the chair frame.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "Are armrests included?",
-            "answer": "<p>Removable armrests are optional.</p>"
+            "question": "What is the height adjustment range of the unit?",
+            "answer": "<p>The Canada catalog description lists a working height from 27 inches up to 34 inches.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "Is the upholstery resistant to oils and clinical products?",
+            "answer": "<p>The chair features ultra-resistant leatherette designed specifically for professional salon and spa environments.</p>"
           }
         }
       },
@@ -211,7 +242,8 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5"
       ],
       "settings": {
         "heading": "Your Questions, Answered",

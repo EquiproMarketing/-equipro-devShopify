@@ -67,14 +67,14 @@
           "type": "feature_item",
           "settings": {
             "title": "Unrivaled Durability",
-            "text": "Heavy-duty frame construction: Fabricated with robust structural components to withstand high-volume usage in busy clinical spas."
+            "text": "Its ultra-white, ultra-resistant leatherette ensures durability."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
             "title": "Articulated Positioning",
-            "text": "Manual adjustment architecture: Precision-balanced backrest and leg rest assemblies designed to optimize reach for practitioners and relaxation for clients."
+            "text": "Manually adjustable backrest and leg rest support positioning for facials and hair removal."
           }
         },
         "feature_3": {
@@ -136,7 +136,7 @@
           "type": "instruction_item",
           "settings": {
             "bold_prefix": "Leg Rest Adjustment:",
-            "text": "Raise or lower the independent leg section to ensure complete lower-body relaxation during extended sessions."
+            "text": "Raise or lower the leg rest manually to ensure complete lower-body relaxation during extended sessions."
           }
         },
         "safety_header": {

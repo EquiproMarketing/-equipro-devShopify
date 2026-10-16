@@ -11,10 +11,10 @@
         "show_compare_btn": false,
         "custom_title": "Multi-Comfort Electric Height 20210",
         "featured_product": "multi-comfort-electric-height-20210",
-        "intro_highlight": "Adjustable height of 27–34 in for treatment positioning.",
-        "custom_description": "<p>Multi-Comfort 20210 combines motorized height adjustment with an adjustable headrest and manually adjustable backrest and legrest for facials and hair removal. Its 15° tilt helps provide access to the face and neck areas.</p>",
-        "subtitle": "Positioning and features for Multi-Comfort Electric Height 20210",
-        "secondary_description": "<p>Ultra-white, ultra-resistant leatherette is offered in Color Chart A. The catalog lists 24-inch and 28-inch widths with optional removable armrests; this product’s selectors show the currently offered 24-inch White variant.</p>"
+        "intro_highlight": "The Multi-Comfort 2 treatment chair delivers tailored practitioner ergonomics and motorized height flexibility, engineered to support high-volume aesthetic clinics and specialized skincare centers with robust North American manufacturing standards.",
+        "custom_description": "<p>Multi-Comfort 2 is purpose-built for licensed professionals, including Esthetician, Medical Spa Therapist, and Cosmetic Injector. Its fully adjustable architecture targets lower-back tension during extended treatment sessions, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, brow sculpting, or post-procedure recovery, this professional station adjusts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
+        "subtitle": "Motorized Height Calibration & 15° Ergonomic Tilt System",
+        "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the physical integrity and professional finish of Multi-Comfort 2, clean surfaces regularly with sanitizing wipes formulated for clinical environments daily. The ultra-resistant leatherette resists oils, stains, and daily wear, ensuring pristine condition across intensive clinic schedules. Consistent care protects equipment longevity, safeguarding capital investment and maintaining an immaculate presentation.</p>"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -23,22 +23,22 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "Motorized height",
-            "answer": "<p>Adjustable height of 27–34 in for treatment positioning.</p>"
+            "question": "Esthetic Facials & Advanced Skincare Protocols:",
+            "answer": "<p>Engineered for the Modern Practitioner, the Multi-Comfort 2 chair provides estheticians with optimal working elevation and direct proximity during complex facial treatments and skin resurfacing procedures. The quiet motorized height system adjusts smoothly from 27 inches to 34 inches, preventing postural strain during full 8-hour clinic shifts. Combined with the integrated 15° frame tilt, skincare specialists maintain precise hand stability and visual clarity while executing detailed microdermabrasion and chemical exfoliations, elevating treatment accuracy and client comfort.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Manual positioning",
-            "answer": "<p>An adjustable headrest, backrest and legrest support facial and depilation work.</p>"
+            "question": "Specialized Body Treatments & Wellness Therapies:",
+            "answer": "<p>For clinical spa technicians managing demanding back-to-back body treatments, waxing, and wellness therapies, the Multi-Comfort 2 workstation adapts fluidly to multi-technician workflows. The chair supports smooth manual position transitions of the backrest and leg rest without disrupting client relaxation. Available in 24-inch or 28-inch cushion widths, the station accommodates diverse client body proportions while distributing weight evenly to eliminate pressure points during lengthy bodywork appointments.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "15° tilt",
-            "answer": "<p>The tilt system helps improve face and neck access.</p>"
+            "question": "Multi-Modality Aesthetic Procedures & Hair Removal:",
+            "answer": "<p>Designed for high-demand clinical environments, cosmetic injectors and laser technicians rely on the Multi-Comfort 2 chair's versatile positioning. Rapid manual articulation allows instantaneous re-positioning between upright consultations and fully reclined procedure modes. This rapid calibration minimizes appointment turnover time and optimizes room utilization while ensuring an immaculate, high-end presentation from initial client consultation through post-procedure recovery.</p>"
           }
         }
       },
@@ -65,22 +65,22 @@
         "feature_1": {
           "type": "feature_item",
           "settings": {
-            "title": "Motorized height",
-            "text": "Adjustable height of 27–34 in for treatment positioning."
+            "title": "Unrivaled Durability",
+            "text": "Heavy-Duty Electric Lifting System: Built to provide smooth, motorized height adjustment from 27 inches to 34 inches in demanding clinical settings."
           }
         },
         "feature_2": {
           "type": "feature_item",
           "settings": {
-            "title": "Manual positioning",
-            "text": "An adjustable headrest, backrest and legrest support facial and depilation work."
+            "title": "Ergonomic 15° Incline Frame",
+            "text": "Precision-engineered tilting system designed to enhance access to the face and neck for estheticians and skincare specialists, reducing operator physical fatigue."
           }
         },
         "feature_3": {
           "type": "feature_item",
           "settings": {
-            "title": "15° tilt",
-            "text": "The tilt system helps improve face and neck access."
+            "title": "Customizable Width and Articulation",
+            "text": "Versatile structural design offered in 24-inch and 28-inch width configurations featuring manually adjustable backrest and leg sections to complement any high-end treatment room."
           }
         }
       },
@@ -113,22 +113,22 @@
         "how_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Height positioning:",
-            "text": "Use the motorized height adjustment within the listed 27–34 in range."
+            "bold_prefix": "",
+            "text": "Use the motorized height adjustment to raise or lower the chair base between 27 inches and 34 inches to reach your ideal working height."
           }
         },
         "how_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Backrest and legrest:",
-            "text": "Adjust these sections manually for the treatment."
+            "bold_prefix": "",
+            "text": "Adjust the backrest and leg rest sections manually to the required treatment inclination."
           }
         },
         "how_3": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Headrest and tilt:",
-            "text": "Position the headrest and use the 15° tilt as appropriate for facial and neck access."
+            "bold_prefix": "",
+            "text": "Engage the integrated 15° tilt mechanism when greater clearance is required around the client's head, neck, and upper chest."
           }
         },
         "safety_header": {
@@ -140,15 +140,22 @@
         "safety_1": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Setup and adjustments:",
-            "text": "Follow the supplied operating instructions for 20210 before positioning the client or using its adjustment mechanisms."
+            "bold_prefix": "",
+            "text": "Do not exceed the maximum weight capacity of the station to prevent mechanical stress and ensure structural integrity during movement."
           }
         },
         "safety_2": {
           "type": "instruction_item",
           "settings": {
-            "bold_prefix": "Care and service:",
-            "text": "Follow the manufacturer’s upholstery-care instructions and contact Equipro for maintenance or repair guidance."
+            "bold_prefix": "",
+            "text": "Keep the surrounding base and lifting mechanism free from loose power cords, stool wheels, and debris before activating motorized height adjustments."
+          }
+        },
+        "safety_3": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "",
+            "text": "Always disconnect the unit from the power source prior to applying liquid sanitizers or performing routine mechanical inspections."
           }
         }
       },
@@ -159,7 +166,8 @@
         "how_3",
         "safety_header",
         "safety_1",
-        "safety_2"
+        "safety_2",
+        "safety_3"
       ],
       "settings": {
         "image": "shopify://shop_images/Multi-Comfort-_20210-electric-treatment-table-clinical-exam-chair-white-professional.webp",
@@ -180,29 +188,43 @@
         "faq_1": {
           "type": "faq_item",
           "settings": {
-            "question": "What height range is listed for model 20210?",
-            "answer": "<p>The PDF description lists motorized height adjustment from 27 to 34 inches.</p>"
+            "question": "What is the height adjustment range of the Multi-Comfort 2 chair?",
+            "answer": "<p>The Multi-Comfort 2 adjusts electrically from 27 inches to 34 inches. Height adjustment is operated via a motorized system.</p>"
           }
         },
         "faq_2": {
           "type": "faq_item",
           "settings": {
-            "question": "Which width is offered on this page?",
-            "answer": "<p>This product is currently offered in 24-inch White. The PDF also lists a 28-inch catalog option.</p>"
+            "question": "Are the backrest and leg rest adjustments motorized?",
+            "answer": "<p>No, the backrest and leg section adjustments are operated manually. Motorized controls regulate the base height elevation.</p>"
           }
         },
         "faq_3": {
           "type": "faq_item",
           "settings": {
-            "question": "Are armrests included?",
-            "answer": "<p>Removable armrests are optional.</p>"
+            "question": "What cushion width options are available for this model?",
+            "answer": "<p>The Multi-Comfort 2 is available in 24-inch and 28-inch widths. Both sizes offer the same structural tilt features.</p>"
           }
         },
         "faq_4": {
           "type": "faq_item",
           "settings": {
-            "question": "Is the backrest electric?",
-            "answer": "<p>Canada PRO V1.2 describes the backrest and legrest as manually adjustable.</p>"
+            "question": "Does the chair feature a tilt function for facial treatments?",
+            "answer": "<p>Yes, it includes an integrated 15-degree tilt system. This improves ergonomic access to the neck and face.</p>"
+          }
+        },
+        "faq_5": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What upholstery options and colors are offered for Multi-Comfort 2?",
+            "answer": "<p>It features ultra-resistant leatherette available in Color Chart A options. Standard stock option includes ultra-white leatherette.</p>"
+          }
+        },
+        "faq_6": {
+          "type": "faq_item",
+          "settings": {
+            "question": "What is the standard warranty on the Multi-Comfort 2 chair?",
+            "answer": "<p>Equipro provides a 2-year warranty on the Multi-Comfort 2. Coverage of technical labor and structural replacement parts is not confirmed for this model.</p>"
           }
         }
       },
@@ -210,7 +232,9 @@
         "faq_1",
         "faq_2",
         "faq_3",
-        "faq_4"
+        "faq_4",
+        "faq_5",
+        "faq_6"
       ],
       "settings": {
         "heading": "Your Questions, Answered",
