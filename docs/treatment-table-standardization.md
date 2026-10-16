@@ -2,6 +2,12 @@
 
 Single progress checklist for this workstream. Updated 2026-10-16. Active theme verified: **157851386029** (`-equipro-devShopify/main`); development theme **157680631981** is not the deployment target.
 
+## Current priority — Squarespace content parity (2026-10-16)
+
+Assignment preparation is paused. Earlier checked implementation boxes record approved **structure**, not complete Squarespace content parity. Squarespace is now the content-completeness reference; disputed Squarespace/PDF facts must be shown before changing them. The earlier PDF-first implementation history below is retained as history, not an instruction to silently resolve new conflicts.
+
+Ultra-Comfort is audited first against the exact user-specified page. Its non-disputed source narrative is restored in the existing layout; technical-table/model-specific disputes remain open. No other model’s parity audit or copy correction has been started after this priority change. Existing inventory source links are candidates requiring individual fresh verification, not confirmed exact model matches. No cross-model content transfer is authorized.
+
 ## Scope and gates
 
 - [x] Verify active theme and capture a fresh complete backup before deployment. Backup: `equipro-before-treatment-standardization-157851386029.zip`, SHA-256 `29484bfad17566106dbd474378fa620fb22f358b061406153bd1e5f1c1186fa5`, in the task visualization folder.
@@ -46,6 +52,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551284909`; SKU(s): `20500-24W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-confort).
+  - Squarespace completeness audit: Audited 2026-10-16 against the supplied Ultra-Comfort URL. Narrative restorations completed; technical/model-specific conflicts held. Detailed source/current comparison below.
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
   - Implementation status: Pilot template deployed for review; desktop/mobile verification complete; visually approved; assignment remains unchanged. Intended review template: `product.20500-ultra-comfort.json` (not an approved assignment).
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Pilot source, desktop/mobile, image and keyboard checks passed below.
@@ -56,6 +63,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551710893`; SKU(s): `20502-24W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-comfort-pedicure-20502).
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
   - Implementation status: Inventoried; implementation held for identity confirmation; visual structure is approved.
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
@@ -66,6 +74,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551645357`; SKU(s): `20210-24W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/multi-comfort-electrique); primary technical entry: Canada PRO V1.2 p. 9.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.20210-multi-comfort-electric-height.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -78,6 +87,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551448749`; SKU(s): `Ei-500`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-ei-500); primary technical entry: Canada PRO V1.2 p. 10.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-500-murano.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -90,6 +100,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551514285`; SKU(s): `EI-501W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/royal-ei-501); primary technical entry: Canada PRO V1.2 p. 10.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-501-royal.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -102,6 +113,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551350445`; SKU(s): `Ei-502W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/infinity-ei-502).
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
   - Implementation status: Inventoried; identity decision required before implementation.
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
@@ -112,6 +124,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8734928863405`; SKU(s): `No SKU assigned`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matching source](https://seahorse-llama-gkdh.squarespace.com/electrics/infinity-ei-502).
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Only main product + dormant comparison modal. Missing reference introduction/subtitle structure, characteristics/spec table, feature banner, how-to/safety and FAQ sections.
   - Implementation status: Inventoried; identity decision required before implementation.
   - Verification: current product identity/SKU read from Shopify; assignment inspected in Admin and matched against active-theme file inventory. Implementation/visual verification deferred.
@@ -122,6 +135,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551579821`; SKU(s): `Ei-504W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/divine-ei-504); primary technical entry: Canada PRO V1.2 p. 11.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 1 complete and deployed to active theme 157851386029; template `product.ei-504-divine.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -137,6 +151,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551415981`; SKU(s): `20300-28W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/spa-comfort-20300); primary technical entry: Canada PRO V1.2 p. 9.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.20300-spa-comfort.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -149,6 +164,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551743661`; SKU(s): `EI-508`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/elite-spa); primary technical entry: Canada PRO V1.2 p. 11.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.ei-508-elite-spa.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -161,6 +177,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744551809197`; SKU(s): `Ei-509`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/electrics/natura-spa); primary technical entry: Canada PRO V1.2 p. 11.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.ei-509-natura-spa.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -173,6 +190,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744552169645`; SKU(s): `EI-23403W`.
   - Assigned template: `product.23403-bohemia.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/portables/bohemia); primary technical entry: Canada PRO V1.2 p. 12.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
   - Implementation status: Batch 4 complete and deployed to active theme 157851386029; template `product.23403-bohemia.json`. **Visible at normal URL**; assignment unchanged.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -185,6 +203,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744552235181`; SKU(s): `EI-23402`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/portables/calypso); primary technical entry: Canada PRO V1.2 p. 12.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 4 complete and deployed to active theme 157851386029; template `product.23402-calypso.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -197,6 +216,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744552005805`; SKU(s): `20100W`.
   - Assigned template: `product.SKU00001-maxi-comfort-360.json` (missing); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-360); primary technical entry: Canada PRO V1.2 p. 8.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 2 complete and deployed to active theme 157851386029; template `product.20100-maxi-comfort-360.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -209,6 +229,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744552104109`; SKU(s): `20101W`.
   - Assigned template: `product.20101-maxi-comfort-360.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/maxi-comfort-pedicure); primary technical entry: Canada PRO V1.2 p. 8.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
   - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.20101-maxi-comfort-360.json`. **Visible at normal URL**; assignment unchanged.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -221,6 +242,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744553775277`; SKU(s): `20200-24W plus other colors; 14 variants`.
   - Assigned template: `product.20200-multi-comfort.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/multi-comfort); primary technical entry: Canada PRO V1.2 p. 8.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
   - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.20200-multi-comfort.json`. **Visible at normal URL**; assignment unchanged.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -233,6 +255,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744553840813`; SKU(s): `21100W`.
   - Assigned template: `product.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/hydro-comfort); primary technical entry: Canada PRO V1.2 p. 9.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The normal URL still renders its unchanged assignment; use the exact preview below.
   - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.21100-hydro-comfort.json`. **Assignment still required**; current assignment preserved.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -245,6 +268,7 @@ Applicable sections: positioning, upholstery, optional accessories, specificatio
   - Product ID: `8744553906349`; SKU(s): `22100W; other colors have missing SKUs`.
   - Assigned template: `product.22100-poly-comfort.json` (present); assignment unchanged.
   - Source page: [matched Squarespace source](https://seahorse-llama-gkdh.squarespace.com/hydraulic-mechanical/poly-comfort); primary technical entry: Canada PRO V1.2 p. 10.
+  - Squarespace completeness audit: Pending individual audit under the new source-parity priority. Existing source link is a candidate; missing/differing content and corrections are not yet verified. Structural completion above does not establish content completeness.
   - Structural gaps: Resolved in the standardized template. The existing assigned template was updated in place, so the normal URL now renders the standardized page.
   - Implementation status: Batch 3 complete and deployed to active theme 157851386029; template `product.22100-poly-comfort.json`. **Visible at normal URL**; assignment unchanged.
   - Verification: JSON/block schemas; exact active-theme read-back; 1280 px desktop and 390 px mobile checks; correct model/Dimensions row; all displayed images loaded; existing price/options/image/purchase-state/Compare visibility match the pre-change page. No cart actions tested.
@@ -336,3 +360,65 @@ Fresh complete active-theme backup before these batches: `equipro-before-approve
 - Batch 3: Maxi-Comfort Pedicure 360º 20101, Multi-Comfort Hydraulic 20200, Hydro-Comfort 21100, Poly-Comfort 22100. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
 
 - Batch 4: Bohemia Seated Massage Chair EI-23403, Calypso Portable Table EI-23402. Deployed only listed product JSON templates; schema, read-back, preserved visible controls and desktop/mobile checks passed.
+
+## Ultra-Comfort source-completeness audit — 2026-10-16
+
+- Scope: Shopify `ultra-comfort-20500`, SKU `20500-24W`, White / 24 in, USD 4,350. Normal product remains assigned to default `product.json`. Audited dedicated preview: [20500 template](https://equipro-dev.myshopify.com/products/ultra-comfort-20500?preview_theme_id=157851386029&view=20500-ultra-comfort). Normal URL continues to show its unchanged default-template content.
+- Exact source: [Ultra-Comfort Professional Treatment Chair](https://seahorse-llama-gkdh.squarespace.com/electrics/ultra-confort), supplied by the user. Verified live product heading, main and collapsed product-description text, all three professional-use accordions, all six FAQ answers, feature banner, instructions, safety, shipping, imagery and all 17 technical fields. All accordion answers read, not only visible headings.
+- Match status: confirmed **Ultra-Comfort family source** by user direction; **not an exact technical match to the Shopify 20500/24-inch SKU**. Source technical table explicitly identifies 20501/26 in. No attempt to resolve this through assignment or spec copying.
+- Active role freshly verified: theme 157851386029 is live; 157680631981 is development. Before edits, downloaded active 20500 JSON matched repository JSON. Target backup `equipro-before-ultra-content-parity-157851386029.zip` includes original active JSON and verified theme roles; full pre-batch backup remains available above.
+
+### Content comparison and corrections completed
+
+1. **Opening description:** Previous Shopify introduction/body were short summaries about facial positioning, headrest and height. They omitted the source’s clinical-workflow introduction, licensed skincare roles (esthetician, clinical spa therapist, cosmetic injector), deep-pore cleansing, microdermabrasion and post-procedure-recovery context. Restored both source opening paragraphs and the separate source product-description paragraph into existing intro/description fields. The latter is important: it is present in the source DOM in addition to the editorial description and includes optional armrests/casters and the family’s 24/26 in widths. Those family options do not add Shopify variants.
+2. **Longevity/care description:** Previous Shopify secondary text discussed upholstery/accessories and current selectors. Restored source heading “Engineering for Precision and Longevity” and its paragraph covering weekly non-abrasive clinical disinfectants, tear/stain resistance, intensive salon cycles and care. No frequency invented; weekly is the source wording.
+3. **Professional uses:** Previous three accordions were “Facial and depilation positioning,” “Height and model width,” and “Upholstery and optional accessories.” They did not preserve the source’s three role/use-case narratives. Replaced their copy with the source’s full “Clinical Aesthetics & Specialized Facials,” “Advanced Clinical Spa Treatments,” and “Hair Removal & Full-Body Services” questions/answers. Approved accordion component/layout retained.
+4. **Feature banner:** Previous bullets “Adjustable positioning,” “15° tilt,” and “Ultra-resistant leatherette” substituted short technical summaries. Restored original three headings and full source text: “Unrivaled Durability,” “Articulated Positioning,” and “Seamless Integration.” Existing image slots, burgundy style, spacing and layout retained.
+5. **Instructions:** Source has four steps: Height Calibration; Backrest Positioning; Tilt Activation; Leg Rest Adjustment. Previous steps were different summaries, including a substituted Headrest step. Restored exact source text for height calibration (before client seating), 15-degree tilt and independent leg-section adjustment in the existing four-step layout. Source Backrest Positioning specifies a **manual release handle**; its exact hardware is not confirmed for this SKU and the same source table claims full-electric backrest. Kept manual-backrest positioning wording without asserting a release-handle mechanism. This one step remains deliberately non-identical pending conflict review.
+6. **Safety:** Previous copy gave central positioning, generic cleaning and “Contact Equipro” service guidance; it omitted source dry/climate-controlled environment and maximum-rated-capacity guidance. Restored source Weight Distribution and Environment Compliance text verbatim, without inventing a numerical capacity. Source Authorized Service conditions warranty preservation on Equipro-certified technicians; kept existing service guidance until the model-specific warranty/service condition is confirmed. That sentence remains a recorded omission, not silently generalized as equivalent.
+7. **FAQs:** Source has six questions: height range, tilt, upholstery, replacement-parts warranty, removable armrests and unit weight. Previous Shopify had height/tilt/upholstery and generalized warranty/accessories, but replaced two source questions with model-width and included-accessories questions and omitted the source unit-weight answer. Restored all six source question topics and five full source answers; replacement-parts coverage answer is explicitly **Not confirmed** with the existing two-year term retained. Kept the two useful Shopify model-width/optional-casters clarifications as additional entries, using the same existing accordion layout/component. No claim that the warranty answer now matches the source.
+8. **Included accessories/options:** Both sources describe removable ergonomic armrests and casters as optional; no included accessories added. Source offers White, Black, Navy, Dove, Sand, Oyster, Charcoal and widths 24/26 in; current Shopify offers White/24 in only. Source text records family choices; all Shopify variants/SKUs remain unchanged. Source technical table’s removable crescent headrest is held separately below.
+9. **Shipping:** Standard 5–7 business days and expedited 2–3 business days already match. No correction needed.
+10. **Images:** Source has five gallery items, including 20501 control-pedal imagery and split-leg imagery; Shopify has three gallery images and two existing editorial slots. Image counts differ. No source control-pedal/split-leg images transferred to 20500 while their version identity is unresolved. Existing Shopify media and slots retained.
+
+### All source technical fields — exact values versus Shopify/PDF
+
+Technical table remains unchanged during this correction. Source-only fields are audited omissions, not assumed false or silently treated as confirmed.
+
+- **Manufacturer** — Squarespace: `Equipro Beauty`. Shopify Equipro; naming differs from source Equipro Beauty.
+- **Model SKU** — Squarespace: `20501`. Shopify model 20500, current variant SKU 20500-24W; source identifies 20501. PDF p. 9 groups 20500/20501 and prices widths separately. Exact source table applicability unresolved.
+- **Primary Materials** — Squarespace: `Ultra-resistant vinyl upholstery, reinforced steel frame, premium electric actuators`. Shopify lists leatherette only; reinforced steel frame and premium electric actuators are absent. PDF p. 9 confirms leatherette but does not identify frame material/actuator configuration. Hold source-only hardware pending exact model match.
+- **Dimensions (L x W x H)** — Squarespace: `72" L x 26" W x 20.5" / 36.5" H`. Shopify/PDF p. 9 Dimensions are literally L × 72" × 20.5"/36.5" H; Shopify current width is 24 in. Source labels axes and states 26 in. No dimension-label/order change or axis inference made.
+- **Weight** — Squarespace: `320 lb (145 kg)`. Shopify and PDF p. 9: 320 lb / 145 kg. Same values; formatting differs.
+- **Adjustability** — Squarespace: `Full electric adjustment via pedal with proximity sensor: height, backrest, legrest, and tilt`. Shopify/PDF p. 9: manually adjustable backrest/legrest; 15° tilt; exact height control Not confirmed. Source prose/banner also say manual, contradicting its table’s electric articulation. Disputed fact held.
+- **Height Range** — Squarespace: `20.5" to 36.5" (52 cm to 93 cm), lowers to 19" for accessibility`. Shopify/PDF p. 9: 20.5–36.5 in; neither gives a 19 in minimum. Source FAQ also says 20.5–36.5. Source’s extra 19 in accessibility claim is disputed and not added.
+- **Seating Width** — Squarespace: `26 inches (66 cm)`. Shopify current SKU/variant is 24 in; PDF p. 9 lists family 24/26 in. Source table is 26 in/66 cm. Held, no variant mutation.
+- **Cushions** — Squarespace: `4 separate high-density cushions for exceptional comfort`. Absent from Shopify/PDF p. 9. Source-only four high-density cushions belong to a table identifying 20501; applicability to 20500 Not confirmed.
+- **Headrest** — Squarespace: `Removable and adjustable crescent headrest`. Shopify/PDF p. 9 say adjustable headrest. Crescent shape and removability absent. Source-only details held for model confirmation.
+- **Armrests** — Squarespace: `Optional removable ergonomic armrests`. Shopify/PDF p. 9 agree: optional removable ergonomic armrests. No conflict.
+- **Mobility** — Squarespace: `Optional wheels/casters for easy movement`. Shopify/PDF p. 9 agree: optional casters. No conflict.
+- **Safety Features** — Squarespace: `Proximity sensor pedal, noiseless electric actuators, stable base`. Shopify does not claim sensor/noiseless actuator/stable-base package. PDF p. 9 does not specify that hardware. Source-only table claims held for model match.
+- **Upholstery** — Squarespace: `Ultra-white ultra-durable vinyl, multiple colors available on special order (Chart A)`. Shopify/PDF p. 9: ultra-white, ultra-resistant leatherette, Color Chart A. Source calls it vinyl and adds special-order color availability. No SKU expansion or special-order business rule inferred.
+- **Certifications** — Squarespace: `CSA & UL approved electrical components`. Absent from Shopify/PDF p. 9. CSA/UL electrical-component approvals are source-only and model-sensitive; not added as verified 20500 certification.
+- **Warranty** — Squarespace: `2 years`. Shopify/PDF p. 9 both list 2 years. Source FAQ additionally asserts parts/manufacturing-defect coverage and safety text conditions preservation on certified technicians. PDF supplies no coverage/service terms; duration agrees but scope is unconfirmed, not an established PDF contradiction.
+- **Country of Origin** — Squarespace: `Canada`. Absent from Shopify/PDF p. 9 technical entry. Source says Canada in a 20501 table; exact SKU applicability Not confirmed.
+
+### Unresolved questions to show before changing disputed facts
+
+1. Does the supplied page’s **20501 / 26-inch technical table** apply to Shopify **20500 / 20500-24W / 24-inch**, or does that source table need correction? Family-level narrative is restored; its table is not treated as exact-SKU confirmation.
+2. For 20500, is backrest/legrest adjustment **manual** (PDF p. 9, source description/banner/use-case/how-to) or **fully electric via proximity-sensor pedal** (source technical table)? Is a manual release handle actually fitted? Are the proximity pedal, actuator noise, crescent/removable headrest, four cushions and CSA/UL details valid for this exact version?
+3. Is the minimum height **20.5 in** (PDF p. 9, source description/FAQ) or **19 in** (extra claim inside source technical Height Range row)? No disputed height changed.
+4. Does the two-year warranty cover **parts and manufacturing defects**, and is **Equipro-certified service required to preserve coverage**? PDF p. 9 confirms duration only; source FAQ/safety add these terms.
+5. Source starting price **CA$4,350** versus Shopify **USD 4,350** and family choices versus one White/24 in SKU remain catalog differences; prices/variants/SKUs/assignments are explicitly unchanged.
+
+Content-completeness status: **partial parity restored, disputed technical/model-specific omissions explicitly held**. This is not reported as full parity. Remaining 17 product entries plus the Aero reference await their own individual audit after this comparison is shown; they must not inherit this copy or be marked source-complete from structural checks.
+
+### Verification for this correction
+
+- Only `templates/product.20500-ultra-comfort.json` changed; all six section types/order and visual setting values retained. Same native accordion controls, feature layout, image slots, buy box and comparison configuration.
+- Technical table byte-for-byte unchanged; non-copy main settings, product handle, prices/variants/SKUs/assignment unchanged. No cart actions, filters or comparison expansion.
+- Source text retained in full in the restored fields; each intentional exception listed above. Desktop/mobile and active read-back results recorded after deployment below.
+
+- Deployment verified: active 20500 JSON read-back exactly matches repository JSON. Schema validation passed; final Theme Check has zero 20500-template findings and 24 pre-existing errors elsewhere.
+- Browser verified at 1280 px and 390 px: six sections, no horizontal overflow, all three restored professional-use answers and all six source FAQ questions present. Five source FAQ answers match exactly; parts-coverage answer deliberately held. Keyboard Enter opens the professional-use accordion and the restored weight FAQ; weight answer visible. Displayed price/options/image/purchase state match across desktop/mobile; commerce settings unchanged from downloaded pre-change JSON. Responsive viewport override reset.
+- Actual captures: [desktop intro](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-source-parity-desktop.png), [professional uses](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-source-parity-professional-uses.png), [mobile](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-source-parity-mobile.png), [mobile weight FAQ](/Users/marketingequipro/.codex/visualizations/2026/10/14/01a13ad6-f5db-7700-b5aa-f68a18960514/ultra-comfort-source-parity-mobile-faq.png).
