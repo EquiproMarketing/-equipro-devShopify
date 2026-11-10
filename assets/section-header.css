@@ -288,6 +288,30 @@
     .button-quote {
       display: none !important;
     }
+
+    .mobile-drawer.is-open .button-quote {
+      display: block !important;
+    }
+
+    .mobile-drawer {
+      overflow-y: auto;
+      overflow-x: hidden;
+      overscroll-behavior-y: contain;
+    }
+
+    .mobile-drawer__header,
+    .mobile-drawer__menu,
+    .mobile-drawer__footer {
+      flex-shrink: 0;
+    }
+
+    .mobile-drawer__menu a {
+      overflow-wrap: anywhere;
+    }
+
+    .mobile-drawer__toggle-sub {
+      flex-shrink: 0;
+    }
   
     .site-header__hamburger {
       display: flex !important;

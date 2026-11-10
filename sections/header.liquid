@@ -6,7 +6,7 @@
     <!-- 1. Left: Hamburger (Mobile) / Desktop Nav -->
     <nav class="site-header__nav">
       <!-- Hamburger Icon (Mobile Only) -->
-      <button class="site-header__hamburger" id="HeaderHamburger" aria-label="Toggle Navigation Menu">
+      <button class="site-header__hamburger" id="HeaderHamburger" aria-controls="MobileDrawer" aria-expanded="false" aria-label="Toggle Navigation Menu">
         <span></span>
         <span></span>
         <span></span>
@@ -87,9 +87,9 @@
 
 <!-- Mobile Drawer Navigation (Dinamico) -->
 <div class="mobile-drawer-overlay" id="MobileDrawerOverlay"></div>
-<aside class="mobile-drawer" id="MobileDrawer">
+<aside class="mobile-drawer" id="MobileDrawer" role="dialog" aria-labelledby="MobileDrawerTitle" aria-hidden="true" inert>
   <div class="mobile-drawer__header">
-    <span class="mobile-drawer__title">MENU</span>
+    <span class="mobile-drawer__title" id="MobileDrawerTitle">MENU</span>
     <button class="mobile-drawer__close" id="MobileDrawerClose" aria-label="Close Menu">&times;</button>
   </div>
   
@@ -126,35 +126,80 @@
   </div>
 </aside>
 
-<!-- Snippet Global Quote Modal -->
-{% render 'quote-modal' %}
-
 <script>
   document.addEventListener('DOMContentLoaded', function() {
     const hamburgerBtn = document.getElementById('HeaderHamburger');
     const drawerCloseBtn = document.getElementById('MobileDrawerClose');
     const drawer = document.getElementById('MobileDrawer');
     const overlay = document.getElementById('MobileDrawerOverlay');
+    if (!drawer || drawer.dataset.navigationReady) return;
+    drawer.dataset.navigationReady = 'true';
+    const mobileLayout = window.matchMedia('(max-width: 989px)');
+
+    let previousOverflow = '';
 
     function openDrawer() {
-      if (drawer && overlay) {
+      if (drawer && overlay && !drawer.classList.contains('is-open')) {
+        previousOverflow = document.body.style.overflow;
+        drawer.scrollTop = 0;
+        drawer.removeAttribute('inert');
+        drawer.setAttribute('aria-hidden', 'false');
+        hamburgerBtn?.setAttribute('aria-expanded', 'true');
         drawer.classList.add('is-open');
         overlay.classList.add('is-open');
         document.body.style.overflow = 'hidden';
+        drawerCloseBtn?.focus({ preventScroll: true });
       }
     }
 
-    function closeDrawer() {
-      if (drawer && overlay) {
+    function closeDrawer(options = {}) {
+      const quoteOpen = document.getElementById('QuoteModal')?.classList.contains('is-open');
+      if (quoteOpen && !options.desktopTransition) return;
+      if (drawer && overlay && drawer.classList.contains('is-open')) {
         drawer.classList.remove('is-open');
         overlay.classList.remove('is-open');
-        document.body.style.overflow = '';
+        drawer.setAttribute('inert', '');
+        drawer.setAttribute('aria-hidden', 'true');
+        hamburgerBtn?.setAttribute('aria-expanded', 'false');
+        if (quoteOpen) {
+          document.dispatchEvent(new CustomEvent('equipro:quote-menu-release', {
+            detail: { previousOverflow }
+          }));
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = previousOverflow;
+          const target = [hamburgerBtn,
+            document.querySelector('.site-header__actions [data-open-quote-modal]'),
+            document.querySelector('.site-header__logo a')]
+            .find(element => element && !element.closest('[inert]') && element.getClientRects().length &&
+              getComputedStyle(element).visibility !== 'hidden');
+          target?.focus({ preventScroll: true });
+        }
       }
     }
+
+    mobileLayout.addEventListener('change', event => {
+      if (!event.matches) closeDrawer({ desktopTransition: true });
+    });
 
     if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
     if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
     if (overlay) overlay.addEventListener('click', closeDrawer);
+    drawer?.addEventListener('keydown', event => {
+      if (!drawer.classList.contains('is-open') || document.getElementById('QuoteModal')?.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeDrawer();
+      } else if (event.key === 'Tab') {
+        const controls = [...drawer.querySelectorAll('a[href], button, [tabindex]')]
+          .filter(element => element.tabIndex >= 0 && !element.disabled && element.getClientRects().length);
+        const index = controls.indexOf(document.activeElement);
+        if (index === -1 || (event.shiftKey ? index === 0 : index === controls.length - 1)) {
+          event.preventDefault();
+          (event.shiftKey ? controls[controls.length - 1] : controls[0])?.focus({ preventScroll: true });
+        }
+      }
+    });
 
     // Submenu Toggle en Mobile
     const subToggles = document.querySelectorAll('[data-sub-toggle]');
