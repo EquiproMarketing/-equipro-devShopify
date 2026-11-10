@@ -101,7 +101,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/equipro-11906-deluxe-column-multiderm-facial-system.webp",
+        "image": "shopify://shop_images/equipro-11906-deluxe-column-multifunctional-esthetics-station.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -196,7 +196,8 @@
         "padding_top": 40,
         "padding_bottom": 40,
         "margin_top": 40,
-        "margin_bottom": 40
+        "margin_bottom": 40,
+        "image": "shopify://shop_images/equipro-11906-deluxe-column-aesthetic-multipurpose-station.webp"
       }
     },
     "faq": {
