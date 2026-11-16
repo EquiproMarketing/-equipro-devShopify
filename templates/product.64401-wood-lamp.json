@@ -14,7 +14,7 @@
       "settings": {
         "back_text": "Back",
         "custom_title": "Wood Lamp Professional Skin Analyzer",
-        "intro_highlight": "The Equipro Wood's Lamp delivers an essential diagnostic baseline for advanced skincare treatments, bridging the gap between clinical insight and everyday practitioner ergonomics. Manufactured in North America to strict performance standards, this compact handheld device provides instant diagnostic clarity without overcomplicating the consultation workflow.",
+        "intro_highlight": "The Equipro Wood's Lamp is a compact device for professional skin observation.",
         "custom_description": "<p>The Wood's Lamp is purpose-built for skincare specialists, including certified technicians, licensed professionals, and practicing aestheticians. Its ergonomic, precision-engineered design targets visual fatigue and wrist discomfort during high-volume clinic days, enabling sharper focus on treatment execution and repeatable results. Whether you are performing deep-pore cleansing, microdermabrasion, or a comprehensive client consultation, this precision tool adapts to your multi-technician adaptability with friction-free adjustment and seamless workflow integration.</p>",
         "subtitle": "Advanced Ultraviolet Skin Analysis for Precision Aesthetics",
         "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optical clarity and professional performance of the Wood's Lamp, regular maintenance actions should be performed with specific cleaning products formulated for clean clinical environments after every use. The high-grade exterior casing offers exceptional wear resistance, ensuring an immaculate condition outcome across an extended multi-year timeframe. Consistent care preserves structural longevity and maximizes operational revenue.</p>",
@@ -283,7 +283,6 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "modal_title": "Select Models to Compare",
         "compare_collection": ""
       }
     }

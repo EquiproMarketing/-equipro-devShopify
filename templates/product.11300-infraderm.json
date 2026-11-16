@@ -15,7 +15,7 @@
         "back_text": "Back",
         "custom_title": "Infraderm",
         "intro_highlight": "The Infraderm workstation delivers an uncompromised solution for targeted skincare treatments, shifting the focus from cumbersome configurations to seamless, high-performance execution. Handbuilt to rigorous North American manufacturing standards, this compact unit eliminates structural workspace clutter by integrating dedicated electrode storage directly into its chassis, optimizing clinical real estate while preserving practitioner ergonomics during repetitive, high-precision modalities.",
-        "custom_description": "<p>Infraderm is purpose-built for licensed professionals, including estheticians, clinical spa therapists, and specialized skincare technicians. Its ergonomic, precision-engineered design targets wrist discomfort and shoulder fatigue during extended treatment sessions, enabling sharper focus on treatment execution and service consistency. Whether you are performing deep-pore cleansing, specialized facial massage, or post-procedure recovery, this clinical device adapts to your workflow need with friction-free adjustment and instant-response calibration.</p>",
+        "custom_description": "<p>Infraderm is a compact unit with integrated electrode storage and adjustable intensity. Follow the manufacturer's model-specific instructions when selecting settings and accessories.</p>",
         "subtitle": "Targeted High-Performance Care",
         "secondary_description": "<p>Positive structural durability is central to the Equipro approach. To preserve the material integrity and optimal performance of the Infraderm, consistent surface care with a non-corrosive disinfectant formulated for clinical environments should be performed after every treatment session. The exterior chassis features high-impact chemical resistance, ensuring a pristine condition outcome across a 15-to-20-year operational timeframe. Consistent care preserves electrical safety standards and ensures uncompromised service reliability.</p>",
         "show_variant_selectors": true,
@@ -34,7 +34,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Licensed Esthetician:",
-            "answer": "<p>The Infraderm provides an essential foundation for clarifying and advanced facial regimens. Utilizing its custom-molded purple and pink electrodes, skincare specialists can seamlessly address congestion, promote post-extraction cellular recovery, and deliver targeted antibacterial benefits. The variable intensity control enables the practitioner to instantly modulate energy flow, ensuring that delicate skin types receive non-invasive, highly effective care without triggering undue erythema.</p>"
+            "answer": "<p>Infraderm provides variable intensity control and includes purple, pink and indirect-massage electrodes. Select settings and accessories according to the manufacturer's model-specific instructions.</p>"
           }
         },
         "faq_item_74hYTC": {

@@ -14,9 +14,9 @@
         "settings": {
           "back_text": "Back",
           "custom_title": "Visiderm Skin Analysis Station",
-          "intro_highlight": "The Visiderm skin analysis station provides an optimized diagnostic foundation for advanced skincare environments by balancing practitioner ergonomics with premium Canadian manufacturing standards.",
-          "custom_description": "<p>The Visiderm is engineered to elevate early-stage client consultations through highly precise structural skin analysis. Featuring a specialized 3 diopter optical magnification lens and powered by six synchronized neon tubes, this compact powerhouse delivers shadow-free, crystal-clear illumination across the entire facial landscape. It enables advanced skincare providers to identify deep-seated dermal irregularities, structural sun damage, and localized hydration imbalances before they become visible to the naked eye.</p>",
-          "subtitle": "Advanced Optical Diagnostics for Premium Salons",
+          "intro_highlight": "Visiderm provides magnification and illumination for professional skin observation.",
+          "custom_description": "<p>Visiderm provides 3-diopter magnification and illumination from six neon tubes for observing the skin during professional consultations.</p>",
+          "subtitle": "Illuminated skin observation",
           "secondary_description": "<p>Positive attribute construction is central to the Equipro approach. To preserve the optical clarity and professional aesthetics of Visiderm, routine maintenance action with mild cleaning agents formulated for clinical environments should be performed after every consultation. The outer surface boasts superior scratch resistance property, ensuring an pristine condition outcome across a multi-year operational timeframe. Consistent care guarantees long-term service consistency and enhanced client comfort.</p>",
           "show_variant_selectors": true,
           "show_color_option": true,
@@ -41,7 +41,7 @@
             "type": "faq_item",
             "settings": {
               "question": "Clinic Spa Therapist:",
-              "answer": "<p>Delivers shadow-free 3-diopter optical magnification and 6 synchronized neon tubes for precise diagnostic clarity during clinical skin treatments and facial prep.</p>"
+              "answer": "<p>Provides 3-diopter magnification and illumination from 6 neon tubes for professional skin observation.</p>"
             }
           },
           "faq_item_bhzmwM": {

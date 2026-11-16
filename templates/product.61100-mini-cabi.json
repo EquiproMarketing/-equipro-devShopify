@@ -15,7 +15,7 @@
           "back_text": "Back",
           "custom_title": "Mini Cabi Professional Towel Warmer",
           "intro_highlight": "The Equipro Mini Cabi is the gold standard in compact towel hygiene, engineered for high-traffic aesthetic clinics and spas. This professional-grade unit combines rapid thermal heating with integrated UV sterilization to ensure every treatment begins with a safe, soothing, and premium experience.",
-          "custom_description": "<p>The Mini Cabi is purpose-built for licensed professionals, including Estheticians, Skincare Specialists, and Clinical Spa Technicians. Its heavy-duty, compact design targets treatment room congestion and operational friction during back-to-back appointments, enabling sharper focus on service execution and client relaxation. Whether you are performing hot towel compresses, facial prep protocols, or hygienic tool sanitation, this clinical device adjusts to your multi-technician adaptability with constant thermal regulation and instant-response sterilization.</p>",
+          "custom_description": "<p>The Mini Cabi is purpose-built for licensed professionals, including Estheticians, Skincare Specialists, and Clinical Spa Technicians. Its heavy-duty, compact design targets treatment room congestion and operational friction during back-to-back appointments, enabling sharper focus on service execution and client relaxation. Whether you are performing hot towel compresses, facial prep protocols, or towel preparation, this clinical device adjusts to your multi-technician adaptability with constant thermal regulation and instant-response sterilization.</p>",
           "subtitle": "Engineered for Precise Thermal Hygiene & Compact Station Efficiency",
           "secondary_description": "<p>Structural integrity and mechanical reliability are central to the Equipro approach. To preserve the heating consistency and UV lamp lifespan of Mini Cabi, routine wiping with non-abrasive surface disinfectants formulated for clinical environments should be performed at the end of each shift. The powder-coated metallic exterior provides exceptional scratch and stain resistance, ensuring pristine operational condition across a 15-to-20-year lifespan. Consistent care prevents moisture buildup and maintains optimal reflection inside the chamber.</p>",
           "show_variant_selectors": true,
@@ -41,7 +41,7 @@
             "type": "faq_item",
             "settings": {
               "question": "Clinical Spa Technicians & Spa Therapists:",
-              "answer": "<p>Compact desktop footprint eliminates room congestion while providing integrated UV light sterilization for hygienic tool sanitation between client appointments.</p>"
+              "answer": "<p>The compact Mini Cabi warms facial towels and includes a built-in UV light. Follow the manufacturer's model-specific operating instructions.</p>"
             }
           },
           "faq_item_bhzmwM": {

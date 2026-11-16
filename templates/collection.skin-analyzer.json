@@ -144,7 +144,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Is the UV light source safe for the client's eyes?",
-            "answer": "<p>Yes, absolutely. The internal illumination is completely safe when used within standard diagnostic parameters. The machine's architecture and viewing mirrors are specifically engineered to shield the client's eyes comfortably while providing maximum visibility to the operator.</p>"
+            "answer": "<p>Follow the manufacturer's model-specific operating and eye-protection instructions.</p>"
           }
         },
         "faq_item_kmRk4U": {
