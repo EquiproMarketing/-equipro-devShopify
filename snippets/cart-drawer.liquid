@@ -1,8 +1,11 @@
 {{ 'cart-drawer.css' | asset_url | stylesheet_tag }}
 
+<div id="CartFeedback" class="cart-feedback" role="alert" hidden data-error="Unable to update cart." data-refresh-error="Cart could not be refreshed. Check your cart before continuing."></div>
+<button id="CartFeedbackRetry" class="cart-feedback-retry" type="button" hidden>Refresh cart</button>
+
 <div class="cart-drawer-overlay" id="CartDrawerOverlay"></div>
 
-<div class="cart-drawer" id="CartDrawer" role="dialog" aria-modal="true" aria-label="Shopping Cart">
+<div class="cart-drawer" id="CartDrawer" aria-hidden="true" inert role="dialog" aria-modal="true" aria-label="Shopping Cart">
   
   <!-- CABECERA DEL DRAWER -->
   <div class="cart-drawer__header">

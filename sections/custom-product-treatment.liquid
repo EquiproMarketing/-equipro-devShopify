@@ -236,67 +236,52 @@
     const cartBtns = sectionContainer.querySelectorAll('.js-add-to-cart-btn');
 
     cartBtns.forEach(btn => {
-      btn.addEventListener('click', function(e) {
+      btn.addEventListener('click', async function(e) {
         e.preventDefault();
         const variantId = this.getAttribute('data-variant-id');
         if (!variantId) return;
 
         const textSpan = this.querySelector('.btn-text');
         const spinnerSpan = this.querySelector('.btn-spinner');
-        const originalText = textSpan.textContent;
+        const originalText = this.cartLabel ?? (this.cartLabel = textSpan.textContent);
 
-        this.disabled = true;
-        textSpan.style.display = 'none';
-        spinnerSpan.style.display = 'inline-block';
-
-        fetch(window.Shopify.routes.root + 'cart/add.js', {
-          method: 'POST',
-          headers: {
-            'Content-Type': 'application/json',
-            'Accept': 'application/json'
-          },
-          body: JSON.stringify({
-            id: variantId,
-            quantity: 1
-          })
-        })
-        .then(response => response.json())
-        .then(data => {
-          textSpan.textContent = 'Added! ✓';
-          textSpan.style.display = 'inline-block';
-          spinnerSpan.style.display = 'none';
-          this.classList.add('is-added');
-
-          const cartDrawer = document.querySelector('cart-drawer');
-          if (cartDrawer && typeof cartDrawer.open === 'function') {
-            fetch(`${window.Shopify.routes.root}?sections=cart-drawer,cart-icon-bubble`)
-              .then(res => res.json())
-              .then(parsedState => {
-                if (parsedState['cart-drawer']) {
-                  const tempDiv = document.createElement('div');
-                  tempDiv.innerHTML = parsedState['cart-drawer'];
-                  const newDrawer = tempDiv.querySelector('cart-drawer');
-                  if (newDrawer) {
-                    cartDrawer.innerHTML = newDrawer.innerHTML;
-                  }
-                }
-                cartDrawer.open();
-              });
-          }
-
-          setTimeout(() => {
+        const cartDrawer = window.cartDrawer;
+        if (!cartDrawer || cartDrawer.pending || cartDrawer.unsynced || this.acceptedPending || this.uncertainAdd) return;
+        try {
+          await cartDrawer.run(async () => {
+            clearTimeout(this.cartResetTimer);
             textSpan.textContent = originalText;
-            this.classList.remove('is-added');
-            this.disabled = false;
-          }, 2000);
-        })
-        .catch(error => {
-          console.error('Error adding to cart:', error);
-          textSpan.textContent = 'Error';
-          textSpan.style.display = 'inline-block';
-          spinnerSpan.style.display = 'none';
-          this.disabled = false;
-        });
+            textSpan.style.display = 'none';
+            spinnerSpan.style.display = 'inline-block';
+            try {
+              const data = await cartDrawer.request(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: variantId, quantity: 1 })
+              });
+              if (!data.id && !(Array.isArray(data.items) && data.items.length)) throw new Error(cartDrawer.errorMessage());
+              this.acceptedPending = true;
+              await cartDrawer.refreshDrawer();
+            } catch (error) {
+              if (!this.acceptedPending && !Number.isInteger(error.status)) this.uncertainAdd = true;
+              throw error;
+            } finally {
+              textSpan.style.display = 'inline-block';
+              spinnerSpan.style.display = 'none';
+            }
+          });
+        } finally {
+          if (this.acceptedPending || this.uncertainAdd) this.disabled = true;
+          if (this.uncertainAdd) textSpan.textContent = 'Check cart before adding again';
+        }
+      });
+      document.addEventListener('cart:reconciled', () => {
+        if (!btn.acceptedPending) return;
+        btn.acceptedPending = false;
+        btn.disabled = false;
+        const text = btn.querySelector('.btn-text');
+        text.textContent = 'Added! ✓';
+        clearTimeout(btn.cartResetTimer);
+        btn.cartResetTimer = setTimeout(() => { text.textContent = btn.cartLabel; }, 2000);
+        window.cartDrawer.open(btn);
       });
     });
   });
