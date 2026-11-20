@@ -1,11 +1,37 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{% if section.settings.reference_layout %}{{ 'product-reference-layout.css' | asset_url | stylesheet_tag }}{% endif %}
 
-<div class="product-page page-width" id="ProductMain-{{ section.id }}">
+<div class="product-page page-width{% if section.settings.reference_layout %} product-page--reference{% endif %}" id="ProductMain-{{ section.id }}">
   {% assign target_product = product | default: section.settings.featured_product %}
   {% assign use_product_overrides = true %}
   {% if product != blank and section.settings.featured_product != blank and section.settings.featured_product.id != product.id %}
     {% assign use_product_overrides = false %}
   {% endif %}
+
+  {% liquid
+    assign purchase_restricted = false
+    assign template_name = target_product.template_suffix | downcase
+    if template_name contains 'quote' or target_product.requires_selling_plan
+      assign purchase_restricted = true
+    endif
+    for tag in target_product.tags
+      assign normalized_tag = tag | downcase
+      if normalized_tag contains 'quote' or normalized_tag == 'rfq'
+        assign purchase_restricted = true
+      endif
+    endfor
+    for product_collection in target_product.collections
+      if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables'
+        assign purchase_restricted = true
+      endif
+    endfor
+  %}
+  {% assign portable_product = false %}
+  {% for product_collection in target_product.collections %}
+    {% if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables' %}
+      {% assign portable_product = true %}
+    {% endif %}
+  {% endfor %}
 
   <!-- 1. BACK LINK -->
   <div class="product-page__back product-mobile-order-back">
@@ -13,7 +39,7 @@
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
         <path d="M7 1L1 6L7 11" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"/>
       </svg>
-      <span>{{ section.settings.back_text | default: "Back" }}</span>
+      <span>{% if section.settings.back_text != blank %}{{ section.settings.back_text }}{% else %}{{ 'general.back' | t }}{% endif %}</span>
     </a>
   </div>
 
@@ -61,11 +87,13 @@
         <!-- DYNAMIC PRICE -->
         <div class="product-price" id="ProductPriceContainer">
           {% assign current_variant = target_product.selected_or_first_available_variant %}
-          {{ current_variant.price | money }}
+          {% if current_variant.price > 0 %}{% if section.settings.show_currency %}{{ current_variant.price | money_with_currency }}{% else %}{{ current_variant.price | money }}{% endif %}{% else %}{{ 'products.price_unavailable' | t }}{% endif %}
         </div>
 
+        {% if use_product_overrides and section.settings.purchase_note != blank %}<div class="product-purchase-note">{{ section.settings.purchase_note }}</div>{% endif %}
+        {% unless portable_product %}
         {% form 'product', target_product %}
-          <input type="hidden" name="id" id="ProductVariantIdInput" value="{{ current_variant.id }}">
+          <input type="hidden" name="id" id="ProductVariantIdInput" value="{% if current_variant.available and current_variant.price > 0 and purchase_restricted == false %}{{ current_variant.id }}{% endif %}">
 
           {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
             <div class="product-options-container">
@@ -73,7 +101,7 @@
                 {% assign option_name_downcase = option.name | downcase %}
                 
                 {% assign show_option = true %}
-                {% if option_name_downcase contains 'color' or option_name_downcase contains 'couleur' %}
+                {% if option_name_downcase contains 'color' or option_name_downcase contains 'colour' or option_name_downcase contains 'couleur' %}
                   {% if section.settings.show_color_option == false %}
                     {% assign show_option = false %}
                   {% endif %}
@@ -85,15 +113,17 @@
 
                 {% if show_option %}
                   <div class="product-option">
-                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{{ option.name }}</label>
+                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{% assign display_option_name = option.name | strip | downcase %}{% if display_option_name == 'couleur' or display_option_name == 'color' or display_option_name == 'colour' %}{{ 'products.color' | t }}{% else %}{{ option.name }}{% endif %}</label>
                     <select 
                       id="Option-{{ section.id }}-{{ forloop.index0 }}" 
                       class="product-select product-variant-selector"
                       data-option-index="{{ forloop.index0 }}"
                     >
                       {% for value in option.values %}
-                        <option value="{{ value | escape }}" {% if option.selected_value == value %}selected="selected"{% endif %}>
-                          {{ value }}
+                        {% assign value_name = value.name | default: value %}
+                        {% assign selected_value_name = option.selected_value.name | default: option.selected_value %}
+                        <option value="{{ value_name | escape }}" {% if selected_value_name == value_name %}selected="selected"{% endif %}>
+                          {{ value_name }}
                         </option>
                       {% endfor %}
                     </select>
@@ -110,15 +140,18 @@
               <button type="button" onclick="adjustQty(1)">+</button>
             </div>
 
-            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% unless current_variant.available %}disabled{% endunless %}>
-              {% if current_variant.available %}
-                {{ section.settings.btn_label | default: "ADD TO CART" }}
+            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% if current_variant.available == false or current_variant.price <= 0 or purchase_restricted %}disabled{% endif %}>
+              {% if current_variant.price <= 0 or purchase_restricted %}
+                {{ 'products.purchase_unavailable' | t }}
+              {% elsif current_variant.available %}
+                {% if section.settings.btn_label != blank %}{{ section.settings.btn_label }}{% else %}{{ 'products.add_to_cart' | t }}{% endif %}
               {% else %}
-                OUT OF STOCK
+                {{ 'products.sold_out' | t }}
               {% endif %}
             </button>
           </div>
         {% endform %}
+        {% endunless %}
       </div>
 
     </div>
@@ -133,9 +166,9 @@
           {% if use_product_overrides and first_img_block.settings.image != blank %}
             <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1600 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
           {% elsif current_variant.image != blank %}
-            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ current_variant.image.alt | default: target_product.title | escape }}">
           {% elsif target_product.featured_image != blank %}
-            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.title | escape }}">
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.featured_image.alt | default: target_product.title | escape }}">
           {% else %}
             <div class="thumb-img-placeholder"></div>
           {% endif %}
@@ -150,7 +183,8 @@
                 <img 
                   src="{{ block.settings.image | image_url: width: 400 }}" 
                   class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                  onclick="changeMainImg(this.dataset.highres)" 
+                  onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
                   data-highres="{{ block.settings.image | image_url: width: 1600 }}"
                   {{ block.shopify_attributes }}
                 >
@@ -159,9 +193,11 @@
           {% elsif target_product.images.size > 0 %}
             {% for image in target_product.images limit: 4 %}
               <img 
-                src="{{ image | image_url: width: 400 }}" 
+                src="{{ image | image_url: width: 400 }}"
+                alt="{{ image.alt | default: target_product.title | escape }}"
                 class="thumb-img {% if forloop.first %}is-active{% endif %}" 
-                onclick="changeMainImg(this.dataset.highres)" 
+                onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
                 data-highres="{{ image | image_url: width: 1600 }}"
               >
             {% endfor %}
@@ -177,17 +213,19 @@
             {% assign swatch_value = block.settings.color_name | strip | downcase %}
             {% for option in target_product.options_with_values %}
               {% assign option_name_downcase = option.name | downcase %}
-              {% if option_name_downcase contains 'color' or option_name_downcase contains 'couleur' %}
+              {% if option_name_downcase contains 'color' or option_name_downcase contains 'colour' or option_name_downcase contains 'couleur' %}
                 {% for value in option.values %}
-                  {% assign value_downcase = value | strip | downcase %}
+                  {% assign value_name = value.name | default: value %}
+                  {% assign selected_value_name = option.selected_value.name | default: option.selected_value %}
+                  {% assign value_downcase = value_name | strip | downcase %}
                   {% if value_downcase == swatch_value %}
                     <button 
                       type="button" 
-                      class="product-swatch-btn {% if option.selected_value == value %}is-active{% endif %}"
+                      class="product-swatch-btn {% if selected_value_name == value_name %}is-active{% endif %}"
                       data-option-index="{{ forloop.parentloop.parentloop.index0 }}"
-                      data-value="{{ value | escape }}"
-                      title="{{ value }}"
-                      aria-label="{{ value | escape }}"
+                      data-value="{{ value_name | escape }}"
+                      title="{{ value_name | escape }}"
+                      aria-label="{{ value_name | escape }}"
                       style="background-color: {{ block.settings.color_hex }};"
                       onclick="selectSwatch(this)"
                       {{ block.shopify_attributes }}
@@ -209,7 +247,7 @@
         <div class="product-compare-wrapper product-mobile-order-compare">
           <button class="product-compare-trigger-btn" id="OpenCompareModal">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
-            <span>{{ section.settings.compare_btn_label | default: "Compare with other models" }}</span>
+            <span>{% if section.settings.compare_btn_label != blank %}{{ section.settings.compare_btn_label }}{% else %}{{ 'compare_legacy.open' | t }}{% endif %}</span>
           </button>
         </div>
       {% endif %}
@@ -225,7 +263,8 @@
       {
         "id": {{ variant.id }},
         "title": {{ variant.title | json }},
-        "price": {{ variant.price | money | json }},
+        "price": {% if variant.price > 0 %}{% if section.settings.show_currency %}{{ variant.price | money_with_currency | json }}{% else %}{{ variant.price | money | json }}{% endif %}{% else %}{{ 'products.price_unavailable' | t | json }}{% endif %},
+        "purchasable": {% if variant.price > 0 and purchase_restricted == false %}true{% else %}false{% endif %},
         "available": {{ variant.available | json }},
         "options": [
           {{ variant.option1 | json }},
@@ -240,6 +279,15 @@
 
 <script>
   const productVariants = JSON.parse(document.getElementById('ProductVariantsJson-{{ target_product.id }}').textContent);
+
+  const purchaseForm = document.querySelector('#ProductMain-{{ section.id }} form[action*="/cart/add"]');
+  if (purchaseForm) purchaseForm.addEventListener('submit', event => {
+    const variant = productVariants.find(item => String(item.id) === String(purchaseForm.querySelector('[name="id"]')?.value));
+    if (!variant || !variant.available || !variant.purchasable) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
 
   document.querySelectorAll('.product-variant-selector').forEach(select => {
     select.addEventListener('change', updateSelectedVariant);
@@ -280,24 +328,27 @@
       const variantIdInput = document.getElementById('ProductVariantIdInput');
       if (variantIdInput) variantIdInput.value = '';
       const cartBtn = document.getElementById('AddToCartButton');
-      if (cartBtn) { cartBtn.disabled = true; cartBtn.textContent = 'UNAVAILABLE'; }
+      if (cartBtn) { cartBtn.disabled = true; cartBtn.textContent = {{ 'products.purchase_unavailable' | t | json }}; }
       return;
     }
     if (matchedVariant) {
       const variantIdInput = document.getElementById('ProductVariantIdInput');
-      if (variantIdInput) variantIdInput.value = matchedVariant.id;
+      if (variantIdInput) variantIdInput.value = matchedVariant.available && matchedVariant.purchasable ? matchedVariant.id : '';
 
       const priceContainer = document.getElementById('ProductPriceContainer');
       if (priceContainer) priceContainer.textContent = matchedVariant.price;
 
       const cartBtn = document.getElementById('AddToCartButton');
       if (cartBtn) {
-        if (matchedVariant.available) {
+        if (!matchedVariant.purchasable) {
+          cartBtn.disabled = true;
+          cartBtn.textContent = {{ 'products.purchase_unavailable' | t | json }};
+        } else if (matchedVariant.available) {
           cartBtn.disabled = false;
-          cartBtn.textContent = {{ section.settings.btn_label | default: 'ADD TO CART' | json }};
+          cartBtn.textContent = {% if section.settings.btn_label != blank %}{{ section.settings.btn_label | json }}{% else %}{{ 'products.add_to_cart' | t | json }}{% endif %};
         } else {
           cartBtn.disabled = true;
-          cartBtn.textContent = "OUT OF STOCK";
+          cartBtn.textContent = {{ 'products.sold_out' | t | json }};
         }
       }
 
@@ -333,6 +384,7 @@
   "tag": "section",
   "class": "section-main-product",
   "settings": [
+    {"type":"checkbox","id":"reference_layout","label":"Reference product layout","default":false},
     {
       "type": "text",
       "id": "back_text",
@@ -395,6 +447,8 @@
       "id": "featured_product",
       "label": "Link Specific Product"
     },
+    {"type":"checkbox","id":"show_currency","label":"Show price currency","default":false},
+    {"type":"richtext","id":"purchase_note","label":"Purchase or option note"},
     {
       "type": "text",
       "id": "btn_label",

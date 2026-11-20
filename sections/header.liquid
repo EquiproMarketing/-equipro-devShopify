@@ -6,7 +6,7 @@
     <!-- 1. Left: Hamburger (Mobile) / Desktop Nav -->
     <nav class="site-header__nav">
       <!-- Hamburger Icon (Mobile Only) -->
-      <button class="site-header__hamburger" id="HeaderHamburger" aria-controls="MobileDrawer" aria-expanded="false" aria-label="Toggle Navigation Menu">
+      <button class="site-header__hamburger" id="HeaderHamburger" aria-label="{{ 'general.toggle_navigation' | t }}" aria-controls="MobileDrawer" aria-expanded="false">
         <span></span>
         <span></span>
         <span></span>
@@ -43,17 +43,17 @@
           {% endfor %}
         {% else %}
           <!-- Fallback de Resguardo -->
-          <li><a href="/" class="site-header__link">Home</a></li>
-          <li><a href="/collections" class="site-header__link">Shop</a></li>
-          <li><a href="/pages/about-us" class="site-header__link">About Us</a></li>
-          <li><a href="/pages/contact" class="site-header__link">Contact</a></li>
+          <li><a href="{{ routes.root_url }}" class="site-header__link">{{ 'general.home' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}" class="site-header__link">{{ 'general.shop' | t }}</a></li>
+          <li><a href="{{ routes.root_url }}pages/about-us" class="site-header__link">{{ 'general.about' | t }}</a></li>
+          <li><a href="{{ routes.root_url }}pages/contact" class="site-header__link">{{ 'general.contact' | t }}</a></li>
         {% endif %}
       </ul>
     </nav>
 
     <!-- 2. Center: Logo -->
     <div class="site-header__logo">
-      <a href="/">
+      <a href="{{ routes.root_url }}">
         {% if section.settings.logo != blank %}
           {{ section.settings.logo | image_url: width: 300 | image_tag: class: 'site-header__logo-img', alt: shop.name }}
         {% else %}
@@ -73,13 +73,13 @@
         </a>
       </div>
 
-      <a href="/cart" class="site-header__cart" aria-label="View Shopping Cart">
+      <a href="{{ routes.cart_url }}" class="site-header__cart" aria-label="{{ 'cart.view_cart' | t }}">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
         <span class="site-header__cart-count">{{ cart.item_count | default: 0 }}</span>
       </a>
 
       <!-- Trigger Modal B2B -->
-      <button type="button" class="button-quote" data-open-quote-modal>Get a Quote</button>
+      <button type="button" class="button-quote" data-open-quote-modal>{{ 'quote.open' | t }}</button>
     </div>
 
   </div>
@@ -87,10 +87,10 @@
 
 <!-- Mobile Drawer Navigation (Dinamico) -->
 <div class="mobile-drawer-overlay" id="MobileDrawerOverlay"></div>
-<aside class="mobile-drawer" id="MobileDrawer" role="dialog" aria-labelledby="MobileDrawerTitle" aria-hidden="true" inert>
+<aside class="mobile-drawer" id="MobileDrawer" role="dialog" aria-modal="true" aria-labelledby="MobileDrawerTitle" aria-hidden="true" inert>
   <div class="mobile-drawer__header">
     <span class="mobile-drawer__title" id="MobileDrawerTitle">MENU</span>
-    <button class="mobile-drawer__close" id="MobileDrawerClose" aria-label="Close Menu">&times;</button>
+    <button class="mobile-drawer__close" id="MobileDrawerClose" aria-label="{{ 'general.close_menu' | t }}">&times;</button>
   </div>
   
   <ul class="mobile-drawer__menu">
@@ -101,7 +101,7 @@
           <li class="mobile-drawer__has-sub">
             <div class="mobile-drawer__sub-header">
               <a href="{{ link.url }}" class="mobile-drawer__link">{{ link.title }}</a>
-              <button class="mobile-drawer__toggle-sub" data-sub-toggle aria-label="Toggle Submenu">+</button>
+              <button class="mobile-drawer__toggle-sub" data-sub-toggle aria-label="{{ 'general.toggle_submenu' | t }}">+</button>
             </div>
             <ul class="mobile-drawer__submenu">
               {% for childlink in link.links %}
@@ -114,17 +114,19 @@
         {% endif %}
       {% endfor %}
     {% else %}
-      <li><a href="/" class="mobile-drawer__link">Home</a></li>
-      <li><a href="/collections" class="mobile-drawer__link">Shop</a></li>
-      <li><a href="/pages/about-us" class="mobile-drawer__link">About Us</a></li>
-      <li><a href="/pages/contact" class="mobile-drawer__link">Contact</a></li>
+      <li><a href="{{ routes.root_url }}" class="mobile-drawer__link">{{ 'general.home' | t }}</a></li>
+      <li><a href="{{ routes.collections_url }}" class="mobile-drawer__link">{{ 'general.shop' | t }}</a></li>
+      <li><a href="{{ routes.root_url }}pages/about-us" class="mobile-drawer__link">{{ 'general.about' | t }}</a></li>
+      <li><a href="{{ routes.root_url }}pages/contact" class="mobile-drawer__link">{{ 'general.contact' | t }}</a></li>
     {% endif %}
   </ul>
   
   <div class="mobile-drawer__footer">
-    <button type="button" class="button-quote" data-open-quote-modal style="width: 100%; text-align: center;">Get a Quote</button>
+    <button type="button" class="button-quote" data-open-quote-modal style="width: 100%; text-align: center;">{{ 'quote.open' | t }}</button>
   </div>
 </aside>
+
+<!-- Snippet Global Quote Modal -->
 
 <script>
   document.addEventListener('DOMContentLoaded', function() {

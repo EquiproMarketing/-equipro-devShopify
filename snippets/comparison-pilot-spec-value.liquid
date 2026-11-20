@@ -147,4 +147,5 @@
 {%- when 'warranty' -%}{%- assign pilot_value = "2 years" -%}
 {%- endcase -%}
 {%- endcase -%}
-{%- assign pilot_display = pilot_value | default: 'Not confirmed' -%}{{ pilot_display | escape }}
+{%- assign pilot_display = pilot_value | default: 'Not confirmed' -%}
+{%- render 'comparison-pilot-spec-label', spec_key: '', value: pilot_display, value_mode: true -%}

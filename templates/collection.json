@@ -200,11 +200,22 @@
     "reviews": {
       "type": "customer-reviews",
       "settings": {}
+    },
+    "find_your_setup": {
+      "type": "find-your-setup",
+      "settings": {
+        "professional_profiles": [
+          "spas-wellness-centers",
+          "spa-esthetics-setup",
+          "orthopedic-podiatry"
+        ]
+      }
     }
   },
   "order": [
     "subnav",
     "collection_banner_qtVMrG",
+    "find_your_setup",
     "custom_product_treatment_TNRQeX",
     "positive_impact",
     "why_category",

@@ -1,5 +1,8 @@
 {{ 'custom-product-treatment.css' | asset_url | stylesheet_tag }}
 
+{%- if collection.handle == 'all' and request.page_type == 'collection' -%}
+  {% render 'catalog-product-grid', section: section, collection: collection %}
+{%- else -%}
 <section class="custom-treatment-section" id="treatment-section-{{ section.id }}">
   <div class="page-width">
     
@@ -15,7 +18,7 @@
             <line x1="19" y1="12" x2="5" y2="12"></line>
             <polyline points="12 19 5 12 12 5"></polyline>
           </svg>
-          <span>{{ section.settings.back_button_label | default: "Back" }}</span>
+          <span>{% if section.settings.back_button_label != blank %}{{ section.settings.back_button_label }}{% else %}{{ 'general.back' | t }}{% endif %}</span>
         </a>
       </div>
     {%- endif -%}
@@ -49,7 +52,7 @@
 
             {%- capture display_price -%}
               {%- if product.price_varies -%}
-                {{ 'products.product.from_lowest_price_html' | t: lowest_price: product.price_min | money }}
+                {% assign formatted_lowest_price = product.price_min | money %}{{ 'products.product.from_lowest_price_html' | t: lowest_price: formatted_lowest_price }}
               {%- else -%}
                 {{ product.price | money }}
               {%- endif -%}
@@ -103,7 +106,7 @@
 
                 <div class="custom-treatment-card__actions">
                   <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                    {{ section.settings.btn_primary_text | default: 'Learn More' }}
+                    {% if section.settings.btn_primary_text != blank %}{{ section.settings.btn_primary_text }}{% else %}{{ 'products.learn_more' | t }}{% endif %}
                   </a>
 
                   {%- if is_available -%}
@@ -112,12 +115,12 @@
                       class="custom-treatment-btn custom-treatment-btn--add-to-cart js-add-to-cart-btn"
                       data-variant-id="{{ variant_id }}"
                     >
-                      <span class="btn-text">{{ section.settings.btn_cart_text | default: 'Add to Cart' }}</span>
+                      <span class="btn-text">{% if section.settings.btn_cart_text != blank %}{{ section.settings.btn_cart_text }}{% else %}{{ 'products.add_to_cart' | t }}{% endif %}</span>
                       <span class="btn-spinner" style="display:none;">...</span>
                     </button>
                   {%- else -%}
                     <button type="button" class="custom-treatment-btn custom-treatment-btn--disabled" disabled>
-                      Sold Out
+                      {{ 'products.sold_out' | t }}
                     </button>
                   {%- endif -%}
                 </div>
@@ -146,7 +149,7 @@
 
             {%- capture display_price -%}
               {%- if product.price_varies -%}
-                {{ 'products.product.from_lowest_price_html' | t: lowest_price: product.price_min | money }}
+                {% assign formatted_lowest_price = product.price_min | money %}{{ 'products.product.from_lowest_price_html' | t: lowest_price: formatted_lowest_price }}
               {%- else -%}
                 {{ product.price | money }}
               {%- endif -%}
@@ -200,7 +203,7 @@
 
                 <div class="custom-treatment-card__actions">
                   <a href="{{ display_url }}" class="custom-treatment-btn custom-treatment-btn--primary">
-                    {{ section.settings.btn_primary_text | default: 'Learn More' }}
+                    {% if section.settings.btn_primary_text != blank %}{{ section.settings.btn_primary_text }}{% else %}{{ 'products.learn_more' | t }}{% endif %}
                   </a>
 
                   {%- if is_available -%}
@@ -209,12 +212,12 @@
                       class="custom-treatment-btn custom-treatment-btn--add-to-cart js-add-to-cart-btn"
                       data-variant-id="{{ variant_id }}"
                     >
-                      <span class="btn-text">{{ section.settings.btn_cart_text | default: 'Add to Cart' }}</span>
+                      <span class="btn-text">{% if section.settings.btn_cart_text != blank %}{{ section.settings.btn_cart_text }}{% else %}{{ 'products.add_to_cart' | t }}{% endif %}</span>
                       <span class="btn-spinner" style="display:none;">...</span>
                     </button>
                   {%- else -%}
                     <button type="button" class="custom-treatment-btn custom-treatment-btn--disabled" disabled>
-                      Sold Out
+                      {{ 'products.sold_out' | t }}
                     </button>
                   {%- endif -%}
                 </div>
@@ -226,6 +229,8 @@
     </div>
   </div>
 </section>
+
+{%- endif -%}
 
 <!-- ROBUST AJAX ADD TO CART SCRIPT -->
 <script>
@@ -254,12 +259,12 @@
             textSpan.style.display = 'none';
             spinnerSpan.style.display = 'inline-block';
             try {
-              const data = await cartDrawer.request(window.Shopify.routes.root + 'cart/add.js', {
-                method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: variantId, quantity: 1 })
-              });
-              if (!data.id && !(Array.isArray(data.items) && data.items.length)) throw new Error(cartDrawer.errorMessage());
-              this.acceptedPending = true;
-              await cartDrawer.refreshDrawer();
+            const data = await cartDrawer.request(window.Shopify.routes.root + 'cart/add.js', {
+              method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: variantId, quantity: 1 })
+            });
+            if (!data.id && !(Array.isArray(data.items) && data.items.length)) throw new Error(cartDrawer.errorMessage());
+            this.acceptedPending = true;
+            await cartDrawer.refreshDrawer();
             } catch (error) {
               if (!this.acceptedPending && !Number.isInteger(error.status)) this.uncertainAdd = true;
               throw error;
@@ -270,7 +275,7 @@
           });
         } finally {
           if (this.acceptedPending || this.uncertainAdd) this.disabled = true;
-          if (this.uncertainAdd) textSpan.textContent = 'Check cart before adding again';
+          if (this.uncertainAdd) textSpan.textContent = {{ 'cart.uncertain_add' | t | json }};
         }
       });
       document.addEventListener('cart:reconciled', () => {
@@ -278,7 +283,7 @@
         btn.acceptedPending = false;
         btn.disabled = false;
         const text = btn.querySelector('.btn-text');
-        text.textContent = 'Added! ✓';
+        text.textContent = {{ 'cart.added' | t | json }};
         clearTimeout(btn.cartResetTimer);
         btn.cartResetTimer = setTimeout(() => { text.textContent = btn.cartLabel; }, 2000);
         window.cartDrawer.open(btn);

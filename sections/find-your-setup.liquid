@@ -1,0 +1,102 @@
+{%- if collection.handle == 'all' -%}
+  {%- liquid
+    assign specialty_filter = collection.filters | where: 'param_name', 'filter.p.m.custom.professional_profiles' | first
+    assign category_filter = collection.filters | where: 'param_name', 'filter.p.m.custom.setup_category' | first
+    assign filters_ready = false
+    if specialty_filter.type == 'list' and category_filter.type == 'list'
+      assign filters_ready = true
+    endif
+    assign current_sort = collection.sort_by | default: collection.default_sort_by
+    assign clear_url = collection.url
+    if current_sort != blank
+      assign sort_value = current_sort | url_encode
+      assign clear_url = clear_url | append: '?sort_by=' | append: sort_value
+    endif
+    assign has_active_filters = false
+    for filter in collection.filters
+      if filter.active_values.size > 0 or filter.min_value.value != nil or filter.max_value.value != nil
+        assign has_active_filters = true
+      endif
+    endfor
+  -%}
+  {{ 'find-your-setup.css' | asset_url | stylesheet_tag }}
+  <section class="find-your-setup" data-find-your-setup data-filter-state="{% if filters_ready %}ready{% else %}unavailable{% endif %}" aria-labelledby="setup-heading-{{ section.id }}">
+    <div class="page-width">
+      <div class="find-your-setup__header">
+        <div>
+          <h2 id="setup-heading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
+          {%- if filters_ready -%}<p>{{ section.settings.intro | escape }}</p>{%- endif -%}
+        </div>
+        <a class="find-your-setup__skip" href="{{ clear_url | escape }}">{% if has_active_filters %}{{ 'setup_filters.clear' | t }}{% else %}{{ 'setup_filters.explore' | t }}{% endif %}</a>
+      </div>
+      {%- if filters_ready -%}
+        <fieldset class="find-your-setup__group">
+          <legend>{{ 'setup_filters.specialty' | t }}</legend>
+          <ul class="find-your-setup__choices">
+            {%- for value in specialty_filter.values -%}
+              <li>
+                {%- if value.active -%}
+                  <a class="find-your-setup__choice is-active" href="{{ value.url_to_remove | escape }}" aria-label="{{ 'setup_filters.selected' | t: label: value.label | escape }}">{{ value.label | escape }} <span>({{ value.count }})</span></a>
+                {%- elsif value.count > 0 -%}
+                  <a class="find-your-setup__choice" href="{{ value.url_to_add | escape }}">{{ value.label | escape }} <span>({{ value.count }})</span></a>
+                {%- else -%}
+                  <span class="find-your-setup__choice is-disabled" aria-disabled="true">{{ value.label | escape }} (0)</span>
+                {%- endif -%}
+              </li>
+            {%- endfor -%}
+          </ul>
+        </fieldset>
+        {%- if specialty_filter.active_values.size > 0 or category_filter.active_values.size > 0 -%}
+          <fieldset class="find-your-setup__group">
+            <legend>{{ 'setup_filters.category' | t }}</legend>
+            <ul class="find-your-setup__choices">
+              {%- for value in category_filter.values -%}
+                {%- assign raw_category_value = value.value | default: value.label -%}
+                {%- assign category_key = raw_category_value | handleize | replace: '-', '_' -%}
+                {%- case category_key -%}
+                  {%- when 'facial_steamers' -%}{%- assign label = 'setup_filters.categories.facial_steamers' | t -%}
+                  {%- when 'facial_equipment' -%}{%- assign label = 'setup_filters.categories.facial_equipment' | t -%}
+                  {%- when 'service_tables' -%}{%- assign label = 'setup_filters.categories.service_tables' | t -%}
+                  {%- when 'seating' -%}{%- assign label = 'setup_filters.categories.seating' | t -%}
+                  {%- else -%}{%- assign label = value.label -%}
+                {%- endcase -%}
+                <li>
+                  {%- if value.active -%}
+                    <a class="find-your-setup__choice is-active" href="{{ value.url_to_remove | escape }}" aria-label="{{ 'setup_filters.selected' | t: label: label | escape }}">{{ label | escape }} <span>({{ value.count }})</span></a>
+                  {%- elsif value.count > 0 -%}
+                    <a class="find-your-setup__choice" href="{{ value.url_to_add | escape }}">{{ label | escape }} <span>({{ value.count }})</span></a>
+                  {%- else -%}
+                    <span class="find-your-setup__choice is-disabled" aria-disabled="true">{{ label | escape }} (0)</span>
+                  {%- endif -%}
+                </li>
+              {%- endfor -%}
+            </ul>
+          </fieldset>
+        {%- else -%}
+          <p class="find-your-setup__message">{{ 'setup_filters.choose' | t }}</p>
+        {%- endif -%}
+        <p class="find-your-setup__results" role="status">{{ 'setup_filters.count' | t: count: collection.products_count }}</p>
+      {%- else -%}
+        <p class="find-your-setup__message">{{ 'setup_filters.unavailable' | t }}</p>
+      {%- endif -%}
+    </div>
+  </section>
+{%- endif -%}
+
+{% schema %}
+{
+  "name": "Find Your Setup",
+  "settings": [
+    { "type": "metaobject_list", "id": "professional_profiles", "label": "Professional profiles", "metaobject_type": "professional_profile", "limit": 3 },
+    { "type": "text", "id": "heading", "label": "Heading", "default": "Find Your Setup" },
+    { "type": "text", "id": "intro", "label": "Introduction", "default": "Browse equipment by specialty and category." },
+    { "type": "text", "id": "skip_label", "label": "Skip label", "default": "Skip — Explore All Products" },
+    { "type": "text", "id": "all_label", "label": "All products tab", "default": "All products" },
+    { "type": "text", "id": "all_description", "label": "All products description", "default": "The complete catalog is always available below." },
+    { "type": "text", "id": "profiles_label", "label": "Accessible tabs label", "default": "Find your professional setup" },
+    { "type": "text", "id": "price_from_label", "label": "Variable price prefix", "default": "From" },
+    { "type": "text", "id": "collections_label", "label": "Related collections label", "default": "Related collections" }
+  ],
+  "presets": [{ "name": "Find Your Setup" }]
+}
+{% endschema %}

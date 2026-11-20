@@ -1,7 +1,7 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 
 <div class="page-width product-page" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
-  <h1 style="font-size: 2.2rem; font-weight: 700; color: #1d1d1f; margin-bottom: 30px;">Shopping Cart</h1>
+  <h1 style="font-size: 2.2rem; font-weight: 700; color: #1d1d1f; margin-bottom: 30px;">{{ 'cart.title' | t }}</h1>
 
   <div id="main-cart-container" data-cart-section-id="{{ section.id }}">
     {% if cart.item_count > 0 %}
@@ -45,7 +45,7 @@
 
               <!-- BOTÓN REMOVE CON AJAX (EVITA NAVEGACIÓN Y APERTURA DE DRAWER) -->
               <button type="button" class="js-remove-cart-item" data-key="{{ item.key }}" style="background: none; border: none; color: #86868b; font-size: 0.85rem; text-decoration: underline; margin-left: 12px; cursor: pointer; padding: 0;">
-                Remove
+                {{ 'cart.remove' | t }}
               </button>
             </div>
           {% endfor %}
@@ -54,9 +54,9 @@
         <!-- SUBTOTAL Y CHECKOUT -->
         <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
           <div style="font-size: 1.25rem; font-weight: 700; color: #1d1d1f;">
-            Subtotal: <span id="cart-subtotal" style="color: #ab273b;">{{ cart.total_price | money }}</span>
+            {{ 'cart.subtotal' | t }}: <span id="cart-subtotal" style="color: #ab273b;">{{ cart.total_price | money }}</span>
           </div>
-          <p style="font-size: 0.85rem; color: #6e6e73; margin: 0;">Taxes and shipping calculated at checkout.</p>
+          <p style="font-size: 0.85rem; color: #6e6e73; margin: 0;">{{ 'cart.tax_shipping' | t }}</p>
           
           <div style="display: flex; gap: 12px; margin-top: 10px;">
             <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 32px; cursor: pointer; border-radius: 22px;">CHECKOUT</button>
@@ -65,8 +65,8 @@
       </form>
     {% else %}
       <div data-cart-empty style="text-align: center; padding: 60px 0;">
-        <p style="font-size: 1.1rem; color: #6e6e73;">Your cart is currently empty.</p>
-        <a href="/collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">Continue Shopping</a>
+        <p style="font-size: 1.1rem; color: #6e6e73;">{{ 'cart.empty' | t }}</p>
+        <a href="{{ routes.root_url }}collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">{{ 'cart.continue_shopping' | t }}</a>
       </div>
     {% endif %}
   </div>

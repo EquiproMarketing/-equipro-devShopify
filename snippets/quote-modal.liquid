@@ -8,23 +8,23 @@
 <div id="QuoteModal" class="quote-modal" aria-hidden="true" role="dialog" aria-labelledby="QuoteModalTitle">
   <div class="quote-modal__overlay" data-close-quote-modal></div>
   <div class="quote-modal__content">
-    <button type="button" class="quote-modal__close" data-close-quote-modal aria-label="Close modal">&times;</button>
+    <button type="button" class="quote-modal__close" data-close-quote-modal aria-label="{{ 'quote.close' | t }}">&times;</button>
     
     <div class="quote-modal__header">
-      <h3 id="QuoteModalTitle" class="quote-modal__title">Request a B2B Quote</h3>
-      <p class="quote-modal__subtitle">Please fill out the form below and our sales team will contact you shortly.</p>
+      <h3 id="QuoteModalTitle" class="quote-modal__title">{{ 'quote.title' | t }}</h3>
+      <p class="quote-modal__subtitle">{{ 'quote.intro' | t }}</p>
     </div>
 
     {% form 'contact', id: 'QuoteForm', class: 'quote-modal__form' %}
       {% if form.posted_successfully? %}
         <div class="quote-modal__success">
-          Thank you for your request! A representative will reach out to you soon.
+          {{ 'quote.success' | t }}
         </div>
       {% endif %}
 
       {% if form.errors %}
         <div class="quote-modal__error">
-          Please check the highlighted fields and try submitting again.
+          {{ 'quote.error' | t }}
         </div>
       {% endif %}
 
@@ -35,45 +35,45 @@
 
       <!-- Visible product context -->
       <div class="quote-modal__product-preview">
-        <span class="quote-modal__product-label">Product:</span>
-        <strong id="QuoteProductDisplay">{{ product.title | default: "General Equipment Inquiry" }}</strong>
+        <span class="quote-modal__product-label">{{ 'quote.product' | t }}:</span>
+        <strong id="QuoteProductDisplay">{{ product.title | default: 'quote.general_product' | t }}</strong>
       </div>
 
       <div class="quote-modal__grid">
         <div class="quote-modal__field">
-          <label for="QuoteName">Full Name *</label>
-          <input type="text" id="QuoteName" name="contact[Name]" required placeholder="e.g. Dr. Jane Doe">
+          <label for="QuoteName">{{ 'quote.full_name' | t }}</label>
+          <input type="text" id="QuoteName" name="contact[Name]" required placeholder="{{ 'quote.full_name_placeholder' | t }}">
         </div>
 
         <div class="quote-modal__field">
-          <label for="QuoteCompany">Company / Business Name *</label>
-          <input type="text" id="QuoteCompany" name="contact[Company]" required placeholder="e.g. Montreal MedSpa Inc.">
+          <label for="QuoteCompany">{{ 'quote.company' | t }}</label>
+          <input type="text" id="QuoteCompany" name="contact[Company]" required placeholder="{{ 'quote.company_placeholder' | t }}">
         </div>
       </div>
 
       <div class="quote-modal__grid">
         <div class="quote-modal__field">
-          <label for="QuoteEmail">Email Address *</label>
-          <input type="email" id="QuoteEmail" name="contact[email]" required placeholder="contact@business.com">
+          <label for="QuoteEmail">{{ 'quote.email' | t }}</label>
+          <input type="email" id="QuoteEmail" name="contact[email]" required placeholder="{{ 'quote.email_placeholder' | t }}">
         </div>
 
         <div class="quote-modal__field">
-          <label for="QuotePhone">Phone Number *</label>
-          <input type="tel" id="QuotePhone" name="contact[Phone]" required placeholder="+1 (514) 000-0000">
+          <label for="QuotePhone">{{ 'quote.phone' | t }}</label>
+          <input type="tel" id="QuotePhone" name="contact[Phone]" required placeholder="{{ 'quote.phone_placeholder' | t }}">
         </div>
       </div>
 
       <div class="quote-modal__field">
-        <label for="QuoteQuantity">Estimated Units Needed</label>
+        <label for="QuoteQuantity">{{ 'quote.quantity' | t }}</label>
         <input type="number" id="QuoteQuantity" name="contact[Quantity]" min="1" value="1">
       </div>
 
       <div class="quote-modal__field">
-        <label for="QuoteMessage">Project Details / Special Requirements</label>
-        <textarea id="QuoteMessage" name="contact[body]" rows="3" placeholder="Specify voltage, custom upholstery colors, or shipping requirements..."></textarea>
+        <label for="QuoteMessage">{{ 'quote.message' | t }}</label>
+        <textarea id="QuoteMessage" name="contact[body]" rows="3" placeholder="{{ 'quote.message_placeholder' | t }}"></textarea>
       </div>
 
-      <button type="submit" class="quote-modal__submit button button--primary">Submit Request</button>
+      <button type="submit" class="quote-modal__submit button button--primary">{{ 'quote.submit' | t }}</button>
     {% endform %}
   </div>
 </div>
