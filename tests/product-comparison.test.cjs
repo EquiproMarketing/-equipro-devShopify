@@ -3,11 +3,21 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const { Liquid } = require('liquidjs');
 const data = require('../assets/equipro-comparison-data.json');
+const english = JSON.parse(fs.readFileSync('locales/en.default.json', 'utf8'));
+const french = JSON.parse(fs.readFileSync('locales/fr.json', 'utf8'));
+let activeLocale = english;
 const source = file => fs.readFileSync(file, 'utf8').replace(/{% schema %}[\s\S]*?{% endschema %}/g, '');
 const engine = new Liquid({ root: 'snippets', extname: '.liquid' });
 engine.registerTag('doc', { parse(token, tokens) { while (tokens.length && !tokens.shift().content?.includes('enddoc')) {} }, render() { return ''; } });
 engine.registerFilter('image_url', x => x?.src || '');
 engine.registerFilter('money', x => `$${(Number(x) / 100).toFixed(2)}`);
+engine.registerFilter('t', (key, ...args) => {
+  const variables = Object.fromEntries(args);
+  let value = key.split('.').reduce((node, part) => node?.[part], activeLocale);
+  if (value && typeof value === 'object') value = value[Number(variables.count) === 1 ? 'one' : 'other'];
+  assert.ok(typeof value === 'string', `Missing English translation: ${key}`);
+  return value.replace(/{{\s*(\w+)\s*}}/g, (_match, name) => variables[name] ?? '');
+});
 
 function product(id) {
   const p = data.products[id];
@@ -28,7 +38,7 @@ test('the original modal controls, table, selection limit, and opening behavior 
   assert.match(html, /id="CloseCompareModalFooter"/);
   assert.match(source('sections/main-product.liquid'), /id="OpenCompareModal"/);
   assert.match(html, /class="compare-table"/);
-  assert.match(html, /This Model/);
+  assert.match(html, /This model/i);
   assert.equal((html.match(/class="compare-product-title"/g) || []).length, 4);
   assert.match(html, /modal\.style\.display = 'flex'/);
   assert.doesNotMatch(html, /<equipro-comparison|Show differences only|comparison-slot/);
@@ -47,6 +57,24 @@ test('stool and trolley tables contain verified family rows and preserve PDF dim
   assert.match(trolleyHtml, /Electrical outlets/);
   assert.match(trolleyHtml, /14 × 25 × 33\.5 in/);
   assert.doesNotMatch(trolleyHtml, /Seat shape/);
+});
+
+test('French compare labels leave product identity, links, and prices unchanged', async () => {
+  const ids = Object.entries(data.products).filter(([, p]) => p.family === 'stools').slice(0, 4).map(([id]) => id);
+  activeLocale = english;
+  const en = await renderModal('stools', ids[0], ids);
+  activeLocale = french;
+  const fr = await renderModal('stools', ids[0], ids);
+  activeLocale = english;
+  assert.match(en, /Height range/);
+  assert.match(fr, /Plage de hauteur/);
+  for (const id of ids) {
+    const handle = data.products[id].handle;
+    assert.ok(fr.includes(`href="/products/${handle}"`));
+    assert.ok(fr.includes(`>${data.products[id].model}</h3>`));
+  }
+  assert.equal((en.match(/class="compare-product-price"/g) || []).length, (fr.match(/class="compare-product-price"/g) || []).length);
+  assert.equal((en.match(/\$100\.00/g) || []).length, (fr.match(/\$100\.00/g) || []).length);
 });
 test('six stools and eight storage trolleys remain mapped without merging EI or 51103-M identities', () => {
   const products = Object.values(data.products);

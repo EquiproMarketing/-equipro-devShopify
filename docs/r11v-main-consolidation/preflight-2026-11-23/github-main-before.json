@@ -1,0 +1,21 @@
+{
+  "repository_full_name": "EquiproMarketing/-equipro-devShopify",
+  "base": "58a5445f3bec2756347d0dccacd60b64c019b5d7",
+  "head": "main",
+  "status": "identical",
+  "ahead_by": 0,
+  "behind_by": 0,
+  "total_commits": 0,
+  "too_large": null,
+  "base_commit": {
+    "sha": "58a5445f3bec2756347d0dccacd60b64c019b5d7",
+    "url": "https://api.github.com/repos/EquiproMarketing/-equipro-devShopify/commits/58a5445f3bec2756347d0dccacd60b64c019b5d7",
+    "html_url": "https://github.com/EquiproMarketing/-equipro-devShopify/commit/58a5445f3bec2756347d0dccacd60b64c019b5d7"
+  },
+  "merge_base_commit": {
+    "sha": "58a5445f3bec2756347d0dccacd60b64c019b5d7",
+    "url": "https://api.github.com/repos/EquiproMarketing/-equipro-devShopify/commits/58a5445f3bec2756347d0dccacd60b64c019b5d7",
+    "html_url": "https://github.com/EquiproMarketing/-equipro-devShopify/commit/58a5445f3bec2756347d0dccacd60b64c019b5d7"
+  },
+  "files": []
+}

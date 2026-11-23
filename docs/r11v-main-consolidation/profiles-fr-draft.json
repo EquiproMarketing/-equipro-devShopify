@@ -1,0 +1,137 @@
+[
+  {
+    "resourceId": "gid://shopify/Metaobject/625331994797",
+    "key": "name",
+    "locale": "fr",
+    "source": "Esthetics & Skincare",
+    "value": "Esthétique et soins de la peau",
+    "translatableContentDigest": "65f4e22dcc5f2e09a087a0cbb2799ad4ce3f1d0ec7c98854b84be5c1120cbda0",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625331994797",
+    "key": "short_description",
+    "locale": "fr",
+    "source": "Professional equipment for facial and skincare services.",
+    "value": "Équipement professionnel pour les soins du visage et de la peau.",
+    "translatableContentDigest": "f556cc428e2aea9366694c2849b7e9056f141511062d2ec28b43d087dd6e4a8c",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625331994797",
+    "key": "description",
+    "locale": "fr",
+    "source": "Explore facial equipment and practical treatment-room essentials for professional esthetics.",
+    "value": "Découvrez l’équipement de soins du visage et les essentiels pratiques pour les salles de soins en esthétique professionnelle.",
+    "translatableContentDigest": "38eb1d845bfb04dd8cbd2ae49082d7afb4e9259a7ed374b5f658d1c828bf524e",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625332093101",
+    "key": "name",
+    "locale": "fr",
+    "source": "Massage & Bodywork",
+    "value": "Massothérapie et soins corporels",
+    "translatableContentDigest": "2fe1315a21dd6e43022edc75fed3a92869204f6e0e38bae782cf089d2eec8642",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625332093101",
+    "key": "short_description",
+    "locale": "fr",
+    "source": "Treatment tables and ergonomic seating for your workspace.",
+    "value": "Tables de soins et sièges ergonomiques pour votre espace de travail.",
+    "translatableContentDigest": "b747be3d0f26b38eb1b48527685abdfc02023f8b586e6b6b2fcaac3e1c4b22a5",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625332093101",
+    "key": "description",
+    "locale": "fr",
+    "source": "Discover professional treatment tables and seating options for massage and bodywork spaces.",
+    "value": "Découvrez des tables de soins professionnelles et des sièges pour les espaces de massothérapie et de soins corporels.",
+    "translatableContentDigest": "3470c22b3cd6d5439d6dd88fa6a8c6a19a33a845e5d9bbc77ebc9a18f5845cfa",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625355849901",
+    "key": "name",
+    "locale": "fr",
+    "source": "Spas & Wellness Centers",
+    "value": "Spas et centres de bien-être",
+    "translatableContentDigest": "05b94019f4820bd9e21344aed42433e1467ac5cf57e7ba4a6df3b37434c442a8",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625355849901",
+    "key": "short_description",
+    "locale": "fr",
+    "source": "Thoughtfully selected equipment for professional wellness spaces.",
+    "value": "Une sélection soignée d’équipement pour les espaces professionnels de bien-être.",
+    "translatableContentDigest": "7391ee0888387afbcd73379de58145af55525577cf916312593e94c27a3f5798",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625355849901",
+    "key": "description",
+    "locale": "fr",
+    "source": "Explore treatment tables and seating designed for professional spa and wellness environments.",
+    "value": "Découvrez des tables de soins et des sièges conçus pour les spas et les centres de bien-être professionnels.",
+    "translatableContentDigest": "386c4c4dbad5ada4cfa89ad39d2a33c24e63e7442cf7bfe7d075050e4f22c7b3",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356013741",
+    "key": "name",
+    "locale": "fr",
+    "source": "Spa & Esthetics Setup",
+    "value": "Aménagement de spa et d’espace esthétique",
+    "translatableContentDigest": "6ed6f4e5c74a2f980cb4c9d4ca98858d7b9f66d1b3835023b0c99473cc282e0d",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356013741",
+    "key": "short_description",
+    "locale": "fr",
+    "source": "Build a practical, coordinated esthetics workspace.",
+    "value": "Aménagez un espace de travail esthétique pratique et harmonieux.",
+    "translatableContentDigest": "29624aef6a0c3967cdfda4755d19ed5cb8e1761c8cfc767d3aa3c910d37f65c8",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356013741",
+    "key": "description",
+    "locale": "fr",
+    "source": "Discover facial care equipment, treatment-room workstations and complementary essentials for professional esthetics.",
+    "value": "Découvrez l’équipement de soins du visage, les postes de travail et les accessoires complémentaires pour l’esthétique professionnelle.",
+    "translatableContentDigest": "a9e6cfb6e07ee3654e6b70b8b786c7af2e716846d8ad2ce190270459fc59c16a",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356243117",
+    "key": "name",
+    "locale": "fr",
+    "source": "Orthopedic & Podiatry",
+    "value": "Orthopédie et podiatrie",
+    "translatableContentDigest": "e818b7379aa43476c8ef1e5920a087bd64eeddd62d29c73ee74a8f5d21637f66",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356243117",
+    "key": "short_description",
+    "locale": "fr",
+    "source": "Explore equipment for a comfortable, organized professional workspace.",
+    "value": "Découvrez l’équipement pour un espace de travail professionnel confortable et organisé.",
+    "translatableContentDigest": "15c5e08bdba5afd50a6e766332ac9c2aa98348c494560f9b6072774e2be3a40c",
+    "status": "DRAFT_NOT_UPLOADED"
+  },
+  {
+    "resourceId": "gid://shopify/Metaobject/625356243117",
+    "key": "description",
+    "locale": "fr",
+    "source": "Browse adjustable treatment-room furniture and ergonomic seating. Confirm suitability for specific foot-care or orthopedic procedures before selecting equipment.",
+    "value": "Parcourez le mobilier réglable pour salles de soins et les sièges ergonomiques. Confirmez leur adéquation aux soins des pieds ou aux interventions orthopédiques prévus avant de choisir l’équipement.",
+    "translatableContentDigest": "c9d9f044e3c5ac277e7b8cbe5d0ad882c5a05156ff50ed6830282aa009b5d5eb",
+    "status": "DRAFT_NOT_UPLOADED"
+  }
+]

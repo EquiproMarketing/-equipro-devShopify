@@ -1,0 +1,307 @@
+{%- assign i18n_profiles_label = section.settings.profiles_label -%}
+{%- if i18n_profiles_label == blank or i18n_profiles_label == 'Professional profiles' -%}{%- assign i18n_profiles_label = 'consolidation.profiles_label' | t -%}{%- endif -%}
+{%- assign i18n_explore_all_label = section.settings.explore_all_label -%}
+{%- if i18n_explore_all_label == blank or i18n_explore_all_label == 'Explore all products' -%}{%- assign i18n_explore_all_label = 'consolidation.explore_all_label' | t -%}{%- endif -%}
+{{ 'custom-spa-pack-builder.css' | asset_url | stylesheet_tag }}
+{%- liquid
+  assign active_handles = ''
+  for selected_profile in section.settings.professional_profiles
+    assign handle = selected_profile.system.handle
+    if handle != blank and selected_profile.system.type == 'professional_profile'
+      assign active_profile = metaobjects.professional_profile[handle]
+      if active_profile != blank and active_profile.name.value != blank
+        assign active_handles = active_handles | append: handle | append: '|'
+      endif
+    endif
+  endfor
+  assign profile_items = active_handles | split: '|'
+  assign source = 'metaobject'
+  if profile_items.size == 0
+    assign profile_items = section.blocks | where: 'type', 'category_tab'
+    assign source = 'legacy'
+  endif
+  assign seen_profiles = '|'
+  assign tabs = ''
+  assign panels = ''
+  assign count = 0
+-%}
+{%- for item in profile_items -%}
+  {%- liquid
+    assign profile = false
+    assign legacy_block = false
+    if source == 'metaobject'
+      assign profile = metaobjects.professional_profile[item]
+      assign label = profile.name.value
+      assign profile_id = profile.system.id
+    else
+      assign legacy_block = item
+      assign category_label = 'consolidation.category_label' | t
+      assign label = item.settings.tab_title | default: category_label
+      assign profile_id = item.id
+    endif
+    assign name_key = label | strip | handleize
+    assign name_token = '|name:' | append: name_key | append: '|'
+    assign id_token = '|id:' | append: profile_id | append: '|'
+    if seen_profiles contains name_token or seen_profiles contains id_token
+      continue
+    endif
+    assign seen_profiles = seen_profiles | append: name_token | append: id_token
+    assign first = false
+    if count == 0
+      assign first = true
+    endif
+    assign tab_id = 'profile-tab-' | append: section.id | append: '-' | append: profile_id
+    assign panel_id = 'profile-panel-' | append: section.id | append: '-' | append: profile_id
+  -%}
+  {%- capture tabs -%}{{ tabs }}
+    <button type="button" id="{{ tab_id }}" class="spa-pack-pill-item{% if first %} is-active{% endif %}" role="tab" aria-selected="{{ first }}" aria-controls="{{ panel_id }}" tabindex="{% if first %}0{% else %}-1{% endif %}" {% if profile.system.handle != blank %}data-profile-handle="{{ profile.system.handle | escape }}"{% endif %} {{ legacy_block.shopify_attributes }}>{{ label | escape }}</button>
+  {%- endcapture -%}
+  {%- capture panels -%}{{ panels }}
+    {% render 'professional-profile-panel', profile: profile, legacy_block: legacy_block, section: section, first: first, tab_id: tab_id, panel_id: panel_id %}
+  {%- endcapture -%}
+  {%- assign count = count | plus: 1 -%}
+{%- endfor -%}
+{%- if count > 0 -%}
+  <section class="spa-pack-section" id="spa-pack-{{ section.id }}" data-professional-profiles data-profile-source="{{ source }}">
+    <div class="page-width">
+      <div class="spa-pack-pill-wrapper">
+        <div class="spa-pack-pill-bar" role="tablist" aria-label="{{ i18n_profiles_label | escape }}">{{ tabs }}</div>
+      </div>
+      {%- if section.settings.show_explore_all -%}
+        <a class="spa-pack-explore-all" href="{{ routes.all_products_collection_url }}" data-profile-skip>{{ i18n_explore_all_label | escape }}</a>
+      {%- endif -%}
+      <div class="spa-pack-content">{{ panels }}</div>
+    </div>
+  </section>
+{%- endif -%}
+
+<script>
+  (() => {
+    function initializeProfiles() {
+      document.querySelectorAll('[data-professional-profiles]').forEach(section => {
+        if (section.dataset.profilesReady) return;
+        const tabs = [...section.querySelectorAll('[role="tab"]')];
+        const panels = [...section.querySelectorAll('[role="tabpanel"]')];
+        const activate = (tab, focus = false) => {
+          tabs.forEach(item => {
+            const active = item === tab;
+            item.classList.toggle('is-active', active);
+            item.setAttribute('aria-selected', String(active));
+            item.tabIndex = active ? 0 : -1;
+          });
+          panels.forEach(panel => {
+            const active = panel.id === tab.getAttribute('aria-controls');
+            panel.classList.toggle('is-active', active);
+            panel.hidden = !active;
+          });
+          if (focus) tab.focus({ preventScroll: true });
+          const wrapper = section.querySelector('.spa-pack-pill-wrapper');
+          if (wrapper.scrollWidth > wrapper.clientWidth) {
+            const bounds = wrapper.getBoundingClientRect(), rect = tab.getBoundingClientRect();
+            const delta = rect.left < bounds.left + 4 ? rect.left - bounds.left - 4 : rect.right > bounds.right - 4 ? rect.right - bounds.right + 4 : 0;
+            if (delta) wrapper.scrollTo({ left: wrapper.scrollLeft + delta, behavior: 'instant' });
+          }
+        };
+        tabs.forEach((tab, index) => {
+          tab.addEventListener('click', () => activate(tab));
+          tab.addEventListener('keydown', event => {
+            const rtl = getComputedStyle(section).direction === 'rtl';
+            let target;
+            if (event.key === 'ArrowRight') target = (index + (rtl ? -1 : 1) + tabs.length) % tabs.length;
+            if (event.key === 'ArrowLeft') target = (index + (rtl ? 1 : -1) + tabs.length) % tabs.length;
+            if (event.key === 'Home') target = 0;
+            if (event.key === 'End') target = tabs.length - 1;
+            if (target === undefined) return;
+            event.preventDefault();
+            activate(tabs[target], true);
+          });
+          tab.addEventListener('focus', () => activate(tab));
+        });
+        section.dataset.profilesReady = 'true';
+      });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeProfiles);
+    else initializeProfiles();
+    document.addEventListener('shopify:section:load', initializeProfiles);
+  })();
+</script>
+
+{% schema %}
+{
+  "name": "Spa Equipment Pack",
+  "tag": "section",
+  "class": "section-spa-pack-builder",
+  "settings": [
+    { "type": "metaobject_list", "id": "professional_profiles", "label": "Professional profiles", "metaobject_type": "professional_profile", "limit": 12, "info": "Select and order active profiles. Existing blocks remain the fallback when no valid profiles are selected." },
+    { "type": "text", "id": "profiles_label", "label": "Accessible tabs label", "default": "Professional profiles" },
+    { "type": "text", "id": "price_from_label", "label": "Variable price prefix", "default": "From" },
+    { "type": "text", "id": "collections_label", "label": "Related collections label", "default": "Related collections" },
+    { "type": "checkbox", "id": "show_explore_all", "label": "Show explore all products link", "default": false },
+    { "type": "text", "id": "explore_all_label", "label": "Explore all products label", "default": "Explore all products" }
+  ],
+  "blocks": [
+    {
+      "type": "category_tab",
+      "name": "Category Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Name",
+          "default": "Spas & Bien-être"
+        },
+        {
+          "type": "header",
+          "content": "Hero Card Settings (Optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hero_card",
+          "label": "Show Featured Hero Card",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "hero_bg",
+          "label": "Hero Card Background",
+          "default": "#1d1d1f"
+        },
+        {
+          "type": "color",
+          "id": "hero_text_color",
+          "label": "Hero Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "hero_title",
+          "label": "Hero Title",
+          "default": "La rentrée, simplifiée."
+        },
+        {
+          "type": "textarea",
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "default": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau."
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Hero Image / Graphic"
+        },
+        {
+          "type": "header",
+          "content": "Products in Tab"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "text",
+          "id": "badge_1",
+          "label": "Custom Badge 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "label": "Custom Badge 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "label": "Custom Badge 3"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        },
+        {
+          "type": "text",
+          "id": "badge_4",
+          "label": "Custom Badge 4"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product 5"
+        },
+        {
+          "type": "text",
+          "id": "badge_5",
+          "label": "Custom Badge 5"
+        },
+        {
+          "type": "product",
+          "id": "product_6",
+          "label": "Product 6"
+        },
+        {
+          "type": "text",
+          "id": "badge_6",
+          "label": "Custom Badge 6"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spa Equipment Pack",
+      "blocks": [
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Bien-être",
+            "hero_title": "Spas & Wellness",
+            "hero_subtitle": "Tables de massage, lits de traitement électriques et hydrauliques, douches Vichy et thérapie thermique."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Esthétique & Salons",
+            "hero_title": "Esthétique & Soins",
+            "hero_subtitle": "Vaporisateurs, unités faciales multifonctions, chauffe-cire, chauffe-serviettes et analyseurs de peau."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Épilation & Pédicure",
+            "hero_title": "Soins Spécialisés",
+            "hero_subtitle": "Chaises et lits polyvalents pour soins faciaux, massages, épilation, pédicure et soins corporels."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Écoles & Instituts",
+            "hero_title": "Formation Pro",
+            "hero_subtitle": "Équipements certifiés choisis par les plus grands instituts comme Aesthetic Science Institute et Continental Schools."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Professionnels Indépendants",
+            "hero_title": "Espaces Indépendants",
+            "hero_subtitle": "Solutions compactes et haut de gamme adaptées aux besoins des praticiens indépendants."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

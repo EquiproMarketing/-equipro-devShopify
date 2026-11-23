@@ -1,0 +1,134 @@
+[
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "snippets/quote-modal.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "sections/main-product.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "sections/main-cart-items.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "sections/product-compare-modal.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "locales/en.default.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "locales/fr.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "sections/category-subnav.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "sections/custom-subcategory-slider.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/post-qa-correction-manifest.json",
+    "path": "templates/index.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "assets/custom-spa-pack-builder.css",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "assets/product-form.js",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "assets/section-main-product.css",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "locales/en.default.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "locales/fr.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "sections/complete-your-setup.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "sections/custom-spa-pack-builder.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "sections/main-product.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "snippets/professional-profile-panel.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "snippets/quote-modal.liquid",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "templates/index.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "templates/product.51101-tm-3-standard.json",
+    "candidateValid": true,
+    "baselineValid": true
+  },
+  {
+    "manifest": "docs/r11v-main-consolidation/manifest.json",
+    "path": "templates/product.ei-501-royal.json",
+    "candidateValid": true,
+    "baselineValid": true
+  }
+]

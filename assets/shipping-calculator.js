@@ -6,6 +6,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const countrySelect = document.getElementById('ShippingCountry');
     const regionSelect = document.getElementById('ShippingRegion');
     const resultContainer = document.getElementById('ShippingResult');
+    const labels = JSON.parse(document.getElementById('ShippingCalculatorLabels')?.textContent || '{}');
   
     const transitTimes = {
       CA: {
@@ -60,20 +61,31 @@ document.addEventListener('DOMContentLoaded', () => {
       const totalMin = config.processingDays.min + transit.min;
       const totalMax = config.processingDays.max + transit.max;
   
-      resultContainer.innerHTML = `
-        <div class="shipping-calculator__card">
-          <h4>Delivery Estimate</h4>
-          <p><strong>Fulfillment Origin:</strong> ${config.origin}</p>
-          <ul>
-            <li><strong>Factory Handling & Processing:</strong> ${config.processingDays.min} - ${config.processingDays.max} business days</li>
-            <li><strong>Ground Freight Transit:</strong> ${transit.min} - ${transit.max} business days</li>
-          </ul>
-          <div class="shipping-calculator__total">
-            <span>Total Estimated Time:</span>
-            <strong>${totalMin} to ${totalMax} business days</strong>
-          </div>
-        </div>
-      `;
+      const card = document.createElement('div');
+      card.className = 'shipping-calculator__card';
+      const heading = document.createElement('h4');
+      heading.textContent = labels.estimate;
+      const origin = document.createElement('p');
+      const originLabel = document.createElement('strong');
+      originLabel.textContent = `${labels.origin}: `;
+      origin.append(originLabel, document.createTextNode(country === 'CA' ? labels.originCa : labels.originUs));
+      const list = document.createElement('ul');
+      [[labels.processing, config.processingDays], [labels.transit, transit]].forEach(([label, days]) => {
+        const item = document.createElement('li');
+        const strong = document.createElement('strong');
+        strong.textContent = `${label}: `;
+        item.append(strong, document.createTextNode(labels.range.replace('{{ minimum }}', days.min).replace('{{ maximum }}', days.max)));
+        list.append(item);
+      });
+      const total = document.createElement('div');
+      total.className = 'shipping-calculator__total';
+      const totalLabel = document.createElement('span');
+      totalLabel.textContent = `${labels.total}: `;
+      const totalValue = document.createElement('strong');
+      totalValue.textContent = labels.range.replace('{{ minimum }}', totalMin).replace('{{ maximum }}', totalMax);
+      total.append(totalLabel, totalValue);
+      card.append(heading, origin, list, total);
+      resultContainer.replaceChildren(card);
       resultContainer.style.display = 'block';
     });
   });

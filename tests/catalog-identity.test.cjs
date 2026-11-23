@@ -3,6 +3,9 @@ const assert = require('node:assert/strict');
 const fs = require('node:fs');
 const vm = require('node:vm');
 const { Liquid } = require('liquidjs');
+const english = JSON.parse(fs.readFileSync('locales/en.default.json', 'utf8'));
+const french = JSON.parse(fs.readFileSync('locales/fr.json', 'utf8'));
+let activeLocale = english;
 const engine = new Liquid({ root: 'snippets', extname: '.liquid' });
 engine.registerTag('doc', { parse(token, tokens) { while (tokens.length && !tokens.shift().content?.includes('enddoc')) {} }, render() { return ''; } });
 engine.registerFilter('asset_url', x => x);
@@ -11,7 +14,13 @@ engine.registerFilter('image_url', x => x?.src || '');
 engine.registerFilter('money', x => `$${(Number(x) / 100).toFixed(2)}`);
 engine.registerFilter('money_with_currency', x => `$${(Number(x) / 100).toFixed(2)} USD`);
 engine.registerFilter('json', x => JSON.stringify(x ?? null));
-engine.registerFilter('t', x => ({ 'collections.no_products': 'No products in this collection.', 'collections.pagination': 'Collection pages' }[x] || x));
+engine.registerFilter('t', (key, ...args) => {
+  const variables = Object.fromEntries(args);
+  let value = key.split('.').reduce((node, part) => node?.[part], activeLocale);
+  if (value && typeof value === 'object') value = value[Number(variables.count) === 1 ? 'one' : 'other'];
+  assert.ok(typeof value === 'string', `Missing English translation: ${key}`);
+  return value.replace(/{{\s*(\w+)\s*}}/g, (_match, name) => variables[name] ?? '');
+});
 engine.registerFilter('default_pagination', x => x.pages > 1 ? `<a href="?page=${Math.min(x.pages, x.current_page + 1)}">Next page</a>` : '');
 // Shopify-specific tags use a local adapter; live pagination is checked separately.
 engine.registerTag('paginate', {
@@ -59,9 +68,21 @@ test('specific product editorial overrides remain when target matches', async ()
   const p = product(1); const html = await renderProduct(p, p, { custom_title: 'Editorial title', custom_description: '<p>Editorial description</p>' });
   assert.match(html, /Editorial title/); assert.match(html, /Editorial description/);
 });
+test('French translates option labels while preserving variant values, IDs, and price', async () => {
+  activeLocale = french;
+  try {
+    const html = await renderProduct(product(1, true));
+    assert.match(html, /<label[^>]*>Couleur<\/label>/);
+    assert.match(html, /<option value="Red" selected="selected">/);
+    assert.match(html, /id="ProductVariantIdInput" value="10"/);
+    assert.match(html, /\$1\.00/);
+  } finally {
+    activeLocale = english;
+  }
+});
 test('initial selected sold-out variant disables purchase even when another variant is available', async () => {
   const html = await renderProduct(product(1, false));
-  assert.match(html, /id="AddToCartButton" disabled/); assert.match(html, /OUT OF STOCK/);
+  assert.match(html, /id="AddToCartButton" disabled/); assert.match(html, /Sold out/i);
 });
 test('Portables collection membership suppresses the purchase form regardless of stock', async () => {
   const p = product(1); p.collections = [{ handle: 'portable' }];
@@ -70,21 +91,23 @@ test('Portables collection membership suppresses the purchase form regardless of
   assert.match(html, /Product 1/);
 });
 test('variant changes send the matching ID; nonexistent combinations clear the previous ID', async () => {
-  const p = product(1); p.variants.push({ ...p.variants[0], id: 11, options: ['Blue'], option1: 'Blue', available: false, price: 200 });
+  const p = product(1, true); p.variants.push({ ...p.variants[0], id: 11, options: ['Blue'], option1: 'Blue', available: true, price: 200 });
+  p.variants.push({ ...p.variants[0], id: 12, options: ['Green'], option1: 'Green', available: false, price: 300 });
   const html = await renderProduct(p);
   const scripts = [...html.matchAll(/<script>([\s\S]*?)<\/script>/g)];
   const selector = { value: 'Blue', dataset: { optionIndex: '0' }, addEventListener() {} };
   const controls = { ProductVariantIdInput: { value: 10 }, AddToCartButton: { disabled: false }, ProductPriceContainer: {}, MainProductImg: {} };
   controls['ProductVariantsJson-1'] = { textContent: html.match(/id="ProductVariantsJson-1">([\s\S]*?)<\/script>/)[1] };
-  const ctx = { document: { querySelectorAll: () => [selector], getElementById: id => controls[id] } };
+  const ctx = { document: { querySelector: () => null, querySelectorAll: () => [selector], getElementById: id => controls[id] } };
   vm.runInNewContext(scripts.at(-1)[1], ctx);
-  ctx.updateSelectedVariant(); assert.equal(controls.ProductVariantIdInput.value, 11); assert.equal(controls.AddToCartButton.disabled, true);
+  ctx.updateSelectedVariant(); assert.equal(controls.ProductVariantIdInput.value, 11); assert.equal(controls.AddToCartButton.disabled, false);
+  selector.value = 'Green'; ctx.updateSelectedVariant(); assert.equal(controls.ProductVariantIdInput.value, ''); assert.equal(controls.AddToCartButton.disabled, true);
   selector.value = 'Missing'; ctx.updateSelectedVariant(); assert.equal(controls.ProductVariantIdInput.value, ''); assert.equal(controls.AddToCartButton.disabled, true);
   selector.value = 'Red'; ctx.updateSelectedVariant(); assert.equal(controls.ProductVariantIdInput.value, 10); assert.equal(controls.AddToCartButton.disabled, false);
 });
 test('empty visited collection shows the empty message and no fabricated cards', async () => {
   const html = await engine.parseAndRender(source('sections/main-collection-product-grid.liquid'), { collection: { title: 'Empty', products: [] }, section: { id: 'test', settings: { btn_primary_text: 'Ver producto' } } });
-  assert.match(html, /No products in this collection/); assert.doesNotMatch(html, /TM-3|CA\$375|custom-treatment-card__title/);
+  assert.match(html, /No products found\./); assert.doesNotMatch(html, /TM-3|CA\$375|custom-treatment-card__title/);
 });
 test('a 49-product visited collection has three distinct pages and neutral links', async () => {
   const products = Array.from({ length: 49 }, (_, i) => ({ ...product(i + 1), url: `/products/product-${i + 1}` }));
@@ -94,7 +117,7 @@ test('a 49-product visited collection has three distinct pages and neutral links
     const html = await engine.parseAndRender(source('sections/main-collection-product-grid.liquid'), { collection, section, current_page: page });
     assert.equal((html.match(/class="custom-treatment-card__title"/g) || []).length, count);
     assert.match(html, new RegExp(`href="/products/product-${first}"`)); assert.match(html, new RegExp(`href="/products/product-${last}"`));
-    assert.match(html, /Collection pages/); assert.match(html, /Ver producto/); assert.doesNotMatch(html, /Product 999|Acheter/);
+    assert.match(html, /aria-label="Pagination"/); assert.match(html, /Ver producto/); assert.doesNotMatch(html, /Product 999|Acheter/);
   }
 });
 
@@ -114,12 +137,12 @@ test('product detail blocks are isolated to their configured product', async () 
 
 test('Royal separates the source section hierarchy and retains seven product-specific FAQs', () => {
  const pilot = JSON.parse(fs.readFileSync('templates/product.royal-pilot.json', 'utf8'));
- assert.deepEqual(pilot.order, ['main', 'overview', 'features', 'instructions', 'safety', 'faq']);
+ assert.deepEqual(pilot.order, ['main', 'complete_setup', 'overview', 'features', 'instructions', 'safety', 'faq']);
  assert.equal(pilot.sections.overview.settings.layout, 'overview');
  assert.equal(pilot.sections.overview.blocks.item_10.settings.group, 'use');
  assert.equal(pilot.sections.instructions.settings.layout, 'steps');
  assert.equal(pilot.sections.faq.block_order.length, 7);
- for (const [id, section] of Object.entries(pilot.sections)) if (id !== 'main') assert.equal(section.settings.applies_to_product, 'ei-501-royal');
+ for (const section of Object.values(pilot.sections)) if (section.type === 'product-details') assert.equal(section.settings.applies_to_product, 'ei-501-royal');
 });
 test('overview renders uses as accordions and specifications as a semantic table', async () => {
  const section = { id: 'overview', settings: { heading: 'Specs and uses', secondary_heading: 'Professional uses', layout: 'overview', applies_to_product: product(1) }, blocks: [

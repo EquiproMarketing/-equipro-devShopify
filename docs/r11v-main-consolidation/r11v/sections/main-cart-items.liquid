@@ -1,0 +1,158 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
+<div class="page-width product-page" style="max-width: 1000px; margin: 0 auto; padding: 40px 20px;">
+  <h1 style="font-size: 2.2rem; font-weight: 700; color: #1d1d1f; margin-bottom: 30px;">Shopping Cart</h1>
+
+  <div id="main-cart-container" data-cart-section-id="{{ section.id }}">
+    {% if cart.item_count > 0 %}
+      <form action="{{ routes.cart_url }}" method="post" id="main-cart-form">
+        <div style="display: flex; flex-direction: column; gap: 20px;">
+          {% for item in cart.items %}
+            <div class="cart-page-item" data-line-item-key="{{ item.key }}">
+              
+              <!-- IMAGEN -->
+              <div style="width: 100px; height: 100px; border-radius: 12px; overflow: hidden; background: #f5f5f7; flex-shrink: 0; border: 1px solid #e5e5e7;">
+                {% if item.image %}
+                  <img src="{{ item.image | image_url: width: 300 }}" width="{{ item.image.width }}" height="{{ item.image.height }}" alt="{{ item.title | escape }}" style="width: 100%; height: 100%; object-fit: cover;">
+                {% endif %}
+              </div>
+
+              <!-- DETALLES -->
+              <div class="cart-page-item__details" style="flex: 1;">
+                <a href="{{ item.url }}" style="font-size: 1.1rem; font-weight: 600; color: #1d1d1f; text-decoration: none; display: block;">
+                  {{ item.product.title }}
+                </a>
+
+                {% unless item.product.has_only_default_variant %}
+                  <div style="font-size: 0.88rem; color: #6e6e73; margin-top: 4px;">
+                    {% for option in item.options_with_values %}
+                      <span>{{ option.name }}: <strong>{{ option.value }}</strong></span>{% unless forloop.last %} &bull; {% endunless %}
+                    {% endfor %}
+                  </div>
+                {% endunless %}
+
+                <div style="font-size: 1.05rem; font-weight: 700; color: #ab273b; margin-top: 8px;">
+                  {{ item.final_line_price | money }}
+                </div>
+              </div>
+
+              <!-- CANTIDAD -->
+              <div class="cart-page-item__actions">
+              <div class="cart-page-quantity">
+                <button type="button" class="js-qty-change" data-key="{{ item.key }}" aria-label="{{ 'cart.decrease_quantity' | t: product: item.product.title | escape }}" data-action="minus">−</button>
+                <input aria-label="{{ 'cart.quantity_label' | t: product: item.product.title | escape }}" type="number" value="{{ item.quantity }}" readonly>
+                <button type="button" class="js-qty-change" data-key="{{ item.key }}" aria-label="{{ 'cart.increase_quantity' | t: product: item.product.title | escape }}" data-action="plus">+</button>
+              </div>
+
+              <!-- BOTÓN REMOVE CON AJAX (EVITA NAVEGACIÓN Y APERTURA DE DRAWER) -->
+              <button type="button" aria-label="{{ 'cart.remove_item' | t: product: item.product.title | escape }}" class="js-remove-cart-item" data-key="{{ item.key }}">
+                Remove
+              </button>
+              </div>
+            </div>
+          {% endfor %}
+        </div>
+
+        <!-- SUBTOTAL Y CHECKOUT -->
+        <div style="margin-top: 30px; display: flex; flex-direction: column; align-items: flex-end; gap: 12px;">
+          <div style="font-size: 1.25rem; font-weight: 700; color: #1d1d1f;">
+            Subtotal: <span id="cart-subtotal" style="color: #ab273b;">{{ cart.total_price | money }}</span>
+          </div>
+          <p style="font-size: 0.85rem; color: #6e6e73; margin: 0;">Taxes and shipping calculated at checkout.</p>
+          
+          <div style="display: flex; gap: 12px; margin-top: 10px;">
+            <button type="submit" name="checkout" class="product-add-cart-btn" style="height: 44px; padding: 0 32px; cursor: pointer; border-radius: 22px;">CHECKOUT</button>
+          </div>
+        </div>
+      </form>
+    {% else %}
+      <div data-cart-empty style="text-align: center; padding: 60px 0;">
+        <p style="font-size: 1.1rem; color: #6e6e73;">Your cart is currently empty.</p>
+        <a href="/collections/all" class="product-add-cart-btn" style="display: inline-block; line-height: 44px; text-decoration: none; padding: 0 24px; margin-top: 16px; border-radius: 22px;">Continue Shopping</a>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<style>
+  #main-cart-form .cart-page-item { display: flex; gap: 20px; border-bottom: 1px solid #e5e5e7; padding-bottom: 20px; align-items: center; transition: opacity 0.2s ease; }
+  #main-cart-form .cart-page-item__details { min-width: 0; overflow-wrap: anywhere; }
+  #main-cart-form .cart-page-item__actions { display: flex; align-items: center; gap: 20px; flex-shrink: 0; }
+  #main-cart-form .cart-page-quantity { display: flex; align-items: center; flex-shrink: 0; border: 1px solid #d2d2d7; border-radius: 6px; background: #fff; }
+  #main-cart-form .cart-page-quantity button { width: 44px; height: 44px; padding: 0; border: 0; background: none; color: #1d1d1f; font-size: 1rem; cursor: pointer; border-radius: 5px; flex-shrink: 0; }
+  #main-cart-form .cart-page-quantity input { width: 44px; height: 44px; flex-shrink: 0; padding: 0; border: 0; background: #fff; text-align: center; font-size: 0.9rem; font-weight: 600; color: #1d1d1f; }
+  #main-cart-form .js-remove-cart-item { min-width: 44px; min-height: 44px; padding: 0 4px; background: none; border: 0; color: #6e6e73; font-size: 0.85rem; text-decoration: underline; cursor: pointer; }
+  #main-cart-form :is(button, input, a):focus-visible { outline: 2px solid #ab273b; outline-offset: 2px; }
+  @media (max-width: 749px) {
+    #main-cart-form .cart-page-item { display: grid; grid-template-columns: 100px minmax(0, 1fr); gap: 16px; align-items: start; }
+    #main-cart-form .cart-page-item__actions { grid-column: 1 / -1; justify-content: space-between; flex-wrap: wrap; gap: 12px; }
+  }
+
+  input[type="number"]::-webkit-inner-spin-button,
+  input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  input[type="number"] { -moz-appearance: textfield; }
+</style>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    // Función para actualizar ítem vía AJAX
+    function updateCartItem(idKey, newQty) {
+      const cartDrawer = window.cartDrawer;
+      if (!cartDrawer || cartDrawer.pending || cartDrawer.unsynced) return;
+      cartDrawer.run(async () => {
+        try {
+          const cart = await cartDrawer.request(window.Shopify.routes.root + 'cart/change.js', {
+            method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: idKey, quantity: newQty })
+          });
+          if (!Array.isArray(cart.items)) throw new Error(cartDrawer.errorMessage());
+          await cartDrawer.refreshDrawer();
+
+        } finally {
+          document.querySelectorAll('.cart-page-item').forEach(row => { row.style.opacity = ''; });
+        }
+      });
+    }
+
+    // Interceptar botones de eliminación
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#main-cart-form .js-remove-cart-item');
+        if (!btn) return;
+        e.preventDefault();
+        e.stopPropagation(); // Detener cualquier evento que intente abrir el drawer
+        if (window.cartDrawer?.pending || window.cartDrawer?.unsynced) return;
+
+        const key = btn.getAttribute('data-key');
+        const itemRow = btn.closest('.cart-page-item');
+        if (itemRow) itemRow.style.opacity = '0.3'; // Feedback visual inmediato
+
+        updateCartItem(key, 0);
+    });
+
+    // Interceptar botones + y -
+    document.addEventListener('click', (e) => {
+        const btn = e.target.closest('#main-cart-form .js-qty-change');
+        if (!btn) return;
+        e.preventDefault();
+        const key = btn.getAttribute('data-key');
+        const action = btn.getAttribute('data-action');
+        const input = btn.parentElement.querySelector('input');
+        let currentVal = parseInt(input.value) || 0;
+        
+        let newQty = action === 'plus' ? currentVal + 1 : currentVal - 1;
+        if (newQty < 0) newQty = 0;
+
+        updateCartItem(key, newQty);
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Main Cart Items",
+  "settings": [],
+  "presets": [{ "name": "Main Cart Items" }]
+}
+{% endschema %}

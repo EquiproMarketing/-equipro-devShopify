@@ -6,7 +6,7 @@
       <svg width="8" height="12" viewBox="0 0 8 12" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M7 1L1 6L7 11" stroke="#a22938" stroke-width="2" stroke-linecap="round"/>
       </svg>
-      <span>{{ section.settings.back_text | default: "Back" }}</span>
+      <span>{% if section.settings.back_text != blank %}{{ section.settings.back_text }}{% else %}{{ 'general.back' | t }}{% endif %}</span>
     </a>
   </div>
 
@@ -43,18 +43,21 @@
 
         {% comment %} DYNAMIC COLOR SWATCHES FROM PRODUCT VARIANTS {% endcomment %}
         <div class="custom-treatment-card__swatches">
-          {% assign color_option = product.options_with_values | where: "name", "Color" | first %}
-          {% if color_option == blank %}
-            {% assign color_option = product.options_with_values | where: "name", "Couleur" | first %}
-          {% endif %}
+          {% assign color_option = nil %}
+          {% for option in product.options_with_values %}
+            {% assign normalized_option_name = option.name | downcase | strip %}
+            {% if normalized_option_name == 'color' or normalized_option_name == 'colour' or normalized_option_name == 'couleur' %}
+              {% assign color_option = option %}
+              {% break %}
+            {% endif %}
+          {% endfor %}
 
           {% if color_option != blank %}
             {% for value in color_option.values limit: 5 %}
-              {% assign color_downcase = value | downcase %}
               <span 
                 class="custom-treatment-card__swatch-dot" 
-                style="background-color: {{ color_downcase }};"
-                title="{{ value | escape }}"
+                {% if value.swatch.color %}style="background-color: {{ value.swatch.color }};"{% elsif value.swatch.image %}style="background-image: url('{{ value.swatch.image | image_url: width: 80 }}');"{% endif %}
+                title="{{ value.name | escape }}"
               ></span>
             {% endfor %}
           {% endif %}
@@ -72,7 +75,7 @@
 
           <p class="custom-treatment-card__price">
             {% if product.price_varies %}
-              From {{ product.price_min | money }}
+              {% assign formatted_lowest_price = product.price_min | money %}{{ 'products.product.from_lowest_price_html' | t: lowest_price: formatted_lowest_price }}
             {% else %}
               {{ product.price | money }}
             {% endif %}
@@ -81,7 +84,7 @@
           {% comment %} ACTION BUTTONS {% endcomment %}
           <div class="custom-treatment-card__actions">
             <a href="{{ product.url }}" class="custom-treatment-btn custom-treatment-btn--primary">
-              {{ section.settings.btn_primary_text | default: "En savoir plus" }}
+              {% if section.settings.btn_primary_text != blank %}{{ section.settings.btn_primary_text }}{% else %}{{ 'products.learn_more' | t }}{% endif %}
             </a>
 
             {% if section.settings.btn_secondary_text != blank %}
@@ -121,13 +124,13 @@
       "type": "text",
       "id": "btn_primary_text",
       "label": "Primary Button Label",
-      "default": "En savoir plus"
+      "default": "Learn more"
     },
     {
       "type": "text",
       "id": "btn_secondary_text",
       "label": "Secondary Link Label",
-      "default": "Acheter >"
+      "default": "View product"
     }
   ],
   "presets": [

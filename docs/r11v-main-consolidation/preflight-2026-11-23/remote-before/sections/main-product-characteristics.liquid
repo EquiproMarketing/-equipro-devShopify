@@ -1,0 +1,198 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+
+<div class="product-page page-width" id="ProductCharacteristics-{{ section.id }}">
+  <div class="product-master-grid product-characteristics-grid">
+    
+    <!-- COLUMNA IZQUIERDA: ACORDEÓN Y SHIPPING (PEGA AL FONDO) -->
+    <div class="product-characteristics-left">
+      {% if section.settings.accordion_heading != blank %}
+        <h2 class="product-acc-title">{{ section.settings.accordion_heading }}</h2>
+      {% endif %}
+
+      <div class="product-acc-list">
+        {% assign faq_blocks = section.blocks | where: "type", "faq_item" %}
+        {% if faq_blocks.size > 0 %}
+          {% for block in faq_blocks %}
+            <details class="product-acc-item" {{ block.shopify_attributes }}>
+              <summary>
+                <span>{{ block.settings.question }}</span>
+                <span class="accordion-icon">+</span>
+              </summary>
+              <div class="product-acc-content">
+                {{ block.settings.answer }}
+              </div>
+            </details>
+          {% endfor %}
+        {% endif %}
+      </div>
+
+      <!-- BLOQUE SHIPPING AL FONDO -->
+      {% if section.settings.show_shipping %}
+        <div class="product-shipping-block">
+          <h3 class="product-shipping__title">{{ section.settings.shipping_title | default: "Shipping" }}</h3>
+          <div class="shipping-description">
+            {{ section.settings.shipping_text }}
+          </div>
+        </div>
+      {% endif %}
+    </div>
+
+    <!-- COLUMNA DERECHA: TABLA TÉCNICA (INYECCIÓN HTML LIBRE O BLOQUES) -->
+    <div class="product-characteristics-right">
+      {% if section.settings.show_tech_table %}
+        <div class="tech-table-container">
+          {% if section.settings.custom_table_html != blank %}
+            {%- comment -%} INYECCIÓN DIRECTA DE HTML PARA LA TABLA {%- endcomment -%}
+            {{ section.settings.custom_table_html }}
+          {% else %}
+            <table class="tech-table">
+              <thead>
+                <tr>
+                  <th>{{ section.settings.table_col1_header | default: "TECHNICAL ASPECT" }}</th>
+                  <th>{{ section.settings.table_col2_header | default: "SPECIFICATION DETAILS" }}</th>
+                </tr>
+              </thead>
+              <tbody>
+                {% assign spec_blocks = section.blocks | where: "type", "spec_row" %}
+                {% for block in spec_blocks %}
+                  <tr {{ block.shopify_attributes }}>
+                    <td class="tech-table__label">{{ block.settings.label }}</td>
+                    <td class="tech-table__value">{{ block.settings.value }}</td>
+                  </tr>
+                {% endfor %}
+              </tbody>
+            </table>
+          {% endif %}
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<script>
+  document.addEventListener('DOMContentLoaded', () => {
+    const accordions = document.querySelectorAll('.product-acc-item');
+    accordions.forEach(acc => {
+      acc.addEventListener('toggle', () => {
+        const icon = acc.querySelector('.accordion-icon');
+        if (icon) {
+          icon.textContent = acc.open ? '−' : '+';
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Product Characteristics",
+  "tag": "section",
+  "class": "section-product-characteristics",
+  "settings": [
+    {
+      "type": "header",
+      "content": "Accordion Settings"
+    },
+    {
+      "type": "text",
+      "id": "accordion_heading",
+      "label": "Accordion Main Title",
+      "default": "Key Features for the Professional Station"
+    },
+    {
+      "type": "header",
+      "content": "Shipping Block (Bottom Left)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_shipping",
+      "label": "Show Shipping Block",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "shipping_title",
+      "label": "Shipping Title",
+      "default": "Shipping"
+    },
+    {
+      "type": "richtext",
+      "id": "shipping_text",
+      "label": "Shipping Description Text",
+      "default": "<p>Standard delivery typically takes <strong>5–7 business days</strong></p>"
+    },
+    {
+      "type": "header",
+      "content": "Technical Specifications Table (Right)"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_tech_table",
+      "label": "Show Technical Table",
+      "default": true
+    },
+    {
+      "type": "html",
+      "id": "custom_table_html",
+      "label": "Custom Table HTML Injection",
+      "info": "Paste custom HTML table markup here. Leave empty to use default block rows below."
+    },
+    {
+      "type": "text",
+      "id": "table_col1_header",
+      "label": "Left Column Header",
+      "default": "TECHNICAL ASPECT"
+    },
+    {
+      "type": "text",
+      "id": "table_col2_header",
+      "label": "Right Column Header",
+      "default": "SPECIFICATION DETAILS"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "faq_item",
+      "name": "Accordion Item",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Title",
+          "default": "Clinical esthetician:"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Description / Content",
+          "default": "<p>Optimized positioning and comfort for long clinical sessions.</p>"
+        }
+      ]
+    },
+    {
+      "type": "spec_row",
+      "name": "Table Row",
+      "settings": [
+        {
+          "type": "text",
+          "id": "label",
+          "label": "Aspect Label",
+          "default": "Manufacturer"
+        },
+        {
+          "type": "text",
+          "id": "value",
+          "label": "Specification Value",
+          "default": "Equipro Beauty"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Product Characteristics"
+    }
+  ]
+}
+{% endschema %}

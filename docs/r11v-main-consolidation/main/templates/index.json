@@ -1,0 +1,979 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "hero_banner": {
+      "type": "hero-banner",
+      "blocks": {
+        "slide_MnxhKP": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/epure-ergonomic-air-lift-stools-adjustable-swivel-backrest-professional-studio-sku-31300.webp",
+            "image_position": "bottom",
+            "overlay_opacity": 15,
+            "subheading": "31300 ERGONOMIC AIR-LIFT STOOL",
+            "heading": "Close-up of the smooth air-lift mechanism",
+            "text": "Adjust your seating position throughout the workday. Engineered for heavy-duty daily performance in high-end spas and clinics.",
+            "button_label": "Shop the 31300 Stool",
+            "button_link": "shopify://products/ergonomic-stool-with-backrest",
+            "subheading_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "text_color": "#f5f5f7",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
+          }
+        },
+        "slide_eBgbdd": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/equipro-multiderm-5-in-1-facial-aesthetic-system-professional-skincare-workstation-sku-11800.webp",
+            "image_position": "center",
+            "overlay_opacity": 10,
+            "subheading": "DIVINE EI-504",
+            "heading": "Multi-Treatment Electric Table",
+            "text": "Quiet, versatile, and built to last.",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "subheading_color": "#ffffff",
+            "heading_color": "#ffffff",
+            "text_color": "#ffffff",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
+          }
+        },
+        "slide_3xQX7g": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/equipro-divine-electric-multi-section-treatment-bed-professional-spa-aesthetic-clinic-ei-504.webp",
+            "image_position": "bottom",
+            "overlay_opacity": 5,
+            "subheading": "DIVINE EI-504",
+            "heading": "Multi-Treatment Electric Table",
+            "text": "Quiet, versatile, and built to last.",
+            "button_label": "Shop Now",
+            "button_link": "",
+            "subheading_color": "#ab273b",
+            "heading_color": "#972e42",
+            "text_color": "#f5f5f7",
+            "btn_bg_color": "#ab273b",
+            "btn_text_color": "#ffffff"
+          }
+        }
+      },
+      "block_order": [
+        "slide_MnxhKP",
+        "slide_eBgbdd",
+        "slide_3xQX7g"
+      ],
+      "settings": {
+        "custom_height": 840,
+        "custom_height_mobile": 420,
+        "auto_rotate": true,
+        "change_speed": 4,
+        "bottom_bar_text": "Redefining the standard of comfort for the modern clinical spa and boutique institute.",
+        "bar_bg_color": "#972e42",
+        "bar_text_color": "#ffffff"
+      }
+    },
+    "shop_by_cat_v2_DhXM94": {
+      "type": "shop-by-cat-v2",
+      "blocks": {
+        "category_item_rWVwFT": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-hydro-comfort-hydraulic-air-lift-facial-massage-depilation-table-sku-21100.webp",
+            "title": "Mechanical",
+            "link": "shopify://collections/hydraulic-mechanical"
+          }
+        },
+        "category_item_ebxfGg": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/maxi-comfort-pedicure-360-degree-rotatable-hydraulic-split-leg-esthetician-chair-sku-20101.webp",
+            "title": "Hydraulic",
+            "link": "shopify://collections/hydraulic-mechanical"
+          }
+        },
+        "category_item_tME4fF": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-beauty-bohemia-ei-23403-white-professional_1080x1080_c09f39e6-55da-4f2c-93b0-e2dd347d7de7.webp",
+            "title": "Portable",
+            "link": "shopify://collections/portable"
+          }
+        },
+        "category_item_dpjh46": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/electric-clinical-treatment-chair-professional-spa-massage-table-white-Ei-502.webp",
+            "title": "Electric",
+            "link": "shopify://collections/electric"
+          }
+        },
+        "category_item_JVrMPE": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
+            "title": "Facial Units",
+            "link": "shopify://collections/facial-units"
+          }
+        },
+        "category_item_B9RXVp": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-deluxe-column-11906-professional-facial-workstation-8-in-1.webp",
+            "title": "Columns",
+            "link": "shopify://collections/columns"
+          }
+        },
+        "category_item_ACVzqh": {
+          "type": "category_item",
+          "settings": {
+            "title": "Stools",
+            "link": "shopify://collections/stools"
+          }
+        },
+        "category_item_L88cDG": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-63603-circus-magnifier-led-articulated-lamp.webp",
+            "title": "Mag-Lamps",
+            "link": "shopify://collections/mag-lamps"
+          }
+        },
+        "category_item_FNyhJK": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-tm3-professional-service-table.webp",
+            "title": "Trolleys",
+            "link": "shopify://collections/trolleys"
+          }
+        },
+        "category_item_Nk8MQP": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/ei-111-equipro-classic-facial-steamer-professional-spa-equipment.webp",
+            "title": "Streamers",
+            "link": "shopify://collections/streamers"
+          }
+        },
+        "category_item_j9NUhU": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipros-duo-pil-precision-digital-wax-warmer_41202.webp",
+            "title": "Wax-Heaters",
+            "link": "shopify://collections/wax-heaters"
+          }
+        },
+        "category_item_wHPEpL": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizing-cabinet-professional-salon-hygiene-equipment-white-finish-61102.webp",
+            "title": "Towel Warmers",
+            "link": "shopify://collections/towel-warmers"
+          }
+        },
+        "category_item_qhy7DG": {
+          "type": "category_item",
+          "settings": {
+            "image": "shopify://shop_images/equipro-61402-visiderm-professional-skin-care-device.webp",
+            "title": "Skin Analyzers",
+            "link": "shopify://collections/skin-analyzer"
+          }
+        }
+      },
+      "block_order": [
+        "category_item_rWVwFT",
+        "category_item_ebxfGg",
+        "category_item_tME4fF",
+        "category_item_dpjh46",
+        "category_item_JVrMPE",
+        "category_item_B9RXVp",
+        "category_item_ACVzqh",
+        "category_item_L88cDG",
+        "category_item_FNyhJK",
+        "category_item_Nk8MQP",
+        "category_item_j9NUhU",
+        "category_item_wHPEpL",
+        "category_item_qhy7DG"
+      ],
+      "name": "Shop By Cat V2",
+      "settings": {
+        "title": "Shop by Category"
+      }
+    },
+    "best_sellers": {
+      "type": "featured-collection",
+      "blocks": {
+        "custom_card_rFaJei": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/31300-ergonomic-air-lift-practitioner-stool-white-leatherette.webp",
+            "hover_image": "shopify://shop_images/31300-ergonomic-air-lift-practitioner-stool-midnight-blue.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Ergonomic Stool with Backrest",
+            "price": "from CA$385,00",
+            "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
+            "link": "shopify://products/ergonomic-stool-with-backrest"
+          }
+        },
+        "custom_card_AWHND6": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-11800-multiderm-5-in-1-ultra-modern-aesthetic-console.webp",
+            "hover_image": "shopify://shop_images/equipro-multiderm-5-in-1-ultra-modern-aesthetic-equipment-11800.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Multiderm (5 in 1)",
+            "price": "CA$2,800.00",
+            "swatches": "",
+            "link": "shopify://products/multiderm-5-en-1"
+          }
+        },
+        "custom_card_3WjHXz": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-oak-base-ergonomic-design-luxury-wellness-facility-ei-508.webp",
+            "hover_image": "shopify://shop_images/equipro-elite-spa-adjustable-treatment-table-solid-wood-base-luxury-wellness-center-ei-508.webp",
+            "card_bg": "#ffffff",
+            "tag": "Best seller",
+            "title": "Elite Spa",
+            "price": "3,350.00 $",
+            "swatches": "",
+            "link": "shopify://products/ergonomic-stool-with-backrest"
+          }
+        },
+        "custom_card_k38Qj8": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/maxi-comfort-360-adjustable-facial-depilation-treatment-chair-hydraulic-spa-sku-20100.webp",
+            "hover_image": "shopify://shop_images/maxi-comfort-360-hydraulic-facial-depilation-treatment-bed-aesthetic-salon-20100.webp",
+            "card_bg": "#ffffff",
+            "tag": "NEW COLORS",
+            "title": "Maxi-Comfort 360º",
+            "price": "from CA$2,200.00",
+            "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
+            "link": "shopify://products/maxi-comfort-360"
+          }
+        },
+        "custom_card_re7QVY": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-tm3-standard-three-tier-professional-rolling-trolley-welded-steel-spa-salon-sku-51101.webp",
+            "hover_image": "shopify://shop_images/equipro-menu-tm3-three-tier-esthetician-trolley-powder-coated-steel-rolling-spa-cart.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "TM-3 Professional",
+            "price": "CA$375.00",
+            "swatches": "",
+            "link": "shopify://products/home-skincare-equipment-accessories-tm-3-professional-service-table"
+          }
+        },
+        "custom_card_WpAkFt": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-11300-infraderm-high-frequency-professional-skincare-unit.webp",
+            "hover_image": "shopify://shop_images/equipro-infraderm-high-frequency-professional-aesthetic-unit-11300.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Infraderm",
+            "price": "CA$590,00",
+            "swatches": "",
+            "link": "shopify://products/infraderm"
+          }
+        },
+        "custom_card_BgbKdG": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizer-cabinet-professional-salon-hygiene-equipment-sku-61102.webp",
+            "hover_image": "shopify://shop_images/equipro-spa-cabi-61102-towel-warmer-uv-sanitizer-cabinet-professional-wellness-clinic-sku-61102.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Spa Cabi",
+            "price": "from CA$830,00",
+            "swatches": "",
+            "link": "shopify://products/spa-cabi-professional-towel-warmer-ei-61102s-equipro"
+          }
+        },
+        "custom_card_AjpNta": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-infinity-electric-spa-treatment-table-blue-upholstery-wellness-clinic-ei-502.webp",
+            "hover_image": "shopify://shop_images/equipro-infinity-electric-treatment-chair-x-frame-luxury-spa-aesthetics-ei-502.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Infinity",
+            "price": "from CA$3,200.00",
+            "swatches": "#ffffff, #191919, #1b1e2e",
+            "link": ""
+          }
+        },
+        "custom_card_Kq4ak6": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-lfm-led-magnifier-lamp-l24297-precision-aesthetic-lighting.webp",
+            "hover_image": "shopify://shop_images/equipro-63203-lfm-led-magnifier-professional-skincare-lamp.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "LED LFM Magnifier (3D/5D)",
+            "price": "from CA$345.00",
+            "swatches": "",
+            "link": ""
+          }
+        },
+        "custom_card_9bzVAr": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/equipro-11100-digipro-professional-facial-steamer.webp",
+            "hover_image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Vapoderm Digipro",
+            "price": "CA$850,00",
+            "swatches": "",
+            "link": "shopify://products/digipro-steamer"
+          }
+        },
+        "custom_card_GUW9Bg": {
+          "type": "custom_card",
+          "settings": {
+            "image": "shopify://shop_images/11600-equipro-aeroderm-vac-spray-professional-skincare-system.webp",
+            "hover_image": "shopify://shop_images/equipro-11600-aeroderm-vac-spray-professional-esthetician-skincare-system.webp",
+            "card_bg": "#ffffff",
+            "tag": "BEST SELLER",
+            "title": "Aeroderm",
+            "price": "CA$750,00",
+            "swatches": "",
+            "link": "shopify://products/aeroderm"
+          }
+        }
+      },
+      "block_order": [
+        "custom_card_rFaJei",
+        "custom_card_AWHND6",
+        "custom_card_3WjHXz",
+        "custom_card_k38Qj8",
+        "custom_card_re7QVY",
+        "custom_card_WpAkFt",
+        "custom_card_BgbKdG",
+        "custom_card_AjpNta",
+        "custom_card_Kq4ak6",
+        "custom_card_9bzVAr",
+        "custom_card_GUW9Bg"
+      ],
+      "settings": {
+        "title": "OUR BEST SELLERS",
+        "collection": "",
+        "products_to_show": 8
+      }
+    },
+    "shop_by_category": {
+      "type": "shop-by-category",
+      "blocks": {
+        "cat_1": {
+          "type": "category",
+          "settings": {
+            "title": "Treatment Tables",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_2": {
+          "type": "category",
+          "settings": {
+            "title": "Multi-function columns",
+            "link": "",
+            "style": "outline"
+          }
+        },
+        "cat_3": {
+          "type": "category",
+          "settings": {
+            "title": "Wax-heaters",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_4": {
+          "type": "category",
+          "settings": {
+            "title": "Stools",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_5": {
+          "type": "category",
+          "settings": {
+            "title": "Steamers",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_6": {
+          "type": "category",
+          "settings": {
+            "title": "Mag-lamps",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_7": {
+          "type": "category",
+          "settings": {
+            "title": "Towel warmers",
+            "link": "",
+            "style": "red"
+          }
+        },
+        "cat_8": {
+          "type": "category",
+          "settings": {
+            "title": "Trolleys",
+            "link": "",
+            "style": "red"
+          }
+        }
+      },
+      "block_order": [
+        "cat_1",
+        "cat_2",
+        "cat_3",
+        "cat_4",
+        "cat_5",
+        "cat_6",
+        "cat_7",
+        "cat_8"
+      ],
+      "disabled": true,
+      "settings": {
+        "title": "SHOP BY CATEGORY"
+      }
+    },
+    "image_with_text": {
+      "type": "image-with-text",
+      "settings": {
+        "title": "EquiPro Quality: Crafted for Professionals, Built to Last",
+        "text": "<p>At EquiPro Beauty, quality isn't just a promise—it's our legacy. For over <strong>50 years</strong>, this family-owned Canadian manufacturer (with U.S. operations) has been producing premium spa and aesthetic equipment right here in North America.</p><p>Estheticians and spa owners rave about it: <em>\"Equipro equipment is worth it—reliable, built to last, and backed by solid service\"</em>. Proudly made in Canada and the USA. 🇨🇦🇺🇸</p>",
+        "image": "shopify://shop_images/equipro-tm3-trolley-maxi-comfort-20100-chair.webp"
+      }
+    },
+    "custom_subcategory_slider_YFNFXr": {
+      "type": "custom-subcategory-slider",
+      "blocks": {
+        "card_item_LTEcX7": {
+          "type": "card_item",
+          "settings": {
+            "collection": "wellness-therapy",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "image": "shopify://shop_images/equipro-wellness-therapy-spa-relaxation-equipment-set-professional-salon-sku-na.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Wellness therapy",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_KiXDHW": {
+          "type": "card_item",
+          "settings": {
+            "collection": "mag-lamps",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
+            "image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Mag-Lamps",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_VwpWdj": {
+          "type": "card_item",
+          "settings": {
+            "collection": "trolleys",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/51103-tm-3-mini-professional-spa-trolley-salon-rolling-cart.webp",
+            "image": "shopify://shop_images/51103-tm-3-mini-professional-spa-trolley-salon-rolling-cart.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Trolleys",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_rfPjQJ": {
+          "type": "card_item",
+          "settings": {
+            "collection": "facial-units",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+            "image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "shopify://collections/facial-units",
+            "tag": "Skincare Equipment",
+            "title": "Facial Units",
+            "subtitle": "Professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic treatments and versatile salon solutions.",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_pedPxK": {
+          "type": "card_item",
+          "settings": {
+            "collection": "wax-heaters",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Skincare Equipment",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_R3EzWy": {
+          "type": "card_item",
+          "settings": {
+            "collection": "columns",
+            "product": "",
+            "enable_hover": true,
+            "hover_image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+            "image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "SkincareEquipment",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_btifdD": {
+          "type": "card_item",
+          "settings": {
+            "collection": "skin-analyzer",
+            "product": "",
+            "enable_hover": false,
+            "hover_image": "shopify://shop_images/equipro-skin-analyzers-professional-uv-light-skin-analysis-system-esthetician-clinic-equipment.webp",
+            "image": "shopify://shop_images/equipro-skin-analyzers-professional-uv-light-skin-analysis-system-esthetician-clinic-equipment.webp",
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "Skincare Equipment",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_item_LTEcX7",
+        "card_item_KiXDHW",
+        "card_item_VwpWdj",
+        "card_item_rfPjQJ",
+        "card_item_pedPxK",
+        "card_item_R3EzWy",
+        "card_item_btifdD"
+      ],
+      "name": "Subcategory Slider",
+      "settings": {
+        "title": "Explore Subcategories"
+      }
+    },
+    "custom_subcategory_slider_HPxgWp": {
+      "type": "custom-subcategory-slider",
+      "blocks": {
+        "card_item_VFMRAm": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "maxi-confort-pedicure-360",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_nxamXe": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "maxi-comfort-360",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_NdeiA7": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "20200-multi-comfort",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_jEnJxY": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "22100-poly-comfort",
+            "enable_hover": true,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_irUNJG": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "21200-aero-comfort",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        },
+        "card_item_z8RxwB": {
+          "type": "card_item",
+          "settings": {
+            "collection": "",
+            "product": "21100-hydro-comfort",
+            "enable_hover": false,
+            "card_bg_color": "#f5f5f7",
+            "link": "",
+            "tag": "",
+            "title": "",
+            "subtitle": "",
+            "price": "",
+            "available_colors": ""
+          }
+        }
+      },
+      "block_order": [
+        "card_item_VFMRAm",
+        "card_item_nxamXe",
+        "card_item_NdeiA7",
+        "card_item_jEnJxY",
+        "card_item_irUNJG",
+        "card_item_z8RxwB"
+      ],
+      "name": "Subcategory Slider",
+      "settings": {
+        "title": "Explore Hydraulic / Mechanical"
+      }
+    },
+    "image_slider": {
+      "type": "image-slider",
+      "blocks": {
+        "slide_fLCpXz": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/1773420833750.webp"
+          }
+        },
+        "s_1": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify://shop_images/Natura_Spa-luxury-spa-interior-ergonomic-treatment-beds-wellness-design.webp"
+          }
+        }
+      },
+      "block_order": [
+        "slide_fLCpXz",
+        "s_1"
+      ],
+      "settings": {
+        "autoplay_speed": 5000
+      }
+    },
+    "pre_footer_hub": {
+      "type": "pre-footer-hub",
+      "blocks": {
+        "staggered_card_xVJCmd": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": true,
+            "enable_dark_overlay": false,
+            "image_1": "shopify://shop_images/equipro-leather-upholstery-customization-premium-synthetic-textured-wellness-salon-clinic-seating.webp",
+            "image_2": "shopify://shop_images/equipro-custom-upholstery-navy-blue-textured-synthetic-leather-high-durability-professional-treatment-seating.webp",
+            "image_3": "shopify://shop_images/equipro-professional-upholstery-textured-synthetic-leather-high-durability-aesthetic-clinic-finish.webp",
+            "image_4": "shopify://shop_images/equipro-professional-practitioner-chair-grey-textured-vinyl-upholstery-clinical-furniture-customization-color-charcoal.webp",
+            "tag": "Customization",
+            "tag_color": "#ffffff",
+            "title": "Customization and finishes.",
+            "text": "Discover the customization possibilities Equipro offers for your clinic furniture.",
+            "color_list": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_CN7qhL": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": false,
+            "enable_dark_overlay": true,
+            "image_1": "shopify://shop_images/equipro-24-7-support-technical-assistance-aesthetic-treatment-chair-wellness-clinic.webp",
+            "tag": "Support",
+            "tag_color": "#ffffff",
+            "title": "24/7 support & contact.",
+            "text": "Need help? Our emergency line is available 24/7. Reach us anytime for assistance with your equipment.",
+            "color_list": "",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "",
+            "btn_1_link": "shopify://pages/manuals",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        },
+        "staggered_card_wQgJT4": {
+          "type": "staggered_card",
+          "settings": {
+            "enable_interactive_rotator": true,
+            "enable_dark_overlay": true,
+            "image_1": "shopify://shop_images/equipro-ergonomic-backrest-stool-pneumatic-practitioner-seat-white-vinyl-salon-wellness-31100-31200-31300.webp",
+            "tag": "Support",
+            "tag_color": "#ffffff",
+            "title": "Assembly manuals & guides.",
+            "text": "Download our assembly manuals and find simple step-by-step guides to replace bulbs, change filters, or use your equipment.",
+            "color_list": "",
+            "bg_color": "#111111",
+            "text_color": "#ffffff",
+            "btn_1_text": "Découvrez les finitions",
+            "btn_1_link": "shopify://pages/manuals",
+            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_link": "",
+            "btn_2_is_pdf": true
+          }
+        }
+      },
+      "block_order": [
+        "staggered_card_xVJCmd",
+        "staggered_card_CN7qhL",
+        "staggered_card_wQgJT4"
+      ],
+      "settings": {
+        "main_title": "Customization & Support Hub"
+      }
+    },
+    "custom_spa_pack_builder_BDtr9H": {
+      "type": "custom-spa-pack-builder",
+      "blocks": {
+        "category_tab_Y7wYyJ": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#9e9e9e",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "ei-502-infinity",
+            "badge_1": "{{ block.settings.product_1.title }}",
+            "product_2": "{{ block.settings.product_1 }}",
+            "badge_2": "{{ block.settings.product_1.vendor }}",
+            "product_3": "ergonomic-stool-with-backrest",
+            "badge_3": "",
+            "product_4": "ergonomic-stool-with-backrest",
+            "badge_4": "",
+            "product_5": "ei-502-infinity",
+            "badge_5": "",
+            "product_6": "ergonomic-stool-with-backrest",
+            "badge_6": ""
+          }
+        },
+        "category_tab_yqM7nx": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1f1e",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "dssd",
+            "product_2": "",
+            "badge_2": "asdfsdff",
+            "product_3": "",
+            "badge_3": "sdfsdfsdf",
+            "product_4": "",
+            "badge_4": "sfsd",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_ekMRbh": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "",
+            "product_2": "",
+            "badge_2": "",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_zkDPYJ": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Wellness Centers",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "Tout pour équiper votre espace.",
+            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "product_1": "",
+            "badge_1": "",
+            "product_2": "",
+            "badge_2": "",
+            "product_3": "",
+            "badge_3": "",
+            "product_4": "",
+            "badge_4": "",
+            "product_5": "",
+            "badge_5": "",
+            "product_6": "",
+            "badge_6": ""
+          }
+        },
+        "category_tab_gN7BQB": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spa & Esthetics Setup",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "La rentrée, simplifiée.",
+            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
+            "product_1": "",
+            "badge_1": "Treatment Bed",
+            "product_2": "",
+            "badge_2": "Ergonomic Stool",
+            "product_3": "",
+            "badge_3": "Utility Trolley",
+            "product_4": "",
+            "badge_4": "Facial Steamer",
+            "product_5": "",
+            "badge_5": "Magnifying Lamp",
+            "product_6": "",
+            "badge_6": "Towel Warmer"
+          }
+        },
+        "category_tab_AC4NNC": {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Orthopedic & Podiatry",
+            "show_hero_card": true,
+            "hero_bg": "#1d1d1f",
+            "hero_text_color": "#ffffff",
+            "hero_title": "La rentrée, simplifiée.",
+            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
+            "product_1": "",
+            "badge_1": "Treatment Bed",
+            "product_2": "",
+            "badge_2": "Ergonomic Stool",
+            "product_3": "",
+            "badge_3": "Utility Trolley",
+            "product_4": "",
+            "badge_4": "Facial Steamer",
+            "product_5": "",
+            "badge_5": "Magnifying Lamp",
+            "product_6": "",
+            "badge_6": "Towel Warmer"
+          }
+        }
+      },
+      "block_order": [
+        "category_tab_Y7wYyJ",
+        "category_tab_yqM7nx",
+        "category_tab_ekMRbh",
+        "category_tab_zkDPYJ",
+        "category_tab_gN7BQB",
+        "category_tab_AC4NNC"
+      ],
+      "name": "Spa Equipment Pack",
+      "settings": {}
+    }
+  },
+  "order": [
+    "hero_banner",
+    "shop_by_cat_v2_DhXM94",
+    "best_sellers",
+    "shop_by_category",
+    "image_with_text",
+    "custom_subcategory_slider_YFNFXr",
+    "custom_subcategory_slider_HPxgWp",
+    "image_slider",
+    "pre_footer_hub",
+    "custom_spa_pack_builder_BDtr9H"
+  ]
+}

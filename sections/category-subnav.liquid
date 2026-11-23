@@ -36,7 +36,7 @@
     {%- endif -%}
   </style>
 
-  <nav class="category-subnav" aria-label="Category Navigation">
+  <nav class="category-subnav" aria-label="{{ 'general.category_navigation' | t }}" data-open-delay="{{ section.settings.hover_open_delay | default: 800 }}" data-close-delay="{{ section.settings.hover_close_delay | default: 250 }}">
     <div class="page-width">
       <ul class="category-subnav__bar">
         {%- for link in subnav_menu.links -%}
@@ -70,8 +70,8 @@
           {%- endif -%}
 
           <li class="category-subnav__bar-item{% if has_dropdown %} has-megamenu{% endif %}">
-            <a href="{{ link.url }}" class="category-subnav__bar-link{% if is_active %} is-active{% endif %}" {% if has_dropdown %}aria-expanded="false"{% endif %}>
-              <span>{{ link.title }}</span>
+            <a href="{{ link.url }}" class="category-subnav__bar-link{% if is_active %} is-active{% endif %}" {% if has_dropdown %}aria-expanded="false" aria-controls="MegaMenu-{{ section.id }}-{{ forloop.index }}"{% endif %}>
+              <span>{% if link.title == 'Toutes les collections' %}{{ 'products.all_collections' | t }}{% else %}{{ link.title | escape }}{% endif %}</span>
               {%- if has_dropdown -%}
                 <svg class="category-subnav__bar-chevron" width="8" height="5" viewBox="0 0 10 6" fill="none" stroke="currentColor" stroke-width="1.5">
                   <path d="M1 1L5 5L9 1" stroke-linecap="round" stroke-linejoin="round"/>
@@ -80,7 +80,7 @@
             </a>
 
             {%- if has_dropdown -%}
-              <div class="category-megamenu">
+              <div class="category-megamenu" id="MegaMenu-{{ section.id }}-{{ forloop.index }}">
                 <div class="category-megamenu__container page-width">
                   
                   {%- if link.links.size > 0 -%}
@@ -261,45 +261,102 @@
 {%- endif -%}
 
 <script>
-  document.addEventListener('DOMContentLoaded', () => {
-    const sidebarItems = document.querySelectorAll('.category-megamenu__sidebar-item');
-
-    sidebarItems.forEach(item => {
-      ['mouseenter', 'click'].forEach(eventType => {
-        item.addEventListener(eventType, (e) => {
-          if (eventType === 'click') e.preventDefault();
-          const parentSidebar = item.closest('.category-megamenu__sidebar');
-          const parentContent = item.closest('.category-megamenu').querySelector('.category-megamenu__content');
-          const targetId = item.getAttribute('data-target-tab');
-
-          if (!parentSidebar || !parentContent || !targetId) return;
-
-          parentSidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(el => el.classList.remove('is-selected'));
-          parentContent.querySelectorAll('.category-megamenu__tab-panel').forEach(el => el.classList.remove('is-active'));
-
-          item.classList.add('is-selected');
-          const targetPanel = parentContent.querySelector('#' + targetId);
-          if (targetPanel) {
-            targetPanel.classList.add('is-active');
-          }
+  (() => {
+    function initializeMenus() {
+      document.querySelectorAll('.category-subnav').forEach(nav => {
+        if (nav.dataset.hoverIntentReady) return;
+        const desktop = window.matchMedia('(min-width: 990px)');
+        const items = [...nav.querySelectorAll('.category-subnav__bar-item.has-megamenu')];
+        const delay = (value, fallback) => value !== undefined && Number.isFinite(Number(value)) ? Math.max(0, Number(value)) : fallback;
+        const openDelay = delay(nav.dataset.openDelay, 800);
+        const closeDelay = delay(nav.dataset.closeDelay, 250);
+        let openTimer, closeTimer, hoveredItem;
+        const cancelOpen = () => { clearTimeout(openTimer); openTimer = null; };
+        const cancelClose = () => { clearTimeout(closeTimer); closeTimer = null; };
+        const triggerFor = item => item.querySelector('.category-subnav__bar-link');
+        const close = item => {
+          item.classList.remove('is-desktop-open');
+          triggerFor(item).setAttribute('aria-expanded', 'false');
+        };
+        const closeAll = () => { cancelOpen(); cancelClose(); items.forEach(close); };
+        const open = item => {
+          if (!desktop.matches) return;
+          cancelOpen(); cancelClose();
+          items.forEach(other => { if (other !== item) close(other); });
+          item.classList.add('is-desktop-open');
+          triggerFor(item).setAttribute('aria-expanded', 'true');
+        };
+        items.forEach(item => {
+          const trigger = triggerFor(item);
+          item.addEventListener('mouseenter', () => {
+            if (!desktop.matches) return;
+            hoveredItem = item;
+            cancelOpen(); cancelClose();
+            if (!item.classList.contains('is-desktop-open')) {
+              openTimer = setTimeout(() => { if (hoveredItem === item) open(item); }, openDelay);
+            }
+          });
+          item.addEventListener('mouseleave', () => {
+            if (!desktop.matches) return;
+            hoveredItem = null;
+            cancelOpen(); cancelClose();
+            closeTimer = setTimeout(() => {
+              items.forEach(other => { if (!other.contains(document.activeElement)) close(other); });
+            }, closeDelay);
+          });
+          item.addEventListener('focusin', () => open(item));
+          item.addEventListener('focusout', event => {
+            if (desktop.matches && !item.contains(event.relatedTarget)) { cancelOpen(); cancelClose(); close(item); }
+          });
+          trigger.addEventListener('keydown', event => {
+            if (!desktop.matches || event.key !== 'ArrowDown') return;
+            event.preventDefault();
+            open(item);
+            item.querySelector('.category-megamenu a[href]')?.focus();
+          });
+          // Keep the optional mobile subnav's existing first-tap behavior.
+          trigger.addEventListener('click', event => {
+            if (!desktop.matches && !item.classList.contains('is-mobile-open')) {
+              event.preventDefault();
+              items.forEach(other => other.classList.remove('is-mobile-open'));
+              item.classList.add('is-mobile-open');
+            }
+          });
         });
+        nav.querySelectorAll('.category-megamenu__sidebar-item').forEach(item => {
+          const selectPreview = () => {
+            const sidebar = item.closest('.category-megamenu__sidebar');
+            const content = item.closest('.category-megamenu').querySelector('.category-megamenu__content');
+            const target = content?.querySelector('#' + item.dataset.targetTab);
+            if (!sidebar || !content || !target || !content.contains(target)) return;
+            sidebar.querySelectorAll('.category-megamenu__sidebar-item').forEach(other => other.classList.toggle('is-selected', other === item));
+            content.querySelectorAll('.category-megamenu__tab-panel').forEach(panel => panel.classList.toggle('is-active', panel === target));
+          };
+          item.addEventListener('mouseenter', selectPreview);
+          item.addEventListener('focusin', () => { if (desktop.matches) selectPreview(); });
+          item.addEventListener('click', event => {
+            // Desktop anchors retain native navigation, including modified clicks.
+            if (!desktop.matches) event.preventDefault();
+            selectPreview();
+          });
+        });
+        nav.addEventListener('keydown', event => {
+          if (!desktop.matches || event.key !== 'Escape') return;
+          const item = event.target.closest('.has-megamenu');
+          if (!item || (!item.classList.contains('is-desktop-open') && !openTimer)) return;
+          event.preventDefault(); event.stopPropagation();
+          triggerFor(item).focus({ preventScroll: true });
+          hoveredItem = null;
+          closeAll();
+        });
+        desktop.addEventListener('change', () => { hoveredItem = null; closeAll(); });
+        nav.dataset.hoverIntentReady = 'true';
       });
-    });
-
-    const megamenuTriggers = document.querySelectorAll('.category-subnav__bar-item.has-megamenu > a');
-    megamenuTriggers.forEach(trigger => {
-      trigger.addEventListener('click', (e) => {
-        if (window.innerWidth <= 989) {
-          const parentLi = trigger.closest('.has-megamenu');
-          if (parentLi && !parentLi.classList.contains('is-mobile-open')) {
-            e.preventDefault();
-            document.querySelectorAll('.has-megamenu').forEach(el => el.classList.remove('is-mobile-open'));
-            parentLi.classList.add('is-mobile-open');
-          }
-        }
-      });
-    });
-  });
+    }
+    if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', initializeMenus);
+    else initializeMenus();
+    document.addEventListener('shopify:section:load', initializeMenus);
+  })();
 </script>
 
 {% schema %}
@@ -308,6 +365,18 @@
   "tag": "section",
   "class": "section-category-subnav",
   "settings": [
+    {
+      "type": "range",
+      "id": "hover_open_delay",
+      "label": "Desktop hover opening delay",
+      "min": 0, "max": 1500, "step": 50, "unit": "ms", "default": 800
+    },
+    {
+      "type": "range",
+      "id": "hover_close_delay",
+      "label": "Desktop hover closing delay",
+      "min": 0, "max": 1000, "step": 50, "unit": "ms", "default": 250
+    },
     {
       "type": "link_list",
       "id": "category_menu",

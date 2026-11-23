@@ -24,7 +24,7 @@
           "type": "faq_item",
           "settings": {
             "question": "Precision Esthetic Facials & Skin Resurfacing:",
-            "answer": "<p>Engineered for the Modern Practitioner, the Royal chair provides estheticians with seamless access during complex facial treatments and advanced skin rejuvenation protocols. The motorized height adjustment—ranging effortlessly from 17 inches to 39 inches via a dedicated foot pedal—eliminates postural strain and lower-back tension during full 8-hour clinic shifts. By establishing an optimal working height, practitioners maintain precise control during detailed microdermabrasion and chemical peels, delivering consistent results and superior client comfort.</p>"
+            "answer": "<p>Engineered for the Modern Practitioner, the Royal chair provides estheticians with seamless access during complex facial treatments and advanced skin rejuvenation protocols. The motorized height adjustment—ranging effortlessly from 17 inches to 39 inches via a dedicated foot pedal—allows the working height to be adjusted to suit the task. By establishing an optimal working height, practitioners maintain precise control during detailed microdermabrasion and chemical peels, delivering consistent results and superior client comfort.</p>"
           }
         },
         "faq_2": {
@@ -268,10 +268,18 @@
         "heading": "Technical Model Comparison",
         "compare_collection": ""
       }
+    },
+    "complete_setup": {
+      "type": "complete-your-setup",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "complete_your_setup"
+      }
     }
   },
   "order": [
     "main",
+    "complete_setup",
     "main_product_characteristics_Hp7Baq",
     "banner_features",
     "how_to",

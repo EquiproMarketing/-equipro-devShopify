@@ -1,0 +1,407 @@
+{%- liquid
+  assign namespace = section.settings.metafield_namespace | default: 'custom'
+  assign key = section.settings.metafield_key | default: 'complete_your_setup'
+  assign complements = product.metafields[namespace][key]
+  assign shown = 0
+-%}
+{%- capture json_lt -%}\u003c{%- endcapture -%}
+{%- capture cards -%}
+  {%- if complements.type == 'list.product_reference' -%}
+    {%- for complement in complements.value -%}
+      {%- if complement != blank and complement.id != product.id and complement.url != blank -%}
+        {%- liquid
+          assign variant = complement.variants.first
+          assign requires_quote = false
+          assign template_name = complement.template_suffix | downcase
+          if template_name contains 'quote'
+            assign requires_quote = true
+          endif
+          for tag in complement.tags
+            assign normalized_tag = tag | downcase
+            if normalized_tag contains 'quote' or normalized_tag == 'rfq'
+              assign requires_quote = true
+            endif
+          endfor
+          for product_collection in complement.collections
+            if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables'
+              assign requires_quote = true
+            endif
+          endfor
+          assign quick_add = false
+          assign inline_options = false
+          unless requires_quote or complement.requires_selling_plan or complement.gift_card?
+            if complement.available and complement.price_min > 0
+              if complement.variants.size == 1 and complement.has_only_default_variant and variant.available and variant.price > 0
+                unless variant.requires_selling_plan or variant.quantity_rule.min > 1 or variant.quantity_rule.increment > 1
+                  assign quick_add = true
+                endunless
+              elsif complement.variants.size > 1 and complement.variants.size <= 50
+                assign inline_options = true
+              endif
+            endif
+          endunless
+          assign action_label = 'complete_setup.view_product' | t
+          if requires_quote
+            assign action_label = section.settings.quote_label | default: 'View quote details'
+          elsif complement.available == false
+            assign action_label = section.settings.unavailable_label | default: 'View availability'
+          elsif complement.has_only_default_variant == false or complement.requires_selling_plan
+            assign action_label = section.settings.options_label | default: 'Choose options'
+          endif
+          assign category_label = complement.type | split: '/' | last | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize
+        -%}
+        <li class="complete-setup__item">
+          <div class="spa-pack-card">
+          <a href="{{ complement.url }}" class="complete-setup__product-link">
+            <div class="spa-pack-card__image-container">
+              {%- if complement.featured_image != blank -%}
+                {{ complement.featured_image | image_url: width: 480 | image_tag: loading: 'lazy', widths: '160, 240, 480', sizes: '160px', class: 'spa-pack-card__image', alt: '' }}
+              {%- else -%}
+                {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
+              {%- endif -%}
+            </div>
+            <div class="spa-pack-card__content">
+              {%- if category_label != blank -%}
+                <span class="spa-pack-card__tag">{{ category_label | escape }}</span>
+              {%- endif -%}
+              <h3 class="spa-pack-card__title" id="CompleteSetupProduct-{{ section.id }}-{{ complement.id }}">{{ complement.title | escape }}</h3>
+              {%- if complement.price_min > 0 -%}
+                <p class="spa-pack-card__price">
+                  {%- if complement.price_varies -%}{{ 'complete_setup.from' | t }} {% endif -%}
+                  {{ complement.price_min | money_with_currency }}
+                </p>
+              {%- endif -%}
+              {%- unless inline_options -%}<span class="complete-setup__link">{{ action_label | escape }}</span>{%- endunless -%}
+            </div>
+          </a>
+          {%- if inline_options -%}
+            <details class="complete-setup__options" id="CompleteSetupOptions-{{ section.id }}-{{ complement.id }}" name="complete-setup-{{ section.id }}" data-setup-options="{{ complement.id }}">
+              <summary aria-describedby="CompleteSetupProduct-{{ section.id }}-{{ complement.id }}">{{ action_label | escape }}</summary>
+              <div class="complete-setup__panel" data-inline-panel
+                data-color-label="{{ 'products.color' | t | escape }}" data-select-label="{{ section.settings.select_label | default: 'Select an option' | escape }}"
+                data-instock-label="{{ section.settings.instock_label | default: 'Available' | escape }}"
+                data-soldout-label="{{ section.settings.soldout_label | default: 'Unavailable' | escape }}"
+                data-details-label="{{ section.settings.details_label | default: 'View product for purchase details' | escape }}"
+                data-accepted-label="{{ section.settings.accepted_label | default: 'Added to cart. Refresh the cart display before adding again.' | escape }}"
+                data-suggestion-label="{{ section.settings.suggestion_label | default: 'Suggested color — review before adding:' | escape }}">
+                <p data-inline-suggestion hidden></p>
+                <div data-inline-options></div>
+                <p data-inline-availability role="status" aria-live="polite"></p>
+                <p data-inline-message role="status" hidden></p>
+                <p data-inline-error role="alert" hidden></p>
+                <a href="{{ complement.url }}">{{ 'complete_setup.view_product' | t }}</a>
+                <button type="button" class="complete-setup__add js-add-to-cart-btn" data-inline-add data-added-label="{{ section.settings.added_label | default: 'Added! ✓' | escape }}" aria-describedby="CompleteSetupProduct-{{ section.id }}-{{ complement.id }}" disabled>
+                  <span class="btn-text">{{ section.settings.quick_add_label | default: 'Add to cart' | escape }}</span>
+                  <span class="btn-spinner" aria-hidden="true" style="display: none;">…</span>
+                </button>
+                <button type="button" class="complete-setup__refresh" data-setup-refresh hidden>{{ section.settings.refresh_label | default: 'Refresh cart' | escape }}</button>
+              </div>
+            </details>
+            {%- capture variant_data -%}
+              {
+                "id": {{ complement.id | json }},
+                "title": {{ complement.title | json }},
+                "url": {{ complement.url | json }},
+                "image": {% if complement.featured_image %}{{ complement.featured_image | image_url: width: 600 | json }}{% else %}""{% endif %},
+                "options": [{% for option in complement.options_with_values %}{{ option.name | json }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+                "variants": [
+                  {%- for choice in complement.variants -%}
+                    {%- liquid
+                      assign purchasable = false
+                      if choice.available and choice.price > 0
+                        unless choice.requires_selling_plan or choice.quantity_rule.min > 1 or choice.quantity_rule.increment > 1
+                          assign purchasable = true
+                        endunless
+                      endif
+                      assign choice_image = choice.featured_image | default: complement.featured_image
+                    -%}
+                    {
+                      "id": {{ choice.id | json }}, "options": {{ choice.options | json }},
+                      "price": {% if choice.price > 0 %}{{ choice.price | money_with_currency | json }}{% else %}""{% endif %},
+                      "available": {{ choice.available | json }}, "purchasable": {{ purchasable | json }},
+                      "image": {% if choice_image %}{{ choice_image | image_url: width: 600 | json }}{% else %}""{% endif %}
+                    }{% unless forloop.last %},{% endunless %}
+                  {%- endfor -%}
+                ]
+              }
+            {%- endcapture -%}
+            <script type="application/json" data-setup-product="{{ complement.id }}">{{ variant_data | replace: '<', json_lt }}</script>
+          {%- endif -%}
+          {%- if quick_add -%}
+            <button type="button" class="complete-setup__add js-add-to-cart-btn" data-variant-id="{{ variant.id }}" data-added-label="{{ section.settings.added_label | default: 'Added! ✓' | escape }}" aria-describedby="CompleteSetupProduct-{{ section.id }}-{{ complement.id }}" hidden>
+              <span class="btn-text">{{ section.settings.quick_add_label | default: 'Add to cart' | escape }}</span>
+              <span class="btn-spinner" aria-hidden="true" style="display: none;">…</span>
+            </button>
+          {%- endif -%}
+          </div>
+        </li>
+        {%- assign shown = shown | plus: 1 -%}
+        {%- if shown == 3 -%}{%- break -%}{%- endif -%}
+      {%- endif -%}
+    {%- endfor -%}
+  {%- endif -%}
+{%- endcapture -%}
+{%- if shown > 0 -%}
+  {{ 'custom-spa-pack-builder.css' | asset_url | stylesheet_tag }}
+  <complete-your-setup class="complete-setup page-width">
+    <script type="application/json" data-setup-main>
+      {"selectedVariantId": {{ product.selected_or_first_available_variant.id | default: 0 | json }},
+       "options": [{% for option in product.options_with_values %}{{ option.name | json | replace: '<', json_lt }}{% unless forloop.last %},{% endunless %}{% endfor %}],
+       "variants": [{% for main_variant in product.variants limit: 50 %}{"id": {{ main_variant.id | json }}, "options": {{ main_variant.options | json | replace: '<', json_lt }}}{% unless forloop.last %},{% endunless %}{% endfor %}]}
+    </script>
+    <h2 id="CompleteSetupHeading-{{ section.id }}">{{ 'complete_setup.heading' | t }}</h2>
+    <p id="CompleteSetupHint-{{ section.id }}" class="complete-setup__hint">{{ 'complete_setup.scroll_hint' | t }}</p>
+    <div class="complete-setup__scroll" role="region" tabindex="0" aria-labelledby="CompleteSetupHeading-{{ section.id }}" aria-describedby="CompleteSetupHint-{{ section.id }}">
+      <ul class="complete-setup__list" role="list">{{ cards }}</ul>
+    </div>
+  </complete-your-setup>
+{%- endif -%}
+
+{% stylesheet %}
+  .complete-setup { display: block; padding-block: 40px; }
+  .complete-setup__list { display: grid; align-items: start; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 20px; list-style: none; margin: 0; padding: 6px; }
+  .complete-setup__item { min-width: 0; }
+  .complete-setup__product-link { display: flex; align-items: center; gap: 16px; color: inherit; text-decoration: none; flex: 1; }
+  .complete-setup__add { border: 0; border-radius: 6px; min-height: 36px; padding: 8px 12px; background: #a22938; color: #fff; font: inherit; font-size: .85rem; font-weight: 600; cursor: pointer; }
+  .complete-setup__add[hidden] { display: none; }
+  .complete-setup__add:disabled { opacity: .6; cursor: wait; }
+  .complete-setup__add:focus-visible { outline: 3px solid #a22938; outline-offset: 3px; }
+  .complete-setup .spa-pack-card { height: auto; box-sizing: border-box; flex-direction: column; align-items: stretch; gap: 12px; border: 1px solid #e5e5e5; }
+  .complete-setup .spa-pack-card__image-container { flex: 0 0 35%; width: 35%; padding: 0; }
+  .complete-setup .spa-pack-card__content { min-width: 0; margin-top: 0; overflow-wrap: anywhere; }
+  .complete-setup .spa-pack-card__image { width: 100%; height: auto; }
+  .complete-setup__link { margin-top: 12px; text-decoration: underline; color: #a22938; }
+  .complete-setup a:focus-visible, .complete-setup__scroll:focus-visible { outline: 3px solid #a22938; outline-offset: 2px; }
+  .complete-setup__hint { display: none; }
+  @media (max-width: 989px) {
+    .complete-setup__hint { display: block; }
+    .complete-setup__scroll { overflow-x: auto; scroll-snap-type: x proximity; scroll-behavior: auto; }
+    .complete-setup__list { display: flex; align-items: flex-start; gap: 16px; }
+    .complete-setup__item { flex: 0 0 min(85%, 380px); scroll-snap-align: start; }
+  }
+  .complete-setup__options { width: 100%; }
+  .complete-setup__options summary { cursor: pointer; color: #a22938; padding-block: 8px; font-size: .9rem; text-decoration: underline; }
+  .complete-setup__panel { border-top: 1px solid #e5e5e5; padding-top: 12px; }
+  .complete-setup__panel label { display: block; margin: 10px 0 6px; font-size: .85rem; font-weight: 600; }
+  .complete-setup__panel select { box-sizing: border-box; width: 100%; min-height: 40px; padding: 8px; border: 1px solid #bfbfbf; border-radius: 6px; background: #fff; color: inherit; font: inherit; font-size: .85rem; }
+  .complete-setup__panel p { font-size: .85rem; margin-block: 10px; }
+  .complete-setup__panel [data-inline-error] { color: #a22938; }
+  .complete-setup__panel .complete-setup__add { display: block; width: 100%; margin-top: 12px; }
+  .complete-setup__refresh { font: inherit; font-size: .85rem; margin-top: 12px; background: #fff; color: #a22938; border: 1px solid #a22938; border-radius: 6px; padding: 8px; cursor: pointer; }
+  .complete-setup :is(summary, select, .complete-setup__refresh):focus-visible { outline: 3px solid #a22938; outline-offset: 3px; }
+  @media (prefers-reduced-motion: reduce) {
+    .complete-setup .spa-pack-card { transition: none; transform: none; }
+  }
+{% endstylesheet %}
+
+{% javascript %}
+  if (!customElements.get('complete-your-setup')) {
+    customElements.define('complete-your-setup', class extends HTMLElement {
+      static normalize(value) {
+        return String(value ?? '').normalize('NFKC').trim().replace(/\s+/g, ' ').toLowerCase();
+      }
+      static suggestedOptions(main, selectedId, product) {
+        const isColor = name => ['color', 'colour', 'couleur'].includes(this.normalize(name));
+        const mainIndex = main.options.findIndex(isColor);
+        const index = product.options.findIndex(isColor);
+        const selected = main.variants.find(variant => String(variant.id) === String(selectedId));
+        const result = product.options.map(() => '');
+        if (mainIndex < 0 || index < 0 || !selected?.options[mainIndex]) return result;
+        const matches = [...new Set(product.variants.map(variant => variant.options[index]))].filter(value => this.normalize(value) === this.normalize(selected.options[mainIndex]));
+        if (matches.length === 1) result[index] = matches[0];
+        return result;
+      }
+      static selectedVariant(product, values) {
+        if (values.length !== product.options.length || values.some(value => !value)) return null;
+        return product.variants.find(variant => variant.options.every((value, index) => value === values[index])) || null;
+      }
+      connectedCallback() {
+        if (this.initialized) return;
+        this.initialized = true;
+        const enable = () => {
+          const cart = window.cartDrawer;
+          this.cartReady = ['run', 'request', 'refreshDrawer', 'open'].every(method => typeof cart?.[method] === 'function');
+          if (this.cartReady) this.querySelectorAll('.complete-setup__add:not([data-inline-add])').forEach(button => { button.hidden = false; });
+        };
+        enable();
+        window.addEventListener('load', enable, { once: true });
+        this.addEventListener('toggle', event => {
+          const details = event.target;
+          if (!details.matches('details[data-setup-options]') || !details.open) return;
+          this.querySelectorAll('details[data-setup-options]').forEach(other => { if (other !== details) other.open = false; });
+          this.openOptions(details);
+        }, true);
+        this.addEventListener('change', event => {
+          if (!event.target.matches('[data-inline-panel] select')) return;
+          const state = event.target.closest('details').setupState;
+          if (state) { this.clearError(state); this.updateSelection(state); }
+        });
+        this.addEventListener('keydown', event => {
+          const details = event.target.closest('details[data-setup-options]');
+          if (event.key === 'Escape' && details?.open) { event.preventDefault(); details.open = false; details.querySelector('summary').focus({ preventScroll: true }); }
+        });
+        this.addEventListener('focusin', event => {
+          const card = event.target.closest('.complete-setup__item');
+          if (!card) return;
+          requestAnimationFrame(() => {
+            const scroller = this.querySelector('.complete-setup__scroll');
+            if (!scroller || scroller.scrollWidth <= scroller.clientWidth) return;
+            const bounds = scroller.getBoundingClientRect(), rect = card.getBoundingClientRect();
+            const delta = rect.left < bounds.left + 6 ? rect.left - bounds.left - 6 : rect.right > bounds.right - 6 ? rect.right - bounds.right + 6 : 0;
+            if (delta) scroller.scrollTo({ left: scroller.scrollLeft + delta, behavior: 'instant' });
+          });
+        });
+        this.addEventListener('click', event => {
+          const refresh = event.target.closest('[data-setup-refresh]');
+          if (refresh) { this.reconcile(refresh); return; }
+          const button = event.target.closest('.complete-setup__add');
+          if (button && !button.disabled) this.addVariant(button);
+        });
+      }
+      openOptions(details) {
+        const card = details.closest('.complete-setup__item');
+        const product = JSON.parse(card.querySelector('[data-setup-product]').textContent);
+        const main = JSON.parse(this.querySelector('[data-setup-main]').textContent);
+        const selectedId = document.getElementById('ProductVariantIdInput')?.value || main.selectedVariantId;
+        if (details.setupState && String(details.setupState.mainId) === String(selectedId)) { this.updateSelection(details.setupState); return; }
+        const panel = details.querySelector('[data-inline-panel]');
+        const state = { details, card, panel, product, mainId: selectedId, trigger: details.querySelector('summary') };
+        details.setupState = state;
+        const values = this.constructor.suggestedOptions(main, selectedId, product);
+        const suggestion = panel.querySelector('[data-inline-suggestion]');
+        suggestion.textContent = values.some(Boolean) ? panel.dataset.suggestionLabel + ' ' + values.filter(Boolean).join(', ') : '';
+        suggestion.hidden = !suggestion.textContent;
+        const options = panel.querySelector('[data-inline-options]');
+        options.replaceChildren();
+        product.options.forEach((name, index) => {
+          const label = document.createElement('label'), select = document.createElement('select');
+          select.id = details.id + '-option-' + index;
+          label.htmlFor = select.id;
+          label.textContent = ['color', 'colour', 'couleur'].includes(this.constructor.normalize(name)) ? panel.dataset.colorLabel : name;
+          const placeholder = document.createElement('option');
+          placeholder.value = '';
+          placeholder.textContent = panel.dataset.selectLabel;
+          select.append(placeholder);
+          for (const value of new Set(product.variants.map(variant => variant.options[index]))) {
+            const option = document.createElement('option'); option.value = value; option.textContent = value; select.append(option);
+          }
+          select.value = values[index];
+          options.append(label, select);
+        });
+        this.clearError(state);
+        this.updateSelection(state);
+      }
+      clearError(state) {
+        const error = state.panel.querySelector('[data-inline-error]');
+        error.textContent = ''; error.hidden = true;
+      }
+      updateSelection(state) {
+        const { panel, product, card } = state;
+        const variant = this.constructor.selectedVariant(product, [...panel.querySelectorAll('select')].map(select => select.value));
+        state.variant = variant;
+        const button = panel.querySelector('[data-inline-add]'), cart = window.cartDrawer;
+        button.dataset.variantId = variant?.purchasable ? String(variant.id) : '';
+        button.disabled = !this.cartReady || !variant?.purchasable || !!cart?.pending || !!cart?.unsynced || !!button.acceptedPending;
+        panel.querySelector('[data-inline-availability]').textContent = !variant ? panel.dataset.selectLabel : !variant.available ? panel.dataset.soldoutLabel : !variant.purchasable ? panel.dataset.detailsLabel : panel.dataset.instockLabel;
+        const price = card.querySelector('.spa-pack-card__price');
+        if (price) { price.basePrice ??= price.textContent; price.textContent = variant ? variant.price : price.basePrice; price.hidden = !price.textContent; }
+        const image = card.querySelector('.spa-pack-card__image');
+        if (image && (variant?.image || product.image)) { image.removeAttribute('srcset'); image.src = variant?.image || product.image; }
+      }
+      showResult(state, message, error = false) {
+        const target = state?.panel.querySelector(error ? '[data-inline-error]' : '[data-inline-message]') || document.getElementById('CartFeedback');
+        if (target) { target.textContent = message; target.hidden = !message; }
+      }
+      async reconcile(refresh) {
+        const cart = window.cartDrawer;
+        if (!cart || cart.pending) return;
+        const state = refresh.closest('details')?.setupState;
+        const succeeded = await cart.run(() => cart.refreshDrawer(), true);
+        if (succeeded && !cart.unsynced) {
+          this.querySelectorAll('.complete-setup__add').forEach(button => { button.acceptedPending = false; });
+          this.querySelectorAll('details[data-setup-options]').forEach(details => { if (details.setupState) this.updateSelection(details.setupState); });
+          refresh.hidden = true;
+          if (state) { this.clearError(state); this.showResult(state, state.panel.querySelector('[data-inline-add]').dataset.addedLabel); cart.open(state.trigger); }
+        } else this.showResult(state, document.getElementById('CartFeedback')?.textContent || cart.errorMessage(), true);
+      }
+      async addVariant(button) {
+        const cart = window.cartDrawer;
+        if (!cart || cart.pending || cart.unsynced || this.adding || button.acceptedPending || !button.dataset.variantId) return;
+        const state = button.closest('details')?.setupState;
+        if (state && (!state.details.open || !state.variant?.purchasable || String(state.variant.id) !== button.dataset.variantId)) return;
+        if (state) this.clearError(state);
+        this.adding = true;
+        let accepted = false;
+        const variantId = button.dataset.variantId;
+        const selects = state ? [...state.panel.querySelectorAll('select')] : [];
+        selects.forEach(select => { select.disabled = true; });
+        try {
+          const succeeded = await cart.run(async () => {
+            const text = button.querySelector('.btn-text'), spinner = button.querySelector('.btn-spinner');
+            const label = button.cartLabel ?? (button.cartLabel = text.textContent);
+            clearTimeout(button.cartResetTimer);
+            text.textContent = label; text.style.display = 'none'; spinner.style.display = 'inline-block';
+            button.setAttribute('aria-busy', 'true'); button.setAttribute('aria-label', label);
+            try {
+              const data = await cart.request(window.Shopify.routes.root + 'cart/add.js', {
+                method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: variantId, quantity: 1 })
+              });
+              if (!data.id && !(Array.isArray(data.items) && data.items.length)) throw new Error(cart.errorMessage());
+              accepted = true; button.acceptedPending = true;
+              await cart.refreshDrawer();
+              cart.open(state?.trigger || button);
+            } finally {
+              text.style.display = 'inline-block'; spinner.style.display = 'none';
+              button.removeAttribute('aria-busy'); button.removeAttribute('aria-label');
+            }
+          });
+          if (accepted && !cart.unsynced) {
+            button.acceptedPending = false;
+            button.querySelector('.btn-text').textContent = button.dataset.addedLabel;
+            button.cartResetTimer = setTimeout(() => { button.querySelector('.btn-text').textContent = button.cartLabel; }, 2000);
+            this.showResult(state, button.dataset.addedLabel);
+            if (succeeded === false) cart.open(state?.trigger || button);
+          } else {
+            if (accepted) {
+              this.showResult(state, state?.panel.dataset.acceptedLabel || button.dataset.addedLabel);
+              const refresh = state?.panel.querySelector('[data-setup-refresh]'); if (refresh) refresh.hidden = false;
+            }
+            this.showResult(state, document.getElementById('CartFeedback')?.textContent || cart.errorMessage(), true);
+          }
+        } finally {
+          this.adding = false;
+          selects.forEach(select => { select.disabled = false; });
+          this.querySelectorAll('details[data-setup-options]').forEach(details => { if (details.setupState) this.updateSelection(details.setupState); });
+          if (!state && button.acceptedPending) button.disabled = true;
+        }
+      }
+    });
+  }
+{% endjavascript %}
+
+
+
+{% schema %}
+{
+  "name": "Complete Your Setup",
+  "enabled_on": { "templates": ["product"] },
+  "settings": [
+    { "type": "text", "id": "select_label", "label": "Selection prompt", "default": "Select an option" },
+    { "type": "text", "id": "instock_label", "label": "Available label", "default": "Available" },
+    { "type": "text", "id": "soldout_label", "label": "Unavailable label", "default": "Unavailable" },
+    { "type": "text", "id": "details_label", "label": "Special purchase label", "default": "View product for purchase details" },
+    { "type": "text", "id": "suggestion_label", "label": "Color suggestion label", "default": "Suggested color — review before adding:" },
+    { "type": "text", "id": "accepted_label", "label": "Unconfirmed display label", "default": "Added to cart. Refresh the cart display before adding again." },
+    { "type": "text", "id": "refresh_label", "label": "Refresh cart label", "default": "Refresh cart" },
+    { "type": "text", "id": "quick_add_label", "label": "Quick add label", "default": "Add to cart" },
+    { "type": "text", "id": "options_label", "label": "Options link label", "default": "Choose options" },
+    { "type": "text", "id": "quote_label", "label": "Quote link label", "default": "View quote details" },
+    { "type": "text", "id": "unavailable_label", "label": "Unavailable link label", "default": "View availability" },
+    { "type": "text", "id": "added_label", "label": "Added label", "default": "Added! ✓" },
+    { "type": "text", "id": "metafield_namespace", "label": "Metafield namespace", "default": "custom" },
+    { "type": "text", "id": "metafield_key", "label": "Metafield key", "default": "complete_your_setup", "info": "Use an existing product metafield of type list.product_reference. Displays up to three products." }
+  ],
+  "presets": [{ "name": "Complete Your Setup" }]
+}
+{% endschema %}
+

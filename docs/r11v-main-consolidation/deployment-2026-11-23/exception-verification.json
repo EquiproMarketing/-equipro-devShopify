@@ -1,0 +1,119 @@
+{
+  "baselineCommercialMismatches": [
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_rFaJei/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_AWHND6/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "multiderm-5-en-1",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_3WjHXz/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "elite-spa-ei-508",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_k38Qj8/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "maxi-comfort-360",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_re7QVY/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_WpAkFt/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "infraderm",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_BgbKdG/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_Kq4ak6/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "63203-lfm-magnifier-led-3d-or-5d",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_9bzVAr/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "digipro-steamer",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    },
+    {
+      "file": "templates/index.json",
+      "field": "sections/best_sellers/blocks/custom_card_GUW9Bg/settings/product",
+      "remote": null,
+      "candidate": null,
+      "fixture": "aeroderm",
+      "classification": "Excluded commercial card mapping; baseline preserved"
+    }
+  ],
+  "authorizedFeatureChanges": [
+    {
+      "path": "templates/index.json",
+      "field": "sections/custom_spa_pack_builder_BDtr9H/settings/professional_profiles",
+      "classification": "Explicitly approved feature: profiles or Complete Your Setup"
+    },
+    {
+      "path": "templates/product.ei-501-royal.json",
+      "field": "order",
+      "classification": "Explicitly approved feature: profiles or Complete Your Setup"
+    }
+  ],
+  "homepageChangesOnly": [
+    {
+      "field": "/sections/best_sellers/blocks/custom_card_AjpNta/settings/link",
+      "before": "",
+      "after": "/products/ultra-comfort-20500-gm25t"
+    },
+    {
+      "field": "/sections/best_sellers/blocks/custom_card_Kq4ak6/settings/link",
+      "before": "",
+      "after": "/products/63203-lfm-magnifier-led-3d-or-5d"
+    },
+    {
+      "field": "/sections/custom_spa_pack_builder_BDtr9H/settings/professional_profiles",
+      "before": null,
+      "after": [
+        "spas-wellness-centers",
+        "spa-esthetics-setup",
+        "orthopedic-podiatry"
+      ]
+    }
+  ],
+  "purchaseSafetyUnaffectedByExceptions": true,
+  "testsNotModified": true
+}

@@ -1,0 +1,916 @@
+{
+  "id": "gid://shopify/OnlineStoreTheme/189456777389",
+  "name": "EQR-R1.1V — B2B Quote Integrity",
+  "role": "UNPUBLISHED",
+  "updatedAt": "2026-11-09T19:45:48Z",
+  "files": [
+    {
+      "filename": "assets/base.css",
+      "checksumMd5": "2e76659fc0ae13390c758ee223abff5d"
+    },
+    {
+      "filename": "assets/cart-drawer.css",
+      "checksumMd5": "50d62b9108b35f03d3be7f48b188500d"
+    },
+    {
+      "filename": "assets/cart-drawer.js",
+      "checksumMd5": "8b25a7f8bc7a016aa7284c5e3683b5e2"
+    },
+    {
+      "filename": "assets/collection-products.css",
+      "checksumMd5": "bedb61a414098f26708e7e4e06841a56"
+    },
+    {
+      "filename": "assets/critical.css",
+      "checksumMd5": "260673b01f49a90384ea47dbafec89bd"
+    },
+    {
+      "filename": "assets/custom-assistance-hub.css",
+      "checksumMd5": "53808fd6c7fc88f3361a232c8f53687e"
+    },
+    {
+      "filename": "assets/custom-configurator.css",
+      "checksumMd5": "2fde7d603e3d4fbc0ea10ab6a5f2da58"
+    },
+    {
+      "filename": "assets/custom-equipro.css",
+      "checksumMd5": "0115ff24ab25d3c8467339c4d8a75deb"
+    },
+    {
+      "filename": "assets/custom-product-treatment.css",
+      "checksumMd5": "2ee2904e46a242ca0ffeb21d8eaf0193"
+    },
+    {
+      "filename": "assets/custom-spa-pack-builder.css",
+      "checksumMd5": "e7658fd5b69795383501f38c8d9d2a9c"
+    },
+    {
+      "filename": "assets/custom-subcategory-slider.css",
+      "checksumMd5": "c90c013df48d8ca00445f9d219e65904"
+    },
+    {
+      "filename": "assets/equipro-comparison-data.json",
+      "checksumMd5": "15bb8cdb8fb6beda350427a25d54ef97"
+    },
+    {
+      "filename": "assets/equipro-comparison.css",
+      "checksumMd5": "0bc211d17561e513aae84355e52b72d9"
+    },
+    {
+      "filename": "assets/equipro-comparison.js",
+      "checksumMd5": "69f8d3750dd23aa2748be331cd874dae"
+    },
+    {
+      "filename": "assets/find-your-setup.css",
+      "checksumMd5": "8900e795f3fe6e006443215cebc2237d"
+    },
+    {
+      "filename": "assets/find-your-setup.js",
+      "checksumMd5": "fc2c8eab4bb45ab70955a301d07147c2"
+    },
+    {
+      "filename": "assets/global.js",
+      "checksumMd5": "d41d8cd98f00b204e9800998ecf8427e"
+    },
+    {
+      "filename": "assets/icon-account.svg",
+      "checksumMd5": "d000fbee42ebcacaa0a2f5dcc56a8d4d"
+    },
+    {
+      "filename": "assets/icon-cart.svg",
+      "checksumMd5": "df246a0e458f17459afc3930ed5388fb"
+    },
+    {
+      "filename": "assets/product-form.js",
+      "checksumMd5": "6283a131077edb67b8ab78d59066839a"
+    },
+    {
+      "filename": "assets/product-technical-table.css",
+      "checksumMd5": "b2f4aa6e89a1a3b4a9e576edb0f491a0"
+    },
+    {
+      "filename": "assets/quote-modal.css",
+      "checksumMd5": "be2a120683c4d7520d2d19365352bc42"
+    },
+    {
+      "filename": "assets/quote-modal.js",
+      "checksumMd5": "9ba8f6f0b1311bad16bf6a49756d13a2"
+    },
+    {
+      "filename": "assets/section-404.css",
+      "checksumMd5": "7cce6a1336e55ac18e706bffbdbafc02"
+    },
+    {
+      "filename": "assets/section-about-cta-banner.css",
+      "checksumMd5": "3bdd367133038e37f3f1266b32ff50fa"
+    },
+    {
+      "filename": "assets/section-about-how-we-work.css",
+      "checksumMd5": "ebad2833b5af1e997952b255baf06220"
+    },
+    {
+      "filename": "assets/section-about-pillars.css",
+      "checksumMd5": "9c8a6724968244a419161b246235a0da"
+    },
+    {
+      "filename": "assets/section-about-vision.css",
+      "checksumMd5": "53a4cbd122006b2bc8ee1ce1e2ba1337"
+    },
+    {
+      "filename": "assets/section-about.css",
+      "checksumMd5": "3b01b0b3558942495ede12434a8b669f"
+    },
+    {
+      "filename": "assets/section-bento-grid-v2.css",
+      "checksumMd5": "9b4c0ea2cdac833e37e0d97e8c9a0eb2"
+    },
+    {
+      "filename": "assets/section-category-subnav.css",
+      "checksumMd5": "089e42b429ab3a57215b38f0b62fc9eb"
+    },
+    {
+      "filename": "assets/section-contact.css",
+      "checksumMd5": "76dbc6fe15489c0642ceaa6b1c0c984e"
+    },
+    {
+      "filename": "assets/section-featured-collection.css",
+      "checksumMd5": "94c009a8b6a9892297f8135f329a92af"
+    },
+    {
+      "filename": "assets/section-footer.css",
+      "checksumMd5": "844096d8e2147ba60487f97f16eb83a9"
+    },
+    {
+      "filename": "assets/section-header.css",
+      "checksumMd5": "2b6ba00936ac67bd9846fd409ab8dabe"
+    },
+    {
+      "filename": "assets/section-hero-banner.css",
+      "checksumMd5": "b27e85219d8a279ce651cfc7e8ea3003"
+    },
+    {
+      "filename": "assets/section-image-slider.css",
+      "checksumMd5": "05795a0e1f89cc115bffaece5ad186eb"
+    },
+    {
+      "filename": "assets/section-image-with-text.css",
+      "checksumMd5": "2385afb7bc209aec56cc4dac5375a8dd"
+    },
+    {
+      "filename": "assets/section-main-list-collections.css",
+      "checksumMd5": "67d346e6cebd210e674a5a92b5a70b2d"
+    },
+    {
+      "filename": "assets/section-main-product.css",
+      "checksumMd5": "36af4485ab0cf14d59851c137d0e2d5e"
+    },
+    {
+      "filename": "assets/section-manuals.css",
+      "checksumMd5": "e7c109daa779ddacc129cb47936e5f1a"
+    },
+    {
+      "filename": "assets/section-pre-footer-hub.css",
+      "checksumMd5": "752612ab591f91ace1d6d7f4267505d2"
+    },
+    {
+      "filename": "assets/section-shipping.css",
+      "checksumMd5": "c41fafd9b4c0cb7519286e9bf817503b"
+    },
+    {
+      "filename": "assets/section-shop-by-category.css",
+      "checksumMd5": "c123a72e67ba0af7218c660b4bed1e88"
+    },
+    {
+      "filename": "assets/section-subcategories-grid.css",
+      "checksumMd5": "01feda464ca9e328aa24ba1115b03c83"
+    },
+    {
+      "filename": "assets/shipping-calculator.js",
+      "checksumMd5": "9be2a9deed00e4cf0c355b335767a261"
+    },
+    {
+      "filename": "assets/shop-by-cat-v2.css",
+      "checksumMd5": "23079035600727756a6ecaf317b23999"
+    },
+    {
+      "filename": "assets/shoppy-x-ray.svg",
+      "checksumMd5": "fae5863a2cd40905d9be073d97783a6f"
+    },
+    {
+      "filename": "config/settings_data.json",
+      "checksumMd5": "3adc1f807d15df48ae881798e0115028"
+    },
+    {
+      "filename": "config/settings_schema.json",
+      "checksumMd5": "c1b7c56210d3e8ef72e3885872450054"
+    },
+    {
+      "filename": "layout/password.liquid",
+      "checksumMd5": "af841bff3fc624210951f7018f5686d4"
+    },
+    {
+      "filename": "layout/theme.liquid",
+      "checksumMd5": "38db4bc87de3b6f285c07a0ac63b8e7e"
+    },
+    {
+      "filename": "locales/en.default.json",
+      "checksumMd5": "3cca6dc8734073fda0f6ef8dec6a08d5"
+    },
+    {
+      "filename": "locales/en.default.schema.json",
+      "checksumMd5": "f4d5958b5e4cf03d4b1ae5b0423f54ed"
+    },
+    {
+      "filename": "sections/about-cta-banner.liquid",
+      "checksumMd5": "40b952efbbb6711fa4a0b70ddb7fafdc"
+    },
+    {
+      "filename": "sections/about-hero-video.liquid",
+      "checksumMd5": "f3cd23c4cdd66d0c5610e6080d90a595"
+    },
+    {
+      "filename": "sections/about-how-we-work.liquid",
+      "checksumMd5": "ce69a44c47f7022209567189e091ff93"
+    },
+    {
+      "filename": "sections/about-pillars.liquid",
+      "checksumMd5": "2c46a3ec8ea61c70f43a8256c3467086"
+    },
+    {
+      "filename": "sections/about-vision.liquid",
+      "checksumMd5": "f9d9442a2c10ab2cbc9160f16a8d7e05"
+    },
+    {
+      "filename": "sections/article.liquid",
+      "checksumMd5": "39c7d3dd25bd8ee644dfc13944cb7420"
+    },
+    {
+      "filename": "sections/blog.liquid",
+      "checksumMd5": "4a128e233a1d711a2a6b06f32ea8643d"
+    },
+    {
+      "filename": "sections/cart-drawer.liquid",
+      "checksumMd5": "1cf1bc3143881a7a23191d06acf1c8c1"
+    },
+    {
+      "filename": "sections/cart.liquid",
+      "checksumMd5": "c6f943656f6159521cabcc3152912b8f"
+    },
+    {
+      "filename": "sections/category-faq.liquid",
+      "checksumMd5": "b63e6c5534aef1f3bbe9890dccbeacd9"
+    },
+    {
+      "filename": "sections/category-subnav.liquid",
+      "checksumMd5": "9450845bc373c56813c8f92dc4603eb5"
+    },
+    {
+      "filename": "sections/category-video.liquid",
+      "checksumMd5": "8e3be69c35ee057d173aa915c2a4a68d"
+    },
+    {
+      "filename": "sections/collection-banner.liquid",
+      "checksumMd5": "c05cccf0b52b59f4e1b83d4127ccd6ef"
+    },
+    {
+      "filename": "sections/collection.liquid",
+      "checksumMd5": "b3effcbcfa9de642b8c3b97cef435843"
+    },
+    {
+      "filename": "sections/complete-your-setup.liquid",
+      "checksumMd5": "170ae87730454e7ac06f2d5fa9966a3f"
+    },
+    {
+      "filename": "sections/custom-assistance-hub.liquid",
+      "checksumMd5": "1de8408a189e5f5a22f0134de7054dd0"
+    },
+    {
+      "filename": "sections/custom-product-treatment.liquid",
+      "checksumMd5": "e5588bea7915e1000ae34a3ca546733e"
+    },
+    {
+      "filename": "sections/custom-section.liquid",
+      "checksumMd5": "6cf28c5e5957fa0da6463954475362a6"
+    },
+    {
+      "filename": "sections/custom-spa-pack-builder.liquid",
+      "checksumMd5": "1cec6912c50a860cb032f5dc8ab1cecb"
+    },
+    {
+      "filename": "sections/custom-subcategory-slider.liquid",
+      "checksumMd5": "e56c177fbf8fb4e872ff54ba676e448f"
+    },
+    {
+      "filename": "sections/customer-reviews.liquid",
+      "checksumMd5": "de070e9717007dcb03f723849965ab8f"
+    },
+    {
+      "filename": "sections/featured-collection.liquid",
+      "checksumMd5": "01b2344556f9fe57e20135eba159c8b4"
+    },
+    {
+      "filename": "sections/find-your-setup.liquid",
+      "checksumMd5": "2105934bffc72a6b1fb4f6da632cc001"
+    },
+    {
+      "filename": "sections/footer-group.json",
+      "checksumMd5": "a6c81212c53e55926f00a8d4a7ada5ce"
+    },
+    {
+      "filename": "sections/footer.liquid",
+      "checksumMd5": "c66d2db5b080d21b46ec4dfb8703864a"
+    },
+    {
+      "filename": "sections/group.liquid",
+      "checksumMd5": "01bd0e7b47a465d18390c90b75aab6ab"
+    },
+    {
+      "filename": "sections/header-group.json",
+      "checksumMd5": "73838a866df0449cbf24e15e95b1ada5"
+    },
+    {
+      "filename": "sections/header.liquid",
+      "checksumMd5": "458ca169e5bdf993c1cb0916d47e3c46"
+    },
+    {
+      "filename": "sections/hello-world.liquid",
+      "checksumMd5": "6fea9c2689ae800870070d7e9e1679f8"
+    },
+    {
+      "filename": "sections/hero-banner.liquid",
+      "checksumMd5": "00cefaa97da8aee7c01e1c21f41d30b0"
+    },
+    {
+      "filename": "sections/image-slider.liquid",
+      "checksumMd5": "ad788a210865ff68321c05016960a62e"
+    },
+    {
+      "filename": "sections/image-with-text.liquid",
+      "checksumMd5": "848aeb20e2547be4c61bbcf86564ff37"
+    },
+    {
+      "filename": "sections/main-404.liquid",
+      "checksumMd5": "6ba1cd160dfc562a40e27644bbbc06e5"
+    },
+    {
+      "filename": "sections/main-about.liquid",
+      "checksumMd5": "38d309c4b98839685cba616c3b69a7cb"
+    },
+    {
+      "filename": "sections/main-cart-items.liquid",
+      "checksumMd5": "aa36a4a6ed3c1defac532b19d292c0ee"
+    },
+    {
+      "filename": "sections/main-collection-product-grid.liquid",
+      "checksumMd5": "ec10b91396179b7de8352eb38f418b0f"
+    },
+    {
+      "filename": "sections/main-contact.liquid",
+      "checksumMd5": "dfdb026ecaddc199aced28737f958072"
+    },
+    {
+      "filename": "sections/main-list-collections.liquid",
+      "checksumMd5": "46f7fcd7827ee328582ba0ecc14d2b9a"
+    },
+    {
+      "filename": "sections/main-product-characteristics.liquid",
+      "checksumMd5": "aee443996c490351eb1886cdfd93a1ad"
+    },
+    {
+      "filename": "sections/main-product.liquid",
+      "checksumMd5": "49bcf851e0d98a80fdaf7d0f4589e928"
+    },
+    {
+      "filename": "sections/manuals-library.liquid",
+      "checksumMd5": "1e7e1fdf62eb20e1bdcd2e42e5973889"
+    },
+    {
+      "filename": "sections/page.liquid",
+      "checksumMd5": "1d06e45248b8526b0a693a2c4868d8d9"
+    },
+    {
+      "filename": "sections/password.liquid",
+      "checksumMd5": "04b183393c03a9ba30d352534e38c56a"
+    },
+    {
+      "filename": "sections/positive-impact.liquid",
+      "checksumMd5": "e28fb874b6e0886aed526461f18e9168"
+    },
+    {
+      "filename": "sections/pre-footer-hub.liquid",
+      "checksumMd5": "48e5dc1fc88885074a16bef1bd5d7a5d"
+    },
+    {
+      "filename": "sections/product-compare-modal.liquid",
+      "checksumMd5": "01050ffd52182f099080e42777a6c07d"
+    },
+    {
+      "filename": "sections/product-details.liquid",
+      "checksumMd5": "9865dff20b0d8e22defc21eaff70f842"
+    },
+    {
+      "filename": "sections/product-how-to.liquid",
+      "checksumMd5": "e5f0038eb28135d694e5ba6d6c12df02"
+    },
+    {
+      "filename": "sections/product-key-features-banner.liquid",
+      "checksumMd5": "2f9df6332c510f1c1ab1c71f7bf47079"
+    },
+    {
+      "filename": "sections/product.liquid",
+      "checksumMd5": "750266b206582b50f3297ca13ec3bcbc"
+    },
+    {
+      "filename": "sections/search.liquid",
+      "checksumMd5": "7756475e6bc8beeb08b0864ff675171d"
+    },
+    {
+      "filename": "sections/section-bento-grid-v2.liquid",
+      "checksumMd5": "408f16bae75c4703412d22ab544051db"
+    },
+    {
+      "filename": "sections/shipping-policy.liquid",
+      "checksumMd5": "f85d53564f597d5140e217430c91a3dc"
+    },
+    {
+      "filename": "sections/shop-by-cat-v2.liquid",
+      "checksumMd5": "234907e1ee379e32043fe5580387a15a"
+    },
+    {
+      "filename": "sections/shop-by-category.liquid",
+      "checksumMd5": "4801cbf218a38e853708662471cd76cb"
+    },
+    {
+      "filename": "sections/subcategories-grid.liquid",
+      "checksumMd5": "0dac6e090080c8ca923bf362401824e4"
+    },
+    {
+      "filename": "sections/test-banner.liquid",
+      "checksumMd5": "a3b5d6c977faf1c8184fd9725c9aecb7"
+    },
+    {
+      "filename": "sections/text.liquid",
+      "checksumMd5": "3f5589769d604805b751f0417c705a38"
+    },
+    {
+      "filename": "sections/treatment-product-customizer.liquid",
+      "checksumMd5": "c6e7f7a585d6a32a1dfecb1d775b75e3"
+    },
+    {
+      "filename": "sections/why-our-category.liquid",
+      "checksumMd5": "333e77779d74198d5c59120a74b7cd7f"
+    },
+    {
+      "filename": "snippets/about-content.liquid",
+      "checksumMd5": "aa0ace2c6938d9c325b29043b984b1cb"
+    },
+    {
+      "filename": "snippets/cart-drawer.liquid",
+      "checksumMd5": "5e6753de75a97ae33f76de445c5ebb99"
+    },
+    {
+      "filename": "snippets/catalog-product-grid.liquid",
+      "checksumMd5": "1dfff4716254cb50d887b02f9198cae7"
+    },
+    {
+      "filename": "snippets/comparison-excluded.liquid",
+      "checksumMd5": "65bf0a97bad1e0c845f75673ff048a8f"
+    },
+    {
+      "filename": "snippets/comparison-family.liquid",
+      "checksumMd5": "5715e8031460a60b954f533d36cd55ac"
+    },
+    {
+      "filename": "snippets/comparison-pilot-spec-label.liquid",
+      "checksumMd5": "15277afc48968736ce967ca011f50541"
+    },
+    {
+      "filename": "snippets/comparison-pilot-spec-value.liquid",
+      "checksumMd5": "182fe8a135c105192e2064ddcb983fde"
+    },
+    {
+      "filename": "snippets/css-variables.liquid",
+      "checksumMd5": "597a4f4131bd7b1c7461b75684b1e79a"
+    },
+    {
+      "filename": "snippets/image.liquid",
+      "checksumMd5": "15c916074e59d2f2ee62abca0958b15e"
+    },
+    {
+      "filename": "snippets/meta-tags.liquid",
+      "checksumMd5": "299a05a7684f556a01931234f84aeddf"
+    },
+    {
+      "filename": "snippets/product-family-comparison.liquid",
+      "checksumMd5": "a1c88005eabf1a4c55f6041baf88d489"
+    },
+    {
+      "filename": "snippets/professional-profile-panel.liquid",
+      "checksumMd5": "01349fb396da28426159624bf7e83289"
+    },
+    {
+      "filename": "snippets/quote-modal.liquid",
+      "checksumMd5": "fe090776e4933fcc20e8eb9d7e3ab0d3"
+    },
+    {
+      "filename": "templates/article.json",
+      "checksumMd5": "37f708052b1f0acfe79b744d0c783f4f"
+    },
+    {
+      "filename": "templates/blog.json",
+      "checksumMd5": "815a7015ac08a24f544ded7cf6d1ebf5"
+    },
+    {
+      "filename": "templates/cart.json",
+      "checksumMd5": "1a1a52c181572b6b0b1396f2829cffb2"
+    },
+    {
+      "filename": "templates/collection.electric.json",
+      "checksumMd5": "571c888745a56b45ae452eb7b4296f3d"
+    },
+    {
+      "filename": "templates/collection.facial-units.json",
+      "checksumMd5": "8577f2b9140ee68efb425fdeb91884ff"
+    },
+    {
+      "filename": "templates/collection.hydraulic-mechanical.json",
+      "checksumMd5": "527c0d50a03aac668bbbdc3f38cd352e"
+    },
+    {
+      "filename": "templates/collection.internmenubasic.json",
+      "checksumMd5": "c31e327ca19e006fee12d5700d01a22a"
+    },
+    {
+      "filename": "templates/collection.json",
+      "checksumMd5": "2b0745f02ce3c4a9eb6fe015880505a6"
+    },
+    {
+      "filename": "templates/collection.mag-lamps.json",
+      "checksumMd5": "facfee4d183f613afee5b9a82378d42c"
+    },
+    {
+      "filename": "templates/collection.multi-functions-columns.json",
+      "checksumMd5": "d02a32a82331cb8effcfc12e9eee3206"
+    },
+    {
+      "filename": "templates/collection.skin-analyzer.json",
+      "checksumMd5": "4b792aa07f7043393259989f3f724fee"
+    },
+    {
+      "filename": "templates/collection.skincare-equipment.json",
+      "checksumMd5": "1e737a078f65b412369c776fd269ac91"
+    },
+    {
+      "filename": "templates/collection.stools.json",
+      "checksumMd5": "4815c01fac1aa50cb424c29e9f4d1642"
+    },
+    {
+      "filename": "templates/collection.streamers.json",
+      "checksumMd5": "ecc6622201309002b8f2066377ee1279"
+    },
+    {
+      "filename": "templates/collection.subcollections-hub.json",
+      "checksumMd5": "2e35cb6f4241abd925ebc87a23e52bb6"
+    },
+    {
+      "filename": "templates/collection.towel-warmers.json",
+      "checksumMd5": "32fb257a32c6406568be52fe75e6dd9f"
+    },
+    {
+      "filename": "templates/collection.treatment-tables.json",
+      "checksumMd5": "4f2bb2f62a4b7bcd8e9ff3c68fa9132a"
+    },
+    {
+      "filename": "templates/collection.wax-heaters.json",
+      "checksumMd5": "7d039805e2c48bedf51400a34274beee"
+    },
+    {
+      "filename": "templates/gift_card.liquid",
+      "checksumMd5": "5ea58fc548ee9a22a424be5655add6a1"
+    },
+    {
+      "filename": "templates/index.json",
+      "checksumMd5": "dd7f3c77bdfa67e08f330945433c597c"
+    },
+    {
+      "filename": "templates/list-collections.json",
+      "checksumMd5": "fa682c368733bb472b65ee943b40986c"
+    },
+    {
+      "filename": "templates/page.about.json",
+      "checksumMd5": "785dda031c0dc2674f62361e931a2100"
+    },
+    {
+      "filename": "templates/page.assistance.json",
+      "checksumMd5": "bfc13183615ddabc140de06822a73aab"
+    },
+    {
+      "filename": "templates/page.contact.json",
+      "checksumMd5": "6feee9d89c0e7ec3979d6b836d666173"
+    },
+    {
+      "filename": "templates/page.json",
+      "checksumMd5": "1ef30d4311cc3d2eb1fdc445918cdd73"
+    },
+    {
+      "filename": "templates/page.manuals.json",
+      "checksumMd5": "32e3138c28e28acdfb2073ce62255a30"
+    },
+    {
+      "filename": "templates/page.product-guide.json",
+      "checksumMd5": "1ef30d4311cc3d2eb1fdc445918cdd73"
+    },
+    {
+      "filename": "templates/page.shipping.json",
+      "checksumMd5": "6d1a71f723a71eac211f988607b1e517"
+    },
+    {
+      "filename": "templates/page.subcategories.json",
+      "checksumMd5": "fa3d658fa5d81a759b7192ca1c9f19b3"
+    },
+    {
+      "filename": "templates/password.json",
+      "checksumMd5": "8bd11e1b23cc335f74f148a04aaf0878"
+    },
+    {
+      "filename": "templates/product.11100-vapoderm-digipro.json",
+      "checksumMd5": "1148c88d2162934c47e2a2c0e8aaacb6"
+    },
+    {
+      "filename": "templates/product.11300-infraderm.json",
+      "checksumMd5": "1a04d1dff330a896008cb15ec327d35e"
+    },
+    {
+      "filename": "templates/product.11400-ioniderm-galvanic.json",
+      "checksumMd5": "512f353fb06f80f9be5533fbcb4f0376"
+    },
+    {
+      "filename": "templates/product.11500-rotoderm.json",
+      "checksumMd5": "02044facbbba89aa67ddc3829a430149"
+    },
+    {
+      "filename": "templates/product.11600-aeroderm.json",
+      "checksumMd5": "0f69f33d0136535b3ac4bfd492d6e49f"
+    },
+    {
+      "filename": "templates/product.11650-diamonderm.json",
+      "checksumMd5": "34d9979f562f53d77611689ff969e204"
+    },
+    {
+      "filename": "templates/product.11902-modular-column.json",
+      "checksumMd5": "857434225e5fa0cc1a162258742e3aa5"
+    },
+    {
+      "filename": "templates/product.11906-deluxe-column.json",
+      "checksumMd5": "0f320fab5c1e0d85d30517717c20cbc9"
+    },
+    {
+      "filename": "templates/product.20100-maxi-comfort-360.json",
+      "checksumMd5": "36bfd38b8c5795dc44e611de887b46d7"
+    },
+    {
+      "filename": "templates/product.20101-maxi-comfort-360.json",
+      "checksumMd5": "ac2e98f88ccf5ff2b7d6c07980cd0c64"
+    },
+    {
+      "filename": "templates/product.20101-maxi-comfort-pedicure.json",
+      "checksumMd5": "64a72814b499d34513c2a51713ac9d5b"
+    },
+    {
+      "filename": "templates/product.20102-maxi-comfort-pedicure.json",
+      "checksumMd5": "4e2c00ca828565eba22685bdd650e81a"
+    },
+    {
+      "filename": "templates/product.20200-multi-comfort.json",
+      "checksumMd5": "1c702524fd41ca72f1284256e033953f"
+    },
+    {
+      "filename": "templates/product.20201-multi-comfort.json",
+      "checksumMd5": "f0adbcb00f6a90fd6f417cdb6788765e"
+    },
+    {
+      "filename": "templates/product.20210-multi-comfort-electric-height.json",
+      "checksumMd5": "2b499ba3fb7cac2936e79abe3baa63da"
+    },
+    {
+      "filename": "templates/product.20300-spa-comfort.json",
+      "checksumMd5": "d07510c48570524d69e9fae10c8b7790"
+    },
+    {
+      "filename": "templates/product.20301-hydro-comfort.json",
+      "checksumMd5": "a348a62648ec44305de19c3ceec8d6a5"
+    },
+    {
+      "filename": "templates/product.20401-aero-comfort.json",
+      "checksumMd5": "4762156eaf498d47f5178fa0c58f0524"
+    },
+    {
+      "filename": "templates/product.20500-ultra-comfort.json",
+      "checksumMd5": "e127b6f17528f64e4891db9cb9b44e13"
+    },
+    {
+      "filename": "templates/product.20501-poly-comfort.json",
+      "checksumMd5": "1a0565d518952ce40e1fb1f0519079d1"
+    },
+    {
+      "filename": "templates/product.21100-hydro-comfort.json",
+      "checksumMd5": "b31bf8ae0bf2365cd8bc1f2d9462798e"
+    },
+    {
+      "filename": "templates/product.21200-aero-comfort.json",
+      "checksumMd5": "ca8c34df1efba94889745dd6418bf3d2"
+    },
+    {
+      "filename": "templates/product.22100-poly-comfort.json",
+      "checksumMd5": "22d37c3add867eeb9e39c590dd402112"
+    },
+    {
+      "filename": "templates/product.23402-calypso.json",
+      "checksumMd5": "6c1d29279b4b470c712a3cc04026fa58"
+    },
+    {
+      "filename": "templates/product.23403-bohemia.json",
+      "checksumMd5": "ce6efc92d8e800998cfac565210dc163"
+    },
+    {
+      "filename": "templates/product.31100-air-lift-round-stool.json",
+      "checksumMd5": "4150539f237a3a0214c6b843b6d3161f"
+    },
+    {
+      "filename": "templates/product.31200-round-air-lift-stool-with-backrest.json",
+      "checksumMd5": "86785299b63f95c6e1de721476770002"
+    },
+    {
+      "filename": "templates/product.31300-ergonomic-air-lift-stool.json",
+      "checksumMd5": "7d546f0dc65f09be7cb7c894c408dffa"
+    },
+    {
+      "filename": "templates/product.31301-ergonomic-stool-with-adjustable-backrest.json",
+      "checksumMd5": "d554abe16e9dc5bcce4e755885dfcb40"
+    },
+    {
+      "filename": "templates/product.41100-solo-pil-standard.json",
+      "checksumMd5": "508489a22ea472ba15c360f261f983d9"
+    },
+    {
+      "filename": "templates/product.41101-solo-pil-maxi.json",
+      "checksumMd5": "7bbbdd458accb060befd141087797183"
+    },
+    {
+      "filename": "templates/product.41200-duo-pil-maxi.json",
+      "checksumMd5": "be0f0d9d20a1849cbc143d66fa661a08"
+    },
+    {
+      "filename": "templates/product.41201-duo-pil-standard.json",
+      "checksumMd5": "e3ac3c1be86689a118693bd81880510d"
+    },
+    {
+      "filename": "templates/product.41202-duo-pil-precision.json",
+      "checksumMd5": "154325643571b232617f8c629255cbfb"
+    },
+    {
+      "filename": "templates/product.51000-ts-4.json",
+      "checksumMd5": "0135c371ef478157971f850e8a9f0478"
+    },
+    {
+      "filename": "templates/product.51100-ts-3-deluxe.json",
+      "checksumMd5": "6412704bc34cdf8b54ebe5354e8b4345"
+    },
+    {
+      "filename": "templates/product.51101-tm-3-standard.json",
+      "checksumMd5": "b1b62d098bffbc6f79abbdd120279dea"
+    },
+    {
+      "filename": "templates/product.51103-tm-3-mini.json",
+      "checksumMd5": "ae7a38cc240279605930e6c4110aec53"
+    },
+    {
+      "filename": "templates/product.51104-tm-3a.json",
+      "checksumMd5": "5bea1c4826974e10216528b1678c98c7"
+    },
+    {
+      "filename": "templates/product.51200-ts-2-basic.json",
+      "checksumMd5": "3a04e4806357eb44accda04f076b9fbf"
+    },
+    {
+      "filename": "templates/product.51201-ts-2-with-drawer.json",
+      "checksumMd5": "32668475c87bd904fbf6c340ca14cb77"
+    },
+    {
+      "filename": "templates/product.51300-ta-2-standard.json",
+      "checksumMd5": "f133779a9dae8eabbadbddd2b03a9612"
+    },
+    {
+      "filename": "templates/product.51400-manicure-table.json",
+      "checksumMd5": "995da8efcb3be954e4e310a23c6956e7"
+    },
+    {
+      "filename": "templates/product.51401-manicure-table-deluxe.json",
+      "checksumMd5": "6ac80668a464e23c14584bd8e05af088"
+    },
+    {
+      "filename": "templates/product.51500-make-up-table.json",
+      "checksumMd5": "6b52a26cea39e96ce71a5f3c36837a44"
+    },
+    {
+      "filename": "templates/product.61100-mini-cabi.json",
+      "checksumMd5": "59d683c030f40c51724596a1bdb88a5f"
+    },
+    {
+      "filename": "templates/product.61101-hot-cabi.json",
+      "checksumMd5": "9b43bd522ddf42cdc569367a7fc4f00f"
+    },
+    {
+      "filename": "templates/product.61102-spa-cabi.json",
+      "checksumMd5": "fafc1519de8c5365ca09da8288d8f925"
+    },
+    {
+      "filename": "templates/product.61402-visiderm.json",
+      "checksumMd5": "484b2c28fe670c8a9aac849d62b48ffd"
+    },
+    {
+      "filename": "templates/product.63104-kfm-magnifier-led.json",
+      "checksumMd5": "acb865b3fed8f6ba9ecc9fe11637510d"
+    },
+    {
+      "filename": "templates/product.63203-lfm-magnifier-led.json",
+      "checksumMd5": "407a4ccbb69b4a7164bf180fb5f5f6df"
+    },
+    {
+      "filename": "templates/product.63303-dainolite-magnifier-led.json",
+      "checksumMd5": "6c8f6904ce3fcd11a3e75fd21cd4fd1c"
+    },
+    {
+      "filename": "templates/product.63603-circus-magnifier-led.json",
+      "checksumMd5": "eb71045ff71a058dd2f9647ecebd69ee"
+    },
+    {
+      "filename": "templates/product.64401-wood-lamp.json",
+      "checksumMd5": "8ad0fb0efcd8f38b685d6e64b5826e8e"
+    },
+    {
+      "filename": "templates/product.65100-therabath-tub-ii.json",
+      "checksumMd5": "cfd718ead7a4809d5e0c8cc4a9e858b8"
+    },
+    {
+      "filename": "templates/product.66001-heat-pad.json",
+      "checksumMd5": "2b989c5b0cc8dd6bcceb386b85a70d35"
+    },
+    {
+      "filename": "templates/product.66007-spaslim-heating-blanket.json",
+      "checksumMd5": "b610a4e9baa91f857fcbe81e6b11f0ee"
+    },
+    {
+      "filename": "templates/product.ei-111-classic-steamer.json",
+      "checksumMd5": "6b61792f7d720767e711ef5c62033960"
+    },
+    {
+      "filename": "templates/product.ei-311-round-air-lift-stool.json",
+      "checksumMd5": "a6d2e07d0b944b8857e2080279d152d7"
+    },
+    {
+      "filename": "templates/product.ei-312-round-air-lift-stool.json",
+      "checksumMd5": "80d520eb5fe6e406c9a71d833183a70e"
+    },
+    {
+      "filename": "templates/product.ei-500-murano.json",
+      "checksumMd5": "6ee01f61b4f68c45c66b9e668bb07044"
+    },
+    {
+      "filename": "templates/product.ei-501-royal.json",
+      "checksumMd5": "8a6a4d7292a51e8d41a404d7f986c108"
+    },
+    {
+      "filename": "templates/product.ei-504-divine.json",
+      "checksumMd5": "a824db6dae39fab0917303cc3247ac88"
+    },
+    {
+      "filename": "templates/product.ei-508-elite-spa.json",
+      "checksumMd5": "ca890a54ab2a5fc7cb1068bb4ec1925f"
+    },
+    {
+      "filename": "templates/product.ei-509-natura-spa.json",
+      "checksumMd5": "a10f72226f76dfaa6d7aeb9ee6b2794e"
+    },
+    {
+      "filename": "templates/product.json",
+      "checksumMd5": "e9d748527c5f499b9c792c2176e7f8e7"
+    },
+    {
+      "filename": "templates/product.multiderm-5-in-1.json",
+      "checksumMd5": "3a094c0808541ce02b68b1409dcafd65"
+    },
+    {
+      "filename": "templates/product.royal-pilot.json",
+      "checksumMd5": "057ec87d45fcc23f498f6edb8cd9a464"
+    },
+    {
+      "filename": "templates/product.treatment-custom.json",
+      "checksumMd5": "fced3a67cf204efc49113184230e852b"
+    },
+    {
+      "filename": "templates/search.json",
+      "checksumMd5": "5a48d12d48d9c28c54d730da9b2dc21e"
+    }
+  ]
+}

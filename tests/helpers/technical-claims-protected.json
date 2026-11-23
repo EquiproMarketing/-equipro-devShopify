@@ -1,0 +1,846 @@
+{
+  "templates/product.61402-visiderm.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "visiderm",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>61402</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Robust housing with integrated magnification lens and neon tube lighting system</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>13\" x 10\" x 18\" H (33 cm x 25.4 cm x 45.7 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>20 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification</td>\n        <td>3 diopters magnification lens for detailed skin examination</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>6 neon tubes for enhanced visualization under specialized lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Integrated on/off switch for neon lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American electrical requirements (ETL approved)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Skin analysis and consultation tool with magnification and specialized lighting</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>ETL approved, stable base design for safe professional use</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>ETL approved; CSA & UL compliant components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin analysis and client consultations in aesthetic and spa settings</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8YjzYH",
+      "feature_item_F4iL9F",
+      "feature_item_RXpARk"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_tr6WqH",
+      "instruction_item_BqmtiA",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/collection.treatment-tables.json": {
+    "sections/subcategories_grid_6Uez8Y/block_order": [
+      "subcategory_EyKBRG",
+      "subcategory_ENENRN",
+      "subcategory_t3xKHe"
+    ],
+    "sections/positive_impact/settings/btn_label": "CONTACT US FOR RECOMMENDATIONS",
+    "sections/why_category/block_order": [
+      "feature_JGhd6H",
+      "feature_CFhXYt",
+      "feature_ppVAe7",
+      "feature_kaVhpH"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_VhNPjK",
+      "faq_item_Gn3pgW",
+      "faq_item_kmRk4U",
+      "faq_item_n68NQD",
+      "faq_item_ENr78Q"
+    ],
+    "order": [
+      "subnav",
+      "collection_banner_qtVMrG",
+      "subcategories_grid_6Uez8Y",
+      "category_subnav_U3RXMG",
+      "positive_impact",
+      "why_category",
+      "video",
+      "faq",
+      "reviews"
+    ]
+  },
+  "templates/product.11600-aeroderm.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "aeroderm",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11600</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Heavy-duty industrial chassis with chemical-resistant protective coating and high-grade blown glass accessory attachments</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>11\" x 7\" x 3.5\" H (28 cm x 18 cm x 9 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>9 lb (4 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Treatment Modality</td>\n        <td>Pneumatic vacuum suction and micro-fine atomized spray delivery</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>2 distinct functions: deep vacuum purification/toning and liquid mist dispersion</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Precision manual vacuum/spray intensity adjustment dial</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Vacuum Capabilities</td>\n        <td>Targeted extraction of comedones, sebum stimulation, and superficial lymphatic drainage</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Spray Compatibility</td>\n        <td>Aqueous astringents, liquid toners, and floral waters</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 professional glass suction cups (anti-wrinkle, comedone/blackhead extraction, and massage), 2 refillable spray bottles, and flexible connecting tubing</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Storage Features</td>\n        <td>Integrated top-chassis accessory deck for secure holding of glass cups and spray bottles</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All internal electrical components are fully CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Limited Warranty covering parts and labor</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8hwhpX",
+      "feature_item_7BxRnE",
+      "feature_item_V4efCz"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_rRgyKc",
+      "instruction_item_x6Kb8r",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_eGYQwE"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.23403-bohemia.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": false,
+    "sections/main/settings/featured_product": "bohemia-ei-23403",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>EI-23403</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>EI-23403W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>28&quot; × 72&quot; × 24&quot;/34&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>26 lb / 12 kg</td></tr><tr><td class=\"feature-label\">Intended use</td><td>Seated massage</td></tr><tr><td class=\"feature-label\">Portability</td><td>Foldable; carrying bag included</td></tr><tr><td class=\"feature-label\">Catalog colors</td><td>Color Chart B</td></tr><tr><td class=\"feature-label\">Adjustment mechanism</td><td>Not confirmed</td></tr><tr><td class=\"feature-label\">Load capacity</td><td>Not confirmed</td></tr><tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr></tbody></table></div>",
+    "sections/banner_features/block_order": [
+      "feature_1",
+      "feature_2",
+      "feature_3"
+    ],
+    "sections/how_to/block_order": [
+      "how_header",
+      "how_1",
+      "how_2",
+      "how_3",
+      "how_4",
+      "safety_header",
+      "safety_1",
+      "safety_2",
+      "safety_3"
+    ],
+    "sections/faq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3",
+      "faq_4",
+      "faq_5",
+      "faq_6"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.20500-ultra-comfort.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "ultra-comfort-20500",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20500</td></tr><tr><td class=\"feature-label\">Current variant SKU</td><td>20500-24W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>L × 72&quot; × 20.5&quot;/36.5&quot; H</td></tr><tr><td class=\"feature-label\">Width — model 20500</td><td>24 in</td></tr><tr><td class=\"feature-label\">Height range</td><td>20.5–36.5 in</td></tr><tr><td class=\"feature-label\">Weight</td><td>320 lb / 145 kg</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, ultra-resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Casters</td><td>Optional</td></tr><tr><td class=\"feature-label\">Height-control mechanism / motor configuration</td><td>Not confirmed</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
+    "sections/banner_features/block_order": [
+      "feature_1",
+      "feature_2",
+      "feature_3"
+    ],
+    "sections/how_to/block_order": [
+      "how_header",
+      "how_1",
+      "how_2",
+      "how_3",
+      "how_4",
+      "safety_header",
+      "safety_1",
+      "safety_2",
+      "safety_3"
+    ],
+    "sections/faq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3",
+      "faq_4",
+      "faq_5",
+      "faq_6",
+      "model_width",
+      "optional_casters"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.ei-501-royal.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main/settings/featured_product": "ei-501-royal",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>EI-501</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>EI-501W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>28&quot; × 72&quot; × 17&quot;/39&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>175 lb / 79 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>17–39 in</td></tr><tr><td class=\"feature-label\">Positioning control</td><td>Electric remote control</td></tr><tr><td class=\"feature-label\">Height control</td><td>Dedicated foot pedal</td></tr><tr><td class=\"feature-label\">Cushions</td><td>4</td></tr><tr><td class=\"feature-label\">Headrests</td><td>Adjustable crescent headrest and regular headrest included</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Included</td></tr><tr><td class=\"feature-label\">Operation</td><td>Silent positioning</td></tr><tr><td class=\"feature-label\">Catalog colors</td><td>White, Black and Navy; Color Chart B</td></tr><tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr></tbody></table></div>",
+    "sections/banner_features/block_order": [
+      "feature_1",
+      "feature_2",
+      "feature_3"
+    ],
+    "sections/how_to/block_order": [
+      "how_header",
+      "how_1",
+      "how_2",
+      "how_3",
+      "safety_header",
+      "safety_1",
+      "safety_2",
+      "safety_3"
+    ],
+    "sections/faq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3",
+      "faq_4",
+      "faq_5",
+      "faq_6",
+      "faq_7"
+    ],
+    "order": [
+      "main",
+      "complete_setup",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.11300-infraderm.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "infraderm",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11300</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Steel case, baked enamel finish, electrostatic powder paint coating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>28 cm x 18 cm x 8 cm (11\" x 7\" x 3\")</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>5 kg (11 lbs)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>18 Watts / 120 Volts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Cycles</td>\n        <td>60 Hz</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Analog rotary intensity control knob with ON/OFF switch</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>1 (High-Frequency Effluvation and Direct/Indirect Treatment)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Accessories Included</td>\n        <td>3 electrodes: 1 large surface (purple), 1 small surface (pink), 1 indirect massage (spiral); retractable handle cord</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated \"Comfort System\" technology to eliminate current feedback tingling; 1 AMP-250V fast-blow safety fuse protection</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA Approved, UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 years limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_RC6zrP",
+      "feature_item_xdMC3p",
+      "feature_item_MPq7cP"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_eGYQwE"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.64401-wood-lamp.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "wood-lamp",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>64401</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Compact durable housing with high-quality magnifying lens and neon tube assembly</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>Compact portable design (approx. 10\" x 8\" x 12\" / 25.4 cm x 20.3 cm x 30.5 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>3 lb / 1 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Magnification</td>\n        <td>3 diopters magnifying lens for detailed skin analysis</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Lighting System</td>\n        <td>4 neon tubes (16 Watts) for Wood's lamp ultraviolet examination</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>On/Off switch for neon lighting system</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Voltage</td>\n        <td>Standard North American voltage, 16 Watts power consumption</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Number of Functions</td>\n        <td>Skin examination under Wood's lamp ultraviolet light with magnification</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Stable compact design, protective housing for tubes</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CSA &amp; UL approved components; meets international standards</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional skin analysis and diagnosis in aesthetic and spa environments</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8YjzYH",
+      "feature_item_F4iL9F",
+      "feature_item_RXpARk"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_tr6WqH",
+      "instruction_item_BqmtiA",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_eGYQwE"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/collection.skin-analyzer.json": {
+    "sections/positive_impact/settings/btn_label": "CONTACT US FOR RECOMMENDATIONS",
+    "sections/why_category/block_order": [
+      "feature_JGhd6H",
+      "feature_CFhXYt",
+      "feature_ppVAe7",
+      "feature_kaVhpH"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_VhNPjK",
+      "faq_item_Gn3pgW",
+      "faq_item_kmRk4U",
+      "faq_item_n68NQD",
+      "faq_item_ENr78Q"
+    ],
+    "order": [
+      "subnav",
+      "collection_banner_qtVMrG",
+      "custom_product_treatment_TNRQeX",
+      "positive_impact",
+      "why_category",
+      "video",
+      "faq",
+      "reviews"
+    ]
+  },
+  "templates/collection.streamers.json": {
+    "sections/positive_impact/settings/btn_label": "CONTACT US FOR RECOMMENDATIONS",
+    "sections/why_category/block_order": [
+      "feature_JGhd6H",
+      "feature_CFhXYt",
+      "feature_ppVAe7",
+      "feature_kaVhpH"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_VhNPjK",
+      "faq_item_Gn3pgW",
+      "faq_item_kmRk4U",
+      "faq_item_n68NQD",
+      "faq_item_ENr78Q"
+    ],
+    "order": [
+      "subnav",
+      "collection_banner_qtVMrG",
+      "custom_product_treatment_TNRQeX",
+      "positive_impact",
+      "why_category",
+      "video",
+      "faq",
+      "reviews"
+    ]
+  },
+  "templates/product.20210-multi-comfort-electric-height.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main/settings/featured_product": "multi-comfort-electric-height-20210",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20210</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>20210-24W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>L × 71&quot; × 26.5&quot;/33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>120 lb / 55 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>27–34 in</td></tr><tr><td class=\"feature-label\">Height adjustment</td><td>Motorized</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, ultra-resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable armrests</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
+    "sections/banner_features/block_order": [
+      "feature_1",
+      "feature_2",
+      "feature_3"
+    ],
+    "sections/how_to/block_order": [
+      "how_header",
+      "how_1",
+      "how_2",
+      "how_3",
+      "safety_header",
+      "safety_1",
+      "safety_2",
+      "safety_3"
+    ],
+    "sections/faq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3",
+      "faq_4",
+      "faq_5",
+      "faq_6"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/collection.json": {
+    "sections/positive_impact/settings/btn_label": "CONTACT US FOR RECOMMENDATIONS",
+    "sections/why_category/block_order": [
+      "feature_JGhd6H",
+      "feature_CFhXYt",
+      "feature_ppVAe7",
+      "feature_kaVhpH"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_VhNPjK",
+      "faq_item_Gn3pgW",
+      "faq_item_kmRk4U",
+      "faq_item_n68NQD",
+      "faq_item_ENr78Q"
+    ],
+    "sections/find_your_setup/settings/professional_profiles": [
+      "spas-wellness-centers",
+      "spa-esthetics-setup",
+      "orthopedic-podiatry"
+    ],
+    "order": [
+      "subnav",
+      "collection_banner_qtVMrG",
+      "find_your_setup",
+      "custom_product_treatment_TNRQeX",
+      "positive_impact",
+      "why_category",
+      "video",
+      "faq",
+      "reviews"
+    ]
+  },
+  "templates/collection.stools.json": {
+    "sections/positive_impact/settings/btn_label": "CONTACT US FOR RECOMMENDATIONS",
+    "sections/why_category/block_order": [
+      "feature_mQcgR4",
+      "feature_UN6EMU",
+      "feature_yzgwKH",
+      "feature_wLCbER"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_8gidaT",
+      "faq_item_BTHBYn",
+      "faq_item_4CyrF6",
+      "faq_item_zAtCwA",
+      "faq_item_YwA7q9"
+    ],
+    "order": [
+      "collection_banner_k73Gc3",
+      "custom_product_treatment_LfqALg",
+      "positive_impact",
+      "why_category",
+      "video",
+      "faq",
+      "reviews"
+    ]
+  },
+  "templates/product.21200-aero-comfort.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": false,
+    "sections/main/settings/featured_product": "21200-aero-comfort",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "application_1",
+      "application_2",
+      "application_3"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro Beauty</td></tr><tr><td class=\"feature-label\">Model SKU</td><td>21200</td></tr><tr><td class=\"feature-label\">Primary Materials</td><td>Ultra-resistant vinyl upholstery, reinforced steel frame, air-lift system</td></tr><tr><td class=\"feature-label\">Dimensions (L x W x H)</td><td>71&quot; L x 24&quot; W x 28.5&quot; / 33.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>105 lb (48 kg)</td></tr><tr><td class=\"feature-label\">Adjustability</td><td>Effortless air-lift height system; manual adjustable backrest and legrest; 15° tilt</td></tr><tr><td class=\"feature-label\">Height Range</td><td>28.5&quot; to 33.5&quot; (72 cm to 85 cm)</td></tr><tr><td class=\"feature-label\">Seating Width</td><td>24 inches (61 cm)</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable headrest</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Control Type</td><td>Air-lift height adjustment system</td></tr><tr><td class=\"feature-label\">Safety Features</td><td>Stable base, reinforced construction, ease of access for face and neck treatments</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white ultra-durable vinyl, colors available on special order (Chart A)</td></tr><tr><td class=\"feature-label\">Certifications</td><td>CSA &amp; UL approved components</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr><tr><td class=\"feature-label\">Country of Origin</td><td>Canada</td></tr></tbody></table></div>",
+    "sections/banner_features/block_order": [
+      "feature_1",
+      "feature_2",
+      "feature_3"
+    ],
+    "sections/how_to/block_order": [
+      "use_header",
+      "use_1",
+      "use_2",
+      "use_3",
+      "use_4",
+      "use_5",
+      "safety_header",
+      "safety_1",
+      "safety_2",
+      "safety_3"
+    ],
+    "sections/faq/block_order": [
+      "faq_1",
+      "faq_2",
+      "faq_3",
+      "faq_4",
+      "faq_5",
+      "faq_6"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/index.json": {
+    "sections/hero_banner/block_order": [
+      "slide_MnxhKP",
+      "slide_eBgbdd",
+      "slide_3xQX7g"
+    ],
+    "sections/shop_by_cat_v2_DhXM94/block_order": [
+      "category_item_rWVwFT",
+      "category_item_ebxfGg",
+      "category_item_tME4fF",
+      "category_item_dpjh46",
+      "category_item_JVrMPE",
+      "category_item_B9RXVp",
+      "category_item_ACVzqh",
+      "category_item_L88cDG",
+      "category_item_FNyhJK",
+      "category_item_Nk8MQP",
+      "category_item_j9NUhU",
+      "category_item_wHPEpL",
+      "category_item_qhy7DG"
+    ],
+    "sections/best_sellers/blocks/custom_card_rFaJei/settings/product": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+    "sections/best_sellers/blocks/custom_card_AWHND6/settings/product": "multiderm-5-en-1",
+    "sections/best_sellers/blocks/custom_card_3WjHXz/settings/product": "elite-spa-ei-508",
+    "sections/best_sellers/blocks/custom_card_k38Qj8/settings/product": "maxi-comfort-360",
+    "sections/best_sellers/blocks/custom_card_re7QVY/settings/product": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+    "sections/best_sellers/blocks/custom_card_WpAkFt/settings/product": "infraderm",
+    "sections/best_sellers/blocks/custom_card_BgbKdG/settings/product": "spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+    "sections/best_sellers/blocks/custom_card_Kq4ak6/settings/product": "63203-lfm-magnifier-led-3d-or-5d",
+    "sections/best_sellers/blocks/custom_card_9bzVAr/settings/product": "digipro-steamer",
+    "sections/best_sellers/blocks/custom_card_GUW9Bg/settings/product": "aeroderm",
+    "sections/best_sellers/block_order": [
+      "custom_card_rFaJei",
+      "custom_card_AWHND6",
+      "custom_card_3WjHXz",
+      "custom_card_k38Qj8",
+      "custom_card_re7QVY",
+      "custom_card_WpAkFt",
+      "custom_card_BgbKdG",
+      "custom_card_AjpNta",
+      "custom_card_Kq4ak6",
+      "custom_card_9bzVAr",
+      "custom_card_GUW9Bg"
+    ],
+    "sections/shop_by_category/block_order": [
+      "cat_1",
+      "cat_2",
+      "cat_3",
+      "cat_4",
+      "cat_5",
+      "cat_6",
+      "cat_7",
+      "cat_8"
+    ],
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_LTEcX7/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_KiXDHW/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_VwpWdj/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_rfPjQJ/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_pedPxK/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_R3EzWy/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/blocks/card_item_btifdD/settings/product": "",
+    "sections/custom_subcategory_slider_YFNFXr/block_order": [
+      "card_item_LTEcX7",
+      "card_item_KiXDHW",
+      "card_item_VwpWdj",
+      "card_item_rfPjQJ",
+      "card_item_pedPxK",
+      "card_item_R3EzWy",
+      "card_item_btifdD"
+    ],
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_VFMRAm/settings/product": "maxi-confort-pedicure-360",
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_nxamXe/settings/product": "maxi-comfort-360",
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_NdeiA7/settings/product": "20200-multi-comfort",
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_jEnJxY/settings/product": "22100-poly-comfort",
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_irUNJG/settings/product": "21200-aero-comfort",
+    "sections/custom_subcategory_slider_HPxgWp/blocks/card_item_z8RxwB/settings/product": "21100-hydro-comfort",
+    "sections/custom_subcategory_slider_HPxgWp/block_order": [
+      "card_item_VFMRAm",
+      "card_item_nxamXe",
+      "card_item_NdeiA7",
+      "card_item_jEnJxY",
+      "card_item_irUNJG",
+      "card_item_z8RxwB"
+    ],
+    "sections/image_slider/block_order": [
+      "slide_fLCpXz",
+      "s_1"
+    ],
+    "sections/pre_footer_hub/block_order": [
+      "staggered_card_xVJCmd",
+      "staggered_card_CN7qhL",
+      "staggered_card_wQgJT4"
+    ],
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_1": "ei-502-infinity",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_2": "{{ block.settings.product_1 }}",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_3": "ergonomic-stool-with-backrest",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_4": "ergonomic-stool-with-backrest",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_5": "ei-502-infinity",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_Y7wYyJ/settings/product_6": "ergonomic-stool-with-backrest",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_1": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_2": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_3": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_4": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_5": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_yqM7nx/settings/product_6": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_1": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_2": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_3": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_4": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_5": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_ekMRbh/settings/product_6": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_1": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_2": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_3": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_4": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_5": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_zkDPYJ/settings/product_6": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_1": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_2": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_3": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_4": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_5": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_gN7BQB/settings/product_6": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_1": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_2": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_3": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_4": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_5": "",
+    "sections/custom_spa_pack_builder_BDtr9H/blocks/category_tab_AC4NNC/settings/product_6": "",
+    "sections/custom_spa_pack_builder_BDtr9H/block_order": [
+      "category_tab_Y7wYyJ",
+      "category_tab_yqM7nx",
+      "category_tab_ekMRbh",
+      "category_tab_zkDPYJ",
+      "category_tab_gN7BQB",
+      "category_tab_AC4NNC"
+    ],
+    "sections/custom_spa_pack_builder_BDtr9H/settings/professional_profiles": [
+      "spas-wellness-centers",
+      "spa-esthetics-setup",
+      "orthopedic-podiatry"
+    ],
+    "order": [
+      "hero_banner",
+      "shop_by_cat_v2_DhXM94",
+      "best_sellers",
+      "shop_by_category",
+      "image_with_text",
+      "custom_subcategory_slider_YFNFXr",
+      "custom_subcategory_slider_HPxgWp",
+      "image_slider",
+      "pre_footer_hub",
+      "custom_spa_pack_builder_BDtr9H"
+    ]
+  },
+  "templates/product.11902-modular-column.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "modular-column-11902",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\"> \n  <table class=\"equipro-table\"> \n    <thead> \n      <tr> \n        <th>Technical Aspect</th> \n        <th>Specification Details</th> \n      </tr> \n    </thead> \n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>11100 (Vapoderm Digipro)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Stain-resistant heavy-duty metal armature, premium thermoplastic/glass components, and external PVC canister</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Product Type</td>\n        <td>Professional Facial Steamer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Steam Type</td>\n        <td>Ionized steam output</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Tank Capacity</td>\n        <td>42 oz external canister with integrated carrying handle</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Continuous Operation Time</td>\n        <td>40 minutes of continuous autonomous operation</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Adjustability</td>\n        <td>Directional head and arm mechanism with fully adjustable height settings</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Aromatherapy Integration</td>\n        <td>Integrated specialized system designed for essential oil application</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>Digital touchscreen panel with built-in timer and 3 steam level outputs</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated safety thermostat auto-shutdown, drip-free nozzle assembly, and external canister protection guard</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W x H)</td>\n        <td>10 in x 8.5 in x 32 in</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>21 lb / 9 kg</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>All electrical system components are CSA &amp; UL approved</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>2 Years Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Made in Canada</td>\n      </tr>\n    </tbody> \n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8hwhpX",
+      "feature_item_7BxRnE",
+      "feature_item_V4efCz"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_rRgyKc",
+      "instruction_item_bNn3ie",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_4NzDpm",
+      "faq_item_dU8eXe"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.61100-mini-cabi.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "mini-cabi-ei-61100m",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty Equipment</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>EI-61100M</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>High-quality compact steel housing with powder-coated metallic exterior</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Technology</td>\n        <td>Constant thermal heating with integrated UV light sterilization unit</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x D x H)</td>\n        <td>13\" L x 12\" D x 10\" H (33 cm x 30.5 cm x 25.4 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Capacity</td>\n        <td>Holds 6 facial towels (13\" x 24\") and small aesthetic implements</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>12 lbs (6 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Operating Temperature</td>\n        <td>Constant thermal heating up to 80°C</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power Requirements</td>\n        <td>120 V AC, standard plug with CSA & UL approved components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 Year Manufacturer Warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certification</td>\n        <td>CSA & UL approved electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8YjzYH",
+      "feature_item_F4iL9F",
+      "feature_item_RXpARk"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_tr6WqH",
+      "instruction_item_BqmtiA",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_eGYQwE"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  },
+  "templates/product.66007-spaslim-heating-blanket.json": {
+    "sections/main/settings/show_variant_selectors": true,
+    "sections/main/settings/show_color_option": true,
+    "sections/main/settings/show_size_option": true,
+    "sections/main/settings/featured_product": "spaslim-heating-blanket",
+    "sections/main/settings/btn_label": "ADD TO CART",
+    "sections/main_product_characteristics_Hp7Baq/block_order": [
+      "faq_item_mcpNpt",
+      "faq_item_74hYTC",
+      "faq_item_bhzmwM"
+    ],
+    "sections/main_product_characteristics_Hp7Baq/settings/custom_table_html": "<div class=\"equipro-specs-container\">\n  <table class=\"equipro-table\">\n    <thead>\n      <tr>\n        <th>TECHNICAL ASPECT</th>\n        <th>SPECIFICATION DETAILS</th>\n      </tr>\n    </thead>\n    <tbody>\n      <tr>\n        <td class=\"feature-label\">Manufacturer</td>\n        <td>Equipro Beauty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Model SKU</td>\n        <td>66007</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Primary Materials</td>\n        <td>Waterproof, fireproof (M1 approved) fabric treated with anti-microbial and fungicide properties</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Dimensions (L x W)</td>\n        <td>72\" L x 36\" W (183 cm x 91.4 cm)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Weight</td>\n        <td>18 lb (8.3 kg)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Heating Zones</td>\n        <td>3 independently controlled heating zones</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Temperature Range</td>\n        <td>30°C to 60°C (86°F to 140°F)</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Power / Wattage</td>\n        <td>330 Watts</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Control Type</td>\n        <td>User-friendly handset / touchpad control with built-in timer</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Safety Features</td>\n        <td>Integrated heat protectors, waterproof construction, M1 fireproof rating</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Certifications</td>\n        <td>CE approved, CSA &amp; UL compatible electrical components</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Warranty</td>\n        <td>1 year limited warranty</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Country of Origin</td>\n        <td>Canada</td>\n      </tr>\n      <tr>\n        <td class=\"feature-label\">Intended Use</td>\n        <td>Professional spa heating blanket for body treatments, infrared therapy, and client comfort</td>\n      </tr>\n    </tbody>\n  </table>\n</div>",
+    "sections/banner_features/block_order": [
+      "feature_item_8YjzYH",
+      "feature_item_F4iL9F",
+      "feature_item_RXpARk"
+    ],
+    "sections/how_to/block_order": [
+      "section_header_XjqiGV",
+      "instruction_item_fd7CbG",
+      "instruction_item_8VfGh8",
+      "instruction_item_z9KEfh",
+      "instruction_item_tr6WqH",
+      "instruction_item_BqmtiA",
+      "section_header_dGJcmr",
+      "instruction_item_CRmBXw",
+      "instruction_item_QqEHKc",
+      "instruction_item_P8t7dx"
+    ],
+    "sections/faq/block_order": [
+      "faq_item_JkpEmj",
+      "faq_item_r7tr7G",
+      "faq_item_dd9n3Q",
+      "faq_item_8YiyhY",
+      "faq_item_GkbCk6",
+      "faq_item_eGYQwE"
+    ],
+    "order": [
+      "main",
+      "main_product_characteristics_Hp7Baq",
+      "banner_features",
+      "how_to",
+      "faq",
+      "compare_modal"
+    ]
+  }
+}

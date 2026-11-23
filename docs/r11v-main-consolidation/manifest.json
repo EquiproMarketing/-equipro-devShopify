@@ -1,0 +1,197 @@
+{
+  "themeId": "157851386029",
+  "sourceThemeId": "189456777389",
+  "deployAuthorized": false,
+  "capturedAt": "2026-11-20T21:53:57.101361+00:00",
+  "predecessorManifest": "docs/post-qa-correction-manifest.json",
+  "files": [
+    {
+      "path": "assets/custom-spa-pack-builder.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/custom-spa-pack-builder.css",
+      "remoteContentSha256": "983e30c9275f1d71440d17ef1532ef630aa81789244acfae72e0fcd489a2b99e",
+      "predecessorSha256": "983e30c9275f1d71440d17ef1532ef630aa81789244acfae72e0fcd489a2b99e",
+      "candidateSha256": "0c110aa044c55d063a666fd8b8e7194aed4649dbcad3f5b6230ef7c236e2b6af",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "assets/product-form.js",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/product-form.js",
+      "remoteContentSha256": null,
+      "predecessorSha256": null,
+      "candidateSha256": "574e0fd7f84d1cea1ed225ee3c437d85f18e774237b5d2e2342127a0f851c8e6",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/section-main-product.css",
+      "remoteContentSha256": "b5c0610ad41996fcd795fe8135cc015eae425b91e34b81ed01e1fcc2f1c76202",
+      "predecessorSha256": "b5c0610ad41996fcd795fe8135cc015eae425b91e34b81ed01e1fcc2f1c76202",
+      "candidateSha256": "c49ef298813fb03f030faa8294780ee2dda199987ec4cb3cae04bbadc05c6a40",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "locales/en.default.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/locales/en.default.json",
+      "remoteContentSha256": "6b7678b692dba278164ce9fe8a6daa374a731299d715a78b72a8d350f8b585b8",
+      "predecessorSha256": "596e6f09bf8680db4954d577ca0fbd898b36616fc68320793d0afd3c41e1974d",
+      "candidateSha256": "385bbe641b5d844355dcc7a45cf1068aab2a97d5d3b3eca6374212ed491e6e5f",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "locales/fr.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/locales/fr.json",
+      "remoteContentSha256": "d6c8827e8077c0840a146b4984aa59c72ce61aa78866c7bb55183fc4e09722e5",
+      "predecessorSha256": "7a889a42cfcbd7a06498b39b4636565decbc3e8285d1a10ff1394ec926213e91",
+      "candidateSha256": "e8ed0de6181d7c8a1a933af400930fd4975b61e81cdcd5f48a77b3eb374da6d4",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "sections/complete-your-setup.liquid",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/complete-your-setup.liquid",
+      "remoteContentSha256": null,
+      "predecessorSha256": null,
+      "candidateSha256": "56e2b569b337eba8ace21a7f91fd7aa8c1a385e4aa5411178963f35e9f7cd352",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "sections/custom-spa-pack-builder.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/custom-spa-pack-builder.liquid",
+      "remoteContentSha256": "9f4e12a14f8ebc6bc2f347358401e63dd6a80f0e2684f944b118d703865bd3fd",
+      "predecessorSha256": "9f4e12a14f8ebc6bc2f347358401e63dd6a80f0e2684f944b118d703865bd3fd",
+      "candidateSha256": "74e4df889497a11ace3555fbdc1889da590eb70021e675dcb57404ac37f0ebe2",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/main-product.liquid",
+      "remoteContentSha256": "c9ca26944384f895cc9e7cfc9e895ffe8944939b304efb390f3c6f7b401cad9f",
+      "predecessorSha256": "3a405093a30fc7ffddf24a6a88e739a65afd4e14c9bb775c3e23ea7dfdfa9923",
+      "candidateSha256": "d702b79b6f906ecaca71d160ac18718b0788c19e59de5efaf60fb359ac8853e9",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "snippets/professional-profile-panel.liquid",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/snippets/professional-profile-panel.liquid",
+      "remoteContentSha256": null,
+      "predecessorSha256": null,
+      "candidateSha256": "9b7b2121608faf05ee5529782bace920c3b3448f6d72a30ba58e15ed7637622e",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "snippets/quote-modal.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/snippets/quote-modal.liquid",
+      "remoteContentSha256": "35284af3d7cf8c7a990797570afc39d3063461f52bb752ac17626027cb474fb1",
+      "predecessorSha256": "8259278e3ae6f85b58a3abb6b043167a2b5ca74f551b38535c3323a8b1a4b855",
+      "candidateSha256": "cd15a17ec470eacb8b957f5fa101da11e8be1357bae220d38a5dd01e64cba25b",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "templates/index.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/index.json",
+      "remoteContentSha256": "baf5e54f2f4e3841a5ac3c79f6fcf3327fdac3654fbebcbebdb4be0417641cd5",
+      "predecessorSha256": "a089dca8d52b5e1714b0c0678a691d5f024fdeabbcf63efd8cc208463ecb9ab1",
+      "candidateSha256": "dc5c96045156b769f33c342ab5bc21dd717ddee006a1b11b4d1a5e57fcc38c51",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "templates/product.51101-tm-3-standard.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/product.51101-tm-3-standard.json",
+      "remoteContentSha256": "7a44e232888c5111804d850a00e3e813e89d15c917581a7396a9d8306cb21b29",
+      "predecessorSha256": "7a44e232888c5111804d850a00e3e813e89d15c917581a7396a9d8306cb21b29",
+      "candidateSha256": "c06909dae6a1883f7716defbe7091d188ce0cc0cae83e776d12672c6f80f49ac",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "templates/product.ei-501-royal.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/product.ei-501-royal.json",
+      "remoteContentSha256": "54dcc359ad50bac24d02050e10f2b4c82f86aafafe72d252de29c2947b038b75",
+      "predecessorSha256": "54dcc359ad50bac24d02050e10f2b4c82f86aafafe72d252de29c2947b038b75",
+      "candidateSha256": "6fc0171cfcbdaf969f2ffec77c340f5f0a654a73719ea845cc7fc77e524ddeb0",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "sections/category-subnav.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/category-subnav.liquid",
+      "remoteContentSha256": "96060f968015b96c7afde9daddb8713b404e2e32aee641d7687340b91610bad1",
+      "predecessorSha256": "4fce3784dac7c259c03b18b01bd8265467c8921dba28f461a032267ed7113ecd",
+      "candidateSha256": "5665efb4edbcfb5d135bd63dc0a384e0a2edd9e50303d5097f2790828ff446ea",
+      "dependsOnCorrectiveBatch": true
+    },
+    {
+      "path": "assets/section-category-subnav.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/section-category-subnav.css",
+      "remoteContentSha256": "c96b1d51744e4d0f274f92e0b815f0dbb83917bc206d22f353a63505f5a0da46",
+      "predecessorSha256": "c96b1d51744e4d0f274f92e0b815f0dbb83917bc206d22f353a63505f5a0da46",
+      "candidateSha256": "a60179cd4745fb8467047aa828c23bb7a410f028717a9935d4fa36751bd82945",
+      "dependsOnCorrectiveBatch": false
+    },
+    {
+      "path": "sections/custom-subcategory-slider.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/custom-subcategory-slider.liquid",
+      "remoteContentSha256": "ab13e55852a6ee5f5cdc7916ade9410aa89698c8685cffd3b70f4085bb40f622",
+      "predecessorSha256": "798907f44e9d7a630618a90c54d870339deda7a7a1b87e183eaa6edd312c3f29",
+      "candidateSha256": "9e5a0443326dd911526301247968833391749e0ff303fb7900ce669f8c7b79d4",
+      "dependsOnCorrectiveBatch": true
+    }
+  ],
+  "constraints": "Only these candidate paths after corrective batch; never upload checkout or combine manifests blindly. No deployment performed.",
+  "tests": {
+    "checkoutPass": 123,
+    "checkoutFail": 0,
+    "exactPackagePass": 121,
+    "exactPackageFail": 2,
+    "exceptions": [
+      {
+        "test": "homepage mappings fix the three stale placements and LFM; Infinity links to the Admin-verified active Online Store product",
+        "classification": "Expectation requires existing local commercial card mappings excluded from approved MAIN package. Original test retained."
+      },
+      {
+        "test": "claim corrections preserve technical tables, identity, section order, options, pricing references and safety fields",
+        "classification": "First mismatch is the same homepage product-reference field; not a newly altered technical field. Original test retained."
+      }
+    ],
+    "logs": [
+      "full-tests-2026-11-23.tap",
+      "package-tests-2026-11-23.tap"
+    ],
+    "scope": "Read-only test overlay selects exact candidates and fresh MAIN dependencies without constructing another environment."
+  },
+  "themeCheck": {
+    "baseline": 49,
+    "current": 49,
+    "new": 0
+  },
+  "dependencies": {
+    "runtimePreserved": [
+      "assets/cart-drawer.js",
+      "sections/cart-drawer.liquid",
+      "snippets/cart-drawer.liquid",
+      "assets/quote-modal.js",
+      "layout/theme.liquid"
+    ],
+    "alreadyInMAIN": [
+      "sections/find-your-setup.liquid",
+      "assets/find-your-setup.css",
+      "snippets/catalog-product-grid.liquid",
+      "templates/collection.json"
+    ],
+    "notNeeded": "assets/find-your-setup.js: neither current native-filter section references this older client script",
+    "commercialContentPending": "51101 custom.complete_your_setup absent. EI-501 list.product_reference has two references. Existing professional profile handles confirmed."
+  }
+}

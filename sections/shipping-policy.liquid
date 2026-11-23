@@ -2,7 +2,7 @@
 
 <div class="shipping-page page-width">
 <div class="shipping-page__nav-back">
-    <a href="/pages/assistance" class="shipping-back-link">&larr; Back to Support Hub</a>
+    <a href="{{ routes.root_url }}pages/assistance" class="shipping-back-link">&larr; {{ 'delivery.back' | t }}</a>
   </div>
   
   <h1 class="shipping-page__title">{{ section.settings.title }}</h1>
@@ -18,34 +18,32 @@
   {% endif %}
 
   <div class="shipping-page__intro rte">
-    <p>At Equipro Beauty, we strive to deliver your order as quickly and efficiently as possible. Most orders are processed within <strong>2–4 business days</strong> and shipped from Canada or our US division.</p>
-    <p>Customers in Quebec can generally expect delivery within <strong>1–3 business days after shipment</strong>, while deliveries to other Canadian provinces typically arrive within <strong>3–7 business days</strong>. A tracking number will be provided once your order is on its way, allowing you to monitor its journey in real time.</p>
-    <p class="shipping-disclaimer">Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>
+    {{ section.settings.intro }}
   </div>
 
   {%- comment -%} SHIPPING CALCULATOR CARD {%- endcomment -%}
   <div class="shipping-simulators">
     <div class="shipping-card">
-      <h3>Estimate Transit Time</h3>
-      <p class="shipping-card__sub">Select your destination country and province or state to calculate estimated processing and ground transit times.</p>
+      <h3>{{ 'delivery.heading' | t }}</h3>
+      <p class="shipping-card__sub">{{ 'delivery.intro' | t }}</p>
       
       <form id="EquiproShippingForm" class="shipping-form">
         <select id="ShippingCountry" class="shipping-select" required>
-          <option value="" disabled selected>Select Country</option>
-          <option value="CA">Canada (Montreal Hub)</option>
-          <option value="US">United States (Isle La Motte Hub)</option>
+          <option value="" disabled selected>{{ 'delivery.country' | t }}</option>
+          <option value="CA">{{ 'delivery.canada_destination' | t }}</option>
+          <option value="US">{{ 'delivery.us_destination' | t }}</option>
         </select>
 
         <select id="ShippingRegion" class="shipping-select" required disabled>
-          <option value="" disabled selected>Select Province / State</option>
+          <option value="" disabled selected>{{ 'delivery.region' | t }}</option>
         </select>
 
-        <button type="submit" class="hero-btn">CALCULATE</button>
+        <button type="submit" class="hero-btn">{{ 'delivery.calculate' | t }}</button>
       </form>
 
       <div id="ShippingResult" class="shipping-result"></div>
       
-      <p class="shipping-card__footer-note">*Estimated transit times provided are estimates only and are based on standard carrier schedules. Actual delivery times may vary due to carrier delays, weather conditions, volume spikes, or other operational factors outside of our control. Processing time for order packing remains subject to official quote confirmation.</p>
+      <p class="shipping-card__footer-note">{{ 'delivery.footer_note' | t }}</p>
     </div>
   </div>
 </div>
@@ -58,37 +56,37 @@
 
     const regions = {
       CA: [
-        { code: 'QC', name: 'Quebec' },
-        { code: 'ON', name: 'Ontario' },
-        { code: 'NB', name: 'New Brunswick' },
-        { code: 'NS', name: 'Nova Scotia' },
-        { code: 'PE', name: 'Prince Edward Island' },
-        { code: 'NL', name: 'Newfoundland and Labrador' },
-        { code: 'MB', name: 'Manitoba' },
-        { code: 'SK', name: 'Saskatchewan' },
-        { code: 'AB', name: 'Alberta' },
-        { code: 'BC', name: 'British Columbia' }
+        { code: 'QC', name: {{ 'delivery.regions.QC' | t | json }} },
+        { code: 'ON', name: {{ 'delivery.regions.ON' | t | json }} },
+        { code: 'NB', name: {{ 'delivery.regions.NB' | t | json }} },
+        { code: 'NS', name: {{ 'delivery.regions.NS' | t | json }} },
+        { code: 'PE', name: {{ 'delivery.regions.PE' | t | json }} },
+        { code: 'NL', name: {{ 'delivery.regions.NL' | t | json }} },
+        { code: 'MB', name: {{ 'delivery.regions.MB' | t | json }} },
+        { code: 'SK', name: {{ 'delivery.regions.SK' | t | json }} },
+        { code: 'AB', name: {{ 'delivery.regions.AB' | t | json }} },
+        { code: 'BC', name: {{ 'delivery.regions.BC' | t | json }} }
       ],
       US: [
-        { code: 'VT', name: 'Vermont' },
-        { code: 'NY', name: 'New York' },
-        { code: 'MA', name: 'Massachusetts' },
-        { code: 'ME', name: 'Maine' },
-        { code: 'NH', name: 'New Hampshire' },
-        { code: 'CT', name: 'Connecticut' },
-        { code: 'RI', name: 'Rhode Island' },
-        { code: 'NJ', name: 'New Jersey' },
-        { code: 'PA', name: 'Pennsylvania' },
-        { code: 'FL', name: 'Florida' },
-        { code: 'TX', name: 'Texas' },
-        { code: 'CA', name: 'California' },
-        { code: 'DEFAULT', name: 'Other US State' }
+        { code: 'VT', name: {{ 'delivery.regions.VT' | t | json }} },
+        { code: 'NY', name: {{ 'delivery.regions.NY' | t | json }} },
+        { code: 'MA', name: {{ 'delivery.regions.MA' | t | json }} },
+        { code: 'ME', name: {{ 'delivery.regions.ME' | t | json }} },
+        { code: 'NH', name: {{ 'delivery.regions.NH' | t | json }} },
+        { code: 'CT', name: {{ 'delivery.regions.CT' | t | json }} },
+        { code: 'RI', name: {{ 'delivery.regions.RI' | t | json }} },
+        { code: 'NJ', name: {{ 'delivery.regions.NJ' | t | json }} },
+        { code: 'PA', name: {{ 'delivery.regions.PA' | t | json }} },
+        { code: 'FL', name: {{ 'delivery.regions.FL' | t | json }} },
+        { code: 'TX', name: {{ 'delivery.regions.TX' | t | json }} },
+        { code: 'CA', name: {{ 'delivery.regions.CA' | t | json }} },
+        { code: 'DEFAULT', name: {{ 'delivery.regions.other_us' | t | json }} }
       ]
     };
 
     countrySelect.addEventListener('change', (e) => {
       const selectedCountry = e.target.value;
-      regionSelect.innerHTML = '<option value="" disabled selected>Select Province / State</option>';
+      regionSelect.replaceChildren(new Option({{ 'delivery.region' | t | json }}, '', true, true));
 
       if (regions[selectedCountry]) {
         regions[selectedCountry].forEach((reg) => {
@@ -106,6 +104,7 @@
 </script>
 
 <script src="{{ 'shipping-calculator.js' | asset_url }}" defer></script>
+<script type="application/json" id="ShippingCalculatorLabels">{"estimate":{{ 'delivery.estimate_title' | t | json }},"origin":{{ 'delivery.origin' | t | json }},"processing":{{ 'delivery.processing' | t | json }},"transit":{{ 'delivery.transit' | t | json }},"total":{{ 'delivery.total' | t | json }},"businessDays":{{ 'delivery.business_days' | t | json }},"originCa":{{ 'delivery.origin_ca' | t | json }},"originUs":{{ 'delivery.origin_us' | t | json }},"range":{{ 'delivery.range' | t | json }}}</script>
 
 {% schema %}
 {
@@ -118,6 +117,12 @@
       "id": "title",
       "label": "Page Title",
       "default": "Shipping & Delivery Policy"
+    },
+    {
+      "type": "richtext",
+      "id": "intro",
+      "label": "Shipping policy introduction",
+      "default": "<p>At Equipro Beauty, we strive to deliver your order as quickly and efficiently as possible. Most orders are processed within <strong>2–4 business days</strong> and shipped from Canada or our US division.</p><p>Customers in Quebec can generally expect delivery within <strong>1–3 business days after shipment</strong>, while deliveries to other Canadian provinces typically arrive within <strong>3–7 business days</strong>. A tracking number will be provided once your order is on its way, allowing you to monitor its journey in real time.</p><p>Please note that delivery estimates may vary due to carrier schedules, weather conditions, remote locations, or other factors outside our control.</p>"
     },
     {
       "type": "image_picker",

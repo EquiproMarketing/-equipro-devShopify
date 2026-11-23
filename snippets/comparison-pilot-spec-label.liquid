@@ -1,23 +1,71 @@
 {% doc %}
   Returns the category-specific comparison row label.
-  @param {string} spec_key - Specification key.
+  @param {string} spec_key - Specification row key.
+  @param {string} value - Verified source fact.
+  @param {boolean} value_mode - Whether to render the fact value instead of a row label.
 {% enddoc %}
+{%- if value_mode -%}
+  {%- case value -%}
+{%- when "1" -%}{{ 'comparison.values.v_356a192b79' | t }}
+{%- when "1 ergonomic drawer" -%}{{ 'comparison.values.v_c43e02f01e' | t }}
+{%- when "1 ergonomic drawer; interior height: 6 in" -%}{{ 'comparison.values.v_9e598bb7e3' | t }}
+{%- when "1 year" -%}{{ 'comparison.values.v_afe36da676' | t }}
+{%- when "13 × 22 in; safety edges" -%}{{ 'comparison.values.v_1dc8b12bac' | t }}
+{%- when "14 × 23 in" -%}{{ 'comparison.values.v_000eec8ac4' | t }}
+{%- when "14 × 25 × 33.5 in" -%}{{ 'comparison.values.v_b529c3e5bd' | t }}
+{%- when "15 × 25.5 × 54.5 in" -%}{{ 'comparison.values.v_4662aec8ac' | t }}
+{%- when "2" -%}{{ 'comparison.values.v_da4b9237ba' | t }}
+{%- when "2 doors; interior: 13 × 21.5 × 11 in high" -%}{{ 'comparison.values.v_6abba8ce84' | t }}
+{%- when "2 years" -%}{{ 'comparison.values.v_a4a3cd6c43' | t }}
+{%- when "20.5–27.5 in" -%}{{ 'comparison.values.v_9e956002c5' | t }}
+{%- when "20.5–28 in" -%}{{ 'comparison.values.v_d591626bb7' | t }}
+{%- when "22 × 14 × 35 in" -%}{{ 'comparison.values.v_7b14ede16b' | t }}
+{%- when "25 × 14 × 33.5 in" -%}{{ 'comparison.values.v_db56162262' | t }}
+{%- when "25 × 14 × 34 in" -%}{{ 'comparison.values.v_ffc218a523' | t }}
+{%- when "3" -%}{{ 'comparison.values.v_77de68daec' | t }}
+{%- when "4" -%}{{ 'comparison.values.v_1b64538924' | t }}
+{%- when "6-outlet power strip" -%}{{ 'comparison.values.v_8e6876de82' | t }}
+{%- when "Adjustable ergonomic backrest" -%}{{ 'comparison.values.v_2dbecc7777' | t }}
+{%- when "Air lift" -%}{{ 'comparison.values.v_4e9a505327' | t }}
+{%- when "Between the two shelves: 11.5 in" -%}{{ 'comparison.values.v_85ec9dd505' | t }}
+{%- when "Between the two shelves: 12 in" -%}{{ 'comparison.values.v_011cc3064e' | t }}
+{%- when "Black, stain-resistant, five-star" -%}{{ 'comparison.values.v_14d39f3fd5' | t }}
+{%- when "Circular footrest; base material not confirmed" -%}{{ 'comparison.values.v_a0e85d0024' | t }}
+{%- when "Color Chart B" -%}{{ 'comparison.values.v_4667f518f0' | t }}
+{%- when "Contoured" -%}{{ 'comparison.values.v_2be5cf12eb' | t }}
+{%- when "Drawer underside–lower shelf: 14.25 in" -%}{{ 'comparison.values.v_187a6f1a17' | t }}
+{%- when "Ergonomic backrest" -%}{{ 'comparison.values.v_3ddec105ac' | t }}
+{%- when "First–second shelf: 10.25 in; second–third shelf: 10.5 in" -%}{{ 'comparison.values.v_cd2a34cff3' | t }}
+{%- when "First–second shelf: 11.75 in; second–third shelf: 13 in; third shelf–cabinet: 9 in" -%}{{ 'comparison.values.v_99c50f07bb' | t }}
+{%- when "First–second shelf: 14 in; second–third shelf: 9 in" -%}{{ 'comparison.values.v_edd27bb38f' | t }}
+{%- when "First–second shelf: 9.75 in; second–third shelf: 10 in" -%}{{ 'comparison.values.v_61cf241cd7' | t }}
+{%- when "One on each side" -%}{{ 'comparison.values.v_1688e561f9' | t }}
+{%- when "Round" -%}{{ 'comparison.values.v_ec7b598335' | t }}
+{%- when "Tilting, reclining, adjustable backrest" -%}{{ 'comparison.values.v_c9f2a348ee' | t }}
+{%- when "Top: 13.5 × 20 in; others: 12 × 20 in" -%}{{ 'comparison.values.v_9a8638d286' | t }}
+{%- when "Ultra-quiet" -%}{{ 'comparison.values.v_e3102a1bfe' | t }}
+{%- when "Ultra-white leatherette; Color Chart A" -%}{{ 'comparison.values.v_a1f26c529a' | t }}
+{%- when "Without backrest" -%}{{ 'comparison.values.v_055a4fa2f4' | t }}
+  {%- else -%}{{ 'comparison.unknown' | t }}{%- endcase -%}
+{%- else -%}
 {%- case spec_key -%}
-{%- when 'height' -%}Height range
-{%- when 'mechanism' -%}Adjustment mechanism
-{%- when 'seat' -%}Seat shape
-{%- when 'seat_dimensions' -%}Seat dimensions
-{%- when 'backrest' -%}Backrest
-{%- when 'base' -%}Base / footrest
-{%- when 'casters' -%}Casters
-{%- when 'upholstery' -%}Upholstery options
-{%- when 'warranty' -%}Warranty
-{%- when 'dimensions' -%}Dimensions
-{%- when 'shelves' -%}Shelf count
-{%- when 'shelf_dimensions' -%}Shelf dimensions
-{%- when 'spacing' -%}Shelf spacing
-{%- when 'drawers' -%}Drawers
-{%- when 'cabinet' -%}Cabinet
-{%- when 'holders' -%}Magnifying lamp holders
-{%- when 'outlets' -%}Electrical outlets
+{%- when 'height' -%}{{ 'compare_legacy.labels.height' | t }}
+{%- when 'mechanism' -%}{{ 'compare_legacy.labels.mechanism' | t }}
+{%- when 'seat' -%}{{ 'compare_legacy.labels.seat' | t }}
+{%- when 'seat_dimensions' -%}{{ 'compare_legacy.labels.seat_dimensions' | t }}
+{%- when 'backrest' -%}{{ 'compare_legacy.labels.backrest' | t }}
+{%- when 'base' -%}{{ 'compare_legacy.labels.base' | t }}
+{%- when 'casters' -%}{{ 'compare_legacy.labels.casters' | t }}
+{%- when 'upholstery' -%}{{ 'compare_legacy.labels.upholstery' | t }}
+{%- when 'warranty' -%}{{ 'compare_legacy.labels.warranty' | t }}
+{%- when 'dimensions' -%}{{ 'compare_legacy.labels.dimensions' | t }}
+{%- when 'shelves' -%}{{ 'compare_legacy.labels.shelves' | t }}
+{%- when 'shelf_dimensions' -%}{{ 'compare_legacy.labels.shelf_dimensions' | t }}
+{%- when 'spacing' -%}{{ 'compare_legacy.labels.spacing' | t }}
+{%- when 'drawers' -%}{{ 'compare_legacy.labels.drawers' | t }}
+{%- when 'cabinet' -%}{{ 'compare_legacy.labels.cabinet' | t }}
+{%- when 'holders' -%}{{ 'compare_legacy.labels.holders' | t }}
+{%- when 'outlets' -%}{{ 'compare_legacy.labels.outlets' | t }}
 {%- endcase -%}
+
+{%- endif -%}

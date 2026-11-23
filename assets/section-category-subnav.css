@@ -40,7 +40,8 @@
   opacity: 0.6;
 }
 
-.category-subnav__bar-item:hover .category-subnav__bar-chevron {
+.category-subnav:not([data-hover-intent-ready]) .category-subnav__bar-item:hover .category-subnav__bar-chevron,
+.category-subnav__bar-item.is-desktop-open .category-subnav__bar-chevron {
   transform: rotate(180deg);
   opacity: 1;
 }
@@ -61,7 +62,9 @@
   z-index: 100;
 }
 
-.category-subnav__bar-item:hover .category-megamenu {
+.category-subnav:not([data-hover-intent-ready]) .category-subnav__bar-item:hover .category-megamenu,
+.category-subnav:not([data-hover-intent-ready]) .category-subnav__bar-item:focus-within .category-megamenu,
+.category-subnav__bar-item.is-desktop-open .category-megamenu {
   opacity: 1;
   visibility: visible;
 }
@@ -237,4 +240,15 @@
 
 .category-megamenu__content.full-width-content .category-megamenu__grid {
   grid-template-columns: repeat(5, 1fr);
+}
+/* Apply visibility immediately so keyboard focus can enter a newly opened panel. */
+@media (min-width: 990px) {
+  .category-subnav[data-hover-intent-ready] .category-megamenu { transition: opacity 0.2s ease; }
+}
+
+/* Preserve native focus and the optional mobile subnav behavior. */
+.category-subnav a:focus-visible { outline: 2px solid #ab273b; outline-offset: 3px; }
+@media (max-width: 989px) {
+  .category-subnav__bar-item:hover .category-megamenu { opacity: 1; visibility: visible; }
+  .category-subnav__bar-item:hover .category-subnav__bar-chevron { transform: rotate(180deg); opacity: 1; }
 }

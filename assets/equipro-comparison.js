@@ -21,6 +21,7 @@
       if (this.ready) return;
       this.ready = true;
       this.labels = JSON.parse(this.querySelector('[data-labels]').textContent);
+      this.valueLabels = JSON.parse(this.querySelector('[data-values]').textContent);
       this.products = JSON.parse(this.querySelector('[data-products]').textContent);
       this.dialog = this.querySelector('dialog');
       this.opener = this.querySelector('[data-open]');
@@ -85,7 +86,7 @@
         this.removeButtons[i].disabled = !this.slots[i];
       });
       const selected = this.slots.filter(Boolean).map(id => ({ ...this.products.find(p => p.id === id), ...this.data.products[id] }));
-      this.querySelector('[data-status]').textContent = `${selected.length} / 3 ${this.labels.count}`;
+      this.querySelector('[data-status]').textContent = this.labels.count[selected.length === 1 ? 'one' : 'other'].replace('{{ count }}', selected.length) + ` / 3`;
       const area = this.querySelector('.ec-scroll'); area.replaceChildren();
       if (!selected.length) { area.append(element('p', this.labels.empty_state)); return; }
       const table = element('table');
@@ -107,7 +108,10 @@
         groupRow.append(element('th', this.labels.groups[group], { scope: 'rowgroup', colspan: String(selected.length + 1) })); body.append(groupRow);
         rows.forEach(key => {
           const row = element('tr'); row.append(element('th', this.labels.labels[key], { scope: 'row' }));
-          selected.forEach(p => row.append(element('td', p.specs[key] === 'not_applicable' ? this.labels.na : p.specs[key] ?? this.labels.unknown)));
+          selected.forEach(p => {
+            const value = p.specs[key];
+            row.append(element('td', value === 'not_applicable' ? this.labels.na : this.valueLabels[value] ?? value ?? this.labels.unknown));
+          });
           body.append(row); count++;
         });
         table.append(body);

@@ -1,0 +1,16 @@
+{
+  "state": "STOP_CLI_DIRECTORY_VALIDATION",
+  "time": "2026-11-23T13:59:22.523380+00:00",
+  "manifestSha256": "4b9611b76e94e8bad42a9bc41ac86bc1371a6caad13d09416dbae8d34cb71a1f",
+  "automaticRetryAllowed": false,
+  "exitCode": 1,
+  "completedAt": "2026-11-23T14:00:48.459872+00:00",
+  "remoteFilesDeployed": 0,
+  "remoteInventoryUnchanged": 222,
+  "readbackExistingUnchanged": 15,
+  "newFilesStillAbsent": 3,
+  "githubUnchanged": true,
+  "frPublished": false,
+  "rollbackExecuted": false,
+  "browserQA": "Not executed: authorized deployment aborted before upload."
+}

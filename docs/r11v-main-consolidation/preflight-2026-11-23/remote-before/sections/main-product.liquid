@@ -1,0 +1,509 @@
+{{ 'section-main-product.css' | asset_url | stylesheet_tag }}
+{% if section.settings.reference_layout %}{{ 'product-reference-layout.css' | asset_url | stylesheet_tag }}{% endif %}
+
+<div class="product-page page-width{% if section.settings.reference_layout %} product-page--reference{% endif %}" id="ProductMain-{{ section.id }}">
+  {% assign target_product = product | default: section.settings.featured_product %}
+  {% assign use_product_overrides = true %}
+  {% if product != blank and section.settings.featured_product != blank and section.settings.featured_product.id != product.id %}
+    {% assign use_product_overrides = false %}
+  {% endif %}
+
+  {% liquid
+    assign purchase_restricted = false
+    assign template_name = target_product.template_suffix | downcase
+    if template_name contains 'quote' or target_product.requires_selling_plan
+      assign purchase_restricted = true
+    endif
+    for tag in target_product.tags
+      assign normalized_tag = tag | downcase
+      if normalized_tag contains 'quote' or normalized_tag == 'rfq'
+        assign purchase_restricted = true
+      endif
+    endfor
+    for product_collection in target_product.collections
+      if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables'
+        assign purchase_restricted = true
+      endif
+    endfor
+  %}
+  {% assign portable_product = false %}
+  {% for product_collection in target_product.collections %}
+    {% if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables' %}
+      {% assign portable_product = true %}
+    {% endif %}
+  {% endfor %}
+
+  <!-- 1. BACK LINK -->
+  <div class="product-page__back product-mobile-order-back">
+    <a href="javascript:history.back()" class="back-link">
+      <svg width="8" height="12" viewBox="0 0 8 12" fill="none">
+        <path d="M7 1L1 6L7 11" stroke="#1d1d1f" stroke-width="1.5" stroke-linecap="round"/>
+      </svg>
+      <span>{% if section.settings.back_text != blank %}{{ section.settings.back_text }}{% else %}{{ 'general.back' | t }}{% endif %}</span>
+    </a>
+  </div>
+
+  <!-- PART 1: MAIN GRID (TOP) -->
+  <div class="product-master-grid">
+    
+    <!-- LEFT COLUMN -->
+    <div class="product-left-col">
+
+      <!-- PRODUCT TITLE -->
+      <h1 class="product-info__title product-mobile-order-title">
+        {% if use_product_overrides %}{{ section.settings.custom_title | default: target_product.title | escape }}{% else %}{{ target_product.title | escape }}{% endif %}
+      </h1>
+
+      <!-- DESCRIPTIONS AND HIGHLIGHTS -->
+      <div class="product-mobile-order-descriptions">
+        {% assign intro_text = section.settings.intro_highlight %}
+        {% if use_product_overrides and intro_text != blank %}
+          <div class="product-info__intro-highlight">
+            <p>{{ intro_text }}</p>
+          </div>
+        {% endif %}
+
+        <div class="product-info__description">
+          {% if use_product_overrides and section.settings.custom_description != blank %}
+            {{ section.settings.custom_description }}
+          {% else %}
+            {{ target_product.description }}
+          {% endif %}
+        </div>
+
+        {% if use_product_overrides and section.settings.subtitle != blank %}
+          <h2 class="product-info__subtitle">{{ section.settings.subtitle }}</h2>
+        {% endif %}
+
+        {% if use_product_overrides and section.settings.secondary_description != blank %}
+          <div class="product-info__description">
+            {{ section.settings.secondary_description }}
+          </div>
+        {% endif %}
+      </div>
+
+      <!-- BUY BOX -->
+      <div class="product-buy-box product-mobile-order-buybox">
+        <!-- DYNAMIC PRICE -->
+        <div class="product-price" id="ProductPriceContainer">
+          {% assign current_variant = target_product.selected_or_first_available_variant %}
+          {% if current_variant.price > 0 %}{% if section.settings.show_currency %}{{ current_variant.price | money_with_currency }}{% else %}{{ current_variant.price | money }}{% endif %}{% else %}{{ 'products.price_unavailable' | t }}{% endif %}
+        </div>
+
+        {% if use_product_overrides and section.settings.purchase_note != blank %}<div class="product-purchase-note">{{ section.settings.purchase_note }}</div>{% endif %}
+        {% unless portable_product %}
+        {% form 'product', target_product %}
+          <input type="hidden" name="id" id="ProductVariantIdInput" value="{% if current_variant.available and current_variant.price > 0 and purchase_restricted == false %}{{ current_variant.id }}{% endif %}">
+
+          {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
+            <div class="product-options-container">
+              {% for option in target_product.options_with_values %}
+                {% assign option_name_downcase = option.name | downcase %}
+                
+                {% assign show_option = true %}
+                {% if option_name_downcase contains 'color' or option_name_downcase contains 'colour' or option_name_downcase contains 'couleur' %}
+                  {% if section.settings.show_color_option == false %}
+                    {% assign show_option = false %}
+                  {% endif %}
+                {% elsif option_name_downcase contains 'size' or option_name_downcase contains 'talla' %}
+                  {% if section.settings.show_size_option == false %}
+                    {% assign show_option = false %}
+                  {% endif %}
+                {% endif %}
+
+                {% if show_option %}
+                  <div class="product-option">
+                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{% assign display_option_name = option.name | strip | downcase %}{% if display_option_name == 'couleur' or display_option_name == 'color' or display_option_name == 'colour' %}{{ 'products.color' | t }}{% else %}{{ option.name }}{% endif %}</label>
+                    <select 
+                      id="Option-{{ section.id }}-{{ forloop.index0 }}" 
+                      class="product-select product-variant-selector"
+                      data-option-index="{{ forloop.index0 }}"
+                    >
+                      {% for value in option.values %}
+                        {% assign value_name = value.name | default: value %}
+                        {% assign selected_value_name = option.selected_value.name | default: option.selected_value %}
+                        <option value="{{ value_name | escape }}" {% if selected_value_name == value_name %}selected="selected"{% endif %}>
+                          {{ value_name }}
+                        </option>
+                      {% endfor %}
+                    </select>
+                  </div>
+                {% endif %}
+              {% endfor %}
+            </div>
+          {% endif %}
+
+          <div class="product-buy-row">
+            <div class="product-quantity">
+              <button type="button" onclick="adjustQty(-1)">−</button>
+              <input type="number" id="QuantityInput" name="quantity" value="1" min="1">
+              <button type="button" onclick="adjustQty(1)">+</button>
+            </div>
+
+            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% if current_variant.available == false or current_variant.price <= 0 or purchase_restricted %}disabled{% endif %}>
+              {% if current_variant.price <= 0 or purchase_restricted %}
+                {{ 'products.purchase_unavailable' | t }}
+              {% elsif current_variant.available %}
+                {% if section.settings.btn_label != blank %}{{ section.settings.btn_label }}{% else %}{{ 'products.add_to_cart' | t }}{% endif %}
+              {% else %}
+                {{ 'products.sold_out' | t }}
+              {% endif %}
+            </button>
+          </div>
+        {% endform %}
+        {% endunless %}
+      </div>
+
+    </div>
+
+    <!-- RIGHT COLUMN (GALLERY AND COLOR SWATCHES) -->
+    <div class="product-right-col product-mobile-order-gallery">
+      <div class="product-gallery">
+        
+        <!-- MAIN IMAGE -->
+        <div class="product-gallery__main">
+          {% assign first_img_block = section.blocks | where: "type", "gallery_image" | first %}
+          {% if use_product_overrides and first_img_block.settings.image != blank %}
+            <img id="MainProductImg" src="{{ first_img_block.settings.image | image_url: width: 1600 }}" alt="{{ first_img_block.settings.image.alt | escape }}">
+          {% elsif current_variant.image != blank %}
+            <img id="MainProductImg" src="{{ current_variant.image | image_url: width: 1600 }}" alt="{{ current_variant.image.alt | default: target_product.title | escape }}">
+          {% elsif target_product.featured_image != blank %}
+            <img id="MainProductImg" src="{{ target_product.featured_image | image_url: width: 1600 }}" alt="{{ target_product.featured_image.alt | default: target_product.title | escape }}">
+          {% else %}
+            <div class="thumb-img-placeholder"></div>
+          {% endif %}
+        </div>
+
+        <!-- THUMBNAILS -->
+        <div class="product-gallery__thumbs">
+          {% assign img_blocks = section.blocks | where: "type", "gallery_image" %}
+          {% if use_product_overrides and img_blocks.size > 0 %}
+            {% for block in img_blocks limit: 4 %}
+              {% if block.settings.image != blank %}
+                <img 
+                  src="{{ block.settings.image | image_url: width: 400 }}" 
+                  class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                  onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
+                  data-highres="{{ block.settings.image | image_url: width: 1600 }}"
+                  {{ block.shopify_attributes }}
+                >
+              {% endif %}
+            {% endfor %}
+          {% elsif target_product.images.size > 0 %}
+            {% for image in target_product.images limit: 4 %}
+              <img 
+                src="{{ image | image_url: width: 400 }}"
+                alt="{{ image.alt | default: target_product.title | escape }}"
+                class="thumb-img {% if forloop.first %}is-active{% endif %}" 
+                onclick="changeMainImg(this.dataset.highres)"
+                  {% if section.settings.reference_layout %}role="button" tabindex="0" onkeydown="if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); changeMainImg(this.dataset.highres); }"{% endif %} 
+                data-highres="{{ image | image_url: width: 1600 }}"
+              >
+            {% endfor %}
+          {% endif %}
+        </div>
+
+      </div>
+
+      <!-- RENDER COLOR SWATCHES CONNECTED TO VARIANTS -->
+      <div class="product-swatches-below-gallery">
+        {% for block in section.blocks %}
+          {% if block.type == "color_swatch_item" %}
+            {% assign swatch_value = block.settings.color_name | strip | downcase %}
+            {% for option in target_product.options_with_values %}
+              {% assign option_name_downcase = option.name | downcase %}
+              {% if option_name_downcase contains 'color' or option_name_downcase contains 'colour' or option_name_downcase contains 'couleur' %}
+                {% for value in option.values %}
+                  {% assign value_name = value.name | default: value %}
+                  {% assign selected_value_name = option.selected_value.name | default: option.selected_value %}
+                  {% assign value_downcase = value_name | strip | downcase %}
+                  {% if value_downcase == swatch_value %}
+                    <button 
+                      type="button" 
+                      class="product-swatch-btn {% if selected_value_name == value_name %}is-active{% endif %}"
+                      data-option-index="{{ forloop.parentloop.parentloop.index0 }}"
+                      data-value="{{ value_name | escape }}"
+                      title="{{ value_name | escape }}"
+                      aria-label="{{ value_name | escape }}"
+                      style="background-color: {{ block.settings.color_hex }};"
+                      onclick="selectSwatch(this)"
+                      {{ block.shopify_attributes }}
+                    ></button>
+                  {% endif %}
+                {% endfor %}
+              {% endif %}
+            {% endfor %}
+          {% endif %}
+        {% endfor %}
+      </div>
+
+      <!-- COMPARE BUTTON -->
+      {% capture comparison_family %}{% render 'comparison-family', target_product: target_product %}{% endcapture %}
+      {% capture comparison_excluded %}{% render 'comparison-excluded', target_product: target_product %}{% endcapture %}
+      {% assign compare_enabled = section.settings.show_compare_btn %}
+      {% if comparison_family != blank %}{% assign compare_enabled = true %}{% endif %}
+      {% if compare_enabled and comparison_excluded == blank %}
+        <div class="product-compare-wrapper product-mobile-order-compare">
+          <button class="product-compare-trigger-btn" id="OpenCompareModal">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 3h5v5M4 20L21 3M21 16v5h-5M15 15l6 6M4 4l5 5"/></svg>
+            <span>{% if section.settings.compare_btn_label != blank %}{{ section.settings.compare_btn_label }}{% else %}{{ 'compare_legacy.open' | t }}{% endif %}</span>
+          </button>
+        </div>
+      {% endif %}
+    </div>
+
+  </div>
+</div>
+
+<!-- VARIANTS JSON MAP -->
+<script type="application/json" id="ProductVariantsJson-{{ target_product.id }}">
+  [
+    {% for variant in target_product.variants %}
+      {
+        "id": {{ variant.id }},
+        "title": {{ variant.title | json }},
+        "price": {% if variant.price > 0 %}{% if section.settings.show_currency %}{{ variant.price | money_with_currency | json }}{% else %}{{ variant.price | money | json }}{% endif %}{% else %}{{ 'products.price_unavailable' | t | json }}{% endif %},
+        "purchasable": {% if variant.price > 0 and purchase_restricted == false %}true{% else %}false{% endif %},
+        "available": {{ variant.available | json }},
+        "options": [
+          {{ variant.option1 | json }},
+          {{ variant.option2 | json }},
+          {{ variant.option3 | json }}
+        ],
+        "image": {% if variant.image != blank %}{{ variant.image | image_url: width: 1600 | json }}{% else %}null{% endif %}
+      }{% unless forloop.last %},{% endunless %}
+    {% endfor %}
+  ]
+</script>
+
+<script>
+  const productVariants = JSON.parse(document.getElementById('ProductVariantsJson-{{ target_product.id }}').textContent);
+
+  const purchaseForm = document.querySelector('#ProductMain-{{ section.id }} form[action*="/cart/add"]');
+  if (purchaseForm) purchaseForm.addEventListener('submit', event => {
+    const variant = productVariants.find(item => String(item.id) === String(purchaseForm.querySelector('[name="id"]')?.value));
+    if (!variant || !variant.available || !variant.purchasable) {
+      event.preventDefault();
+      event.stopImmediatePropagation();
+    }
+  }, true);
+
+  document.querySelectorAll('.product-variant-selector').forEach(select => {
+    select.addEventListener('change', updateSelectedVariant);
+  });
+
+  function selectSwatch(btn) {
+    const optionIndex = btn.dataset.optionIndex;
+    const value = btn.dataset.value;
+
+    // 1. Update active visual state for swatches
+    const container = btn.closest('.product-right-col') || document;
+    container.querySelectorAll('.product-swatch-btn').forEach(b => b.classList.remove('is-active'));
+    btn.classList.add('is-active');
+
+    // 2. Synchronize directly with the main dropdown select using optionIndex
+    let targetSelect = document.querySelector(`.product-variant-selector[data-option-index="${optionIndex}"]`);
+    if (!targetSelect) {
+      const selectors = document.querySelectorAll('.product-variant-selector');
+      targetSelect = selectors[optionIndex] || selectors[0];
+    }
+
+    if (targetSelect) {
+      targetSelect.value = value;
+      targetSelect.dispatchEvent(new Event('change', { bubbles: true }));
+    }
+  }
+
+  function updateSelectedVariant() {
+    const selectors = document.querySelectorAll('.product-variant-selector');
+    const selectedValues = {{ current_variant.options | json }} || [];
+    selectors.forEach(select => { selectedValues[Number(select.dataset.optionIndex)] = select.value; });
+
+    const matchedVariant = productVariants.find(variant => {
+      return selectedValues.every((val, index) => variant.options[index] === val);
+    });
+
+    if (!matchedVariant) {
+      const variantIdInput = document.getElementById('ProductVariantIdInput');
+      if (variantIdInput) variantIdInput.value = '';
+      const cartBtn = document.getElementById('AddToCartButton');
+      if (cartBtn) { cartBtn.disabled = true; cartBtn.textContent = {{ 'products.purchase_unavailable' | t | json }}; }
+      return;
+    }
+    if (matchedVariant) {
+      const variantIdInput = document.getElementById('ProductVariantIdInput');
+      if (variantIdInput) variantIdInput.value = matchedVariant.available && matchedVariant.purchasable ? matchedVariant.id : '';
+
+      const priceContainer = document.getElementById('ProductPriceContainer');
+      if (priceContainer) priceContainer.textContent = matchedVariant.price;
+
+      const cartBtn = document.getElementById('AddToCartButton');
+      if (cartBtn) {
+        if (!matchedVariant.purchasable) {
+          cartBtn.disabled = true;
+          cartBtn.textContent = {{ 'products.purchase_unavailable' | t | json }};
+        } else if (matchedVariant.available) {
+          cartBtn.disabled = false;
+          cartBtn.textContent = {% if section.settings.btn_label != blank %}{{ section.settings.btn_label | json }}{% else %}{{ 'products.add_to_cart' | t | json }}{% endif %};
+        } else {
+          cartBtn.disabled = true;
+          cartBtn.textContent = {{ 'products.sold_out' | t | json }};
+        }
+      }
+
+      if (matchedVariant.image) {
+        const mainImg = document.getElementById('MainProductImg');
+        if (mainImg) mainImg.src = matchedVariant.image;
+      }
+    }
+  }
+
+  function changeMainImg(src) {
+    const mainImg = document.getElementById('MainProductImg');
+    if (mainImg && src) mainImg.src = src;
+    document.querySelectorAll('#ProductMain-{{ section.id }} .thumb-img').forEach(el => el.classList.remove('is-active'));
+    if (window.event && window.event.target) {
+      window.event.target.classList.add('is-active');
+    }
+  }
+
+  function adjustQty(val) {
+    const input = document.getElementById('QuantityInput');
+    if (!input) return;
+    let current = parseInt(input.value) || 1;
+    current += val;
+    if (current < 1) current = 1;
+    input.value = current;
+  }
+</script>
+
+{% schema %}
+{
+  "name": "Main Product Top",
+  "tag": "section",
+  "class": "section-main-product",
+  "settings": [
+    {"type":"checkbox","id":"reference_layout","label":"Reference product layout","default":false},
+    {
+      "type": "text",
+      "id": "back_text",
+      "label": "Back Link Text",
+      "default": "Back"
+    },
+    {
+      "type": "text",
+      "id": "custom_title",
+      "label": "Custom Title Override"
+    },
+    {
+      "type": "textarea",
+      "id": "intro_highlight",
+      "label": "Intro Highlight Line (Red Bar)"
+    },
+    {
+      "type": "richtext",
+      "id": "custom_description",
+      "label": "Main Description Override"
+    },
+    {
+      "type": "text",
+      "id": "subtitle",
+      "label": "Red Subtitle (Middle)"
+    },
+    {
+      "type": "richtext",
+      "id": "secondary_description",
+      "label": "Secondary Description Paragraph"
+    },
+    {
+      "type": "header",
+      "content": "Variant Options Display"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_variant_selectors",
+      "label": "Enable Variant Dropdowns",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_color_option",
+      "label": "Show Color Selector",
+      "default": true
+    },
+    {
+      "type": "checkbox",
+      "id": "show_size_option",
+      "label": "Show Size/Talla Selector",
+      "default": true
+    },
+    {
+      "type": "header",
+      "content": "Product Target & Purchasing"
+    },
+    {
+      "type": "product",
+      "id": "featured_product",
+      "label": "Link Specific Product"
+    },
+    {"type":"checkbox","id":"show_currency","label":"Show price currency","default":false},
+    {"type":"richtext","id":"purchase_note","label":"Purchase or option note"},
+    {
+      "type": "text",
+      "id": "btn_label",
+      "label": "Add to Cart Button Text",
+      "default": "ADD TO CART"
+    },
+    {
+      "type": "checkbox",
+      "id": "show_compare_btn",
+      "label": "Show Compare Button",
+      "default": true
+    },
+    {
+      "type": "text",
+      "id": "compare_btn_label",
+      "label": "Compare Button Text",
+      "default": "Compare with other models"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "gallery_image",
+      "name": "Gallery Image",
+      "limit": 4,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Select Image"
+        }
+      ]
+    },
+    {
+      "type": "color_swatch_item",
+      "name": "Color Swatch",
+      "settings": [
+        {
+          "type": "text",
+          "id": "color_name",
+          "label": "Color Name (e.g. White, Navy)",
+          "info": "Must match the exact variant color name in Shopify."
+        },
+        {
+          "type": "color",
+          "id": "color_hex",
+          "label": "Swatch Color",
+          "default": "#111111"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Main Product Top"
+    }
+  ]
+}
+{% endschema %}

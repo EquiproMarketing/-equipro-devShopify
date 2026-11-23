@@ -1,0 +1,1010 @@
+[
+  {
+    "id": "gid://shopify/OnlineStoreTheme/157851386029",
+    "totalFields": 8957,
+    "totalFr": 8837,
+    "fields": [
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.back_text:6ekntc2q2etf",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "76900f1bfd16c8d4dd3d25e6f46638d7165aee23883ccea6bfe071c514421769",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.custom_title:6uic2y1is4ti",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "5e27e9bc6afe1c2cd36913c8f68f6b99efb21009d7665cf595f75173e544908f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.intro_highlight:1pdewgumalk2z",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "d26d423848d097dadf51ada03d773deeb823e3b024f266a83863312b9854fe95",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.custom_description:32b3saufjoc3k",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "36c30607d4f887fda0a2e462dd83fd8f57c8566797d1e4e8ccadbbe3cf0fe2b9",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.subtitle:2u42q2dclah66",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "148d6472cf8ecfd6e5422f94b768f1b393054aa25d19378f9089edc41adedcc0",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.secondary_description:1hs8kmni85h7t",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "19be7c96e39c1cf1a2bb0db6bfba8e8a37e1ba39512fa9c3b03d39543ff42e65",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main.btn_label:6eb99o7k2z6z",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "8f696970b74c8a782f15e5c6ef73992e53e38a0a87184ecf20fab1b32617174e",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.accordion_heading:2xy5pk5i2lmy2",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "bf15a224a16c613b7933d293cf8e48febf61ff47972cf30c36485dae6f64845d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.shipping_title:21q6aq3wi9xwg",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "ad5751430e295f0cec2699f46778f40bdb2eb477a14312407eabade774472435",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.shipping_text:38wh4fu9i4kt9",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "855752830215bdd408575597ff545ea7d44315c0d689877ec6fc28429264ab0c",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.custom_table_html:kcnph21wtgn1",
+        "type": "HTML",
+        "digest": "5fb32d1089c10067c4c29556badba826f2b2f1da99535b164db31b117ed8e925",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.table_col1_header:1er4v2nvpbfjx",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "cd36f4bca97c33d620b98c411eaff01abfc0b21e92d72c58d70d78c3fb3938bc",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.table_col2_header:1er4flcg43wbi",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "784a93f538b2e16ea886541c81f8901379305a6b88861e2e43217a199f244b80",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_1.question:31z68p0xkixb4",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "c517b421e4bc28a6fd62144d4d50ec72a3e93b64f57e45834d24f8a359941605",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_1.answer:1rxmlluj0u5iq",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "264c12d98bd91b2833ba65f34b3a675adf3a5e74b2b61be2bed4c62623360055",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_2.question:2qqa2plt853fn",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "2b846ada60616dedd007e1a47bcf03af9ff0851319db48d84100d8829842cb20",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_2.answer:emsqskwyfbld",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "4391b69bb192dde477c00885384c56e554bc7383bd8a8bac6f25bc69d3de9aeb",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_3.question:c4oe4av7fxr6",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "3dfa6d85438c37f732fda2973eb5586b4f0c40de736c2311a7903f3614b1b6f3",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.main_product_characteristics_Hp7Baq.faq_3.answer:2i861u4oeko34",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "a112e9b460a4e9d12d8ba1d4da2e06f80317af3bea0d8248739dddcf19fd7143",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.heading:1aelqc95rx97p",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "bf15a224a16c613b7933d293cf8e48febf61ff47972cf30c36485dae6f64845d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.image:2s61n8l24gc7e",
+        "type": "FILE_REFERENCE",
+        "digest": "a834904d9c330072b884d0753a6f6706847e79468490c6beeada5c19430668e7",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_1.title:2350r656fa1jg",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7d44078843ff3c8ade33bf22d64d9e0d057fc8dc503cc273be913b470c9b5f84",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_1.text:1czrlw6btu5f5",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "e22788767cd929f92fa06e7027b2bf30d0fe98230d3679d905dd837b2b9e8e4a",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_2.title:15b1vcqix2cdr",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "97a47a1b901d5a8d0463af0f14c6d5927df0560251c123a677a5cd83257e63f4",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_2.text:1kgn1csxb16sy",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "b991c516edf055aa68685e582eec0f2d1478e3e5e8f2f20881b74f56428ed20a",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_3.title:x01og1kzb8cu",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "0cd91ec214aaa7bcd6a12719abf19278e7d6007d90ab4c6530991f766044aeec",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.banner_features.feature_3.text:3onlyfnwcmfw3",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "4079a01bcfdef0e55c68e1525b35d5e81dcafa7509e5499e6c835d001383ebf7",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.image:25rnuk9nbgrf6",
+        "type": "FILE_REFERENCE",
+        "digest": "a834904d9c330072b884d0753a6f6706847e79468490c6beeada5c19430668e7",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.how_header.title:mqcosws3r8la",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "97666357604928b175f2941ae20cc135fe62f3a9244ae4471f3a92fe15427edb",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.how_1.text:2gv12clg1zca5",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "732d7e07eeda2dc43b43f60890c07e62b16c280a8e45a09df0a3afac58f50f14",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.how_2.text:2obwht81j6dny",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "17943e9fde923d1649a845fe86dbfcc2e57efe29f5be3b1181b400bdb4dfff83",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.how_3.text:wdhdv0ufz5yn",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "1fdd512dba20d8690b0dfc74aed00513e7368783b300c09ab04bac5dee6fca96",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.safety_header.title:2tg9rsjn0y6nm",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7029ded88b9e256701feb403381ad5f41cc7ee11f162bb7acafb916bfac5c3f4",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.safety_1.text:3glfaw0633u1t",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "435061bb5f57a796a3c5b7159a5f7d782430f0cbc9a752606e89aa840ffec1e1",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.safety_2.text:3o2aqcmrkavfm",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "674545087362c332c973729dcd926532b012201584eb997a1ac8fdd1055ca5f8",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.how_to.safety_3.text:1w3vmefkh3nqb",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "672c0246d504df16a67c6b807ba5fe038cd5b8f545a5738e475c04b596d5dedf",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.heading:1qj4hq3myahkv",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "63843b033f9ec35dd222ffc28503324fd5083b67ca7bcd7603bf14f49f987625",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.subheading:zre88ru9ho6z",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "3289789986820157e0ccba30ed6afde504c8d35a8763e3ecc900c2e22f7b4fba",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_1.question:2jjmdxhshpwyi",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "0c2152cc31b5528a822c128ec4208f2b67ff623f67c2f96de2f3705b4bc606e7",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_1.answer:1a5no0fm1y2x4",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "1c37265c0a113347d2e558ef57e2615167c4dc8cad4e355aa8433ef88ddd26bd",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_2.question:1as9479fjox09",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "e3ce2f972044f222c2b9454ccd7578809e0fbd2115ebaf1e4d64fda004b7ca68",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_2.answer:38n36dkc8v4y3",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "974aa8589281b0085e14c7d72c0b19dd70e3313645e98a395dc93484f352f914",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_3.question:3oav4oab8q0t4",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7056ce892017774e48d5f30cd352f5ed02a210e057026a5ea31e30155a26fd99",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_3.answer:gq1bj07f3p3e",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "9c4e2eb278a004964ffd06a9f69a9d553f6ed4dd99eee9c4ed690f90ba7d1d99",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_4.question:1hg52zmlwn6vz",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "ca11553408f484fb98dbcd4ecc91e579d2cc0ff176a639c8ac8451e08905cc5d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_4.answer:mfx0l58fr8el",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "c949af296672934b9baa62b49603c8a9eaf53c6127efcebdf4bea99ee2f1297d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_5.question:3uyr3gnhloaou",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "1d4873dfde8c00b725044c88d0f5c6626f14d92cf29050691ac9f09c22e6af28",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_5.answer:1qo96rn9qs9cc",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "bf314894a5f69589f5bef490825ec78275f87af4fa5e1ed590fb834cfc902726",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_6.question:2m7dtqf4nnaql",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "62e4edcc3139945a1f781d44983b7a25a1242b3c949ef415c4a55cc78ce047f5",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.faq.faq_6.answer:3p5op4rzxpbdb",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "48662657438669d3a9300023edbf248e6d0c857452306ed769c92c28519acef0",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.20210-multi-comfort-electric-height.json.compare_modal.heading:24tnuvbhyohzu",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "119f0ceac5abf3ee65ebf2d3e3dd10983e2d1250d4f9222bacf9da9b4a55b4d4",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.back_text:1kbp07yuq32hb",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "76900f1bfd16c8d4dd3d25e6f46638d7165aee23883ccea6bfe071c514421769",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.custom_title:39qtsx4zp356",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "a48ed848d6eb7e6d53a60843db1bffc4817abe2ad770d080dedb07b93f445aa3",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.intro_highlight:ov8ij8atksrr",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "7a86e09aa448c65e86ad3104765da9afbc4d8f68a6f8d75f86f95bef3177519b",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.custom_description:7gfaao3gnax8",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "fe6f254b4c1ca5219b299fdcb5451807a6c7137c38632787ee53a2aac44979ba",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.subtitle:1gny8peazvg9u",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "d04ae3ebeb31decf4cd9c1fd4c26d93c803d08ff2e44431b36e27529bd1fe139",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.secondary_description:1c1rz0smghaud",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "8a266a2d63e62d8a7d2986d2932a3f3af5e25b705c6244a27fefad166272ed0c",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.btn_label:1kbmhj5m7gw9z",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "8f696970b74c8a782f15e5c6ef73992e53e38a0a87184ecf20fab1b32617174e",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main.compare_btn_label:3sj2fllerw02n",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7bb4a481053817a1ff6ac2975bdbfdb5c19eacbdaa39c4125d69497b836fe687",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.accordion_heading:i3q90fwyomna",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "bf15a224a16c613b7933d293cf8e48febf61ff47972cf30c36485dae6f64845d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.shipping_title:3k6kjss3i3pyk",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "ad5751430e295f0cec2699f46778f40bdb2eb477a14312407eabade774472435",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.shipping_text:3vu2s57iidg1",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "855752830215bdd408575597ff545ea7d44315c0d689877ec6fc28429264ab0c",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.custom_table_html:dkqzfwtsuenl",
+        "type": "HTML",
+        "digest": "d558a9458665ddbf61b4c5375054ba3505f1aa79c44241cc5574f7d841e22009",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.table_col1_header:1zxmb2lcs81m9",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "cd36f4bca97c33d620b98c411eaff01abfc0b21e92d72c58d70d78c3fb3938bc",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.table_col2_header:1zxlvl5bconpu",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "784a93f538b2e16ea886541c81f8901379305a6b88861e2e43217a199f244b80",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_1.question:30nr39nb636io",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "a0ffef8e04f7600b603db92331003ec6aa7edb894b1bee065e2e549a6f6a1e31",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_1.answer:1wfqo8vjftwk2",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "d61c44653a48a6a1bddb3041dc720868e17ff548e762f27302fec8967e529e33",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_2.question:21t504zhyu6df",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "86b7f8b2831f690ccf550278d5b5a6976792e303428ec84fd1332822d8140333",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_2.answer:1fae5vco92u1d",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "6b98d50d6160759db03088c1105459839320761374bdb4ff1f32ca3eb7a01555",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_3.question:32mj8d6fhptfm",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "8f7b526ee6c3f07c78c426052b9d31bed3be9d7c4f831b4edda14fe94192b00a",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.main_product_characteristics_Hp7Baq.application_3.answer:1lhzvvi6tl2ts",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "43bed7f1128dd4306763be31aad005d2e54ba18e8108e888d5d83795a780674e",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.heading:3o30q51q6sskp",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "bf15a224a16c613b7933d293cf8e48febf61ff47972cf30c36485dae6f64845d",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.image:2864erdf216rq",
+        "type": "FILE_REFERENCE",
+        "digest": "2a8cb3556660560b4b838550df5cb794e7fa7421ee009a8a7771c7b4bc2a25fe",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_1.title:2vhiarnllkwao",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "b772111cf4e786afd3596120ff77a33c03c9c2b47289f027b7db7770090de905",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_1.text:k4gfq22pssot",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "aaf03fea23c7f7f33909167321a12535c7791520cf798092717b5200ba763c1f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_2.title:t6dari9dvmn7",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "5dc7840ef97ce0ba9880ba66ada905585e5d7cc00f38c5b19e9130e525b35f91",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_2.text:1blmj7qdgrfum",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "8d7529f9961f4a459e47d322a4d35be449a44f5a2d1f25bd193793eed3192bdd",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_3.title:2qciacwtd6uki",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "4786e6f152db335ebeee17fe894463c401873ca809f818531159d964a4a6369a",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.banner_features.feature_3.text:157axbl88tbnj",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "eada81578a6e22683783179f1154491d822cb5435fbeb532dc2a64d4887ffcc7",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.image:2p8pwfhgqjafy",
+        "type": "FILE_REFERENCE",
+        "digest": "983f6142ffd5a4cae45b2fc54267d651fb215947747637959e6a3879ce0bd3b1",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_header.title:2ora0b8xciu5d",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "97666357604928b175f2941ae20cc135fe62f3a9244ae4471f3a92fe15427edb",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_1.bold_prefix:1c4mc44quyymd",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "a79c1cd661cebccc5a0748a3e33ed1a0502aa462d81e90effbddeec7eefc4132",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_1.text:20diw89vgn6ia",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "b251bccdd2012f2531eba2de3d078be71c5da006ec8516ce72f2f9bd4584a1a2",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_2.bold_prefix:1mjmuxoy32xie",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "c7de2686bb75b47e50d19b1a5cd1537addb029c64a4018790d790849c0128773",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_2.text:1swngrn9zg54h",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "123449b32ff9e29168a5e396a95f938c7e9c6a2c4afc7e2733fcb84e49ff5240",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_3.bold_prefix:ld6no4wy3ddz",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "4138cb52ac0f808c7b5cd7a497e81f4cdc06acff3a9e316911c0899b5a1107b8",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_3.text:3kv2kpuh2ncts",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "77756fbac7d5e261436073ba5592faaaa517ed2e45d34fd7c857a52819554ffe",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_4.bold_prefix:84evc3q95tr4",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "70f6c6f799d0f9166e507165264bda37defc6d7928db8631c035b762243af56f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_4.text:1jx8utsknev3r",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "234af386fd979846b1db05ea79bb8707a5ded3a41b7b71e93c0926c432d3d20f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_5.bold_prefix:333cp3lv8yqf5",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7241b15f11ae3036298766b56921cbd1748e474178f9603abe7ae2aca0ab5875",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.use_5.text:3bvnyrzrqm2t2",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "e8c96037c8464bd71d52c3033954587d31b9aeac890715e2c38a498dfab34ab8",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_header.title:28evmopdiduke",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7029ded88b9e256701feb403381ad5f41cc7ee11f162bb7acafb916bfac5c3f4",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_1.bold_prefix:1p8dfn70qr62i",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "479f9e94147fcf2348e549bcd7e9baeef82ad70b00aca47460e4ccdef9cfc382",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_1.text:13wm9n5286rl9",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "0e5f142b3ac853807934d7d8c725eb85064c5b02bb572af374ed939cd3265c53",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_2.bold_prefix:3j382531ilel5",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "b7e31a0d4c87bff32b44087a4ea6d1d9107a4f580dea27893590e04329aecc8f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_2.text:1vdsd4tcz5er2",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "98604eb45c3691519ba8d9114ca57c8bad47493e3a419c9b0a3c381d5007ec83",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_3.bold_prefix:28wsfhumf75iw",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "3d192dd4e028c47c8d37b782068a4d21dc12c5b1124a1435913b7f8e4dc676e6",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.how_to.safety_3.text:1ozgr8o7r7ajz",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "e5fa5bf384db4fe8df528404fbc1b6136f30801ac37cf18439d8cf630afbd546",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.heading:1q3a5h32k0zzn",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "63843b033f9ec35dd222ffc28503324fd5083b67ca7bcd7603bf14f49f987625",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.subheading:1cenvuvjhd1tj",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "3289789986820157e0ccba30ed6afde504c8d35a8763e3ecc900c2e22f7b4fba",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_1.question:bogl89dmvcye",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "6c1da323680e4e3ce3a33c8fe1258d48bc3793ef2a0e899ba414c8ca7328bba9",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_1.answer:2jduly5yvlpqc",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "e4a403d58caf337b6430317cde9836a79df40a45d18570b184cbfd406d1e274f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_2.question:351o8xlhx5jrp",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "dbf86935b580783b0022e10fb8b4b55f291bc9de9b501fbec21d1261441239a8",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_2.answer:2o3zobdsxcao7",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "584c2c29401b52eda88882cda04ecbf8382228a66d3380d56ac0ab428a4c3627",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_3.question:9pog4q9b8q1g",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "6ed54546686de7b6f900ca59cff81f25c1f1f73e02802ce05ca46cb15d20a10f",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_3.answer:2ublebjbhujgm",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "194389c01c5b1c65faaf3bed312ea763d85ae6460ad8a0c5cca561f2201869bb",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_4.question:1vlbohyx4tsyb",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "4f39f2e7d1a99d30883d4b32e6f1aade18309e6fb1f11f685d1deeb6e54e74a6",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_4.answer:1wnnd6ssm9aip",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "9f7e6531f2a470644d0975cb22a372bbae9d340db974a4721ebc2455e9c85825",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_5.question:2wepwq5unpg0i",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "988f600560f66f5f1ebb113988752c47d3f1d72a2727c90f79dd0e26ab0de7ec",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_5.answer:22v936yb6rjb4",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "4a125524ea04b393b5126c31e9a95c8d7f313ce4f28ed231ca923baeda66c940",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_6.question:1tmjjefst761d",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "2f83854c2a7006e32fe74381ac05468e96194c964db403bcfd5171517053b335",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.faq.faq_6.answer:27le5k658i48z",
+        "type": "RICH_TEXT_FIELD",
+        "digest": "704aa6839738bd0ebb7a02d3702d7da3e7116d07865d4e0a2665028d223c9c08",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "section.product.21200-aero-comfort.json.compare_modal.heading:2fceu49lu1w46",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "f3fae23513ddffce6a33f8ba0e201a9e571f381e371ba75a0c841b51cfe4a6b9",
+        "fr": true,
+        "outdated": false
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Metaobject/625331994797",
+    "totalFields": 3,
+    "totalFr": 0,
+    "fields": [
+      {
+        "key": "name",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "65f4e22dcc5f2e09a087a0cbb2799ad4ce3f1d0ec7c98854b84be5c1120cbda0",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "short_description",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "f556cc428e2aea9366694c2849b7e9056f141511062d2ec28b43d087dd6e4a8c",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "description",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "38eb1d845bfb04dd8cbd2ae49082d7afb4e9259a7ed374b5f658d1c828bf524e",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Metaobject/625332093101",
+    "totalFields": 3,
+    "totalFr": 0,
+    "fields": [
+      {
+        "key": "name",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "2fe1315a21dd6e43022edc75fed3a92869204f6e0e38bae782cf089d2eec8642",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "short_description",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "b747be3d0f26b38eb1b48527685abdfc02023f8b586e6b6b2fcaac3e1c4b22a5",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "description",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "3470c22b3cd6d5439d6dd88fa6a8c6a19a33a845e5d9bbc77ebc9a18f5845cfa",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Metaobject/625355849901",
+    "totalFields": 3,
+    "totalFr": 0,
+    "fields": [
+      {
+        "key": "name",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "05b94019f4820bd9e21344aed42433e1467ac5cf57e7ba4a6df3b37434c442a8",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "short_description",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "7391ee0888387afbcd73379de58145af55525577cf916312593e94c27a3f5798",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "description",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "386c4c4dbad5ada4cfa89ad39d2a33c24e63e7442cf7bfe7d075050e4f22c7b3",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Metaobject/625356013741",
+    "totalFields": 3,
+    "totalFr": 0,
+    "fields": [
+      {
+        "key": "name",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "6ed6f4e5c74a2f980cb4c9d4ca98858d7b9f66d1b3835023b0c99473cc282e0d",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "short_description",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "29624aef6a0c3967cdfda4755d19ed5cb8e1761c8cfc767d3aa3c910d37f65c8",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "description",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "a9e6cfb6e07ee3654e6b70b8b786c7af2e716846d8ad2ce190270459fc59c16a",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Metaobject/625356243117",
+    "totalFields": 3,
+    "totalFr": 0,
+    "fields": [
+      {
+        "key": "name",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "e818b7379aa43476c8ef1e5920a087bd64eeddd62d29c73ee74a8f5d21637f66",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "short_description",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "15c5e08bdba5afd50a6e766332ac9c2aa98348c494560f9b6072774e2be3a40c",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "description",
+        "type": "MULTI_LINE_TEXT_FIELD",
+        "digest": "c9d9f044e3c5ac277e7b8cbe5d0ad882c5a05156ff50ed6830282aa009b5d5eb",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/8744551645357",
+    "totalFields": 4,
+    "totalFr": 3,
+    "fields": [
+      {
+        "key": "title",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "dfb082d53289e83dbe10a13443ce2dbb8261130b12cc73736594b9de53bc0517",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "body_html",
+        "type": "HTML",
+        "digest": "9c71513304efe359df731f7fb9122d15acaa5b9933971d2ce08f9fb38d9d5947",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "handle",
+        "type": "URI",
+        "digest": "e929cc09cbd459ba2dcfb5c1513cb0fdc7f45cc88cc3fe7470b3b43b9795bcc8",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "product_type",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "0c727b265cb4fe25ec101bec17655e67ae1897c07dd191eabbb081e88d496c1a",
+        "fr": true,
+        "outdated": false
+      }
+    ]
+  },
+  {
+    "id": "gid://shopify/Product/8744553873581",
+    "totalFields": 4,
+    "totalFr": 2,
+    "fields": [
+      {
+        "key": "title",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "31ca5bdeb25d3729414423326c90f61fd230683f1d62631c285ddf4f8114e29e",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "body_html",
+        "type": "HTML",
+        "digest": "885a67c673750c09b1422218ec0e586b2254c650672fcf22b121a96feea13998",
+        "fr": true,
+        "outdated": false
+      },
+      {
+        "key": "handle",
+        "type": "URI",
+        "digest": "f5dbb2ad1b30bec4c57992f203986df979b5be39043306d2ffe9ad4426323100",
+        "fr": false,
+        "outdated": null
+      },
+      {
+        "key": "product_type",
+        "type": "SINGLE_LINE_TEXT_FIELD",
+        "digest": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fr": false,
+        "outdated": null
+      }
+    ]
+  }
+]

@@ -1,0 +1,237 @@
+{
+  "shop": "equipro-dev.myshopify.com",
+  "themeId": "157851386029",
+  "date": "2026-11-23",
+  "deployAuthorized": false,
+  "description": "Union of immutable nine-UPDATE corrective batch and selective consolidation. Seven overlapping files written once at final content. Requires specific authorization for these 18 paths and hashes.",
+  "files": [
+    {
+      "path": "assets/custom-spa-pack-builder.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/custom-spa-pack-builder.css",
+      "remoteContentSha256": "983e30c9275f1d71440d17ef1532ef630aa81789244acfae72e0fcd489a2b99e",
+      "shopifyChecksumMd5": "a11bced1d427b531de2ab0a5a3e54699",
+      "candidateSha256": "0c110aa044c55d063a666fd8b8e7194aed4649dbcad3f5b6230ef7c236e2b6af",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "assets/product-form.js",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/product-form.js",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "candidateSha256": "574e0fd7f84d1cea1ed225ee3c437d85f18e774237b5d2e2342127a0f851c8e6",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "assets/section-category-subnav.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/section-category-subnav.css",
+      "remoteContentSha256": "c96b1d51744e4d0f274f92e0b815f0dbb83917bc206d22f353a63505f5a0da46",
+      "shopifyChecksumMd5": "610656f1f2cd84177645030c1118c4ac",
+      "candidateSha256": "a60179cd4745fb8467047aa828c23bb7a410f028717a9935d4fa36751bd82945",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/assets/section-main-product.css",
+      "remoteContentSha256": "b5c0610ad41996fcd795fe8135cc015eae425b91e34b81ed01e1fcc2f1c76202",
+      "shopifyChecksumMd5": "ad8484f624e3b2410432748e5bf455b9",
+      "candidateSha256": "c49ef298813fb03f030faa8294780ee2dda199987ec4cb3cae04bbadc05c6a40",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "locales/en.default.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/locales/en.default.json",
+      "remoteContentSha256": "6b7678b692dba278164ce9fe8a6daa374a731299d715a78b72a8d350f8b585b8",
+      "shopifyChecksumMd5": "f00fe032f671203899783a29a35afa3d",
+      "candidateSha256": "385bbe641b5d844355dcc7a45cf1068aab2a97d5d3b3eca6374212ed491e6e5f",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "locales/fr.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/locales/fr.json",
+      "remoteContentSha256": "d6c8827e8077c0840a146b4984aa59c72ce61aa78866c7bb55183fc4e09722e5",
+      "shopifyChecksumMd5": "1e7dda02cc2e5300d75511f2b63af2e4",
+      "candidateSha256": "e8ed0de6181d7c8a1a933af400930fd4975b61e81cdcd5f48a77b3eb374da6d4",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/category-subnav.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/category-subnav.liquid",
+      "remoteContentSha256": "96060f968015b96c7afde9daddb8713b404e2e32aee641d7687340b91610bad1",
+      "shopifyChecksumMd5": "2e6c99cd9e9570e08714ae01e827bc7d",
+      "candidateSha256": "5665efb4edbcfb5d135bd63dc0a384e0a2edd9e50303d5097f2790828ff446ea",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/complete-your-setup.liquid",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/complete-your-setup.liquid",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "candidateSha256": "56e2b569b337eba8ace21a7f91fd7aa8c1a385e4aa5411178963f35e9f7cd352",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/custom-spa-pack-builder.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/custom-spa-pack-builder.liquid",
+      "remoteContentSha256": "9f4e12a14f8ebc6bc2f347358401e63dd6a80f0e2684f944b118d703865bd3fd",
+      "shopifyChecksumMd5": "1d0983a771952285eaaa885f3d35e061",
+      "candidateSha256": "74e4df889497a11ace3555fbdc1889da590eb70021e675dcb57404ac37f0ebe2",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/custom-subcategory-slider.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/custom-subcategory-slider.liquid",
+      "remoteContentSha256": "ab13e55852a6ee5f5cdc7916ade9410aa89698c8685cffd3b70f4085bb40f622",
+      "shopifyChecksumMd5": "181c87a519b50b31d728e9f54bcf9b2f",
+      "candidateSha256": "9e5a0443326dd911526301247968833391749e0ff303fb7900ce669f8c7b79d4",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/main-cart-items.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/main-cart-items.liquid",
+      "remoteContentSha256": "c9a5328a0658c48f285307daa68a8692521b6edf8e776e9dc7f915727c7503cf",
+      "shopifyChecksumMd5": "18a3c6c185b533651ec3697f3b3578af",
+      "candidateSha256": "f6176c19e89126f92107efdcc75de0f6ff49052408402fc1b2fc70492c338bfe",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": false
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/main-product.liquid",
+      "remoteContentSha256": "c9ca26944384f895cc9e7cfc9e895ffe8944939b304efb390f3c6f7b401cad9f",
+      "shopifyChecksumMd5": "9bbc06c7b557d7e8c48735361e4daadc",
+      "candidateSha256": "d702b79b6f906ecaca71d160ac18718b0788c19e59de5efaf60fb359ac8853e9",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "sections/product-compare-modal.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/sections/product-compare-modal.liquid",
+      "remoteContentSha256": "40c96eb23cbc75b0cb4d632e49f1f0d69e4cfdac3c5cd9b31d0ac1072ba4478a",
+      "shopifyChecksumMd5": "fca050ce642faa46b4bcdea2bbfb97f0",
+      "candidateSha256": "f67d14c0ffc2b625df12efd0164a7a57f9c8b1a34bde0a65a6c253b01e3989f3",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": false
+    },
+    {
+      "path": "snippets/professional-profile-panel.liquid",
+      "operation": "ADD",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/snippets/professional-profile-panel.liquid",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "candidateSha256": "9b7b2121608faf05ee5529782bace920c3b3448f6d72a30ba58e15ed7637622e",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "snippets/quote-modal.liquid",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/snippets/quote-modal.liquid",
+      "remoteContentSha256": "35284af3d7cf8c7a990797570afc39d3063461f52bb752ac17626027cb474fb1",
+      "shopifyChecksumMd5": "604b0d6dd8d60fb0df7efe50b6215aa2",
+      "candidateSha256": "cd15a17ec470eacb8b957f5fa101da11e8be1357bae220d38a5dd01e64cba25b",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "templates/index.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/index.json",
+      "remoteContentSha256": "baf5e54f2f4e3841a5ac3c79f6fcf3327fdac3654fbebcbebdb4be0417641cd5",
+      "shopifyChecksumMd5": "c7df2f765aa7eba02441ac4005c76641",
+      "candidateSha256": "dc5c96045156b769f33c342ab5bc21dd717ddee006a1b11b4d1a5e57fcc38c51",
+      "includesCorrectiveBatch": true,
+      "includesConsolidation": true
+    },
+    {
+      "path": "templates/product.51101-tm-3-standard.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/product.51101-tm-3-standard.json",
+      "remoteContentSha256": "7a44e232888c5111804d850a00e3e813e89d15c917581a7396a9d8306cb21b29",
+      "shopifyChecksumMd5": "408054b4500724673484d0bb4391d4ed",
+      "candidateSha256": "c06909dae6a1883f7716defbe7091d188ce0cc0cae83e776d12672c6f80f49ac",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    },
+    {
+      "path": "templates/product.ei-501-royal.json",
+      "operation": "UPDATE",
+      "candidatePath": "docs/r11v-main-consolidation/candidate/templates/product.ei-501-royal.json",
+      "remoteContentSha256": "54dcc359ad50bac24d02050e10f2b4c82f86aafafe72d252de29c2947b038b75",
+      "shopifyChecksumMd5": "d85bd1f696c316a6306ae742ab43b15e",
+      "candidateSha256": "6fc0171cfcbdaf969f2ffec77c340f5f0a654a73719ea845cc7fc77e524ddeb0",
+      "includesCorrectiveBatch": false,
+      "includesConsolidation": true
+    }
+  ],
+  "preservedRuntime": [
+    "assets/cart-drawer.js",
+    "assets/quote-modal.js",
+    "layout/theme.liquid",
+    "sections/header.liquid",
+    "sections/footer.liquid",
+    "assets/shipping-calculator.js"
+  ],
+  "frPublished": false,
+  "recovery": "STOP on partial failure. Restore only with separate authorization from preflight-2026-11-23/remote-before. Added file deletion needs separate authorization.",
+  "supportFilesNotUploaded": [
+    {
+      "path": "layout/theme.liquid",
+      "purpose": "Exact MAIN readback supplied only for Shopify CLI directory validation; absent from all --only arguments.",
+      "sha256": "81f466c5b2968158d250aca99cf4f9f6d12a461a3069549771a92191ef5e0225"
+    },
+    {
+      "path": "config/settings_schema.json",
+      "purpose": "CLI directory validation only; exact file from verified TR-02A.2 MAIN snapshot; excluded from --only list",
+      "sha256": "d76704d3b4ccf579f97a66b1875fc020d1fa6ce224073a04873b27b30f4ee5d5"
+    }
+  ],
+  "validation": {
+    "checkoutPass": 123,
+    "checkoutFail": 0,
+    "exactPackagePass": 121,
+    "exactPackageFail": 2,
+    "exceptions": [
+      {
+        "test": "homepage mappings fix the three stale placements and LFM; Infinity links to the Admin-verified active Online Store product",
+        "classification": "Expectation requires existing local commercial card mappings excluded from approved MAIN package. Original test retained."
+      },
+      {
+        "test": "claim corrections preserve technical tables, identity, section order, options, pricing references and safety fields",
+        "classification": "First mismatch is the same homepage product-reference field; not a newly altered technical field. Original test retained."
+      }
+    ],
+    "logs": [
+      "full-tests-2026-11-23.tap",
+      "package-tests-2026-11-23.tap"
+    ],
+    "scope": "Read-only test overlay selects exact candidates and fresh MAIN dependencies without constructing another environment."
+  },
+  "themeCheck": {
+    "baseline": 49,
+    "current": 49,
+    "new": 0
+  }
+}

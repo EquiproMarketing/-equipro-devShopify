@@ -1,0 +1,110 @@
+{% doc %}
+  Shared profile panel for selected professional_profile entries and legacy homepage blocks.
+  @param {metaobject} [profile] - Active profile resolved by native system handle.
+  @param {block} [legacy_block] - Existing section block used only by the fallback.
+  @param {section} section - Section labels and identity.
+  @param {boolean} first - Whether this is the initially selected panel.
+  @param {string} tab_id - Associated tab ID.
+  @param {string} panel_id - Unique panel ID.
+{% enddoc %}
+{%- liquid
+  assign hero_bg = '#1d1d1f'
+  assign hero_text = '#ffffff'
+  assign show_hero = true
+  assign short_description = ''
+  assign description = ''
+  assign hero_image = ''
+  assign related_collections = ''
+  if profile.system.type == 'professional_profile'
+    assign hero_title = profile.name.value
+    assign short_description = profile.short_description.value
+    assign description = profile.description.value
+    if profile.image.value.media_type == 'image'
+      assign hero_image = profile.image.value.preview_image
+    endif
+    assign related_collections = profile.related_collections.value
+  else
+    assign show_hero = legacy_block.settings.show_hero_card
+    assign hero_title = legacy_block.settings.hero_title
+    assign description = legacy_block.settings.hero_subtitle
+    assign hero_image = legacy_block.settings.hero_image
+    assign hero_bg = legacy_block.settings.hero_bg | default: hero_bg
+    assign hero_text = legacy_block.settings.hero_text_color | default: hero_text
+  endif
+-%}
+<div class="spa-pack-panel{% if first %} is-active{% endif %}" id="{{ panel_id }}" role="tabpanel" aria-labelledby="{{ tab_id }}" tabindex="0" {% unless first %}hidden{% endunless %}{% if profile.system.handle != blank %} data-profile-handle="{{ profile.system.handle | escape }}"{% endif %}>
+  <div class="spa-pack-grid">
+    {%- if show_hero -%}
+      <div class="spa-pack-hero-card" style="background-color: {{ hero_bg }}; color: {{ hero_text }};">
+        <div class="spa-pack-hero-card__content">
+          {%- if hero_title != blank -%}<h3 class="spa-pack-hero-card__title">{{ hero_title | escape }}</h3>{%- endif -%}
+          {%- if short_description != blank -%}<p class="spa-pack-hero-card__subtitle">{{ short_description | escape }}</p>{%- endif -%}
+          {%- if description != blank -%}<p class="spa-pack-hero-card__subtitle">{{ description | escape | newline_to_br }}</p>{%- endif -%}
+          {%- if related_collections != blank -%}
+            <ul class="spa-pack-profile-collections" aria-label="{{ section.settings.collections_label | default: 'Related collections' | escape }}">
+              {%- assign seen_collections = '|' -%}
+              {%- for related in related_collections -%}
+                {%- assign token = '|' | append: related.id | append: '|' -%}
+                {%- unless related.id == blank or related.url == blank or seen_collections contains token -%}
+                  <li><a href="{{ related.url }}">{{ related.title | escape }}</a></li>
+                  {%- assign seen_collections = seen_collections | append: token -%}
+                {%- endunless -%}
+              {%- endfor -%}
+            </ul>
+          {%- endif -%}
+        </div>
+        {%- if hero_image != blank -%}
+          <div class="spa-pack-hero-card__image-wrapper">
+            {{ hero_image | image_url: width: 800 | image_tag: loading: 'lazy', class: 'spa-pack-hero-card__image' }}
+          </div>
+        {%- endif -%}
+      </div>
+    {%- endif -%}
+    {%- assign seen_products = '|' -%}
+    {%- liquid
+      if profile.system.type == 'professional_profile'
+        assign card_entries = profile.featured_products.value
+      else
+        assign card_entries = (1..6)
+      endif
+    -%}
+    {%- for card_entry in card_entries limit: 6 -%}
+      {%- liquid
+        assign selected_product = card_entry
+        assign custom_badge = ''
+        unless profile.system.type == 'professional_profile'
+          assign product_key = 'product_' | append: forloop.index
+          assign badge_key = 'badge_' | append: forloop.index
+          assign selected_product = legacy_block.settings[product_key]
+          assign custom_badge = legacy_block.settings[badge_key]
+        endunless
+        assign token = '|' | append: selected_product.id | append: '|'
+        if selected_product.id == blank or selected_product.url == blank or seen_products contains token
+          continue
+        endif
+        assign seen_products = seen_products | append: token
+        assign category = selected_product.type | split: '/' | last | replace: '-', ' ' | replace: '_', ' ' | strip | capitalize
+      -%}
+      <a href="{{ selected_product.url }}" class="spa-pack-card{% if selected_product.images.size > 1 %} spa-pack-card--has-secondary{% endif %}">
+        <div class="spa-pack-card__image-container">
+          {%- if selected_product.featured_image != blank -%}
+            <img src="{{ selected_product.featured_image | image_url: width: 500 }}" alt="" loading="lazy" width="240" height="300" class="spa-pack-card__image spa-pack-card__image--primary">
+            {%- if selected_product.images.size > 1 -%}
+              <img src="{{ selected_product.images[1] | image_url: width: 500 }}" alt="" loading="lazy" width="240" height="300" class="spa-pack-card__image spa-pack-card__image--secondary">
+            {%- endif -%}
+          {%- else -%}
+            {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
+          {%- endif -%}
+        </div>
+        <div class="spa-pack-card__content">
+          {%- if custom_badge != blank -%}<span class="spa-pack-card__tag">{{ custom_badge | escape }}</span>
+          {%- elsif category != blank -%}<span class="spa-pack-card__tag">{{ category | escape }}</span>{%- endif -%}
+          <h3 class="spa-pack-card__title">{{ selected_product.title | escape }}</h3>
+          {%- if selected_product.price_min > 0 -%}
+            <p class="spa-pack-card__price">{% if selected_product.price_varies %}{{ section.settings.price_from_label | default: 'From' | escape }} {% endif %}{{ selected_product.price_min | money }}</p>
+          {%- endif -%}
+        </div>
+      </a>
+    {%- endfor -%}
+  </div>
+</div>

@@ -1,0 +1,23 @@
+.find-your-setup { padding: 24px 0; background: #f5f5f7; }
+.find-your-setup .find-your-setup__header { display: flex; align-items: center; justify-content: space-between; gap: 20px; }
+.find-your-setup .find-your-setup__header h2 { font-size: 1.5rem; margin: 0 0 6px; }
+.find-your-setup .find-your-setup__header p,
+.find-your-setup .find-your-setup__message { color: #515154; margin: 8px 0 0; font-size: .9rem; }
+.find-your-setup .find-your-setup__skip { color: #8e2637; font-weight: 600; text-decoration: underline; text-underline-offset: 3px; flex-shrink: 0; }
+.find-your-setup .find-your-setup__group { border: 0; padding: 0; margin: 20px 0 0; min-width: 0; }
+.find-your-setup .find-your-setup__group legend { font-weight: 600; margin-bottom: 10px; font-size: .9rem; }
+.find-your-setup .find-your-setup__choices { display: flex; flex-wrap: wrap; gap: 8px; list-style: none; padding: 0; margin: 0; }
+.find-your-setup .find-your-setup__choice { display: inline-block; padding: 10px 16px; border: 1px solid #d5d5da; border-radius: 24px; color: #303033; background: #fff; text-decoration: none; font-size: .9rem; overflow-wrap: anywhere; }
+.find-your-setup .find-your-setup__choice.is-active { background: #8e2637; border-color: #8e2637; color: #fff; }
+.find-your-setup .find-your-setup__choice.is-disabled { color: #626269; background: transparent; }
+.find-your-setup .find-your-setup__results { margin: 16px 0 0; font-size: .9rem; color: #515154; }
+.find-your-setup a:focus-visible { outline: 3px solid #8e2637; outline-offset: 3px; }
+.find-your-setup__catalog { scroll-margin-top: 120px; }
+.find-your-setup__catalog .collection-products__pagination { display: flex; justify-content: center; gap: 16px; padding-top: 28px; }
+.find-your-setup__catalog .collection-products__pagination a:focus-visible { outline: 3px solid #ab273b; outline-offset: 3px; }
+.find-your-setup__catalog .custom-treatment-card { width: auto; max-width: none; min-width: 0; }
+.find-your-setup__catalog .custom-treatment-card__content { overflow-wrap: anywhere; }
+@media (max-width: 640px) {
+  .find-your-setup .find-your-setup__header { align-items: flex-start; flex-direction: column; gap: 8px; }
+  .find-your-setup .find-your-setup__choices { gap: 8px; }
+}

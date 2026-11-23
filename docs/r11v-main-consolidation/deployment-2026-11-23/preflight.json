@@ -1,0 +1,135 @@
+{
+  "capturedAt": "2026-11-23T13:58:01.307232+00:00",
+  "shop": "equipro-dev.myshopify.com",
+  "themeId": "157851386029",
+  "role": "MAIN",
+  "files": [
+    {
+      "path": "assets/custom-spa-pack-builder.css",
+      "operation": "UPDATE",
+      "remoteContentSha256": "983e30c9275f1d71440d17ef1532ef630aa81789244acfae72e0fcd489a2b99e",
+      "shopifyChecksumMd5": "a11bced1d427b531de2ab0a5a3e54699",
+      "pass": true
+    },
+    {
+      "path": "assets/product-form.js",
+      "operation": "ADD",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "pass": true
+    },
+    {
+      "path": "assets/section-category-subnav.css",
+      "operation": "UPDATE",
+      "remoteContentSha256": "c96b1d51744e4d0f274f92e0b815f0dbb83917bc206d22f353a63505f5a0da46",
+      "shopifyChecksumMd5": "610656f1f2cd84177645030c1118c4ac",
+      "pass": true
+    },
+    {
+      "path": "assets/section-main-product.css",
+      "operation": "UPDATE",
+      "remoteContentSha256": "b5c0610ad41996fcd795fe8135cc015eae425b91e34b81ed01e1fcc2f1c76202",
+      "shopifyChecksumMd5": "ad8484f624e3b2410432748e5bf455b9",
+      "pass": true
+    },
+    {
+      "path": "locales/en.default.json",
+      "operation": "UPDATE",
+      "remoteContentSha256": "6b7678b692dba278164ce9fe8a6daa374a731299d715a78b72a8d350f8b585b8",
+      "shopifyChecksumMd5": "f00fe032f671203899783a29a35afa3d",
+      "pass": true
+    },
+    {
+      "path": "locales/fr.json",
+      "operation": "UPDATE",
+      "remoteContentSha256": "d6c8827e8077c0840a146b4984aa59c72ce61aa78866c7bb55183fc4e09722e5",
+      "shopifyChecksumMd5": "1e7dda02cc2e5300d75511f2b63af2e4",
+      "pass": true
+    },
+    {
+      "path": "sections/category-subnav.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "96060f968015b96c7afde9daddb8713b404e2e32aee641d7687340b91610bad1",
+      "shopifyChecksumMd5": "2e6c99cd9e9570e08714ae01e827bc7d",
+      "pass": true
+    },
+    {
+      "path": "sections/complete-your-setup.liquid",
+      "operation": "ADD",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "pass": true
+    },
+    {
+      "path": "sections/custom-spa-pack-builder.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "9f4e12a14f8ebc6bc2f347358401e63dd6a80f0e2684f944b118d703865bd3fd",
+      "shopifyChecksumMd5": "1d0983a771952285eaaa885f3d35e061",
+      "pass": true
+    },
+    {
+      "path": "sections/custom-subcategory-slider.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "ab13e55852a6ee5f5cdc7916ade9410aa89698c8685cffd3b70f4085bb40f622",
+      "shopifyChecksumMd5": "181c87a519b50b31d728e9f54bcf9b2f",
+      "pass": true
+    },
+    {
+      "path": "sections/main-cart-items.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "c9a5328a0658c48f285307daa68a8692521b6edf8e776e9dc7f915727c7503cf",
+      "shopifyChecksumMd5": "18a3c6c185b533651ec3697f3b3578af",
+      "pass": true
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "c9ca26944384f895cc9e7cfc9e895ffe8944939b304efb390f3c6f7b401cad9f",
+      "shopifyChecksumMd5": "9bbc06c7b557d7e8c48735361e4daadc",
+      "pass": true
+    },
+    {
+      "path": "sections/product-compare-modal.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "40c96eb23cbc75b0cb4d632e49f1f0d69e4cfdac3c5cd9b31d0ac1072ba4478a",
+      "shopifyChecksumMd5": "fca050ce642faa46b4bcdea2bbfb97f0",
+      "pass": true
+    },
+    {
+      "path": "snippets/professional-profile-panel.liquid",
+      "operation": "ADD",
+      "remoteContentSha256": null,
+      "shopifyChecksumMd5": null,
+      "pass": true
+    },
+    {
+      "path": "snippets/quote-modal.liquid",
+      "operation": "UPDATE",
+      "remoteContentSha256": "35284af3d7cf8c7a990797570afc39d3063461f52bb752ac17626027cb474fb1",
+      "shopifyChecksumMd5": "604b0d6dd8d60fb0df7efe50b6215aa2",
+      "pass": true
+    },
+    {
+      "path": "templates/index.json",
+      "operation": "UPDATE",
+      "remoteContentSha256": "baf5e54f2f4e3841a5ac3c79f6fcf3327fdac3654fbebcbebdb4be0417641cd5",
+      "shopifyChecksumMd5": "c7df2f765aa7eba02441ac4005c76641",
+      "pass": true
+    },
+    {
+      "path": "templates/product.51101-tm-3-standard.json",
+      "operation": "UPDATE",
+      "remoteContentSha256": "7a44e232888c5111804d850a00e3e813e89d15c917581a7396a9d8306cb21b29",
+      "shopifyChecksumMd5": "408054b4500724673484d0bb4391d4ed",
+      "pass": true
+    },
+    {
+      "path": "templates/product.ei-501-royal.json",
+      "operation": "UPDATE",
+      "remoteContentSha256": "54dcc359ad50bac24d02050e10f2b4c82f86aafafe72d252de29c2947b038b75",
+      "shopifyChecksumMd5": "d85bd1f696c316a6306ae742ab43b15e",
+      "pass": true
+    }
+  ],
+  "authorizedBy": "User explicit conditional authorization for exactly final-manifest 18 paths; --nodelete."
+}

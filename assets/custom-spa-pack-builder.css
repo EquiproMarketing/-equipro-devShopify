@@ -111,6 +111,10 @@
     margin: 0 0 12px 0;
     letter-spacing: -0.02em;
   }
+
+  .spa-pack-section .spa-pack-hero-card__title {
+    color: inherit;
+  }
   
   .spa-pack-hero-card__subtitle {
     font-size: 0.95rem;
@@ -233,3 +237,23 @@
     margin-top: auto;
     margin-bottom: 0;
   }
+/* Profile enhancements stay scoped: this stylesheet is also used by product pages. */
+.spa-pack-section .spa-pack-pill-wrapper { padding: 4px; }
+.spa-pack-section .spa-pack-pill-bar { flex: 0 0 auto; }
+.spa-pack-section .spa-pack-panel[hidden] { display: none; }
+.spa-pack-section .spa-pack-grid { min-width: 0; }
+.spa-pack-section .spa-pack-card { box-sizing: border-box; min-width: 0; }
+.spa-pack-section .spa-pack-card__content { overflow-wrap: anywhere; }
+.spa-pack-section .spa-pack-profile-collections { list-style: none; padding: 0; margin: 16px 0 0; }
+.spa-pack-section .spa-pack-profile-collections li + li { margin-top: 8px; }
+.spa-pack-section .spa-pack-profile-collections a { color: inherit; text-decoration: underline; }
+.spa-pack-section .spa-pack-hero-card__subtitle + .spa-pack-hero-card__subtitle { margin-top: 12px; }
+.spa-pack-section .spa-pack-explore-all { display: inline-block; margin: -16px 0 24px; color: #ab273b; }
+.spa-pack-section :is(.spa-pack-pill-item, a, .spa-pack-panel):focus-visible { outline: 3px solid #ab273b; outline-offset: 2px; }
+.spa-pack-section .spa-pack-card:not(.spa-pack-card--has-secondary):hover .spa-pack-card__image--primary { opacity: 1; }
+@media (max-width: 640px) {
+  .spa-pack-section .spa-pack-pill-item { font-size: .82rem; padding: 9px 14px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .spa-pack-section :is(.spa-pack-pill-item, .spa-pack-card, .spa-pack-card__image) { transition: none; transform: none; }
+}

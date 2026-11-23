@@ -1,0 +1,281 @@
+{{ 'custom-subcategory-slider.css' | asset_url | stylesheet_tag }}
+
+<section class="custom-subcat-section" id="subcat-section-{{ section.id }}">
+  <div class="page-width">
+    {%- if section.settings.title != blank -%}
+      <h2 class="custom-subcat-section__title">{{ section.settings.title | escape }}</h2>
+    {%- endif -%}
+
+    <!-- INFINITE CSS MARQUEE CONTAINER WITH DRAG / TOUCH SUPPORT -->
+    <div class="custom-subcat-marquee-wrapper" data-marquee-container>
+      <div class="custom-subcat-track">
+        
+        {%- comment -%} REPEAT 4 TIMES TO ENSURE TRACK IS ALWAYS FULL AND NEVER SHOWS BLANK SPACE {%- endcomment -%}
+        {%- for i in (1..4) -%}
+          {%- for block in section.blocks -%}
+            {%- assign target_col = block.settings.collection -%}
+            {%- assign target_prod = block.settings.product -%}
+            
+            {%- if target_col != blank -%}
+              {%- assign display_url = target_col.url -%}
+              {%- assign display_title = block.settings.title | default: target_col.title -%}
+              {%- assign display_image = block.settings.image | default: target_col.image -%}
+              {%- assign display_subtitle = block.settings.subtitle | default: target_col.description | strip_html | truncatewords: 15 -%}
+              {%- assign display_price = '' -%}
+              {%- assign is_product = false -%}
+            {%- elsif target_prod != blank -%}
+              {%- assign display_url = target_prod.url -%}
+              {%- assign display_title = block.settings.title | default: target_prod.title -%}
+              {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
+              {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
+              {%- capture display_price -%}
+                {%- if block.settings.price != blank -%}
+                  {{ block.settings.price }}
+                {%- elsif target_prod.price_varies -%}
+                  {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
+                {%- else -%}
+                  {{ target_prod.price | money }}
+                {%- endif -%}
+              {%- endcapture -%}
+              {%- assign is_product = true -%}
+            {%- else -%}
+              {%- assign display_url = block.settings.link | default: '#' -%}
+              {%- assign display_title = block.settings.title | default: 'Select a category or product' -%}
+              {%- assign display_image = block.settings.image -%}
+              {%- assign display_subtitle = block.settings.subtitle -%}
+              {%- assign display_price = block.settings.price -%}
+              {%- assign is_product = false -%}
+            {%- endif -%}
+
+            {%- assign hover_image = blank -%}
+            {%- if block.settings.enable_hover -%}
+              {%- if block.settings.hover_image != blank -%}
+                {%- assign hover_image = block.settings.hover_image -%}
+              {%- elsif target_prod != blank and target_prod.media.size > 1 -%}
+                {%- assign hover_image = target_prod.media[1].preview_image -%}
+              {%- endif -%}
+            {%- endif -%}
+
+            <div class="custom-subcat-slide" {% if i > 1 %}aria-hidden="true"{% endif %} {{ block.shopify_attributes }}>
+              <div class="custom-subcat-card">
+                
+                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" {% if i > 1 %}tabindex="-1"{% endif %} style="width: 100%;">
+                  <div class="custom-subcat-card__image-container" style="background-color: {{ block.settings.card_bg_color | default: '#f5f5f7' }};">
+                    {%- if display_image != blank -%}
+                      <img src="{{ display_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--primary">
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'custom-subcat-card__placeholder' }}
+                    {%- endif -%}
+
+                    {%- if hover_image != blank -%}
+                      <img src="{{ hover_image | image_url: width: 600 }}" alt="{{ display_title | escape }}" loading="lazy" width="280" height="350" class="custom-subcat-card__image custom-subcat-card__image--secondary">
+                    {%- endif -%}
+                  </div>
+                </a>
+
+                {%- if block.settings.available_colors != blank -%}
+                  <div class="custom-subcat-card__swatches">
+                    {%- assign colors = block.settings.available_colors | split: ',' -%}
+                    {%- for color_code in colors -%}
+                      {%- assign clean_color = color_code | strip -%}
+                      {%- if clean_color != blank -%}
+                        <span class="custom-subcat-card__swatch-dot" style="background-color: {{ clean_color }};"></span>
+                      {%- endif -%}
+                    {%- endfor -%}
+                  </div>
+                {%- endif -%}
+
+                <a href="{{ display_url }}" class="custom-subcat-card__link-wrap" {% if i > 1 %}tabindex="-1"{% endif %} style="width: 100%; text-decoration: none;">
+                  <div class="custom-subcat-card__content">
+                    {%- if block.settings.tag != blank -%}
+                      <span class="custom-subcat-card__tag">{{ block.settings.tag }}</span>
+                    {%- endif -%}
+                    <h3 class="custom-subcat-card__title">{{ display_title }}</h3>
+                    {%- if display_subtitle != blank -%}
+                      <p class="custom-subcat-card__subtitle">{{ display_subtitle }}</p>
+                    {%- endif -%}
+                    {%- if display_price != blank -%}
+                      <p class="custom-subcat-card__price">{{ display_price }}</p>
+                    {%- endif -%}
+                  </div>
+                </a>
+
+                {%- if is_product -%}
+                  <div class="custom-subcat-card__actions">
+                    <a href="{{ display_url }}" class="custom-subcat-card__btn" {% if i > 1 %}tabindex="-1"{% endif %}>Comprar</a>
+                  </div>
+                {%- endif -%}
+
+              </div>
+            </div>
+          {%- endfor -%}
+        {%- endfor -%}
+
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const wrapper = document.querySelector('#subcat-section-{{ section.id }} [data-marquee-container]');
+    const track = document.querySelector('#subcat-section-{{ section.id }} .custom-subcat-track');
+    if (!wrapper || !track) return;
+
+    // Duplicamos una vez más el contenido internamente por JS para asegurar margen de maniobra
+    track.innerHTML += track.innerHTML;
+
+    let isDown = false;
+    let startX;
+    let scrollLeft;
+
+    // Infinite loop correction on manual scroll/drag
+    wrapper.addEventListener('scroll', function() {
+      const maxScrollLeft = track.scrollWidth / 2;
+      
+      // Si llega al final del segundo bloque, salta al inicio de forma invisible
+      if (wrapper.scrollLeft >= maxScrollLeft) {
+        wrapper.scrollLeft = wrapper.scrollLeft - maxScrollLeft;
+      } 
+      // Si llega demasiado a la izquierda, salta hacia adelante
+      else if (wrapper.scrollLeft <= 0) {
+        wrapper.scrollLeft = maxScrollLeft + wrapper.scrollLeft;
+      }
+    });
+
+    // Mouse drag support
+    wrapper.addEventListener('mousedown', (e) => {
+      isDown = true;
+      wrapper.classList.add('is-dragging');
+      startX = e.pageX - wrapper.offsetLeft;
+      scrollLeft = wrapper.scrollLeft;
+    });
+
+    wrapper.addEventListener('mouseleave', () => {
+      isDown = false;
+      wrapper.classList.remove('is-dragging');
+    });
+
+    wrapper.addEventListener('mouseup', () => {
+      isDown = false;
+      wrapper.classList.remove('is-dragging');
+    });
+
+    wrapper.addEventListener('mousemove', (e) => {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - wrapper.offsetLeft;
+      const walk = (x - startX) * 2;
+      wrapper.scrollLeft = scrollLeft - walk;
+    });
+  });
+</script>
+{% schema %}
+{
+  "name": "Subcategory Slider",
+  "tag": "section",
+  "class": "section-custom-subcategory-slider",
+  "settings": [
+    {
+      "type": "text",
+      "id": "title",
+      "label": "Section Title",
+      "default": "Explore Subcategories"
+    }
+  ],
+  "blocks": [
+    {
+      "type": "card_item",
+      "name": "Item Card",
+      "settings": [
+        {
+          "type": "header",
+          "content": "Automatic Source (Choose one)"
+        },
+        {
+          "type": "collection",
+          "id": "collection",
+          "label": "Select Collection (Extracts image and description)"
+        },
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Select Product (Extracts info, price and button)"
+        },
+        {
+          "type": "header",
+          "content": "Image & Hover Setup"
+        },
+        {
+          "type": "checkbox",
+          "id": "enable_hover",
+          "label": "Enable secondary image on hover",
+          "default": false,
+          "info": "Enable only on product cards to show the second gallery photo on hover."
+        },
+        {
+          "type": "image_picker",
+          "id": "hover_image",
+          "label": "Custom Hover Image (Optional)"
+        },
+        {
+          "type": "header",
+          "content": "Manual Overrides (Optional)"
+        },
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Custom primary image"
+        },
+        {
+          "type": "color",
+          "id": "card_bg_color",
+          "label": "Card background color",
+          "default": "#f5f5f7"
+        },
+        {
+          "type": "url",
+          "id": "link",
+          "label": "Custom link URL"
+        },
+        {
+          "type": "text",
+          "id": "tag",
+          "label": "Badge / Tag"
+        },
+        {
+          "type": "text",
+          "id": "title",
+          "label": "Custom title"
+        },
+        {
+          "type": "text",
+          "id": "subtitle",
+          "label": "Custom description"
+        },
+        {
+          "type": "text",
+          "id": "price",
+          "label": "Custom price"
+        },
+        {
+          "type": "textarea",
+          "id": "available_colors",
+          "label": "Colors (HEX separated by commas)"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Subcategory Slider",
+      "blocks": [
+        { "type": "card_item" },
+        { "type": "card_item" },
+        { "type": "card_item" },
+        { "type": "card_item" }
+      ]
+    }
+  ]
+}
+{% endschema %}

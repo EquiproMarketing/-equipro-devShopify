@@ -20,9 +20,9 @@
             "overlay_opacity": 15,
             "subheading": "31300 ERGONOMIC AIR-LIFT STOOL",
             "heading": "Close-up of the smooth air-lift mechanism",
-            "text": "Protect your spine and maintain precision. Engineered for heavy-duty daily performance in high-end spas and clinics.",
+            "text": "Adjust your seating position throughout the workday. Engineered for heavy-duty daily performance in high-end spas and clinics.",
             "button_label": "Shop the 31300 Stool",
-            "button_link": "shopify://products/ergonomic-stool-with-backrest",
+            "button_link": "shopify://products/skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
             "subheading_color": "#ffffff",
             "heading_color": "#ffffff",
             "text_color": "#f5f5f7",
@@ -121,7 +121,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipro-multiderm-5-in-1-11800-ultra-modern-aesthetic-workstation.webp",
-            "title": "Facial Units",
+            "title": "Facial units",
             "link": "shopify://collections/facial-units"
           }
         },
@@ -144,7 +144,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipro-63603-circus-magnifier-led-articulated-lamp.webp",
-            "title": "Mag-Lamps",
+            "title": "Magnifying lamps",
             "link": "shopify://collections/mag-lamps"
           }
         },
@@ -160,7 +160,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/ei-111-equipro-classic-facial-steamer-professional-spa-equipment.webp",
-            "title": "Streamers",
+            "title": "Steamers",
             "link": "shopify://collections/streamers"
           }
         },
@@ -168,7 +168,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipros-duo-pil-precision-digital-wax-warmer_41202.webp",
-            "title": "Wax-Heaters",
+            "title": "Wax heaters",
             "link": "shopify://collections/wax-heaters"
           }
         },
@@ -176,7 +176,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipro-spa-cabi-uv-sanitizing-cabinet-professional-salon-hygiene-equipment-white-finish-61102.webp",
-            "title": "Towel Warmers",
+            "title": "Towel warmers",
             "link": "shopify://collections/towel-warmers"
           }
         },
@@ -184,7 +184,7 @@
           "type": "category_item",
           "settings": {
             "image": "shopify://shop_images/equipro-61402-visiderm-professional-skin-care-device.webp",
-            "title": "Skin Analyzers",
+            "title": "Skin analyzers",
             "link": "shopify://collections/skin-analyzer"
           }
         }
@@ -206,7 +206,7 @@
       ],
       "name": "Shop By Cat V2",
       "settings": {
-        "title": "Shop by Category"
+        "title": "Shop by category"
       }
     },
     "best_sellers": {
@@ -220,9 +220,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Ergonomic Stool with Backrest",
-            "price": "from CA$385,00",
+            "price": "",
             "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
-            "link": "shopify://products/ergonomic-stool-with-backrest"
+            "link": "shopify://products/skincare-equipment-stools-ergonomic-stool-with-backrest-31300",
+            "product": "skincare-equipment-stools-ergonomic-stool-with-backrest-31300"
           }
         },
         "custom_card_AWHND6": {
@@ -233,9 +234,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Multiderm (5 in 1)",
-            "price": "CA$2,800.00",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/multiderm-5-en-1"
+            "link": "shopify://products/multiderm-5-en-1",
+            "product": "multiderm-5-en-1"
           }
         },
         "custom_card_3WjHXz": {
@@ -246,9 +248,10 @@
             "card_bg": "#ffffff",
             "tag": "Best seller",
             "title": "Elite Spa",
-            "price": "3,350.00 $",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/ergonomic-stool-with-backrest"
+            "link": "shopify://products/elite-spa-ei-508",
+            "product": "elite-spa-ei-508"
           }
         },
         "custom_card_k38Qj8": {
@@ -259,9 +262,10 @@
             "card_bg": "#ffffff",
             "tag": "NEW COLORS",
             "title": "Maxi-Comfort 360º",
-            "price": "from CA$2,200.00",
+            "price": "",
             "swatches": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
-            "link": "shopify://products/maxi-comfort-360"
+            "link": "shopify://products/maxi-comfort-360",
+            "product": "maxi-comfort-360"
           }
         },
         "custom_card_re7QVY": {
@@ -271,10 +275,11 @@
             "hover_image": "shopify://shop_images/equipro-menu-tm3-three-tier-esthetician-trolley-powder-coated-steel-rolling-spa-cart.webp",
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
-            "title": "TM-3 Professional",
-            "price": "CA$375.00",
+            "title": "TM-3 Standard",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/home-skincare-equipment-accessories-tm-3-professional-service-table"
+            "link": "shopify://products/home-skincare-equipment-accessories-tm-3-professional-service-table",
+            "product": "home-skincare-equipment-accessories-tm-3-professional-service-table"
           }
         },
         "custom_card_WpAkFt": {
@@ -285,9 +290,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infraderm",
-            "price": "CA$590,00",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/infraderm"
+            "link": "shopify://products/infraderm",
+            "product": "infraderm"
           }
         },
         "custom_card_BgbKdG": {
@@ -298,9 +304,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Spa Cabi",
-            "price": "from CA$830,00",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/spa-cabi-professional-towel-warmer-ei-61102s-equipro"
+            "link": "shopify://products/spa-cabi-professional-towel-warmer-ei-61102s-equipro",
+            "product": "spa-cabi-professional-towel-warmer-ei-61102s-equipro"
           }
         },
         "custom_card_AjpNta": {
@@ -311,9 +318,9 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Infinity",
-            "price": "from CA$3,200.00",
+            "price": "",
             "swatches": "#ffffff, #191919, #1b1e2e",
-            "link": ""
+            "link": "/products/ultra-comfort-20500-gm25t"
           }
         },
         "custom_card_Kq4ak6": {
@@ -324,9 +331,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "LED LFM Magnifier (3D/5D)",
-            "price": "from CA$345.00",
+            "price": "",
             "swatches": "",
-            "link": ""
+            "link": "/products/63203-lfm-magnifier-led-3d-or-5d",
+            "product": "63203-lfm-magnifier-led-3d-or-5d"
           }
         },
         "custom_card_9bzVAr": {
@@ -336,10 +344,11 @@
             "hover_image": "shopify://shop_images/equipro-11100-digipro-digital-facial-steamer-professional-spa.webp",
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
-            "title": "Vapoderm Digipro",
-            "price": "CA$850,00",
+            "title": "Digipro steamer",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/digipro-steamer"
+            "link": "shopify://products/digipro-steamer",
+            "product": "digipro-steamer"
           }
         },
         "custom_card_GUW9Bg": {
@@ -350,9 +359,10 @@
             "card_bg": "#ffffff",
             "tag": "BEST SELLER",
             "title": "Aeroderm",
-            "price": "CA$750,00",
+            "price": "",
             "swatches": "",
-            "link": "shopify://products/aeroderm"
+            "link": "shopify://products/aeroderm",
+            "product": "aeroderm"
           }
         }
       },
@@ -370,7 +380,7 @@
         "custom_card_GUW9Bg"
       ],
       "settings": {
-        "title": "OUR BEST SELLERS",
+        "title": "Our best sellers",
         "collection": "",
         "products_to_show": 8
       }
@@ -381,7 +391,7 @@
         "cat_1": {
           "type": "category",
           "settings": {
-            "title": "Treatment Tables",
+            "title": "Treatment tables",
             "link": "",
             "style": "red"
           }
@@ -397,7 +407,7 @@
         "cat_3": {
           "type": "category",
           "settings": {
-            "title": "Wax-heaters",
+            "title": "Wax heaters",
             "link": "",
             "style": "red"
           }
@@ -421,7 +431,7 @@
         "cat_6": {
           "type": "category",
           "settings": {
-            "title": "Mag-lamps",
+            "title": "Magnifying lamps",
             "link": "",
             "style": "red"
           }
@@ -455,7 +465,7 @@
       ],
       "disabled": true,
       "settings": {
-        "title": "SHOP BY CATEGORY"
+        "title": "Shop by category"
       }
     },
     "image_with_text": {
@@ -496,7 +506,7 @@
             "image": "shopify://shop_images/equipro-mag-lamps-dual-arm-magnification-lamps-integrated-light-ring-clear-magnifier-lenses-beauty-spa-clinic-practitioner-workstation-sku-not-provided.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Mag-Lamps",
+            "tag": "Magnifying lamps",
             "title": "",
             "subtitle": "",
             "price": "",
@@ -530,8 +540,8 @@
             "image": "shopify://shop_images/equipro-multiderm-professional-facial-equipment-series-aesthetic-spa-workstation.webp",
             "card_bg_color": "#f5f5f7",
             "link": "shopify://collections/facial-units",
-            "tag": "Skincare Equipment",
-            "title": "Facial Units",
+            "tag": "Skincare equipment",
+            "title": "Facial units",
             "subtitle": "Professional multi-function facial units featuring advanced skincare technologies to deliver comprehensive, high-performance aesthetic treatments and versatile salon solutions.",
             "price": "",
             "available_colors": ""
@@ -547,7 +557,7 @@
             "image": "shopify://shop_images/equipro-wax-heaters-professional-dual-precision-thermal-control-spa-salon-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Skincare Equipment",
+            "tag": "Skincare equipment",
             "title": "",
             "subtitle": "",
             "price": "",
@@ -564,7 +574,7 @@
             "image": "shopify://shop_images/equipro-multi-functions-columns-professional-skincare-modular-beauty-equipment-station.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "SkincareEquipment",
+            "tag": "Skincare equipment",
             "title": "",
             "subtitle": "",
             "price": "",
@@ -581,7 +591,7 @@
             "image": "shopify://shop_images/equipro-skin-analyzers-professional-uv-light-skin-analysis-system-esthetician-clinic-equipment.webp",
             "card_bg_color": "#f5f5f7",
             "link": "",
-            "tag": "Skincare Equipment",
+            "tag": "Skincare equipment",
             "title": "",
             "subtitle": "",
             "price": "",
@@ -600,7 +610,7 @@
       ],
       "name": "Subcategory Slider",
       "settings": {
-        "title": "Explore Subcategories"
+        "title": "Explore subcategories"
       }
     },
     "custom_subcategory_slider_HPxgWp": {
@@ -707,7 +717,7 @@
       ],
       "name": "Subcategory Slider",
       "settings": {
-        "title": "Explore Hydraulic / Mechanical"
+        "title": "Explore hydraulic and mechanical tables"
       }
     },
     "image_slider": {
@@ -753,9 +763,9 @@
             "color_list": "#ffffff, #191919, #4c4c4c, #919291, #1b1e2e, #d8d4c7, #cca88d",
             "bg_color": "#111111",
             "text_color": "#ffffff",
-            "btn_1_text": "Découvrez les finitions",
+            "btn_1_text": "Explore finishes",
             "btn_1_link": "",
-            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_text": "Download specification sheet (PDF)",
             "btn_2_link": "",
             "btn_2_is_pdf": true
           }
@@ -773,9 +783,9 @@
             "color_list": "",
             "bg_color": "#111111",
             "text_color": "#ffffff",
-            "btn_1_text": "",
+            "btn_1_text": "View manuals",
             "btn_1_link": "shopify://pages/manuals",
-            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_text": "Download specification sheet (PDF)",
             "btn_2_link": "",
             "btn_2_is_pdf": true
           }
@@ -793,9 +803,9 @@
             "color_list": "",
             "bg_color": "#111111",
             "text_color": "#ffffff",
-            "btn_1_text": "Découvrez les finitions",
+            "btn_1_text": "View documentation",
             "btn_1_link": "shopify://pages/manuals",
-            "btn_2_text": "Télécharger la fiche technique (PDF)",
+            "btn_2_text": "Download specification sheet (PDF)",
             "btn_2_link": "",
             "btn_2_is_pdf": true
           }
@@ -807,7 +817,7 @@
         "staggered_card_wQgJT4"
       ],
       "settings": {
-        "main_title": "Customization & Support Hub"
+        "main_title": "Customization and support"
       }
     },
     "custom_spa_pack_builder_BDtr9H": {
@@ -820,12 +830,12 @@
             "show_hero_card": true,
             "hero_bg": "#9e9e9e",
             "hero_text_color": "#ffffff",
-            "hero_title": "Tout pour équiper votre espace.",
-            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "hero_title": "Equip your professional space.",
+            "hero_subtitle": "Equipment for professional beauty and wellness spaces.",
             "product_1": "ei-502-infinity",
-            "badge_1": "{{ block.settings.product_1.title }}",
+            "badge_1": "",
             "product_2": "{{ block.settings.product_1 }}",
-            "badge_2": "{{ block.settings.product_1.vendor }}",
+            "badge_2": "",
             "product_3": "ergonomic-stool-with-backrest",
             "badge_3": "",
             "product_4": "ergonomic-stool-with-backrest",
@@ -843,16 +853,16 @@
             "show_hero_card": true,
             "hero_bg": "#1d1f1e",
             "hero_text_color": "#ffffff",
-            "hero_title": "Tout pour équiper votre espace.",
-            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "hero_title": "Equip your professional space.",
+            "hero_subtitle": "Equipment for professional beauty and wellness spaces.",
             "product_1": "",
-            "badge_1": "dssd",
+            "badge_1": "",
             "product_2": "",
-            "badge_2": "asdfsdff",
+            "badge_2": "",
             "product_3": "",
-            "badge_3": "sdfsdfsdf",
+            "badge_3": "",
             "product_4": "",
-            "badge_4": "sfsd",
+            "badge_4": "",
             "product_5": "",
             "badge_5": "",
             "product_6": "",
@@ -866,8 +876,8 @@
             "show_hero_card": true,
             "hero_bg": "#1d1d1f",
             "hero_text_color": "#ffffff",
-            "hero_title": "Tout pour équiper votre espace.",
-            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "hero_title": "Equip your professional space.",
+            "hero_subtitle": "Equipment for professional beauty and wellness spaces.",
             "product_1": "",
             "badge_1": "",
             "product_2": "",
@@ -889,8 +899,8 @@
             "show_hero_card": true,
             "hero_bg": "#1d1d1f",
             "hero_text_color": "#ffffff",
-            "hero_title": "Tout pour équiper votre espace.",
-            "hero_subtitle": "Des solutions complètes et ergonomiques conçues pour les professionnels de la beauté et du bien-être.",
+            "hero_title": "Equip your professional space.",
+            "hero_subtitle": "Equipment for professional beauty and wellness spaces.",
             "product_1": "",
             "badge_1": "",
             "product_2": "",
@@ -912,8 +922,8 @@
             "show_hero_card": true,
             "hero_bg": "#1d1d1f",
             "hero_text_color": "#ffffff",
-            "hero_title": "La rentrée, simplifiée.",
-            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
+            "hero_title": "Build your professional setup.",
+            "hero_subtitle": "Explore equipment for your workspace.",
             "product_1": "",
             "badge_1": "Treatment Bed",
             "product_2": "",
@@ -935,8 +945,8 @@
             "show_hero_card": true,
             "hero_bg": "#1d1d1f",
             "hero_text_color": "#ffffff",
-            "hero_title": "La rentrée, simplifiée.",
-            "hero_subtitle": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau.",
+            "hero_title": "Build your professional setup.",
+            "hero_subtitle": "Explore equipment for your workspace.",
             "product_1": "",
             "badge_1": "Treatment Bed",
             "product_2": "",
@@ -961,7 +971,13 @@
         "category_tab_AC4NNC"
       ],
       "name": "Spa Equipment Pack",
-      "settings": {}
+      "settings": {
+        "professional_profiles": [
+          "spas-wellness-centers",
+          "spa-esthetics-setup",
+          "orthopedic-podiatry"
+        ]
+      }
     }
   },
   "order": [

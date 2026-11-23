@@ -1,0 +1,5 @@
+// Read-only test overlay: resolves proposed files and fresh MAIN readbacks without creating a theme/environment.
+const fs=require('node:fs'),path=require('node:path');const root=process.cwd(),read=fs.readFileSync.bind(fs),exists=fs.existsSync.bind(fs);const manifest=JSON.parse(read(path.join(root,'docs/r11v-main-consolidation/final-manifest.json'),'utf8'));const map=new Map(manifest.files.map(x=>[path.resolve(root,x.path),path.resolve(root,x.candidatePath)]));const before=path.join(root,'docs/r11v-main-consolidation/preflight-2026-11-23/remote-before');for(const folder of ['assets','sections','snippets','layout','templates','locales']){const dir=path.join(before,folder);if(exists(dir))for(const f of fs.readdirSync(dir)){const target=path.join(root,folder,f);if(!map.has(target))map.set(target,path.join(dir,f));}}
+function resolve(p){if(typeof p!=='string')return p;return map.get(path.resolve(root,p))||p;}
+fs.readFileSync=(p,...args)=>read(resolve(p),...args);
+const readAsync=fs.promises.readFile.bind(fs.promises);fs.promises.readFile=(p,...args)=>readAsync(resolve(p),...args);

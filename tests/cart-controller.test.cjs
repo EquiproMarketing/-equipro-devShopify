@@ -2,66 +2,123 @@ const { test } = require('node:test');
 const assert = require('node:assert/strict');
 const vm = require('node:vm');
 const fs = require('node:fs');
+
+const source = fs.readFileSync('assets/cart-drawer.js', 'utf8').split('// Inicializar globalmente')[0];
+
 function controller(fetch) {
-  const context = { window: { Shopify: { routes: { root: '/fr/' } }, location: { pathname: '/fr/cart', search: '?preview_theme_id=123' } }, document: { addEventListener() {} }, FormData, AbortSignal, fetch };
-  vm.runInNewContext(fs.readFileSync('assets/cart-drawer.js', 'utf8'), context);
-  const c = context.window.cartDrawer;
-  c.setBusy = value => { c.busy = value; };
-  c.sectionIds = () => ['cart-drawer', 'template__main'];
-  c.messages = [];
-  c.status = (message, error) => c.messages.push({ message, error });
-  c.render = sections => { c.rendered = sections; };
-  c.open = () => { c.opened = true; };
-  return c;
+  const feedback = { dataset: { error: 'Cart error', refreshError: 'Cart refresh failed' }, textContent: '', hidden: false };
+  const document = {
+    activeElement: {},
+    addEventListener() {},
+    getElementById(id) { return id === 'CartFeedback' ? feedback : null; },
+    querySelectorAll() { return []; }
+  };
+  let Controller;
+  vm.runInNewContext(`${source}; Controller = CartDrawer;`, {
+    document,
+    window: { Shopify: { routes: { root: '/fr/' } }, location: { pathname: '/fr/products/item', search: '?preview_theme_id=123' } },
+    fetch,
+    AbortSignal,
+    URL,
+    set Controller(value) { Controller = value; }
+  });
+  const instance = Object.create(Controller.prototype);
+  instance.pending = false;
+  instance.unsynced = false;
+  instance.feedback = message => { feedback.textContent = message; };
+  instance.errorMessage = kind => kind === 'refreshError' ? 'Cart refresh failed' : 'Cart error';
+  instance.drawer = null;
+  return { instance, feedback };
 }
-const ok = data => ({ ok: true, json: async () => data });
-test('rapid duplicate adds produce one POST; locale and sections are preserved', async () => {
-  let resolve, calls = [];
-  const c = controller((url, options) => { calls.push({ url, options }); return new Promise(r => resolve = r); });
-  const first = c.mutate('cart/add.js', { items: [{ id: 1, quantity: 1 }] }, true);
-  await c.mutate('cart/add.js', { items: [{ id: 1, quantity: 1 }] }, true);
-  assert.equal(calls.length, 1); assert.equal(c.busy, true);
-  assert.equal(calls[0].url, '/fr/cart/add.js');
-  assert.equal(JSON.parse(calls[0].options.body).sections_url, '/fr/cart?preview_theme_id=123');
-  resolve(ok({ sections: { 'cart-drawer': 'html' } })); await first;
-  assert.equal(c.busy, false); assert.equal(c.opened, true);
+
+const response = (data, ok = true, status = 200) => ({ ok, status, json: async () => data });
+
+test('concurrent cart updates send one localized POST and preserve section routing', async () => {
+  let resolve;
+  const calls = [];
+  const { instance: cart, feedback } = controller((url, options) => {
+    calls.push({ url, options });
+    return new Promise(done => { resolve = done; });
+  });
+  cart.refreshDrawer = async () => {};
+  const first = cart.updateQuantity('variant:key', 2);
+  const second = await cart.updateQuantity('variant:key', 3);
+  assert.equal(second, false);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].url, '/fr/cart/change.js');
+  assert.deepEqual(JSON.parse(calls[0].options.body), { id: 'variant:key', quantity: 2 });
+  resolve(response({ items: [{ key: 'variant:key', quantity: 2 }] }));
+  const result = await first;
+  assert.equal(result, true, feedback.textContent);
 });
-test('quantity zero removes last item; invalid quantities never send a request', async () => {
-  let bodies = [];
-  const c = controller(async (_, options) => { bodies.push(JSON.parse(options.body)); return ok({ sections: {} }); });
-  await c.updateQuantity('variant:key', 0);
-  assert.equal(bodies[0].quantity, 0); assert.equal(bodies[0].id, 'variant:key');
-  await c.updateQuantity('variant:key', -1); await c.updateQuantity('variant:key', 1.5);
-  assert.equal(bodies.length, 1);
+
+test('quantity zero removes an item; invalid quantities never send a request', async () => {
+  const bodies = [];
+  const { instance: cart } = controller(async (_url, options) => {
+    bodies.push(JSON.parse(options.body));
+    return response({ items: [] });
+  });
+  cart.refreshDrawer = async () => {};
+  await cart.updateQuantity('variant:key', 0);
+  await cart.updateQuantity('variant:key', -1);
+  await cart.updateQuantity('variant:key', 1.5);
+  assert.deepEqual(bodies, [{ id: 'variant:key', quantity: 0 }]);
 });
-test('stock 422 displays Shopify error and reconciles without retrying POST', async () => {
-  let calls = 0, refreshes = 0;
-  const c = controller(async () => { calls++; return { ok: false, json: async () => ({ description: 'Only 2 items available.' }) }; });
-  c.refreshDrawer = async () => { refreshes++; c.unsynced = false; };
-  await c.updateQuantity('key', 3);
-  assert.equal(calls, 1); assert.equal(refreshes, 1);
-  assert.equal(c.messages.at(-1).message, 'Only 2 items available.'); assert.equal(c.opened, undefined);
+
+test('422 exposes Shopify error and reconciles with a read only', async () => {
+  const calls = [];
+  let refreshes = 0;
+  const { instance: cart, feedback } = controller(async (url, options) => {
+    calls.push({ url, options });
+    return response({ description: 'Only 2 items available.' }, false, 422);
+  });
+  cart.refreshDrawer = async () => { refreshes++; cart.unsynced = false; };
+  await cart.updateQuantity('key', 3);
+  assert.equal(calls.length, 1);
+  assert.equal(calls[0].options.method, 'POST');
+  assert.equal(refreshes, 1);
+  assert.equal(feedback.textContent, 'Only 2 items available.');
+  assert.equal(cart.unsynced, false);
 });
-test('lost response and offline reconciliation block further mutations', async () => {
-  let calls = 0;
-  const c = controller(async () => { calls++; throw new TypeError('Failed to fetch'); });
-  c.refreshDrawer = async () => { throw new Error('offline'); };
-  await c.mutate('cart/add.js', { items: [{ id: 1 }] }, true);
-  await c.mutate('cart/add.js', { items: [{ id: 1 }] }, true);
-  assert.equal(calls, 1); assert.equal(c.unsynced, true); assert.equal(c.busy, false);
+
+test('ambiguous response blocks another mutation when reconciliation fails', async () => {
+  let posts = 0;
+  const { instance: cart } = controller(async () => { posts++; throw new TypeError('Failed to fetch'); });
+  cart.refreshDrawer = async () => { throw new Error('offline'); };
+  await cart.updateQuantity('key', 2);
+  await cart.updateQuantity('key', 3);
+  assert.equal(posts, 1);
+  assert.equal(cart.unsynced, true);
+  assert.equal(cart.pending, false);
 });
-test('missing sections triggers only a read refresh, not another mutation', async () => {
-  let calls = 0, reads = 0;
-  const c = controller(async () => { calls++; return ok({ sections: null }); });
-  c.render = () => { throw new Error('null sections'); };
-  c.refreshDrawer = async () => { reads++; c.unsynced = false; };
-  await c.updateQuantity('key', 2);
-  assert.equal(calls, 1); assert.equal(reads, 1);
+
+test('accepted mutation with missing rendered sections never retries the POST', async () => {
+  let posts = 0;
+  let refreshes = 0;
+  const { instance: cart } = controller(async () => {
+    posts++;
+    return response({ items: [{ key: 'key', quantity: 2 }] });
+  });
+  cart.refreshDrawer = async () => { refreshes++; throw new Error('missing sections'); };
+  await cart.updateQuantity('key', 2);
+  assert.equal(posts, 1);
+  assert.equal(refreshes, 2); // one update refresh plus one safe GET reconciliation
+  assert.equal(cart.unsynced, true);
 });
-test('product form preserves properties and selling plan', async () => {
-  let body;
-  const c = controller(async (_, options) => { body = options.body; return ok({ sections: {} }); });
-  const form = new FormData(); form.set('id', '42'); form.set('properties[Finish]', 'Navy'); form.set('selling_plan', '9');
-  await c.mutate('cart/add.js', form, true);
-  assert.equal(body.get('properties[Finish]'), 'Navy'); assert.equal(body.get('selling_plan'), '9'); assert.equal(body.get('sections'), 'cart-drawer,template__main');
+
+test('request preserves native product FormData properties and selling plan', async () => {
+  let sent;
+  const { instance: cart } = controller(async (_url, options) => {
+    sent = options.body;
+    return response({ id: 42 });
+  });
+  const form = new FormData();
+  form.set('id', '42');
+  form.set('properties[Finish]', 'Navy');
+  form.set('selling_plan', '9');
+  await cart.request('/fr/cart/add.js', { method: 'POST', body: form });
+  assert.equal(sent.get('id'), '42');
+  assert.equal(sent.get('properties[Finish]'), 'Navy');
+  assert.equal(sent.get('selling_plan'), '9');
+  assert.equal(sent.get('sections'), null);
 });

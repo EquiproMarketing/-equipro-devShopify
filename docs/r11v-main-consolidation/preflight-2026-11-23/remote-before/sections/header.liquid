@@ -1,0 +1,237 @@
+{{ 'section-header.css' | asset_url | stylesheet_tag }}
+
+<header class="site-header">
+  <div class="page-width site-header__container">
+    
+    <!-- 1. Left: Hamburger (Mobile) / Desktop Nav -->
+    <nav class="site-header__nav">
+      <!-- Hamburger Icon (Mobile Only) -->
+      <button class="site-header__hamburger" id="HeaderHamburger" aria-label="{{ 'general.toggle_navigation' | t }}" aria-controls="MobileDrawer" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <!-- Desktop Menu (Dinamico de Shopify Navigation) -->
+      <ul class="site-header__menu">
+        {% assign header_menu = section.settings.menu %}
+        {% if header_menu != blank and header_menu.links.size > 0 %}
+          {% for link in header_menu.links %}
+            <li class="{% if link.links != blank %}site-header__item-has-dropdown{% endif %}">
+              <a href="{{ link.url }}" class="site-header__link {% if link.active or link.child_active %}site-header__link--active{% endif %}">
+                {{ link.title }}
+                {% if link.links != blank %}
+                  <svg class="icon-chevron" width="10" height="6" viewBox="0 0 10 6" fill="none">
+                    <path d="M1 1L5 5L9 1" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+                {% endif %}
+              </a>
+
+              <!-- Dropdown Anidado Automático -->
+              {% if link.links != blank %}
+                <ul class="site-header__dropdown">
+                  {% for childlink in link.links %}
+                    <li>
+                      <a href="{{ childlink.url }}" class="{% if childlink.active %}site-header__link--active{% endif %}">
+                        {{ childlink.title }}
+                      </a>
+                    </li>
+                  {% endfor %}
+                </ul>
+              {% endif %}
+            </li>
+          {% endfor %}
+        {% else %}
+          <!-- Fallback de Resguardo -->
+          <li><a href="{{ routes.root_url }}" class="site-header__link">{{ 'general.home' | t }}</a></li>
+          <li><a href="{{ routes.collections_url }}" class="site-header__link">{{ 'general.shop' | t }}</a></li>
+          <li><a href="{{ routes.root_url }}pages/about-us" class="site-header__link">{{ 'general.about' | t }}</a></li>
+          <li><a href="{{ routes.root_url }}pages/contact" class="site-header__link">{{ 'general.contact' | t }}</a></li>
+        {% endif %}
+      </ul>
+    </nav>
+
+    <!-- 2. Center: Logo -->
+    <div class="site-header__logo">
+      <a href="{{ routes.root_url }}">
+        {% if section.settings.logo != blank %}
+          {{ section.settings.logo | image_url: width: 300 | image_tag: class: 'site-header__logo-img', alt: shop.name }}
+        {% else %}
+          <span class="site-header__logo-text">EQUI<span>PRO</span></span>
+        {% endif %}
+      </a>
+    </div>
+
+    <!-- 3. Right: Actions (Socials, Cart & B2B Quote Trigger) -->
+    <div class="site-header__actions">
+      <div class="site-header__socials">
+        <a href="https://instagram.com" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        </a>
+        <a href="https://facebook.com" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg>
+        </a>
+      </div>
+
+      <a href="{{ routes.cart_url }}" class="site-header__cart" aria-label="{{ 'cart.view_cart' | t }}">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="site-header__cart-count">{{ cart.item_count | default: 0 }}</span>
+      </a>
+
+      <!-- Trigger Modal B2B -->
+      <button type="button" class="button-quote" data-open-quote-modal>{{ 'quote.open' | t }}</button>
+    </div>
+
+  </div>
+</header>
+
+<!-- Mobile Drawer Navigation (Dinamico) -->
+<div class="mobile-drawer-overlay" id="MobileDrawerOverlay"></div>
+<aside class="mobile-drawer" id="MobileDrawer" role="dialog" aria-modal="true" aria-labelledby="MobileDrawerTitle" aria-hidden="true" inert>
+  <div class="mobile-drawer__header">
+    <span class="mobile-drawer__title" id="MobileDrawerTitle">MENU</span>
+    <button class="mobile-drawer__close" id="MobileDrawerClose" aria-label="{{ 'general.close_menu' | t }}">&times;</button>
+  </div>
+  
+  <ul class="mobile-drawer__menu">
+    {% assign mobile_menu = section.settings.menu %}
+    {% if mobile_menu != blank and mobile_menu.links.size > 0 %}
+      {% for link in mobile_menu.links %}
+        {% if link.links != blank %}
+          <li class="mobile-drawer__has-sub">
+            <div class="mobile-drawer__sub-header">
+              <a href="{{ link.url }}" class="mobile-drawer__link">{{ link.title }}</a>
+              <button class="mobile-drawer__toggle-sub" data-sub-toggle aria-label="{{ 'general.toggle_submenu' | t }}">+</button>
+            </div>
+            <ul class="mobile-drawer__submenu">
+              {% for childlink in link.links %}
+                <li><a href="{{ childlink.url }}">{{ childlink.title }}</a></li>
+              {% endfor %}
+            </ul>
+          </li>
+        {% else %}
+          <li><a href="{{ link.url }}" class="mobile-drawer__link">{{ link.title }}</a></li>
+        {% endif %}
+      {% endfor %}
+    {% else %}
+      <li><a href="{{ routes.root_url }}" class="mobile-drawer__link">{{ 'general.home' | t }}</a></li>
+      <li><a href="{{ routes.collections_url }}" class="mobile-drawer__link">{{ 'general.shop' | t }}</a></li>
+      <li><a href="{{ routes.root_url }}pages/about-us" class="mobile-drawer__link">{{ 'general.about' | t }}</a></li>
+      <li><a href="{{ routes.root_url }}pages/contact" class="mobile-drawer__link">{{ 'general.contact' | t }}</a></li>
+    {% endif %}
+  </ul>
+  
+  <div class="mobile-drawer__footer">
+    <button type="button" class="button-quote" data-open-quote-modal style="width: 100%; text-align: center;">{{ 'quote.open' | t }}</button>
+  </div>
+</aside>
+
+<!-- Snippet Global Quote Modal -->
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const hamburgerBtn = document.getElementById('HeaderHamburger');
+    const drawerCloseBtn = document.getElementById('MobileDrawerClose');
+    const drawer = document.getElementById('MobileDrawer');
+    const overlay = document.getElementById('MobileDrawerOverlay');
+    if (!drawer || drawer.dataset.navigationReady) return;
+    drawer.dataset.navigationReady = 'true';
+    const mobileLayout = window.matchMedia('(max-width: 989px)');
+
+    let previousOverflow = '';
+
+    function openDrawer() {
+      if (drawer && overlay && !drawer.classList.contains('is-open')) {
+        previousOverflow = document.body.style.overflow;
+        drawer.scrollTop = 0;
+        drawer.removeAttribute('inert');
+        drawer.setAttribute('aria-hidden', 'false');
+        hamburgerBtn?.setAttribute('aria-expanded', 'true');
+        drawer.classList.add('is-open');
+        overlay.classList.add('is-open');
+        document.body.style.overflow = 'hidden';
+        drawerCloseBtn?.focus({ preventScroll: true });
+      }
+    }
+
+    function closeDrawer(options = {}) {
+      const quoteOpen = document.getElementById('QuoteModal')?.classList.contains('is-open');
+      if (quoteOpen && !options.desktopTransition) return;
+      if (drawer && overlay && drawer.classList.contains('is-open')) {
+        drawer.classList.remove('is-open');
+        overlay.classList.remove('is-open');
+        drawer.setAttribute('inert', '');
+        drawer.setAttribute('aria-hidden', 'true');
+        hamburgerBtn?.setAttribute('aria-expanded', 'false');
+        if (quoteOpen) {
+          document.dispatchEvent(new CustomEvent('equipro:quote-menu-release', {
+            detail: { previousOverflow }
+          }));
+          document.body.style.overflow = 'hidden';
+        } else {
+          document.body.style.overflow = previousOverflow;
+          const target = [hamburgerBtn,
+            document.querySelector('.site-header__actions [data-open-quote-modal]'),
+            document.querySelector('.site-header__logo a')]
+            .find(element => element && !element.closest('[inert]') && element.getClientRects().length &&
+              getComputedStyle(element).visibility !== 'hidden');
+          target?.focus({ preventScroll: true });
+        }
+      }
+    }
+
+    mobileLayout.addEventListener('change', event => {
+      if (!event.matches) closeDrawer({ desktopTransition: true });
+    });
+
+    if (hamburgerBtn) hamburgerBtn.addEventListener('click', openDrawer);
+    if (drawerCloseBtn) drawerCloseBtn.addEventListener('click', closeDrawer);
+    if (overlay) overlay.addEventListener('click', closeDrawer);
+    drawer?.addEventListener('keydown', event => {
+      if (!drawer.classList.contains('is-open') || document.getElementById('QuoteModal')?.classList.contains('is-open')) return;
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        closeDrawer();
+      } else if (event.key === 'Tab') {
+        const controls = [...drawer.querySelectorAll('a[href], button, [tabindex]')]
+          .filter(element => element.tabIndex >= 0 && !element.disabled && element.getClientRects().length);
+        const index = controls.indexOf(document.activeElement);
+        if (index === -1 || (event.shiftKey ? index === 0 : index === controls.length - 1)) {
+          event.preventDefault();
+          (event.shiftKey ? controls[controls.length - 1] : controls[0])?.focus({ preventScroll: true });
+        }
+      }
+    });
+
+    // Submenu Toggle en Mobile
+    const subToggles = document.querySelectorAll('[data-sub-toggle]');
+    subToggles.forEach(toggle => {
+      toggle.addEventListener('click', function() {
+        const submenu = this.closest('.mobile-drawer__has-sub')?.querySelector('.mobile-drawer__submenu');
+        if (submenu) {
+          submenu.classList.toggle('is-open');
+          this.textContent = submenu.classList.contains('is-open') ? '−' : '+';
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Header Navbar",
+  "settings": [
+    {
+      "type": "image_picker",
+      "id": "logo",
+      "label": "Logo Image"
+    },
+    {
+      "type": "link_list",
+      "id": "menu",
+      "label": "Header Navigation Menu",
+      "default": "main-menu"
+    }
+  ]
+}
+{% endschema %}

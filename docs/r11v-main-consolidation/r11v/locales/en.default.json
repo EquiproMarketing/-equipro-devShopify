@@ -1,0 +1,162 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin language editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "404": {
+    "title": "404",
+    "not_found": "Page not found.",
+    "back_to_shopping": "Back to shopping"
+  },
+  "blog": {
+    "article_comments": "Comments",
+    "article_metadata_html": "{{ date }} by {{ author }}",
+    "comment_form_body": "Comment",
+    "comment_form_email": "Email",
+    "comment_form_name": "Name",
+    "comment_form_submit": "Post",
+    "comment_form_title": "Add a comment"
+  },
+  "cart": {
+    "request_error": "Unable to update the cart. Please try again.",
+    "refresh_error": "The cart could not be confirmed. Refresh it before continuing.",
+    "refresh": "Refresh cart",
+    "checkout": "Checkout",
+    "title": "Cart",
+    "update": "Update",
+    "remove": "Remove",
+    "increase_quantity": "Increase quantity for {{ product }}",
+    "decrease_quantity": "Decrease quantity for {{ product }}",
+    "quantity_label": "Quantity for {{ product }}",
+    "remove_item": "Remove {{ product }}"
+  },
+  "customers": {
+    "login": {
+      "email": "Email",
+      "password": "Password",
+      "submit": "Sign in",
+      "title": "Login"
+    }
+  },
+  "collections": {
+    "title": "Collections",
+    "no_products": "No products found.",
+    "pagination": "Pagination"
+  },
+  "gift_card": {
+    "add_to_apple_wallet": "Add to Apple Wallet",
+    "card": "Gift card",
+    "expired": "This gift card has expired",
+    "expires_on": "Expires on {{ expires_on }}",
+    "use_at_checkout": "Use this gift card at checkout"
+  },
+  "password": {
+    "title": "This shop is private",
+    "password": "Password",
+    "enter": "Enter"
+  },
+  "search": {
+    "title": "Search",
+    "available": "Purchasable options available — view product",
+    "quote_required": "Contact us for purchasing options",
+    "placeholder": "Search articles, pages, or products",
+    "submit": "Search",
+    "no_results_html": "No results found for {{ terms }}",
+    "results_for_html": "{{ count }} results found for {{ terms }}"
+  },
+  "comparison": {
+    "open": "Compare models",
+    "title": "Compare models",
+    "close": "Close comparison",
+    "choose": "Choose up to three products in this family.",
+    "slot": "Product",
+    "empty": "Choose a product",
+    "remove": "Remove",
+    "differences": "Show differences only",
+    "page": "View product",
+    "model": "Model",
+    "specifications": "Specifications",
+    "unknown": "Not confirmed",
+    "na": "Not applicable",
+    "empty_state": "Choose a product above to start comparing.",
+    "same": "No confirmed differences in the selected specifications.",
+    "note": "Dimensions are in inches. Not confirmed means the source does not establish the detail; it does not mean No. Options may vary by configuration.",
+    "source": "Technical reference: Canada PRO V1.2. Warranty is subject to its terms and exclusions.",
+    "count": "products selected",
+    "load_error": "Comparison could not load. Please close and try again.",
+    "groups": {
+      "fit_and_adjustment": "Fit and adjustment",
+      "construction": "Construction",
+      "coverage": "Coverage",
+      "size_and_storage": "Size and storage",
+      "fittings_and_mobility": "Fittings and mobility"
+    },
+    "labels": {
+      "height": "Height range",
+      "mechanism": "Adjustment mechanism",
+      "seat": "Seat shape",
+      "seat_dimensions": "Seat dimensions",
+      "backrest": "Backrest",
+      "base": "Base / footrest",
+      "casters": "Casters",
+      "upholstery": "Upholstery options",
+      "warranty": "Warranty",
+      "dimensions": "Overall size (long side × short side × height)",
+      "shelves": "Shelf count",
+      "shelf_dimensions": "Shelf dimensions",
+      "spacing": "Shelf spacing",
+      "drawers": "Drawers",
+      "cabinet": "Cabinet",
+      "holders": "Magnifying lamp holders",
+      "outlets": "Electrical outlets"
+    }
+  },
+  "complete_setup": {
+    "heading": "Complete Your Setup",
+    "from": "From",
+    "view_product": "View product",
+    "scroll_hint": "Scroll to explore more products, or use the arrow keys when this area is focused."
+  },
+  "products": {
+    "view_product": "View product",
+    "learn_more": "Learn more",
+    "color": "Color",
+    "gallery": {
+      "show_image": "View image {{ number }} of {{ product }}"
+    },
+    "form": {
+      "adding": "Adding…",
+      "added": "Added {{ variant }} to your cart.",
+      "accepted": "This item was added. Refresh the cart before adding another item.",
+      "uncertain": "The result could not be confirmed. Check your cart before adding again.",
+      "invalid": "Choose an available option and a valid quantity.",
+      "sold_out": "Out of stock",
+      "view_cart": "View cart",
+      "checked": "I have checked my cart",
+      "choose_variant": "Choose a variant"
+    },
+    "product": {
+      "from_lowest_price_html": "From {{ lowest_price }}"
+    },
+    "price_unavailable": "Price unavailable",
+    "purchase_unavailable": "Purchase unavailable"
+  },
+  "setup_filters": {
+    "clear": "Clear all — Explore all products",
+    "explore": "Explore all products",
+    "specialty": "Professional specialty",
+    "category": "Equipment category",
+    "selected": "{{ label }}: selected. Remove filter",
+    "choose": "Choose a specialty to see its equipment categories.",
+    "unavailable": "Specialty filtering is not available yet. Explore the full catalog below.",
+    "count": {
+      "one": "{{ count }} product",
+      "other": "{{ count }} products"
+    }
+  }
+}

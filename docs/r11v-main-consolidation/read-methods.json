@@ -1,0 +1,40 @@
+{
+  "store": "equipro-dev.myshopify.com",
+  "method": "theme_bash filesystem vs authoritative Admin GraphQL bodies in main/ and r11v/ inventories",
+  "results": [
+    {
+      "themeId": "157851386029",
+      "stdout": "NOT_RETURNED assets/product-form.js\n5172 assets/quote-modal.js\n0 assets/global.js\n3975 assets/cart-drawer.js\n5407 assets/cart-drawer.css\nNOT_RETURNED assets/find-your-setup.js\nNOT_RETURNED assets/find-your-setup.css\n10640 assets/section-main-product.css\n17143 sections/main-product.liquid\n3591 snippets/quote-modal.liquid\nNOT_RETURNED sections/find-your-setup.liquid\nNOT_RETURNED snippets/professional-profile-panel.liquid\nNOT_RETURNED snippets/catalog-product-grid.liquid\nNOT_RETURNED sections/complete-your-setup.liquid\n11309 sections/custom-spa-pack-builder.liquid\n6784 sections/main-cart-items.liquid\nNOT_RETURNED sections/cart-drawer.liquid\n3734 snippets/cart-drawer.liquid\n3551 locales/en.default.json\nNOT_RETURNED locales/fr.json\n7784 templates/collection.json\n36799 templates/index.json\n14494 templates/product.51101-tm-3-standard.json\n14146 templates/product.ei-501-royal.json\n2259 layout/theme.liquid\n",
+      "stderr": "",
+      "exitCode": 0,
+      "timedOut": false,
+      "pending": []
+    },
+    {
+      "themeId": "189456777389",
+      "stdout": "11760 assets/product-form.js\n9953 assets/quote-modal.js\n0 assets/global.js\n17201 assets/cart-drawer.js\n7329 assets/cart-drawer.css\n2593 assets/find-your-setup.js\n2232 assets/find-your-setup.css\n13407 assets/section-main-product.css\n28768 sections/main-product.liquid\n4705 snippets/quote-modal.liquid\n5548 sections/find-your-setup.liquid\n6207 snippets/professional-profile-panel.liquid\n4551 snippets/catalog-product-grid.liquid\n27427 sections/complete-your-setup.liquid\n11410 sections/custom-spa-pack-builder.liquid\n8385 sections/main-cart-items.liquid\n93 sections/cart-drawer.liquid\n4472 snippets/cart-drawer.liquid\n5778 locales/en.default.json\nNOT_RETURNED locales/fr.json\n8045 templates/collection.json\n37063 templates/index.json\n14700 templates/product.51101-tm-3-standard.json\n14352 templates/product.ei-501-royal.json\n2259 layout/theme.liquid\n",
+      "stderr": "",
+      "exitCode": 0,
+      "timedOut": false,
+      "pending": []
+    }
+  ],
+  "recheck": [
+    {
+      "path": "sections/cart-drawer.liquid",
+      "same": true
+    },
+    {
+      "path": "sections/find-your-setup.liquid",
+      "same": true
+    },
+    {
+      "path": "sections/main-product.liquid",
+      "same": true
+    },
+    {
+      "path": "snippets/quote-modal.liquid",
+      "same": true
+    }
+  ]
+}

@@ -353,10 +353,18 @@
         "item_5",
         "item_6"
       ]
+    },
+    "complete_setup": {
+      "type": "complete-your-setup",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "complete_your_setup"
+      }
     }
   },
   "order": [
     "main",
+    "complete_setup",
     "overview",
     "features",
     "instructions",

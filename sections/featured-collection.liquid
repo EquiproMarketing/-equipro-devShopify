@@ -20,14 +20,17 @@
       {%- comment -%} CUSTOM MANUAL CARDS (APPLE STYLE WITH HOVER IMAGE) {%- endcomment -%}
       {% for block in section.blocks %}
         {% if block.type == 'custom_card' %}
+          {% assign card_product = block.settings.product %}
+          {% assign card_title = block.settings.title | default: card_product.title %}
+          {% assign card_url = card_product.url | default: block.settings.link %}
           <div class="swiper-slide" {{ block.shopify_attributes }}>
             <div class="apple-card">
-              <a href="{{ block.settings.link | default: '#' }}" class="apple-card__link">
+              <{% if card_url != blank %}a href="{{ card_url }}"{% else %}div{% endif %} class="apple-card__link">
                 <div class="apple-card__image-wrapper" style="background-color: {{ block.settings.card_bg | default: '#ffffff' }};">
                   {% if block.settings.image != blank %}
                     <img
                       src="{{ block.settings.image | image_url: width: 400 }}"
-                      alt="{{ block.settings.title | escape }}"
+                      alt="{{ card_title | escape }}"
                       loading="lazy"
                       width="200"
                       height="250"
@@ -36,7 +39,7 @@
                     {% if block.settings.hover_image != blank %}
                       <img
                         src="{{ block.settings.hover_image | image_url: width: 400 }}"
-                        alt="{{ block.settings.title | escape }}"
+                        alt="{{ card_title | escape }}"
                         loading="lazy"
                         width="200"
                         height="250"
@@ -64,13 +67,18 @@
                     <span class="apple-card__tag">{{ block.settings.tag }}</span>
                   {% endif %}
                   
-                  <h3 class="apple-card__title">{{ block.settings.title }}</h3>
+                  <h3 class="apple-card__title">{{ card_title | escape }}</h3>
                   
-                  {% if block.settings.price != blank %}
-                    <p class="apple-card__price">{{ block.settings.price }}</p>
-                  {% endif %}
+                  <p class="apple-card__price">
+                    {% if card_product != blank and card_product.price_min > 0 %}
+                      {% assign native_price = card_product.price_min | money_with_currency %}
+                      {% if card_product.price_varies %}{{ 'products.product.from_lowest_price_html' | t: lowest_price: native_price }}{% else %}{{ native_price }}{% endif %}
+                    {% else %}
+                      {{ 'products.price_unavailable' | t }}
+                    {% endif %}
+                  </p>
                 </div>
-              </a>
+              </{% if card_url != blank %}a{% else %}div{% endif %}>
             </div>
           </div>
         {% endif %}
@@ -132,6 +140,11 @@
       "type": "custom_card",
       "name": "Custom Apple Card",
       "settings": [
+        {
+          "type": "product",
+          "id": "product",
+          "label": "Product for native pricing and destination"
+        },
         {
           "type": "image_picker",
           "id": "image",

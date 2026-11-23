@@ -1,0 +1,370 @@
+TAP version 13
+# Subtest: concurrent cart updates send one localized POST and preserve section routing
+ok 1 - concurrent cart updates send one localized POST and preserve section routing
+  ---
+  duration_ms: 5.399245
+  type: 'test'
+  ...
+# Subtest: quantity zero removes an item; invalid quantities never send a request
+ok 2 - quantity zero removes an item; invalid quantities never send a request
+  ---
+  duration_ms: 1.558274
+  type: 'test'
+  ...
+# Subtest: 422 exposes Shopify error and reconciles with a read only
+ok 3 - 422 exposes Shopify error and reconciles with a read only
+  ---
+  duration_ms: 2.888158
+  type: 'test'
+  ...
+# Subtest: ambiguous response blocks another mutation when reconciliation fails
+ok 4 - ambiguous response blocks another mutation when reconciliation fails
+  ---
+  duration_ms: 1.415438
+  type: 'test'
+  ...
+# Subtest: accepted mutation with missing rendered sections never retries the POST
+ok 5 - accepted mutation with missing rendered sections never retries the POST
+  ---
+  duration_ms: 1.48802
+  type: 'test'
+  ...
+# Subtest: request preserves native product FormData properties and selling plan
+ok 6 - request preserves native product FormData properties and selling plan
+  ---
+  duration_ms: 36.457763
+  type: 'test'
+  ...
+# Subtest: adapter reuses cart run/request/refresh/open with loading state and one add
+ok 7 - adapter reuses cart run/request/refresh/open with loading state and one add
+  ---
+  duration_ms: 10.469037
+  type: 'test'
+  ...
+# Subtest: Shopify rejection returns to existing cart error handling and resets loading without retry
+ok 8 - Shopify rejection returns to existing cart error handling and resets loading without retry
+  ---
+  duration_ms: 3.205165
+  type: 'test'
+  ...
+# Subtest: pending or unreconciled cart never sends another add
+ok 9 - pending or unreconciled cart never sends another add
+  ---
+  duration_ms: 2.299962
+  type: 'test'
+  ...
+# Subtest: malformed success is handled by the cart controller, not shown as Added
+ok 10 - malformed success is handled by the cart controller, not shown as Added
+  ---
+  duration_ms: 4.21606
+  type: 'test'
+  ...
+# Subtest: focus scrolls the whole card within mobile bounds, without moving desktop
+ok 11 - focus scrolls the whole card within mobile bounds, without moving desktop
+  ---
+  duration_ms: 1.507135
+  type: 'test'
+  ...
+# Subtest: color suggestion follows the current main variant and only normalized exact colors
+ok 12 - color suggestion follows the current main variant and only normalized exact colors
+  ---
+  duration_ms: 4.023703
+  type: 'test'
+  ...
+# Subtest: a color suggestion never guesses size or ambiguous normalized colors
+ok 13 - a color suggestion never guesses size or ambiguous normalized colors
+  ---
+  duration_ms: 3.932104
+  type: 'test'
+  ...
+# Subtest: selection requires every exact option; impossible combinations never resolve
+ok 14 - selection requires every exact option; impossible combinations never resolve
+  ---
+  duration_ms: 1.718565
+  type: 'test'
+  ...
+# Subtest: inline expansion suggests current color and updates card price/image without focus or cart mutation
+ok 15 - inline expansion suggests current color and updates card price/image without focus or cart mutation
+  ---
+  duration_ms: 3.192123
+  type: 'test'
+  ...
+# Subtest: manual selection persists when reopening; main variant changes refresh the suggestion
+ok 16 - manual selection persists when reopening; main variant changes refresh the suggestion
+  ---
+  duration_ms: 1.729969
+  type: 'test'
+  ...
+# Subtest: zero price and unavailable variants never enable inline Add
+ok 17 - zero price and unavailable variants never enable inline Add
+  ---
+  duration_ms: 1.491187
+  type: 'test'
+  ...
+# Subtest: explicit Add submits chosen variant once through shared integration and returns focus to summary
+ok 18 - explicit Add submits chosen variant once through shared integration and returns focus to summary
+  ---
+  duration_ms: 2.615255
+  type: 'test'
+  ...
+# Subtest: no exact match requires explicit selection and never posts stale variant
+ok 19 - no exact match requires explicit selection and never posts stale variant
+  ---
+  duration_ms: 3.081878
+  type: 'test'
+  ...
+# Subtest: accepted add with failed refresh blocks duplicates; recovery performs GET reconciliation only
+ok 20 - accepted add with failed refresh blocks duplicates; recovery performs GET reconciliation only
+  ---
+  duration_ms: 2.091038
+  type: 'test'
+  ...
+# Subtest: shared rejection is visible inline with no retry
+ok 21 - shared rejection is visible inline with no retry
+  ---
+  duration_ms: 1.946036
+  type: 'test'
+  ...
+# Subtest: opening one disclosure closes the other; Escape closes it and restores summary focus
+ok 22 - opening one disclosure closes the other; Escape closes it and restores summary focus
+  ---
+  duration_ms: 2.284622
+  type: 'test'
+  ...
+# Subtest: empty, wrong type and self-only lists render no block
+ok 23 - empty, wrong type and self-only lists render no block
+  ---
+  duration_ms: 35.678557
+  type: 'test'
+  ...
+# Subtest: skips invalid and self references and limits the rendered products to three
+ok 24 - skips invalid and self references and limits the rendered products to three
+  ---
+  duration_ms: 13.604912
+  type: 'test'
+  ...
+# Subtest: zero and mixed-zero prices are omitted, positive variable prices have From
+ok 25 - zero and mixed-zero prices are omitted, positive variable prices have From
+  ---
+  duration_ms: 7.399086
+  type: 'test'
+  ...
+# Subtest: existing metafield and sold-out products remain navigable without purchase controls
+ok 26 - existing metafield and sold-out products remain navigable without purchase controls
+  ---
+  duration_ms: 5.822955
+  type: 'test'
+  ...
+# Subtest: only an available positive-price default variant gets Quick Add
+ok 27 - only an available positive-price default variant gets Quick Add
+  ---
+  duration_ms: 7.918154
+  type: 'test'
+  ...
+# Subtest: options, selling plans, quotes, portable products, gift cards and zero prices stay link-only
+ok 28 - options, selling plans, quotes, portable products, gift cards and zero prices stay link-only
+  ---
+  duration_ms: 59.191866
+  type: 'test'
+  ...
+# Subtest: fallback links describe the next action and category paths become readable
+ok 29 - fallback links describe the next action and category paths become readable
+  ---
+  duration_ms: 6.785268
+  type: 'test'
+  ...
+# Subtest: multi-variant inline payload uses real options and safe per-variant restrictions
+ok 30 - multi-variant inline payload uses real options and safe per-variant restrictions
+  ---
+  duration_ms: 10.585208
+  type: 'test'
+  ...
+# Subtest: restricted or incomplete product lists never receive inline selectors
+ok 31 - restricted or incomplete product lists never receive inline selectors
+  ---
+  duration_ms: 30.657637
+  type: 'test'
+  ...
+# Subtest: changing profiles affects only owned panels; one tab and panel are active
+ok 32 - changing profiles affects only owned panels; one tab and panel are active
+  ---
+  duration_ms: 5.824604
+  type: 'test'
+  ...
+# Subtest: Skip resets the profile and focuses the catalog destination without intercepting the native anchor
+ok 33 - Skip resets the profile and focuses the catalog destination without intercepting the native anchor
+  ---
+  duration_ms: 1.582475
+  type: 'test'
+  ...
+# Subtest: arrows wrap, Home/End work, RTL reverses directions and Tab remains native
+ok 34 - arrows wrap, Home/End work, RTL reverses directions and Tab remains native
+  ---
+  duration_ms: 2.584261
+  type: 'test'
+  ...
+# Subtest: keyboard focus scrolls the compact mobile row fully into view and initialization is idempotent
+ok 35 - keyboard focus scrolls the compact mobile row fully into view and initialization is idempotent
+  ---
+  duration_ms: 3.229473
+  type: 'test'
+  ...
+# Subtest: EN and FR locales have matching keys, interpolation variables, and plural forms
+ok 36 - EN and FR locales have matching keys, interpolation variables, and plural forms
+  ---
+  duration_ms: 9.149879
+  type: 'test'
+  ...
+# Subtest: every static Liquid translation key exists in English and French
+ok 37 - every static Liquid translation key exists in English and French
+  ---
+  duration_ms: 18.910587
+  type: 'test'
+  ...
+# Subtest: click selects one panel and one roving tab stop
+ok 38 - click selects one panel and one roving tab stop
+  ---
+  duration_ms: 4.853625
+  type: 'test'
+  ...
+# Subtest: arrow keys wrap, Home and End focus the selected tab; Tab is not intercepted
+ok 39 - arrow keys wrap, Home and End focus the selected tab; Tab is not intercepted
+  ---
+  duration_ms: 2.317202
+  type: 'test'
+  ...
+# Subtest: RTL reverses horizontal arrows
+ok 40 - RTL reverses horizontal arrows
+  ---
+  duration_ms: 1.201192
+  type: 'test'
+  ...
+# Subtest: focused mobile tabs scroll within their own row; desktop never scrolls
+ok 41 - focused mobile tabs scroll within their own row; desktop never scrolls
+  ---
+  duration_ms: 4.130833
+  type: 'test'
+  ...
+# Subtest: native focus activates its panel and theme editor reload does not duplicate setup
+ok 42 - native focus activates its panel and theme editor reload does not duplicate setup
+  ---
+  duration_ms: 1.100793
+  type: 'test'
+  ...
+# Subtest: reference lists iterate product objects without supporting numeric lookup
+ok 43 - reference lists iterate product objects without supporting numeric lookup
+  ---
+  duration_ms: 37.508453
+  type: 'test'
+  ...
+# Subtest: empty selection retains legacy profiles with duplicate names and cards removed
+ok 44 - empty selection retains legacy profiles with duplicate names and cards removed
+  ---
+  duration_ms: 24.260521
+  type: 'test'
+  ...
+# Subtest: selected active profiles preserve editorial order and replace rather than mix with blocks
+ok 45 - selected active profiles preserve editorial order and replace rather than mix with blocks
+  ---
+  duration_ms: 14.413578
+  type: 'test'
+  ...
+# Subtest: draft, deleted, blank-name and wrong-type selections fall back to legacy
+ok 46 - draft, deleted, blank-name and wrong-type selections fall back to legacy
+  ---
+  duration_ms: 10.901579
+  type: 'test'
+  ...
+# Subtest: deduplicates profile identities/names and product references within each profile
+ok 47 - deduplicates profile identities/names and product references within each profile
+  ---
+  duration_ms: 11.037942
+  type: 'test'
+  ...
+# Subtest: zero and mixed-zero prices are hidden while their product links remain
+ok 48 - zero and mixed-zero prices are hidden while their product links remain
+  ---
+  duration_ms: 7.939141
+  type: 'test'
+  ...
+# Subtest: product references are capped at six and invalid references never create empty links
+ok 49 - product references are capped at six and invalid references never create empty links
+  ---
+  duration_ms: 21.382423
+  type: 'test'
+  ...
+# Subtest: related collections are real references, deduplicated; image references render safely
+ok 50 - related collections are real references, deduplicated; image references render safely
+  ---
+  duration_ms: 6.360284
+  type: 'test'
+  ...
+# Subtest: tabs and panels have unique linked IDs, one tab stop, hidden inactive panels and escaped names
+ok 51 - tabs and panels have unique linked IDs, one tab stop, hidden inactive panels and escaped names
+  ---
+  duration_ms: 11.03818
+  type: 'test'
+  ...
+# Subtest: empty data renders no empty section and Skip remains a separate optional catalog link
+ok 52 - empty data renders no empty section and Skip remains a separate optional catalog link
+  ---
+  duration_ms: 16.602117
+  type: 'test'
+  ...
+# Subtest: section settings bind to the existing metaobject definition without creating records
+ok 53 - section settings bind to the existing metaobject definition without creating records
+  ---
+  duration_ms: 0.370356
+  type: 'test'
+  ...
+# Subtest: Quote modal is rendered once and preserves the R1.10-V native contact fields
+ok 54 - Quote modal is rendered once and preserves the R1.10-V native contact fields
+  ---
+  duration_ms: 2.178093
+  type: 'test'
+  ...
+# Subtest: product enhancement keeps sold-out, restricted and ambiguous operations blocked
+ok 55 - product enhancement keeps sold-out, restricted and ambiguous operations blocked
+  ---
+  duration_ms: 2.647727
+  type: 'test'
+  ...
+# Subtest: product payload rejects invalid quantities and mismatched selectors before any request
+ok 56 - product payload rejects invalid quantities and mismatched selectors before any request
+  ---
+  duration_ms: 2.21755
+  type: 'test'
+  ...
+# Subtest: pilot templates preserve every original setting/block and add only the complement section
+ok 57 - pilot templates preserve every original setting/block and add only the complement section
+  ---
+  duration_ms: 5.944375
+  type: 'test'
+  ...
+# Subtest: candidate keeps native availability, Infinity/portable guard, money and current settings
+ok 58 - candidate keeps native availability, Infinity/portable guard, money and current settings
+  ---
+  duration_ms: 1.185883
+  type: 'test'
+  ...
+# Subtest: Quote native fields, singleton script and menu focus contract remain MAIN
+ok 59 - Quote native fields, singleton script and menu focus contract remain MAIN
+  ---
+  duration_ms: 1.082426
+  type: 'test'
+  ...
+# Subtest: new EN/FR interface labels render in both locales with matching interpolation and keys
+ok 60 - new EN/FR interface labels render in both locales with matching interpolation and keys
+  ---
+  duration_ms: 38.771274
+  type: 'test'
+  ...
+1..60
+# tests 60
+# suites 0
+# pass 60
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 366.624552

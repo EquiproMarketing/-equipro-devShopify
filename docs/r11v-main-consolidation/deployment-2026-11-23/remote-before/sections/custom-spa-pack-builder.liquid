@@ -1,0 +1,334 @@
+{{ 'custom-spa-pack-builder.css' | asset_url | stylesheet_tag }}
+
+<section class="spa-pack-section" id="spa-pack-{{ section.id }}">
+  <div class="page-width">
+    
+    {%- comment -%} APPLE PILL NAVIGATION BAR {%- endcomment -%}
+    {%- assign category_blocks = section.blocks | where: 'type', 'category_tab' -%}
+    {%- if category_blocks.size > 0 -%}
+      <div class="spa-pack-pill-wrapper">
+        <div class="spa-pack-pill-bar" role="tablist">
+          {%- for block in category_blocks -%}
+            <button 
+              class="spa-pack-pill-item{% if forloop.first %} is-active{% endif %}"
+              data-tab="tab-{{ section.id }}-{{ block.id }}"
+              role="tab"
+              aria-selected="{% if forloop.first %}true{% else %}false{% endif %}"
+              {{ block.shopify_attributes }}
+            >
+              {{ block.settings.tab_title | default: 'Category' }}
+            </button>
+          {%- endfor -%}
+        </div>
+      </div>
+    {%- endif -%}
+
+    {%- comment -%} TAB CONTENT PANELS (STATIC CSS GRID) {%- endcomment -%}
+    <div class="spa-pack-content">
+      {%- for block in category_blocks -%}
+        <div 
+          class="spa-pack-panel{% if forloop.first %} is-active{% endif %}"
+          id="tab-{{ section.id }}-{{ block.id }}"
+          role="tabpanel"
+        >
+          <div class="spa-pack-grid">
+            
+            {%- comment -%} FEATURED PROMO HERO CARD (SPANS 2 COLUMNS) {%- endcomment -%}
+            {%- if block.settings.show_hero_card -%}
+              <div 
+                class="spa-pack-hero-card" 
+                style="background-color: {{ block.settings.hero_bg | default: '#1d1d1f' }}; color: {{ block.settings.hero_text_color | default: '#ffffff' }};"
+              >
+                <div class="spa-pack-hero-card__content">
+                  {%- if block.settings.hero_title != blank -%}
+                    <h3 class="spa-pack-hero-card__title">{{ block.settings.hero_title }}</h3>
+                  {%- endif -%}
+                  
+                  {%- if block.settings.hero_subtitle != blank -%}
+                    <p class="spa-pack-hero-card__subtitle">{{ block.settings.hero_subtitle }}</p>
+                  {%- endif -%}
+                </div>
+
+                {%- if block.settings.hero_image != blank -%}
+                  <div class="spa-pack-hero-card__image-wrapper">
+                    <img 
+                      src="{{ block.settings.hero_image | image_url: width: 800 }}" 
+                      alt="{{ block.settings.hero_title | escape }}"
+                      loading="lazy"
+                      class="spa-pack-hero-card__image"
+                    >
+                  </div>
+                {%- endif -%}
+              </div>
+            {%- endif -%}
+
+            {%- comment -%} PRODUCT CARDS {%- endcomment -%}
+            {%- for i in (1..6) -%}
+              {%- assign prod_setting_id = 'product_' | append: i -%}
+              {%- assign badge_setting_id = 'badge_' | append: i -%}
+              {%- assign selected_product = block.settings[prod_setting_id] -%}
+              {%- assign custom_badge = block.settings[badge_setting_id] -%}
+
+              {%- if selected_product != blank -%}
+                <a href="{{ selected_product.url }}" class="spa-pack-card">
+                  
+                  {%- comment -%} 4:5 IMAGE CONTAINER {%- endcomment -%}
+                  <div class="spa-pack-card__image-container">
+                    {%- if selected_product.featured_image != blank -%}
+                      <img
+                        src="{{ selected_product.featured_image | image_url: width: 500 }}"
+                        alt="{{ selected_product.title | escape }}"
+                        loading="lazy"
+                        width="240"
+                        height="300"
+                        class="spa-pack-card__image spa-pack-card__image--primary"
+                      >
+                      {%- if selected_product.images.size > 1 -%}
+                        <img
+                          src="{{ selected_product.images[1] | image_url: width: 500 }}"
+                          alt="{{ selected_product.title | escape }}"
+                          loading="lazy"
+                          width="240"
+                          height="300"
+                          class="spa-pack-card__image spa-pack-card__image--secondary"
+                        >
+                      {%- endif -%}
+                    {%- else -%}
+                      {{ 'product-1' | placeholder_svg_tag: 'spa-pack-card__placeholder' }}
+                    {%- endif -%}
+                  </div>
+
+                  {%- comment -%} CONTENT DETAILS {%- endcomment -%}
+                  <div class="spa-pack-card__content">
+                    {%- if custom_badge != blank -%}
+                      <span class="spa-pack-card__tag">{{ custom_badge }}</span>
+                    {%- elsif selected_product.type != blank -%}
+                      <span class="spa-pack-card__tag">{{ selected_product.type }}</span>
+                    {%- endif -%}
+
+                    <h3 class="spa-pack-card__title">{{ selected_product.title }}</h3>
+                    
+                    <p class="spa-pack-card__price">
+                      {%- if selected_product.price_varies -%}
+                        From {{ selected_product.price_min | money }}
+                      {%- else -%}
+                        {{ selected_product.price | money }}
+                      {%- endif -%}
+                    </p>
+                  </div>
+
+                </a>
+              {%- endif -%}
+            {%- endfor -%}
+
+          </div>
+        </div>
+      {%- endfor -%}
+    </div>
+
+  </div>
+</section>
+
+<script>
+  document.addEventListener('DOMContentLoaded', function() {
+    const sectionContainer = document.getElementById('spa-pack-{{ section.id }}');
+    if (!sectionContainer) return;
+
+    const pillItems = sectionContainer.querySelectorAll('.spa-pack-pill-item');
+    const panels = sectionContainer.querySelectorAll('.spa-pack-panel');
+
+    pillItems.forEach(pill => {
+      pill.addEventListener('click', function() {
+        const targetId = this.getAttribute('data-tab');
+
+        pillItems.forEach(item => {
+          item.classList.remove('is-active');
+          item.setAttribute('aria-selected', 'false');
+        });
+
+        panels.forEach(p => p.classList.remove('is-active'));
+
+        this.classList.add('is-active');
+        this.setAttribute('aria-selected', 'true');
+
+        const activePanel = document.getElementById(targetId);
+        if (activePanel) {
+          activePanel.classList.add('is-active');
+        }
+      });
+    });
+  });
+</script>
+
+{% schema %}
+{
+  "name": "Spa Equipment Pack",
+  "tag": "section",
+  "class": "section-spa-pack-builder",
+  "settings": [],
+  "blocks": [
+    {
+      "type": "category_tab",
+      "name": "Category Tab",
+      "settings": [
+        {
+          "type": "text",
+          "id": "tab_title",
+          "label": "Tab Name",
+          "default": "Spas & Bien-être"
+        },
+        {
+          "type": "header",
+          "content": "Hero Card Settings (Optional)"
+        },
+        {
+          "type": "checkbox",
+          "id": "show_hero_card",
+          "label": "Show Featured Hero Card",
+          "default": true
+        },
+        {
+          "type": "color",
+          "id": "hero_bg",
+          "label": "Hero Card Background",
+          "default": "#1d1d1f"
+        },
+        {
+          "type": "color",
+          "id": "hero_text_color",
+          "label": "Hero Text Color",
+          "default": "#ffffff"
+        },
+        {
+          "type": "text",
+          "id": "hero_title",
+          "label": "Hero Title",
+          "default": "La rentrée, simplifiée."
+        },
+        {
+          "type": "textarea",
+          "id": "hero_subtitle",
+          "label": "Hero Subtitle",
+          "default": "Achetez un Mac ou un iPad avec les rabais éducationnels et recevez de 140 $ à 210 $ en carte-cadeau."
+        },
+        {
+          "type": "image_picker",
+          "id": "hero_image",
+          "label": "Hero Image / Graphic"
+        },
+        {
+          "type": "header",
+          "content": "Products in Tab"
+        },
+        {
+          "type": "product",
+          "id": "product_1",
+          "label": "Product 1"
+        },
+        {
+          "type": "text",
+          "id": "badge_1",
+          "label": "Custom Badge 1"
+        },
+        {
+          "type": "product",
+          "id": "product_2",
+          "label": "Product 2"
+        },
+        {
+          "type": "text",
+          "id": "badge_2",
+          "label": "Custom Badge 2"
+        },
+        {
+          "type": "product",
+          "id": "product_3",
+          "label": "Product 3"
+        },
+        {
+          "type": "text",
+          "id": "badge_3",
+          "label": "Custom Badge 3"
+        },
+        {
+          "type": "product",
+          "id": "product_4",
+          "label": "Product 4"
+        },
+        {
+          "type": "text",
+          "id": "badge_4",
+          "label": "Custom Badge 4"
+        },
+        {
+          "type": "product",
+          "id": "product_5",
+          "label": "Product 5"
+        },
+        {
+          "type": "text",
+          "id": "badge_5",
+          "label": "Custom Badge 5"
+        },
+        {
+          "type": "product",
+          "id": "product_6",
+          "label": "Product 6"
+        },
+        {
+          "type": "text",
+          "id": "badge_6",
+          "label": "Custom Badge 6"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Spa Equipment Pack",
+      "blocks": [
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Spas & Bien-être",
+            "hero_title": "Spas & Wellness",
+            "hero_subtitle": "Tables de massage, lits de traitement électriques et hydrauliques, douches Vichy et thérapie thermique."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Esthétique & Salons",
+            "hero_title": "Esthétique & Soins",
+            "hero_subtitle": "Vaporisateurs, unités faciales multifonctions, chauffe-cire, chauffe-serviettes et analyseurs de peau."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Épilation & Pédicure",
+            "hero_title": "Soins Spécialisés",
+            "hero_subtitle": "Chaises et lits polyvalents pour soins faciaux, massages, épilation, pédicure et soins corporels."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Écoles & Instituts",
+            "hero_title": "Formation Pro",
+            "hero_subtitle": "Équipements certifiés choisis par les plus grands instituts comme Aesthetic Science Institute et Continental Schools."
+          }
+        },
+        {
+          "type": "category_tab",
+          "settings": {
+            "tab_title": "Professionnels Indépendants",
+            "hero_title": "Espaces Indépendants",
+            "hero_subtitle": "Solutions compactes et haut de gamme adaptées aux besoins des praticiens indépendants."
+          }
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
