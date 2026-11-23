@@ -26,7 +26,7 @@
                 {% unless item.product.has_only_default_variant %}
                   <div style="font-size: 0.88rem; color: #6e6e73; margin-top: 4px;">
                     {% for option in item.options_with_values %}
-                      <span>{{ option.name }}: <strong>{{ option.value }}</strong></span>{% unless forloop.last %} &bull; {% endunless %}
+                      <span>{% assign display_option_name = option.name | strip | downcase %}{% if display_option_name == 'color' or display_option_name == 'colour' or display_option_name == 'couleur' %}{{ 'products.color' | t }}{% elsif display_option_name == 'size' or display_option_name == 'taille' or display_option_name == 'talla' %}{{ 'products.size' | t }}{% else %}{{ option.name | escape }}{% endif %}: <strong>{{ option.value }}</strong></span>{% unless forloop.last %} &bull; {% endunless %}
                     {% endfor %}
                   </div>
                 {% endunless %}

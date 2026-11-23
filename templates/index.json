@@ -961,7 +961,13 @@
         "category_tab_AC4NNC"
       ],
       "name": "Spa Equipment Pack",
-      "settings": {}
+      "settings": {
+        "professional_profiles": [
+          "spas-wellness-centers",
+          "spa-esthetics-setup",
+          "orthopedic-podiatry"
+        ]
+      }
     }
   },
   "order": [

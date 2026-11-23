@@ -499,3 +499,31 @@
       margin-top: 24px;
     }
   }
+/* Product-form feedback and native variant fallback stay inside the buy box. */
+.product-page equipro-product-form { display: block; }
+.product-page [data-js-product-controls][hidden],
+.product-page .product-form-feedback [hidden] { display: none !important; }
+.product-page .product-form-feedback { font-size: .875rem; line-height: 1.5; overflow-wrap: anywhere; }
+.product-page equipro-product-form.has-feedback .product-form-feedback { margin-top: 12px; }
+.product-page .product-form-status, .product-page .product-form-error { margin: 0; }
+.product-page .product-form-error { color: #92283b; }
+.product-page .product-form-actions { display: flex; flex-wrap: wrap; gap: 8px 16px; align-items: center; margin-top: 8px; }
+.product-page .product-form-actions a, .product-page .product-form-actions button,
+.product-page .product-native-variants a { display: inline-flex; align-items: center; min-height: 44px; color: #92283b; }
+.product-page .product-form-actions button { padding: 8px 12px; border: 1px solid currentColor; border-radius: 6px; background: transparent; font: inherit; cursor: pointer; }
+.product-page .product-form-actions button:disabled { opacity: .6; cursor: wait; }
+.product-page .product-form-actions :focus-visible, .product-page .product-native-variants a:focus-visible,
+.product-page .product-add-cart-btn:focus-visible, .product-page .product-select:focus-visible { outline: 2px solid #92283b; outline-offset: 3px; }
+.product-page .product-native-variants ul { display: flex; flex-wrap: wrap; gap: 4px 16px; list-style: none; padding: 0; }
+.product-page .product-native-variants [aria-current="page"] { font-weight: 700; }
+
+/* Keep native number controls when the scripted quantity buttons are hidden. */
+.product-page .product-quantity > [data-js-product-controls]:not([hidden]) + input[type="number"] { appearance: textfield; -moz-appearance: textfield; }
+.product-page .product-quantity > [data-js-product-controls]:not([hidden]) + input[type="number"]::-webkit-inner-spin-button,
+.product-page .product-quantity > [data-js-product-controls]:not([hidden]) + input[type="number"]::-webkit-outer-spin-button { -webkit-appearance: none; margin: 0; }
+.product-page .product-quantity input:focus-visible { outline: 2px solid #92283b; outline-offset: 2px; }
+
+/* Four-image gallery controls retain the existing thumbnail composition. */
+.product-gallery__thumbs button.thumb-img { padding: 0; overflow: hidden; }
+.product-gallery__thumbs button.thumb-img img { display: block; width: 100%; height: 100%; object-fit: cover; border-radius: inherit; }
+.product-gallery__thumbs button.thumb-img:focus-visible { outline: 2px solid #92283b; outline-offset: 3px; }

@@ -174,13 +174,27 @@
     "view_product": "View product",
     "learn_more": "Learn more",
     "color": "Color",
+    "all_collections": "All collections",
+    "size": "Size",
+    "hydraulic_mechanical": "Hydraulic / Mechanical",
     "product": {
       "from_lowest_price_html": "From {{ lowest_price }}"
     },
     "price_unavailable": "Price unavailable",
     "purchase_unavailable": "Purchase unavailable",
     "add_to_cart": "Add to Cart",
-    "sold_out": "Sold Out"
+    "sold_out": "Sold Out",
+    "form": {
+      "adding": "Adding…",
+      "added": "Added {{ variant }} to your cart.",
+      "accepted": "This item was added. Refresh the cart before adding another item.",
+      "uncertain": "The result could not be confirmed. Check your cart before adding again.",
+      "invalid": "Choose an available option and a valid quantity.",
+      "sold_out": "Out of stock",
+      "view_cart": "View cart",
+      "checked": "I have checked my cart",
+      "choose_variant": "Choose a variant"
+    }
   },
   "setup_filters": {
     "clear": "Clear all — Explore all products",
@@ -343,5 +357,24 @@
       "outlets": "Electrical outlets"
     },
     "open": "Compare with other models"
+  },
+  "consolidation": {
+    "select_label": "Select an option",
+    "instock_label": "Available",
+    "soldout_label": "Unavailable",
+    "details_label": "View product for purchase details",
+    "suggestion_label": "Suggested color — review before adding:",
+    "accepted_label": "Added to cart. Refresh the cart display before adding again.",
+    "refresh_label": "Refresh cart",
+    "quick_add_label": "Add to cart",
+    "options_label": "Choose options",
+    "quote_label": "View quote details",
+    "unavailable_label": "View availability",
+    "added_label": "Added! ✓",
+    "profiles_label": "Professional profiles",
+    "explore_all_label": "Explore all products",
+    "collections_label": "Related collections",
+    "price_from_label": "From",
+    "category_label": "Category"
   }
 }

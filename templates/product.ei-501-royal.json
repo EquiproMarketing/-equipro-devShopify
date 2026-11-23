@@ -277,10 +277,18 @@
         "heading": "Technical Model Comparison",
         "compare_collection": ""
       }
+    },
+    "complete_setup": {
+      "type": "complete-your-setup",
+      "settings": {
+        "metafield_namespace": "custom",
+        "metafield_key": "complete_your_setup"
+      }
     }
   },
   "order": [
     "main",
+    "complete_setup",
     "main_product_characteristics_Hp7Baq",
     "banner_features",
     "how_to",

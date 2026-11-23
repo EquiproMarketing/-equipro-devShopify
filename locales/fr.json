@@ -174,13 +174,27 @@
     "view_product": "Voir le produit",
     "learn_more": "En savoir plus",
     "color": "Couleur",
+    "all_collections": "Toutes les collections",
+    "size": "Taille",
+    "hydraulic_mechanical": "Hydraulique / mécanique",
     "product": {
       "from_lowest_price_html": "À partir de {{ lowest_price }}"
     },
     "price_unavailable": "Prix non disponible",
     "purchase_unavailable": "Achat non disponible",
     "add_to_cart": "Ajouter au panier",
-    "sold_out": "Épuisé"
+    "sold_out": "Épuisé",
+    "form": {
+      "adding": "Ajout en cours…",
+      "added": "{{ variant }} a été ajouté au panier.",
+      "accepted": "Ajout accepté. Actualisez le panier avant de recommencer.",
+      "uncertain": "Le résultat de l’ajout est incertain. Vérifiez le panier avant de recommencer.",
+      "invalid": "Sélectionnez une variante disponible et une quantité valide.",
+      "sold_out": "Épuisé",
+      "view_cart": "Voir le panier",
+      "checked": "J’ai vérifié le panier",
+      "choose_variant": "Choisir une variante"
+    }
   },
   "setup_filters": {
     "clear": "Tout effacer — Explorer tous les produits",
@@ -343,5 +357,24 @@
       "outlets": "Prises électriques"
     },
     "open": "Comparer avec d’autres modèles"
+  },
+  "consolidation": {
+    "select_label": "Sélectionner une option",
+    "instock_label": "Disponible",
+    "soldout_label": "Non disponible",
+    "details_label": "Voir les modalités d’achat du produit",
+    "suggestion_label": "Couleur suggérée — vérifier avant l’ajout :",
+    "accepted_label": "Ajout accepté. Actualisez le panier avant de recommencer.",
+    "refresh_label": "Actualiser le panier",
+    "quick_add_label": "Ajouter au panier",
+    "options_label": "Choisir les options",
+    "quote_label": "Voir les détails de la demande de prix",
+    "unavailable_label": "Voir la disponibilité",
+    "added_label": "Ajouté! ✓",
+    "profiles_label": "Profils professionnels",
+    "explore_all_label": "Explorer tous les produits",
+    "collections_label": "Collections connexes",
+    "price_from_label": "À partir de",
+    "category_label": "Catégorie"
   }
 }

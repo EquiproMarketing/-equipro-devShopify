@@ -29,12 +29,12 @@
               {%- assign display_image = block.settings.image | default: target_prod.featured_media -%}
               {%- assign display_subtitle = block.settings.subtitle | default: target_prod.description | strip_html | truncatewords: 12 -%}
               {%- capture display_price -%}
-                {%- if block.settings.price != blank -%}
-                  {{ block.settings.price }}
+                {%- if target_prod.price_min <= 0 -%}
+                  {{ 'products.price_unavailable' | t }}
                 {%- elsif target_prod.price_varies -%}
-                  {{ 'products.product.from_lowest_price_html' | t: lowest_price: target_prod.price_min | money }}
+                  {% assign formatted_lowest_price = target_prod.price_min | money_with_currency %}{{ 'products.product.from_lowest_price_html' | t: lowest_price: formatted_lowest_price }}
                 {%- else -%}
-                  {{ target_prod.price | money }}
+                  {{ target_prod.price | money_with_currency }}
                 {%- endif -%}
               {%- endcapture -%}
               {%- assign is_product = true -%}
@@ -102,7 +102,7 @@
 
                 {%- if is_product -%}
                   <div class="custom-subcat-card__actions">
-                    <a href="{{ display_url }}" class="custom-subcat-card__btn" {% if i > 1 %}tabindex="-1"{% endif %}>Comprar</a>
+                    <a href="{{ display_url }}" class="custom-subcat-card__btn" {% if i > 1 %}tabindex="-1"{% endif %}>{{ 'products.view_product' | t }}</a>
                   </div>
                 {%- endif -%}
 

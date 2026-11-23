@@ -5,7 +5,7 @@
 
 {{ 'quote-modal.css' | asset_url | stylesheet_tag }}
 
-<div id="QuoteModal" class="quote-modal" aria-hidden="true" role="dialog" aria-labelledby="QuoteModalTitle">
+<div id="QuoteModal" class="quote-modal" aria-hidden="true" aria-modal="true" tabindex="-1" role="dialog" aria-labelledby="QuoteModalTitle">
   <div class="quote-modal__overlay" data-close-quote-modal></div>
   <div class="quote-modal__content">
     <button type="button" class="quote-modal__close" data-close-quote-modal aria-label="{{ 'quote.close' | t }}">&times;</button>
@@ -36,7 +36,7 @@
       <!-- Visible product context -->
       <div class="quote-modal__product-preview">
         <span class="quote-modal__product-label">{{ 'quote.product' | t }}:</span>
-        <strong id="QuoteProductDisplay">{{ product.title | default: 'quote.general_product' | t }}</strong>
+        <strong id="QuoteProductDisplay">{% if product.title != blank %}{{ product.title | escape }}{% else %}{{ 'quote.general_product' | t }}{% endif %}</strong>
       </div>
 
       <div class="quote-modal__grid">

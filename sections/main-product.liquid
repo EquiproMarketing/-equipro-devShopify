@@ -1,5 +1,6 @@
 {{ 'section-main-product.css' | asset_url | stylesheet_tag }}
 {% if section.settings.reference_layout %}{{ 'product-reference-layout.css' | asset_url | stylesheet_tag }}{% endif %}
+<script src="{{ 'product-form.js' | asset_url }}" defer="defer"></script>
 
 <div class="product-page page-width{% if section.settings.reference_layout %} product-page--reference{% endif %}" id="ProductMain-{{ section.id }}">
   {% assign target_product = product | default: section.settings.featured_product %}
@@ -92,8 +93,21 @@
 
         {% if use_product_overrides and section.settings.purchase_note != blank %}<div class="product-purchase-note">{{ section.settings.purchase_note }}</div>{% endif %}
         {% unless portable_product %}
+        <equipro-product-form
+          data-ajax-eligible="{% if purchase_restricted == false and target_product.gift_card? != true %}true{% else %}false{% endif %}"
+          data-product-label="{{ target_product.title | escape }}"
+          data-add-label="{% if section.settings.btn_label != blank %}{{ section.settings.btn_label | escape }}{% else %}{{ 'products.add_to_cart' | t | escape }}{% endif %}"
+          data-adding="{{ 'products.form.adding' | t | escape }}"
+          data-added="{{ 'products.form.added' | t: variant: '__VARIANT__' | escape }}"
+          data-accepted="{{ 'products.form.accepted' | t | escape }}"
+          data-uncertain="{{ 'products.form.uncertain' | t | escape }}"
+          data-invalid="{{ 'products.form.invalid' | t | escape }}"
+          data-unavailable="{{ 'products.purchase_unavailable' | t | escape }}"
+          data-soldout="{{ 'products.form.sold_out' | t | escape }}"
+          data-request-error="{{ 'cart.update_error' | t | escape }}"
+        >
         {% form 'product', target_product %}
-          <input type="hidden" name="id" id="ProductVariantIdInput" value="{% if current_variant.available and current_variant.price > 0 and purchase_restricted == false %}{{ current_variant.id }}{% endif %}">
+          <input type="hidden" name="id" id="ProductVariantIdInput" value="{% if current_variant.available and current_variant.price > 0 and purchase_restricted == false and current_variant.requires_selling_plan != true %}{{ current_variant.id }}{% endif %}">
 
           {% if section.settings.show_variant_selectors and target_product.has_only_default_variant == false %}
             <div class="product-options-container">
@@ -113,7 +127,7 @@
 
                 {% if show_option %}
                   <div class="product-option">
-                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{% assign display_option_name = option.name | strip | downcase %}{% if display_option_name == 'couleur' or display_option_name == 'color' or display_option_name == 'colour' %}{{ 'products.color' | t }}{% else %}{{ option.name }}{% endif %}</label>
+                    <label for="Option-{{ section.id }}-{{ forloop.index0 }}">{% assign display_option_name = option.name | strip | downcase %}{% if display_option_name == 'couleur' or display_option_name == 'color' or display_option_name == 'colour' %}{{ 'products.color' | t }}{% elsif display_option_name == 'size' or display_option_name == 'taille' or display_option_name == 'talla' %}{{ 'products.size' | t }}{% else %}{{ option.name | escape }}{% endif %}</label>
                     <select 
                       id="Option-{{ section.id }}-{{ forloop.index0 }}" 
                       class="product-select product-variant-selector"
@@ -140,8 +154,8 @@
               <button type="button" onclick="adjustQty(1)">+</button>
             </div>
 
-            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% if current_variant.available == false or current_variant.price <= 0 or purchase_restricted %}disabled{% endif %}>
-              {% if current_variant.price <= 0 or purchase_restricted %}
+            <button type="submit" class="product-add-cart-btn" id="AddToCartButton" {% if current_variant.available == false or current_variant.price <= 0 or purchase_restricted or current_variant.requires_selling_plan %}disabled{% endif %}>
+              {% if current_variant.price <= 0 or purchase_restricted or current_variant.requires_selling_plan %}
                 {{ 'products.purchase_unavailable' | t }}
               {% elsif current_variant.available %}
                 {% if section.settings.btn_label != blank %}{{ section.settings.btn_label }}{% else %}{{ 'products.add_to_cart' | t }}{% endif %}
@@ -150,7 +164,17 @@
               {% endif %}
             </button>
           </div>
+          <div class="product-form-feedback">
+            <p class="product-form-status" data-product-status role="status" aria-live="polite" aria-atomic="true"></p>
+            <p class="product-form-error" data-product-error role="alert" hidden></p>
+            <div class="product-form-actions" data-product-actions hidden>
+              <a href="{{ routes.cart_url }}">{{ 'products.form.view_cart' | t }}</a>
+              <button type="button" data-product-retry hidden>{{ 'cart.retry' | t }}</button>
+              <button type="button" data-product-checked hidden>{{ 'products.form.checked' | t }}</button>
+            </div>
+          </div>
         {% endform %}
+        </equipro-product-form>
         {% endunless %}
       </div>
 
@@ -257,15 +281,16 @@
 </div>
 
 <!-- VARIANTS JSON MAP -->
-<script type="application/json" id="ProductVariantsJson-{{ target_product.id }}">
+<script type="application/json" data-quote-root="ProductMain-{{ section.id }}" data-quote-initial-variant-id="{{ current_variant.id }}" id="ProductVariantsJson-{{ target_product.id }}">
   [
     {% for variant in target_product.variants %}
       {
         "id": {{ variant.id }},
         "title": {{ variant.title | json }},
         "price": {% if variant.price > 0 %}{% if section.settings.show_currency %}{{ variant.price | money_with_currency | json }}{% else %}{{ variant.price | money | json }}{% endif %}{% else %}{{ 'products.price_unavailable' | t | json }}{% endif %},
-        "purchasable": {% if variant.price > 0 and purchase_restricted == false %}true{% else %}false{% endif %},
+        "purchasable": {% if variant.price > 0 and purchase_restricted == false and variant.requires_selling_plan != true %}true{% else %}false{% endif %},
         "available": {{ variant.available | json }},
+        "quantity_rule": {"min": {{ variant.quantity_rule.min | default: 1 | json }}, "increment": {{ variant.quantity_rule.increment | default: 1 | json }}, "max": {{ variant.quantity_rule.max | json }}},
         "options": [
           {{ variant.option1 | json }},
           {{ variant.option2 | json }},
@@ -329,6 +354,7 @@
       if (variantIdInput) variantIdInput.value = '';
       const cartBtn = document.getElementById('AddToCartButton');
       if (cartBtn) { cartBtn.disabled = true; cartBtn.textContent = {{ 'products.purchase_unavailable' | t | json }}; }
+      purchaseForm?.closest('equipro-product-form')?.sync?.(null);
       return;
     }
     if (matchedVariant) {
@@ -357,6 +383,7 @@
         if (mainImg) mainImg.src = matchedVariant.image;
       }
     }
+    purchaseForm?.closest('equipro-product-form')?.sync?.(matchedVariant);
   }
 
   function changeMainImg(src) {
