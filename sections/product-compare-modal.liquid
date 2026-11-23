@@ -1,11 +1,11 @@
 {%- capture comparison_excluded -%}{%- render 'comparison-excluded', target_product: product -%}{%- endcapture -%}
 {%- if comparison_excluded == blank -%}
-<div id="CustomCompareModal" class="custom-compare-modal-overlay" style="display: none;">
+<dialog id="CustomCompareModal" class="custom-compare-modal-overlay" aria-modal="true" aria-labelledby="CompareModalTitle">
   <div class="custom-compare-modal-content">
-    <button type="button" class="custom-compare-modal-close" id="CloseCompareModal">&times;</button>
+    <button type="button" class="custom-compare-modal-close" id="CloseCompareModal" aria-label="{{ 'compare_legacy.close' | t | escape }}" autofocus>&times;</button>
     
     <div class="custom-compare-modal-header">
-      <h2>{% if section.settings.heading != blank %}{{ section.settings.heading }}{% else %}{{ 'compare_legacy.title' | t }}{% endif %}</h2>
+      <h2 id="CompareModalTitle">{% if section.settings.heading != blank %}{{ section.settings.heading }}{% else %}{{ 'compare_legacy.title' | t }}{% endif %}</h2>
       <p>{{ 'compare_legacy.intro' | t }}</p>
     </div>
 
@@ -146,15 +146,27 @@
       </div>
     </div>
   </div>
-</div>
+</dialog>
 
 <style>
+  .custom-compare-modal-overlay:not([open]) {
+    display: none;
+  }
+
+  .custom-compare-modal-overlay::backdrop {
+    background: transparent;
+  }
+
   .custom-compare-modal-overlay {
     position: fixed;
-    top: 0;
-    left: 0;
+    inset: 0;
     width: 100%;
     height: 100%;
+    max-width: none;
+    max-height: none;
+    margin: 0;
+    border: 0;
+    box-sizing: border-box;
     background: rgba(0, 0, 0, 0.65);
     backdrop-filter: blur(4px);
     z-index: 99999;
@@ -308,30 +320,76 @@
 </style>
 
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
+  function initLegacyCompareDialog() {
     const openBtn = document.getElementById('OpenCompareModal');
     const modal = document.getElementById('CustomCompareModal');
     const closeBtn = document.getElementById('CloseCompareModal');
     const closeFooter = document.getElementById('CloseCompareModalFooter');
 
-    if (openBtn && modal) {
-      openBtn.addEventListener('click', function(e) {
-        e.preventDefault();
-        modal.style.display = 'flex';
-      });
-    }
+    if (!openBtn || !modal || !closeBtn || !closeFooter || typeof modal.showModal !== 'function') return;
 
-    const closeModal = () => { if (modal) modal.style.display = 'none'; };
+    let opener = null;
+    let previousOverflow = '';
+    const closeModal = () => {
+      if (modal.open) modal.close();
+    };
 
-    if (closeBtn) closeBtn.addEventListener('click', closeModal);
-    if (closeFooter) closeFooter.addEventListener('click', closeModal);
+    openBtn.setAttribute('aria-haspopup', 'dialog');
+    openBtn.setAttribute('aria-controls', modal.id);
 
-    if (modal) {
-      modal.addEventListener('click', function(e) {
-        if (e.target === modal) closeModal();
-      });
-    }
-  });
+    openBtn.addEventListener('click', (event) => {
+      event.preventDefault();
+      if (modal.open) return;
+      opener = event.currentTarget;
+      previousOverflow = document.documentElement.style.overflow;
+      modal.showModal();
+      document.documentElement.style.overflow = 'hidden';
+      closeBtn.focus();
+    });
+
+    closeBtn.addEventListener('click', closeModal);
+    closeFooter.addEventListener('click', closeModal);
+    modal.addEventListener('click', (event) => {
+      if (event.target === modal) closeModal();
+    });
+
+    modal.addEventListener('cancel', (event) => {
+      event.preventDefault();
+      closeModal();
+    });
+
+    modal.addEventListener('close', () => {
+      document.documentElement.style.overflow = previousOverflow;
+      if (opener?.isConnected) opener.focus();
+      opener = null;
+    });
+
+    modal.addEventListener('keydown', (event) => {
+      if (event.key !== 'Tab' || !modal.open) return;
+
+      const focusable = [...modal.querySelectorAll('a[href], button, input, select, textarea, [tabindex]')]
+        .filter((element) => element.tabIndex >= 0 && !element.matches(':disabled')
+          && !element.closest('[inert], [hidden], [aria-hidden="true"]') && element.getClientRects().length > 0);
+      if (!focusable.length) {
+        event.preventDefault();
+        return;
+      }
+
+      const first = focusable[0];
+      const last = focusable[focusable.length - 1];
+      const active = document.activeElement;
+      if (!focusable.includes(active) || (event.shiftKey ? active === first : active === last)) {
+        event.preventDefault();
+        (event.shiftKey ? last : first).focus();
+      }
+    });
+  }
+
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initLegacyCompareDialog, { once: true });
+  } else {
+    initLegacyCompareDialog();
+  }
 </script>
 
 {%- endif -%}

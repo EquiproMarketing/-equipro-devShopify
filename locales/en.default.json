@@ -197,6 +197,8 @@
     }
   },
   "setup_filters": {
+    "heading": "Find Your Setup",
+    "intro": "Browse equipment by specialty and category.",
     "clear": "Clear all — Explore all products",
     "explore": "Explore all products",
     "specialty": "Professional specialty",

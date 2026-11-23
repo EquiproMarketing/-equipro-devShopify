@@ -6,6 +6,14 @@
     if specialty_filter.type == 'list' and category_filter.type == 'list'
       assign filters_ready = true
     endif
+    assign setup_heading = section.settings.heading
+    if setup_heading == blank or setup_heading == 'Find Your Setup'
+      assign setup_heading = 'setup_filters.heading' | t
+    endif
+    assign setup_intro = section.settings.intro
+    if setup_intro == blank or setup_intro == 'Browse equipment by specialty and category.'
+      assign setup_intro = 'setup_filters.intro' | t
+    endif
     assign current_sort = collection.sort_by | default: collection.default_sort_by
     assign clear_url = collection.url
     if current_sort != blank
@@ -24,8 +32,8 @@
     <div class="page-width">
       <div class="find-your-setup__header">
         <div>
-          <h2 id="setup-heading-{{ section.id }}">{{ section.settings.heading | escape }}</h2>
-          {%- if filters_ready -%}<p>{{ section.settings.intro | escape }}</p>{%- endif -%}
+          <h2 id="setup-heading-{{ section.id }}">{{ setup_heading | escape }}</h2>
+          {%- if filters_ready -%}<p>{{ setup_intro | escape }}</p>{%- endif -%}
         </div>
         <a class="find-your-setup__skip" href="{{ clear_url | escape }}">{% if has_active_filters %}{{ 'setup_filters.clear' | t }}{% else %}{{ 'setup_filters.explore' | t }}{% endif %}</a>
       </div>

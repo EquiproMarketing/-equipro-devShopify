@@ -197,6 +197,8 @@
     }
   },
   "setup_filters": {
+    "heading": "Trouvez votre équipement",
+    "intro": "Explorez l’équipement par spécialité et par catégorie.",
     "clear": "Tout effacer — Explorer tous les produits",
     "explore": "Explorer tous les produits",
     "specialty": "Spécialité professionnelle",
