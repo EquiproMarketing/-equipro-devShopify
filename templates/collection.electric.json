@@ -12,6 +12,8 @@
     "subnav": {
       "type": "category-subnav",
       "settings": {
+        "hover_open_delay": 800,
+        "hover_close_delay": 250,
         "category_menu": "",
         "hide_on_mobile": true
       }
@@ -29,6 +31,9 @@
       "type": "custom-product-treatment",
       "name": "Custom Product Treatment",
       "settings": {
+        "show_back_button": true,
+        "back_button_label": "Back",
+        "back_button_url": "",
         "title": "",
         "featured_collection": "electric",
         "products_to_show": 8,
@@ -68,8 +73,22 @@
     },
     "why_category": {
       "type": "why-our-category",
+      "blocks": {
+        "feature_EjPcwH": {
+          "type": "feature",
+          "settings": {
+            "item_title": "Integrated Power Bar",
+            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        }
+      },
+      "block_order": [
+        "feature_EjPcwH"
+      ],
       "settings": {
-        "title": "Why Our Trolleys",
+        "title": "Why Our Electric Tables",
+        "image_left": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-ergonomic-lift-platform-spa-wellness-studio-sku-not-provided.webp",
+        "image_right": "shopify://shop_images/equipro-electric-adjustable-professional-treatment-table-upholstered-steel-scissor-lift-spa-wellness-studio-sku-not-provided.webp",
         "image_border_radius": 12,
         "bg_color": "#a22938",
         "title_color": "#ffffff",
