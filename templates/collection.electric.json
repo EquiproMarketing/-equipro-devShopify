@@ -74,15 +74,39 @@
     "why_category": {
       "type": "why-our-category",
       "blocks": {
+        "feature_wYyHWb": {
+          "type": "feature",
+          "settings": {
+            "item_title": "",
+            "item_text": "Whisper-Quiet Motors — Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+          }
+        },
+        "feature_tBNPGa": {
+          "type": "feature",
+          "settings": {
+            "item_title": "",
+            "item_text": "Superior Ergonomic Design — Easily adjust height and tilt angles to protect your posture and prevent back strain during long hours of clinical work."
+          }
+        },
+        "feature_VBjgDg": {
+          "type": "feature",
+          "settings": {
+            "item_title": "",
+            "item_text": "Rock-Solid Stability — Built on reinforced steel structures with a low center of gravity to eliminate shaking, rocking, or wobbling, regardless of weight distribution."
+          }
+        },
         "feature_EjPcwH": {
           "type": "feature",
           "settings": {
-            "item_title": "Integrated Power Bar",
-            "item_text": "Built-in electrical power strips allow you to plug in steamers, wax heaters, or specialized units directly into the cart, eliminating clutter and floor cords."
+            "item_title": "",
+            "item_text": "Premium High-Density Foam — Padded with multi-layered, clinical-grade foam and wrapped in seamless, stain-resistant upholstery that is exceptionally soft yet easy to sanitize."
           }
         }
       },
       "block_order": [
+        "feature_wYyHWb",
+        "feature_tBNPGa",
+        "feature_VBjgDg",
         "feature_EjPcwH"
       ],
       "settings": {
