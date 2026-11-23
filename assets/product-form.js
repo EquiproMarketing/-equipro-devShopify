@@ -167,11 +167,13 @@
       let snapshot;
       try { snapshot = this.payload(event); }
       catch (error) { op.kind = 'rejected'; op.error = error.message; this.sync(); return; }
+      const opener = event.submitter || this.button;
       const restoreFocus = this.rememberFocus();
+      let addedAndSynced = false;
       Object.assign(op, {kind:'submitting', attempted:true, reconciled:false, awaitingRecovery:false, label:snapshot.label, error:''});
       this.inFlight = true; this.sync();
       try {
-        await cart.run(async () => {
+        addedAndSynced = await cart.run(async () => {
           try {
             const data = await cart.request(window.Shopify.routes.root + 'cart/add.js', {method:'POST', body:snapshot.data});
             const items = Array.isArray(data.items) ? data.items : [data];
@@ -191,7 +193,9 @@
         op.awaitingRecovery = cart.unsynced;
         if (op.kind === 'accepted' && !cart.unsynced) op.kind = 'confirmed';
         if (op.kind === 'confirmed' && !cart.unsynced && !cart.pending) cart.feedback?.('');
-        this.sync(); restoreFocus();
+        this.sync();
+        if (addedAndSynced && this.isConnected) cart.open?.(opener);
+        restoreFocus();
       }
     }
 
