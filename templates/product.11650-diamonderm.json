@@ -12,16 +12,19 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "11650 Diamonderm",
         "intro_highlight": "The Diamonderm represents a sophisticated intersection of practitioner-focused ergonomics and rigorous North American manufacturing, delivering a reliable, high-precision solution for professional skin resurfacing and texture refinement.",
-        "custom_description": "<p>While standard entry-level systems often utilize plastic components that degrade under frequent chemical exposure, the Diamonderm is engineered with industrial-grade stainless steel handles and components. Our commitment to durability means that while standard units may require annual replacements, the Diamonderm is designed to withstand the rigors of continuous, high-volume professional environments for years.</p>",
+        "custom_description": "<p></p><p>While standard entry-level systems often utilize plastic components that degrade under frequent chemical exposure, the Diamonderm is engineered with industrial-grade stainless steel handles and components. Our commitment to durability means that while standard units may require annual replacements, the Diamonderm is designed to withstand the rigors of continuous, high-volume professional environments for years.</p>",
         "subtitle": "High-Precision Pneumatic Technology for Specialized Dermal Care",
         "secondary_description": "<p>The Diamonderm is purpose-built for skincare professionals, including Estheticians, Clinical Spa Therapists, and Skincare Specialists. Its ergonomic, precision-engineered design targets wrist discomfort and fatigue during extended treatment sessions, enabling sharper focus on technical precision and treatment execution. Whether you are performing deep-pore cleansing, anti-aging resurfacing, or brow area refinement, this professional station adjusts to your workflow need with intuitive one-hand control and seamless intensity calibration.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "diamonderm",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -282,7 +285,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
