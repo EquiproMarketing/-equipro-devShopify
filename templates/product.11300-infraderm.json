@@ -12,16 +12,19 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "Infraderm",
         "intro_highlight": "The Infraderm workstation delivers an uncompromised solution for targeted skincare treatments, shifting the focus from cumbersome configurations to seamless, high-performance execution. Handbuilt to rigorous North American manufacturing standards, this compact unit eliminates structural workspace clutter by integrating dedicated electrode storage directly into its chassis, optimizing clinical real estate while preserving practitioner ergonomics during repetitive, high-precision modalities.",
-        "custom_description": "<p>Infraderm is a compact unit with integrated electrode storage and adjustable intensity. Follow the manufacturer's model-specific instructions when selecting settings and accessories.</p>",
+        "custom_description": "<p></p><p>Infraderm is a compact unit with integrated electrode storage and adjustable intensity. Follow the manufacturer's model-specific instructions when selecting settings and accessories.</p>",
         "subtitle": "Targeted High-Performance Care",
         "secondary_description": "<p>Positive structural durability is central to the Equipro approach. To preserve the material integrity and optimal performance of the Infraderm, consistent surface care with a non-corrosive disinfectant formulated for clinical environments should be performed after every treatment session. The exterior chassis features high-impact chemical resistance, ensuring a pristine condition outcome across a 15-to-20-year operational timeframe. Consistent care preserves electrical safety standards and ensures uncompromised service reliability.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "infraderm",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -266,7 +269,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
