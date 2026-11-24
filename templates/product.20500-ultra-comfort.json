@@ -12,11 +12,11 @@
     "main": {
       "type": "main-product",
       "blocks": {
-        "color_swatch_item_CFfntP": {
+        "color_swatch_item_HENtWt": {
           "type": "color_swatch_item",
           "settings": {
-            "color_name": "",
-            "color_hex": "#111111"
+            "color_name": "White",
+            "color_hex": "#FFFFFF"
           }
         },
         "color_swatch_item_3tkNdU": {
@@ -25,11 +25,51 @@
             "color_name": "Black",
             "color_hex": "#111111"
           }
+        },
+        "color_swatch_item_h4yk6F": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Navy",
+            "color_hex": "#2A374C"
+          }
+        },
+        "color_swatch_item_T999wx": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Charcoal",
+            "color_hex": "#919291"
+          }
+        },
+        "color_swatch_item_3teQPa": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Dove",
+            "color_hex": "#B9B9B9"
+          }
+        },
+        "color_swatch_item_7UNAez": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Sand",
+            "color_hex": "#CCA88D"
+          }
+        },
+        "color_swatch_item_CFfntP": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Oyster",
+            "color_hex": "#D8D4C7"
+          }
         }
       },
       "block_order": [
-        "color_swatch_item_CFfntP",
-        "color_swatch_item_3tkNdU"
+        "color_swatch_item_HENtWt",
+        "color_swatch_item_3tkNdU",
+        "color_swatch_item_h4yk6F",
+        "color_swatch_item_T999wx",
+        "color_swatch_item_3teQPa",
+        "color_swatch_item_7UNAez",
+        "color_swatch_item_CFfntP"
       ],
       "settings": {
         "reference_layout": false,
