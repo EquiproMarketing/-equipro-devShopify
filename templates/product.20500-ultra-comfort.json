@@ -46,7 +46,7 @@
         "show_currency": false,
         "purchase_note": "",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": false,
+        "show_compare_btn": true,
         "compare_btn_label": "Compare with other models"
       }
     },
