@@ -279,13 +279,15 @@
   </div>
 </div>
 
+{% capture quote_json_lt %}\u003c{% endcapture %}
 <!-- VARIANTS JSON MAP -->
-<script type="application/json" data-quote-root="ProductMain-{{ section.id }}" data-quote-initial-variant-id="{{ current_variant.id }}" id="ProductVariantsJson-{{ target_product.id }}">
+<script type="application/json" data-quote-root="ProductMain-{{ section.id }}" data-quote-initial-variant-id="{{ current_variant.id }}" data-quote-product-title="{{ target_product.title | escape }}"{% if product != blank and product.id == target_product.id %} data-quote-page-product{% endif %} id="ProductVariantsJson-{{ target_product.id }}">
   [
     {% for variant in target_product.variants %}
       {
         "id": {{ variant.id }},
         "title": {{ variant.title | json }},
+        "sku": {{ variant.sku | default: '' | json | replace: '<', quote_json_lt }},
         "price": {% if variant.price > 0 %}{% if section.settings.show_currency %}{{ variant.price | money_with_currency | json }}{% else %}{{ variant.price | money | json }}{% endif %}{% else %}{{ 'products.price_unavailable' | t | json }}{% endif %},
         "purchasable": {% if variant.price > 0 and purchase_restricted == false and variant.requires_selling_plan != true %}true{% else %}false{% endif %},
         "available": {{ variant.available | json }},

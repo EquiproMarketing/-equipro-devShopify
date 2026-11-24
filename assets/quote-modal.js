@@ -10,6 +10,19 @@
   
     const openBtns = document.querySelectorAll('[data-open-quote-modal]');
     const closeBtns = modal.querySelectorAll('[data-close-quote-modal]');
+    const form = modal.querySelector('#QuoteForm');
+    const titleField = form.querySelector('#QuoteProductTitle');
+    const variantField = form.querySelector('#QuoteProductVariant');
+    const skuField = form.querySelector('#QuoteProductSKU');
+    const submit = form.querySelector('[type="submit"]');
+    const productDisplay = modal.querySelector('#QuoteProductDisplay');
+    const pageProductTitle = titleField.value;
+    const initialDisplay = productDisplay.textContent.trim();
+    const selectionStatus = document.createElement('p');
+    selectionStatus.setAttribute('role', 'status');
+    selectionStatus.tabIndex = -1;
+    selectionStatus.hidden = true;
+    form.prepend(selectionStatus);
     let returnFocus;
     let previousOverflow;
     let inertElements = [];
@@ -24,15 +37,65 @@
       cancelAnimationFrame(focusFrame);
       focusFrame = 0;
     };
+    const selectedVariant = (map, productRoot) => {
+      if (!map || !productRoot) return null;
+      let variants;
+      try { variants = JSON.parse(map.textContent); } catch { return null; }
+      if (!Array.isArray(variants)) return null;
+      const initial = variants.find(variant => String(variant.id) === map.dataset.quoteInitialVariantId);
+      if (!Array.isArray(initial?.options)) return null;
+
+      const selectors = [...productRoot.querySelectorAll('.product-variant-selector')];
+      if (!selectors.length) return initial;
+      const options = [...initial.options];
+      const indexes = new Set();
+      for (const selector of selectors) {
+        const index = Number(selector.dataset.optionIndex);
+        if (!selector.value || !Number.isInteger(index) || index < 0 || index >= options.length || indexes.has(index)) return null;
+        indexes.add(index);
+        options[index] = selector.value;
+      }
+      const matches = variants.filter(variant => options.every((value, index) => value === variant.options?.[index]));
+      return matches.length === 1 ? matches[0] : null;
+    };
+
+    const syncQuoteProduct = trigger => {
+      const triggerRoot = trigger?.closest('.product-page');
+      const maps = [...document.querySelectorAll('script[data-quote-root]')].filter(map =>
+        triggerRoot ? map.dataset.quoteRoot === triggerRoot.id : map.hasAttribute('data-quote-page-product')
+      );
+      const map = maps.length === 1 ? maps[0] : null;
+      const explicitTitle = trigger?.dataset.productTitle;
+      const title = explicitTitle || map?.dataset.quoteProductTitle || pageProductTitle;
+      const productRoot = map && document.getElementById(map.dataset.quoteRoot);
+      const variant = !explicitTitle || explicitTitle === map?.dataset.quoteProductTitle
+        ? selectedVariant(map, productRoot)
+        : null;
+      const needsSelection = Boolean((title || triggerRoot || maps.length) && !variant);
+
+      titleField.value = title;
+      variantField.value = variant?.title ?? '';
+      skuField.value = variant?.sku ?? '';
+      productDisplay.textContent = title || initialDisplay;
+      submit.disabled = needsSelection;
+      selectionStatus.hidden = !needsSelection;
+      selectionStatus.textContent = needsSelection
+        ? document.documentElement.lang.toLowerCase().startsWith('fr')
+          ? 'Fermez cette fenêtre et sélectionnez une variante du produit.'
+          : 'Close this window and select a product variant.'
+        : '';
+      return !needsSelection;
+    };
+
     const focusInside = () => {
       cancelFocus();
       const epoch = focusEpoch;
       const attempt = () => {
         focusFrame = 0;
         if (epoch !== focusEpoch || !modal.classList.contains('is-open')) return;
-        const name = modal.querySelector('#QuoteName');
-        if (usable(name)) {
-          name.focus();
+        const target = selectionStatus.hidden ? modal.querySelector('#QuoteName') : selectionStatus;
+        if (usable(target)) {
+          target.focus();
         } else if (getComputedStyle(modal).visibility === 'hidden') {
           focusFrame = requestAnimationFrame(attempt);
         } else {
@@ -55,20 +118,7 @@
         e.preventDefault();
         if (modal.classList.contains('is-open')) return;
         
-        // Capturar la variante activa del selector nativo de Shopify si existe
-        const variantInput = document.querySelector('input[name="id"]:checked, select[name="id"]');
-        const productTitle = btn.dataset.productTitle || document.querySelector('.product__title')?.innerText || '';
-        
-        if (variantInput) {
-          const variantTitle = variantInput.dataset.variantTitle || variantInput.options?.[variantInput.selectedIndex]?.text || '';
-          document.getElementById('QuoteProductVariant').value = variantTitle;
-        }
-  
-        if (productTitle) {
-          document.getElementById('QuoteProductTitle').value = productTitle;
-          document.getElementById('QuoteProductDisplay').innerText = productTitle;
-        }
-  
+        syncQuoteProduct(btn);
         returnFocus = btn;
         previousOverflow = document.body.style.overflow;
         inertElements = [];
@@ -86,6 +136,13 @@
       });
     });
   
+    form.addEventListener('submit', event => {
+      if (!syncQuoteProduct(returnFocus)) {
+        event.preventDefault();
+        focusInside();
+      }
+    });
+
     // Cerrar Modal
     const closeModal = () => {
       if (!modal.classList.contains('is-open')) return;
