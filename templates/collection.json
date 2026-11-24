@@ -12,6 +12,8 @@
     "subnav": {
       "type": "category-subnav",
       "settings": {
+        "hover_open_delay": 800,
+        "hover_close_delay": 250,
         "category_menu": "",
         "hide_on_mobile": true
       }
@@ -27,6 +29,24 @@
         "overlay_opacity": 40
       }
     },
+    "find_your_setup": {
+      "type": "find-your-setup",
+      "settings": {
+        "professional_profiles": [
+          "spas-wellness-centers",
+          "spa-esthetics-setup",
+          "orthopedic-podiatry"
+        ],
+        "heading": "Find Your Setup",
+        "intro": "Browse equipment by specialty and category.",
+        "skip_label": "Skip — Explore All Products",
+        "all_label": "All products",
+        "all_description": "The complete catalog is always available below.",
+        "profiles_label": "Find your professional setup",
+        "price_from_label": "From",
+        "collections_label": "Related collections"
+      }
+    },
     "custom_product_treatment_TNRQeX": {
       "type": "custom-product-treatment",
       "name": "Custom Product Treatment",
@@ -35,7 +55,7 @@
         "back_button_label": "Back",
         "back_button_url": "",
         "title": "",
-        "featured_collection": "trolleys",
+        "featured_collection": "portable",
         "products_to_show": 12,
         "card_bg_color": "#f5f5f7",
         "default_subtitle": "Professional Treatment Series",
@@ -200,16 +220,6 @@
     "reviews": {
       "type": "customer-reviews",
       "settings": {}
-    },
-    "find_your_setup": {
-      "type": "find-your-setup",
-      "settings": {
-        "professional_profiles": [
-          "spas-wellness-centers",
-          "spa-esthetics-setup",
-          "orthopedic-podiatry"
-        ]
-      }
     }
   },
   "order": [

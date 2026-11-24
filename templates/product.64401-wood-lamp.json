@@ -12,16 +12,19 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "Wood Lamp Professional Skin Analyzer",
         "intro_highlight": "The Equipro Wood's Lamp is a compact device for professional skin observation.",
-        "custom_description": "<p>The Wood's Lamp is purpose-built for skincare specialists, including certified technicians, licensed professionals, and practicing aestheticians. Its ergonomic, precision-engineered design targets visual fatigue and wrist discomfort during high-volume clinic days, enabling sharper focus on treatment execution and repeatable results. Whether you are performing deep-pore cleansing, microdermabrasion, or a comprehensive client consultation, this precision tool adapts to your multi-technician adaptability with friction-free adjustment and seamless workflow integration.</p>",
+        "custom_description": "<p></p><p>The Wood's Lamp is purpose-built for skincare specialists, including certified technicians, licensed professionals, and practicing aestheticians. Its ergonomic, precision-engineered design targets visual fatigue and wrist discomfort during high-volume clinic days, enabling sharper focus on treatment execution and repeatable results. Whether you are performing deep-pore cleansing, microdermabrasion, or a comprehensive client consultation, this precision tool adapts to your multi-technician adaptability with friction-free adjustment and seamless workflow integration.</p>",
         "subtitle": "Advanced Ultraviolet Skin Analysis for Precision Aesthetics",
         "secondary_description": "<p>Unrivaled durability is central to the Equipro approach. To preserve the optical clarity and professional performance of the Wood's Lamp, regular maintenance actions should be performed with specific cleaning products formulated for clean clinical environments after every use. The high-grade exterior casing offers exceptional wear resistance, ensuring an immaculate condition outcome across an extended multi-year timeframe. Consistent care preserves structural longevity and maximizes operational revenue.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "wood-lamp",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -283,6 +286,7 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
+        "heading": "Technical Model Comparison",
         "compare_collection": ""
       }
     }
