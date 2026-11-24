@@ -21,18 +21,17 @@
         assign purchase_restricted = true
       endif
     endfor
-    for product_collection in target_product.collections
-      if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables'
-        assign purchase_restricted = true
-      endif
-    endfor
+    assign portable_product = false
+    unless target_product.id == 8744552235181 or target_product.id == 8744552169645
+      for product_collection in target_product.collections
+        if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables'
+          assign portable_product = true
+          assign purchase_restricted = true
+          break
+        endif
+      endfor
+    endunless
   %}
-  {% assign portable_product = false %}
-  {% for product_collection in target_product.collections %}
-    {% if product_collection.handle == 'portable' or product_collection.handle == 'portable-tables' %}
-      {% assign portable_product = true %}
-    {% endif %}
-  {% endfor %}
 
   <!-- 1. BACK LINK -->
   <div class="product-page__back product-mobile-order-back">
