@@ -12,16 +12,19 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "Rotoderm",
         "intro_highlight": "The Rotoderm is a precision-engineered rotary system designed to elevate professional exfoliation and cleansing standards through North American manufacturing quality. Its variable speed control allows for tailored intensity, ensuring consistent, high-performance results across diverse skin types and treatment modalities.",
-        "custom_description": "<p>The Rotoderm is purpose-built for skincare professionals, including aestheticians, Clinical spa therapists, and skin care specialists. Its ergonomic, precision-engineered design targets potential wrist discomfort during extended treatment sessions, enabling sharper focus on treatment execution and secondary benefit through enhanced operational efficiency. Whether you are performing deep-pore cleansing, pre-peel exfoliation, or surface smoothing, this professional station adjusts to your workflow need with intuitive one-hand control and instant-response calibration.</p>",
+        "custom_description": "<p></p><p>The Rotoderm is purpose-built for skincare professionals, including aestheticians, Clinical spa therapists, and skin care specialists. Its ergonomic, precision-engineered design targets potential wrist discomfort during extended treatment sessions, enabling sharper focus on treatment execution and secondary benefit through enhanced operational efficiency. Whether you are performing deep-pore cleansing, pre-peel exfoliation, or surface smoothing, this professional station adjusts to your workflow need with intuitive one-hand control and instant-response calibration.</p>",
         "subtitle": "Engineered for the Modern Practitioner",
         "secondary_description": "<p>Standard devices often utilize fixed-speed motors with rigid plastic housings that succumb to wear within 18 months. The Equipro Rotoderm utilizes a high-torque, variable-speed motor housed in industrial-grade components, backed by our commitment to long-term operational reliability in high-traffic aesthetic environments.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "rotoderm",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -274,7 +277,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
