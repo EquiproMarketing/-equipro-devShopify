@@ -12,16 +12,19 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "11600 - Aeroderm",
         "intro_highlight": "The Aeroderm 11600 is a versatile, professional-grade compact unit that seamlessly integrates high-efficiency suction and spray functions to deliver superior skin purification, toning, and advanced preparation for facial protocols.",
-        "custom_description": "<p>The Aeroderm multi-function facial unit sets a new benchmark in skincare integration through an exact intersection of practitioner ergonomics and world-class North American manufacturing standards. Developed specifically to address the daily rigors of fast-paced professional treatment rooms, this compact workstation streamlines multi-step dermal sequencing without forcing the operator to constantly swap out separate bulky desktops, preserving valuable physical working room while maintaining absolute client safety.</p>",
+        "custom_description": "<p></p><p>The Aeroderm multi-function facial unit sets a new benchmark in skincare integration through an exact intersection of practitioner ergonomics and world-class North American manufacturing standards. Developed specifically to address the daily rigors of fast-paced professional treatment rooms, this compact workstation streamlines multi-step dermal sequencing without forcing the operator to constantly swap out separate bulky desktops, preserving valuable physical working room while maintaining absolute client safety.</p>",
         "subtitle": "Advanced Suction & Spray Technology",
         "secondary_description": "<p>Hardware durability remains central to the Equipro approach. To preserve the structural quality and professional finish of the Aeroderm, routinely sanitize the external chassis, glass suction components, and storage fittings with non-corrosive disinfectant wipes formulated for high-end salon environments after every treatment session. The outer surface boasts superior scratch and chemical resistance property settings, ensuring a pristine appearance across extended years of continuous facility operation. Consistent care directly prevents product degradation and maximizes operational performance safety.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "aeroderm",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -282,7 +285,10 @@
     },
     "compare_modal": {
       "type": "product-compare-modal",
-      "settings": {}
+      "settings": {
+        "heading": "Technical Model Comparison",
+        "compare_collection": ""
+      }
     }
   },
   "order": [
