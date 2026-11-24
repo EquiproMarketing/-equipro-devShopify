@@ -12,18 +12,22 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
+        "custom_title": "Calypso Portable Table EI-23402",
+        "intro_highlight": "Crafted for versatile aesthetic environments, the Calypso EI-23402 prioritizes practitioner ergonomics and mobility. Its secure aluminum frame helps professionals maintain a seamless workflow and stable setup during on-location services.",
+        "custom_description": "<p></p><p>Calypso EI-23402 is purpose-built for licensed professionals, including mobile estheticians, bodywork specialists, and spa technicians. Its lightweight aluminum frame targets lower-back tension during high-volume travel days, enabling sharper focus on service consistency and enhanced client comfort. Whether you are performing mobile waxing, portable aesthetic facials, or on-site body services, this professional workstation adjusts to your seamless workflow integration with an intuitive liftable backrest and friction-free height adjustment.</p>",
+        "subtitle": "Lightweight Precision for Mobile Professionals",
+        "secondary_description": "<p></p><p>Durability is central to the Equipro approach. To preserve the Calypso EI-23402, clean its stretchable, oil- and stain-resistant leatherette after services using the method recommended in the supplied care instructions. Consistent care helps maintain a sanitary professional surface and extends the upholstery’s useful life.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
+        "featured_product": "calypso-ei-23402",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
-        "custom_title": "Calypso Portable Table EI-23402",
-        "featured_product": "calypso-ei-23402",
-        "intro_highlight": "Crafted for versatile aesthetic environments, the Calypso EI-23402 prioritizes practitioner ergonomics and mobility. Its secure aluminum frame helps professionals maintain a seamless workflow and stable setup during on-location services.",
-        "custom_description": "<p>Calypso EI-23402 is purpose-built for licensed professionals, including mobile estheticians, bodywork specialists, and spa technicians. Its lightweight aluminum frame targets lower-back tension during high-volume travel days, enabling sharper focus on service consistency and enhanced client comfort. Whether you are performing mobile waxing, portable aesthetic facials, or on-site body services, this professional workstation adjusts to your seamless workflow integration with an intuitive liftable backrest and friction-free height adjustment.</p>",
-        "subtitle": "Lightweight Precision for Mobile Professionals",
-        "secondary_description": "<p>Durability is central to the Equipro approach. To preserve the Calypso EI-23402, clean its stretchable, oil- and stain-resistant leatherette after services using the method recommended in the supplied care instructions. Consistent care helps maintain a sanitary professional surface and extends the upholstery’s useful life.</p>"
+        "compare_btn_label": "Compare with other models"
       }
     },
     "main_product_characteristics_Hp7Baq": {
@@ -63,7 +67,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>EI-23402</td></tr><tr><td class=\"feature-label\">Product SKU</td><td>EI-23402</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>28&quot; × 72&quot; × 24&quot;/34.5&quot; H</td></tr><tr><td class=\"feature-label\">Weight</td><td>50 lb / 23 kg</td></tr><tr><td class=\"feature-label\">Height range</td><td>24–34.5 in</td></tr><tr><td class=\"feature-label\">Width</td><td>28 in</td></tr><tr><td class=\"feature-label\">Backrest</td><td>Liftable</td></tr><tr><td class=\"feature-label\">Frame and legs</td><td>Aluminum</td></tr><tr><td class=\"feature-label\">Stability</td><td>Leg assembly locks and reinforced corners</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Stretchable leatherette resistant to oils and stains</td></tr><tr><td class=\"feature-label\">Color</td><td>Black only</td></tr><tr><td class=\"feature-label\">Portability</td><td>Foldable; carrying bag included</td></tr><tr><td class=\"feature-label\">Warranty</td><td>1 year</td></tr></tbody></table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\">\n<thead><tr>\n<th>Technical Aspect</th>\n<th>Specification Details</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"feature-label\">Manufacturer</td>\n<td>Equipro</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Model</td>\n<td>EI-23402</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Product SKU</td>\n<td>EI-23402</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Dimensions</td>\n<td>28\" × 72\" × 24\"/34.5\" H</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Weight</td>\n<td>50 lb / 23 kg</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height range</td>\n<td>24–34.5 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Width</td>\n<td>28 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Backrest</td>\n<td>Liftable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Frame and legs</td>\n<td>Aluminum</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Stability</td>\n<td>Leg assembly locks and reinforced corners</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Upholstery</td>\n<td>Stretchable leatherette resistant to oils and stains</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Color</td>\n<td>Black only</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Portability</td>\n<td>Foldable; carrying bag included</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Warranty</td>\n<td>1 year</td>\n</tr>\n</tbody>\n</table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -140,6 +144,20 @@
             "text": "Set them to your optimal ergonomic working height, adjustable between 24 and 34.5 inches."
           }
         },
+        "how_4": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Lift the adjustable backrest:",
+            "text": "Set it to the desired angle for the specific aesthetic service."
+          }
+        },
+        "how_5": {
+          "type": "instruction_item",
+          "settings": {
+            "bold_prefix": "Wipe down the upholstery:",
+            "text": "Clean the oil-resistant stretchable leatherette after use before folding and storing, following the supplied care instructions."
+          }
+        },
         "safety_header": {
           "type": "section_header",
           "settings": {
@@ -158,20 +176,6 @@
           "settings": {
             "bold_prefix": "Load limits:",
             "text": "Follow the load limits in the supplied EI-23402 instructions; a model-specific capacity is not printed in the Canada PRO catalog entry."
-          }
-        },
-        "how_4": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Lift the adjustable backrest:",
-            "text": "Set it to the desired angle for the specific aesthetic service."
-          }
-        },
-        "how_5": {
-          "type": "instruction_item",
-          "settings": {
-            "bold_prefix": "Wipe down the upholstery:",
-            "text": "Clean the oil-resistant stretchable leatherette after use before folding and storing, following the supplied care instructions."
           }
         },
         "safety_3": {
