@@ -11,7 +11,28 @@
   "sections": {
     "main": {
       "type": "main-product",
+      "blocks": {
+        "color_swatch_item_CFfntP": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "",
+            "color_hex": "#111111"
+          }
+        },
+        "color_swatch_item_3tkNdU": {
+          "type": "color_swatch_item",
+          "settings": {
+            "color_name": "Black",
+            "color_hex": "#111111"
+          }
+        }
+      },
+      "block_order": [
+        "color_swatch_item_CFfntP",
+        "color_swatch_item_3tkNdU"
+      ],
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "Ultra-Comfort 20500",
         "intro_highlight": "Precision-engineered for advanced clinical workflows, the Ultra-Comfort treatment chair bridges the gap between ergonomic practitioner support and exceptional client relaxation, backed by decades of North American manufacturing expertise.",
@@ -22,6 +43,8 @@
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "ultra-comfort-20500",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
         "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
@@ -64,7 +87,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\"><thead><tr><th>Technical Aspect</th><th>Specification Details</th></tr></thead><tbody><tr><td class=\"feature-label\">Manufacturer</td><td>Equipro</td></tr><tr><td class=\"feature-label\">Model</td><td>20500</td></tr><tr><td class=\"feature-label\">Current variant SKU</td><td>20500-24W</td></tr><tr><td class=\"feature-label\">Dimensions</td><td>L × 72&quot; × 20.5&quot;/36.5&quot; H</td></tr><tr><td class=\"feature-label\">Width — model 20500</td><td>24 in</td></tr><tr><td class=\"feature-label\">Height range</td><td>20.5–36.5 in</td></tr><tr><td class=\"feature-label\">Weight</td><td>320 lb / 145 kg</td></tr><tr><td class=\"feature-label\">Backrest and legrest</td><td>Manually adjustable</td></tr><tr><td class=\"feature-label\">Tilt</td><td>15°</td></tr><tr><td class=\"feature-label\">Headrest</td><td>Adjustable</td></tr><tr><td class=\"feature-label\">Upholstery</td><td>Ultra-white, ultra-resistant leatherette; Color Chart A</td></tr><tr><td class=\"feature-label\">Armrests</td><td>Optional removable ergonomic armrests</td></tr><tr><td class=\"feature-label\">Casters</td><td>Optional</td></tr><tr><td class=\"feature-label\">Height-control mechanism / motor configuration</td><td>Not confirmed</td></tr><tr><td class=\"feature-label\">Warranty</td><td>2 years</td></tr></tbody></table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\">\n<thead><tr>\n<th>Technical Aspect</th>\n<th>Specification Details</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"feature-label\">Manufacturer</td>\n<td>Equipro</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Model</td>\n<td>20500</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Current variant SKU</td>\n<td>20500-24W</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Dimensions</td>\n<td>L × 72\" × 20.5\"/36.5\" H</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Width — model 20500</td>\n<td>24 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height range</td>\n<td>20.5–36.5 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Weight</td>\n<td>320 lb / 145 kg</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Backrest and legrest</td>\n<td>Manually adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Tilt</td>\n<td>15°</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Headrest</td>\n<td>Adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Upholstery</td>\n<td>Ultra-white, ultra-resistant leatherette; Color Chart A</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Armrests</td>\n<td>Optional removable ergonomic armrests</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Casters</td>\n<td>Optional</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height-control mechanism / motor configuration</td>\n<td>Not confirmed</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Warranty</td>\n<td>2 years</td>\n</tr>\n</tbody>\n</table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
