@@ -1,0 +1,309 @@
+{
+  "observed_utc": "2026-11-24 15:34:26 UTC",
+  "source": "Shopify Admin GraphQL, read-only; 124 variants paginated then filtered by ACTIVE; three channel publications read by product ID. GitHub main verified via GitHub API and separate Git clone.",
+  "repository": {
+    "name": "EquiproMarketing/-equipro-devShopify",
+    "visibility": "public",
+    "main_sha": "707039b8b20f92f9766f0375eca91c6aa4084bc1"
+  },
+  "theme": {
+    "id": "gid://shopify/OnlineStoreTheme/157851386029",
+    "name": "-equipro-devShopify/main",
+    "role": "MAIN",
+    "updatedAt": "2026-11-23T21:31:57Z"
+  },
+  "runtime_hashes_selected": [
+    {
+      "path": "assets/product-form.js",
+      "shopify_admin_sha256_utf8": "e74e6081394afab419649c12a163ec958971e877bf0ab15b40ee064c5f2bcab2",
+      "github_main_blob_sha256": "e74e6081394afab419649c12a163ec958971e877bf0ab15b40ee064c5f2bcab2",
+      "equal": true
+    },
+    {
+      "path": "locales/en.default.json",
+      "shopify_admin_sha256_utf8": "4e7988fb581dea9d5e36d5b873d37ca1b37d5b070cd3929e452e44347a5c5f5d",
+      "github_main_blob_sha256": "4e7988fb581dea9d5e36d5b873d37ca1b37d5b070cd3929e452e44347a5c5f5d",
+      "equal": true
+    },
+    {
+      "path": "locales/fr.json",
+      "shopify_admin_sha256_utf8": "ed3ad156873b18384957a179783086ad5e6cec6126810b276995df40a7ef038b",
+      "github_main_blob_sha256": "ed3ad156873b18384957a179783086ad5e6cec6126810b276995df40a7ef038b",
+      "equal": true
+    },
+    {
+      "path": "sections/complete-your-setup.liquid",
+      "shopify_admin_sha256_utf8": "11fcd2c998932a275053b1dea4ca975df8f09f27bb41aa110eadfa63665ea064",
+      "github_main_blob_sha256": "11fcd2c998932a275053b1dea4ca975df8f09f27bb41aa110eadfa63665ea064",
+      "equal": true
+    },
+    {
+      "path": "sections/find-your-setup.liquid",
+      "shopify_admin_sha256_utf8": "01cf969214273f384c4228fdb3b99f48cb5c732a565e9456d0771783b8b904e5",
+      "github_main_blob_sha256": "01cf969214273f384c4228fdb3b99f48cb5c732a565e9456d0771783b8b904e5",
+      "equal": true
+    },
+    {
+      "path": "sections/product-compare-modal.liquid",
+      "shopify_admin_sha256_utf8": "3576067220e59ee5b84096814de97ce5b808c733eb18d1be0368b66ff5afad39",
+      "github_main_blob_sha256": "3576067220e59ee5b84096814de97ce5b808c733eb18d1be0368b66ff5afad39",
+      "equal": true
+    },
+    {
+      "path": "snippets/professional-profile-panel.liquid",
+      "shopify_admin_sha256_utf8": "9b7b2121608faf05ee5529782bace920c3b3448f6d72a30ba58e15ed7637622e",
+      "github_main_blob_sha256": "9b7b2121608faf05ee5529782bace920c3b3448f6d72a30ba58e15ed7637622e",
+      "equal": true
+    },
+    {
+      "path": "snippets/quote-modal.liquid",
+      "shopify_admin_sha256_utf8": "cd15a17ec470eacb8b957f5fa101da11e8be1357bae220d38a5dd01e64cba25b",
+      "github_main_blob_sha256": "cd15a17ec470eacb8b957f5fa101da11e8be1357bae220d38a5dd01e64cba25b",
+      "equal": true
+    }
+  ],
+  "product_counts": {
+    "active_products": 63,
+    "active_variants": 123,
+    "inactive_variants_excluded": 1,
+    "published_per_channel": {
+      "online_store": 63,
+      "shop": 63,
+      "pos": 63
+    }
+  },
+  "plan": {
+    "publicDisplayName": "Grow",
+    "partnerDevelopment": true
+  },
+  "features": {
+    "marketDrivenShipping": true
+  },
+  "markets": [
+    {
+      "id": "gid://shopify/Market/47383347373",
+      "handle": "canada",
+      "status": "ACTIVE",
+      "currencySettings": {
+        "roundingEnabled": true,
+        "localCurrencies": false,
+        "baseCurrency": {
+          "currencyCode": "CAD",
+          "manualRate": null
+        }
+      },
+      "catalogs": {
+        "pageInfo": {
+          "hasNextPage": false
+        },
+        "nodes": [
+          {
+            "id": "gid://shopify/MarketCatalog/129084620973",
+            "title": "R19G Equipro Canada CAD v1",
+            "status": "ACTIVE",
+            "priceList": {
+              "id": "gid://shopify/PriceList/30905598125",
+              "currency": "CAD",
+              "fixedPricesCount": 122
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "gid://shopify/Market/47186968749",
+      "handle": "us",
+      "status": "ACTIVE",
+      "currencySettings": {
+        "roundingEnabled": true,
+        "localCurrencies": false,
+        "baseCurrency": {
+          "currencyCode": "USD",
+          "manualRate": null
+        }
+      },
+      "catalogs": {
+        "pageInfo": {
+          "hasNextPage": false
+        },
+        "nodes": [
+          {
+            "id": "gid://shopify/MarketCatalog/136173617325",
+            "title": "Equipro USA USD — 49 precios oficiales",
+            "status": "ACTIVE",
+            "priceList": {
+              "id": "gid://shopify/PriceList/30949703853",
+              "currency": "USD",
+              "fixedPricesCount": 49
+            }
+          }
+        ]
+      }
+    }
+  ],
+  "shipping": [
+    {
+      "id": "gid://shopify/Market/47383347373",
+      "handle": "canada",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "pageInfo": {
+              "hasNextPage": false
+            },
+            "nodes": []
+          }
+        }
+      }
+    },
+    {
+      "id": "gid://shopify/Market/47186968749",
+      "handle": "us",
+      "delivery": {
+        "shipping": {
+          "isEnabled": true,
+          "optionDefinitions": {
+            "pageInfo": {
+              "hasNextPage": false
+            },
+            "nodes": [
+              {
+                "id": "gid://shopify/DeliveryFlatRateOptionDefinition/940608159917",
+                "isActive": true,
+                "includedLocations": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/Location/88085201069"
+                    }
+                  ]
+                },
+                "name": "Standard",
+                "freeDeliveryMinimumValue": {
+                  "amount": "70.0",
+                  "currencyCode": "USD"
+                }
+              },
+              {
+                "id": "gid://shopify/DeliveryFlatRateOptionDefinition/940608192685",
+                "isActive": true,
+                "includedLocations": {
+                  "nodes": [
+                    {
+                      "id": "gid://shopify/Location/88085201069"
+                    }
+                  ]
+                },
+                "name": "Express",
+                "freeDeliveryMinimumValue": null
+              }
+            ]
+          }
+        }
+      }
+    }
+  ],
+  "locations": [
+    {
+      "id": "gid://shopify/Location/96252035245",
+      "name": "Equipro Montréal",
+      "isActive": true,
+      "fulfillsOnlineOrders": true,
+      "addressVerified": false
+    },
+    {
+      "id": "gid://shopify/Location/88085201069",
+      "name": "Shop location",
+      "isActive": true,
+      "fulfillsOnlineOrders": true,
+      "addressVerified": true
+    }
+  ],
+  "inventory_counts_without_quantities": {
+    "POSITIVE": 22,
+    "DENY": 123,
+    "UNTRACKED": 99,
+    "MISSING_SKU": 53,
+    "ZERO_OR_NEGATIVE": 2
+  },
+  "price_origins_active": {
+    "CA": {
+      "FIXED": 122,
+      "RELATIVE": 1
+    },
+    "US": {
+      "FIXED": 49,
+      "RELATIVE": 74
+    }
+  },
+  "price_compare_to_us_assignment_readback": {
+    "usd_changed": 0,
+    "cad_changed_skus": [],
+    "cad_relative_sku": "20502-24W",
+    "relative_is_exchange_rate_sensitive": true,
+    "sku_base_compare_at_unchanged": true
+  },
+  "locales": [
+    {
+      "locale": "en",
+      "published": true
+    },
+    {
+      "locale": "fr",
+      "published": false
+    }
+  ],
+  "ui_translation_keys": {
+    "en": 313,
+    "fr": 313,
+    "en_only": 0,
+    "fr_only": 0
+  },
+  "profile_translations": {
+    "scope": "five global FR profile metaobjects; three fields each",
+    "registered": 15,
+    "outdated": 0
+  },
+  "complete_your_setup": [
+    {
+      "id": "gid://shopify/Product/8744550465709",
+      "handle": "home-skincare-equipment-accessories-tm-3-professional-service-table",
+      "templateSuffix": "51101-tm-3-standard",
+      "metafield": null
+    },
+    {
+      "id": "gid://shopify/Product/8744551514285",
+      "handle": "ei-501-royal",
+      "templateSuffix": "ei-501-royal",
+      "metafield": {
+        "type": "list.product_reference",
+        "references": {
+          "nodes": [
+            {
+              "id": "gid://shopify/Product/8744552530093",
+              "handle": "ei-312-round-air-lift-stool",
+              "title": "EI-312 Round Air Lift Stool"
+            },
+            {
+              "id": "gid://shopify/Product/8744552366253",
+              "handle": "ergonomic-stool-with-adjustable-backrest-31301",
+              "title": "Ergonomic Stool with Adjustable Backrest-31301"
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "inherited_file_lookup": {
+    "looked_up": [
+      "snippets/product-card-item.liquid",
+      "assets/product-reference-layout.css",
+      "sections/featured-collection.liquid",
+      "sections/main-product.liquid"
+    ],
+    "found": [
+      "sections/featured-collection.liquid",
+      "sections/main-product.liquid"
+    ]
+  }
+}

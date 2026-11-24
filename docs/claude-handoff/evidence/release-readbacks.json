@@ -1,0 +1,85 @@
+{
+  "status": "historical; current runtime samples are in admin-summary.json",
+  "github_commits": [
+    {
+      "sha": "4e96095fc6cc5b751cb5783b4eaef1b4b2c7bc9e",
+      "paths": [
+        "assets/custom-spa-pack-builder.css",
+        "assets/product-form.js",
+        "assets/section-category-subnav.css",
+        "assets/section-main-product.css",
+        "locales/en.default.json",
+        "locales/fr.json",
+        "sections/category-subnav.liquid",
+        "sections/complete-your-setup.liquid",
+        "sections/custom-spa-pack-builder.liquid",
+        "sections/custom-subcategory-slider.liquid",
+        "sections/main-cart-items.liquid",
+        "sections/main-product.liquid",
+        "snippets/professional-profile-panel.liquid",
+        "snippets/quote-modal.liquid",
+        "templates/index.json",
+        "templates/product.51101-tm-3-standard.json",
+        "templates/product.ei-501-royal.json"
+      ]
+    },
+    {
+      "sha": "4ab68fa576287ea9f650ee6207621e7e40819827",
+      "paths": [
+        "locales/en.default.json",
+        "locales/fr.json",
+        "sections/find-your-setup.liquid",
+        "sections/product-compare-modal.liquid"
+      ]
+    },
+    {
+      "sha": "707039b8b20f92f9766f0375eca91c6aa4084bc1",
+      "paths": [
+        "assets/product-form.js"
+      ]
+    }
+  ],
+  "r11v_historical_qa": {
+    "original": {
+      "name": "QA.md",
+      "sha256": "bc10865887ef64a9bd76725a80b6d3e322174b350c3b0b04ba7ef8e58116c144"
+    },
+    "release_pass": 74,
+    "general_pass": 113,
+    "general_fail": 10,
+    "theme_check_baseline": 50,
+    "theme_check_release": 50,
+    "unexcepted_new": 0,
+    "documented_exception": "OrphanedSnippet professional-profile-panel; selected-profile render tested"
+  },
+  "drawer_historical_qa": {
+    "admin_readback_original": {
+      "name": "readback.json",
+      "sha256": "448ebdb2e3db1e75c9722d7fe0823378e84cd8b82a044fd6868cce7690fa65e9"
+    },
+    "target_pass": 18,
+    "release_pass": 75,
+    "general_pass": 119,
+    "general_fail": 10,
+    "theme_check_baseline": 50,
+    "theme_check_candidate": 50
+  },
+  "local_sources_not_redistributed": [
+    {
+      "name": "qa-main.md",
+      "sha256": "79ff7db0aa1af22e9e88f9ef264c5916e8f9650f0e0409f99b66b3a0dd77f2ae"
+    },
+    {
+      "name": "matriz-precios-ca-us.csv",
+      "sha256": "8553afa6db6204d4b985ce4508f0a2741fcf1ccf480eda4d45c9288093b5f7a7"
+    },
+    {
+      "name": "comparativa-123-variantes.csv",
+      "sha256": "276224c23ababdce4b57de0b5b094e4903817f2cb9f04a2d3abd0eda719a559e"
+    },
+    {
+      "name": "matriz-decisiones-made-to-order-ca-us.csv",
+      "sha256": "54f7c977f059b9a5955fa002d2245c797acb00cb20e45281a94834d7044bdf3a"
+    }
+  ]
+}

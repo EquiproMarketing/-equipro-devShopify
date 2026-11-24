@@ -1,0 +1,329 @@
+{
+  "redaction": "Official prices, before/after amounts and source tariff editions are not redistributed. SHA-256 refers to the original local evidence file. Variant IDs and decisions allow an authorized Admin recheck.",
+  "cad": {
+    "status": "applied",
+    "original": {
+      "name": "manifest-cad-exacto.json",
+      "sha256": "a13c18b2b4e905038d2848cf9850372e43b11f37684a5ef941204ea9c30f531d"
+    },
+    "targets": [
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188198061",
+        "sku": "66007",
+        "source_page": 29
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188263597",
+        "sku": "66001",
+        "source_page": 28
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47495805894829",
+        "sku": "786005",
+        "source_page": 29
+      }
+    ],
+    "price_list_id": "30905598125",
+    "readback": {
+      "status": "PASS",
+      "cad_fixed_before": 119,
+      "cad_fixed_after": 122,
+      "cad_changes": 3,
+      "cad_unchanged": 120,
+      "usd_unchanged": 123,
+      "relative_active_sku": "20502-24W"
+    }
+  },
+  "usd": {
+    "status": "active_and_assigned_us",
+    "original": {
+      "name": "manifest-usd-final.json",
+      "sha256": "13de80135d1d60f454081b7786d3b2dcab58c97d892a77e63bf0f7b595067fce"
+    },
+    "targets": [
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394184691885",
+        "sku": "11300",
+        "source_page": 4
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394184954029",
+        "sku": "11600",
+        "source_page": 5
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185150637",
+        "sku": "11100",
+        "source_page": 4
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185183405",
+        "sku": "EI-111",
+        "source_page": 4
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185248941",
+        "sku": "11400",
+        "source_page": 5
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185314477",
+        "sku": "11650",
+        "source_page": 5
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185380013",
+        "sku": "11800",
+        "source_page": 6
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185445549",
+        "sku": "31300W",
+        "source_page": 16
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185478317",
+        "sku": "EI-61102S",
+        "source_page": 25
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185543853",
+        "sku": "11906",
+        "source_page": 6
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185609389",
+        "sku": "11902",
+        "source_page": 6
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185740461",
+        "sku": "41200",
+        "source_page": 18
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185773229",
+        "sku": "41201",
+        "source_page": 18
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394185904301",
+        "sku": "20500-24W",
+        "source_page": 8
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186035373",
+        "sku": "20300-28W",
+        "source_page": 8
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186068141",
+        "sku": "Ei-500",
+        "source_page": 9
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186133677",
+        "sku": "EI-501W",
+        "source_page": 9
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186199213",
+        "sku": "Ei-504W",
+        "source_page": 10
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186264749",
+        "sku": "20210-24W",
+        "source_page": 8
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186363053",
+        "sku": "EI-508",
+        "source_page": 10
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186428589",
+        "sku": "Ei-509",
+        "source_page": 10
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186494125",
+        "sku": "EI-61100M",
+        "source_page": 24
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186559661",
+        "sku": "EI-61101H",
+        "source_page": 25
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186625197",
+        "sku": "20100W",
+        "source_page": 7
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186723501",
+        "sku": "20101W",
+        "source_page": 7
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186789037",
+        "sku": "EI-23403W",
+        "source_page": 11
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186854573",
+        "sku": "EI-23402",
+        "source_page": 11
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394186887341",
+        "sku": "31200W",
+        "source_page": 15
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187149485",
+        "sku": "Ei-312W",
+        "source_page": 16
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187215021",
+        "sku": "51104",
+        "source_page": 21
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187411629",
+        "sku": "51201",
+        "source_page": 21
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187509933",
+        "sku": "51300",
+        "source_page": 21
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187575469",
+        "sku": "51200",
+        "source_page": 21
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187673773",
+        "sku": "51400",
+        "source_page": 22
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187739309",
+        "sku": "51000",
+        "source_page": 20
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187837613",
+        "sku": "51401",
+        "source_page": 22
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394187968685",
+        "sku": "63603",
+        "source_page": 28
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188034221",
+        "sku": "63104",
+        "source_page": 28
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188099757",
+        "sku": "63203",
+        "source_page": 29
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188165293",
+        "sku": "65100",
+        "source_page": 26
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188263597",
+        "sku": "66001",
+        "source_page": 27
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188329133",
+        "sku": "64401",
+        "source_page": 26
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188394669",
+        "sku": "20200-24W",
+        "source_page": 7
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188460205",
+        "sku": "21100W",
+        "source_page": 8
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188492973",
+        "sku": "21200W",
+        "source_page": 9
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188525741",
+        "sku": "22100W",
+        "source_page": 9
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47394188558509",
+        "sku": "63303",
+        "source_page": 29
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47495805894829",
+        "sku": "786005",
+        "source_page": 27
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47611560919213",
+        "sku": "63605",
+        "source_page": 28
+      }
+    ],
+    "assignment": {
+      "operation": "catalogUpdate",
+      "variables": {
+        "id": "gid://shopify/MarketCatalog/136173617325",
+        "input": {
+          "status": "ACTIVE",
+          "context": {
+            "marketIds": [
+              "gid://shopify/Market/47186968749"
+            ]
+          }
+        }
+      }
+    },
+    "readback": {
+      "status": "PASS",
+      "usd_changes": 49,
+      "usd_unchanged": 74,
+      "cad_unchanged": 123,
+      "published_products_unchanged": 63
+    }
+  },
+  "sku": {
+    "status": "prepared_not_authorized_not_applied",
+    "original": {
+      "name": "manifest-sku-aislado.json",
+      "sha256": "0fa0aeb9efb7d699c35fb4b3cb1a75f9f84637b379fc16e9d3bb79ca6caf41b1"
+    },
+    "targets": [
+      {
+        "variant_id": "gid://shopify/ProductVariant/47611751301293",
+        "proposed_sku": "63205"
+      },
+      {
+        "variant_id": "gid://shopify/ProductVariant/47611799568557",
+        "proposed_sku": "63105"
+      }
+    ]
+  }
+}

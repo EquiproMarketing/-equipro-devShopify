@@ -1,0 +1,124 @@
+variant_id,product_handle,variant,sku,ca_price_origin,us_price_origin,inventory_tracked,inventory_policy,online_store_published
+47394184691885,infraderm,Default Title,11300,FIXED,FIXED,true,DENY,YES
+47394184790189,rotoderm,Default Title,11500,FIXED,RELATIVE,true,DENY,YES
+47394184954029,aeroderm,Default Title,11600,FIXED,FIXED,true,DENY,YES
+47394184986797,solo-pil-standard,Default Title,41100,FIXED,RELATIVE,true,DENY,YES
+47394185085101,home-skincare-equipment-accessories-tm-3-professional-service-table,Default Title,51101,FIXED,RELATIVE,true,DENY,YES
+47394185150637,digipro-steamer,Default Title,11100,FIXED,FIXED,true,DENY,YES
+47394185183405,classic-steamer,Default Title,EI-111,FIXED,FIXED,true,DENY,YES
+47394185248941,ioniderm,Default Title,11400,FIXED,FIXED,true,DENY,YES
+47394185314477,diamonderm,Default Title,11650,FIXED,FIXED,true,DENY,YES
+47394185380013,multiderm-5-en-1,Default Title,11800,FIXED,FIXED,true,DENY,YES
+47394185445549,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,White,31300W,FIXED,FIXED,false,DENY,YES
+47394185478317,spa-cabi-professional-towel-warmer-ei-61102s-equipro,Default Title,EI-61102S,FIXED,FIXED,false,DENY,YES
+47394185543853,deluxe-column-11906,Default Title,11906,FIXED,FIXED,false,DENY,YES
+47394185609389,modular-column-11902,Default Title,11902,FIXED,FIXED,true,DENY,YES
+47394185674925,solo-pil-standard-ym74h,Default Title,41101,FIXED,RELATIVE,true,DENY,YES
+47394185740461,duo-pil-maxi,Default Title,41200,FIXED,FIXED,false,DENY,YES
+47394185773229,duo-pil-standard-41201,Default Title,41201,FIXED,FIXED,false,DENY,YES
+47394185838765,duo-pil-precision,Default Title,4120,FIXED,RELATIVE,false,DENY,YES
+47394185904301,ultra-comfort-20500,"White / 24""",20500-24W,FIXED,FIXED,true,DENY,YES
+47394185969837,ultra-comfort-20500-gm25t,White,Ei-502W,FIXED,RELATIVE,true,DENY,YES
+47394186035373,spa-comfort-20300,"28"" / White",20300-28W,FIXED,FIXED,true,DENY,YES
+47394186068141,ei-500-murano,Default Title,Ei-500,FIXED,FIXED,false,DENY,YES
+47394186133677,ei-501-royal,White,EI-501W,FIXED,FIXED,true,DENY,YES
+47394186199213,ei-504-divine,White,Ei-504W,FIXED,FIXED,true,DENY,YES
+47394186264749,multi-comfort-electric-height-20210,"24"" / White",20210-24W,FIXED,FIXED,true,DENY,YES
+47394186330285,ultra-comfortprofessional-treatment-pedicure-chair-20500,"White / 24""",20502-24W,RELATIVE,RELATIVE,true,DENY,YES
+47394186363053,elite-spa-ei-508,Default Title,EI-508,FIXED,FIXED,false,DENY,YES
+47394186428589,natura-spa-ei-509,Default Title,Ei-509,FIXED,FIXED,false,DENY,YES
+47394186494125,mini-cabi-ei-61100m,Default Title,EI-61100M,FIXED,FIXED,false,DENY,YES
+47394186559661,hot-cabi-61101h,Default Title,EI-61101H,FIXED,FIXED,false,DENY,YES
+47394186625197,maxi-comfort-360,White,20100W,FIXED,FIXED,false,DENY,YES
+47394186690733,visiderm-61402,Default Title,64102,FIXED,RELATIVE,false,DENY,YES
+47394186723501,maxi-confort-pedicure-360,White,20101W,FIXED,FIXED,false,DENY,YES
+47394186789037,bohemia-ei-23403,White,EI-23403W,FIXED,FIXED,false,DENY,YES
+47394186854573,calypso-ei-23402,Default Title,EI-23402,FIXED,FIXED,false,DENY,YES
+47394186887341,round-air-lift-stool-with-backrest-31200,White,31200W,FIXED,FIXED,false,DENY,YES
+47394186952877,31100-air-lift-round-stool,White,31100W,FIXED,RELATIVE,false,DENY,YES
+47394186985645,ergonomic-stool-with-adjustable-backrest-31301,White,31301W,FIXED,RELATIVE,false,DENY,YES
+47394187083949,round-air-lift-stool-ei-311,White,SQ4433677,FIXED,RELATIVE,false,DENY,YES
+47394187149485,ei-312-round-air-lift-stool,White,Ei-312W,FIXED,FIXED,false,DENY,YES
+47394187215021,51104-tm-3a,Default Title,51104,FIXED,FIXED,false,DENY,YES
+47394187280557,51103-tm-3-mini,Default Title,51103,FIXED,RELATIVE,false,DENY,YES
+47394187346093,ts-3-deluxe,Default Title,TS-3 deluxe,FIXED,RELATIVE,false,DENY,YES
+47394187411629,51201-ts-2-with-drawer,Default Title,51201,FIXED,FIXED,false,DENY,YES
+47394187509933,51300-ta-2-standard,Default Title,51300,FIXED,FIXED,false,DENY,YES
+47394187575469,uphusvw9gfbqf087wzw6s53rzz7zn5,Default Title,51200,FIXED,FIXED,false,DENY,YES
+47394187673773,51400-manicure-table,Default Title,51400,FIXED,FIXED,false,DENY,YES
+47394187739309,51000-ts-4,Default Title,51000,FIXED,FIXED,false,DENY,YES
+47394187837613,51401-manicure-table-deluxe,Default Title,51401,FIXED,FIXED,false,DENY,YES
+47394187903149,51500-make-up-table,Default Title,51500,FIXED,RELATIVE,false,DENY,YES
+47394187968685,63603-circus-magnifier-led-3d-or-5d,3D,63603,FIXED,FIXED,true,DENY,YES
+47394188034221,63104-kfm-magnifier-led-3d-or-5d,3D,63104,FIXED,FIXED,false,DENY,YES
+47394188099757,63203-lfm-magnifier-led-3d-or-5d,3D,63203,FIXED,FIXED,false,DENY,YES
+47394188165293,65100-therabath-tub-ii,Default Title,65100,FIXED,FIXED,false,DENY,YES
+47394188198061,66007-spaslim-heating-blanket,Default Title,66007,FIXED,RELATIVE,false,DENY,YES
+47394188263597,66001-heat-pad,Default Title,66001,FIXED,FIXED,false,DENY,YES
+47394188329133,64401-wood-lamp,Default Title,64401,FIXED,FIXED,false,DENY,YES
+47394188394669,20200-multi-comfort,24 / White,20200-24W,FIXED,FIXED,false,DENY,YES
+47394188460205,21100-hydro-comfort,White,21100W,FIXED,FIXED,false,DENY,YES
+47394188492973,21200-aero-comfort,White,21200W,FIXED,FIXED,false,DENY,YES
+47394188525741,22100-poly-comfort,White,22100W,FIXED,FIXED,false,DENY,YES
+47394188558509,63303-dainolite-magnifier-led-3d-or-5d,3D,63303,FIXED,FIXED,false,DENY,YES
+47400142012589,63303-dainolite-magnifier-led-3d-or-5d,5D,,FIXED,RELATIVE,false,DENY,YES
+47402261545133,21200-aero-comfort,Navy,,FIXED,RELATIVE,false,DENY,YES
+47402261577901,21200-aero-comfort,Dove,,FIXED,RELATIVE,false,DENY,YES
+47402261610669,21200-aero-comfort,Black,,FIXED,RELATIVE,false,DENY,YES
+47402261643437,21200-aero-comfort,Sand,,FIXED,RELATIVE,false,DENY,YES
+47402261676205,21200-aero-comfort,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+47402261708973,21200-aero-comfort,Oyster,,FIXED,RELATIVE,false,DENY,YES
+47495805894829,heating-boots,Default Title,786005,FIXED,FIXED,true,DENY,YES
+47611560919213,63603-circus-magnifier-led-3d-or-5d,5D,63605,FIXED,FIXED,true,DENY,YES
+47611751301293,63203-lfm-magnifier-led-3d-or-5d,5D,,FIXED,RELATIVE,false,DENY,YES
+47611799568557,63104-kfm-magnifier-led-3d-or-5d,5D,,FIXED,RELATIVE,false,DENY,YES
+67097174671533,31100-air-lift-round-stool,Black,,FIXED,RELATIVE,false,DENY,YES
+67097174704301,31100-air-lift-round-stool,Navy,,FIXED,RELATIVE,false,DENY,YES
+67097174737069,31100-air-lift-round-stool,Dove,,FIXED,RELATIVE,false,DENY,YES
+67097174769837,31100-air-lift-round-stool,Sand,,FIXED,RELATIVE,false,DENY,YES
+67097174802605,31100-air-lift-round-stool,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67097174835373,31100-air-lift-round-stool,Oyster,,FIXED,RELATIVE,false,DENY,YES
+67109348999341,round-air-lift-stool-with-backrest-31200,Black,,FIXED,RELATIVE,false,DENY,YES
+67109349032109,round-air-lift-stool-with-backrest-31200,Navy,,FIXED,RELATIVE,false,DENY,YES
+67109349064877,round-air-lift-stool-with-backrest-31200,Dove,,FIXED,RELATIVE,false,DENY,YES
+67109349097645,round-air-lift-stool-with-backrest-31200,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67109349130413,round-air-lift-stool-with-backrest-31200,Sand,,FIXED,RELATIVE,false,DENY,YES
+67109349163181,round-air-lift-stool-with-backrest-31200,Oyster,,FIXED,RELATIVE,false,DENY,YES
+67134338728109,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Navy,,FIXED,RELATIVE,false,DENY,YES
+67134338760877,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Black,,FIXED,RELATIVE,false,DENY,YES
+67134338793645,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Dove,,FIXED,RELATIVE,false,DENY,YES
+67134338826413,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67134338859181,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Oyster,,FIXED,RELATIVE,false,DENY,YES
+67134338891949,skincare-equipment-stools-ergonomic-stool-with-backrest-31300,Sand,,FIXED,RELATIVE,false,DENY,YES
+67135525421229,ergonomic-stool-with-adjustable-backrest-31301,Navy,,FIXED,RELATIVE,false,DENY,YES
+67135525453997,ergonomic-stool-with-adjustable-backrest-31301,Black,,FIXED,RELATIVE,false,DENY,YES
+67135525486765,ergonomic-stool-with-adjustable-backrest-31301,Dove,,FIXED,RELATIVE,false,DENY,YES
+67135525519533,ergonomic-stool-with-adjustable-backrest-31301,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67135525552301,ergonomic-stool-with-adjustable-backrest-31301,Sand,,FIXED,RELATIVE,false,DENY,YES
+67135525585069,ergonomic-stool-with-adjustable-backrest-31301,Oyster,,FIXED,RELATIVE,false,DENY,YES
+67142401360045,round-air-lift-stool-ei-311,Black,,FIXED,RELATIVE,false,DENY,YES
+67142401392813,round-air-lift-stool-ei-311,Navy,,FIXED,RELATIVE,false,DENY,YES
+67142401425581,round-air-lift-stool-ei-311,Sand,,FIXED,RELATIVE,false,DENY,YES
+67143007731885,ei-312-round-air-lift-stool,Black,,FIXED,RELATIVE,false,DENY,YES
+67143007764653,ei-312-round-air-lift-stool,Navy,,FIXED,RELATIVE,false,DENY,YES
+67150234124461,22100-poly-comfort,Black,,FIXED,RELATIVE,false,DENY,YES
+67150234157229,22100-poly-comfort,Navy,,FIXED,RELATIVE,false,DENY,YES
+67150234189997,22100-poly-comfort,Dove,,FIXED,RELATIVE,false,DENY,YES
+67150234222765,22100-poly-comfort,Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67150234255533,22100-poly-comfort,Sand,,FIXED,RELATIVE,false,DENY,YES
+67150234288301,22100-poly-comfort,Oyster,,FIXED,RELATIVE,false,DENY,YES
+67234103984301,20200-multi-comfort,24 / Black,20200-24B,FIXED,RELATIVE,false,DENY,YES
+67234104017069,20200-multi-comfort,24 / Navy,20200-24N,FIXED,RELATIVE,false,DENY,YES
+67234104049837,20200-multi-comfort,24 / Dove,20200-24D,FIXED,RELATIVE,false,DENY,YES
+67234104082605,20200-multi-comfort,24 / Charcoal,20200-24C,FIXED,RELATIVE,false,DENY,YES
+67234104115373,20200-multi-comfort,24 / Sand,20200-24S,FIXED,RELATIVE,false,DENY,YES
+67234104148141,20200-multi-comfort,24 / Oyster,20200-24O,FIXED,RELATIVE,false,DENY,YES
+67234104180909,20200-multi-comfort,28 / White,,FIXED,RELATIVE,false,DENY,YES
+67234104213677,20200-multi-comfort,28 / Black,,FIXED,RELATIVE,false,DENY,YES
+67234104246445,20200-multi-comfort,28 / Navy,,FIXED,RELATIVE,false,DENY,YES
+67234104279213,20200-multi-comfort,28 / Dove,,FIXED,RELATIVE,false,DENY,YES
+67234104311981,20200-multi-comfort,28 / Charcoal,,FIXED,RELATIVE,false,DENY,YES
+67234104344749,20200-multi-comfort,28 / Sand,,FIXED,RELATIVE,false,DENY,YES
+67234104377517,20200-multi-comfort,28 / Oyster,,FIXED,RELATIVE,false,DENY,YES
+67768415617197,ei-501-royal,Black,,FIXED,RELATIVE,true,DENY,YES
+67768415649965,ei-501-royal,Navy,,FIXED,RELATIVE,true,DENY,YES
