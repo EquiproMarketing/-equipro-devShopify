@@ -12,18 +12,21 @@
     "main": {
       "type": "main-product",
       "settings": {
+        "reference_layout": false,
         "back_text": "Back",
         "custom_title": "11100 - Vapoderm Digipro",
         "intro_highlight": "The Vapoderm Digipro Steamer redefines skincare preparation by fusing North American manufacturing excellence with advanced ergonomic versatility, ensuring practitioners can deliver high-volume treatments without operational strain.",
-        "custom_description": "<p>The Vapoderm Digipro Steamer is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Skincare Specialist. Its fully adjustable design targets postural strain and shoulder fatigue during back-to-back appointments, enabling sharper focus on treatment execution and operational efficiency. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
+        "custom_description": "<p></p><p>The Vapoderm Digipro Steamer is purpose-built for licensed professionals, including Esthetician, Clinical Spa Therapist, and Skincare Specialist. Its fully adjustable design targets postural strain and shoulder fatigue during back-to-back appointments, enabling sharper focus on treatment execution and operational efficiency. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this treatment equipment adjusts to your multi-technician adaptability with friction-free adjustment and intuitive one-hand control.</p>",
         "subtitle": "Ionized Vaporization for Advanced Skincare",
         "secondary_description": "<p>Durable professional-grade equipment is central to the Equipro approach. To preserve the material integrity and finish of the Vapoderm Digipro Steamer, perform a routine wipe-down maintenance action with certified surface disinfectants formulated for clinical spa environments after each high-volume clinic day. The industrial exterior components maintain high resistance properties, ensuring a pristine condition outcome across a 15-to-20-year service life. Consistent care maximizes service consistency and ensures repeatable results.</p>",
         "show_variant_selectors": true,
         "show_color_option": true,
         "show_size_option": true,
         "featured_product": "digipro-steamer",
+        "show_currency": false,
+        "purchase_note": "",
         "btn_label": "ADD TO CART",
-        "show_compare_btn": true,
+        "show_compare_btn": false,
         "compare_btn_label": "Compare with other models"
       }
     },
@@ -291,7 +294,7 @@
     "compare_modal": {
       "type": "product-compare-modal",
       "settings": {
-        "modal_title": "Select Models to Compare",
+        "heading": "Technical Model Comparison",
         "compare_collection": ""
       }
     }
