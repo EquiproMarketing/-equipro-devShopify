@@ -16,7 +16,7 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "White",
-            "color_hex": "#FFFFFF"
+            "color_hex": "#ffffff"
           }
         },
         "color_swatch_item_3tkNdU": {
@@ -30,7 +30,7 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Navy",
-            "color_hex": "#2A374C"
+            "color_hex": "#2a374c"
           }
         },
         "color_swatch_item_T999wx": {
@@ -44,21 +44,21 @@
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Dove",
-            "color_hex": "#B9B9B9"
+            "color_hex": "#b9b9b9"
           }
         },
         "color_swatch_item_7UNAez": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Sand",
-            "color_hex": "#CCA88D"
+            "color_hex": "#cca88d"
           }
         },
         "color_swatch_item_CFfntP": {
           "type": "color_swatch_item",
           "settings": {
             "color_name": "Oyster",
-            "color_hex": "#D8D4C7"
+            "color_hex": "#d8d4c7"
           }
         }
       },
@@ -76,7 +76,7 @@
         "back_text": "Back",
         "custom_title": "Ultra-Comfort 20500",
         "intro_highlight": "Precision-engineered for advanced clinical workflows, the Ultra-Comfort treatment chair bridges the gap between ergonomic practitioner support and exceptional client relaxation, backed by decades of North American manufacturing expertise.",
-        "custom_description": "<p>Ultra-Comfort is purpose-built for licensed skincare specialists, including Estheticians, Clinical Spa Therapists, and Cosmetic Injectors. Its 15-degree tilt mechanism targets lower-back tension and postural strain during extended treatment sessions, enabling sharper focus on service consistency and client comfort. Whether you are performing deep-pore cleansing, microdermabrasion, or post-procedure recovery, this professional station adjusts to your modality-specific positioning with manually adjustable backrest components and smooth elevation controls.</p><p>The Ultra-Comfort chair offers precise positioning and optimal ergonomics for facials and hair removal. Featuring an adjustable headrest and manually adjustable backrest and leg rest, it incorporates a 15° tilt to improve comfort and access to the face and neck areas. Its ultra-white, ultra-resistant leatherette ensures durability, while its adjustable height from 20.5“ to 36.5” and widths of 24“ or 26” suit any space. Removable ergonomic armrests and casters are optional. Available in a range of colors</p>",
+        "custom_description": "<p></p><p></p><p>The Ultra-Comfort chair offers precise positioning and optimal ergonomics for facials and hair removal. Featuring an adjustable headrest and manually adjustable backrest and leg rest, it incorporates a 15° tilt to improve comfort and access to the face and neck areas. Its ultra-white, ultra-resistant leatherette ensures durability, while its adjustable height from 20.5“ to 36.5” and widths of 24“ or 26” suit any space. Removable ergonomic armrests and casters are optional. Available in a range of colors</p>",
         "subtitle": "Engineering for Precision and Longevity",
         "secondary_description": "<p>Long-term durability is central to the Equipro approach. To preserve the mechanical integrity and surface quality of Ultra-Comfort, routine cleaning with non-abrasive disinfectants formulated for clinical environments is recommended weekly. The ultra-resistant leatherette upholstery features high tear and stain resistance, ensuring pristine condition across intensive daily salon cycles. Consistent care prevents premature wear, maintaining both aesthetic appeal and hygienic compliance.</p>",
         "show_variant_selectors": true,
@@ -127,7 +127,7 @@
         "shipping_title": "Shipping",
         "shipping_text": "<p>Standard delivery typically takes <strong>5–7 business days</strong>, while expedited shipping takes <strong>2–3 business days</strong>.</p>",
         "show_tech_table": true,
-        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\">\n<thead><tr>\n<th>Technical Aspect</th>\n<th>Specification Details</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"feature-label\">Manufacturer</td>\n<td>Equipro</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Model</td>\n<td>20500</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Current variant SKU</td>\n<td>20500-24W</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Dimensions</td>\n<td>L × 72\" × 20.5\"/36.5\" H</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Width — model 20500</td>\n<td>24 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height range</td>\n<td>20.5–36.5 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Weight</td>\n<td>320 lb / 145 kg</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Backrest and legrest</td>\n<td>Manually adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Tilt</td>\n<td>15°</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Headrest</td>\n<td>Adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Upholstery</td>\n<td>Ultra-white, ultra-resistant leatherette; Color Chart A</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Armrests</td>\n<td>Optional removable ergonomic armrests</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Casters</td>\n<td>Optional</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height-control mechanism / motor configuration</td>\n<td>Not confirmed</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Warranty</td>\n<td>2 years</td>\n</tr>\n</tbody>\n</table></div>",
+        "custom_table_html": "<div class=\"equipro-specs-container\"><table class=\"equipro-table\">\n<thead><tr>\n<th>Technical Aspect</th>\n<th>Specification Details</th>\n</tr></thead>\n<tbody>\n<tr>\n<td class=\"feature-label\">Manufacturer</td>\n<td>Equipro</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Model</td>\n<td>20500</td>\n</tr>\n\n<tr>\n<td class=\"feature-label\">Dimensions</td>\n<td>L × 72\" × 20.5\"/36.5\" H</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Width — model 20500</td>\n<td>24 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height range</td>\n<td>20.5–36.5 in</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Weight</td>\n<td>320 lb / 145 kg</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Backrest and legrest</td>\n<td>Manually adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Tilt</td>\n<td>15°</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Headrest</td>\n<td>Adjustable</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Upholstery</td>\n<td>Ultra-white, ultra-resistant leatherette; Color Chart A</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Armrests</td>\n<td>Optional removable ergonomic armrests</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Casters</td>\n<td>Optional</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Height-control mechanism / motor configuration</td>\n<td>Not confirmed</td>\n</tr>\n<tr>\n<td class=\"feature-label\">Warranty</td>\n<td>2 years</td>\n</tr>\n</tbody>\n</table></div>",
         "table_col1_header": "TECHNICAL ASPECT",
         "table_col2_header": "SPECIFICATION DETAILS"
       }
@@ -164,7 +164,7 @@
       ],
       "settings": {
         "heading": "Key Features for the Professional Station",
-        "image": "shopify://shop_images/professional-electric-treatment-chair-white-clinical-spa-table-20500.webp",
+        "image": "shopify://shop_images/ultra-comfort-electric-salon-practitioner-bench-ergonomic-upholstery-adjustable-beauty-wellness-studio-equipment.webp",
         "image_position": "right",
         "bg_color": "#a22938",
         "text_color": "#ffffff",
@@ -251,7 +251,7 @@
         "safety_3"
       ],
       "settings": {
-        "image": "shopify://shop_images/white-motorized-clinical-treatment-chair-adjustable-aesthetic-bed.webp",
+        "image": "shopify://shop_images/ultra-comfort-multi-position-electric-professional-practitioner-chair-ergonomic-wellness-studio-20500.webp",
         "image_position": "left",
         "image_aspect_ratio": "adapt",
         "title_color": "#a22938",
