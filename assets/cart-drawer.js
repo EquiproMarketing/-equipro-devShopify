@@ -100,23 +100,27 @@ class CartDrawer {
         if ((this.pending || this.unsynced) && e.target.closest('a[href$="/checkout"]')) { e.preventDefault(); return; }
         if (e.target.closest('#CartDrawerContinue')) this.close();
         if (e.target.closest('#CartFeedbackRetry')) this.run(() => this.refreshDrawer(), true);
-        // Modificar cantidad (+ / -)
-        if (e.target.classList.contains('js-qty-btn')) {
-          const key = e.target.getAttribute('data-key');
-          const action = e.target.getAttribute('data-action');
-          const input = e.target.parentElement.querySelector('.js-qty-input');
-          let currentQty = parseInt(input.value) || 0;
-
-          if (action === 'plus') currentQty += 1;
-          if (action === 'minus') currentQty -= 1;
-
-          this.updateQuantity(key, currentQty);
+        // Controles del drawer y de la página /cart.
+        const quantityButton = e.target.closest('.js-qty-btn, #main-cart-container .js-qty-change');
+        if (quantityButton && !quantityButton.disabled) {
+          const key = quantityButton.getAttribute('data-key');
+          const action = quantityButton.getAttribute('data-action');
+          const input = quantityButton.parentElement.querySelector(
+            quantityButton.classList.contains('js-qty-change') ? 'input[type="number"]' : '.js-qty-input'
+          );
+          if (input && key && (action === 'plus' || action === 'minus')) {
+            const currentQty = Number(input.value);
+            if (Number.isSafeInteger(currentQty) && currentQty >= 0) {
+              this.updateQuantity(key, currentQty + (action === 'plus' ? 1 : -1));
+            }
+          }
         }
 
-        // Eliminar producto
-        if (e.target.classList.contains('js-remove-item')) {
-          const key = e.target.getAttribute('data-key');
-          this.updateQuantity(key, 0);
+        // Eliminar producto desde el drawer o /cart.
+        const removeButton = e.target.closest('.js-remove-item, #main-cart-container .js-remove-cart-item');
+        if (removeButton && !removeButton.disabled) {
+          const key = removeButton.getAttribute('data-key');
+          if (key) this.updateQuantity(key, 0);
         }
       });
       document.addEventListener('change', e => {
