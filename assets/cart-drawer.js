@@ -7,6 +7,7 @@ class CartDrawer {
 
       this.pending = false;
       this.unsynced = false;
+      this.refreshVersion = 0;
       this.init();
     }
 
@@ -100,6 +101,27 @@ class CartDrawer {
         if ((this.pending || this.unsynced) && e.target.closest('a[href$="/checkout"]')) { e.preventDefault(); return; }
         if (e.target.closest('#CartDrawerContinue')) this.close();
         if (e.target.closest('#CartFeedbackRetry')) this.run(() => this.refreshDrawer(), true);
+        // Cart-page controls share the same transaction/recovery owner as the drawer.
+        const pageControl = e.target.closest('.js-qty-change, .js-remove-cart-item');
+        const page = document.getElementById('main-cart-container');
+        if (pageControl && page?.contains(pageControl)) {
+          e.preventDefault();
+          if (pageControl.disabled || this.pending || this.unsynced) return;
+          const { key, action } = pageControl.dataset;
+          if (!key) return;
+          if (pageControl.classList.contains('js-remove-cart-item')) {
+            this.updateQuantity(key, 0);
+          } else {
+            const input = pageControl.parentElement.querySelector('input[type="number"]');
+            const quantity = input?.value.trim() ? Number(input.value) : NaN;
+            if (!Number.isSafeInteger(quantity) || quantity < 1 || !['plus', 'minus'].includes(action)) {
+              this.feedback(this.errorMessage());
+              return;
+            }
+            this.updateQuantity(key, quantity + (action === 'plus' ? 1 : -1));
+          }
+          return;
+        }
         // Modificar cantidad (+ / -)
         if (e.target.classList.contains('js-qty-btn')) {
           const key = e.target.getAttribute('data-key');
@@ -157,7 +179,22 @@ class CartDrawer {
     async run(work, recovery = false) {
       if (this.pending || (this.unsynced && !recovery)) return false;
       this.pending = true;
+      this.refreshVersion += 1;
       this.pendingTrigger = document.activeElement;
+      const page = document.getElementById('main-cart-container');
+      const row = this.pendingTrigger?.closest('[data-line-item-key]');
+      if (page?.contains(row)) {
+        this.pageFocusRequest = {
+          trigger: this.pendingTrigger, key: row.dataset.lineItemKey,
+          tagName: this.pendingTrigger.tagName, action: this.pendingTrigger.dataset.action,
+          remove: this.pendingTrigger.classList.contains('js-remove-cart-item'), cancelled: false
+        };
+      } else if (!recovery || this.pendingTrigger?.id !== 'CartFeedbackRetry') this.pageFocusRequest = null;
+      const intent = this.pageFocusRequest;
+      const trackFocus = event => {
+        if (intent && event.target !== intent.trigger && event.target !== document.body && event.target.id !== 'CartFeedbackRetry') intent.cancelled = true;
+      };
+      document.addEventListener('focusin', trackFocus);
       this.feedback('');
       const controls = [...document.querySelectorAll('.js-add-to-cart-btn, .js-qty-btn, .js-remove-item, .js-qty-input, .js-qty-change, .js-remove-cart-item, #CartFeedbackRetry, button[name="checkout"]')].filter(control => !control.disabled);
       controls.forEach(control => { control.disabled = true; });
@@ -168,9 +205,28 @@ class CartDrawer {
         this.feedback(this.unsynced ? this.errorMessage('refreshError') : error.message || this.errorMessage());
         return false;
       } finally {
+        document.removeEventListener('focusin', trackFocus);
+        if (!this.unsynced) this.pageFocusRequest = null;
         controls.forEach(control => { if (control.isConnected) control.disabled = false; });
+        this.syncPageCheckout();
+        if (this.unsynced && intent && !intent.cancelled && document.activeElement === document.body &&
+            intent.trigger.isConnected && !intent.trigger.disabled && !this.drawer?.classList.contains('is-open')) {
+          intent.trigger.focus({ preventScroll: true });
+        }
         this.pending = false;
         this.pendingTrigger = null;
+      }
+    }
+
+    syncPageCheckout() {
+      const checkout = document.querySelector('#main-cart-form button[name="checkout"]');
+      if (this.pageCheckoutLock && (this.pageCheckoutLock !== checkout || !this.unsynced)) {
+        this.pageCheckoutLock.disabled = false;
+        this.pageCheckoutLock = null;
+      }
+      if (this.unsynced && checkout && !checkout.disabled) {
+        checkout.disabled = true;
+        this.pageCheckoutLock = checkout;
       }
     }
 
@@ -180,17 +236,64 @@ class CartDrawer {
         const cart = await this.request(window.Shopify.routes.root + 'cart/change.js', {
           method: 'POST', headers: { 'Content-Type': 'application/json' }, body: JSON.stringify({ id: key, quantity })
         });
-        if (!Array.isArray(cart.items)) throw new Error(this.errorMessage());
-        await this.refreshDrawer();
-        if (window.location.pathname.replace(/\/$/, '') === window.Shopify.routes.root + 'cart') window.location.reload();
+        await this.refreshDrawer(cart);
       });
     }
 
-    async refreshDrawer() {
+    cartState(cart) {
+      const failed = () => new Error(this.errorMessage('refreshError'));
+      if (!Array.isArray(cart.items) || !Number.isSafeInteger(cart.item_count)) throw failed();
+      const lines = new Map();
+      let count = 0;
+      for (const item of cart.items) {
+        const { key, quantity } = item ?? {};
+        if (typeof key !== 'string' || !key || lines.has(key) || !Number.isSafeInteger(quantity) || quantity < 1) throw failed();
+        lines.set(key, quantity);
+        count += quantity;
+      }
+      if (count !== cart.item_count) throw failed();
+      return { lines, count };
+    }
+
+    validateLines(rows, state, keyField, inputSelector) {
+      const remaining = new Map(state.lines);
+      const failed = () => new Error(this.errorMessage('refreshError'));
+      for (const row of rows) {
+        const key = row.dataset[keyField];
+        const quantity = Number(row.querySelector(inputSelector)?.value);
+        if (!remaining.has(key) || remaining.get(key) !== quantity) throw failed();
+        remaining.delete(key);
+      }
+      if (remaining.size) throw failed();
+    }
+
+    validatePageSection(section, sectionId, state) {
+      const failed = () => new Error(this.errorMessage('refreshError'));
+      if (typeof section !== 'string') throw failed();
+      const html = new DOMParser().parseFromString(section, 'text/html');
+      const page = html.getElementById('main-cart-container');
+      if (!page || page.dataset.cartSectionId !== sectionId) throw failed();
+      const pageForm = page.querySelector('#main-cart-form');
+      const empty = page.querySelector('[data-cart-empty]');
+      if (state.count === 0 ? pageForm || !empty : !pageForm?.querySelector('#cart-subtotal') || empty) throw failed();
+      this.validateLines(page.querySelectorAll('[data-line-item-key]'), state, 'lineItemKey', 'input[type="number"]');
+      return page;
+    }
+
+    async refreshDrawer(confirmedCart) {
+      const version = ++this.refreshVersion;
       const url = new URL(window.location.href);
-      url.searchParams.set('sections', 'cart-drawer');
+      const page = document.getElementById('main-cart-container');
+      const pageSection = page?.dataset.cartSectionId;
+      if (page && !pageSection) throw new Error(this.errorMessage('refreshError'));
+      // change.js returns the whole cart. Add callers and Retry need a fresh cart.js read.
+      const cart = confirmedCart ?? await this.request(window.Shopify.routes.root + 'cart.js', { cache: 'no-store' });
+      if (version !== this.refreshVersion) throw new Error(this.errorMessage('refreshError'));
+      const state = this.cartState(cart);
+      url.searchParams.set('sections', pageSection ? 'cart-drawer,' + pageSection : 'cart-drawer');
       // Request section rendering, rather than the cart/product JSON representation.
-      const sections = await this.request(url.toString(), { headers: { Accept: 'text/html' } });
+      const sections = await this.request(url.toString(), { cache: 'no-store', headers: { Accept: 'text/html' } });
+      if (version !== this.refreshVersion) throw new Error(this.errorMessage('refreshError'));
       if (typeof sections['cart-drawer'] !== 'string') throw new Error(this.errorMessage('refreshError'));
       const html = new DOMParser().parseFromString(sections['cart-drawer'], 'text/html');
       const newBody = html.getElementById('CartDrawerBody');
@@ -200,6 +303,25 @@ class CartDrawer {
       const count = document.getElementById('CartDrawerCount');
       const footer = document.getElementById('CartDrawerFooter');
       if (!newBody || !newCount || !body || !count || !this.drawer) throw new Error(this.errorMessage('refreshError'));
+      const renderedCount = Number(newCount.textContent.trim().match(/^\((\d+)\)$/)?.[1]);
+      const empty = newBody.querySelector('.cart-drawer__empty');
+      if (renderedCount !== state.count ||
+          (state.count === 0 ? !empty || newFooter : empty || !newFooter?.querySelector('#CartDrawerSubtotal'))) {
+        throw new Error(this.errorMessage('refreshError'));
+      }
+      this.validateLines(newBody.querySelectorAll('.cart-drawer-item'), state, 'key', '.js-qty-input');
+      let newPage;
+      const active = document.activeElement;
+      const currentPageFocus = page?.contains(active) ? active : null;
+      const savedFocus = this.pageFocusRequest;
+      const restoreSaved = savedFocus && !savedFocus.cancelled && !this.drawer.classList.contains('is-open') &&
+        (active === document.body || active === savedFocus.trigger || active?.id === 'CartFeedbackRetry');
+      const pageFocus = this.drawer.classList.contains('is-open') ? null : currentPageFocus ? {
+        key: currentPageFocus.closest('[data-line-item-key]')?.dataset.lineItemKey,
+        tagName: currentPageFocus.tagName, action: currentPageFocus.dataset.action,
+        remove: currentPageFocus.classList.contains('js-remove-cart-item')
+      } : restoreSaved ? savedFocus : null;
+      if (page) newPage = this.validatePageSection(sections[pageSection], pageSection, state);
       const focused = this.drawer.contains(document.activeElement) ? document.activeElement : null;
       body.innerHTML = newBody.innerHTML;
       count.textContent = newCount.textContent;
@@ -213,7 +335,22 @@ class CartDrawer {
           (focused.tagName === 'A' && element.tagName === 'A' && element.getAttribute('href') === focused.getAttribute('href')));
         this.focusInside(replacement);
       }
+      if (page) {
+        page.innerHTML = newPage.innerHTML;
+        if (pageFocus) {
+          const row = [...page.querySelectorAll('[data-line-item-key]')].find(item => item.dataset.lineItemKey === pageFocus.key);
+          const replacement = row && [...row.querySelectorAll('button, input, a')].find(item =>
+            !item.disabled && item.tagName === pageFocus.tagName && item.dataset.action === pageFocus.action &&
+            (pageFocus.tagName !== 'BUTTON' || item.classList.contains('js-remove-cart-item') === pageFocus.remove));
+          if (replacement) replacement.focus({ preventScroll: true });
+          else {
+            page.setAttribute('tabindex', '-1');
+            page.focus({ preventScroll: true });
+          }
+        }
+      }
       this.unsynced = false;
+      this.syncPageCheckout();
       if (typeof CustomEvent === 'function') document.dispatchEvent(new CustomEvent('cart:reconciled'));
     }
 
