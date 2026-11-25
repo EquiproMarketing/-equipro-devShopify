@@ -136,6 +136,7 @@
         "category_item_ACVzqh": {
           "type": "category_item",
           "settings": {
+            "image": "shopify://shop_images/ei-312-round-air-lift-practitioner-stool-white-chrome-base.webp",
             "title": "Stools",
             "link": "shopify://collections/stools"
           }
@@ -966,7 +967,12 @@
           "spas-wellness-centers",
           "spa-esthetics-setup",
           "orthopedic-podiatry"
-        ]
+        ],
+        "profiles_label": "Professional profiles",
+        "price_from_label": "From",
+        "collections_label": "Related collections",
+        "show_explore_all": false,
+        "explore_all_label": "Explore all products"
       }
     }
   },
