@@ -9,6 +9,7 @@
  */
 {
   "404": {
+    "description": "The page you are looking for does not exist or has been moved.",
     "title": "404",
     "not_found": "Page not found.",
     "back_to_shopping": "Back to shopping"
@@ -378,5 +379,41 @@
     "collections_label": "Related collections",
     "price_from_label": "From",
     "category_label": "Category"
+  },
+  "contact_form": {
+    "headquarters": "Canada Headquarters",
+    "toll_free": "Toll-free:",
+    "email_caption": "Email:",
+    "success": "Thank you! Your message has been sent.",
+    "name_required": "Name *",
+    "message_required": "Message *",
+    "send": "Send Message"
+  },
+  "assistance": {
+    "read_time": {
+      "one": "{{ count }} min read",
+      "other": "{{ count }} min read"
+    },
+    "serial_example": "e.g. {{ model }} #{{ serial }}",
+    "title": "Warranty & Technical Support",
+    "intro": "Submit your equipment details below and our technical service team will contact you within 24 hours.",
+    "success": "Thank you for reaching out! Your support request has been submitted successfully.",
+    "full_name": "Full Name",
+    "model_serial": "Equipment Model & Serial Number",
+    "issue": "Describe your issue or inquiry",
+    "submit": "Submit Technical Request"
+  },
+  "manuals": {
+    "all": "All Documentation",
+    "warranties": "Warranties & Certificates",
+    "assembly": "Assembly & Operation",
+    "no_results": "No documentation found matching your query."
+  },
+  "reviews": {
+    "heading": "What our customers say",
+    "rating": "Overall Rating",
+    "write": "Write a Review",
+    "two_months_ago": "2 months ago",
+    "one_year_ago": "1 year ago"
   }
 }

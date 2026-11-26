@@ -11,14 +11,14 @@
   <div class="page-contact__grid">
     <div class="page-contact__info">
       <div class="page-contact__info-card">
-        <h3>Canada Headquarters</h3>
+        <h3>{{ 'contact_form.headquarters' | t }}</h3>
         <p>11970 Albert Hudon<br>H1G 3K3, Montréal, QC</p>
-        <p><strong>Toll-free:</strong> +1 (877) 324-2226</p>
-        <p><strong>Email:</strong> info@equipro-bty.com</p>
+        <p><strong>{{ 'contact_form.toll_free' | t }}</strong> +1 (877) 324-2226</p>
+        <p><strong>{{ 'contact_form.email_caption' | t }}</strong> info@equipro-bty.com</p>
       </div>
 
       <div class="page-contact__info-card">
-        <h3>USA Division</h3>
+        <h3>{{ 'footer.usa_division' | t }}</h3>
         <p>2425 Main Street, P.O.Box 154<br>ISLE LA MOTTE, VT 05463</p>
       </div>
     </div>
@@ -26,25 +26,25 @@
     <div class="page-contact__form-wrapper">
       {% form 'contact', id: 'ContactForm', class: 'page-contact__form' %}
         {% if form.posted_successfully? %}
-          <div class="page-contact__success">Thank you! Your message has been sent.</div>
+          <div class="page-contact__success">{{ 'contact_form.success' | t }}</div>
         {% endif %}
 
         <div class="page-contact__field">
-          <label for="ContactFormName">Name *</label>
+          <label for="ContactFormName">{{ 'contact_form.name_required' | t }}</label>
           <input type="text" id="ContactFormName" name="contact[Name]" required>
         </div>
 
         <div class="page-contact__field">
-          <label for="ContactFormEmail">Email *</label>
+          <label for="ContactFormEmail">{{ 'quote.email' | t }}</label>
           <input type="email" id="ContactFormEmail" name="contact[email]" required>
         </div>
 
         <div class="page-contact__field">
-          <label for="ContactFormMessage">Message *</label>
+          <label for="ContactFormMessage">{{ 'contact_form.message_required' | t }}</label>
           <textarea id="ContactFormMessage" name="contact[body]" rows="5" required></textarea>
         </div>
 
-        <button type="submit" class="button button--primary">Send Message</button>
+        <button type="submit" class="button button--primary">{{ 'contact_form.send' | t }}</button>
       {% endform %}
     </div>
   </div>

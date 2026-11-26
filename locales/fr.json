@@ -9,6 +9,7 @@
  */
 {
   "404": {
+    "description": "La page que vous cherchez n’existe pas ou a été déplacée.",
     "not_found": "Page introuvable.",
     "back_to_shopping": "Retour aux achats",
     "title": "404"
@@ -378,5 +379,41 @@
     "collections_label": "Collections connexes",
     "price_from_label": "À partir de",
     "category_label": "Catégorie"
+  },
+  "contact_form": {
+    "headquarters": "Siège social au Canada",
+    "toll_free": "Sans frais :",
+    "email_caption": "Courriel :",
+    "success": "Merci! Votre message a été envoyé.",
+    "name_required": "Nom *",
+    "message_required": "Message *",
+    "send": "Envoyer le message"
+  },
+  "assistance": {
+    "read_time": {
+      "one": "{{ count }} min de lecture",
+      "other": "{{ count }} min de lecture"
+    },
+    "serial_example": "p. ex. {{ model }}, no {{ serial }}",
+    "title": "Garantie et soutien technique",
+    "intro": "Indiquez les renseignements sur votre équipement ci-dessous. Notre équipe de soutien technique communiquera avec vous dans les 24 heures.",
+    "success": "Merci de nous avoir contactés! Votre demande de soutien a été envoyée.",
+    "full_name": "Nom complet",
+    "model_serial": "Modèle et numéro de série de l’équipement",
+    "issue": "Décrivez votre problème ou votre demande",
+    "submit": "Envoyer la demande de soutien technique"
+  },
+  "manuals": {
+    "all": "Toute la documentation",
+    "warranties": "Garanties et certificats",
+    "assembly": "Assemblage et utilisation",
+    "no_results": "Aucun document ne correspond à votre recherche."
+  },
+  "reviews": {
+    "heading": "Ce que dit notre clientèle",
+    "rating": "Note globale",
+    "write": "Rédiger un avis",
+    "two_months_ago": "Il y a 2 mois",
+    "one_year_ago": "Il y a 1 an"
   }
 }

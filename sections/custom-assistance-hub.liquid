@@ -121,7 +121,8 @@
                   <span class="assistance-blog-card__date">{{ article.published_at | date: "%b %d, %Y" }}</span>
                   <span class="assistance-blog-card__read-time">
                     {%- assign words = article.content | strip_html | split: ' ' | size -%}
-                    {{ words | divided_by: 200 | plus: 1 }} min read
+                    {%- assign reading_minutes = words | divided_by: 200 | plus: 1 -%}
+                    {{ 'assistance.read_time' | t: count: reading_minutes }}
                   </span>
                 </div>
               </div>
@@ -138,38 +139,38 @@
 <div class="assistance-modal" id="support-modal" aria-hidden="true">
   <div class="assistance-modal__overlay" data-close-modal></div>
   <div class="assistance-modal__container" role="dialog" aria-modal="true">
-    <button class="assistance-modal__close" data-close-modal aria-label="Close modal">&times;</button>
+    <button class="assistance-modal__close" data-close-modal aria-label="{{ 'quote.close' | t | escape_once }}">&times;</button>
     <div class="assistance-modal__header">
-      <h3 class="assistance-modal__title">Warranty & Technical Support</h3>
-      <p class="assistance-modal__subtitle">Submit your equipment details below and our technical service team will contact you within 24 hours.</p>
+      <h3 class="assistance-modal__title">{{ 'assistance.title' | t }}</h3>
+      <p class="assistance-modal__subtitle">{{ 'assistance.intro' | t }}</p>
     </div>
 
     {% form 'contact', class: 'assistance-modal__form' %}
       {% if form.posted_successfully? %}
-        <p class="assistance-modal__success">Thank you for reaching out! Your support request has been submitted successfully.</p>
+        <p class="assistance-modal__success">{{ 'assistance.success' | t }}</p>
       {% endif %}
 
       <div class="assistance-modal__field-group">
-        <label for="SupportFormName" class="assistance-modal__label">Full Name</label>
+        <label for="SupportFormName" class="assistance-modal__label">{{ 'assistance.full_name' | t }}</label>
         <input type="text" id="SupportFormName" name="contact[Name]" class="assistance-modal__input" required>
       </div>
 
       <div class="assistance-modal__field-group">
-        <label for="SupportFormEmail" class="assistance-modal__label">Email Address</label>
+        <label for="SupportFormEmail" class="assistance-modal__label">{{ 'footer.email' | t }}</label>
         <input type="email" id="SupportFormEmail" name="contact[email]" class="assistance-modal__input" required>
       </div>
 
       <div class="assistance-modal__field-group">
-        <label for="SupportFormSerial" class="assistance-modal__label">Equipment Model & Serial Number</label>
-        <input type="text" id="SupportFormSerial" name="contact[Equipment Model/Serial]" class="assistance-modal__input" placeholder="e.g. EI-504 #12984">
+        <label for="SupportFormSerial" class="assistance-modal__label">{{ 'assistance.model_serial' | t }}</label>
+        <input type="text" id="SupportFormSerial" name="contact[Equipment Model/Serial]" class="assistance-modal__input" placeholder="{{ 'assistance.serial_example' | t: model: 'EI-504', serial: '12984' | escape_once }}">
       </div>
 
       <div class="assistance-modal__field-group">
-        <label for="SupportFormMessage" class="assistance-modal__label">Describe your issue or inquiry</label>
+        <label for="SupportFormMessage" class="assistance-modal__label">{{ 'assistance.issue' | t }}</label>
         <textarea id="SupportFormMessage" name="contact[body]" rows="4" class="assistance-modal__textarea" required></textarea>
       </div>
 
-      <button type="submit" class="assistance-modal__submit-btn">Submit Technical Request</button>
+      <button type="submit" class="assistance-modal__submit-btn">{{ 'assistance.submit' | t }}</button>
     {% endform %}
   </div>
 </div>

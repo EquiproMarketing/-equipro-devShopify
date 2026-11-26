@@ -1,7 +1,7 @@
 <div class="manuals-page page-width">
   {%- comment -%} RETURN TO ASSISTANCE HUB {%- endcomment -%}
   <div class="manuals-page__nav-back">
-    <a href="/pages/assistance" class="manuals-back-link">&larr; Back to Support Hub</a>
+    <a href="/pages/assistance" class="manuals-back-link">&larr; {{ 'delivery.back' | t }}</a>
   </div>
 
   <div class="manuals-page__header">
@@ -38,10 +38,10 @@
 
   {%- comment -%} CATEGORY TABS {%- endcomment -%}
   <div class="manuals-tabs">
-    <button class="manuals-tab-btn active" data-tab="all">All Documentation</button>
-    <button class="manuals-tab-btn" data-tab="warranties">Warranties & Certificates</button>
-    <button class="manuals-tab-btn" data-tab="specifications">Technical Specs</button>
-    <button class="manuals-tab-btn" data-tab="assembly">Assembly & Operation</button>
+    <button class="manuals-tab-btn active" data-tab="all">{{ 'manuals.all' | t }}</button>
+    <button class="manuals-tab-btn" data-tab="warranties">{{ 'manuals.warranties' | t }}</button>
+    <button class="manuals-tab-btn" data-tab="specifications">{{ 'comparison.specifications' | t }}</button>
+    <button class="manuals-tab-btn" data-tab="assembly">{{ 'manuals.assembly' | t }}</button>
   </div>
 
   {%- comment -%} DOCUMENTATION COLUMNS GRID {%- endcomment -%}
@@ -101,7 +101,7 @@
     {%- endif -%}
 
     <div id="ManualsNoResults" class="manuals-no-results" style="display: none;">
-      <p>No documentation found matching your query.</p>
+      <p>{{ 'manuals.no_results' | t }}</p>
     </div>
   </div>
 </div>
